@@ -68,7 +68,7 @@ const IndexPage = () => {
       <PricingSection />
       <AboutSection />
       <FAQSection />
-      <FinalCTA />
+
       <FooterSection />
     </>
   );
