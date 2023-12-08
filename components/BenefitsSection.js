@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const BenefitsSection = () => {
   return (
@@ -14,20 +15,22 @@ const BenefitsSection = () => {
         </div>
         <div className="md:grid md:grid-cols-2 gap-x-16 gap-y-4">
           <div className="text-center">
-            <img
+            <Image
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/quickadd_ben.webp"
               alt="Quick Add Demo"
-              className="mx-auto mb-0 w-80 h-80 lg:w-80 lg:h-80"
+              width={320} // Set your desired width here
+              height={320} // Set your desired height here
               loading="lazy"
             />
             <h3 className="mb-0 text-xl font-bold text-black">Quick Add</h3>
             <p className="mb-4 text-gray-700">Capture notes or ideas fast. Without distractions.</p>
           </div>
           <div className="text-center">
-            <img
+            <Image
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/focus_tools_ben.webp"
               alt="Focus Tools Demo"
-              className="mx-auto mb-0 w-80 h-80 lg:w-80 lg:h-80"
+              width={320} // Set your desired width here
+              height={320} // Set your desired height here
               loading="lazy"
             />
             <h3 className="mb-0 text-xl font-bold text-black">ADHD Focus Tools</h3>
@@ -35,20 +38,22 @@ const BenefitsSection = () => {
           </div>
 
           <div className="text-center">
-            <img
+            <Image
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/flashcards_ben.webp"
               alt="Flashcards Demo"
-              className="mx-auto mb-0 w-80 h-80 lg:w-80 lg:h-80"
+              width={320} // Set your desired width here
+              height={320} // Set your desired height here
               loading="lazy"
             />
             <h3 className="mb-0 text-xl font-bold text-black">Flashcard Tool</h3>
             <p className="text-gray-700">Create and Revise flashcards from your notes.</p>
           </div>
           <div className="text-center">
-            <img
+            <Image
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/essayplans_ben.webp"
               alt="Essay plans demo"
-              className="mx-auto mb-0 w-80 h-80 lg:w-80 lg:h-80"
+              width={320} // Set your desired width here
+              height={320} // Set your desired height here
               loading="lazy"
             />
             <h3 className="mb-0 text-xl font-bold text-black">AI Generation Tools</h3>
