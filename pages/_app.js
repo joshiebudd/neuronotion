@@ -23,14 +23,6 @@ function MyApp({ Component, pageProps }) {
         {/* Removed the duplicate preconnect link */}
       </Head>
 
-      <Script
-        strategy="afterInteractive"
-        src="https://connect.facebook.net/en_US/fbevents.js"
-        onLoad={() => {
-          fbq('init', '230622039592089');
-          fbq('track', 'PageView');
-        }}
-      />
 
       <Component {...pageProps} />
     </>
