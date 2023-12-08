@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { SpeedInsights } from '@vercel/speed-insights/next'; // Move this line here
 import HeaderSection from '../components/HeaderSection';
 import HeroSection from '../components/HeroSection';
 import BenefitsSection from '../components/BenefitsSection';
@@ -56,7 +55,6 @@ const IndexPage = () => {
     gtag('js', new Date());
     gtag('config', 'G-FTX0TWXP1E');
     
-const speedInsights = new SpeedInsights(/* options */);
   }, []); // Empty dependency array to run the effect only once
 
   return (
