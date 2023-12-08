@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"; // Move this line here
 import HeaderSection from '../components/HeaderSection';
 import HeroSection from '../components/HeroSection';
 import BenefitsSection from '../components/BenefitsSection';
@@ -13,7 +13,6 @@ import FAQSection from '../components/FAQSection';
 import FinalCTA from '../components/FinalCTASection';
 import Footer from '../components/FooterSection';
 import FooterSection from '../components/FooterSection';
-
 
 const IndexPage = () => {
   useEffect(() => {
@@ -57,8 +56,7 @@ const IndexPage = () => {
     gtag('js', new Date());
     gtag('config', 'G-FTX0TWXP1E');
 
-    import { SpeedInsights } from "@vercel/speed-insights/next"
-    
+    const speedInsights = new SpeedInsights(/* options */);
   }, []); // Empty dependency array to run the effect only once
 
   return (
