@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Script from 'next/script';
 import HeaderSection from '../components/HeaderSection';
 import HeroSection from '../components/HeroSection';
 import BenefitsSection from '../components/BenefitsSection';
@@ -54,6 +55,15 @@ const IndexPage = () => {
     }
     gtag('js', new Date());
     gtag('config', 'G-FTX0TWXP1E');
+
+     <Script
+        strategy="afterInteractive"
+        src="https://connect.facebook.net/en_US/fbevents.js"
+        onLoad={() => {
+          fbq('init', '230622039592089');
+          fbq('track', 'PageView');
+        }}
+      />
     
   }, []); // Empty dependency array to run the effect only once
 
