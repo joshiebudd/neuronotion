@@ -8,7 +8,7 @@ const DemoSection = () => {
         <p className="mb-4 text-sm font-normal text-black sm:px-16 lg:text-md md:px-48">Eliminate the struggles of being distracted when juggling programs and tabs. Ease into a streamlined experience.</p>
 
         <div className="inline-block p-0 border-8 border-gray-300 border-opacity-20 rounded-lg overflow-hidden">
-          <img src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp" width="1000" height="1200" alt="annotated version of module page" className="centered-image" loading="lazy" />
+          <img src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp" width="1000" height="1200" alt="annotated version of module page" className="centered-image" />
         </div>
 
         <div className="mt-4">
