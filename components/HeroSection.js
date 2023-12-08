@@ -8,7 +8,7 @@ const HeroSection = () => {
           Maximize your ADHD Brain <br /> with Neuro Notion
         </h1>
         <p className="mb-10 text-lg font-normal text-black sm:px-16 lg:text-xl xl:px-48">
-          Neuro Notion is your second brain for studying. It&apos;s an all-in-one Notion System that
+          Neuro Notion is your second brain for studying - an all-in-one Notion System that
           centralizes revision notes, flashcards, projects, deadlines, and ADHD focus tools into one
           place.
         </p>
