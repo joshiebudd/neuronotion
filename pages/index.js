@@ -56,7 +56,6 @@ const IndexPage = () => {
     gtag('js', new Date());
     gtag('config', 'G-FTX0TWXP1E');
 
-    const speedInsights = new SpeedInsights(/* options */);
   }, []); // Empty dependency array to run the effect only once
 
   return (
