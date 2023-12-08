@@ -27,7 +27,7 @@ const DemoSection = () => {
         {/* Testimonial and Author Info */}
         <div className="text-center mx-auto mt-4 px-4">
           <span className="mt-0 text-sm text-gray-800">&quot;Neuro Notion has been an absolute game changer for studying with ADHD. 
-          Finally, I have a place for my Notes, Flashcards, Essay plans, and everything in a single spot 
+          Finally, I have a place for my Notes, Flashcards, Essay plans, and everything else in a single spot 
           so I no longer get distracted when jumping between tabs. Love it!&quot;</span>
 
           <div className="mt-4">
