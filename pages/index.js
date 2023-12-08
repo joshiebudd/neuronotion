@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next"; // Move this line here
+import SpeedInsights from '@vercel/speed-insights/next'; // Move this line here
 import HeaderSection from '../components/HeaderSection';
 import HeroSection from '../components/HeroSection';
 import BenefitsSection from '../components/BenefitsSection';
