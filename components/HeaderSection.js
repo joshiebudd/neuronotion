@@ -7,6 +7,35 @@ const HeaderSection = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const scrollToMiddle = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const topPosition =
+        section.offsetTop + section.offsetHeight / 2 - window.innerHeight / 2;
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth',
+      });
+      setMenuOpen(false);
+    }
+  };
+
+  const handleButtonClick = (e) => {
+    e.preventDefault();
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      const topPosition =
+        pricingSection.offsetTop +
+        pricingSection.offsetHeight / 2 -
+        window.innerHeight / 2;
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth',
+      });
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <header>
       <div
