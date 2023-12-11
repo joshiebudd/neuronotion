@@ -22,8 +22,7 @@ const HeroSection = () => {
         </h1>
         <p className="mb-10 text-lg font-normal text-black sm:px-18 lg:text-xl xl:px-48">
           Neuro Notion is your second brain for studying - an all-in-one Notion System that
-          centralizes revision notes, flashcards, projects, deadlines, and ADHD focus tools into one
-          place.
+          centralizes revision notes, flashcards, projects, deadlines, and ADHD focus tools.
         </p>
 
         <div className="mt-4 flex justify-center space-x-4">

@@ -25,9 +25,9 @@ const HeaderSection = () => {
                             <span className="self-center whitespace-nowrap text-2xl font-semibold text-black">Neuro Notion</span>
                         </a>
                         <div className="hidden lg:flex items-center space-x-4">
-                            <a onClick={() => scrollToMiddle('features')} className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600">Features</a>
-                            <a onClick={() => scrollToMiddle('pricing')} className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600">Pricing</a>
-                            <a onClick={() => scrollToMiddle('faqs')} className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600">FAQs</a>
+                            <a onClick={() => scrollToMiddle('features')}    className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">Features</a>
+                            <a onClick={() => scrollToMiddle('pricing')}    className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">Pricing</a>
+                            <a onClick={() => scrollToMiddle('faqs')}    className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">FAQs</a>
                         </div>
                         <a onClick={() => scrollToMiddle('pricing')} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">Get Now</a>
                     </div>
