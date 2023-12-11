@@ -14,8 +14,8 @@ const ThankYouPage = () => {
           </svg>
         </div>
         {/* Thank You message */}
-        <p className="mb-4 text-lg font-semibold text-gray-900">Thank you for your purchase!</p>
-        <p className="text-gray-600">Please check your emails for a link to the template and instruction on how to install, order confirmation, and receipt. <br /> You can close this page now. </p>
+        <p className="mb-4 text-lg font-semibold text-black">Thank you for your purchase!</p>
+        <p className="text-black">Please check your emails for a link to the template and instruction on how to install, order confirmation, and receipt. <br /> You can close this page now. </p>
       </div>
       <FooterSection />
     </>
