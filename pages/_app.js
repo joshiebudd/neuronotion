@@ -46,7 +46,16 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-
+        
+ <Script 
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+          `
+        }}
+      />
+        
       <Script
         src="/_vercel/insights/script.js"
         strategy="afterInteractive"
