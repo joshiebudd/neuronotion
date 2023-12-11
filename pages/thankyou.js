@@ -1,4 +1,5 @@
 import React from 'react';
+import ',./src/styles/global.css';
 import HeaderSection from '../components/HeaderSection';
 import FooterSection from '../components/FooterSection';
 
