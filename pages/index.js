@@ -15,6 +15,40 @@ import FooterSection from '../components/FooterSection';
 
 const IndexPage = () => {
   useEffect(() => {
+
+    // Tracking Script 1
+    let pageLoadedTime = Date.now();
+
+    function trackQuickExit() {
+      let timeSpent = Date.now() - pageLoadedTime;
+      if (timeSpent <= 5000) {
+        va('event', {
+          name: 'QuickPageExit',
+          data: {
+            timeSpent: timeSpent
+          },
+        });
+      }
+    }
+
+    window.addEventListener('beforeunload', trackQuickExit);
+
+    // Tracking Script 3 (Google Tag)
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-FTX0TWXP1E');
+
+     <Script
+        strategy="afterInteractive"
+        src="https://connect.facebook.net/en_US/fbevents.js"
+        onLoad={() => {
+          fbq('init', '230622039592089');
+          fbq('track', 'PageView');
+        }}
+      />
     
   }, []); // Empty dependency array to run the effect only once
 
