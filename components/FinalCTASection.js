@@ -1,6 +1,18 @@
 import React from 'react';
 
 const FinalCTA = () => {
+
+  const scrollToMiddle = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        const topPosition = section.offsetTop + (section.offsetHeight / 2) - (window.innerHeight / 2);
+        window.scrollTo({
+            top: topPosition,
+            behavior: 'smooth'
+        });
+    }
+};
+
   return (
     <section className="pt-52 pb-52 bg-gray-50 Final_CTA">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
@@ -10,7 +22,7 @@ const FinalCTA = () => {
 
         {/* Get NeuroNotes Button (Below "Must-have focus tools" text and above stars) */}
         <div className="mt-4"> {/* Increased margin-top for spacing */}
-          <a href="#pricing" className="StandardCheckoutButton inline-block rounded-lg bg-black mt-2 px-6 py-4 text-lg font-semibold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">Get Neuro Notion</a>
+        <a onClick={() => scrollToMiddle('pricing')} className="StandardCheckoutButton inline-block rounded-lg bg-black mt-2 px-6 py-4 text-lg font-semibold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">Get Neuro Notion</a>
         </div>
 
         {/* Star Rating */}

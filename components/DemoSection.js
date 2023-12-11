@@ -1,6 +1,18 @@
 import React from 'react';
 
 const DemoSection = () => {
+
+  const scrollToMiddle = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        const topPosition = section.offsetTop + (section.offsetHeight / 2) - (window.innerHeight / 2);
+        window.scrollTo({
+            top: topPosition,
+            behavior: 'smooth'
+        });
+    }
+};
+
   return (
     <section className="bg-gray-50 demo-section pt-10 mt-16">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
