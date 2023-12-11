@@ -15,22 +15,8 @@ import FooterSection from '../components/FooterSection';
 
 const IndexPage = () => {
   useEffect(() => {
+
     // Tracking Script 1
-    function trackViewDemoButtonClick() {
-      va('event', {
-        name: 'ViewDemoButtonClick',
-        data: {
-          buttonType: 'ViewDemo',
-          timestamp: new Date().toISOString()
-        },
-      });
-    }
-
-    document.querySelectorAll('.view-demo-button').forEach(button => {
-      button.addEventListener('click', trackViewDemoButtonClick);
-    });
-
-    // Tracking Script 2
     let pageLoadedTime = Date.now();
 
     function trackQuickExit() {
@@ -66,7 +52,6 @@ const IndexPage = () => {
     
   }, []); // Empty dependency array to run the effect only once
 
-  <Analytics />
   
   return (
     <>
