@@ -20,8 +20,14 @@ function MyApp({ Component, pageProps }) {
         <link rel="dns-prefetch" href="https://img.icons8.com" />
         <link rel="preconnect" href="https://connect.facebook.net" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        {/* Removed the duplicate preconnect link */}
+         {/* Vercel Analytics Inline Script */}
+        <script dangerouslySetInnerHTML={{ __html: `window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };` }}></script>
       </Head>
+
+      <Script
+        src="/_vercel/insights/script.js"
+        defer
+      />
 
 
       <Component {...pageProps} />
