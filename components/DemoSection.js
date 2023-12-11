@@ -2,16 +2,18 @@ import React from 'react';
 
 const DemoSection = () => {
 
-  const scrollToMiddle = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        const topPosition = section.offsetTop + (section.offsetHeight / 2) - (window.innerHeight / 2);
-        window.scrollTo({
-            top: topPosition,
-            behavior: 'smooth'
-        });
+  const handleButtonClick = (e) => {
+    e.preventDefault(); // Prevent the default anchor behavior
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      const topPosition = pricingSection.offsetTop + (pricingSection.offsetHeight / 2) - (window.innerHeight / 2);
+      window.scrollTo({
+        top: topPosition,
+        behavior: 'smooth'
+      });
     }
-};
+  };
+
 
   return (
     <section className="bg-gray-50 demo-section pt-10 mt-16">
@@ -24,7 +26,7 @@ const DemoSection = () => {
         </div>
 
         <div className="mt-4">
-        <a onClick={() => scrollToMiddle('pricing')} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
+        <a href="#pricing" onClick={handleButtonClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
           Get Neuro Notion
         </a>
       </div>
