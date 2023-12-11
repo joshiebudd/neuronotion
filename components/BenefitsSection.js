@@ -20,7 +20,6 @@ const BenefitsSection = () => {
               alt="Quick Add Demo"
               width={320} // Set your desired width here
               height={320} // Set your desired height here
-              loading="lazy"
             />
             <h3 className="mb-0 text-xl font-bold text-black">Quick Add</h3>
             <p className="mb-4 text-gray-700">Capture notes or ideas fast. Without distractions.</p>
@@ -31,7 +30,6 @@ const BenefitsSection = () => {
               alt="Focus Tools Demo"
               width={320} // Set your desired width here
               height={320} // Set your desired height here
-              loading="lazy"
             />
             <h3 className="mb-0 text-xl font-bold text-black">ADHD Focus Tools</h3>
             <p className="mb-4 text-gray-700">Custom built-in focus timers, sounds, and tools</p>
@@ -43,7 +41,6 @@ const BenefitsSection = () => {
               alt="Flashcards Demo"
               width={320} // Set your desired width here
               height={320} // Set your desired height here
-              loading="lazy"
             />
             <h3 className="mb-0 text-xl font-bold text-black">Flashcard Tool</h3>
             <p className="text-gray-700">Create and Revise flashcards from your notes.</p>
@@ -54,7 +51,6 @@ const BenefitsSection = () => {
               alt="Essay plans demo"
               width={320} // Set your desired width here
               height={320} // Set your desired height here
-              loading="lazy"
             />
             <h3 className="mb-0 text-xl font-bold text-black">AI Generation Tools</h3>
             <p className="text-gray-500">Use AI to generate Essay Plans, Summaries, and more!</p>
