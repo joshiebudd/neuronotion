@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import Header from '../components/Header'; // Adjust the path according to your project structure
+import HeaderSection from '../components/HeaderSection'; 
+import FooterSection from '../components/FooterSection'; 
 
 export default function ThankYou() {
   return (
