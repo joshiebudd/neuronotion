@@ -29,7 +29,7 @@ const HeaderSection = () => {
                             <a onClick={() => scrollToMiddle('pricing')} className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600">Pricing</a>
                             <a onClick={() => scrollToMiddle('faqs')} className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600">FAQs</a>
                         </div>
-                        <a href="#pricing" className="StandardCheckoutButton rounded-lg bg-black px-6 py-2.5 text-lg font-medium text-white hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300">Get Now</a>
+                        <a onClick={() => scrollToMiddle('pricing')} className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600">Get Now</a>
                     </div>
                 </nav>
             </div>
