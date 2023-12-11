@@ -8,7 +8,7 @@ const DemoSection = () => {
         <p className="mb-4 text-sm font-normal text-black sm:px-16 lg:text-md md:px-48">Eliminate the struggles of being distracted when juggling programs and tabs. Ease into a streamlined experience.</p>
 
         <div className="inline-block p-0 border-8 border-gray-300 border-opacity-20 rounded-lg overflow-hidden">
-          <img src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp" width="1000" height="1200" alt="annotated version of module page" className="centered-image" loading="lazy" />
+          <img src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp" width="1000" height="1200" alt="annotated version of module page" className="centered-image" />
         </div>
 
         <div className="mt-4">
@@ -26,9 +26,9 @@ const DemoSection = () => {
 
         {/* Testimonial and Author Info */}
         <div className="text-center mx-auto mt-4 px-4">
-          <span className="mt-0 text-sm text-gray-800">"Neuro Notion has been an absolute game changer for studying with ADHD. 
-          Finally, I have a place for my Notes, Flashcards, Essay plans, and everything in a single spot 
-          so I no longer get distracted when jumping between tabs. Love it!"</span>
+          <span className="mt-0 text-sm text-gray-800">&quot;Neuro Notion has been an absolute game changer for studying with ADHD. 
+          Finally, I have a place for my Notes, Flashcards, Essay plans, and everything else in a single spot 
+          so I no longer get distracted when jumping between tabs. Love it!&quot;</span>
 
           <div className="mt-4">
             <div className="flex justify-center">
