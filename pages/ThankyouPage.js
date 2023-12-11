@@ -19,4 +19,4 @@ const ThankYouPage = () => {
   );
 }
 
-export default IndexPage;
+export default ThankYouPage;
