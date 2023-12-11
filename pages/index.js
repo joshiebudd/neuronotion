@@ -12,7 +12,6 @@ import AboutSection from '../components/AboutSection';
 import FAQSection from '../components/FAQSection';
 import FinalCTA from '../components/FinalCTASection';
 import FooterSection from '../components/FooterSection';
-import ThankyouSection from '../components/ThankyouSection';
 
 const IndexPage = () => {
   useEffect(() => {
@@ -33,7 +32,6 @@ const IndexPage = () => {
       <AboutSection />
       <FAQSection />
       <FinalCTA />
-      <ThankyouSection />
       <FooterSection />
     </>
   );
