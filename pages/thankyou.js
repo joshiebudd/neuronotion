@@ -1,8 +1,11 @@
 import React from 'react';
+import HeaderSection from '../components/HeaderSection';
+import FooterSection from '../components/FooterSection';
 
 function ThankYouPage() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
+    <div className="min-h-screen flex flex-col bg-gray-100">
+      <HeaderSection />
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="bg-white rounded-lg p-4 text-center shadow-md max-w-md">
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
@@ -28,6 +31,7 @@ function ThankYouPage() {
           </p>
         </div>
       </div>
+      <FooterSection />
     </div>
   );
 }
