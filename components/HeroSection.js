@@ -1,6 +1,19 @@
 import Image from 'next/image';
 
 const HeroSection = () => {
+
+    const handleButtonClick = (e) => {
+      e.preventDefault(); // Prevent the default anchor behavior
+      const pricingSection = document.getElementById('pricing');
+      if (pricingSection) {
+        const topPosition = pricingSection.offsetTop + (pricingSection.offsetHeight / 2) - (window.innerHeight / 2);
+        window.scrollTo({
+          top: topPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+
   return (
     <section id="hero" className="bg-gray-50 hero-section pt-32 sm:pt-28 md:pt-30 lg:pt-32">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
@@ -13,13 +26,12 @@ const HeroSection = () => {
           place.
         </p>
 
-        {/* Buttons Container */}
         <div className="mt-4 flex justify-center space-x-4">
-          {/* Get NeuroNotes Button */}
-          <a href="#pricing" className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
-            Get Access
-          </a>
-        </div>
+        {/* Get NeuroNotes Button */}
+        <a href="#pricing" onClick={handleButtonClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
+          Get Access
+        </a>
+      </div>
 
         {/* Stars */}
         <div className="mb-2 flex justify-center">
