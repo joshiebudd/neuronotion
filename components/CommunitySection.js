@@ -3,7 +3,7 @@ import React from 'react';
 const CommunitySection = () => {
   return (
     <section className="bg-gray-50 community-section">
-      <div className="py-0 pb-0 px-4 mx-auto max-w-screen-xl sm:pt-16 lg:px-56">
+      <div className="py-0 pb-0 px-4 mx-auto max-w-screen-xl pt-20">
         <div className="max-w-screen-md mb-2 lg:mb-16 mx-auto text-center">
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-black">Join our ADHD <br /> Study Buddy Community</h2>
           <p className="mb-0 text-black">Access our exclusive community, find fellow ADHDers, learn effective study tools, and stay in the loop with updates and tutorials.</p>
