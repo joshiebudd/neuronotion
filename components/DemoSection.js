@@ -12,8 +12,10 @@ const DemoSection = () => {
         </div>
 
         <div className="mt-4">
-          <a href="#pricing" className="StandardCheckoutButton inline-block rounded-xl bg-black mt-2 px-4 py-4 text-xl font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-600">Get Neuro Notion</a>
-        </div>
+        <a onClick={() => scrollToMiddle('pricing')} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
+          Get Neuro Notion
+        </a>
+      </div>
 
         {/* Stars */}
         <div className="mb-2 flex justify-center">
