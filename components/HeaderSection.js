@@ -14,6 +14,18 @@ const HeaderSection = () => {
             });
         }
     };
+    
+    const handleButtonClick = (e) => {
+        e.preventDefault(); // Prevent the default anchor behavior
+        const pricingSection = document.getElementById('pricing');
+        if (pricingSection) {
+          const topPosition = pricingSection.offsetTop + (pricingSection.offsetHeight / 2) - (window.innerHeight / 2);
+          window.scrollTo({
+            top: topPosition,
+            behavior: 'smooth'
+          });
+        }
+      };
 
     return (
         <header>
@@ -29,7 +41,7 @@ const HeaderSection = () => {
                             <a onClick={() => scrollToMiddle('pricing')}    className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">Pricing</a>
                             <a onClick={() => scrollToMiddle('faqs')}    className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">FAQs</a>
                         </div>
-                        <a onClick={() => scrollToMiddle('pricing')} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">Get Now</a>
+                        <a href="#pricing" onClick={handleButtonClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">Get Now</a>
                     </div>
                 </nav>
             </div>
