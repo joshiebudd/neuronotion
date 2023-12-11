@@ -14,7 +14,7 @@ const BenefitsSection = () => {
           </p>
         </div>
         <div className="md:grid md:grid-cols-2 gap-x-16 gap-y-4 items-center">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center">
             <Image
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/quickadd_ben.webp"
               alt="Quick Add Demo"
@@ -24,7 +24,7 @@ const BenefitsSection = () => {
             <h3 className="mb-0 text-xl font-bold text-black">Quick Add</h3>
             <p className="mb-4 text-gray-700">Capture notes or ideas fast. Without distractions.</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center">
             <Image
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/focus_tools_ben.webp"
               alt="Focus Tools Demo"
@@ -35,7 +35,7 @@ const BenefitsSection = () => {
             <p className="mb-4 text-gray-700">Custom built-in focus timers, sounds, and tools</p>
           </div>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center">
             <Image
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/flashcards_ben.webp"
               alt="Flashcards Demo"
@@ -45,7 +45,7 @@ const BenefitsSection = () => {
             <h3 className="mb-0 text-xl font-bold text-black">Flashcard Tool</h3>
             <p className="text-gray-700">Create and Revise flashcards from your notes.</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center">
             <Image
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/essayplans_ben.webp"
               alt="Essay plans demo"
