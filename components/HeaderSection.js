@@ -41,7 +41,7 @@ const HeaderSection = () => {
                             <a onClick={() => scrollToMiddle('pricing')}    className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">Pricing</a>
                             <a onClick={() => scrollToMiddle('faqs')}    className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">FAQs</a>
                         </div>
-                        <a href="#pricing" onClick={handleButtonClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">Get Now</a>
+<a href="#pricing" onClick={handleButtonClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-4 py-2 text-sm font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 sm:px-8 sm:py-4 sm:text-lg">Get Now</a>
                     </div>
                 </nav>
             </div>
