@@ -10,7 +10,7 @@ import CommunitySection from '../components/CommunitySection';
 import PricingSection from '../components/PricingSection';
 import AboutSection from '../components/AboutSection';
 import FAQSection from '../components/FAQSection';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics';
 import FinalCTA from '../components/FinalCTASection';
 import FooterSection from '../components/FooterSection';
 
