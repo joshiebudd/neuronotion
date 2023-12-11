@@ -39,23 +39,24 @@ const HeaderSection = () => {
   return (
     <header>
       <div
-        className={`full-header fixed top-0 left-0 right-0 bg-white lg:bg-opacity-30 lg:backdrop-blur-lg ${
+        className={`fixed top-0 left-0 right-0 bg-white bg-opacity-30 backdrop-blur-lg ${
           menuOpen ? 'h-auto' : 'h-16'
         }`}
         style={{ backdropFilter: 'blur(10px)' }}
       >
         <nav className="px-8 py-5 lg:px-6">
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
-            <div className="flex items-center">
+            <div className={`lg:flex items-center ${menuOpen ? 'hidden' : 'block'}`}>
               <a href="#hero" className="flex items-center">
                 <img
                   src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
                   className="mr-3 h-6 sm:h-9"
                   alt="NeuroNotes Logo"
                 />
+                <span className="self-center whitespace-nowrap text-2xl font-semibold text-black">Neuro Notion</span>
               </a>
             </div>
-            <div className="lg:hidden flex items-center space-x-4">
+            <div className={`lg:hidden flex items-center space-x-4 ${menuOpen ? 'block' : 'hidden'}`}>
               <button
                 onClick={toggleMenu}
                 className="px-2 py-1 text-lg text-black focus:outline-none"
@@ -85,11 +86,7 @@ const HeaderSection = () => {
                 </svg>
               </button>
             </div>
-            <div
-              className={`${
-                menuOpen ? 'block' : 'hidden'
-              } lg:flex lg:items-center space-x-4`}
-            >
+            <div className={`lg:flex lg:items-center space-x-4 ${menuOpen ? 'hidden' : 'block'}`}>
               <a
                 onClick={() => scrollToMiddle('features')}
                 className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline"
@@ -109,15 +106,11 @@ const HeaderSection = () => {
                 FAQs
               </a>
             </div>
-            <div
-              className={`lg:flex lg:items-center space-x-4 ${
-                menuOpen ? 'hidden' : 'block'
-              }`}
-            >
+            <div className={`lg:flex lg:items-center space-x-4 ${menuOpen ? 'hidden' : 'block'}`}>
               <a
                 href="#pricing"
                 onClick={handleButtonClick}
-                className="StandardCheckoutButton inline-block rounded-lg bg-black px-4 py-2 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+                className="inline-block rounded-lg bg-black px-4 py-2 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
               >
                 Get Now
               </a>
