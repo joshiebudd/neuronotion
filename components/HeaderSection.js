@@ -1,35 +1,7 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
 
 const HeaderSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const scrollToMiddle = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const topPosition =
-        section.offsetTop + section.offsetHeight / 2 - window.innerHeight / 2;
-      window.scrollTo({
-        top: topPosition,
-        behavior: 'smooth',
-      });
-      setMenuOpen(false); // Close the menu after clicking a link
-    }
-  };
-
-  const handleButtonClick = (e) => {
-    e.preventDefault();
-    const pricingSection = document.getElementById('pricing');
-    if (pricingSection) {
-      const topPosition =
-        pricingSection.offsetTop + pricingSection.offsetHeight / 2 - window.innerHeight / 2;
-      window.scrollTo({
-        top: topPosition,
-        behavior: 'smooth',
-      });
-      setMenuOpen(false); // Close the menu after clicking the "Get Now" button
-    }
-  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -45,16 +17,15 @@ const HeaderSection = () => {
       >
         <nav className="px-8 py-5 lg:px-6">
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
-            <a href="#hero" className="flex items-center">
-              <img
-                src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
-                className="mr-3 h-6 sm:h-9"
-                alt="NeuroNotes Logo"
-              />
-              <span className="self-center whitespace-nowrap text-2xl font-semibold text-black">
-                Neuro Notion
-              </span>
-            </a>
+            <div className="flex items-center">
+              <a href="#hero" className="flex items-center">
+                <img
+                  src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
+                  className="mr-3 h-6 sm:h-9"
+                  alt="NeuroNotes Logo"
+                />
+              </a>
+            </div>
             <div className="lg:hidden flex items-center space-x-4">
               <button
                 onClick={toggleMenu}
@@ -108,6 +79,12 @@ const HeaderSection = () => {
               >
                 FAQs
               </a>
+            </div>
+            <div
+              className={`lg:flex lg:items-center space-x-4 ${
+                menuOpen ? 'hidden' : 'block'
+              }`}
+            >
               <a
                 href="#pricing"
                 onClick={handleButtonClick}
