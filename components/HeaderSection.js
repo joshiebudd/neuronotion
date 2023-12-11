@@ -33,8 +33,8 @@ const HeaderSection = () => {
                 <nav className="px-8 py-5 lg:px-6">
                     <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
                         <a href="#hero" className="flex items-center">
-                            <img src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp" className="mr-3 h-6 sm:h-9" alt="NeuroNotes Logo" />
-                            <span className="self-center whitespace-nowrap text-2xl font-semibold text-black">Neuro Notion</span>
+                            <img href="www.neuro-notion.com" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp" className="mr-3 h-6 sm:h-9" alt="NeuroNotes Logo" />
+                            <span href="www.neuro-notion.com" className="self-center whitespace-nowrap text-2xl font-semibold text-black">Neuro Notion</span>
                         </a>
                         <div className="hidden lg:flex items-center space-x-4">
                             <a onClick={() => scrollToMiddle('features')}    className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">Features</a>
