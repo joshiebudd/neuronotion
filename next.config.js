@@ -12,6 +12,11 @@ module.exports = {
       'github.com',
       'raw.githubusercontent.com', // Add the domain without the protocol
     ],
+    remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'raw.githubusercontent.com',
+        },
   },
   vercelAnalyticsId: 'prj_XPGFnBtOVBZufVUGGE8tAiatzOtj',
 };
