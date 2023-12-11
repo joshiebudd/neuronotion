@@ -1,4 +1,4 @@
-import '../tailwind.config.js'
+import '../src/styles/globals.css'; 
 import Head from 'next/head';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
