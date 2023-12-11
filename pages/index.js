@@ -10,8 +10,8 @@ import CommunitySection from '../components/CommunitySection';
 import PricingSection from '../components/PricingSection';
 import AboutSection from '../components/AboutSection';
 import FAQSection from '../components/FAQSection';
+Import { Analytics } from '@vercel/analytics/react';
 import FinalCTA from '../components/FinalCTASection';
-import Footer from '../components/FooterSection';
 import FooterSection from '../components/FooterSection';
 
 const IndexPage = () => {
@@ -67,6 +67,8 @@ const IndexPage = () => {
     
   }, []); // Empty dependency array to run the effect only once
 
+  <Analytics />
+  
   return (
     <>
       <HeaderSection />
