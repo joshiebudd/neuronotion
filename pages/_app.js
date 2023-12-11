@@ -1,7 +1,6 @@
-import '../src/styles/globals.css'; 
+import '../src/styles/globals.css';
 import Head from 'next/head';
 import Script from 'next/script';
-import { Analytics } from '@vercel/analytics/react';
 // other imports if necessary
 
 // Quick Page Exit Tracking Script
@@ -46,19 +45,7 @@ function MyApp({ Component, pageProps }) {
         src="/_vercel/insights/script.js"
       />
 
-      {/* Facebook Pixel Script */}
-      <Script
-        strategy="afterInteractive"
-        src="https://connect.facebook.net/en_US/fbevents.js"
-        onLoad={() => {
-          fbq('init', '230622039592089');
-          fbq('track', 'PageView');
-        }}
-      />
-
       <Component {...pageProps} />
-
-      <Analytics />
     </>
   );
 }
