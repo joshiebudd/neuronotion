@@ -15,21 +15,6 @@ import FooterSection from '../components/FooterSection';
 
 const IndexPage = () => {  
   return (
-    <>
-          <Script
-        id="track-pageview-pixel"
-        src="https://connect.facebook.net/en_US/fbevents.js"
-        onLoad={() => {
-          fbq('init', '230622039592089');
-          fbq('track', 'PageView');
-        }}
-      />
-        
-      <Script
-        id="vercel-speed-insights"
-        src="/_vercel/insights/script.js"
-        />
-
       <HeaderSection />
       <HeroSection />
       <BenefitsSection />
@@ -42,7 +27,6 @@ const IndexPage = () => {
       <FAQSection />
       <FinalCTA />
       <FooterSection />
-    </>
   );
 }
 
