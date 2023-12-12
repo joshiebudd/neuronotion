@@ -5,6 +5,21 @@ import Script from 'next/script';
 function MyApp({ Component, pageProps }) {
   return (
     <>
+    
+          <Script
+        id="track-pageview-pixel"
+        src="https://connect.facebook.net/en_US/fbevents.js"
+        onLoad={() => {
+          fbq('init', '230622039592089');
+          fbq('track', 'PageView');
+        }}
+      />
+        
+      <Script
+        id="vercel-speed-insights"
+        src="/_vercel/insights/script.js"
+        />
+          
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
