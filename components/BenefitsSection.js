@@ -20,9 +20,10 @@ const BenefitsSection = () => {
               alt="Quick Add Demo"
               width={320}
               height={320}
+              className="mt-4"
             />
             <h3 className="mb-0 text-xl font-bold text-black">Eliminate Distractions</h3>
-            <p className="mb-4 text-gray-700">Capture notes & ideas fast. No more distractions.</p>
+            <p className="mb-4 mt-4 text-gray-700">Capture notes & ideas fast. No more distractions.</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
@@ -31,9 +32,10 @@ const BenefitsSection = () => {
               alt="Flashcards Demo"
               width={320}
               height={320}
+              className="mt-4"
             />
             <h3 className="mb-0 text-xl font-bold text-black">Save Time & Effort</h3>
-            <p className="text-gray-700">Create, Revise, Test. All in one place.</p>
+            <p className="mb-4 mt-4 text-gray-700">Create, Revise, Test. All in one place.</p>
           </div>
                 
           <div className="flex flex-col items-center text-center">
@@ -42,9 +44,10 @@ const BenefitsSection = () => {
               alt="Focus Tools Demo"
               width={320}
               height={320}
+              className="mt-4"
             />
             <h3 className="mb-0 text-xl font-bold text-black">Built around ADHD</h3>
-            <p className="mb-4 text-gray-700">Custom-built ADHD focus timers, sounds, and tools</p>
+            <p className="mb-4 mt-4 text-gray-700">Custom-built ADHD focus timers, sounds, and tools</p>
           </div>
 
 
@@ -54,9 +57,10 @@ const BenefitsSection = () => {
               alt="Essay plans demo"
               width={320}
               height={320}
+              className="mt-4"
             />
             <h3 className="mb-0 text-xl font-bold text-black">Work Smarter. Much Smarter.</h3>
-            <p className="text-gray-500">Let AI generate Essay Plans, Summaries & more!</p>
+            <p className="mb-4 mt-4 text-gray-500">Let AI generate Essay Plans, Summaries & more!</p>
           </div>
         </div>
       </div>
