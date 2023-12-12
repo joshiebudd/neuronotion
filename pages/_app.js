@@ -24,20 +24,6 @@ function MyApp({ Component, pageProps }) {
         <link rel="preload" href="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp" as="image" />
         <link rel="preload" href="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/maindemo.webp" as="image" />   
         <link rel="stylesheet" href="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/tailwind.min.css" />
-
-        <Script
-        id="track-pageview-pixel"
-        src="https://connect.facebook.net/en_US/fbevents.js"
-        onLoad={() => {
-          fbq('init', '230622039592089');
-          fbq('track', 'PageView');
-        }}
-      />
-        
-      <Script
-        id="vercel-speed-insights"
-        src="/_vercel/insights/script.js"
-        />
         <style>
           {`.hero-section{margin-bottom:50px;} .star-rating{margin-bottom:50px;} .centered-image{display:block;margin-left:auto;margin-right:auto;max-width:100%;height:auto;} .full-header{z-index:10;} h3{color:black;}`}
         </style>
