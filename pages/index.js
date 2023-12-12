@@ -13,12 +13,7 @@ import FAQSection from '../components/FAQSection';
 import FinalCTA from '../components/FinalCTASection';
 import FooterSection from '../components/FooterSection';
 
-const IndexPage = () => {
-  useEffect(() => {
-    
-  }, []); // Empty dependency array to run the effect only once
-
-  
+const IndexPage = () => {  
   return (
     <>
           <Script
