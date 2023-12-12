@@ -22,7 +22,7 @@ const BenefitsSection = () => {
               height={320}
             />
             <h3 className="mb-0 text-xl font-bold text-black">Eliminate Distractions</h3>
-            <p className="mb-4 text-gray-700">Capture notes or ideas fast. Without distractions.</p>
+            <p className="mb-4 text-gray-700">Capture notes & ideas fast. No more distractions.</p>
           </div>
 
           <div className="flex flex-col items-center text-center">
@@ -32,7 +32,7 @@ const BenefitsSection = () => {
               width={320}
               height={320}
             />
-            <h3 className="mb-0 text-xl font-bold text-black">Save time & Effort</h3>
+            <h3 className="mb-0 text-xl font-bold text-black">Save Time & Effort</h3>
             <p className="text-gray-700">Create, Revise, Test. All in one place.</p>
           </div>
                 
@@ -43,8 +43,8 @@ const BenefitsSection = () => {
               width={320}
               height={320}
             />
-            <h3 className="mb-0 text-xl font-bold text-black">Custom ADHD Tools</h3>
-            <p className="mb-4 text-gray-700">Custom built-in focus timers, sounds, and tools</p>
+            <h3 className="mb-0 text-xl font-bold text-black">Built around ADHD</h3>
+            <p className="mb-4 text-gray-700">Custom-built ADHD focus timers, sounds, and tools</p>
           </div>
 
 
