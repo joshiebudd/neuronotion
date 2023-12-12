@@ -17,6 +17,7 @@ const BenefitsSection = () => {
           <div className="flex flex-col items-center text-center">
             <Image
 <<<<<<< HEAD
+<<<<<<< HEAD
               width={320}
               height={320}
 <<<<<<< HEAD
@@ -65,6 +66,23 @@ const BenefitsSection = () => {
               width={320}
               height={320}
 >>>>>>> parent of 10f440a (Merge branch 'main' of https://github.com/joshiebudd/neuronotion)
+=======
+              src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/quickadd_ben.webp"
+              alt="Quick Add Demo"
+              width={320}
+              height={320}
+            />
+            <h3 className="text-xl font-bold text-black">Eliminate Distractions</h3>
+            <p className="text-gray-700">Capture notes & ideas fast. No more distractions.</p>
+          </div>
+
+          <div className="flex flex-col items-center text-center mb-2 mt-2">
+            <Image
+              src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/flashcards_ben.webp"
+              alt="Flashcards Demo"
+              width={320}
+              height={320}
+>>>>>>> parent of 77440d1 (speed updates)
             />
             <h3 className="mb-0 text-xl font-bold text-black">Save Time & Effort</h3>
             <p className="mb-4 mt-4 text-gray-700">Create, Revise, Test. All in one place.</p>
@@ -72,6 +90,7 @@ const BenefitsSection = () => {
                 
           <div className="flex flex-col items-center text-center">
             <Image
+<<<<<<< HEAD
 <<<<<<< HEAD
               width={320}
               height={320}
@@ -120,6 +139,23 @@ const BenefitsSection = () => {
               width={320}
               height={320}
 >>>>>>> parent of 10f440a (Merge branch 'main' of https://github.com/joshiebudd/neuronotion)
+=======
+              src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/focus_tools_ben.webp"
+              alt="Focus Tools Demo"
+              width={320}
+              height={320}
+            />
+            <h3 className="text-xl font-bold text-black">Built around ADHD</h3>
+            <p className="text-gray-700">Custom-built ADHD focus timers, sounds, and tools</p>
+          </div>
+
+          <div className="flex flex-col items-center text-center mb-2 mt-2">
+            <Image
+              src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/essayplans_ben.webp"
+              alt="Essay plans demo"
+              width={320}
+              height={320}
+>>>>>>> parent of 77440d1 (speed updates)
             />
             <h3 className="mb-0 text-xl font-bold text-black">Work Smarter. Much Smarter.</h3>
             <p className="mb-4 mt-4 text-gray-500">Let AI generate Essay Plans, Summaries & more!</p>
