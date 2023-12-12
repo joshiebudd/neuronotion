@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const DarkModeSection = () => {
   return (
@@ -8,8 +9,7 @@ const DarkModeSection = () => {
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900">Dark mode people, <br /> we got you.</h2>
 <p className="text-black">Keep things fresh by toggling dark mode on/off whenever you like, it&apos;s beautifully satisfying in both.</p>
         </div>
-
-        <img src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/darkmode_demo.webp" alt="template" loading="lazy" />
+        <Image src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/darkmode_demo.webp" alt="Template" />
       </div>
     </section>
   );

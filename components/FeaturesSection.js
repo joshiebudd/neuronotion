@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const FeaturesSection = () => {
   return (
@@ -17,7 +18,7 @@ const FeaturesSection = () => {
             {/* Task Card 1 */}
             <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
               <div className="flex-shrink-0">
-                <img className="w-10 h-10" src="https://img.icons8.com/ios-filled/50/planner.png" alt="planner" loading="lazy" />
+                <Image className="w-10 h-10" src="https://img.icons8.com/ios-filled/50/planner.png" alt="Planner" />
               </div>
               <div className="pt-5 text-lg font-semibold text-black">Seamless Organisation</div>
               <p className="pt-1 text-gray-700 text-center">No more distractions. Set tasks, reminders, deadlines, schedules all in one place.</p>
@@ -26,7 +27,7 @@ const FeaturesSection = () => {
             {/* Task Card 2 */}
             <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
               <div className="flex-shrink-0">
-                <img className="w-12 h-12" src="https://img.icons8.com/glyph-neue/64/artificial-intelligence.png" alt="Business Automation Icon" style={{ display: 'block' }} loading="lazy" />
+                <Image style={{ display: 'block' }} className="w-12 h-12" src="https://img.icons8.com/glyph-neue/64/artificial-intelligence.png" alt="Business Automation Icon" />
               </div>
               <div className="pt-5 text-lg font-medium text-black">Built-in AI</div>
               <p className="pt-1 text-gray-700 text-center">Transform notes into essay plans, summarise lecture topics, and more with Notion AI!</p>
@@ -35,7 +36,7 @@ const FeaturesSection = () => {
             {/* Task Card 3 */}
             <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
               <div className="flex-shrink-0">
-                <img className="w-10 h-10" src="https://img.icons8.com/ios-glyphs/30/graduation-cap--v1.png" alt="Business Automation Icon" style={{ display: 'block' }} loading="lazy" />
+                <Image style={{ display: 'block' }} className="w-10 h-10" src="https://img.icons8.com/ios-glyphs/30/graduation-cap--v1.png" alt="Business Automation Icon" />
               </div>
               <div className="pt-5 text-lg font-medium text-black">Easy Tutorials</div>
               <p className="pt-1 text-gray-700 text-center"> Notion beginners can ease into this system with full how-to videos on every page.</p>
@@ -44,7 +45,7 @@ const FeaturesSection = () => {
             {/* Task Card 4 */}
             <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
               <div className="flex-shrink-0">
-                <img className="w-10 h-10" src="https://img.icons8.com/ios-filled/50/paint-brush.png" alt="Business Automation Icon" style={{ display: 'block' }} loading="lazy" />
+                <Image style={{ display: 'block' }} className="w-10 h-10" src="https://img.icons8.com/ios-filled/50/paint-brush.png" alt="Business Automation Icon" />
               </div>
               <div className="pt-5 text-lg font-medium text-black">Full Customization</div>
               <p className="pt-1 text-gray-700 text-center">Like Notion, customization is easy. Change colors, icons, and layout however you like!</p>
@@ -53,7 +54,7 @@ const FeaturesSection = () => {
             {/* Task Card 5 */}
             <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
               <div className="flex-shrink-0">
-                <img className="w-10 h-10" src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/external-transfer-arrows-kmg-design-glyph-kmg-design.png" alt="Business Automation Icon" style={{ display: 'block' }} loading="lazy" />
+                <Image style={{ display: 'block' }} className="w-10 h-10" src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/external-transfer-arrows-kmg-design-glyph-kmg-design.png" alt="Business Automation Icon" />
               </div>
               <div className="pt-5 text-lg font-medium text-black">Easy Migration</div>
               <p className="pt-1 text-gray-700 text-center">Moving from another platform is as easy as 1,2, CTRL + V ... Just Copy, Paste, and Go!</p>
@@ -62,7 +63,7 @@ const FeaturesSection = () => {
             {/* Task Card 6 */}
             <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md flex flex-col items-center">
               <div className="flex-shrink-0">
-                <img className="w-10 h-10" src="https://img.icons8.com/sf-black-filled/64/opened-folder.png" alt="Business Automation Icon" style={{ display: 'block' }} loading="lazy" />
+                <Image style={{ display: 'block' }} className="w-10 h-10" src="https://img.icons8.com/sf-black-filled/64/opened-folder.png" alt="Business Automation Icon" />
               </div>
               <div className="pt-5 text-lg font-medium text-black">Centralized Storage</div>
               <p className="pt-1 text-gray-700 text-center">Revision Notes, Flashcards, Essay plans, and Extra Reading - all just one click away.</p>
