@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import SpeedInsights from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Image from 'next/image';
 import Script from 'next/script';
 
