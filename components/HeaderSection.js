@@ -48,6 +48,12 @@ const HeaderSection = () => {
                     `,
                 }}
             />
+
+          <Script
+        id="vercel-speed-insights"
+        src="/_vercel/insights/script.js"
+        />
+          
             <div className="full-header fixed top-0 left-0 right-0 bg-white lg:bg-opacity-30 lg:backdrop-blur-lg" style={{ backdropFilter: 'blur(10px)' }}>
                 <nav className="px-8 py-5 lg:px-6">
                     <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
