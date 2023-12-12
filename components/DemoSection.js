@@ -50,7 +50,7 @@ const DemoSection = () => {
             <div className="flex justify-center">
               <img className="w-16 h-16 rounded-full" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/hs_circle2.webp" alt="Avatar" />
             </div>
-            <h2 className="text-lg font-semibold">Josh Budd</h2>
+            <h2 className="text-lg text-black font-semibold">Josh Budd</h2>
             <p className="text-gray-500">Final Year Student @ Loughborough University</p>
           </div>
         </div>
