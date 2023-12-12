@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 const DemoSection = () => {
 
@@ -23,7 +22,7 @@ const DemoSection = () => {
         <p className="mb-4 text-sm font-normal text-black sm:px-16 lg:text-md md:px-48">Eliminate the struggles of being distracted when juggling programs and tabs. Ease into a streamlined experience.</p>
 
         <div className="inline-block p-0 border-8 border-gray-300 border-opacity-20 rounded-lg overflow-hidden">
-          <Image width={1000} height={1200} className="centered-image" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp" alt="Annotated Version of Module Page" />
+          <img src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp" width="1000" height="1200" alt="annotated version of module page" className="centered-image" />
         </div>
 
         <div className="mt-4">
@@ -49,7 +48,7 @@ const DemoSection = () => {
 
           <div className="mt-4">
             <div className="flex justify-center">
-              <Image className="w-16 h-16 rounded-full" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/hs_circle2.webp" alt="Avatar" />
+              <img className="w-16 h-16 rounded-full" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/hs_circle2.webp" alt="Avatar" />
             </div>
             <h2 className="text-lg text-black font-semibold">Josh Budd</h2>
             <p className="text-gray-500">Final Year Student @ Loughborough University</p>
