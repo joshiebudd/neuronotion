@@ -21,37 +21,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="preconnect" href="https://www.googletagmanager.com" />
       </Head>
 
-      <Script
-        strategy="afterInteractive"
-        src="https://connect.facebook.net/en_US/fbevents.js"
-        onLoad={() => {
-          fbq('init', '230622039592089');
-          fbq('track', 'PageView');
-        }}
-      />
 
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-FTX0TWXP1E"
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-FTX0TWXP1E');
-          `,
-        }}
-      />
-        
-        
-      <Script
-        src="/_vercel/insights/script.js"
-        strategy="afterInteractive"
-      />
 
       <Component {...pageProps} />
     </>
