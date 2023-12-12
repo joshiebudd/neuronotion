@@ -15,6 +15,7 @@ import FooterSection from '../components/FooterSection';
 
 const IndexPage = () => {  
   return (
+    <>
       <HeaderSection />
       <HeroSection />
       <BenefitsSection />
@@ -27,6 +28,7 @@ const IndexPage = () => {
       <FAQSection />
       <FinalCTA />
       <FooterSection />
+    </>
   );
 }
 
