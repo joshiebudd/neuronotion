@@ -55,8 +55,8 @@ const BenefitsSection = () => {
               width={320}
               height={320}
             />
-            <h3 className="mb-0 text-xl font-bold text-black">Work Smarter.</h3>
-            <p className="text-gray-500">Use AI to generate Essay Plans, Summaries, and more!</p>
+            <h3 className="mb-0 text-xl font-bold text-black">Work Smarter. Much Smarter.</h3>
+            <p className="text-gray-500">Let AI generate Essay Plans, Summaries, and more!</p>
           </div>
         </div>
       </div>
