@@ -1,9 +1,28 @@
 import React from 'react';
+import Script from 'next/script';
 import HeaderSection from '../components/HeaderSection';
 import FooterSection from '../components/FooterSection';
 
 function ThankYouPage() {
   return (
+
+          <Script
+        dangerouslySetInnerHTML={{
+          __html: `
+            !function(f,b,e,v,n,t,s) {
+              if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '230622039592089');
+            fbq('track', 'Purchase');
+          `,
+        }}
+      />
+    
     <div className="min-h-screen flex flex-col bg-gray-100">
       <HeaderSection />
       <div className="flex flex-col items-center justify-center h-screen">
