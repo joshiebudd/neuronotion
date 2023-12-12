@@ -7,6 +7,7 @@ function ThankYouPage() {
   return (
     <>
       <Script
+      id="facebook-purchase-script"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s) {
