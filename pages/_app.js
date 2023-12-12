@@ -5,7 +5,6 @@ import Script from 'next/script';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
