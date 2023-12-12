@@ -10,12 +10,12 @@ const CommunitySection = () => {
         </div>
 
         {/* Image Container with Centering Classes */}
-        <div className="flex justify-center">
+        <div className="flex justify-center w-full">
           <img src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/community_demo.webp" alt="join our community mockup" className="mx-auto" loading="lazy" />
         </div>
 
         <div className="max-w-screen-xl px-4 py-1 mt-2 text-center lg:py-16 lg:px-6">
-          <dl className="grid max-w-screen-md text-gray-900 sm:grid-cols-3 dark:text-white">
+          <dl className="grid max-w-screen-md text-gray-900 sm:grid-cols-3 dark:text-white mx-auto justify-items-center">
             <div className="flex flex-col items-center justify-center py-2 sm:w-full md:w-auto">
               <dt className="mb-1 text-3xl md:text-4xl font-extrabold">500+</dt>
               <dd className="mb-4 font-light text-black dark:text-gray-400">Fellow study buddies</dd>
