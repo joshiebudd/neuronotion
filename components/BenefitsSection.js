@@ -33,7 +33,7 @@ const BenefitsSection = () => {
               height={320}
             />
             <h3 className="mb-0 text-xl font-bold text-black">Save time & Effort</h3>
-            <p className="text-gray-700">Create and Revise flashcards from your notes.</p>
+            <p className="text-gray-700">Create, Revise, Test. All in one place.</p>
           </div>
                 
           <div className="flex flex-col items-center text-center">
