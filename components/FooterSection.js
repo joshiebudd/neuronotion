@@ -6,7 +6,7 @@ const FooterSection = () => {
     <footer className="p-4 bg-black md:p-8 lg:p-10">
       <div className="mx-auto max-w-screen-xl text-center">
         <a href="#hero" className="flex justify-center items-center text-2xl font-semibold text-white">
-          <Image width={24} height={24} className="mr-3 h-6 sm:h-9" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp" alt="NeuroNotes Logo" /> Neuro Notion ©
+          <Image width={36} height={36} className="mr-3 sm:h-9" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp" alt="NeuroNotes Logo" /> Neuro Notion ©
         </a>
         <p className="my-6 text-white">The Ultimate Notion Template for Silencing the ADHD Chaos.</p>
         <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-400">

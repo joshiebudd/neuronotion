@@ -14,7 +14,7 @@ const FAQSection = () => {
   return (
     <section id="faqs" className="bg-white mt-20 mb-20 FAQ_section">
       <div className="text-center">
-        <h2 className="font-bold dark:text-white lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">Frequently Asked Questions</h2>
+        <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">Frequently Asked Questions</h2>
         <p className="font-normal dark:text-gray-400 text-base leading-6 text-gray-600 lg:w-8/12 md:w-9/12 mx-auto">
           Answers to some commonly asked questions.
         </p>
@@ -26,11 +26,11 @@ const FAQSection = () => {
           {/* FAQ Item 0 */}
           <div className={`bg-gray-200 rounded-lg p-4 md:p-6 mb-6 max-w-md mx-auto cursor-pointer ${isOpen[0] ? 'open' : ''}`} onClick={() => toggleFAQ(0)}>
             <div className="flex justify-between items-center">
-              <h3 className="font-semibold text-xl dark:text-white leading-5 text-gray-800">What is a Notion Template?</h3>
+              <h3 className="font-semibold text-xl leading-5 text-gray-800">What is a Notion Template?</h3>
               {/* Plus Icon */}
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="black" strokeWidth="1.25">
-                <path id="path1" d="M10 4.1665V15.8332" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M4.16602 10H15.8327" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+                <path id="path1" d="M10 4.1665V15.8332" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <p id="para1" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[0] ? 'block' : 'hidden'}`}>
@@ -41,11 +41,11 @@ const FAQSection = () => {
           {/* FAQ Item 1 */}
           <div className={`bg-gray-200 rounded-lg p-4 md:p-6 mb-6 max-w-md mx-auto cursor-pointer ${isOpen[1] ? 'open' : ''}`} onClick={() => toggleFAQ(1)}>
             <div className="flex justify-between items-center">
-              <h3 className="font-semibold text-xl dark:text-white leading-5 text-gray-800">How does this work?</h3>
+              <h3 className="font-semibold text-xl leading-5 text-gray-800">How does this work?</h3>
               {/* Plus Icon */}
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="black" strokeWidth="1.25">
-                <path id="path2" d="M10 4.1665V15.8332" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M4.16602 10H15.8327" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+                <path id="path2" d="M10 4.1665V15.8332" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <p id="para2" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[1] ? 'block' : 'hidden'}`}>
@@ -56,11 +56,11 @@ const FAQSection = () => {
           {/* FAQ Item 2 */}
           <div className={`bg-gray-200 rounded-lg p-4 md:p-6 mb-6 max-w-md mx-auto cursor-pointer ${isOpen[2] ? 'open' : ''}`} onClick={() => toggleFAQ(2)}>
             <div className="flex justify-between items-center">
-              <h3 className="font-semibold text-xl dark:text-white leading-5 text-gray-800">Is this worth $10?</h3>
+              <h3 className="font-semibold text-xl leading-5 text-gray-800">Is this worth $10?</h3>
               {/* Plus Icon */}
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="black" strokeWidth="1.25">
-                <path id="path3" d="M10 4.1665V15.8332" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M4.16602 10H15.8327" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+                <path id="path3" d="M10 4.1665V15.8332" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <p id="para3" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[2] ? 'block' : 'hidden'}`}>
@@ -71,11 +71,11 @@ const FAQSection = () => {
           {/* FAQ Item 3 */}
           <div className={`bg-gray-200 rounded-lg p-4 md:p-6 mb-6 max-w-md mx-auto cursor-pointer ${isOpen[3] ? 'open' : ''}`} onClick={() => toggleFAQ(3)}>
             <div className="flex justify-between items-center">
-              <h3 className="font-semibold text-xl dark:text-white leading-5 text-gray-800">Do I need Notion Premium?</h3>
+              <h3 className="font-semibold text-xl leading-5 text-gray-800">Do I need Notion Premium?</h3>
               {/* Plus Icon */}
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="black" strokeWidth="1.25">
-                <path id="path4" d="M10 4.1665V15.8332" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M4.16602 10H15.8327" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+                <path id="path4" d="M10 4.1665V15.8332" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <p id="para4" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[3] ? 'block' : 'hidden'}`}>
@@ -86,11 +86,11 @@ const FAQSection = () => {
           {/* FAQ Item 4 */}
           <div className={`bg-gray-200 rounded-lg p-4 md:p-6 mb-6 max-w-md mx-auto cursor-pointer ${isOpen[4] ? 'open' : ''}`} onClick={() => toggleFAQ(4)}>
             <div className="flex justify-between items-center">
-              <h3 className="font-semibold text-xl dark:text-white leading-5 text-gray-800">I have more questions!</h3>
+              <h3 className="font-semibold text-xl leading-5 text-gray-800">I have more questions!</h3>
               {/* Plus Icon */}
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="black" strokeWidth="1.25">
-                <path id="path5" d="M10 4.1665V15.8332" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M4.16602 10H15.8327" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+                <path id="path5" d="M10 4.1665V15.8332" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <p id="para5" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[4] ? 'block' : 'hidden'}`}>
