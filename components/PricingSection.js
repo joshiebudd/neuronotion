@@ -20,13 +20,13 @@ const PricingSection = () => {
             <hr className="border-1 border-gray-300 mb-8" /> {/* Divider line */}
             <ul role="list" className="mb-8 space-y-4 text-left">
               {/* Tick icon for list items (except the last one) */}
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/dark/check.svg" alt="Tick Icon"/> All-in-one study system.</li>
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/dark/check.svg" alt="Tick Icon"/> Built-in focus sounds.</li>
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/dark/check.svg" alt="Tick Icon"/> AI-generation tutorials.</li>
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/dark/check.svg" alt="Tick Icon"/> Tutorials included.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/dark/check.svg" alt="Tick Icon"/> All-in-one study system.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/dark/check.svg" alt="Tick Icon"/> Built-in focus sounds.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/dark/check.svg" alt="Tick Icon"/> AI-generation tutorials.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/dark/check.svg" alt="Tick Icon"/> Tutorials included.</li>
               {/* Cross icon for the last list item */}
               <li className="text-red-700"> 
-              <img loading="lazy" className="inline-block h-6 w-6 mr-2" src="https://img.icons8.com/ios-filled/50/000000/multiply.png" alt="Cross Icon" />
+              <<Image loading="lazy" loading="lazy" className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/multiply.webp" alt="Cross Icon" />
            Access to updates.</li>
             </ul>
             <a href="https://buy.stripe.com/4gwaGP9vF9F84zmcMM" className="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get Basic</a>
@@ -45,11 +45,11 @@ const PricingSection = () => {
             <hr className="border-1 border-gray-300 mb-8" /> {/* Divider line */}
             <ul role="list" className="mb-8 space-y-4 text-left">
               {/* Check icon for all list items */}
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/light/check.svg" alt="Tick Icon" />  All-in-one study system.</li>
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/light/check.svg" alt="Tick Icon" /> Built-in focus sounds.</li>
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/light/check.svg" alt="Tick Icon" /> AI-generation tutorials.</li>
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/light/check.svg" alt="Tick Icon" /> Tutorials included.</li>
-              <li><Image className="inline-block h-6 w-6 mr-2" src="https://super.so/icon/light/check.svg" alt="Tick Icon" /> Access to updates.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/light/check.svg" alt="Tick Icon" />  All-in-one study system.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/light/check.svg" alt="Tick Icon" /> Built-in focus sounds.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/light/check.svg" alt="Tick Icon" /> AI-generation tutorials.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/light/check.svg" alt="Tick Icon" /> Tutorials included.</li>
+              <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/light/check.svg" alt="Tick Icon" /> Access to updates.</li>
             </ul>
             <a href="https://buy.stripe.com/4gwdT10Z9cRk1naaEF" className="StripeStandardPlan text-black bg-white hover:bg-gray-200 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get Standard</a>
           </div>
