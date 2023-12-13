@@ -31,6 +31,29 @@ const HeaderSection = () => {
 
     return (
         <header>
+            <Script 
+                id="fb-pixel-script"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        !function(f,b,e,v,n,t,s)
+                        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                        n.queue=[];t=b.createElement(e);t.async=!0;
+                        t.src=v;s=b.getElementsByTagName(e)[0];
+                        s.parentNode.insertBefore(t,s)}(window, document,'script',
+                        'https://connect.facebook.net/en_US/fbevents.js');
+                        fbq('init', '230622039592089'); // Replace with your actual pixel ID
+                        fbq('track', 'PageView');
+                    `,
+                }}
+            />
+
+          <Script
+        id="vercel-speed-insights"
+        src="/_vercel/insights/script.js"
+        />
           
           <div className="full-header fixed top-0 left-0 right-0 bg-white lg:bg-opacity-30 lg:backdrop-blur-lg" style={{ backdropFilter: 'blur(10px)' }}>
                 <nav className="px-8 py-5 lg:px-6">
