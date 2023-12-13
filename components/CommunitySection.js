@@ -12,7 +12,7 @@ const CommunitySection = () => {
 
         {/* Image Container with Centering Classes */}
         <div className="flex justify-center w-full">
-        <Image className="mx-auto" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/community_demo.webp" alt="Join Our Community Mockup" />
+        <Image style={{ width:'100%' }} className="mx-auto" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/community_demo.webp" alt="Join Our Community Mockup" />
         </div>
 
         <div className="max-w-screen-xl px-4 py-1 mt-2 text-center lg:py-16 lg:px-6">

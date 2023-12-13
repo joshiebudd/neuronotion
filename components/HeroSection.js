@@ -49,11 +49,12 @@ const HeroSection = () => {
         {/* Next.js Image component for optimized image loading */}
         <div className="centered-image max-w-full lg:max-w-[800px] pb-16">
           <Image
-          loading="preload"
+          style={{ width:'100%' }}
+          loading="eager"
           src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/maindemo.webp"
           alt="template"
           width={800}  // Set the width of the image (you can adjust as needed)
-          height={450} // Set the height of the image (adjust for the aspect ratio of your image)
+          height={566} // Set the height of the image (adjust for the aspect ratio of your image)
           layout="responsive" // This makes the image scale nicely to the parent element's width
           />
         </div>
