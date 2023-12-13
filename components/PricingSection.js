@@ -7,7 +7,7 @@ const PricingSection = () => {
       <div className="py-8 px-4 md:px-52">
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-black">One Payment, Unlimited Usage.</h2>
-          <p className="mb-5 font-light text-gray-500 sm:text-xl">Lifetime access, technical support, no subscription fees.</p>
+          <p className="mb-5 font-light text-gray-800 sm:text-xl">Lifetime access, technical support, no subscription fees.</p>
         </div>
         <div className="flex flex-wrap justify-center gap-4">
           {/* Pricing Card for Basic */}

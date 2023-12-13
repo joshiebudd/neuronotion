@@ -15,7 +15,7 @@ const FAQSection = () => {
     <section id="faqs" className="bg-white mt-20 mb-20 FAQ_section">
       <div className="text-center">
         <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">Frequently Asked Questions</h2>
-        <p className="font-normal dark:text-gray-400 text-base leading-6 text-gray-600 lg:w-8/12 md:w-9/12 mx-auto">
+        <p className="font-normal text-base leading-6 text-gray-800 lg:w-8/12 md:w-9/12 mx-auto">
           Answers to some commonly asked questions.
         </p>
       </div>
@@ -33,7 +33,7 @@ const FAQSection = () => {
                 <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <p id="para1" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[0] ? 'block' : 'hidden'}`}>
+            <p id="para1" className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12 ${isOpen[0] ? 'block' : 'hidden'}`}>
               A Notion template is a pre-designed layout in the Notion app, a super popular app for storing and creating study notes. The template provides a ready-to-use structure for organizing notes, tasks, and schedules. It simplifies setup and is customizable to individual needs.
             </p>
           </div>
@@ -48,7 +48,7 @@ const FAQSection = () => {
                 <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <p id="para2" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[1] ? 'block' : 'hidden'}`}>
+            <p id="para2" className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12 ${isOpen[1] ? 'block' : 'hidden'}`}>
               After you purchase, you will receive a link to add the template to your own Notion account. From here you can get started right away, with a tiny bit of customization.
             </p>
           </div>
@@ -63,7 +63,7 @@ const FAQSection = () => {
                 <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <p id="para3" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[2] ? 'block' : 'hidden'}`}>
+            <p id="para3" className={`font-normal  text-base leading-6 text-gray-700 mt-4 w-11/12 ${isOpen[2] ? 'block' : 'hidden'}`}>
               We think absolutely! In fact we think it&apos;s worth more and so do many others! This template saves you at least 10 hours of creating your own system and has tons of extra valuable tools and custom features built-in too!
             </p>
           </div>
@@ -78,7 +78,7 @@ const FAQSection = () => {
                 <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <p id="para4" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[3] ? 'block' : 'hidden'}`}>
+            <p id="para4" className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12 ${isOpen[3] ? 'block' : 'hidden'}`}>
               Nope! Notion Free plan is absolutely sufficient - you only need Notion Premium if you want to use the AI features very often.
             </p>
           </div>
@@ -93,7 +93,7 @@ const FAQSection = () => {
                 <path d="M4.16602 10H15.8327" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
-            <p id="para5" className={`font-normal dark:text-gray-400 text-base leading-6 text-gray-600 mt-4 w-11/12 ${isOpen[4] ? 'block' : 'hidden'}`}>
+            <p id="para5" className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12 ${isOpen[4] ? 'block' : 'hidden'}`}>
               If there is something you are still confused about that I haven&apos;t answered above; please send an email to joshiebudd@gmail.com and I&apos;ll be happy to answer any queries.
             </p>
           </div>
