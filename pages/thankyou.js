@@ -19,8 +19,8 @@ function ThankYouPage() {
               s.parentNode.insertBefore(t,s)
             }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '230622039592089');
-            fbq('track', 'Purchase');
-          `,
+            fbq('track', 'Purchase', {currency: "USD", value: 10.00});
+            `,
         }}
       />
       <div className="min-h-screen flex flex-col bg-gray-100">
