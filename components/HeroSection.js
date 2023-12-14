@@ -34,11 +34,7 @@ const HeroSection = () => {
 
         {/* Stars */}
         <div className="mb-2 flex justify-center">
-          <span className="mt-3 mb-0 text-3xl leading-none text-black text-xl">★</span>
-          <span className="mt-3 mb-0 text-3xl leading-none text-black text-xl">★</span>
-          <span className="mt-3 mb-0 text-3xl leading-none text-black text-xl">★</span>
-          <span className="mt-3 mb-0 text-3xl leading-none text-black text-xl">★</span>
-          <span className="mt-3 mb-0 text-3xl leading-none text-black text-xl">★</span>
+          <span className="mt-3 mb-0 text-6xl leading-none text-black text-xl">★★★★★</span>
         </div>
         <span className="mt-0 mb-0 text-sm text-gray-800">
           4.89/5 from 500+ ADHDers.
