@@ -1,6 +1,7 @@
 // pages/api/stripe-webhook.js
 import { buffer } from 'micro';
 import Stripe from 'stripe';
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Disable the default body parser to access the raw body.
@@ -12,33 +13,40 @@ export const config = {
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const rawBody = await buffer(req);
-    const sig = req.headers['stripe-signature'];
+    let data;
+    let eventType;
 
-    let event;
+    // Read the webhook body and signature from the request headers.
+    const rawBody = await buffer(req);
+    const signature = req.headers['stripe-signature'];
 
     try {
-      event = stripe.webhooks.constructEvent(rawBody, sig, process.env.STRIPE_WEBHOOK_SECRET);
+      // Verify and construct the event using the signature and raw body.
+      const event = stripe.webhooks.constructEvent(rawBody, signature, process.env.STRIPE_WEBHOOK_SECRET);
+
+      // Extract the data and eventType from the verified event.
+      data = event.data;
+      eventType = event.type;
     } catch (err) {
-      console.log(`Error message: ${err.message}`);
-      res.status(400).send(`Webhook Error: ${err.message}`);
-      return;
+      console.error('⚠️  Webhook signature verification failed.', err.message);
+      return res.status(400).send(`Webhook Error: ${err.message}`);
     }
 
-    // Handle the event
-    switch (event.type) {
-      case 'payment_intent.succeeded':
-        const paymentIntent = event.data.object;
-        // Logic to handle successful payment intents
-        break;
-      // ... handle other event types
-      default:
-        console.log(`Unhandled event type ${event.type}`);
+    // Handle the checkout.session.completed event.
+    if (eventType === 'checkout.session.completed') {
+      const session = data.object;
+      // Implement logic to handle a successful checkout session.
+      // This is where you can fulfill orders or activate subscriptions.
+
+      console.log(`🔔  Payment for session ${session.id} was successful!`);
+
+      // Perform any other actions based on the session data.
     }
 
-    res.json({ received: true });
+    // Confirm the event was handled.
+    return res.json({ received: true });
   } else {
     res.setHeader('Allow', 'POST');
-    res.status(405).end('Method Not Allowed');
+    return res.status(405).end('Method Not Allowed');
   }
 }
