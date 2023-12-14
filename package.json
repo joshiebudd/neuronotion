@@ -11,12 +11,14 @@
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.1",
+    "micro": "^10.0.1",
     "next": "^14.0.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^9.3.0",
     "react": "^18",
     "react-dom": "^18",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.0",
+    "stripe": "^14.8.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
