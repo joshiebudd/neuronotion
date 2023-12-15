@@ -10,8 +10,7 @@ const BenefitsSection = () => {
             Built by ADHDers <br /> for ADHDers.
           </h2>
           <p className="text-gray-700 sm:text-xl text-gray-900">
-            The all-in-one solution your brain has been crying out for. <br /> No more distractions.
-          </p>
+            The all-in-one solution your brain has been crying out for. <p /> <p className="font-style: italic"> No more distractions.</p>
         </div>
         <div className="md:grid md:grid-cols-2 gap-x-16 gap-y-4 items-center">
           <div className="flex flex-col items-center text-center mb-2 mt-2">

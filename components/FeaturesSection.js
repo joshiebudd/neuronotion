@@ -8,10 +8,10 @@ const FeaturesSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-4xl leading-10 font-bold text-gray-900">
-              Made for ADHDers, <br /> by ADHDers.
+              Finally, everything in<br /> one place.
             </h2>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-700 pb-8">
-              The all-in-one system your brain has been crying out for. Everything in one place, with no distractions.
+              The all-in-one system your brain has been crying out for. No more juggling 15 tabs, no more distractions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
