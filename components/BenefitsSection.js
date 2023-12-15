@@ -6,7 +6,7 @@ const BenefitsSection = () => {
     <section id="features" className="bg-white benefits-section">
       <div className="py-8 pb-24 px-4 mx-auto max-w-screen-xl sm:pt-4 lg:px-56">
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
-          <h2 className="text-5xl tracking-tight font-bold text-gray-900">
+          <h2 className="text-4xl tracking-tight font-bold text-gray-900">
           ADHD causing study struggles? <br /> Not anymore.
           </h2>
           <p className="mt-8 text-gray-700 sm:text-xl text-gray-900">
