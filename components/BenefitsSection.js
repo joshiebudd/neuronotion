@@ -7,10 +7,10 @@ const BenefitsSection = () => {
       <div className="py-8 pb-24 px-4 mx-auto max-w-screen-xl sm:pt-4 lg:px-56">
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
           <h2 className="text-5xl tracking-tight font-bold text-gray-900">
-            Silence the chaos. <br /> Channel the flow state.
+            Built by ADHDers <br /> for ADHDers.
           </h2>
           <p className="text-gray-700 sm:text-xl text-gray-900">
-            The all-in-one system your brain has been crying out for. Everything in one place, with no distractions.
+            The all-in-one solution your brain has been crying out for. <br> No more distractions.
           </p>
         </div>
         <div className="md:grid md:grid-cols-2 gap-x-16 gap-y-4 items-center">
