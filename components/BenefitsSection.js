@@ -20,8 +20,8 @@ const BenefitsSection = () => {
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/quickadd_ben.webp"
               alt="Quick Add Demo"
             />
-                    <h3 className="text-2xl font-bold text-black">2x the Hyperfocus, <br /> 1/2 the Distractions </h3>
-            <p className="text-gray-700">Capture ideas rapidly without losing flow state. Block out the noise with Focus-mode.</p>
+                    <h3 className="text-2xl font-bold text-black">More Hyper-focus, Less Distractions </h3>
+            <p className="text-gray-700">Capture ideas rapidly, block out noise, maintain flow.</p>
           </div>
 
           <div className="flex flex-col items-center text-center mb-2 mt-2">
