@@ -10,7 +10,7 @@ const BenefitsSection = () => {
           Craving control over your ADHD Brain? <br /> Neuro Notion was designed around it.
           </h2>
           <p className="text-gray-700 sm:text-xl text-gray-900">
-            Neuro Notion is built by ADHDers for ADHDers... We know your struggles, and we're making huge strides to solve them.</p>
+            Neuro Notion is built by ADHDers for ADHDers... We know your struggles, and we&apos;re making huge strides to solve them.</p>
         </div>
         <div className="md:grid md:grid-cols-2 gap-x-16 gap-y-4 items-center">
           <div className="flex flex-col items-center text-center mb-2 mt-2">
