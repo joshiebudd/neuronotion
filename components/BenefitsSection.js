@@ -7,7 +7,7 @@ const BenefitsSection = () => {
       <div className="py-8 pb-24 px-4 mx-auto max-w-screen-xl sm:pt-4 lg:px-56">
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
           <h2 className="text-5xl tracking-tight font-bold text-gray-900">
-          Struggling to Study with ADHD? <br /> Meet the Ultimate ADHD Notion System.
+          ADHD Brain Crushing your Studies? <br /> Meet the Ultimate ADHD Notion System.
           </h2>
           <p className="text-gray-700 sm:text-xl text-gray-900">
             Neuro Notion is built by ADHDers for ADHDers... We know your struggles, and we&apos;re making huge strides to solve them.</p>
@@ -20,7 +20,7 @@ const BenefitsSection = () => {
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/quickadd_ben.webp"
               alt="Quick Add Demo"
             />
-            <h3 className="text-2xl font-bold text-black">2x the Hyperfocus, 1/2 the Distractions </h3>
+            <h3 className="text-2xl font-bold text-black">2x the Hyperfocus, <br /> 1/2 the Distractions </h3>
             <p className="text-gray-700">Capture ideas rapidly without losing flow state. Block out the noise with Focus-mode.</p>
           </div>
 
