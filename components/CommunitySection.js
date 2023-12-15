@@ -18,16 +18,16 @@ const CommunitySection = () => {
         <div className="max-w-screen-xl px-4 py-1 mt-2 text-center lg:py-16 lg:px-6">
           <dl className="grid max-w-screen-md text-gray-900 sm:grid-cols-3 mx-auto justify-items-center">
             <div className="flex flex-col items-center justify-center py-2 sm:w-full md:w-auto">
-              <dt className="mb-1 text-3xl md:text-4xl font-bold">500+</dt>
+              <dt className="mb-1 text-3xl md:text-4xl font-bold">1,354</dt>
               <dd className="mb-4 font-light text-black">Fellow study buddies</dd>
             </div>
             <div className="flex flex-col items-center justify-center py-2 sm:w-full md:w-auto">
-              <dt className="mb-1 text-3xl md:text-4xl font-bold">15,000+</dt>
+              <dt className="mb-1 text-3xl md:text-4xl font-bold">27,245</dt>
               <dd className="mb-4 font-light text-black">Notes created</dd>
             </div>
             <div className="flex flex-col items-center justify-center py-2 sm:w-full md:w-auto">
-              <dt className="mb-1 text-3xl md:text-4xl font-bold">40+</dt>
-              <dd className="mb-4 font-light text-black">Countries</dd>
+              <dt className="mb-1 text-3xl md:text-4xl font-bold">51</dt>
+              <dd className="mb-4 font-light text-black">Countries </dd>
             </div>
           </dl>
         </div>
