@@ -21,7 +21,7 @@ const HeroSection = () => {
           Silence the ADHD Chaos. <br /> Bceome 3x more productive.
         </h1>
         <p className="mb-10 text-lg font-normal text-black sm:px-18 lg:text-xl xl:px-48">
-          Neuro Notion is your second brain for studying. It&apos;s an all-in-one Notion Study System 
+          Neuro Notion is your second brain for studying. It'&apos;'s an all-in-one Notion Study System 
           that eliminates distractions, centralises tools, and organises your life. 
         </p>
 
