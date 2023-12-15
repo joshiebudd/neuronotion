@@ -3,7 +3,6 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Image from 'next/image';
 import Script from 'next/script';
 
-
 const HeaderSection = () => {
     
     const scrollToMiddle = (sectionId) => {
@@ -21,13 +20,13 @@ const HeaderSection = () => {
         e.preventDefault(); // Prevent the default anchor behavior
         const pricingSection = document.getElementById('pricing');
         if (pricingSection) {
-          const topPosition = pricingSection.offsetTop + (pricingSection.offsetHeight / 2) - (window.innerHeight / 2);
-          window.scrollTo({
-            top: topPosition,
-            behavior: 'smooth'
-          });
+            const topPosition = pricingSection.offsetTop + (pricingSection.offsetHeight / 2) - (window.innerHeight / 2);
+            window.scrollTo({
+                top: topPosition,
+                behavior: 'smooth'
+            });
         }
-      };
+    };
 
     return (
         <header>
@@ -50,14 +49,16 @@ const HeaderSection = () => {
                 }}
             />
 
-   <SpeedInsights />
+            <SpeedInsights />
           
-          <div className="full-header fixed top-0 left-0 right-0 bg-white lg:bg-opacity-30 lg:backdrop-blur-lg" style={{ backdropFilter: 'blur(10px)' }}>
+            <div className="full-header fixed top-0 left-0 right-0 bg-white lg:bg-opacity-30 lg:backdrop-blur-lg" style={{ backdropFilter: 'blur(10px)' }}>
                 <nav className="px-8 py-5 lg:px-6">
                     <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
                         <a href="#hero" className="flex items-center">
-                            <Image width={36} height={36} loading="eager" className="mr-3 sm:h-9" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp" alt="NeuroNotes Logo" />
-                            <span className="self-center whitespace-nowrap text-2xl font-semibold text-black">Neuro Notion</span>
+                            {/* Increase the logo size */}
+                            <Image width={56} height={56} loading="eager" className="mr-3 sm:h-9" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp" alt="NeuroNotes Logo" />
+                            {/* Make the title smaller on small and medium screens */}
+                            <span className="self-center whitespace-nowrap text-xl sm:text-2xl lg:text-2xl font-semibold text-black">Neuro Notion</span>
                         </a>
                         <div className="hidden lg:flex items-center space-x-4">
                             <a onClick={() => scrollToMiddle('features')} className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">Features</a>
