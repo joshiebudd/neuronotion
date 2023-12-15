@@ -13,7 +13,6 @@ const BenefitsSection = () => {
             Neuro Notion is built by ADHDers for ADHDers... We know your struggles, and we&apos;re making huge strides to solve them.</p>
         </div>
         <div className="md:grid md:grid-cols-2 gap-x-16 gap-y-4 items-center">
-        <h3 className="text-2xl font-bold text-black">2x the Hyperfocus, <br /> 1/2 the Distractions </h3>
           <div className="flex flex-col items-center text-center mb-2 mt-2">
             <Image
               width={320}
@@ -21,6 +20,7 @@ const BenefitsSection = () => {
               src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/quickadd_ben.webp"
               alt="Quick Add Demo"
             />
+                    <h3 className="text-2xl font-bold text-black">2x the Hyperfocus, <br /> 1/2 the Distractions </h3>
             <p className="text-gray-700">Capture ideas rapidly without losing flow state. Block out the noise with Focus-mode.</p>
           </div>
 
