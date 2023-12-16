@@ -59,7 +59,7 @@ const HeaderSection = () => {
             width={56}
             height={56}
             loading="eager"
-            className="w-20 h-auto mr-3" // Adjust the width (w-20) as needed for smaller size
+            className="w-6 h-auto mr-3" // Adjust the width (w-20) as needed for smaller size
             src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
             alt="NeuroNotes Logo"
         />                            <span className="self-center whitespace-nowrap text-xl sm:text-2xl lg:text-2xl font-semibold text-black">Neuro Notion</span>
