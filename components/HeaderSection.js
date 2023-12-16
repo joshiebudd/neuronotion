@@ -55,10 +55,14 @@ const HeaderSection = () => {
                 <nav className="px-8 py-5 lg:px-6">
                     <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
                         <a href="#hero" className="flex items-center">
-                            {/* Increase the logo size */}
-                            <Image width={56} height={56} loading="eager" className="mr-3 sm:h-9" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp" alt="NeuroNotes Logo" />
-                            {/* Make the title smaller on small and medium screens */}
-                            <span className="self-center whitespace-nowrap text-xl sm:text-2xl lg:text-2xl font-semibold text-black">Neuro Notion</span>
+  <Image
+            width={56}
+            height={56}
+            loading="eager"
+            className="w-20 h-auto mr-3" // Adjust the width (w-20) as needed for smaller size
+            src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
+            alt="NeuroNotes Logo"
+        />                            <span className="self-center whitespace-nowrap text-xl sm:text-2xl lg:text-2xl font-semibold text-black">Neuro Notion</span>
                         </a>
                         <div className="hidden lg:flex items-center space-x-4">
                             <a onClick={() => scrollToMiddle('features')} className="px-2 py-1 text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline">Features</a>
