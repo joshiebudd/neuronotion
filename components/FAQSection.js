@@ -34,7 +34,7 @@ const FAQSection = () => {
               </svg>
             </div>
             <p id="para1" className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12 ${isOpen[0] ? 'block' : 'hidden'}`}>
-              A Notion template is a pre-designed layout in the Notion app, a super popular app for storing and creating study notes. The template provides a ready-to-use structure for organizing notes, tasks, and schedules. It simplifies setup and is customizable to individual needs.
+        A Notion template is a pre-designed layout in the <a href="https://affiliate.notion.so/scq8k2tmgpnc" className="text-blue-500">Notion app, a super popular note-taking app for students </a>, especially among ADHDers. The template provides a ready-to-use structure for organizing notes, tasks, and schedules. It simplifies setup and is customizable to individual needs.
             </p>
           </div>
 
@@ -79,7 +79,7 @@ const FAQSection = () => {
               </svg>
             </div>
             <p id="para4" className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12 ${isOpen[3] ? 'block' : 'hidden'}`}>
-              Nope! Notion Free plan is absolutely sufficient - you only need Notion Premium if you want to use the AI features very often.
+              Nope! Notion Free plan is absolutely enough - you only need <a href="https://affiliate.notion.so/neuro-notion-ai" className="text-blue-500">Notion Premium</a> if you want to use the AI features very often.
             </p>
           </div>
 
