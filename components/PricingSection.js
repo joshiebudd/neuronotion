@@ -51,7 +51,7 @@ const PricingSection = () => {
               <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/light/check.svg" alt="Tick Icon" /> Tutorials included.</li>
               <li><Image className="inline-block h-6 w-6 mr-2" src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/icon/light/check.svg" alt="Tick Icon" /> Access to updates.</li>
             </ul>
-            <a href="https://buy.stripe.com/4gwdT10Z9cRk1naaEF" className="StripeStandardPlan text-black bg-white hover:bg-gray-200 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get Standard</a>
+            <a href="https://buy.stripe.com/fZe2ajdLVbNg3vifZ1" className="StripeStandardPlan text-black bg-white hover:bg-gray-200 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get Standard</a>
           </div>
         </div>
       </div>
