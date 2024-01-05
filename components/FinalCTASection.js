@@ -18,7 +18,7 @@ const FinalCTA = () => {
   
   const logDemoBuyNowEvent = () => {
     // Log event to Facebook Pixel for Demo Buy Now click
-    fbq('trackCustom', 'DemoBuyNowClick');
+    fbq('trackCustom', 'BottomBuyNowClick');
   };
 
 
