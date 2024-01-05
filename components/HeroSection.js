@@ -4,6 +4,11 @@ const HeroSection = () => {
 
     const handleButtonClick = (e) => {
       e.preventDefault(); // Prevent the default anchor behavior
+
+            // Log the custom pixel event
+            logCustomPixelEvent('HeroBuyNowClick');
+
+
       const pricingSection = document.getElementById('pricing');
       if (pricingSection) {
         const topPosition = pricingSection.offsetTop + (pricingSection.offsetHeight / 2) - (window.innerHeight / 2);
@@ -13,6 +18,13 @@ const HeroSection = () => {
         });
       }
     };
+
+
+  const logCustomPixelEvent = (eventName) => {
+      // Log event to Facebook Pixel
+      fbq('trackCustom', 'HeroBuyNowClick');
+  };
+
 
   return (
     <section id="hero" className="bg-gray-50 hero-section pt-32 sm:pt-28 md:pt-30 lg:pt-32">
@@ -27,7 +39,7 @@ const HeroSection = () => {
         <div className="mt-4 flex justify-center space-x-4">
         {/* Get NeuroNotes Button */}
         <a href="#pricing" onClick={handleButtonClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
-          Get Access
+          Buy Now
         </a>
       </div>
 
