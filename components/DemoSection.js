@@ -5,6 +5,8 @@ const DemoSection = () => {
 
   const handleButtonClick = (e) => {
     e.preventDefault(); // Prevent the default anchor behavior
+    logDemoBuyNowEvent(); // Log the DemoBuyNowClick event
+  
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
       const topPosition = pricingSection.offsetTop + (pricingSection.offsetHeight / 2) - (window.innerHeight / 2);
@@ -13,6 +15,11 @@ const DemoSection = () => {
         behavior: 'smooth'
       });
     }
+  };
+  
+  const logDemoBuyNowEvent = () => {
+    // Log event to Facebook Pixel for Demo Buy Now click
+    fbq('trackCustom', 'DemoBuyNowClick');
   };
 
 
@@ -28,7 +35,7 @@ const DemoSection = () => {
 
         <div className="mt-4">
         <a href="#pricing" onClick={handleButtonClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
-          Get Neuro Notion
+          Buy Now
         </a>
       </div>
 
