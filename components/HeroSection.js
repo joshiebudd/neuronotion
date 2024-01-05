@@ -33,7 +33,7 @@ const HeroSection = () => {
           Silence the ADHD Chaos. <br /> 3x your Productivity.
         </h1>
         <p className="mb-10 text-lg font-normal text-black sm:px-18 lg:text-xl xl:px-48">
-          Discover Clarity and Control with Neuro Notion. Your ultimate ADHD study partner which streamlines resources and seamlessly organizes.
+          Discover Clarity and Control with Neuro Notion. Your ultimate ADHD study partner which streamlines resources and seamlessly organizes your workflow.
         </p>
 
         <div className="mt-4 flex justify-center space-x-4">
