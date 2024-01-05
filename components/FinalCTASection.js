@@ -2,10 +2,10 @@ import React from 'react';
 
 const FinalCTA = () => {
 
-  const handleButtonClick = (e) => {
+  const handleBottomBuyNowClick = (e) => {
     e.preventDefault(); // Prevent the default anchor behavior
-    logDemoBuyNowEvent(); // Log the DemoBuyNowClick event
-  
+    logBottomBuyNowEvent(); // Log the BottomBuyNowClick event
+
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
       const topPosition = pricingSection.offsetTop + (pricingSection.offsetHeight / 2) - (window.innerHeight / 2);
@@ -15,9 +15,9 @@ const FinalCTA = () => {
       });
     }
   };
-  
-  const logDemoBuyNowEvent = () => {
-    // Log event to Facebook Pixel for Demo Buy Now click
+
+  const logBottomBuyNowEvent = () => {
+    // Log event to Facebook Pixel for Bottom Buy Now click
     fbq('trackCustom', 'BottomBuyNowClick');
   };
 
@@ -31,7 +31,7 @@ const FinalCTA = () => {
 
         {/* Get NeuroNotes Button (Below "Must-have focus tools" text and above stars) */}
         <div className="mt-4"> {/* Increased margin-top for spacing */}
-        <a href="#pricing" onClick={handleButtonClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
+        <a href="#pricing" onClick={handleBottomBuyNowClick} className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300">
 Buy Now</a>
         </div>
 
