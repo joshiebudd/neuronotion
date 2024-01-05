@@ -4,7 +4,7 @@ const FinalCTA = () => {
 
   const handleButtonClick = (e) => {
     e.preventDefault(); // Prevent the default anchor behavior
-    logBottomBuyNowEvent(); // Log the BottomBuyNowClick event
+    logDemoBuyNowEvent(); // Log the DemoBuyNowClick event
   
     const pricingSection = document.getElementById('pricing');
     if (pricingSection) {
@@ -14,6 +14,11 @@ const FinalCTA = () => {
         behavior: 'smooth'
       });
     }
+  };
+  
+  const logDemoBuyNowEvent = () => {
+    // Log event to Facebook Pixel for Demo Buy Now click
+    fbq('trackCustom', 'DemoBuyNowClick');
   };
 
 
