@@ -17,7 +17,7 @@ const FooterSection = () => {
             <a href="#faqs" className="mr-4 hover:underline md:mr-6">FAQs</a>
           </li>
           <li>
-            <a href="mailto:joshiebudd@gmail.com" className="mr-4 hover:underline md:mr-6">Contact</a>
+            <a href="mailto:josh@neuro-notion.com" className="mr-4 hover:underline md:mr-6">Contact</a>
           </li>
         </ul>
         <span className="text-sm text-white sm:text-center dark:text-gray-400">Neuro Notion © 2023<a href="#hero" className="hover:underline"></a>. All Rights Reserved.</span>
