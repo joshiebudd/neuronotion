@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { SpeedInsights, track } from "@vercel/speed-insights/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { track } from "@vercel/analytics";
 import Image from "next/image";
 import Script from "next/script";
 import Burger from "./Common/Burger";
