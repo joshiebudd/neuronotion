@@ -1,13 +1,13 @@
-import React from 'react';
-import Script from 'next/script';
-import HeaderSection from '../components/HeaderSection';
-import FooterSection from '../components/FooterSection';
+import React from "react";
+import Script from "next/script";
+import HeaderSection from "../components/HeaderSection";
+import FooterSection from "../components/FooterSection";
 
 function ThankYouPage() {
   return (
     <>
       <Script
-      id="facebook-purchase-script"
+        id="facebook-purchase-script"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s) {
@@ -44,9 +44,9 @@ function ThankYouPage() {
               Thank you for your purchase!
             </p>
             <p className="text-gray-600">
-              Please check your emails for a link to the template and instruction
-              on how to install, order confirmation, and receipt. <br /> You can
-              close this page now.
+              Please check your emails for a link to the template and
+              instruction on how to install, order confirmation, and receipt.{" "}
+              <br /> You can close this page now.
             </p>
           </div>
         </div>

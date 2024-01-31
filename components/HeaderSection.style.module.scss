@@ -1,0 +1,20 @@
+.menu_mobile{
+    transition: .6s;
+    position: absolute;
+    display: flex;
+    left: 10px;
+    right: 60px;
+    justify-content: center;
+    margin-left: 800px;
+}
+.mobile_menu_open{
+    display: flex;
+    position: absolute;
+    margin-left: 0;
+    justify-content: center;
+}
+.mobile_menu_close{
+    display: flex;
+    position: absolute;
+    margin-left: 800px;
+}
