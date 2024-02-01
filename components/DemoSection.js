@@ -97,8 +97,6 @@ const DemoSection = () => {
                 className="w-16 h-16 rounded-full"
                 src="/hs_circle2.webp"
                 alt="Avatar"
-                width={32}
-                height={32}
               />
               Josh Budd
             </div>
