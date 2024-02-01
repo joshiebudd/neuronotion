@@ -13,9 +13,8 @@ const Benefits1 = () => {
             <br /> Channel the flow state ✨
           </h2>
           <p className="mt-6 text-gray-700 text-xl text-gray-900">
-            Silence the chaos, Channel the flow state
-            <br />
-            Silence the chaos ....
+            Find peace of mind when studying. You handle the fun stuff, <br />
+            we'll handle the boring organisation.
           </p>
         </div>
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-16 flex-wrap md:flex-nowrap">
