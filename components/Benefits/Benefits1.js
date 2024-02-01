@@ -46,8 +46,8 @@ const Benefits1 = () => {
               </div>
             </div>
             <div className="text-xl my-8">
-              This hyperfocus can lead to remarkable creativity, productivity,
-              and achievement in areas where they are deeply engaged.
+              A distraction-free zone where you can lock in on your studies,
+              and block out distractions. Every focus tool you need, just one click away. 
             </div>
             <div className="text-2xl font-bold flex items-center mt-4">
               <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />

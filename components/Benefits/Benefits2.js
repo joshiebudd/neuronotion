@@ -29,8 +29,8 @@ const Benefits2 = () => {
               </div>
             </div>
             <div className="text-xl">
-              This hyperfocus can lead to remarkable creativity, productivity,
-              and achievement in areas where they are deeply engaged.
+              Put an end to forgetting important things. With Neuro Notion,
+              remembering is easy.
             </div>
             <div>
               <div className="text-2xl font-bold flex items-center mt-16">

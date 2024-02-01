@@ -22,12 +22,12 @@ const Benefits1 = () => {
             <div className="ml-8">
               <div className="flex items-center">
                 <div className="text-4xl tracking-tight font-bold">
-                  BLABLABLA LBAS <br /> ASDASD
+                  Your personal centralised <br /> study hub 😌 
                 </div>
               </div>
               <div className="text-xl mt-6">
-                This hyperfocus can lead to remarkable creativity, productivity,
-                and achievement in areas where they are deeply engaged.
+                Finally a distraction-free zone. Access all your study resources
+                from the comfort of one single place.
               </div>
               <div>
                 <div className="text-2xl font-bold flex items-center mt-16">
