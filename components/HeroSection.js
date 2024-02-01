@@ -51,7 +51,7 @@ const HeroSection = () => {
           <img
             style={{ width: "100%" }}
             loading="eager"
-            src="/main_demo.png"
+            src="/main_demo.webp"
             alt="template"
             width={800} // Set the width of the image (you can adjust as needed)
             height={566} // Set the height of the image (adjust for the aspect ratio of your image)
