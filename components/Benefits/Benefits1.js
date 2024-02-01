@@ -14,7 +14,7 @@ const Benefits1 = () => {
           </h2>
           <p className="mt-6 text-gray-700 text-xl text-gray-900">
             Find peace of mind when studying. You handle the fun stuff, <br />
-            we'll handle the boring organisation.
+            we&apos;ll handle the boring organisation.
           </p>
         </div>
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-16 flex-wrap md:flex-nowrap">
