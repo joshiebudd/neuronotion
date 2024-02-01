@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./style.module.scss";
 import _ from "lodash";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Index = ({}) => {
   let isTop = true;
@@ -46,7 +46,7 @@ const Index = ({}) => {
         ref={buttonRef}
         onClick={handleOnTop}
         className={`cursor-pointer opacity-60 hover:opacity-80 transition-all duration-300 ${styles.hide}`}
-        src="/to_top.png"
+        src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/to_top.png"
         alt="To Top"
         width={60}
         height={60}
