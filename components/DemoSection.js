@@ -26,7 +26,7 @@ const DemoSection = () => {
   };
 
   return (
-    <section id="demo" className="bg-gray-50 demo-section pt-12">
+    <section id="demo" className="bg-gray-100 demo-section pt-12">
       {zoomed && (
         <ImageViewer
           src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp"

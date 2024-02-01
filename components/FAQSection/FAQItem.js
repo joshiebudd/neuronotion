@@ -12,7 +12,7 @@ const FAQItem = ({ children }) => {
 
   return (
     <div
-      className={`bg-gray-200 rounded-lg p-4 md:p-6 mb-6 max-w-md mx-auto cursor-pointer ${
+      className={`bg-gray-300 rounded-lg p-4 md:p-6 mb-6 max-w-md mx-auto cursor-pointer ${
         isOpen ? "open" : ""
       }`}
       onClick={() => toggleFAQ()}
