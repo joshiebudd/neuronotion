@@ -25,15 +25,16 @@ const CommunitySection = () => {
       <div className="py-0 pb-0 px-4 mx-auto max-w-screen-xl pt-20">
         <div className="max-w-screen-md mb-2 lg:mb-16 mx-auto text-center">
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-black">
-            Join our Community <br /> Find your Body Double Buddy.
+            Join our ADHD <br /> Study Buddy Community
           </h2>
-          <p className="text-xl mt-6 mb-0 text-gray-900">
-            Access our exclusive community with video tutorials and meet fellow ADHDers to body double with.
+          <p className="text-xl mt-12 mb-0 text-gray-900">
+            Access our exclusive community, find fellow ADHDers, learn effective
+            study tools, and stay in the loop with updates and tutorials.
           </p>
         </div>
 
         {/* Image Container with Centering Classes */}
-        <div className="flex justify-center w-full">
+        <div className="flex justify-center w-full mt-12">
           <Image
             src={`https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/community_demo.webp?v=${new Date().getTime()}`}
             alt="Join Our Community Mockup"
@@ -46,7 +47,7 @@ const CommunitySection = () => {
 
         <div
           id="counter_container"
-          className="max-w-screen-xl px-4 py-1 mt-2 text-center lg:py-16 lg:px-6"
+          className="max-w-screen-xl px-4 py-1 mt-12 sm:mt-0 text-center lg:py-16 lg:px-6"
         >
           <div className="grid max-w-screen-md text-gray-900 grid-cols-3 mx-auto justify-items-center">
             <div className="flex flex-col items-center py-2 w-auto">
