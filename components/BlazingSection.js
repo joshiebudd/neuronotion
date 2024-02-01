@@ -8,7 +8,7 @@ const BlazingSection = () => {
           <h2 className="text-4xl tracking-tight font-bold text-gray-900">
             Blazing fast set-up.
             <br />
-            Get up and running within 5mins 🔥
+            Get up and running in just 60 seconds 🔥
           </h2>
         </div>
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-8 flex-wrap md:flex-nowrap">
