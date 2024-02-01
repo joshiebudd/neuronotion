@@ -12,7 +12,7 @@ const Benefits1 = () => {
             <Image
               src="/benefit3.webp"
               alt="More Hyper-focus, Less Distractions"
-              width={320}
+              width={240}
             />
           </div>
           {/* end - placeholder */}
