@@ -18,8 +18,7 @@ const HeroSection = () => {
           💤 Silence the ADHD Chaos. <br /> 3x your Productivity 🧠
         </h1>
         <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-          Block out the noise with Neuro Notion: The Ultimate ADHD Study Template.
-          Enter a distraction free zone, with all your study needs in one place. 
+          Block out the noise with Neuro Notion: The Ultimate ADHD Notion Study Template.
         </p>
 
         <div className="mt-4 flex justify-center space-x-4">

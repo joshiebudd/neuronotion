@@ -92,9 +92,8 @@ const FAQSection = () => {
               id="para5"
               className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
             >
-              If there is something you are still confused about that I
-              haven&apos;t answered above; please send an email to
-              joshiebudd@gmail.com and I&apos;ll be happy to answer any queries.
+              If there is something you are still confused about please send an email to
+              josh@neuro-notion.com and we&apos;ll be happy to answer any queries. Or press Contact button below.
             </p>
           </FAQItem>
         </div>
