@@ -9,7 +9,7 @@ const Benefits1 = () => {
       <div className="py-8 pb-8 sm:pb-24 px-4 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
           <h2 className="text-4xl tracking-tight font-bold text-gray-900">
-          ADHD causing study struggles?😩  Not anymore 😏
+          Block out the noise 😌 
             <br /> Channel the flow state ✨
           </h2>
           <p className="mt-6 text-gray-700 text-xl text-gray-900">
