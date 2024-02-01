@@ -16,9 +16,9 @@ const DemoSection = () => {
 
   //Show popup for zooming image
   const showImageViewer = (state) => {
-    setZoomed(state);
-    if (state) document.body.classList.add("overflow-hidden");
-    else document.body.classList.remove("overflow-hidden");
+    // setZoomed(state);
+    // if (state) document.body.classList.add("overflow-hidden");
+    // else document.body.classList.remove("overflow-hidden");
   };
 
   const handleImageViewerClose = () => {
@@ -26,7 +26,7 @@ const DemoSection = () => {
   };
 
   return (
-    <section id="demo" className="bg-gray-100 demo-section pt-12">
+    <section id="demo" className="bg-gray-50 demo-section pt-12">
       {zoomed && (
         <ImageViewer
           src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp"
@@ -95,8 +95,10 @@ const DemoSection = () => {
             <div className="flex justify-center flex-col items-center">
               <Image
                 className="w-16 h-16 rounded-full"
-                src="/hs_circle2.webp"
+                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/hs_circle2.webp"
                 alt="Avatar"
+                width={96}
+                height={96}
               />
               Josh Budd
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="bg-gray-100 About_neuronotes">
+    <section id="about" className="bg-gray-50 About_neuronotes">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:pt-10 lg:px-6 text-center">
         <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg">
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900">

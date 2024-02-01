@@ -64,7 +64,7 @@ const FAQSection = () => {
               </svg>
             </div>
             <p id="para3" className={`font-normal  text-base leading-6 text-gray-700 mt-4 w-11/12 ${isOpen[2] ? 'block' : 'hidden'}`}>
-              Absolutely! In fact we think it&apos;s worth more and so do many others! This template saves you at countless hours of creating your own system and has tons of extra valuable tools and custom features built-in too!
+              We think absolutely! In fact we think it&apos;s worth more and so do many others! This template saves you at least 10 hours of creating your own system and has tons of extra valuable tools and custom features built-in too!
             </p>
           </div>
 
