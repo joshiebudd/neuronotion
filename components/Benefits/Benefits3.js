@@ -40,7 +40,7 @@ const Benefits1 = () => {
                 </div>
                 <div className="text-2xl font-bold flex items-center mt-8">
                   <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
-                  <div className="ml-4">Quickly Capture Ideas.</div>
+                  <div className="ml-4">Super simple to use.</div>
                 </div>
               </div>
             </div>
