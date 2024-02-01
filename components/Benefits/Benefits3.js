@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-
 const Benefits1 = () => {
   return (
     <section id="benefits" className="bg-white benefits-section">
@@ -10,9 +9,10 @@ const Benefits1 = () => {
           {/* begin placeholder */}
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 md:order-1 w-full min-w-[200px] md:w-fit">
             <Image
-              src="/benefit3.webp"
+              src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit3.webp"
               alt="More Hyper-focus, Less Distractions"
               width={240}
+              height={320}
             />
           </div>
           {/* end - placeholder */}
@@ -22,24 +22,39 @@ const Benefits1 = () => {
             <div className="ml-8">
               <div className="flex items-center">
                 <div className="text-4xl tracking-tight font-bold">
-                  Aaaanddd relax... no more study stress 😮‍💨 
+                  Your personal centralised <br /> study hub 😌
                 </div>
               </div>
-              <div className="text-xl mt-6">
-                Finally a distraction-free zone, which you can make your own. Access all your study resources
+              <div className="text-xl mt-16">
+                Finally a distraction-free zone. Access all your study resources
                 from the comfort of one single place.
               </div>
               <div>
                 <div className="text-2xl font-bold flex items-center mt-16">
-                  <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                  <Image
+                    src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
+                    alt="Tick Icon"
+                    width={32}
+                    height={32}
+                  />
                   <div className="ml-4">Everything in one place.</div>
                 </div>
                 <div className="text-2xl font-bold flex items-center mt-8">
-                  <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                  <Image
+                    src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
+                    alt="Tick Icon"
+                    width={32}
+                    height={32}
+                  />
                   <div className="ml-4">Fully customisable.</div>
                 </div>
                 <div className="text-2xl font-bold flex items-center mt-8">
-                  <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                  <Image
+                    src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
+                    alt="Tick Icon"
+                    width={32}
+                    height={32}
+                  />
                   <div className="ml-4">Super simple to use.</div>
                 </div>
               </div>

@@ -13,7 +13,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faqs" className="bg-gray-100 pb-12 pt-24 FAQ_section">
+    <section id="faqs" className="bg-gray-50 pb-12 pt-24 FAQ_section">
       <div className="text-center">
         <h2 className="font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-900">
           Frequently Asked Questions
@@ -63,6 +63,22 @@ const FAQSection = () => {
             </p>
           </FAQItem>
 
+          {/* FAQ Item 2 */}
+          <FAQItem>
+            <h3 className="font-semibold text-xl leading-5 text-gray-800">
+              Is this worth $10?
+            </h3>
+            <p
+              id="para2"
+              className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
+            >
+              We think absolutely! In fact we think it&apos;s worth more and so
+              do many others! This template saves you at least 10 hours of
+              creating your own system and has tons of extra valuable tools and
+              custom features built-in too!
+            </p>
+          </FAQItem>
+
           {/* FAQ Item 3 */}
           <FAQItem>
             <h3 className="font-semibold text-xl leading-5 text-gray-800">
@@ -92,8 +108,9 @@ const FAQSection = () => {
               id="para5"
               className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
             >
-              If there is something you are still confused about please send an email to
-              josh@neuro-notion.com and we&apos;ll be happy to answer any queries. Or press Contact button below.
+              If there is something you are still confused about that I
+              haven&apos;t answered above; please send an email to
+              joshiebudd@gmail.com and I&apos;ll be happy to answer any queries.
             </p>
           </FAQItem>
         </div>
