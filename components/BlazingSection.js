@@ -13,13 +13,13 @@ const BlazingSection = () => {
             Get up and running in just 60 seconds 🔥
           </h2>
         </div>
-        <div className="gap-x-4 lg:gap-y-2 flex items-center mt-8 flex-wrap md:flex-nowrap">
+        <div className="gap-x-2 lg:gap-y-2 flex items-center mt-8 flex-wrap md:flex-nowrap">
           {/* begin placeholder */}
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 w-full min-w-[200px] md:w-fit">
             <Image
               src="/rocket.webp"
               alt="More Hyper-focus, Less Distractions"
-              width={320}
+              width={240}
             />
           </div>
           {/* end - placeholder */}
@@ -34,7 +34,7 @@ const BlazingSection = () => {
                   width={32}
                   height={32}
                 />
-                <div className="ml-4">Everything in one place.</div>
+                <div className="ml-2">Everything in one place.</div>
               </div>
               <div className="text-2xl font-bold flex items-center mt-8">
                 <Image
@@ -43,7 +43,7 @@ const BlazingSection = () => {
                   width={32}
                   height={32}
                 />
-                <div className="ml-4">Fully customisable.</div>
+                <div className="ml-2">Fully customisable.</div>
               </div>
               <div className="text-2xl font-bold flex items-center mt-8">
                 <Image
@@ -52,7 +52,7 @@ const BlazingSection = () => {
                   width={32}
                   height={32}
                 />
-                <div className="ml-4">Quickly Capture Ideas.</div>
+                <div className="ml-2">Quickly Capture Ideas.</div>
               </div>
             </div>
           </div>
