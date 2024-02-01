@@ -18,7 +18,7 @@ const Benefits1 = () => {
           </p>
         </div>
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-16 flex-wrap md:flex-nowrap">
-          {/* begin placeholder */}
+
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 md:order-1 w-full min-w-[200px] md:w-fit">
             <Image
               src="/benefit1.webp"
@@ -26,7 +26,7 @@ const Benefits1 = () => {
               width={320}
             />
           </div>
-          {/* end - placeholder */}
+
 
           {/* begin - description */}
           <div className="max-w-[600px] mx-12 flex flex-col items-center mb-12 order-1 md:mb-0 md:order-2 lg:items-start lg:mx-4">
