@@ -22,7 +22,7 @@ const Benefits1 = () => {
             <div className="ml-8">
               <div className="flex items-center">
                 <div className="text-4xl tracking-tight font-bold">
-                  Aaaanddd Relax... no more study stress 😌 
+                  Aaaanddd relax... no more study stress 😮‍💨 
                 </div>
               </div>
               <div className="text-xl mt-6">
