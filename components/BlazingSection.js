@@ -14,7 +14,7 @@ const BlazingSection = () => {
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-8 flex-wrap md:flex-nowrap">
           {/* begin placeholder */}
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 w-full min-w-[200px] md:w-fit">
-            <img
+            <Image
               src="/blaze.png"
               alt="More Hyper-focus, Less Distractions"
               width={320}
@@ -26,7 +26,7 @@ const BlazingSection = () => {
           <div className="max-w-[600px] mx-12 flex flex-col items-center justify-center mb-12 order-1 md:mb-0 lg:mx-4 w-full">
             <div>
               <div className="text-2xl font-bold flex items-center mt-12">
-                <img
+                <Image
                   src="/tick_orange.png"
                   alt="Tick Icon"
                   width={32}
@@ -35,7 +35,7 @@ const BlazingSection = () => {
                 <div className="ml-4">Everything in one place.</div>
               </div>
               <div className="text-2xl font-bold flex items-center mt-8">
-                <img
+                <Image
                   src="/tick_orange.png"
                   alt="Tick Icon"
                   width={32}
@@ -44,7 +44,7 @@ const BlazingSection = () => {
                 <div className="ml-4">Fully customisable.</div>
               </div>
               <div className="text-2xl font-bold flex items-center mt-8">
-                <img
+                <Image
                   src="/tick_orange.png"
                   alt="Tick Icon"
                   width={32}

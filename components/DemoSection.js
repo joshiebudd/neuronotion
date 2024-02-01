@@ -93,7 +93,7 @@ const DemoSection = () => {
 
           <div className="mt-4">
             <div className="flex justify-center flex-col items-center">
-              <img
+              <Image
                 className="w-16 h-16 rounded-full"
                 src="/hs_circle2.webp"
                 alt="Avatar"

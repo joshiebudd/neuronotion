@@ -1,6 +1,7 @@
 import React from "react";
 import UpArrowIcon from "../Common/Icons/UpArrowIcon";
 import DownArrowIcon from "../Common/Icons/DownArrowIcon";
+import Image from "next/image";
 
 const Benefits1 = () => {
   return (
@@ -20,7 +21,7 @@ const Benefits1 = () => {
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-16 flex-wrap md:flex-nowrap">
           {/* begin placeholder */}
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 md:order-1 w-full min-w-[200px] md:w-fit">
-            <img
+            <Image
               src="/benefit1.webp"
               alt="More Hyper-focus, Less Distractions"
               width={320}
@@ -49,15 +50,15 @@ const Benefits1 = () => {
               and achievement in areas where they are deeply engaged.
             </div>
             <div className="text-2xl font-bold flex items-center mt-4">
-              <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+              <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
               <div className="ml-4">Bespoke ADHD Tools.</div>
             </div>
             <div className="text-2xl font-bold flex items-center mt-4">
-              <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+              <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
               <div className="ml-4">Distraction Free Zone.</div>
             </div>
             <div className="text-2xl font-bold flex items-center mt-4">
-              <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+              <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
               <div className="ml-4">Quickly Capture Ideas.</div>
             </div>
           </div>

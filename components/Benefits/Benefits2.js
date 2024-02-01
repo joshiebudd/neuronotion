@@ -7,7 +7,7 @@ const Benefits2 = () => {
         <div className="gap-x-4 lg:gap-y-2 flex flex-wrap md:flex-nowrap items-center mt-16">
           {/* begin placeholder */}
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 w-full md:w-fit">
-            <img
+            <Image
               src="/benefit2.webp"
               alt="More Hyper-focus, Less Distractions"
               width={320}
@@ -33,15 +33,15 @@ const Benefits2 = () => {
             </div>
             <div>
               <div className="text-2xl font-bold flex items-center mt-16">
-                <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
                 <div className="ml-4">Built-in Reminders & Deadlines.</div>
               </div>
               <div className="text-2xl font-bold flex items-center mt-8">
-                <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
                 <div className="ml-4">Prioritise Important Tasks.</div>
               </div>
               <div className="text-2xl font-bold flex items-center mt-8">
-                <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
                 <div className="ml-4">Connect Favourite Apps.</div>
               </div>
             </div>

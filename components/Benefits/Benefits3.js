@@ -7,7 +7,7 @@ const Benefits1 = () => {
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-16 flex-wrap md:flex-nowrap">
           {/* begin placeholder */}
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 md:order-1 w-full min-w-[200px] md:w-fit">
-            <img
+            <Image
               src="/benefit3.webp"
               alt="More Hyper-focus, Less Distractions"
               width={320}
@@ -29,15 +29,15 @@ const Benefits1 = () => {
               </div>
               <div>
                 <div className="text-2xl font-bold flex items-center mt-16">
-                  <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                  <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
                   <div className="ml-4">Everything in one place.</div>
                 </div>
                 <div className="text-2xl font-bold flex items-center mt-8">
-                  <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                  <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
                   <div className="ml-4">Fully customisable.</div>
                 </div>
                 <div className="text-2xl font-bold flex items-center mt-8">
-                  <img src="/tick.png" alt="Tick Icon" width={32} height={32} />
+                  <Image src="/tick.png" alt="Tick Icon" width={32} height={32} />
                   <div className="ml-4">Quickly Capture Ideas.</div>
                 </div>
               </div>
