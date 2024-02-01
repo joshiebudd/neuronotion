@@ -77,7 +77,7 @@ const PricingSection = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/4gwaGP9vF9F84zmcMM"
+              href="https://buy.stripe.com/14k9CLbDN8B42re9AF"
               className="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logBasicPackageEvent}
             >
@@ -134,7 +134,7 @@ const PricingSection = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/fZe2ajdLVbNg3vifZ1"
+              href="https://buy.stripe.com/cN2g19dLV04yfe0cMT"
               className="StripeStandardPlan text-gray-900 bg-gray-100 hover:bg-gray-300 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logStandardPackageEvent}
             >
@@ -178,7 +178,7 @@ const PricingSection = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/4gwaGP9vF9F84zmcMM"
+              href="https://buy.stripe.com/fZedT19vF9F85Dq4go"
               className="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logPremiumPackageEvent}
             >
