@@ -41,7 +41,7 @@ const Index = ({}) => {
       className="w-full sm:w-fit fixed bottom-0 right-0 flex items-end justify-center sm:justify-end p-5"
       onClick={(e) => console.log(e)}
     >
-      <img
+      <Image
         ref={buttonRef}
         onClick={handleOnTop}
         className={`cursor-pointer opacity-60 hover:opacity-80 transition-all duration-300 ${styles.hide}`}
