@@ -8,7 +8,7 @@ const Benefits2 = () => {
           {/* begin placeholder */}
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 w-full md:w-fit">
             <img
-              src="/benefit2.png"
+              src="/benefit2.webp"
               alt="More Hyper-focus, Less Distractions"
               width={320}
             />
