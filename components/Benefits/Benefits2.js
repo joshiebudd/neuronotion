@@ -29,8 +29,9 @@ const Benefits2 = () => {
               </div>
             </div>
             <div className="text-xl">
-              Put an end to forgetting important things. With Neuro Notion,
-              remembering is easy.
+            Find peace of mind when studying. You handle the fun stuff,
+            we&apos;ll handle the boring organisation.
+
             </div>
             <div>
               <div className="text-2xl font-bold flex items-center mt-16">
