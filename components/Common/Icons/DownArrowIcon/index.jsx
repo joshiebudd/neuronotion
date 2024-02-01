@@ -1,3 +1,6 @@
+import Image from 'next/image';
+
+
 const Index = ({ color }) => {
   return (
     <div className="flex items-center justify-center relative">

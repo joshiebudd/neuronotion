@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import styles from "./style.module.scss";
 import _ from "lodash";
+import Image from 'next/image';
 
 const Index = ({}) => {
   let isTop = true;
