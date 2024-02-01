@@ -12,13 +12,13 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="bg-gray-50 hero-section pt-24 sm:pt-32">
+    <section id="hero" className="bg-gray-10 hero-section pt-24 sm:pt-32">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
           💤 Silence the ADHD Chaos. <br /> 3x your Productivity 🧠
         </h1>
         <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-          Block out the noise with Neuro Notion: The Ultimate ADHD Notion Study Template.
+          Block out the noise with Neuro Notion: <br /> The Ultimate ADHD Notion Study Template.
         </p>
 
         <div className="mt-4 flex justify-center space-x-4">
