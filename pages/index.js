@@ -16,7 +16,7 @@ import FinalCTA from "../components/FinalCTASection";
 import FooterSection from "../components/FooterSection";
 import ToTop from "../components/Common/ToTop";
 import BlazingSection from "../components/BlazingSection";
-import { setupBeforeUnload, setupLoad, setupScroll } from "./tracking";
+import { setupBeforeUnload, setupLoad, setupScroll } from "../tracking";
 
 const IndexPage = () => {
   <Head>

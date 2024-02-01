@@ -13,7 +13,7 @@ const nextConfig = {
       },
     ],
   },
-  // vercelAnalyticsId: 'prj_XPGFnBtOVBZufVUGGE8tAiatzOtj', // Removed Vercel Analytics ID
+  vercelAnalyticsId: 'prj_XPGFnBtOVBZufVUGGE8tAiatzOtj',
 };
 
 module.exports = nextConfig;
