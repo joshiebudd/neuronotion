@@ -17,7 +17,7 @@ const BlazingSection = () => {
           {/* begin placeholder */}
           <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 w-full min-w-[200px] md:w-fit">
             <Image
-              src="/blaze.png"
+              src="/rocket.webp"
               alt="More Hyper-focus, Less Distractions"
               width={320}
             />
