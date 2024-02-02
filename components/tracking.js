@@ -1,72 +1,43 @@
-import React, { useEffect } from 'react';
 import { track } from "@vercel/analytics";
-
-const YourComponent = () => {
-  // Define the event handlers outside useEffect
-  const onScroll = (event) => {
-    let scrolled = false;
-    let reachedBottom = false;
-
+let scrolled = false;
+let reachedBottom = false;
+let loadTime = new Date(),
+  unloadTime;
+export function setupBeforeUnload() {
+  window.addEventListener("beforeunload", function (event) {
+    unloadTime = new Date();
+    const visitedTime = unloadTime.getTime() - loadTime.getTime();
+    if (visitedTime < 5000) {
+      track("Bounced");
+    }
+    track(`Visited Time: ${visitedTime}`);
+  });
+}
+export function setupLoad() {
+  window.addEventListener("DOMContentLoaded", function (event) {
+    track("Visited");
+    loadTime = new Date();
+  });
+}
+export function setupScroll() {
+  window.addEventListener("scroll", function (event) {
     if (!scrolled) {
-      track("Scrolled below fold");
+      track("Scrolled");
       scrolled = true;
     }
-
-    if (!reachedBottom &&
-        window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    if (
+      !reachedBottom &&
+      this.scrollY > document.getElementById("footer").offsetTop - innerHeight
+    ) {
       reachedBottom = true;
       track("Reached Bottom");
     }
-  };
-
-  const onClickBasic = () => {
-    track('Initiate Checkout - Basic');
-  };
-
-  const onClickStandard = () => {
-    track('Initiate Checkout - Standard');
-  };
-
-  const onClickPremium = () => {
-    track('Initiate Checkout - Premium');
-  };
-
-  const beforeUnload = (event) => {
-    const pricingSection = document.getElementById("pricing");
-    if (pricingSection) {
-      const isOnPricingPage = window.scrollY >= pricingSection.offsetTop &&
-                              window.scrollY < pricingSection.offsetTop + pricingSection.offsetHeight;
-
-      if (isOnPricingPage) {
-        track("Leave at Price Section.");
-      }
+    const pricingSection = this.document.getElementById("pricing");
+    if (
+      this.scrollY > pricingSection.clientTop &&
+      this.scrollY < pricingSection.clientHeight + pricingSection.clientTop
+    ) {
+      track("Leave at Price Section.");
     }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    window.addEventListener("beforeunload", beforeUnload);
-
-    // Setup checkout tracking
-    const basicButton = document.getElementById('GetBasicButton');
-    if (basicButton) basicButton.addEventListener('click', onClickBasic);
-
-    const standardButton = document.getElementById('GetStandardButton');
-    if (standardButton) standardButton.addEventListener('click', onClickStandard);
-
-    const premiumButton = document.getElementById('GetPremiumButton');
-    if (premiumButton) premiumButton.addEventListener('click', onClickPremium);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("beforeunload", beforeUnload);
-      if (basicButton) basicButton.removeEventListener('click', onClickBasic);
-      if (standardButton) standardButton.removeEventListener('click', onClickStandard);
-      if (premiumButton) premiumButton.removeEventListener('click', onClickPremium);
-    };
-  }, []);
-
-};
-
-export default YourComponent;
+  });
+}
