@@ -16,6 +16,7 @@
     "next": "^14.0.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^9.3.0",
+    "posthog-js": "^1.104.4",
     "react": "^18",
     "react-countup": "^6.5.0",
     "react-dom": "^18",
