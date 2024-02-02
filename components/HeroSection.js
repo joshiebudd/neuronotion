@@ -18,7 +18,7 @@ const HeroSection = () => {
           💤 Silence the ADHD Chaos. <br /> 3x your Productivity 🧠
         </h1>
         <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-          Block out the noise with Neuro Notion: <br />The Ultimate ADHD Study
+          Block out the noise with Neuro Notion: <br />The Ultimate ADHD Study Notion Template.
         </p>
 
         <div className="mt-4 flex justify-center space-x-4">
