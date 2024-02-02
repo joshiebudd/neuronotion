@@ -13,7 +13,7 @@ const Benefits1 = () => {
           <br />and channel the flow state ✨
           </h2>
           <p className="mt-6 text-gray-700 text-xl text-gray-900">
-          Neuro Notion is built by ADHDers for ADHDers... <br />
+          Neuro Notion is built by ADHDers for ADHDers...
           We know your struggles, and we&apos;re here to solve them.
           </p>
         </div>
