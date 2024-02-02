@@ -31,7 +31,7 @@ const PricingSection = () => {
       <div className="py-8 px-4 md:px-52">
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-700">
-            One Payment, Unlimited Usage.
+            One Payment, Unlimited Usage ♾️
           </h2>
           <p className="mb-5 font-gray-900 text-gray-900 text-xl">
             Lifetime access, technical support, no subscription fees.

@@ -13,10 +13,10 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faqs" className="bg-gray-50 pb-12 pt-24 FAQ_section">
+    <section id="faqs" className="bg-gray-100 pb-12 pt-24 FAQ_section">
       <div className="text-center">
         <h2 className="font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-900">
-          Frequently Asked Questions
+          Frequently Asked Questions ❔
         </h2>
         <p className="font-normal text-base leading-6 text-gray-900 lg:w-8/12 md:w-9/12 mx-auto text-xl mt-6">
           Answers to some commonly asked questions.
@@ -40,7 +40,7 @@ const FAQSection = () => {
                 href="https://affiliate.notion.so/scq8k2tmgpnc"
                 className="text-blue-500"
               >
-                Notion app, a super popular note-taking app for students{" "}
+                Notion app, a super popular note-taking app for students{""}
               </a>
               , especially among ADHDers. The template provides a ready-to-use
               structure for organizing notes, tasks, and schedules. It
@@ -66,14 +66,14 @@ const FAQSection = () => {
           {/* FAQ Item 2 */}
           <FAQItem>
             <h3 className="font-semibold text-xl leading-5 text-gray-800">
-              Is this worth $10?
+              Is this worth $20?
             </h3>
             <p
               id="para2"
               className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
             >
               We think absolutely! In fact we think it&apos;s worth more and so
-              do many others! This template saves you at least 10 hours of
+              do many others! This template saves you countless hours of
               creating your own system and has tons of extra valuable tools and
               custom features built-in too!
             </p>

@@ -9,12 +9,12 @@ const Benefits1 = () => {
       <div className="py-8 pb-8 sm:pb-24 px-4 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
           <h2 className="text-4xl tracking-tight font-bold text-gray-900">
-            💤 Silence the chaos.
-            <br /> Channel the flow state ✨
+          Block out the noise
+          <br />and channel the flow state ✨
           </h2>
           <p className="mt-6 text-gray-700 text-xl text-gray-900">
-            Find peace of mind when studying. You handle the fun stuff, <br />
-            we&apos;ll handle the boring organisation.
+          Neuro Notion is built by ADHDers for ADHDers... <br />
+          We know your struggles, and we&apos;re here to solve them.
           </p>
         </div>
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-16 flex-wrap md:flex-nowrap">
@@ -46,9 +46,8 @@ const Benefits1 = () => {
               </div>
             </div>
             <div className="text-xl my-8">
-              A distraction-free zone where you can lock in on your studies, and
-              block out distractions. Every focus tool you need, just one click
-              away.
+              Lock into your studies and get into the zone, distraction-free. 
+              All the focus tools you need, just one click away.
             </div>
             <div className="text-2xl font-bold flex items-center mt-4">
               <Image
@@ -57,7 +56,7 @@ const Benefits1 = () => {
                 width={32}
                 height={32}
               />
-              <div className="ml-4">Bespoke ADHD Tools.</div>
+              <div className="ml-4">Science-backed ADHD Tools.</div>
             </div>
             <div className="text-2xl font-bold flex items-center mt-8">
               <Image
@@ -75,7 +74,7 @@ const Benefits1 = () => {
                 width={32}
                 height={32}
               />
-              <div className="ml-4">Quickly Capture Ideas.</div>
+              <div className="ml-4">All-in-one solution</div>
             </div>
           </div>
         </div>

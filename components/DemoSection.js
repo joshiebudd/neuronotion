@@ -26,7 +26,7 @@ const DemoSection = () => {
   };
 
   return (
-    <section id="demo" className="bg-gray-50 demo-section pt-12">
+    <section id="demo" className="bg-gray-100 demo-section pt-12">
       {zoomed && (
         <ImageViewer
           src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp"
@@ -35,11 +35,9 @@ const DemoSection = () => {
       )}
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-black">
-          A peek under the hood
-        </h1>
+        Take a sneak peak at what&apos;s included... 🤫        </h1>
         <p className="mb-4 text-xl font-normal text-black sm:px-16 md:px-48 mt-8">
-          Eliminate the struggles of being distracted when juggling programs and
-          tabs. Ease into a streamlined experience.
+          No more juggling 8 different tools, its time to ease into a streamlined study experience.
         </p>
 
         <div className="inline-block p-0 border-8 border-gray-300 border-opacity-20 rounded-lg overflow-hidden">

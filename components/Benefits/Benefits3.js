@@ -22,12 +22,12 @@ const Benefits1 = () => {
             <div className="ml-8">
               <div className="flex items-center">
                 <div className="text-4xl tracking-tight font-bold">
-                  Your personal centralised <br /> study hub 😌
+                Aaaanddd relax... <br /> no more study stress 😮‍💨
                 </div>
               </div>
               <div className="text-xl mt-16">
-                Finally a distraction-free zone. Access all your study resources
-                from the comfort of one single place.
+                Finally, feel at peace with this blissfully organised study hub which you can make your own. 
+                Access all your study resources from the comfort of one single place.
               </div>
               <div>
                 <div className="text-2xl font-bold flex items-center mt-16">

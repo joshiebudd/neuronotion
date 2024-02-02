@@ -9,7 +9,7 @@ const BlazingSection = () => {
           <h2 className="ml-12 sm:ml-0 text-4xl tracking-tight font-bold text-gray-900 text-left sm:text-center">
             Blazing fast set-up.
             <br />
-            Get up and running in just 60 seconds 🔥
+            Get started in just 60 seconds 🔥
           </h2>
         </div>
         <div className="gap-x-2 lg:gap-y-2 flex items-center mt-8 flex-wrap md:flex-nowrap">
@@ -34,7 +34,7 @@ const BlazingSection = () => {
                   width={32}
                   height={32}
                 />
-                <div className="ml-2">Everything in one place.</div>
+                <div className="ml-2">Text and Video tutorials for everything.</div>
               </div>
               <div className="text-2xl font-bold flex items-center mt-8">
                 <Image
@@ -43,7 +43,7 @@ const BlazingSection = () => {
                   width={32}
                   height={32}
                 />
-                <div className="ml-2">Fully customisable.</div>
+                <div className="ml-2">Easy to transfer notes.</div>
               </div>
               <div className="text-2xl font-bold flex items-center mt-8">
                 <Image
@@ -52,7 +52,7 @@ const BlazingSection = () => {
                   width={32}
                   height={32}
                 />
-                <div className="ml-2">Quickly Capture Ideas.</div>
+                <div className="ml-2">Immediate support available.</div>
               </div>
             </div>
           </div>

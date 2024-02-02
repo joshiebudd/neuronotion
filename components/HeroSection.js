@@ -12,15 +12,13 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="bg-gray-50 hero-section pt-24 sm:pt-32">
+    <section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
           💤 Silence the ADHD Chaos. <br /> 3x your Productivity 🧠
         </h1>
         <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-          Block out the noise with Neuro Notion: The Ultimate ADHD Study
-          Template. Enter a distraction free zone, with all your study needs in
-          one place.
+          Block out the noise with Neuro Notion: <br />The Ultimate ADHD Study
         </p>
 
         <div className="mt-4 flex justify-center space-x-4">
@@ -41,7 +39,7 @@ const HeroSection = () => {
           </span>
         </div>
         <span className="mt-0 mb-0 text-sm text-gray-800">
-          4.82/5 from 1,300+ Students with ADHD.
+          4.84/5 from 1,300+ Students with ADHD.
         </span>
       </div>
 
