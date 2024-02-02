@@ -46,7 +46,7 @@ const FAQItem = ({ children }) => {
       </div>
       <div
         className={`transition-all duration-500 overflow-hidden ${
-          !isOpen ? "max-h-0" : "max-h-120 sm:max-h-48"
+          !isOpen ? "max-h-0" : "max-h-[300px] sm:max-h-48 "
         }`}
       >
         {children[1] && children[1]}

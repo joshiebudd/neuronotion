@@ -15,7 +15,7 @@ import FAQSection from "../components/FAQSection/FAQSection";
 import FinalCTA from "../components/FinalCTASection";
 import FooterSection from "../components/FooterSection";
 import ToTop from "../components/Common/ToTop";
-import BlazingSection from "../components/BlazingSection";
+import BlazingSection from "../components/BlazingSection.js";
 import {
   setupBeforeUnload,
   setupLoad,

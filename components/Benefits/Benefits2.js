@@ -18,14 +18,14 @@ const Benefits2 = () => {
           {/* end - placeholder */}
 
           {/* begin - description */}
-          <div className="mx-12 lg:mx-4 flex flex-col items-center max-w-[600px] lg:items-start mb-12 md:mb-0 order-1">
-            <div className="mb-8">
-              <div className="flex items-center">
+          <div className="mx-12 lg:mx-4 flex flex-col max-w-[600px] items-start mb-12 md:mb-0 order-1">
+            <div className="mb-8 w-full flex items-end flex-col">
+              <div className="flex items-center w-full">
                 <div className="text-4xl tracking-tight font-bold ml-2">
                   Finally, no more <br /> forgotten deadlines 😅
                 </div>
               </div>
-              <div className="text-xl text-right w-full md:w-fit mt-4">
+              <div className="text-xl text-right w-full md:w-fit mt-4 mr-12">
                 ...or awkward double bookings
               </div>
             </div>
