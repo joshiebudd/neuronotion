@@ -31,7 +31,7 @@ const Benefits2 = () => {
             </div>
             <div className="text-xl">
               Put an end to forgetting important things. With Neuro Notion,
-              remembering is easy.
+              remembering the important stuff is easy.
             </div>
             <div>
               <div className="text-2xl font-bold flex items-center mt-16">
