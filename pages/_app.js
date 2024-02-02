@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }) {
         apiKey="phc_3lTf840WFEVTYO7GoU20Happ4w4r4YZLpeZuzwVWd7o" 
         options={{ host: "https://eu.posthog.com"}}
       >
-        <RestOfApp />
       </PostHogProvider>
 
 
