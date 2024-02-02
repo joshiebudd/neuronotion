@@ -1,6 +1,6 @@
 import "../src/styles/globals.css";
 import React from 'react';
-import { PostHogProvider } from 'posthog-react-native';
+import { PostHogProvider } from 'posthog-js';
 import Head from "next/head"; 
 import Script from "next/script";
 
