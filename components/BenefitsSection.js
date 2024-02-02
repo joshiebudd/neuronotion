@@ -52,7 +52,7 @@ const BenefitsSection = () => {
             />
             <h3 className="text-xl font-bold text-black">Built around ADHD</h3>
             <p className="text-gray-700">
-              Custom-built ADHD focus timers, sounds, and tools
+              Custom-built ADHD  timers, sounds, and tools
             </p>
           </div>
 
