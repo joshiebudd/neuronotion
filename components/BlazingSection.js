@@ -8,7 +8,6 @@ const BlazingSection = () => {
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
           <h2 className="ml-12 sm:ml-0 text-4xl tracking-tight font-bold text-gray-900 text-left sm:text-center">
             Blazing fast set-up.
-            <br />
             Get started in just 60 seconds 🔥
           </h2>
         </div>
