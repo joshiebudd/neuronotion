@@ -21,8 +21,8 @@ const DarkModeSection = () => {
             style={{ width: "100%" }}
             src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/darkmodedemo.webp"
             alt="template"
-            width={600} // Set the width of the image (you can adjust as needed)
-            height={400} // Set the height of the image (adjust for the aspect ratio of your image)
+            width={1200} // Set the width of the image (you can adjust as needed)
+            height={800} // Set the height of the image (adjust for the aspect ratio of your image)
             priority={1}
           />
         </div>
