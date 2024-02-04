@@ -16,20 +16,23 @@ export function setupBeforeUnload() {
 }
 
 export function setupScroll() {
-  window.addEventListener("scroll", function (event) {
-    if (!scrolled) {
+  window.addEventListener("scroll", function () {
+    const viewportHeight = window.innerHeight;
+
+    if (!scrolled && window.scrollY > viewportHeight) {
       track("Scrolled");
       scrolled = true;
     }
-    if (!reachedBottom && window.scrollY > document.getElementById("footer").offsetTop - window.innerHeight) {
+
+    const footer = document.getElementById("footer");
+    if (footer && !reachedBottom && window.scrollY > footer.offsetTop - window.innerHeight) {
       reachedBottom = true;
       track("Reached Bottom");
     }
 
-    // Check if the user is in the pricing section
     const pricingSection = document.getElementById("pricing");
     if (pricingSection && window.scrollY > pricingSection.offsetTop && window.scrollY < pricingSection.offsetTop + pricingSection.clientHeight) {
-      hasVisitedPricing = true; // User has visited the pricing section
+      hasVisitedPricing = true;
     }
   });
 }
