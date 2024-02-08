@@ -14,6 +14,13 @@ export function setupBeforeUnload() {
   });
 }
 
+export function setupLoad() {
+  window.addEventListener("DOMContentLoaded", function (event) {
+    track("Visited");
+    loadTime = new Date();
+  });
+}
+
 export function setupScroll() {
   window.addEventListener("scroll", function (event) {
     if (!reachedBottom && this.scrollY > document.getElementById("footer").offsetTop - innerHeight) {
