@@ -5,11 +5,11 @@ const DemoSectionNewTemp = () => {
   // Carousel state and functions
   const [activeIndex, setActiveIndex] = useState(2); // Start with the third item active
   const carouselItems = [
-    "/main/public/maindemo.webp",
-    "/main/public/maindemo.webp",
-    "/main/public/maindemo.webp",
-    "/main/public/maindemo.webp",
-    "/main/public/maindemo.webp",
+    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
+    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
+    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
+    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
+    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
   ];
 
   const goToPrevious = () => {
@@ -46,8 +46,10 @@ const DemoSectionNewTemp = () => {
               <div key={index} className={`duration-200 ease-linear ${activeIndex === index ? 'block' : 'hidden'}`}>
                 <Image 
                 src={item} 
-                className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" 
-                alt={`Slide ${index + 1}`} />
+                alt="More Hyper-focus, Less Distractions" 
+                width={320} 
+                height={320} 
+                className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
               </div>
             ))}
           </div>
@@ -76,10 +78,6 @@ const DemoSectionNewTemp = () => {
             </span>
           </button>
         </div>
-
-
-
-
 
         <div className="mt-4">
           <a
@@ -137,7 +135,7 @@ const DemoSectionNewTemp = () => {
           </div>
         </div>
       </div>
-  </section>
+    </section>
   );
 };
 
