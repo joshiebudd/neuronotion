@@ -6,10 +6,10 @@ const DemoSectionNewTemp = () => {
   const [activeIndex, setActiveIndex] = useState(2); // Start with the third item active
   const carouselItems = [
     "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
+    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit2.webp",
+    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit3.webp",
     "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
-    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
-    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
-    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp",
+    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit2.webp",
   ];
 
   const goToPrevious = () => {
