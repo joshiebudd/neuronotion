@@ -21,7 +21,7 @@ import {
   setupScroll,
 } from "../components/tracking";
 
-const IndexPage = () => {
+const FBPage = () => {
   <Head>
     <meta
       name="description"
@@ -56,4 +56,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default FBPage;
