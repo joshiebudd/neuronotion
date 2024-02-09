@@ -33,10 +33,10 @@ const DemoSectionNewTemp = () => {
     <section id="demo" className="bg-gray-100 pt-12">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-black">
-          Take a sneak peak at what's included... 🤫
+          Take a sneak peak at what&apos;s included... 🤫
         </h1>
         <p className="mb-4 text-xl font-normal text-black sm:px-16 md:px-48 mt-8">
-          No more juggling 8 different tools, it's time to ease into a streamlined study experience.
+          No more juggling 8 different tools, it&apos;s time to ease into a streamlined study experience.
         </p>
 
         {/* Carousel */}
