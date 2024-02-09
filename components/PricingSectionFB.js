@@ -4,16 +4,22 @@ import CheckIcon from "./Common/Icons/CheckIcon";
 import CrossIcon from "./Common/Icons/CrossIcon";
 import { track } from "@vercel/analytics";
 
-const PricingSection = () => {
+const PricingSectionFb = () => {
   const logBasicPackageEvent = () => {
+    // Log event to Facebook Pixel for Basic package
+    fbq("trackCustom", "BasicBuyNowClick");
     track("Buy Basic");
   };
 
   const logStandardPackageEvent = () => {
+    // Log event to Facebook Pixel for Standard package
+    fbq("trackCustom", "StandardBuyNowClick");
     track("Buy Standard");
   };
 
   const logPremiumPackageEvent = () => {
+    // Log event to Facebook Pixel for Standard package
+    fbq("trackCustom", "PremiumBuyNowClick");
     track("Buy Premium");
   };
 
@@ -71,7 +77,7 @@ const PricingSection = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/8wM5mv8rBbNg1naeUY"
+              href="https://buy.stripe.com/14k9CLbDN8B42re9AF"
               id="GetBasicButton"
               className="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logBasicPackageEvent}
@@ -129,7 +135,7 @@ const PricingSection = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/14k7uD5fpcRkd5S8wC"
+              href="https://buy.stripe.com/cN2g19dLV04yfe0cMT"
               id="GetStandardButton"
               className="StripeStandardPlan text-gray-900 bg-gray-100 hover:bg-gray-300 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logStandardPackageEvent}
