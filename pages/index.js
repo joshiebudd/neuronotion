@@ -3,7 +3,6 @@ import { track } from "@vercel/analytics";
 import Head from "next/head";
 import HeaderSection from "../components/HeaderSection";
 import HeroSection from "../components/HeroSection";
-// import BenefitsSection from "../components/BenefitsSection";
 import BenefitsSection from "../components/Benefits";
 import FeaturesSection from "../components/FeaturesSection";
 import DemoSection from "../components/DemoSection";
