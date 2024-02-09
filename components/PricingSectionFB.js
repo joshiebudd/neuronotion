@@ -194,4 +194,4 @@ const PricingSectionFB = () => {
   );
 };
 
-export default PricingSection;
+export default PricingSectionFB;
