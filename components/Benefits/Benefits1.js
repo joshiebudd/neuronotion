@@ -35,7 +35,7 @@ const Benefits1 = () => {
             <div>
               <div className="flex items-center">
                 <UpArrowIcon color="#15803d" />
-                <div className="text-3xl tracking-tight font-bold ml-4">
+                <div className="text-4xl tracking-tight font-bold ml-4">
                   Hyper-focus
                 </div>
               </div>
@@ -57,7 +57,7 @@ const Benefits1 = () => {
                 width={32}
                 height={32}
               />
-              <div className="ml-4">Science-based ADHD Tools.</div>
+              <div className="ml-4">Science-backed Tools.</div>
             </div>
             <div className="text-2xl font-bold flex items-center mt-8">
               <Image
@@ -75,7 +75,7 @@ const Benefits1 = () => {
                 width={32}
                 height={32}
               />
-              <div className="ml-4">All-in-one solution</div>
+              <div className="ml-4">Made for ADHDers</div>
             </div>
           </div>
         </div>
