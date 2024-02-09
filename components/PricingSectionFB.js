@@ -4,7 +4,7 @@ import CheckIcon from "./Common/Icons/CheckIcon";
 import CrossIcon from "./Common/Icons/CrossIcon";
 import { track } from "@vercel/analytics";
 
-const PricingSectionFb = () => {
+const PricingSectionFB = () => {
   const logBasicPackageEvent = () => {
     // Log event to Facebook Pixel for Basic package
     fbq("trackCustom", "BasicBuyNowClick");

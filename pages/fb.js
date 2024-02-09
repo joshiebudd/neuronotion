@@ -8,7 +8,7 @@ import FeaturesSection from "../components/FeaturesSection";
 import DemoSection from "../components/DemoSection";
 import DarkModeSection from "../components/DarkmodeSection";
 import CommunitySection from "../components/CommunitySection";
-import PricingSectionFb from "../components/PricingSectionFB.js";
+import PricingSectionFB from "../components/PricingSectionFB";
 import AboutSection from "../components/AboutSection";
 import FAQSection from "../components/FAQSection/FAQSection";
 import FinalCTA from "../components/FinalCTASection";
@@ -46,6 +46,9 @@ const IndexPage = () => {
       <DemoSection />
       <DarkModeSection />
       <PricingSectionFB />
+      <FAQSection />
+      <CommunitySection />
+      <AboutSection />
       <FinalCTA />
       <FooterSection />
       <ToTop />
