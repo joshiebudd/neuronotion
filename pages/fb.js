@@ -6,7 +6,6 @@ import HeroSection from "../components/HeroSection";
 import BenefitsSection from "../components/Benefits";
 import FeaturesSection from "../components/FeaturesSection";
 import DemoSection from "../components/DemoSection";
-import DemoSectionNewTemp from "../components/DemoSectionNewTemp";
 import DarkModeSection from "../components/DarkmodeSection";
 import CommunitySection from "../components/CommunitySection";
 import PricingSectionFB from "../components/PricingSectionFB";
@@ -45,7 +44,6 @@ const FBPage = () => {
       <FeaturesSection />
       <BlazingSection />
       <DemoSection />
-      <DemoSectionNewTemp />
       <DarkModeSection />
       <PricingSectionFB />
       <FAQSection />
