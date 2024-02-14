@@ -18,7 +18,7 @@ const HeroSection = () => {
           💤 Silence the ADHD Study Chaos <br /> with Neuro Notion 🧠
         </h1>
         <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-          Neuro Notion is an all-in-one Notion system for students with ADHD. <br /> It's like having a second brain, so you can focus on what matters.
+          Neuro Notion is an all-in-one Notion system for students which blocks out the ADHD, letting you enter flow state, on demand. 
         </p>
 
         <div className="mt-4 flex justify-center space-x-4">
