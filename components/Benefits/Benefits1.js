@@ -36,13 +36,13 @@ const Benefits1 = () => {
               <div className="flex items-center">
                 <UpArrowIcon color="#15803d" />
                 <div className="text-4xl tracking-tight font-bold ml-4">
-                  Hyper-focus
+                  More Flow state
                 </div>
               </div>
               <div className="flex items-center mt-4">
                 <DownArrowIcon color="#b91c1c" />
                 <div className="text-4xl tracking-tight font-bold ml-4">
-                  Distractions
+                  Less Distractions
                 </div>
               </div>
             </div>
