@@ -30,7 +30,7 @@ const IndexPage = () => {
   </Head>;
 
   useEffect(() => {
-    setupLoad();
+    // setupLoad();
     setupScroll();
     setupBeforeUnload();
     track("Visited");

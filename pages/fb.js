@@ -28,8 +28,22 @@ const FBPage = () => {
       content="Discover how Neuro Notion, built by ADHDers for ADHDers, addresses study struggles with features like hyper-focus tools, time-saving flashcards, custom ADHD focus timers, and AI-generated essay plans. Overcome distractions and work smarter with Neuro Notion."
     />
   </Head>;
-
   useEffect(() => {
+    const startTime = Date.now();
+
+    const handleUnload = () => {
+      const endTime = Date.now();
+      const timeSpent = endTime - startTime;
+
+      // Send timeSpent to analytics service
+      console.log("Time spent on page:", timeSpent);
+    };
+
+    window.addEventListener("beforeunload", handleUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleUnload);
+    };
     setupLoad();
     setupScroll();
     setupBeforeUnload();
