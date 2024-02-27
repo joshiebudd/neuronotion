@@ -26,7 +26,7 @@ const CommunitySection = () => {
         <div className="max-w-screen-md mb-2 lg:mb-16 mx-auto text-center">
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-black">
             Join our growing community.
-            <br /> Find your Body-Double Buddy 🤝
+            <br /> Find your Body Double Buddy 🤝
           </h2>
           <p className="text-xl mt-12 mb-0 text-gray-900">
             Access our exclusive community, find fellow ADHDers, learn effective
