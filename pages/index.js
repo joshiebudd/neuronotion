@@ -15,6 +15,7 @@ import FinalCTA from "../components/FinalCTASection";
 import FooterSection from "../components/FooterSection";
 import ToTop from "../components/Common/ToTop";
 import BlazingSection from "../components/BlazingSection.js";
+import posthog from "posthog-js";
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
 if (typeof window !== "undefined") {
