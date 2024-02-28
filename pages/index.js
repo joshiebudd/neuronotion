@@ -19,6 +19,11 @@ import posthog from "posthog-js";
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
 if (typeof window !== "undefined") {
+  console.log(
+    process.env.NEXT_PUBLIC_POSTHOG_KEY,
+    process.env.NEXT_PUBLIC_POSTHOG_HOST,
+    process.env.NEXT_PUBLIC_POSTHOG_ID
+  );
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
     api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://app.posthog.com",
     // Enable debug mode in development
