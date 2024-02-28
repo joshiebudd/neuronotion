@@ -13,7 +13,7 @@ if (typeof window !== "undefined") {
       "phc_3lTf840WFEVTY07GoU20Happ4w4r4YZLpeZuzwVWd7o",
     {
       api_host:
-        process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://app.posthog.com",
+        process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.posthog.com",
       loaded: (posthog) => {
         if (process.env.NODE_ENV === "development") posthog.debug();
       },
