@@ -9,13 +9,12 @@ const Benefits1 = () => {
       <div className="py-8 pb-8 sm:pb-24 px-8 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
           <h2 className="text-4xl tracking-tight font-bold text-gray-900">
-            Block out the noise
+            Built by ADHDers
             <br />
-            and channel the flow state ✨
+            For ADHDers ✨
           </h2>
           <p className="mt-6 text-gray-700 text-xl text-gray-900">
-            Neuro Notion is built by ADHDers for ADHDers... We know your
-            struggles, and we&apos;re here to solve them.
+            We know your struggles, and we&apos;re here to solve them.
           </p>
         </div>
         <div className="gap-x-4 lg:gap-y-2 flex items-center justify-center mt-16 flex-wrap md:flex-nowrap">
