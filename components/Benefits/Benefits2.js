@@ -22,7 +22,7 @@ const Benefits2 = () => {
             <div className="mb-8 w-full flex items-end flex-col">
               <div className="flex items-center w-full">
                 <div className="text-4xl tracking-tight font-bold ml-2">
-                  Finally, no more <br /> forgotten deadlines 😅
+                  No more <br /> forgotten deadlines 😅
                 </div>
               </div>
               <div className="text-xl text-right w-full md:w-fit mt-4 sm:mr-12">
