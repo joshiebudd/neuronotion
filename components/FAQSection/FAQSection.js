@@ -110,7 +110,7 @@ const FAQSection = () => {
             >
               If there is something you are still confused about that I
               haven&apos;t answered above; please send an email to
-              josh@neuronotion.com and I&apos;ll be happy to answer any queries.
+              josh@neuro-notion.com and I&apos;ll be happy to answer any queries.
             </p>
           </FAQItem>
         </div>
