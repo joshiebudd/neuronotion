@@ -91,8 +91,8 @@ const FooterSection = () => {
           </li>
         </ul>
         <span className="text-sm text-white sm:text-center dark:text-gray-400">
-          Neuro Notion © 2023<a href="#hero" className="hover:underline"></a>.
-          All Rights Reserved.
+          Neuro Notion © 2024<a href="#hero" className="hover:underline"></a>.
+          All Rights Reserved. Contact: Josh@neuro-notion.com
         </span>
       </div>
     </footer>
