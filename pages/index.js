@@ -8,6 +8,7 @@ import FeaturesSection from "../components/FeaturesSection";
 import DemoSection from "../components/DemoSection";
 import DarkModeSection from "../components/DarkmodeSection";
 import CommunitySection from "../components/CommunitySection";
+import ReviewSection from "../components/ReviewSection";
 import PricingSection from "../components/PricingSection";
 import AboutSection from "../components/AboutSection";
 import FAQSection from "../components/FAQSection/FAQSection";
@@ -64,6 +65,7 @@ const IndexPage = () => {
       <BlazingSection />
       <DemoSection />
       <DarkModeSection />
+      <ReviewSection />
       <PricingSection />
       <FAQSection />
       <CommunitySection />
