@@ -10,6 +10,7 @@ import DarkModeSection from "../components/DarkmodeSection";
 import CommunitySection from "../components/CommunitySection";
 import PricingSectionFB from "../components/PricingSectionFB";
 import AboutSection from "../components/AboutSection";
+import ReviewSection from "../components/ReviewSection";
 import FAQSection from "../components/FAQSection/FAQSection";
 import FinalCTA from "../components/FinalCTASection";
 import FooterSection from "../components/FooterSection";
@@ -60,6 +61,7 @@ const FBPage = () => {
       <DemoSection />
       <DarkModeSection />
       <PricingSectionFB />
+      <ReviewSection />
       <FAQSection />
       <CommunitySection />
       <AboutSection />
