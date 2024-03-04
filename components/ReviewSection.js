@@ -12,13 +12,12 @@ const ReviewSection = () => {
       <div className="gap-3.5 max-w-screen-sm	overflow-hidden p-10">
         <div>
           <h2 className=" text-4xl tracking-tight font-bold  leading-10	text-center">
-            What customers are saying about us.
+            What Our Community Thinks About Us
           </h2>
         </div>
         <div className="pt-3">
           <p className="text-center text-xl text-center leading-6 text-gray-700">
-            Over 5,000 users have transformed their digital productivity and
-            organization with Neuro Notion.
+            Over 1,000 users have transformed their study system with Neuro Notion.
           </p>
         </div>
       </div>
