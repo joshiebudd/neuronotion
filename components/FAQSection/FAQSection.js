@@ -72,10 +72,9 @@ const FAQSection = () => {
               id="para2"
               className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
             >
-              We think absolutely! In fact we think it&apos;s worth more and so
-              do many others! This template saves you countless hours of
-              creating your own system and has tons of extra valuable tools and
-              custom features built-in too!
+              This template will save you countless hours of
+              creating your own system. That alone makes it worth more than $20! And it 
+              has tons of extra valuable tools and custom features built-in too!
             </p>
           </FAQItem>
 

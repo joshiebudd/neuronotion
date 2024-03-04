@@ -4,6 +4,17 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  --clr-background: #ffffff;
+  --clr-primary: #6701e6;
+  --clr-text: #374151;
+  --clr-highlight: #ffcd3640;
+  --padding: 16px;
+  --clr-text-lt: hsla(217, 19%, 37%, 1);
+  --clr-rating: #fbbf24;
+  --border-width: 1px;
+  --clr-border: hsla(0, 0%, 90%, 1);
+  --border-radius: 0.5rem;
+  --box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.07);
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -23,4 +34,25 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "manrope";
+  src: url("../fonts/Manrope.woff2") format("woff2");
+}
+@font-face {
+  font-family: "inter";
+  src: url("../fonts/Inter.ttf") format("truetype");
+}
+
+.card-list {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card-list-column {
+  width: 100% !important;
+  margin-bottom: 16px;
 }

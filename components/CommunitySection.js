@@ -41,7 +41,7 @@ const CommunitySection = () => {
             alt="Join Our Community Mockup"
             width={600}
             height={400}
-            redraw={true}
+            redraw
             className="mx-auto"
           />
         </div>
@@ -58,7 +58,7 @@ const CommunitySection = () => {
                   end={1354}
                   duration={2}
                   separator=","
-                  redraw={true}
+                  redraw
                 ></CountUp>
               </dt>
               <dd className="mb-4 font-light text-black">Study buddies</dd>
@@ -70,7 +70,7 @@ const CommunitySection = () => {
                   end={27245}
                   duration={2}
                   separator=","
-                  redraw={true}
+                  redraw
                 ></CountUp>
               </dt>
               <dd className="mb-4 font-light text-black">Notes created</dd>
@@ -82,7 +82,7 @@ const CommunitySection = () => {
                   end={51}
                   duration={2}
                   separator=","
-                  redraw={true}
+                  redraw
                 ></CountUp>
               </dt>
               <dd className="mb-4 font-light text-black">Countries </dd>
