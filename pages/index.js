@@ -64,8 +64,8 @@ const IndexPage = () => {
       <FeaturesSection />
       <BlazingSection />
       <DemoSection />
-      <DarkModeSection />
       <ReviewSection />
+      <DarkModeSection />
       <PricingSection />
       <FAQSection />
       <CommunitySection />
