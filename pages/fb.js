@@ -4,8 +4,6 @@ import Head from "next/head";
 import HeaderSection from "../components/HeaderSection";
 import HeroSection from "../components/HeroSection";
 import BenefitsSection from "../components/Benefits";
-import FeaturesSection from "../components/FeaturesSection";
-import FeaturesSection from "../components/FeaturesSection";
 import DarkModeSection from "../components/DarkmodeSection";
 import StickyBanner from "../components/StickyBanner";
 import CommunitySection from "../components/CommunitySection";
@@ -58,7 +56,6 @@ const FBPage = () => {
       <HeaderSection />
       <HeroSection />
       <BenefitsSection />
-      <FeaturesSection />
       <BlazingSection />
       <ReviewSection />
       <DarkModeSection />
