@@ -5,8 +5,9 @@ import HeaderSection from "../components/HeaderSection";
 import HeroSection from "../components/HeroSection";
 import BenefitsSection from "../components/Benefits";
 import FeaturesSection from "../components/FeaturesSection";
-import DemoSection from "../components/DemoSection";
+import FeaturesSection from "../components/FeaturesSection";
 import DarkModeSection from "../components/DarkmodeSection";
+import StickyBanner from "../components/StickyBanner";
 import CommunitySection from "../components/CommunitySection";
 import PricingSectionFB from "../components/PricingSectionFB";
 import AboutSection from "../components/AboutSection";
@@ -21,6 +22,7 @@ import {
   setupLoad,
   setupScroll,
 } from "../components/tracking";
+import { Stick } from "next/font/google";
 
 const FBPage = () => {
   <Head>
@@ -66,6 +68,7 @@ const FBPage = () => {
       <AboutSection />
       <FinalCTA />
       <FooterSection />
+      <StickyBanner />
       <ToTop />
     </>
   );
