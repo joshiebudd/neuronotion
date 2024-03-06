@@ -13,7 +13,7 @@ const StickyBanner = () => {
             <span className="sr-only">Discount</span>
           </span>
           <span className="text-white">
-            Anniversary Sale! <br /> Use <span className="font-bold underline">"OFF50"</span> at <br /> checkout for <span className="font-bold underline">50% off</span>.
+            Anniversary Sale! <br /> Use <span className="font-bold underline">&apos;OFF50&apos;</span> at <br /> checkout for <span className="font-bold underline">50% off</span>.
           </span>
         </p>
       </div>
