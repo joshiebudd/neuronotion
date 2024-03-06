@@ -3,9 +3,9 @@ import React from 'react';
 
 const StickyBanner = () => {
     return (
-        <div id="bottom-banner" tabIndex="-1" className="fixed bottom-0 left-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+        <div id="bottom-banner" tabIndex="-1" className="fixed bottom-0 left-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-black dark:bg-gray-700 dark:border-gray-600">
             <div className="flex items-center mx-auto">
-                <p className="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                <p className="flex items-center text-sm font-normal text-white dark:text-gray-400">
                     <span className="inline-flex p-1 mr-3 bg-gray-200 rounded-full dark:bg-gray-600 w-6 h-6 items-center justify-center">
                         {/* SVG icon */}
                         <svg className="w-3.5 h-3.5 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -13,17 +13,13 @@ const StickyBanner = () => {
                         </svg>
                         <span className="sr-only">Discount</span>
                     </span>
-                    1 Year Anniversary Sale! <br /> 50% off all plans with code OFF50 at checkout. <a href="#pricing" className="flex items-center text-sm font-medium text-blue-600 hover:underline"> Valid Today Only!
-                        <svg className="w-3 h-3 ml-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                        </svg>
-                    </a>
+                    <span className="text-red-500">1 Year Anniversary Sale! <br /> 50% off all plans with code &apos;OFF50&apos; at checkout. <a href="#pricing" className="text-red-500 font-medium hover:underline"> Valid Today Only!</a></span>
                 </p>
             </div>
             <div className="flex items-center">
                 <button type="button" className="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
                     {/* SVG icon */}
-                    <svg className="w-3 h-3" aria-hidden="true" fill="none" viewBox="0 0 14 14">
+                    <svg className="w-3 h-3 text-white" aria-hidden="true" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                     </svg>
                     <span className="sr-only">Close banner</span>
