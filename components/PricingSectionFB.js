@@ -180,7 +180,7 @@ const PricingSectionFB = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/fZedT19vF9F85Dq4go"
+              href="https://buy.stripe.com/3cs8yHcHR8B44zmaEN"
               id="GetPremiumButton"
               className="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logPremiumPackageEvent}
