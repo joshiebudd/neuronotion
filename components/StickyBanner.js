@@ -3,9 +3,9 @@ import React from 'react';
 
 const StickyBanner = () => {
     return (
-        <div id="bottom-banner" tabIndex="-1" className="fixed bottom-0 left-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+        <div id="bottom-banner" tabIndex="-1" className="fixed bottom-0 left-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-black">
             <div className="flex items-center mx-auto">
-                <p className="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+                <p className="flex items-center text-sm font-normal text-white">
                     <span className="inline-flex p-1 mr-3 bg-gray-200 rounded-full dark:bg-gray-600 w-6 h-6 items-center justify-center">
                         {/* SVG icon */}
                         <svg className="w-3.5 h-3.5 text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -13,7 +13,7 @@ const StickyBanner = () => {
                         </svg>
                         <span className="sr-only">Discount</span>
                     </span>
-                    <span className="text-white"> 1 Year Anniversary Sale! <br /> 50% off all plans with code OFF50 at checkout. </span> <a href="#pricing" className="flex items-center text-sm font-medium text-red hover:underline"> Valid Today Only!
+                    <span className="text-white"> Anniversary Sale! <br /> Use &quot;OFF50&quote; at checkout for 50% off. </span> <a href="#pricing" className="flex items-center text-sm font-medium text-red hover:underline"> Valid Today Only!
                         <svg className="w-3 h-3 ml-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                         </svg>
