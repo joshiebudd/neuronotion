@@ -13,12 +13,12 @@ const StickyBanner = () => {
             <span className="sr-only">Discount</span>
           </span>
           <span className="text-white">
-            Anniversary Sale! <br /> Use <span className="font-bold underline">&apos;OFF50&apos;</span> at <br /> checkout for <span className="font-bold underline">50% off</span>.
+            Anniversary Sale! <br /> Use <span className="font-bold underline">&quot;OFF50&quot;</span> at <br /> checkout for <span className="font-bold underline">50% off</span>.
           </span>
         </p>
       </div>
       <div className="flex items-center">
-        <span className="flex items-center text-sm font-medium text-red hover:underline mr-4">
+        <span className="flex items-center text-sm font-medium text-white hover:underline mr-4">
           Valid Today Only!
         </span>
         <button type="button" className="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
