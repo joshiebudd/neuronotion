@@ -13,7 +13,7 @@ const StickyBanner = () => {
                         </svg>
                         <span className="sr-only">Discount</span>
                     </span>
-                    Get 5% commission per sale <a href="https://flowbite.com" className="flex items-center text-sm font-medium text-blue-600 hover:underline">Become a partner
+                    1 Year Anniversary Sale! <br /> 50% off all plans with code OFF50 at checkout. <a href="#pricing" className="flex items-center text-sm font-medium text-blue-600 hover:underline"> Valid Today Only!
                         <svg className="w-3 h-3 ml-2" aria-hidden="true" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                         </svg>
