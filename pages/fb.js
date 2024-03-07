@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection";
 import BenefitsSection from "../components/Benefits";
 import FeaturesSection from "../components/FeaturesSection";
 import DarkModeSection from "../components/DarkmodeSection";
-import StickyBanner from "../components/StickyBanner";
+import DemoSection from "../components/DemoSection";
 import CommunitySection from "../components/CommunitySection";
 import PricingSectionFB from "../components/PricingSectionFB";
 import AboutSection from "../components/AboutSection";
@@ -57,18 +57,17 @@ const FBPage = () => {
       <HeaderSection />
       <HeroSection />
       <BenefitsSection />
+      <FeaturesSection />
       <BlazingSection />
+      <DemoSection />
       <ReviewSection />
       <DarkModeSection />
-      <PricingSectionFB />
+      <PricingSection />
       <FAQSection />
-      <FeaturesSection />
       <CommunitySection />
       <AboutSection />
       <FinalCTA />
       <FooterSection />
-      <StickyBanner />
-      <ToTop />
     </>
   );
 };

@@ -143,7 +143,13 @@ const HeaderSection = () => {
               >
                 Features
               </a>
-
+              <a
+                href="#demo"
+                className="px-2 py-1 text-md sm:text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                onClick={() => track("CTA_Demo")}
+              >
+                Demo
+              </a>
               <a
                 href="#pricing"
                 className="px-2 py-1 text-md sm:text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
