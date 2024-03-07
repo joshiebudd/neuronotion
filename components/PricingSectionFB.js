@@ -42,7 +42,7 @@ const PricingSectionFB = () => {
           <div className="flex flex-col p-6 pb-12 pt-16 w-80 md:w-72 text-center text-gray-700 bg-gray-100 rounded-2xl border border-gray-200 shadow-xl items-center">
             <h3 className="mb-1 text-2xl font-semibold">Basic</h3>
             <div className="flex justify-center items-baseline my-2">
-              <span className="mr-2 text-5xl font-bold">$9.99</span>
+              <span className="mr-2 text-5xl font-bold">$4.99</span>
             </div>
             <p className="mt-6 mb-3 italic text-gray-800 sm:text-lg">
               One-time payment.
@@ -77,7 +77,7 @@ const PricingSectionFB = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/14k9CLbDN8B42re9AF"
+              href="https://buy.stripe.com/7sIg19azJ5oS0j67sE"
               id="GetBasicButton"
               className="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logBasicPackageEvent}
@@ -95,7 +95,7 @@ const PricingSectionFB = () => {
             </h3>
             <div className="flex justify-center items-baseline my-2">
               <span className="mr-2 text-5xl font-bold text-gray-200">
-                $19.99
+                $9.99
               </span>
             </div>
             <p className="mt-6 mb-3 italic text-gray-200 sm:text-lg">
@@ -135,7 +135,7 @@ const PricingSectionFB = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/cN2g19dLV04yfe0cMT"
+              href="https://buy.stripe.com/bIY8yHfU35oSfe08wK"
               id="GetStandardButton"
               className="StripeStandardPlan text-gray-900 bg-gray-100 hover:bg-gray-300 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logStandardPackageEvent}
@@ -147,7 +147,7 @@ const PricingSectionFB = () => {
           <div className="flex flex-col p-6 pb-12 pt-16 w-80 md:w-72 text-center text-gray-700 bg-gray-100 rounded-2xl border border-gray-200 shadow-xl items-center">
             <h3 className="mb-1 text-2xl font-semibold">Premium</h3>
             <div className="flex justify-center items-baseline my-2">
-              <span className="mr-2 text-5xl font-bold">$44.99</span>
+              <span className="mr-2 text-5xl font-bold">$19.99</span>
             </div>
             <p className="mt-6 mb-3 italic text-gray-800 sm:text-lg">
               One-time payment.
@@ -180,7 +180,7 @@ const PricingSectionFB = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/3cs8yHcHR8B44zmaEN"
+              href="https://buy.stripe.com/7sI9CLfU36sWgi43cs"
               id="GetPremiumButton"
               className="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logPremiumPackageEvent}
