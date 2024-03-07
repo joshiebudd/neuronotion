@@ -38,7 +38,7 @@ const DemoSection = () => {
           How does it work? 🤫
         </h1>
         <p className="mb-8 text-xl font-normal text-white sm:px-16 md:px-48">
-          All your questions answered in under two minutes.
+          Press "Play" to answer all your questions answered in under two minutes.
         </p>
 
         <div className="inline-block p-0 rounded-lg overflow-hidden">
