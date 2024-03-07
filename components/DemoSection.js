@@ -41,15 +41,18 @@ const DemoSection = () => {
         </p>
 
         <div className="inline-block p-0 border-8 border-gray-300 border-opacity-20 rounded-lg overflow-hidden">
-          <Image
-            onClick={() => showImageViewer(true)}
-            width={1000}
-            height={1200}
-            className="centered-image"
-            src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
-            alt="video of Neuro Notion product demonstration"
-          />
-        </div>
+  <video
+    className="w-full"
+    controls
+    onClick={() => showImageViewer(true)}
+  >
+    <source
+      src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</div>
 
         <div className="mt-4">
           <a
