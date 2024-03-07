@@ -26,7 +26,7 @@ const DemoSection = () => {
   };
 
   return (
-    <section id="demo" className="bg-gray-100 demo-section pt-12">
+    <section id="demo" className="bg-gray-800 demo-section pt-12">
       {zoomed && (
         <ImageViewer
           src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
@@ -42,7 +42,7 @@ const DemoSection = () => {
 
         <div className="inline-block p-0 border-8 border-gray-300 border-opacity-20 rounded-lg overflow-hidden">
   <video
-    className="w-full"
+    className="w-7/10 rounded-lg"
     controls
     onClick={() => showImageViewer(true)}
   >
