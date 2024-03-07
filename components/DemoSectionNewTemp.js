@@ -1,82 +1,54 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import ImageViewer from "./Common/ImageViewer";
 
-const DemoSectionNewTemp = () => {
-  // Carousel state and functions
-  const [activeIndex, setActiveIndex] = useState(2); // Start with the third item active
-  const carouselItems = [
-    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/carousel_tutorials.png",
-    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit2.webp",
-    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit3.webp",
-    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/carousel_tutorials.png",
-    "https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit2.webp",
-  ];
-
-  const goToPrevious = () => {
-    setActiveIndex((prevIndex) => (prevIndex === 0 ? carouselItems.length - 1 : prevIndex - 1));
-  };
-
-  const goToNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1));
-  };
+const DemoSection = () => {
+  const [zoomed, setZoomed] = useState(false);
 
   const handleButtonClick = (e) => {
-    logDemoBuyNowEvent(); // Placeholder for your click handler
+    logDemoBuyNowEvent(); // Log the DemoBuyNowClick event
   };
 
   const logDemoBuyNowEvent = () => {
-    console.log("DemoBuyNowClick event logged"); // Placeholder for your event logging
-    // Implement the actual logging logic here
+    // Log event to Facebook Pixel for Demo Buy Now click
+    fbq("trackCustom", "DemoBuyNowClick");
+  };
+
+  //Show popup for zooming image
+  const showImageViewer = (state) => {
+    // setZoomed(state);
+    // if (state) document.body.classList.add("overflow-hidden");
+    // else document.body.classList.remove("overflow-hidden");
+  };
+
+  const handleImageViewerClose = () => {
+    showImageViewer(false);
   };
 
   return (
-    <section id="demo" className="bg-gray-100 pt-12">
+    <section id="demo" className="bg-gray-100 demo-section pt-12">
+      {zoomed && (
+        <ImageViewer
+          src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp"
+          onClose={handleImageViewerClose}
+        />
+      )}
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-black">
-          Take a sneak peak at what&apos;s included... 🤫
-        </h1>
+        Take a sneak peak at what&apos;s included... 🤫        </h1>
         <p className="mb-4 text-xl font-normal text-black sm:px-16 md:px-48 mt-8">
-          No more juggling 8 different tools, it&apos;s time to ease into a streamlined study experience.
+          No more juggling 8 different tools, its time to ease into a streamlined study experience.
         </p>
 
-        {/* Carousel */}
-        <div id="animation-carousel" className="relative w-full my-8">
-          <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-            {carouselItems.map((item, index) => (
-              <div key={index} className={`duration-200 ease-linear ${activeIndex === index ? 'block' : 'hidden'}`}>
-                <Image 
-                src={item} 
-                alt="More Hyper-focus, Less Distractions" 
-                width={320} 
-                height={320} 
-                className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" />
-              </div>
-            ))}
-          </div>
-          <button
-            type="button"
-            className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            onClick={goToPrevious}
-          >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-              <svg className="w-6 h-6 text-black" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                <path d="M15 19l-7-7 7-7"></path>
-              </svg>
-              <span className="sr-only">Previous</span>
-            </span>
-          </button>
-          <button
-            type="button"
-            className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            onClick={goToNext}
-          >
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-              <svg className="w-6 h-6 text-black" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                <path d="M9 5l7 7-7 7"></path>
-              </svg>
-              <span className="sr-only">Next</span>
-            </span>
-          </button>
+        <div className="inline-block p-0 border-8 border-gray-300 border-opacity-20 rounded-lg overflow-hidden">
+          <Image
+            onClick={() => showImageViewer(true)}
+            width={1000}
+            height={1200}
+            className="centered-image"
+            src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
+            alt="video of Neuro Notion product demonstration"
+          />
         </div>
 
         <div className="mt-4">
@@ -139,4 +111,4 @@ const DemoSectionNewTemp = () => {
   );
 };
 
-export default DemoSectionNewTemp;
+export default DemoSection;
