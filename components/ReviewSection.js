@@ -5,7 +5,7 @@ const ReviewSection = () => {
   return (
     <section
       id="review"
-      className="content-center items-center bg-gray-100 flex flex-none
+      className="content-center items-center bg-white flex flex-none
        flex-col flex-nowrap gap-5 h-min justify-start overflow-visible position-relative
         w-full"
     >
