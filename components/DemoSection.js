@@ -46,8 +46,8 @@ const DemoSection = () => {
             width={1000}
             height={1200}
             className="centered-image"
-            src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp"
-            alt="Annotated Version of Module Page"
+            src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
+            alt="video of Neuro Notion product demonstration"
           />
         </div>
 
