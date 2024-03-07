@@ -34,13 +34,13 @@ const DemoSection = () => {
         />
       )}
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-        <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-black">
+        <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-white">
         Take a sneak peak at what&apos;s included... 🤫        </h1>
-        <p className="mb-4 text-xl font-normal text-black sm:px-16 md:px-48 mt-8">
+        <p className="mb-4 text-xl font-normal text-white sm:px-16 md:px-48 mt-8">
           No more juggling 8 different tools, its time to ease into a streamlined study experience.
         </p>
 
-        <div className="inline-block p-0 border-8 border-gray-300 border-opacity-20 rounded-lg overflow-hidden">
+        <div className="inline-block p-0 rounded-lg overflow-hidden">
   <video
     className="w-7/10 rounded-lg"
     controls
@@ -85,7 +85,7 @@ const DemoSection = () => {
 
         {/* Testimonial and Author Info */}
         <div className="text-center mx-auto mt-4 px-4">
-          <span className="mt-0 text-sm text-gray-800">
+          <span className="mt-0 text-sm text-gray-100">
             &quot;Neuro Notion has been an absolute game changer for studying
             with ADHD. Finally, I have a place for my Notes, Flashcards, Essay
             plans, and everything else in a single spot so I no longer get
@@ -103,8 +103,8 @@ const DemoSection = () => {
               />
               Josh Budd
             </div>
-            <h2 className="text-lg text-black font-semibold"></h2>
-            <p className="text-gray-500">
+            <h2 className="text-lg text-white font-semibold"></h2>
+            <p className="text-gray-300">
               Final Year Student @ Loughborough University
             </p>
           </div>
