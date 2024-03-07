@@ -66,14 +66,14 @@ const FAQSection = () => {
           {/* FAQ Item 2 */}
           <FAQItem>
             <h3 className="font-semibold text-xl leading-5 text-gray-800">
-              Is this worth $20?
+              Is this worth $10?
             </h3>
             <p
               id="para2"
               className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
             >
-              This template will save you countless hours of
-              creating your own system. That alone makes it worth more than $20! And it 
+              It's worth WAY more than $10! This will save you countless hours of
+              creating your own system. That alone makes it worth more than $10! And it 
               has tons of extra valuable tools and custom features built-in too!
             </p>
           </FAQItem>
