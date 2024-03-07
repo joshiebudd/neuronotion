@@ -62,7 +62,7 @@ const FBPage = () => {
       <DemoSection />
       <ReviewSection />
       <DarkModeSection />
-      <PricingSection />
+      <PricingSectionFB />
       <FAQSection />
       <CommunitySection />
       <AboutSection />
