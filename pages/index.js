@@ -14,7 +14,6 @@ import AboutSection from "../components/AboutSection";
 import FAQSection from "../components/FAQSection/FAQSection";
 import FinalCTA from "../components/FinalCTASection";
 import FooterSection from "../components/FooterSection";
-import ToTop from "../components/Common/ToTop";
 import BlazingSection from "../components/BlazingSection.js";
 import posthog from "posthog-js";
 
@@ -72,7 +71,6 @@ const IndexPage = () => {
       <AboutSection />
       <FinalCTA />
       <FooterSection />
-      <ToTop />
     </>
   );
 };
