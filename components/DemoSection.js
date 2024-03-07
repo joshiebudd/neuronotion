@@ -35,24 +35,25 @@ const DemoSection = () => {
       )}
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-white">
-        Take a sneak peak at what&apos;s included... 🤫        </h1>
-        <p className="mb-4 text-xl font-normal text-white sm:px-16 md:px-48 mt-8">
-          No more juggling 8 different tools, its time to ease into a streamlined study experience.
+          How does it work? 🤫
+        </h1>
+        <p className="mb-8 text-xl font-normal text-white sm:px-16 md:px-48">
+          All your questions answered in under two minutes.
         </p>
 
         <div className="inline-block p-0 rounded-lg overflow-hidden">
-  <video
-    className="w-7/10 rounded-lg"
-    controls
-    onClick={() => showImageViewer(true)}
-  >
-    <source
-      src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
-      type="video/mp4"
-    />
-    Your browser does not support the video tag.
-  </video>
-</div>
+          <video
+            className="w-7/10 rounded-lg"
+            controls
+            onClick={() => showImageViewer(true)}
+          >
+            <source
+              src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
 
         <div className="mt-4">
           <a
@@ -101,7 +102,7 @@ const DemoSection = () => {
                 width={96}
                 height={96}
               />
-              Josh Budd
+              <span className="text-white">Josh Budd</span>
             </div>
             <h2 className="text-lg text-white font-semibold"></h2>
             <p className="text-gray-300">
