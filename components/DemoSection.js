@@ -29,7 +29,7 @@ const DemoSection = () => {
     <section id="demo" className="bg-gray-100 demo-section pt-12">
       {zoomed && (
         <ImageViewer
-          src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/bigdemoannotated.webp"
+          src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
           onClose={handleImageViewerClose}
         />
       )}
