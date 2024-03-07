@@ -32,16 +32,19 @@ const HeroSection = () => {
           </a>
         </div>
 
-        {/* Stars */}
-        <div className="mb-2 flex justify-center">
-          <span className="mt-3 mb-0 text-3xl leading-none text-orange-600">
-            ★★★★★
-          </span>
-        </div>
-        <span className="mt-0 mb-0 text-sm text-gray-800">
-          4.84/5 from 1,300+ Students with ADHD.
-        </span>
-      </div>
+{/* Stars */}
+<div className="mb-2 flex justify-center">
+  <span className="mt-3 mb-0 text-3xl leading-none text-orange-600">
+    ★★★★★
+  </span>
+</div>
+<span className="mt-0 mb-0 text-sm text-gray-800">
+  <a href="#review" className="underline">
+    4.86/5
+  </a>{" "}
+  from 1,300+ Students with ADHD.
+</span>
+</div>
 
       <div className="mx-auto max-w-screen-xl px-4 py-4 text-center lg:px-12 lg:py-4">
         {/* Next.js Image component for optimized image loading */}

@@ -36,15 +36,18 @@ const FinalCTA = () => {
           </a>
         </div>
 
-        {/* Star Rating */}
-        <div className="mb-2 flex justify-center">
-          <span className="mt-4 mb-0 text-3xl leading-none text-orange-600">
-            ★★★★★
-          </span>
-        </div>
-        <span className="mt-0 mb-0 text-md text-gray-800">
-          4.89/5 from 500+ ADHDers.
-        </span>
+{/* Star Rating */}
+<div className="mb-2 flex justify-center">
+  <span className="mt-4 mb-0 text-3xl leading-none text-orange-600">
+    ★★★★★
+  </span>
+</div>
+<span className="mt-0 mb-0 text-md text-gray-800">
+  <a href="#review" className="underline">
+    4.86/5
+  </a>{" "}
+  from 500+ ADHDers.
+</span>
       </div>
     </section>
   );
