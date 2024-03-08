@@ -88,26 +88,24 @@ const DemoSection = () => {
         {/* Testimonial and Author Info */}
         <div className="text-center mx-auto mt-4 px-4">
           <span className="mt-0 text-sm text-gray-100">
-            &quot;Neuro Notion has been an absolute game changer for studying
-            with ADHD. Finally, I have a place for my Notes, Flashcards, Essay
-            plans, and everything else in a single spot so I no longer get
-            distracted when jumping between tabs. Love it!&quot;
+            &quot;Before I found Neuro Notion, every study session was this awful long battle with distractions and procrastination.
+            Now, I feel like I&apos;ve got my own space that really helps to keep me in the zone.&quot;
           </span>
 
           <div className="mt-4">
             <div className="flex justify-center flex-col items-center">
               <Image
                 className="w-16 h-16 rounded-full"
-                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/hs_circle2.webp"
+                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/lila.webp"
                 alt="Avatar"
                 width={96}
                 height={96}
               />
-              <span className="text-white">Josh Budd</span>
+              <span className="text-white">Lola Clarkes</span>
             </div>
             <h2 className="text-lg text-white font-semibold"></h2>
             <p className="text-gray-300">
-              Final Year Student @ Loughborough University
+              Second Year Psychology Student @ Manchester University
             </p>
           </div>
         </div>

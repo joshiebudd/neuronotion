@@ -9,12 +9,12 @@ import FolderIcon from "./Common/Icons/FolderIcon";
 
 const FeaturesSection = () => {
   const handleButtonClick = (e) => {
-    logBuyNowEvent(); // Log the BuyNowClick event
+    logFeaturesBuyNowEvent(); // Log the FeaturesBuyNowClick event
   };
 
-  const logBuyNowEvent = () => {
-    // Log event to Facebook Pixel for Buy Now click
-    fbq("trackCustom", "BuyNowClick");
+  const logFeaturesBuyNowEvent = () => {
+    // Log event to Facebook Pixel for Features Buy Now click
+    fbq("trackCustom", "FeaturesBuyNowClick");
   };
 
   return (
@@ -124,7 +124,7 @@ const FeaturesSection = () => {
       </div>
 
       {/* Buy Now Button */}
-      <div className="mt-4 flex justify-center">
+      <div className="mt-2 flex justify-center mb-8">
         <a
           href="#pricing"
           onClick={handleButtonClick}
