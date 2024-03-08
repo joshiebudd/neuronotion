@@ -114,7 +114,7 @@ const HeaderSection = () => {
         <nav className="px-8 py-5 lg:px-6">
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
             <a
-              href="#hero"
+              href="https://www.neuro-notion.com/#hero"
               className="flex items-center grow  transition duration-300"
               ref={titleRef}
             >
@@ -124,7 +124,6 @@ const HeaderSection = () => {
                 loading="eager"
                 className="w-10 h-auto mr-3"
                 src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
-                href = "https://www.neuro-notion.com"
                 alt="Neuro Notion Logo"
               />
               <div className="w-full grow text-center sm:text-left">

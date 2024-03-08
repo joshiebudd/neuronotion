@@ -49,7 +49,7 @@ const DemoSection = () => {
             poster="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/thumbnailfordemo.png"
           >
             <source
-              src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
+              src="https://NeuroNotionPullZonw.b-cdn.net/ProductDemoFinal.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
