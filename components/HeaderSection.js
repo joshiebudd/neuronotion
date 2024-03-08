@@ -124,7 +124,8 @@ const HeaderSection = () => {
                 loading="eager"
                 className="w-10 h-auto mr-3"
                 src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
-                alt="NeuroNotes Logo"
+                href = "https://www.neuro-notion.com"
+                alt="Neuro Notion Logo"
               />
               <div className="w-full grow text-center sm:text-left">
                 <span className="self-center whitespace-nowrap text-xl sm:text-2xl lg:text-2xl font-semibold text-black">
