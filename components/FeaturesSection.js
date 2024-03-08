@@ -8,6 +8,15 @@ import BrushIcon from "./Common/Icons/BrushIcon";
 import FolderIcon from "./Common/Icons/FolderIcon";
 
 const FeaturesSection = () => {
+  const handleButtonClick = (e) => {
+    logBuyNowEvent(); // Log the BuyNowClick event
+  };
+
+  const logBuyNowEvent = () => {
+    // Log event to Facebook Pixel for Buy Now click
+    fbq("trackCustom", "BuyNowClick");
+  };
+
   return (
     <section
       id="features"
@@ -18,7 +27,7 @@ const FeaturesSection = () => {
           <div className="text-center mb-10">
             <h2 className="text-4xl leading-10 font-bold text-gray-900">
               Finally, one home 🏠
-              <br /> for everything! 
+              <br /> for everything!
             </h2>
             <p className="mt-8 max-w-md mx-auto text-base text-gray-900 pb-8 text-xl">
               The all-in-one system your brain has been crying out for. No more
@@ -112,6 +121,17 @@ const FeaturesSection = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Buy Now Button */}
+      <div className="mt-4 flex justify-center">
+        <a
+          href="#pricing"
+          onClick={handleButtonClick}
+          className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+        >
+          Buy Now
+        </a>
       </div>
     </section>
   );
