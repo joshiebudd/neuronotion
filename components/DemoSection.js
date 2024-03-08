@@ -55,13 +55,7 @@ const DemoSection = () => {
           </video>
         </div>
 
-        <div className="mt-4 flex justify-center space-x-4">
-          <a
-            href="#demo"
-            className="inline-block rounded-lg bg-gray-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-300"
-          >
-            See Demo
-          </a>
+        <div className="mt-4">
           <a
             href="#pricing"
             onClick={handleButtonClick}
