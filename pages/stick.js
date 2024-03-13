@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 import HeaderSection from "../components/HeaderSection";
+import EmailForm from "../components/EmailForm"; 
 import FooterSection from "../components/FooterSection";
 import LongFormVideo from "../components/LongFormVideo";
 
@@ -20,6 +21,7 @@ const StickPage = () => {
           </Head>
       <HeaderSection />
       <LongFormVideo />
+      <EmailForm />
       <FooterSection />
     </>
   );
