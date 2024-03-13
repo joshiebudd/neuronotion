@@ -1,32 +1,29 @@
 import React from 'react';
-import Head from 'next/head';
-import LongFormVideo from '../components/LongFormVideo';
 
-const HomePage = () => {
+const LongFormVideo = () => {
   return (
-    <div>
-      <Head>
-        <title>Neuro Notion</title>
-        <meta name="description" content="Watch a long form video to learn how to do XYZ" />
-      </Head>
-
-      <header className="bg-gray-800 text-white py-4">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-bold">Neuro Notion</h1>
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
+        <h2 className="text-2xl font-bold mb-4">Neuro Notion</h2>
+        <div className="text-gray-700 mb-6">
+          WATCH THIS LONG FORM VIDEO BELOW TO FIND OUT HOW TO DO XYZ. REPLACE
+          COPY.
         </div>
-      </header>
-
-      <main className="container mx-auto py-8">
-        <LongFormVideo />
-      </main>
-
-      <footer className="bg-gray-800 text-white py-4">
-        <div className="container mx-auto px-4">
-          <p>&copy; 2023 Neuro Notion. All rights reserved.</p>
+        <div className="flex justify-center">
+          <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+            <svg
+              className="fill-current w-6 h-6 mr-2"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 4.5l6 6-6 6-1.5-1.5L12.2 11H4v-2h8.2L8.5 5.5z" />
+            </svg>
+            <span>Watch Video</span>
+          </button>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };
 
-export default HomePage;
+export default LongFormVideo;
