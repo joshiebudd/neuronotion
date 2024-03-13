@@ -11,8 +11,13 @@ const StickPage = () => {
 
   return (
     <>
-
-
+          <Head>
+              <title>Neuro Notion</title>
+              <meta
+                  name="description"
+                  content="Watch a long form video to learn how to do XYZ"
+              />
+          </Head>
       <HeaderSection />
       <LongFormVideo />
       <FooterSection />
