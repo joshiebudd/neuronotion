@@ -1,28 +1,41 @@
 import React from 'react';
 
-const LongFormVideo = () => {
+const VideoSection = () => {
+  // Assuming the video URL and thumbnail are passed as props, or can be imported
+  const videoUrl = 'https://NeuroNotionPullZonw.b-cdn.net/ProductDemoFinal.mp4';
+  const thumbnailUrl = 'https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/thumbnailfordemo.png';
+  
+  // This function could be used to handle any interactions like analytics events
+  const handlePlayButtonClick = () => {
+    // Analytics event logic can be implemented here
+  };
+
   return (
-    <div className="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
-        <h2 className="text-2xl font-bold mb-4">Neuro Notion</h2>
-        <div className="text-gray-700 mb-6">
-          WATCH THIS LONG FORM VIDEO BELOW TO FIND OUT HOW TO DO XYZ. REPLACE COPY.
-        </div>
-        <div className="flex justify-center">
-          <div className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-            <svg
-              className="fill-current w-6 h-6 mr-2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 4.5l6 6-6 6-1.5-1.5L12.2 11H4v-2h8.2L8.5 5.5z" />
+    <div className="bg-white p-4 rounded-lg shadow-lg">
+      <div className="mb-4">
+        {/* Video thumbnail with play button */}
+        <div className="relative cursor-pointer" onClick={handlePlayButtonClick}>
+          <video
+            className="w-full rounded-lg"
+            controls
+            poster={thumbnailUrl}
+          >
+            <source src={videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center">
+            <svg className="h-12 w-12 text-gray-800" fill="currentColor" viewBox="0 0 84 84">
+              <circle opacity="0.9" cx="42" cy="42" r="42" fill="white" />
+              <path d="M55.891 42.752l-22.23 12.564V30.189z" />
             </svg>
-            <span>Watch Video</span>
           </div>
         </div>
       </div>
+      <p className="text-gray-600 text-sm">
+        WATCH THIS LONG FORM VIDEO BELOW TO FIND OUT HOW TO DO XYZ. REPLACE COPY.
+      </p>
     </div>
   );
 };
 
-export default LongFormVideo;
+export default VideoSection;
