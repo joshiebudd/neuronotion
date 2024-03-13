@@ -10,7 +10,8 @@ const VideoPlayer = () => {
   };
 
   return (
-    <div className="component1 p-4 flex justify-center items-center">
+    // Added my-8 for margin on the y-axis (top and bottom). Adjust this value as needed for your layout.
+    <div className="component1 p-4 flex justify-center items-center my-8"> 
       <div className="relative group cursor-pointer" onClick={playVideo}>
         <video
           ref={videoRef}
