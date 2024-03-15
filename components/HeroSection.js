@@ -19,26 +19,29 @@ const HeroSection = () => {
   <span className="text-red-700 line-through">HACK</span>{' '}
   <span className="text-sky-700">SYSTEM</span> <br /> to help your ADHD brain study
 </h1>
-        <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-          Neuro Notion is an all-in-one Notion study system which helps students with ADHD stay laser-focused, for longer, without distractions.
-        </p>
-        <div className="mt-4 flex justify-center space-x-4">
-          {/* Get NeuroNotes Button */}
-          <a
-            href="#pricing"
-            onClick={handleButtonClick}
-            className="StandardCheckoutButton inline-block rounded-lg bg-sky-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
-          >
-            Buy Once. Use Forever.
-          </a>
-          {/* See Demo Button */}
-          <a
-            href="#demo"
-            className="inline-block rounded-lg bg-gray-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-300"
-          >
-            See Demo
-          </a>
-        </div>
+<p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
+  Neuro Notion is a <u>study system</u> that combines useful, scientific solutions to help your ADHD brain <u>focus on demand</u>. You won't need a new TikTok <u>hack</u> two weeks...or six months later.
+</p>
+<div className="mt-4 flex flex-col justify-center space-x-4 sm:flex-row">
+  {/* Get NeuroNotes Button */}
+  <a
+    href="#pricing"
+    onClick={handleButtonClick}
+    className="StandardCheckoutButton inline-block rounded-lg bg-sky-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+  >
+    Buy Once. Use Forever.
+  </a>
+  <p className="mt-2 text-center text-sm sm:mt-0 sm:text-left">
+    Satisfaction guaranteed or 100% refund.
+  </p>
+  {/* See Demo Button */}
+  <a
+    href="#demo"
+    className="inline-block rounded-lg bg-gray-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-300"
+  >
+    See Demo
+  </a>
+</div>
         {/* Stars */}
         <div className="mb-2 flex justify-center">
           <span className="mt-3 mb-0 text-3xl leading-none text-orange-600">
