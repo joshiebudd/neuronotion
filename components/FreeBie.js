@@ -42,7 +42,7 @@ const FreeBie = () => {
                 onClick={onGetFreeBie}
                 class="flex md:w-80 w-72 justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                I prefer "hacks". Give me the gift only
+                I prefer &quot;hacks&quot;. Give me the gift only
               </button>
             </div>
             <div className="pt-3 ">
