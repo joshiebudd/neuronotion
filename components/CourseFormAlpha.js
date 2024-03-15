@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 const CourseFormAlpha = () => {
   const onGetAccessClicked = () => {
-    window.location.href = "http://www.stripe.com";
+    window.location.href = "https://buy.stripe.com/6oE5mvdLVcRk3vicN3";
   };
   return (
     <section className="bg-gray-100 pt-24 sm:pt-32">
