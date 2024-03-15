@@ -1,0 +1,11 @@
+{
+  "installed": {
+    "client_id": "675511697105-cn4u73gf9up1n7m98en5fet43gn3afto.apps.googleusercontent.com",
+    "project_id": "funnel-campaign",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "redirect_uris": ["http://localhost"]
+  }
+}

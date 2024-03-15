@@ -38,7 +38,8 @@ const DemoSection = () => {
           How does it work? 🤫
         </h1>
         <p className="mb-8 text-xl font-normal text-white sm:px-16 md:px-48">
-          Press &quot;Play&quot; to have all your questions answered in under two minutes.
+          Press &quot;Play&quot; to have all your questions answered in under
+          two minutes.
         </p>
 
         <div className="inline-block p-0 rounded-lg overflow-hidden">
@@ -88,8 +89,10 @@ const DemoSection = () => {
         {/* Testimonial and Author Info */}
         <div className="text-center mx-auto mt-4 px-4">
           <span className="mt-0 text-sm text-gray-100">
-            &quot;Before I found Neuro Notion, every study session was this awful long battle with distractions and procrastination.
-            Now, I feel like I&apos;ve got my own space that really helps to keep me in the zone.&quot;
+            &quot;Before I found Neuro Notion, every study session was this
+            awful long battle with distractions and procrastination. Now, I feel
+            like I&apos;ve got my own space that really helps to keep me in the
+            zone.&quot;
           </span>
 
           <div className="mt-4">
