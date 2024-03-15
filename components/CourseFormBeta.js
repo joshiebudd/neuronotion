@@ -51,13 +51,6 @@ const CourseFormBeta = () => {
           </div>
         </div>
       </div>
-      <div className="pt-3 flex justify-center">
-        <p className="max-w-[700px] text-left italic leading-10 text-gray-700 pb-16">
-          'by clicking the button above, you are consenting to receive emails
-          from us. you can opt out of this immediately but it is required for
-          delivery.'
-        </p>
-      </div>
     </div>
   );
 };
