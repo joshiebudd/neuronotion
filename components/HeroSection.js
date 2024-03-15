@@ -22,20 +22,15 @@ const HeroSection = () => {
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
       Neuro Notion is a <u>study system</u> that combines useful, scientific solutions to help your ADHD brain <u>focus on demand</u>. You won&apos;t need a new TikTok <u>hack</u> two weeks...or six months later.
     </p>
-    <div className="mt-4 flex flex-col justify-center sm:flex-row space-x-0 sm:space-x-4">
+    <div className="mt-4 flex flex-col justify-center items-center sm:flex-row sm:justify-start space-x-0 sm:space-x-4">
       {/* Get NeuroNotes Button */}
-      <div className="flex flex-col items-center sm:items-start">
-        <a
-          href="#pricing"
-          onClick={handleButtonClick}
-          className="StandardCheckoutButton inline-block rounded-lg bg-sky-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
-        >
-          Buy Once. Use Forever.
-        </a>
-        <p className="mt-2 text-center text-sm">
-          Satisfaction guaranteed or 100% refund.
-        </p>
-      </div>
+      <a
+        href="#pricing"
+        onClick={handleButtonClick}
+        className="StandardCheckoutButton inline-block rounded-lg bg-sky-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+      >
+        Buy Once. Use Forever.
+      </a>
       {/* See Demo Button */}
       <a
         href="#demo"
@@ -44,6 +39,9 @@ const HeroSection = () => {
         See Demo
       </a>
     </div>
+    <p className="mt-2 text-center text-sm">
+      Satisfaction guaranteed or 100% refund.
+    </p>
     {/* Stars */}
     <div className="mb-2 flex justify-center">
       <span className="mt-3 mb-0 text-3xl leading-none text-orange-600">
@@ -73,6 +71,7 @@ const HeroSection = () => {
     </div>
   </div>
 </section>
+
 
   );
 };
