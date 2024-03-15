@@ -71,7 +71,7 @@ const CourseFormAlpha = () => {
                   className="flex w-80 justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mb-8"
                   onClick={onGetAccessClicked}
                 >
-                  Get Access to Course: $1.99
+              Yes to a lasting productivity solution!
                 </button>
               </div>
             </div>

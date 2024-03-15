@@ -2,7 +2,7 @@ import React from 'react';
 
 const FunnelCopy = () => {
   return (
-    <section className="article-section">
+    <section className="article-section" style={{ textAlign: 'left' }}>
     <p>Hey Friend,</p>
     <br />
 
@@ -12,7 +12,7 @@ const FunnelCopy = () => {
     <p>And it definitely should not condemn you to failing in school.</p>
     <br />
 
-    <p>As an ADHDer, I have learnt how to thrive in a world that is designed for people with neurotypical brains.</p>
+    <p>As an ADHDer, I have learnt how to flourish in a world that is designed for people with neurotypical brains.</p>
     <br />
 
     <p>And while in the past it meant that I could not study or do schoolwork as early as most people.</p>
@@ -30,9 +30,9 @@ const FunnelCopy = () => {
     <ul>
       <li>You want a focus solution that will last longer than two weeks.</li>
       <br />
-      <li>You&apos;re tired of scrolling TikTok and blogs to find the next trendy &quot;productivity hack&quot;.</li>
+      <li>You&apos;re tired of scrolling TikTok and blogs for the next trendy &quot;productivity hack&quot; every now and then.</li>
       <br />
-      <li>You&apos;re tired of trying out new &quot;task manager apps&quot; every other month.</li>
+      <li>You&apos;re fed up of trying out new &quot;task manager apps&quot; every other month.</li>
       <br />
       <li>You want to be able to focus on demand.</li>
       <br />
@@ -42,7 +42,6 @@ const FunnelCopy = () => {
     <br />
 
     <p><strong>What this guide will show you:</strong></p>
-
 
     <ol>
       <li>The principles that inform a lasting focus solution. We will also debunk harmful hacks that run on vibes alone but never really help you build a habit of focus.</li>
