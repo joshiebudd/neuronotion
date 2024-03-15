@@ -17,7 +17,7 @@ const HeroSection = () => {
     <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
       A focus{' '}
       <span className="text-red-800 line-through">HACK</span>{' '}
-      <span className="text-sky-700">SYSTEM</span> <br /> to help your ADHD brain study
+      <span className="text-sky-800">SYSTEM</span> <br /> to help your ADHD brain study
     </h1>
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
       Neuro Notion is a <u>study system</u> that combines useful, scientific solutions to help your ADHD brain <u>focus on demand</u>. You won&apos;t need a new TikTok <u>hack</u> two weeks...or six months later.
@@ -27,7 +27,7 @@ const HeroSection = () => {
       <a
         href="#pricing"
         onClick={handleButtonClick}
-        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-sky-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-sky-800 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
       >
         Buy Once. Use Forever.
       </a>
