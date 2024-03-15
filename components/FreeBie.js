@@ -1,5 +1,6 @@
 import React from "react";
 import IframeResizer from "iframe-resizer-react";
+import FreebieCopy from "./FreebieCopy";
 
 const FreeBie = () => {
   const onGetFreeBie = () => {
@@ -26,6 +27,9 @@ const FreeBie = () => {
               PRESS THIS BUTTON TO GET YOUR FREEBIE.
             </h2>
           </div>
+
+<FreebieCopy />
+
           <div className="md:relative md:block order-3 md:left-[40%] md:top-[100px] md:w-1/2 ">
             <div className="flex justify-center">
               <button
