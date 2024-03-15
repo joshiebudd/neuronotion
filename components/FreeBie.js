@@ -17,7 +17,12 @@ const FreeBie = () => {
             </h2>
           </div>
 
-          <FreebieCopy />
+          <section className="freebie-article" style={{ textAlign: 'left' }}>
+          <p>Hey ...</p>
+          <br />
+          <p>If you only want the gift promised in the video, click the button below to get the tool for free. There are no forms to fill for that.</p>
+          <br />
+          </section>
 
           <div className="md:block md:left-[30%] md:absolute w-full md:w-1/2 order-2 timer-widget flex justify-center height-auto pb-8">
             <IframeResizer
