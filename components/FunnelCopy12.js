@@ -21,9 +21,13 @@ const FunnelCopy = () => {
 
     <ul>
       <li>You want a focus solution that will last longer than two weeks.</li>
+      <br />
       <li>You&apos;re tired of scrolling TikTok and blogs to find the next trendy &quot;productivity hack&quot;.</li>
+      <br />
       <li>You&apos;re tired of trying out new &quot;task manager apps&quot; every other month.</li>
+      <br />
       <li>You want to be able to focus on demand.</li>
+      <br />
       <li>You want to turn your ADHD hyper-focus into a superpower for your other interests…and not be worried about undone schoolwork.</li>
     </ul>
 
@@ -31,6 +35,7 @@ const FunnelCopy = () => {
 
     <ol>
       <li>The principles that inform a lasting focus solution. We will also debunk harmful hacks that run on vibes alone but never really help you build a habit of focus.</li>
+      <br />
       <li>How to build your productivity system with today&apos;s digital tools. All without needing to code. Some options only require minutes to plug and play!</li>
     </ol>
 
