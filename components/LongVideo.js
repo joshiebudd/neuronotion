@@ -15,7 +15,7 @@ const LongVideo = () => {
             <video
               className="w-7/10 rounded-lg"
               controls
-              poster="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/thumbnailfordemo.png"
+              poster="https://NeuroNotionPullZonw.b-cdn.net/LongThumbSquare.png"
             >
               <source
                 src="https://neuronotionpullzonw.b-cdn.net/ProductDemoFinal.mp4"
