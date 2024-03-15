@@ -8,7 +8,7 @@ const CourseFormAlpha = () => {
     <section className="bg-gray-100 pt-24 sm:pt-32">
       <div className="text-center px-4">
         <div className=" flex justify-center">
-        <h2 className="md:max-w-[600px]  text-2xl md:text-4xl  font-bold leading-6 text-center ">
+        <h2 className="md:max-w-[600px]  text-4xl md:text-4xl  font-bold leading-6 text-center ">
         Make ADHD your Superpower with a Study Focus System.
           </h2>
         </div>
