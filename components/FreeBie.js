@@ -35,9 +35,9 @@ const FreeBie = () => {
             <div className="flex justify-center">
               <button
                 onClick={onGetFreeBie}
-                class="flex md:w-80 w-72 justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                class="flex md:w-80 w-72 justify-center rounded-md bg-sky-900 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Get Freebie
+                I prefer hacks. Give me the gift only
               </button>
             </div>
             <div className="pt-3 ">
