@@ -2,14 +2,14 @@ import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 const CourseFormAlpha = () => {
   const onGetAccessClicked = () => {
-    window.location.href = "https://buy.stripe.com/6oE5mvdLVcRk3vicN3";
+    window.location.href = "http://www.stripe.com";
   };
   return (
     <section className="bg-gray-100 pt-24 sm:pt-32">
       <div className="text-center px-4">
         <div className=" flex justify-center">
-          <h2 className="md:max-w-[600px]  text-2xl md:text-4xl  font-bold leading-6 text-center ">
-          Make ADHD your Superpower with a Study Focus System.
+        <h2 className="md:max-w-[600px]  text-2xl md:text-4xl  font-bold leading-6 text-center ">
+        Make ADHD your Superpower with a Study Focus System.
           </h2>
         </div>
         <div className="my-1 md:my-3 pb-8">
@@ -21,8 +21,8 @@ const CourseFormAlpha = () => {
           <Image
             className="md:w-[50%] w-[80%]"
             loading="eager"
-            src="https://neuronotionpullzonw.b-cdn.net/longsquare.mp4"
-            alt="mainlongvideo"
+            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/maindemo.webp"
+            alt="template"
             width={800} // Set the width of the image (you can adjust as needed)
             height={566} // Set the height of the image (adjust for the aspect ratio of your image)
             priority={1}

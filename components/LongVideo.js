@@ -18,7 +18,7 @@ const LongVideo = () => {
               poster="https://NeuroNotionPullZonw.b-cdn.net/LongThumbSquare.png"
             >
               <source
-                src="https://neuronotionpullzonw.b-cdn.net/ProductDemoFinal.mp4"
+                src="https://NeuroNotionPullZonw.b-cdn.net/longsquare.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
