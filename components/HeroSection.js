@@ -16,7 +16,7 @@ const HeroSection = () => {
   <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
     <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
       A focus{' '}
-      <span className="text-red-700 line-through">HACK</span>{' '}
+      <span className="text-red-800 line-through">HACK</span>{' '}
       <span className="text-sky-700">SYSTEM</span> <br /> to help your ADHD brain study
     </h1>
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
