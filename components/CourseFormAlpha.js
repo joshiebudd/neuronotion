@@ -18,12 +18,12 @@ const CourseFormAlpha = () => {
             Make ADHD your Superpower with a Study Focus System.
           </h2>
         </div>
-        <div className="timer-widget flex justify-center height-auto pt-4 pb-16">
+        <div className="timer-widget flex justify-center height-auto pt-6 pb-12">
           <Image
             className="md:w-[50%] w-[80%]"
             loading="eager"
-            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/maindemo.webp"
-            alt="template"
+            src="https://NeuroNotionPullZonw.b-cdn.net/Testimonial.png"
+            alt="templateipad"
             width={800} // Set the width of the image (you can adjust as needed)
             height={566} // Set the height of the image (adjust for the aspect ratio of your image)
             priority={1}
