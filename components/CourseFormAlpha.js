@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import FunnelCopy from "./FunnelCopyAlpha";
+
 const CourseFormAlpha = () => {
   const onGetAccessClicked = () => {
     window.location.href = "https://buy.stripe.com/6oE5mvdLVcRk3vicN3";
@@ -12,11 +14,6 @@ const CourseFormAlpha = () => {
         Make ADHD your Superpower with a Study Focus System.
           </h2>
         </div>
-        <div className="my-1 md:my-3 pb-8">
-          <p className="text-center text-8 text-center leading-10 text-gray-700">
-            SUBHEADING
-          </p>
-        </div>
         <div className="timer-widget flex justify-center height-auto pt-4 pb-16">
           <Image
             className="md:w-[50%] w-[80%]"
@@ -28,6 +25,9 @@ const CourseFormAlpha = () => {
             priority={1}
           />
         </div>
+
+<FunnelCopy />
+
         <div className="sign-form sm:mx-auto sm:w-full sm:max-w-sm">
           <div class="space-y-2">
             <div>

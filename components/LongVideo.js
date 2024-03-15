@@ -1,6 +1,6 @@
 import React from "react";
 import CourseFormBeta from "./CourseFormBeta";
-import FunnelCopy from "./FunnelCopy12";
+import FunnelCopyBeta from "./FunnelCopyBeta";
 
 const LongVideo = () => {
   return (
@@ -27,7 +27,7 @@ const LongVideo = () => {
           </div>
         </div>
       </div>
-      <FunnelCopy />
+      <FunnelCopyBeta />
       <CourseFormBeta />
     </section>
   );
