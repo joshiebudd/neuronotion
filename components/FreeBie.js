@@ -6,6 +6,7 @@ const FreeBie = () => {
   const onGetFreeBie = () => {
     window.location.href =
       "https://joshiebudd.github.io/notionwidgets/timer.html";
+    track("Get_Freebie");
   };
   return (
     <>
@@ -39,7 +40,10 @@ const FreeBie = () => {
           <div className="md:relative md:block order-4 md:left-[40%] md:top-[100px] md:w-1/2 ">
             <div className="flex justify-center">
               <button
-                onClick={onGetFreeBie}
+                onClick={() => {
+                  onGetFreeBie();
+                  track("Get_Freebie");
+                }}
                 class="flex md:w-80 w-72 justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 I prefer &quot;hacks&quot;. Give me the gift only

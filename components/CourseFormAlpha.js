@@ -5,9 +5,9 @@ import FunnelCopy from "./FunnelCopyAlpha";
 const CourseFormAlpha = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-
   const onGetAccessClicked = () => {
     window.location.href = "https://buy.stripe.com/6oE5mvdLVcRk3vicN3";
+    track("Course_Checkout");
   };
 
   return (
@@ -29,9 +29,7 @@ const CourseFormAlpha = () => {
             priority={1}
           />
         </div>
-
         <FunnelCopy />
-
         <div>
           <div className="sign-form sm:mx-auto sm:w-full sm:max-w-sm">
             <div className="space-y-2">
@@ -64,14 +62,16 @@ const CourseFormAlpha = () => {
                   />
                 </div>
               </div>
-
               <div className="flex justify-center">
                 <button
                   type="submit"
                   className="flex w-80 justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mb-8"
-                  onClick={onGetAccessClicked}
+                  onClick={() => {
+                    onGetAccessClicked();
+                    track("Course_Checkout");
+                  }}
                 >
-              Yes to a lasting productivity solution!
+                  Yes to a lasting productivity solution!
                 </button>
               </div>
             </div>

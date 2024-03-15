@@ -5,6 +5,7 @@ const CourseFormBeta = () => {
   const [email, setEmail] = useState("");
   const onGetAccessClicked = () => {
     window.location.href = "https://buy.stripe.com/6oE5mvdLVcRk3vicN3";
+    track("Course_Checkout");
   };
   return (
     <div>
@@ -44,7 +45,10 @@ const CourseFormBeta = () => {
             <button
               type="submit"
               class="flex w-80 justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 mb-8"
-              onClick={onGetAccessClicked}
+              onClick={() => {
+                onGetAccessClicked();
+                track("Course_Checkout");
+              }}
             >
               Yes to a lasting productivity solution!
             </button>
