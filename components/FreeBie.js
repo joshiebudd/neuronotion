@@ -13,14 +13,14 @@ const FreeBie = () => {
         <div className="md:block flex flex-row flex-wrap md:relative text-center content-center justify-center ">
           <div className="md:block flex md:left-[40%] md:top-[70px] md:w-1/2 text-center md:relative order-1 justify-center pb-8">
             <h2 className="text-2xl md:px-48 flex md:text-4xl font-bold leading-6 text-center">
-              PRESS THIS BUTTON TO GET YOUR FREEBIE.
+              Claim your Freebie.
             </h2>
           </div>
 
           <div className="freebie-article order-2" style={{ textAlign: 'left' }}>
             <p>Hey ...</p>
             <br />
-            <p>If you only want the gift promised in the video, click the button below to get the tool for free. There are no forms to fill for that.</p>
+            <p>If you just want the gift promised in the video, click the button below to get the tool for free. There are no forms to fill for that.</p>
             <br />
           </div>
 
@@ -42,7 +42,7 @@ const FreeBie = () => {
                 onClick={onGetFreeBie}
                 class="flex md:w-80 w-72 justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                I prefer hacks. Give me the gift only
+                I prefer "hacks". Give me the gift only
               </button>
             </div>
             <div className="pt-3 ">
