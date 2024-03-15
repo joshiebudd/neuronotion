@@ -22,7 +22,7 @@ const CourseFormAlpha = () => {
           <Image
             className="md:w-[50%] w-[80%]"
             loading="eager"
-            src="https://NeuroNotionPullZonw.b-cdn.net/Testimonial.png"
+            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/ipaddemo.png"
             alt="templateipad"
             width={800} // Set the width of the image (you can adjust as needed)
             height={566} // Set the height of the image (adjust for the aspect ratio of your image)
