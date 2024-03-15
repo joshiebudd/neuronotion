@@ -19,7 +19,7 @@ const CourseFormAlpha = () => {
           </h2>
         </div>
         <div className="timer-widget flex justify-center height-auto pt-6 pb-12">
-          <Img
+          <Image
             className="md:w-[50%] w-[80%]"
             loading="eager"
             src="https://NeuroNotionPullZonw.b-cdn.net/Testimonial.png"
