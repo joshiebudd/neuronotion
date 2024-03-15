@@ -34,7 +34,6 @@ const HeaderForFunnel = () => {
         <nav className="px-8 py-5 lg:px-6">
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
             <a
-              href="https://www.neuro-notion.com/#hero"
               className="flex items-center grow transition duration-300"
               ref={titleRef}
             >
