@@ -14,9 +14,11 @@ const HeroSection = () => {
   return (
     <section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-        <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
-          💤 Silence the ADHD Study Chaos <br /> with Neuro Notion 🧠
-        </h1>
+      <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
+  A focus{' '}
+  <span className="text-red-500 line-through">HACK</span>{' '}
+  <span className="text-green-500">SYSTEM</span> to help your ADHD brain study
+</h1>
         <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
           Neuro Notion is an all-in-one Notion study system which helps students with ADHD stay laser-focused, for longer, without distractions.
         </p>
