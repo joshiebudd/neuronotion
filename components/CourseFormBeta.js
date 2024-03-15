@@ -4,7 +4,7 @@ const CourseFormBeta = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const onGetAccessClicked = () => {
-    window.location.href = "http://www.stripe.com";
+    window.location.href = "https://buy.stripe.com/6oE5mvdLVcRk3vicN3";
   };
   return (
     <div>
