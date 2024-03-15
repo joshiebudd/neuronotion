@@ -17,7 +17,7 @@ const HeroSection = () => {
       <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
   A focus{' '}
   <span className="text-red-700 line-through">HACK</span>{' '}
-  <span className="text-sky-700">SYSTEM</span> to help your ADHD brain study
+  <span className="text-sky-700">SYSTEM</span> <br /> to help your ADHD brain study
 </h1>
         <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
           Neuro Notion is an all-in-one Notion study system which helps students with ADHD stay laser-focused, for longer, without distractions.
