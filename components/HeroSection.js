@@ -31,15 +31,8 @@ const HeroSection = () => {
       >
         Buy Once. Use Forever.
       </a>
-      {/* See Demo Button */}
-      <a
-        href="#demo"
-        className="inline-block mb-2 sm:mb-0 rounded-lg bg-gray-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-300"
-      >
-        See Demo
-      </a>
     </div>
-    <p className="mt-2 text-center text-sm">
+    <p className="mt-2 font-bold text-md text-center text-sm">
       Satisfaction guaranteed or 100% refund.
     </p>
     {/* Stars */}
