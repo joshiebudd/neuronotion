@@ -23,9 +23,9 @@ const FunnelCopy = () => {
 
     <p>All this while managing three businesses that I built as a student.</p>
     <br />
+    <br />
 
     <p><strong>I invite you to get this guide today if…</strong></p>
-    <br />
 
     <ul>
       <li>You want a focus solution that will last longer than two weeks.</li>
@@ -39,9 +39,10 @@ const FunnelCopy = () => {
       <li>You want to turn your ADHD hyper-focus into a superpower for your other interests…and not be worried about undone schoolwork.</li>
     </ul>
     <br />
+    <br />
 
     <p><strong>What this guide will show you:</strong></p>
-    <br />
+
 
     <ol>
       <li>The principles that inform a lasting focus solution. We will also debunk harmful hacks that run on vibes alone but never really help you build a habit of focus.</li>
@@ -51,6 +52,7 @@ const FunnelCopy = () => {
     <br />
 
     <p>If $2 is not too costly for improving your life, fill this form below and I&apos;ll see you inside the guide.</p>
+    <br />
   </section>
   );
 };
