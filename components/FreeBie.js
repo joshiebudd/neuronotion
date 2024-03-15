@@ -11,6 +11,14 @@ const FreeBie = () => {
     <>
       <section className="px-4 bg-white py-16 md:h-[500px] h-full">
         <div className="md:block flex flex-row flex-wrap md:relative text-center content-center justify-center ">
+          <div className="md:block flex md:left-[40%] md:top-[70px] md:w-1/2 text-center md:relative order-1 justify-center pb-8">
+            <h2 className="text-2xl md:px-48 flex md:text-4xl font-bold leading-6 text-center">
+              PRESS THIS BUTTON TO GET YOUR FREEBIE.
+            </h2>
+          </div>
+
+          <FreebieCopy />
+
           <div className="md:block md:left-[30%] md:absolute w-full md:w-1/2 order-2 timer-widget flex justify-center height-auto pb-8">
             <IframeResizer
               className="border border-black  rounded-lg md:w-[35%]"
@@ -22,13 +30,6 @@ const FreeBie = () => {
               scrolling="no"
             />
           </div>
-          <div className="md:block flex md:left-[40%] md:top-[70px] md:w-1/2 text-center md:relative order-1 justify-center pb-8">
-            <h2 className="text-2xl md:px-48 flex md:text-4xl font-bold leading-6 text-center">
-              PRESS THIS BUTTON TO GET YOUR FREEBIE.
-            </h2>
-          </div>
-
-<FreebieCopy />
 
           <div className="md:relative md:block order-3 md:left-[40%] md:top-[100px] md:w-1/2 ">
             <div className="flex justify-center">
