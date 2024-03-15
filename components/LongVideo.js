@@ -1,6 +1,6 @@
 import React from "react";
 import CourseFormBeta from "./CourseFormBeta";
-import FunnelCopy from "./funnelcopy";
+import FunnelCopy from "./FunnelCopy12";
 
 const LongVideo = () => {
   return (
