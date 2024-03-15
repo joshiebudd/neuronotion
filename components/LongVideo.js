@@ -3,7 +3,7 @@ import CourseFormBeta from "./CourseFormBeta";
 
 const LongVideo = () => {
   return (
-    <section className="px-4 bg-gray-100 pt-24 sm:pt-32">
+    <section className="px-4 bg-gray-100 pt-36 sm:pt-32">
       <div className="text-center">
         <div className="flex justify-center pb-12">
           <h2 className="md:max-w-[600px]  text-2xl md:text-4xl  font-bold leading-6 text-center ">

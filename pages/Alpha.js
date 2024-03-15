@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSection from "../components/HeaderSection";
+import HeaderForFunnel from "../components/HeaderForFunnel";
 import CourseFormAlpha from "../components/CourseFormAlpha";
 import FooterSection from "../components/FooterSection";
 import FreeBie from "../components/FreeBie";
@@ -7,7 +7,7 @@ import FreeBie from "../components/FreeBie";
 const Alpha = () => {
   return (
     <>
-      <HeaderSection />
+      <HeaderForFunnel />
       <CourseFormAlpha />
       <FreeBie />
       <FooterSection />
