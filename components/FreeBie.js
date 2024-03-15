@@ -7,6 +7,7 @@ const FreeBie = () => {
     window.location.href =
       "https://joshiebudd.github.io/notionwidgets/timer.html";
   };
+
   return (
     <>
       <section className="px-4 bg-white py-16 md:h-[500px] h-full">
@@ -17,16 +18,11 @@ const FreeBie = () => {
             </h2>
           </div>
 
-          <div className="freebie-article" style={{ textAlign: 'left' }}>
-          <p>Hey ...</p>
-          <br />
-          <p>If you only want the gift promised in the video, click the button below to get the tool for free. There are no forms to fill for that.</p>
-          <br />
-          </div>
+          <FreebieCopy /> {/* Place FreebieCopy component here */}
 
           <div className="md:block md:left-[30%] md:absolute w-full md:w-1/2 order-2 timer-widget flex justify-center height-auto pb-8">
             <IframeResizer
-              className="border border-black  rounded-lg md:w-[35%]"
+              className="border border-black rounded-lg md:w-[35%]"
               style={{
                 height: "400px",
                 marginBottom: "30px",
@@ -40,13 +36,13 @@ const FreeBie = () => {
             <div className="flex justify-center">
               <button
                 onClick={onGetFreeBie}
-                class="flex md:w-80 w-72 justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="flex md:w-80 w-72 justify-center rounded-md bg-gray-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-            I prefer hacks. Give me the gift only
+                I prefer hacks. Give me the gift only
               </button>
             </div>
             <div className="pt-3 ">
-              <p className=" italic text-md leading-10 text-gray-700">
+              <p className="italic text-md leading-10 text-gray-700">
                 *No email required
               </p>
             </div>
@@ -56,4 +52,5 @@ const FreeBie = () => {
     </>
   );
 };
+
 export default FreeBie;
