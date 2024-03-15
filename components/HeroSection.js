@@ -20,7 +20,7 @@ const HeroSection = () => {
       <span className="text-sky-700">SYSTEM</span> <br /> to help your ADHD brain study
     </h1>
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-      Neuro Notion is a <u>study system</u> that combines useful, scientific solutions to help your ADHD brain <u>focus on demand</u>. You won't need a new TikTok <u>hack</u> two weeks...or six months later.
+      Neuro Notion is a <u>study system</u> that combines useful, scientific solutions to help your ADHD brain <u>focus on demand</u>. You won&apos;t need a new TikTok <u>hack</u> two weeks...or six months later.
     </p>
     <div className="mt-4 flex flex-col justify-center space-x-4 sm:flex-row">
       {/* Get NeuroNotes Button */}
