@@ -6,9 +6,8 @@ const LongVideo = () => {
     <section className="px-4 bg-gray-100 pt-24 sm:pt-32">
       <div className="text-center">
         <div className="flex justify-center pb-12">
-          <h2 className="md:max-w-[600px]  text-xl md:text-4xl  font-bold leading-5 text-center ">
-            WATCH THIS LONG FORM VIDEO BELOW TO FIND OUT HOW TO DO XYZ. REPLACE
-            COPY
+          <h2 className="md:max-w-[600px]  text-2xl md:text-4xl  font-bold leading-6 text-center ">
+          Make ADHD your Superpower with a Study Focus System
           </h2>
         </div>
         <div className="timer-widget flex justify-center height-auto pt-4 pb-16">
