@@ -3,9 +3,8 @@ import HeaderSection from "../components/HeaderSection";
 import FooterSection from "../components/FooterSection";
 import FreeBie from "../components/FreeBie";
 import LongVideo from "../components/LongVideo";
-import CourseFormBeta from "../components/CourseFormBeta";
 
-const Alpha = () => {
+const Beta = () => {
   return (
     <>
       <HeaderSection />
@@ -15,4 +14,4 @@ const Alpha = () => {
     </>
   );
 };
-export default Alpha;
+export default Beta;
