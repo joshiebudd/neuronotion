@@ -12,50 +12,51 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
-      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-      <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
-  A focus{' '}
-  <span className="text-red-700 line-through">HACK</span>{' '}
-  <span className="text-sky-700">SYSTEM</span> <br /> to help your ADHD brain study
-</h1>
-<p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-  Neuro Notion is a <u>study system</u> that combines useful, scientific solutions to help your ADHD brain <u>focus on demand</u>. You won&apos;t need a new TikTok <u>hack</u> two weeks...or six months later.
-</p>
-<div className="mt-4 flex flex-col justify-center space-x-4 sm:flex-row">
-  {/* Get NeuroNotes Button */}
-  <a
-    href="#pricing"
-    onClick={handleButtonClick}
-    className="StandardCheckoutButton inline-block rounded-lg bg-sky-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
-  >
-    Buy Once. Use Forever.
-  </a>
-  <p className="mt-2 text-center text-sm sm:mt-0 sm:text-left">
-    Satisfaction guaranteed or 100% refund.
-  </p>
-  {/* See Demo Button */}
-  <a
-    href="#demo"
-    className="inline-block rounded-lg bg-gray-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-300"
-  >
-    See Demo
-  </a>
-</div>
-        {/* Stars */}
-        <div className="mb-2 flex justify-center">
-          <span className="mt-3 mb-0 text-3xl leading-none text-orange-600">
-            ★★★★★
-          </span>
-        </div>
-        <span className="mt-0 mb-0 text-sm text-gray-800">
-          <a href="#review" className="underline">
-            4.86/5
-          </a>{" "}
-          from 1,300+ Students with ADHD.
-        </span>
-      </div>
-      <div className="mx-auto max-w-screen-xl px-4 py-4 text-center lg:px-12 lg:py-4">
+<section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
+  <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
+    <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
+      A focus{' '}
+      <span className="text-red-700 line-through">HACK</span>{' '}
+      <span className="text-sky-700">SYSTEM</span> <br /> to help your ADHD brain study
+    </h1>
+    <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
+      Neuro Notion is a <u>study system</u> that combines useful, scientific solutions to help your ADHD brain <u>focus on demand</u>. You won't need a new TikTok <u>hack</u> two weeks...or six months later.
+    </p>
+    <div className="mt-4 flex flex-col justify-center space-x-4 sm:flex-row">
+      {/* Get NeuroNotes Button */}
+      <a
+        href="#pricing"
+        onClick={handleButtonClick}
+        className="StandardCheckoutButton inline-block rounded-lg bg-sky-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+      >
+        Buy Once. Use Forever.
+      </a>
+      <p className="mt-2 text-center text-sm sm:mt-0 sm:text-left">
+        Satisfaction guaranteed or 100% refund.
+      </p>
+      {/* See Demo Button */}
+      <a
+        href="#demo"
+        className="inline-block rounded-lg bg-gray-700 px-8 py-4 text-lg font-bold text-white hover:bg-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-300"
+      >
+        See Demo
+      </a>
+    </div>
+    {/* Stars */}
+    <div className="mb-2 flex justify-center">
+      <span className="mt-3 mb-0 text-3xl leading-none text-orange-600">
+        ★★★★★
+      </span>
+    </div>
+    <span className="mt-0 mb-0 text-sm text-gray-800">
+      <a href="#review" className="underline">
+        4.86/5
+      </a>{" "}
+      from 1,300+ Students with ADHD.
+    </span>
+  </div>
+    
+    <div className="mx-auto max-w-screen-xl px-4 py-4 text-center lg:px-12 lg:py-4">
         {/* Next.js Image component for optimized image loading */}
         <div className="centered-image max-w-full lg:max-w-[800px] pb-8 sm:pb-16">
           <Image
