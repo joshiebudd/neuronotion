@@ -13,9 +13,11 @@ module.exports = {
       tightest: "-.01em",
     },
     fontFamily: {
-      manrope: ["manrope", "sans"],
-      inter: ["inter", "sans"],
+      manrope: ['manrope', 'sans'],
+      inter: ['inter', 'sans'],
+      baloo: ['"Baloo 2"', 'sans-serif'],
     },
   },
-  plugins: [],
+},
+plugins: [],
 };

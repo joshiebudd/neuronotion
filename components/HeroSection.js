@@ -14,15 +14,15 @@ const HeroSection = () => {
   return (
 <section id="hero" class="bg-gray-100 hero-section pt-24 sm:pt-32">
   <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-    <h1 class="mb-10 font-baloo-2-extrabold leading-none tracking-tight text-black sm:text-3xl lg:text-5xl relative inline-block">
+    <h1 class="mb-10 font-baloo font-extrabold leading-none tracking-tight text-black sm:text-3xl lg:text-5xl relative inline-block">
       A Focus 
       <span class="relative text-black inline-block">
-        <span class="absolute inset-x-0 top-0 mx-auto sm:text-3xl lg:text-5xl font-baloo-2-extrabold text-blue-500 transform -translate-y-full">System</span>
+        <span class="absolute inset-x-0 top-0 mx-auto sm:text-3xl lg:text-5xl font-baloo font-extrabold text-blue-500 transform -translate-y-full">System</span>
         <span class="line-through decoration-wavy text-gray-500 decoration-blue-500">&quot;Hack&quot;</span>
       </span>
       to help <br /> your ADHD Brain Study.
     </h1>
-    <p className="mb-10 text-xl font-baloo-2-regular text-black sm:px-18 xl:px-48 mt-6">
+    <p className="mb-10 text-xl font-baloo font-regular text-black sm:px-18 xl:px-48 mt-6">
     Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
     </p>
     <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
