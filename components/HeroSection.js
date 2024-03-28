@@ -16,11 +16,11 @@ const HeroSection = () => {
   <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
     <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
       A focus{' '}
-      <span className="text-red-800 line-through">HACK</span>{' '}
-      <span className="text-sky-800">SYSTEM</span> <br /> to help your ADHD brain study
+      <span className="text-red-800 line-through">Hack</span>{' '}
+      <span className="text-sky-800">System</span> <br /> to help your ADHD brain study
     </h1>
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
-      Neuro Notion is a <u> Notion study system </u> that combines useful, scientific solutions to help your ADHD brain <u>focus on demand</u>. You won&apos;t need a new TikTok <u>hack</u> two weeks...or six months later.
+    Drown the noise in 90 seconds. Study for as long as you want in 25, 60 or 90-minute blocks. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon
     </p>
     <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
       {/* Get NeuroNotes Button */}
@@ -29,11 +29,11 @@ const HeroSection = () => {
         onClick={handleButtonClick}
         className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-sky-800 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
       >
-        Buy Once. Use Forever.
+        Get Lifetime Access.
       </a>
     </div>
     <p className="mt-2 font-bold text-md text-center text-sm">
-      Satisfaction guaranteed or 100% refund.
+      Guaranteed to improve your studies, or your money back.
     </p>
     {/* Stars */}
     <div className="mb-2 flex justify-center">

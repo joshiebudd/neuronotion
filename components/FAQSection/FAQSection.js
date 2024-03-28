@@ -3,7 +3,7 @@ import FAQItem from "./FAQItem";
 
 const FAQSection = () => {
   // State to track the open/close state of FAQ items
-  const [isOpen, setIsOpen] = useState([false, false, false, false, false]);
+  const [isOpen, setIsOpen] = useState([false, false, false, false, false, false]);
 
   // Function to toggle FAQ item open/close
   const toggleFAQ = (index) => {
@@ -66,15 +66,26 @@ const FAQSection = () => {
           {/* FAQ Item 2 */}
           <FAQItem>
             <h3 className="font-semibold text-xl leading-5 text-gray-800">
-              Is this worth $10?
+            Will this work for my type of ADHD?
             </h3>
             <p
               id="para2"
               className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
             >
-              It&apos;s worth WAY more than $10! This will save you countless hours of
-              creating your own system. That alone makes it worth more than $10! And it 
-              has tons of extra valuable tools and custom features built-in too!
+              Most likely. Our existing userbase is made up of people with diverse kinds of ADHD vulnerabilities, and we have heard many good things about the product. However, if after you try it, you&apos;re still not able to focus within 14 days post-purchase, we will gladly refund you upon request.
+            </p>
+          </FAQItem>
+
+          {/* New FAQ Item */}
+          <FAQItem>
+            <h3 className="font-semibold text-xl leading-5 text-gray-800">
+              Why does Neuro Notion work so well?
+            </h3>
+            <p
+              id="para6"
+              className={`font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
+            >
+              Neuro Notion works because it reduces the amount of apps, items and tools you need for focusing, managing tasks, studying, writing essays, and testing yourself when you study to just ONE. This way, it leaves little room for the typical ADHD distractors or confusion to set in and disrupt your flow.
             </p>
           </FAQItem>
 
@@ -98,6 +109,8 @@ const FAQSection = () => {
             </p>
           </FAQItem>
 
+
+
           {/* FAQ Item 4 */}
           <FAQItem>
             <h3 className="font-semibold text-xl leading-5 text-gray-800">
@@ -112,6 +125,7 @@ const FAQSection = () => {
               josh@neuro-notion.com and I&apos;ll be happy to answer any queries.
             </p>
           </FAQItem>
+
         </div>
       </div>
     </section>
