@@ -3,10 +3,12 @@ import React, { useState } from "react";
 const CourseFormBeta = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
   const onGetAccessClicked = () => {
     window.location.href = "https://buy.stripe.com/6oE5mvdLVcRk3vicN3";
     track("Course_Checkout");
   };
+
   return (
     <div>
       <div className="sign-form sm:mx-auto sm:w-full sm:max-w-sm">
@@ -40,7 +42,6 @@ const CourseFormBeta = () => {
               />
             </div>
           </div>
-
           <div className="flex justify-center">
             <button
               type="submit"
@@ -55,7 +56,53 @@ const CourseFormBeta = () => {
           </div>
         </div>
       </div>
+      <FunnelCopy />
+      <div className="flex justify-center mb-8">
+        <button
+          type="submit"
+          class="flex w-80 justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          onClick={() => {
+            onGetAccessClicked();
+            track("Course_Checkout");
+          }}
+        >
+          Only $2 to get organised? Yes please!
+        </button>
+      </div>
     </div>
   );
 };
+
+const FunnelCopy = () => {
+  return (
+    <section className="article-section" style={{ textAlign: "left" }}>
+      <p>Hey Friend,</p>
+      <br />
+      <p>
+        Having ADHD should not mean you cannot thrive in life, hobbies and
+        relationships.
+      </p>
+      <br />
+      <p>And it definitely should not condemn you to failing in school.</p>
+      <br />
+      <p>
+        As an ADHDer, I have learnt how to flourish in a world that is designed
+        for people with neurotypical brains.
+      </p>
+      <br />
+      <p>
+        PS: When you sign up for the guide, you will also get a link to set up
+        the timer and audio player tool gift promised in the video above in your
+        email. There will also be special tips on how to maximise the tool. So
+        no need to get it from here.
+      </p>
+      <br />
+      <p>
+        If you missed it above, here's the form again to get the productivity
+        system guide:
+      </p>
+    </section>
+  );
+};
+
 export default CourseFormBeta;

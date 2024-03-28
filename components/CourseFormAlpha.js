@@ -77,7 +77,7 @@ const CourseFormAlpha = () => {
                     track("Course_Checkout");
                   }}
                 >
-                  Yes to a lasting productivity solution!
+                  I want a lasting productivity solution!
                 </button>
               </div>
             </div>
