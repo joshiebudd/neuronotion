@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const FunnelCopyBeta = () => {
   return (
@@ -15,6 +16,21 @@ const FunnelCopyBeta = () => {
       <p>As an ADHDer, I have learnt how to flourish in a world that is designed for people with neurotypical brains.</p>
       <br />
 
+      <div className="mx-auto max-w-screen-xl px-4 py-4 text-center lg:px-12 lg:py-4">
+    {/* Next.js Image component for optimized image loading */}
+    <div className="centered-image max-w-full lg:max-w-[800px] pb-8 sm:pb-16">
+      <Image
+        style={{ width: "100%" }}
+        loading="eager"
+        src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/showcase.webp"
+        alt="template"
+        width={800} // Set the width of the image (you can adjust as needed)
+        height={566} // Set the height of the image (adjust for the aspect ratio of your image)
+        priority={1}
+      />
+    </div>
+  </div>
+
       <p>And while in the past it meant that I could not study or do schoolwork as early as most people.</p>
       <br />
 
@@ -24,6 +40,21 @@ const FunnelCopyBeta = () => {
       <p>All this while managing three businesses that I built as a student.</p>
       <br />
       <br />
+
+      <div className="mx-auto max-w-screen-xl px-4 py-4 text-center lg:px-12 lg:py-4">
+    {/* Next.js Image component for optimized image loading */}
+    <div className="centered-image max-w-full lg:max-w-[800px] pb-8 sm:pb-16">
+      <Image
+        style={{ width: "100%" }}
+        loading="eager"
+        src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/trilogo.webp"
+        alt="template"
+        width={800} // Set the width of the image (you can adjust as needed)
+        height={566} // Set the height of the image (adjust for the aspect ratio of your image)
+        priority={1}
+      />
+    </div>
+  </div>
 
       <p><strong>I invite you to get this guide today if…</strong></p>
 
