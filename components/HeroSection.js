@@ -18,7 +18,7 @@ const HeroSection = () => {
       A Focus 
       <span class="relative text-black inline-block">
         <span class="absolute inset-x-0 top-0 mx-auto text-5xl sm:text-3xl font-bold text-blue-500 transform -translate-y-full">System</span>
-        <span class="line-through decoration-wavy decoration-blue-500">"Hack"</span>
+        <span class="line-through decoration-wavy decoration-blue-500">&quot;Hack&quot;</span>
       </span>
       Your <br /> ADHD Brain Needs to Study.
     </h1>
