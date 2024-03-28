@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from '../styles/strikethrough.module.css';
+import styles from '../../styles/strikethrough.module.css';
 
 const HeroSection = () => {
   const handleButtonClick = (e) => {
