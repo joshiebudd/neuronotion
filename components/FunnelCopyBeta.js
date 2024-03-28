@@ -59,10 +59,15 @@ const FunnelCopyBeta = () => {
   <p><strong>I invite you to get this guide today if…</strong></p>
 <ul>
 <li>• You want a focus solution that will last longer than two weeks.</li>
+<br />
 <li>• You&apos;re tired of scrolling TikTok and blogs for the next trendy &quot;productivity hack&quot; every now and then.</li>
+<br />
 <li>• You&apos;re fed up of trying out new &quot;task manager apps&quot; every other month.</li>
+<br />
 <li>• You want to be able to focus on demand.</li>
+<br />
 <li>• You want to turn your ADHD hyper-focus into a superpower for your other interests…and not be worried about undone schoolwork.</li>
+<br />
 </ul>
     <br />
     <br />
