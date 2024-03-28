@@ -17,8 +17,8 @@ const HeroSection = () => {
     <h1 class="mb-10 font-bold leading-none tracking-tight text-black text-5xl relative inline-block">
       The Only Focus
       <span class="relative text-black inline-block">
-        <span class="absolute inset-x-0 top-0 mx-auto text-5xl font-bold text-purple-400 transform -translate-y-full">System</span>
-        <span class="line-through decoration-wavy decoration-purple-400">&quot;Hack&quot;</span>
+        <span class="absolute inset-x-0 top-0 mx-auto text-5xl font-bold text-blue-400 transform -translate-y-full">System</span>
+        <span class="line-through decoration-wavy decoration-blue-400"> &quot;Hack&quot; </span>
       </span>
       Your <br /> ADHD Brain Needs to Study.
     </h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
       <a
         href="#pricing"
         onClick={handleButtonClick}
-        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-purple-400 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-blue-400 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
       >
         Get Lifetime Access.
       </a>
