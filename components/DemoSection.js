@@ -47,7 +47,7 @@ const DemoSection = () => {
             className="w-7/10 rounded-lg"
             controls
             onClick={() => showImageViewer(true)}
-            poster="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/thumbnailfordemo.png"
+            poster="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/thumbnailfordemo.webp"
           >
             <source
               src="https://NeuroNotionPullZonw.b-cdn.net/ProductDemoFinal.mp4"

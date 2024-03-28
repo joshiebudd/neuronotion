@@ -28,7 +28,7 @@ const CourseFormAlpha = () => {
           <Image
             className="md:w-[50%] w-[80%]"
             loading="eager"
-            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/ipaddemo.png"
+            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/ipaddemo.webp"
             alt="templateipad"
             width={800}
             height={566}
