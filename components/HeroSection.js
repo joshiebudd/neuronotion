@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from '../styles/strikethrough.module.css';
 
 const HeroSection = () => {
   const handleButtonClick = (e) => {
@@ -14,11 +15,11 @@ const HeroSection = () => {
   return (
 <section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
   <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-    <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
-      A focus{' '}
-      <span className="text-red-800 line-through">Hack</span>{' '}
-      <span className="text-sky-800">System</span> <br /> to help your ADHD brain study
-    </h1>
+  <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
+  A focus{' '}
+  <span className={`text-red-800 ${styles.strike}`}>Hack</span>
+    <span className="text-sky-800">System</span> <br /> to help your ADHD brain study
+</h1>
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
     Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
     </p>

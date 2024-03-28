@@ -67,10 +67,7 @@ const FunnelCopyBeta = () => {
 <li>• You want to be able to focus on demand.</li>
 <br />
 <li>• You want to turn your ADHD hyper-focus into a superpower for your other interests…and not be worried about undone schoolwork.</li>
-<br />
 </ul>
-    <br />
-    <br />
       <br />
       <br />
 
