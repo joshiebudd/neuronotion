@@ -77,19 +77,19 @@ const CourseFormAlpha = () => {
                     track("Course_Checkout");
                   }}
                 >
-                  I want a lasting productivity solution!
+                  Yes to a lasting productivity solution!
                 </button>
               </div>
             </div>
           </div>
-          <p>
+          <p className="text-left">
             PS: When you sign up for the guide, you will also get a link to set up
             the timer and audio player tool gift promised in the video above in your
             email. There will also be special tips on how to maximise the tool. So
             no need to get it from here.
           </p>
           <br />
-          <p>If you missed it above, here&apos;s the form again to get the productivity system guide:</p>
+          <p className="text-left">If you missed it above, here&apos;s the form again to get the productivity system guide:</p>
           <div className="sign-form sm:mx-auto sm:w-full sm:max-w-sm">
             <div className="space-y-2">
               <div>
