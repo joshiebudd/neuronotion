@@ -24,6 +24,7 @@ const CourseFormAlpha = () => {
             </span>
           </h2>
         </div>
+        <h3 className="font-bold text-center mt-4">**Plus: Free focus tool. (NO EMAIL REQUIRED)</h3>
         <div className="timer-widget flex justify-center height-auto pt-6 pb-12">
           <Image
             className="md:w-[50%] w-[80%]"
