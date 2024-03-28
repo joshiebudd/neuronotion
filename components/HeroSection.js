@@ -18,7 +18,7 @@ const HeroSection = () => {
       The Only Focus {' '}
       <span class="relative text-black">
         <span class="text-5xl font-bold text-purple-400 whitespace-nowrap system-text">System</span>
-        <span class="line-through decoration-wavy decoration-purple-400">"Hack"</span>
+        <span class="line-through decoration-wavy decoration-purple-400">&quot;Hack&quot;</span>
       </span>
       {' '}Your <br /> ADHD Brain Needs to Study.
     </h1>
