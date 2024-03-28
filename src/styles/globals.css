@@ -56,3 +56,17 @@ html {
   width: 100% !important;
   margin-bottom: 16px;
 }
+
+.strike {
+  position: relative;
+}
+
+.strike::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 2px solid currentColor;
+  transform: translateY(-50%);
+}
