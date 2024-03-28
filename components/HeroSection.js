@@ -14,10 +14,10 @@ const HeroSection = () => {
   return (
 <section id="hero" class="bg-gray-100 hero-section pt-24 sm:pt-32">
   <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-    <h1 class="mb-10 font-baloo font-bold leading-none tracking-tight text-black text-4xl relative inline-block">
+    <h1 class="mb-10 font-baloo font-bold leading-none tracking-tight text-black lg:text-5xl text-4xl relative inline-block">
       A Focus 
       <span class="relative text-black inline-block">
-        <span class="absolute inset-x-0 top-0 mx-auto text-4xl font-baloo font-bold text-blue-500 transform -translate-y-full">System</span>
+        <span class="absolute inset-x-0 top-0 mx-auto text-4xl lg:text-5xl font-baloo font-bold text-blue-500 transform -translate-y-full">System</span>
         <span class="line-through decoration-wavy text-gray-700 decoration-blue-500">&quot;Hack&quot;</span>
       </span>
       to help <br /> your ADHD Brain Study.
