@@ -15,8 +15,10 @@ const CourseFormAlpha = () => {
       <div className="text-center px-4">
       <div className=" flex justify-center">
   <h2 className="md:max-w-[600px] text-2xl md:text-4xl leading-6 text-center">
-    <span className="font-extrabold">[NEW]</span>{" "}
-    <span className="font-bold">
+    <span className="font-extrabold">[</span>
+    <span className="font-extrabold text-red-700">NEW</span>
+    <span className="font-extrabold">]</span>{" "}
+    <span className="font-bold text-black">
       Discover the System that Helps ADHDers to Switch into Focus in 2-6 Minutes
       Whenever They Need to Study
     </span>
