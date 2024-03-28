@@ -97,10 +97,10 @@ const CourseFormBeta = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mb-16">
+      <div className="flex justify-center">
         <button
           type="submit"
-          className="flex w-80 justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className="flex w-80 justify-center rounded-md bg-sky-800 px-3 py-1.5 mb-4 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           onClick={() => {
             onGetAccessClicked();
             track("Course_Checkout");
