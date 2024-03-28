@@ -45,6 +45,36 @@ html {
   src: url("../fonts/Inter.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: baloo-2-bold;
+  src: url(../fonts/Baloo2-Bold.ttf);
+}
+
+@font-face {
+  font-family: baloo-2-extrabold;
+  src: url(../fonts/Baloo2-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: baloo-2-medium;
+  src: url(../fonts/Baloo2-Medium.ttf);
+}
+
+@font-face {
+  font-family: baloo-2-regular;
+  src: url(../fonts/Baloo2-Regular.ttf);
+}
+
+@font-face {
+  font-family: baloo-2-semibold;
+  src: url(../fonts/Baloo2-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: baloo-2-variable;
+  src: url(../fonts/Baloo2-VariableFont_wght.ttf);
+}
+
 .card-list {
   display: grid;
   gap: 16px;
