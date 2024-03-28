@@ -171,7 +171,7 @@ const HeaderSection = () => {
                 onClick={handleButtonClick}
                 className="inline-block rounded-lg bg-blue-500 px-4 py-2 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-8 lg:py-4 hidden sm:block"
               >
-                Buy Now
+                Get Lifetime Access
               </a>
               <div className="block sm:hidden">
                 <Burger
