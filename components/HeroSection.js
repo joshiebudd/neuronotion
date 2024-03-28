@@ -22,7 +22,7 @@ const HeroSection = () => {
       </span>
       to help <br /> your ADHD Brain Study.
     </h1>
-    <p className="mb-10 text-xl font-baloo font-regular text-black sm:px-18 xl:px-48 mt-6">
+    <p className="mb-10 text-xl font-baloo font-regular text-black sm:px-18 xl:px-24 mt-3">
     Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
     </p>
     <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
