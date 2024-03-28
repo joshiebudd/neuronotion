@@ -46,34 +46,41 @@ html {
 }
 
 @font-face {
-  font-family: baloo-2-bold;
-  src: url(../fonts/Baloo2-Bold.ttf);
+  font-family: 'Baloo 2';
+  src: url('../fonts/Baloo2-Bold.ttf') format('truetype');
+  font-weight: bold;
 }
 
 @font-face {
-  font-family: baloo-2-extrabold;
-  src: url(../fonts/Baloo2-ExtraBold.ttf);
+  font-family: 'Baloo 2';
+  src: url('../fonts/Baloo2-ExtraBold.ttf') format('truetype');
+  font-weight: 800; /* ExtraBold */
 }
 
 @font-face {
-  font-family: baloo-2-medium;
-  src: url(../fonts/Baloo2-Medium.ttf);
+  font-family: 'Baloo 2';
+  src: url('../fonts/Baloo2-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
 }
 
 @font-face {
-  font-family: baloo-2-regular;
-  src: url(../fonts/Baloo2-Regular.ttf);
+  font-family: 'Baloo 2';
+  src: url('../fonts/Baloo2-Regular.ttf') format('truetype');
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: baloo-2-semibold;
-  src: url(../fonts/Baloo2-SemiBold.ttf);
+  font-family: 'Baloo 2';
+  src: url('../fonts/Baloo2-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold */
 }
 
 @font-face {
-  font-family: baloo-2-variable;
-  src: url(../fonts/Baloo2-VariableFont_wght.ttf);
+  font-family: 'Baloo 2';
+  src: url('../fonts/Baloo2-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400; /* Adjust as needed */
 }
+
 
 .card-list {
   display: grid;
