@@ -17,7 +17,7 @@ const HeroSection = () => {
  
   <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
   A focus{' '}
-  <span className={`text-red-800 ${styles.strike}`}>Hack</span>
+  <span className={`text-red-800 <span className="strike">`}>Hack</span>
   <span className="text-sky-800">System</span> <br /> to help your ADHD brain study
 </h1>
 
