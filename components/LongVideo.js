@@ -7,9 +7,14 @@ const LongVideo = () => {
     <section className="px-4 bg-gray-100 pt-24 sm:pt-32">
       <div className="text-center">
         <div className="flex justify-center pb-6">
-          <h2 className="md:max-w-[600px]  text-2xl md:text-4xl  font-bold leading-6 text-center ">
-          [NEW] Final Year Uni Student With ADHD Reveals the System He Uses to Switch into Focus within 2-6 Minutes When He Needs to Study!
-          </h2>
+        <h2 className="md:max-w-[600px] text-2xl md:text-4xl leading-6 text-center">
+  <span className="font-bold">[</span>
+  <span className="font-extrabold text-red-700">NEW</span>
+  <span className="font-bold">]</span>{" "}
+  <span className="font-bold text-black">
+    Final Year Uni Student With ADHD Reveals the System He Uses to Switch into Focus within 2-6 Minutes When He Needs to Study!
+  </span>
+</h2>
         </div>
         <div className="timer-widget flex justify-center height-auto pt-4 pb-8">
           <div className="inline-block p-0 rounded-lg overflow-hidden">

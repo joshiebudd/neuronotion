@@ -55,7 +55,7 @@ const HeroSection = () => {
       <Image
         style={{ width: "100%" }}
         loading="eager"
-        src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/maindemo.webp"
+        src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/ipaddemo.png"
         alt="template"
         width={800} // Set the width of the image (you can adjust as needed)
         height={566} // Set the height of the image (adjust for the aspect ratio of your image)
