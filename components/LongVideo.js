@@ -16,6 +16,7 @@ const LongVideo = () => {
   </span>
 </h2>
         </div>
+        <h3 className="font-bold text-center mt-4">Plus: A tool you can download for FREE right now to help you focus! (No email required)</h3>
         <div className="timer-widget flex justify-center height-auto pt-4 pb-8">
           <div className="inline-block p-0 rounded-lg overflow-hidden">
             <video
