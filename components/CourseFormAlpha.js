@@ -13,11 +13,15 @@ const CourseFormAlpha = () => {
   return (
     <section className="bg-gray-100 pt-24 sm:pt-32">
       <div className="text-center px-4">
-        <div className=" flex justify-center">
-          <h2 className="md:max-w-[600px] text-2xl md:text-4xl font-bold leading-6 text-center">
-          [NEW] Discover the System that Helps ADHDers to Switch into Focus in 2-6 Minutes Whenever They Need to Study
-          </h2>
-        </div>
+      <div className=" flex justify-center">
+  <h2 className="md:max-w-[600px] text-2xl md:text-4xl leading-6 text-center">
+    <span className="font-extrabold">[NEW]</span>{" "}
+    <span className="font-bold">
+      Discover the System that Helps ADHDers to Switch into Focus in 2-6 Minutes
+      Whenever They Need to Study
+    </span>
+  </h2>
+</div>
         <div className="timer-widget flex justify-center height-auto pt-6 pb-12">
           <Image
             className="md:w-[50%] w-[80%]"
