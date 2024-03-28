@@ -15,11 +15,16 @@ const HeroSection = () => {
 <section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
   <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
  
-  <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
-  A focus{' '}
-  <span className="strike" text-red-800 >Hack</span>
-  <span className="text-sky-800">System</span> <br /> to help your ADHD brain study
-</h1>
+  <div className="flex items-center justify-center">
+  <span className="text-3xl font-bold">A focus</span>
+  <div className="relative inline-block">
+    <span className="text-3xl font-bold">
+      <span className="line-through">Hack</span>
+    </span>
+    <span className="absolute -top-6 left-0 text-sm font-normal">System</span>
+  </div>
+  <span className="text-3xl font-bold">to help your ADHD brain study.</span>
+</div>
 
 
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
