@@ -1,5 +1,4 @@
 import React from "react";
-import FooterSection from "../components/FooterSection";
 import FreeBie from "../components/FreeBie";
 import LongVideo from "../components/LongVideo";
 
@@ -8,7 +7,6 @@ const Beta = () => {
     <>
       <LongVideo />
       <FreeBie />
-      <FooterSection />
     </>
   );
 };

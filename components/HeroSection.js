@@ -12,21 +12,16 @@ const HeroSection = () => {
   };
 
   return (
-<section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
-  <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
- 
-  <div className="relative bg-purple-100 p-5 rounded-lg shadow-lg max-w-xl mx-auto">
-      <p className="font-semibold text-2xl text-gray-800 leading-snug tracking-tighter">
-        A focus{' '}
-        <span className="relative text-purple-600">
-          <span className="absolute -top-7 left-0 text-xs text-gray-600 italic">System</span>
-          <span className="line-through decoration-wavy decoration-pink-500">hack</span>
-        </span>{' '}
-        to help your ADHD brain study.
-      </p>
-    </div>
-
-
+    <section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
+      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
+        <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl">
+          A focus{' '}
+          <span className="relative">
+            <span className="absolute -top-7 left-0 text-xs text-gray-600 italic">System</span>
+            <span className="line-through decoration-wavy decoration-red-500 text-red-800">Hack</span>
+          </span>{' '}
+          <br /> to help your ADHD brain study
+        </h1>
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
     Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
     </p>
