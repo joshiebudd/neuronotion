@@ -12,16 +12,16 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="bg-gray-100 hero-section pt-24 sm:pt-32">
-      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-        <h1 className="mb-10 font-bold leading-none tracking-tight text-black text-5xl relative inline-block">
-          The Only Focus {' '}
-          <span className="relative text-black">
-            <span className="absolute -top-12 -left-4 sm:-left-4 md:-left-5 lg:-left-8 text-5xl font-bold text-fuchsia-500 whitespace-nowrap">System</span>
-            <span className="line-through decoration-wavy decoration-fuchsia-500">&quot;Hack&quot;</span>
-          </span>
-          {' '}Your <br /> ADHD Brain Needs to Study.
-        </h1>
+    <section id="hero" class="bg-gray-100 hero-section pt-24 sm:pt-32">
+  <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
+    <h1 class="mb-10 font-bold leading-none tracking-tight text-black text-5xl relative inline-block">
+      The Only Focus {' '}
+      <span class="relative text-black">
+        <span class="text-5xl font-bold text-purple-400 whitespace-nowrap system-text">System</span>
+        <span class="line-through decoration-wavy decoration-purple-400">"Hack"</span>
+      </span>
+      {' '}Your <br /> ADHD Brain Needs to Study.
+    </h1>
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
     Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
     </p>
@@ -30,7 +30,7 @@ const HeroSection = () => {
       <a
         href="#pricing"
         onClick={handleButtonClick}
-        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-sky-800 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
+        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-purple-400 px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
       >
         Get Lifetime Access.
       </a>
