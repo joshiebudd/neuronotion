@@ -20,7 +20,7 @@ const HeroSection = () => {
         <span class="absolute inset-x-0 top-0 mx-auto text-5xl sm:text-3xl font-bold text-blue-500 transform -translate-y-full">System</span>
         <span class="line-through decoration-wavy decoration-blue-500">&quot;Hack&quot;</span>
       </span>
-      Your <br /> ADHD Brain Needs to Study.
+      To Help Your <br /> ADHD Brain Study.
     </h1>
     <p className="mb-10 text-xl font-normal text-black sm:px-18 xl:px-48 mt-6">
     Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
