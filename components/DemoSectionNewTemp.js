@@ -57,7 +57,7 @@ const DemoSection = () => {
             onClick={handleButtonClick}
             className="StandardCheckoutButton inline-block rounded-lg bg-black px-8 py-4 text-lg font-bold text-white hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300"
           >
-            Buy Now
+            Get Lifetime Access
           </a>
         </div>
 
