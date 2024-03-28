@@ -15,7 +15,7 @@ const CourseFormAlpha = () => {
       <div className="text-center px-4">
         <div className=" flex justify-center">
           <h2 className="md:max-w-[600px] text-2xl md:text-4xl font-bold leading-6 text-center">
-            Make ADHD your Superpower with a Study Focus System.
+          [NEW] Discover the System that Helps ADHDers to Switch into Focus in 2-6 Minutes Whenever They Need to Study
           </h2>
         </div>
         <div className="timer-widget flex justify-center height-auto pt-6 pb-12">

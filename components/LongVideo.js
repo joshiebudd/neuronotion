@@ -8,7 +8,7 @@ const LongVideo = () => {
       <div className="text-center">
         <div className="flex justify-center pb-6">
           <h2 className="md:max-w-[600px]  text-2xl md:text-4xl  font-bold leading-6 text-center ">
-          Make ADHD your Superpower with a Study Focus System
+          [NEW] Final Year Uni Student With ADHD Reveals the System He Uses to Switch into Focus within 2-6 Minutes When He Needs to Study!
           </h2>
         </div>
         <div className="timer-widget flex justify-center height-auto pt-4 pb-8">
