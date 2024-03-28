@@ -97,7 +97,7 @@ const CourseFormBeta = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mb-8">
+      <div className="flex justify-center mb-16">
         <button
           type="submit"
           class="flex w-80 justify-center rounded-md bg-sky-800 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
