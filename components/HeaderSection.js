@@ -169,8 +169,8 @@ const HeaderSection = () => {
               <a
                 href="#pricing"
                 onClick={handleButtonClick}
-                className="StandardCheckoutButton inline-block mb-0 rounded-lg bg-blue-600 px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
-                >
+                className="inline-block rounded-lg bg-blue-600 px-4 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-5 lg:py-3 hidden sm:block"
+              >
                 Get for Free
               </a>
               <div className="block sm:hidden">
