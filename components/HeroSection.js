@@ -44,7 +44,7 @@ const HeroSection = () => {
         ★★★★★
       </span>
     </div>
-    <span className="mt-0 mb-0 text-sm font-baloo font-regular text-slate-950">
+    <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
        &quot;Completely changed my study system - for the better!&quot;
     </span>
   </div>
