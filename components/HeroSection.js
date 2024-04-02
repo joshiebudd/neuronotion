@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
 <section id="hero" class="bg-gray-100 hero-section pt-24 sm:pt-32">
   <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-  <div className="px-0 md:px-20">
+  <div className="px-0 md:px-80">
           <Image
             style={{ width: "100%" }}
             loading="eager"
