@@ -34,8 +34,8 @@ const Benefits1 = () => {
               <div className="flex items-center">
                 <UpArrowIcon color="#15803d" />
                 <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 ml-4">
-                  More Hyperfocus
-                </div>
+        More <span className="text-blue-600">Hyperfocus</span>
+      </div>
               </div>
               <div className="flex items-center mt-4">
                 <DownArrowIcon color="#b91c1c" />
@@ -44,11 +44,11 @@ const Benefits1 = () => {
                 </div>
               </div>
             </div>
-            <div className="text-xl my-8">
+            <div className="text-xl font-baloo font-normal my-6">
               Lock into your studies and get into the zone, distraction-free.
               All the focus tools you need, just one click away.
             </div>
-            <div className="text-2xl font-bold flex items-center mt-4">
+            <div className="text-2xl font-baloo font-semibold text-gray-900 flex items-center mt-6">
               <Image
                 src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
                 alt="Tick Icon"
@@ -57,7 +57,7 @@ const Benefits1 = () => {
               />
               <div className="ml-4">Science-backed Tools.</div>
             </div>
-            <div className="text-2xl font-bold flex items-center mt-8">
+            <div className="text-2xl font-baloo font-semibold text-gray-900 flex items-center mt-6">
               <Image
                 src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
                 alt="Tick Icon"
@@ -66,7 +66,7 @@ const Benefits1 = () => {
               />
               <div className="ml-4">Distraction Free Zone.</div>
             </div>
-            <div className="text-2xl font-bold flex items-center mt-8">
+            <div className="text-2xl font-baloo font-semibold text-gray-900 flex items-center mt-6">
               <Image
                 src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
                 alt="Tick Icon"
