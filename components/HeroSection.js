@@ -12,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-<section id="hero" class="bg-gray-100 hero-section pt-24 sm:pt-32">
+<section id="hero" class="bg-blue-50 hero-section pt-24 sm:pt-32">
   <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
   <div className="px-0 md:px-80">
           <Image
@@ -25,7 +25,7 @@ const HeroSection = () => {
             priority={1}
           />
         </div>
-    <p className="mb-10 text-xl font-baloo font-regular text-black sm:px-18 xl:px-24 mt-3">
+    <p className="mt-6 mb-6 text-xl font-baloo font-regular text-slate-950 sm:px-18 xl:px-24 mt-3">
     Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
     </p>
     <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
@@ -33,25 +33,19 @@ const HeroSection = () => {
       <a
         href="#pricing"
         onClick={handleButtonClick}
-        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-blue-600 px-8 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+        className="StandardCheckoutButton inline-block mb-4 sm:mb-0 rounded-lg bg-blue-600 px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
       >
         Get for Free.
       </a>
     </div>
-    <p className="mt-2 font-bold text-md text-center text-sm">
-      Guaranteed to improve your studies, or your money back.
-    </p>
     {/* Stars */}
     <div className="mb-2 flex justify-center">
-      <span className="mt-3 mb-0 text-3xl leading-none text-orange-600">
+      <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">
         ★★★★★
       </span>
     </div>
-    <span className="mt-0 mb-0 text-sm text-gray-800">
-      <a href="#review" className="underline">
-        4.86/5
-      </a>{" "}
-      from 1,300+ Students with ADHD.
+    <span className="mt-0 mb-0 text-sm font-baloo font-regular text-slate-950">
+       &quot;Completely changed my study system - for the better!&quot;
     </span>
   </div>
     
