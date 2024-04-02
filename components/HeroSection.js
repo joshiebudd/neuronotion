@@ -33,9 +33,9 @@ const HeroSection = () => {
       <a
         href="#pricing"
         onClick={handleButtonClick}
-        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-blue-500 px-8 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+        className="StandardCheckoutButton inline-block mb-2 sm:mb-0 rounded-lg bg-blue-600 px-8 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
       >
-        Get Lifetime Access.
+        Get for Free.
       </a>
     </div>
     <p className="mt-2 font-bold text-md text-center text-sm">
