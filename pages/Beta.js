@@ -1,6 +1,6 @@
 import React from "react";
 import FreeBie from "../components/CourseCampaign/FreeBie";
-import LongVideo from "../components/LongVideo";
+import LongVideo from "../components/CourseCampaign/LongVideo";
 
 const Beta = () => {
   return (
