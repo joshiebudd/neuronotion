@@ -15,22 +15,22 @@ const Benefits1 = () => {
   {' '} ADHD </span> experts.{' '}
  <span className="sm:block">
   For <span className="from-blue-400 to-blue-700 bg-gradient-to-tl bg-clip-text text-transparent">
-  {' '} ADHD</span> students ✨</span>
+  {' '} ADHD</span> students 🎓</span>
 </h2>
 <p className="mt-2 text-gray-700 text-lg font-baloo font-regular text-gray-900">
-  We understand your struggles.{' '}
+  We understand your struggles...{' '}
   <span className="inline sm:inline-block">
-    <br /> This tool directly tackles them.
+    <br /> and built this tool to directly tackle them.
   </span>
 </p>
         </div>
         <div className="gap-x-4 lg:gap-y-2 flex items-center justify-center mt-16 flex-wrap md:flex-nowrap">
-          <div className="flex items-center text-center justify-center my-0 mx-0 order-2 md:order-1 w-full min-w-[200px] md:w-fit">
+          <div className="flex items-center text-center justify-center order-2 md:order-1 w-full min-w-[200px] md:w-fit">
             <Image
               src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit1.webp"
               alt="More Hyper-focus, Less Distractions"
-              width={480}
-              height={480}
+              width={540}
+              height={540}
             />
           </div>
 
