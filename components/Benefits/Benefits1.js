@@ -36,13 +36,23 @@ const Benefits1 = () => {
           <div className="max-w-[600px] flex flex-col mb-12 order-1 md:mb-0 md:order-2 lg:items-start lg:mx-4">
             <div>
               <div className="flex items-center">
-                <UpArrowIcon/>
+              <Image
+                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/blueArrowUp.webp"
+                alt="Blue Up Arrow"
+                width={48}
+                height={48}
+              />
                 <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 ml-4">
         More <span className="from-blue-400 to-blue-700 bg-gradient-to-br bg-clip-text text-transparent">Hyperfocus</span>
       </div>
               </div>
               <div className="flex items-center mt-4">
-                <DownArrowIcon color="" />
+              <Image
+                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/blueArrowUp.webp"
+                alt="Blue Up Arrow"
+                width={64}
+                height={64}
+              />
                 <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 ml-4">
                   Less Distractions
                 </div>
