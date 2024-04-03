@@ -33,7 +33,9 @@ const HeroSection = () => {
       <a
         href="#pricing"
         onClick={handleButtonClick}
-        className="StandardCheckoutButton inline-block mb-2 rounded-lg bg-blue-600 px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+        className="StandardCheckoutButton inline-block 
+        bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-blue-400 to-blue-700
+        mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
         >
         Get for Free.
       </a>

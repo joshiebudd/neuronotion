@@ -9,8 +9,12 @@ const Benefits1 = () => {
       <div className="py-2 pb-8 sm:pb-24 px-8 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
         <div className="max-w-screen-md mx-auto text-center mb-1 mt-2">
         <h2 className="text-4xl font-baloo font-bold text-gray-800">
- Built by <span className="text-blue-600">ADHD</span> experts.{' '}
- <span className="sm:block">For <span className="text-blue-600">ADHD</span> students ✨</span>
+ Built by 
+ <span className="from-blue-400 to-blue-700 bg-gradient-to-tr bg-clip-text text-transparent">
+  {' '} ADHD </span> experts.{' '}
+ <span className="sm:block">
+  For <span className="from-blue-400 to-blue-700 bg-gradient-to-tl bg-clip-text text-transparent">
+  {' '} ADHD</span> students ✨</span>
 </h2>
 <p className="mt-2 text-gray-700 text-lg font-baloo font-regular text-gray-900">
   We know your struggles,{' '}
@@ -34,7 +38,7 @@ const Benefits1 = () => {
               <div className="flex items-center">
                 <UpArrowIcon color="#15803d" />
                 <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 ml-4">
-        More <span className="text-blue-600">Hyperfocus</span>
+        More <span className="from-blue-400 to-blue-700 bg-gradient-to-br bg-clip-text text-transparent">Hyperfocus</span>
       </div>
               </div>
               <div className="flex items-center mt-4">

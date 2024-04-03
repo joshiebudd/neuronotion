@@ -36,10 +36,10 @@ const PricingSection = () => {
           <div className="flex flex-col p-6 pb-12 pt-16 w-80 md:w-72 text-center text-gray-700 bg-gray-100 rounded-2xl border border-gray-200 shadow-xl items-center">
             <h3 className="mb-1 text-2xl font-semibold">Basic</h3>
             <div className="flex justify-center items-baseline my-2">
-              <span className="mr-2 text-5xl font-bold">$4.99</span>
+              <span className="mr-2 text-5xl font-bold">$0.00</span>
             </div>
             <p className="mt-6 mb-3 italic text-gray-800 sm:text-lg">
-              One-time payment.
+              Lifetime Access Free.
             </p>
             <hr className="w-full border-1 border-gray-500 mb-4" />
             <ul role="list" className="mb-8 space-y-4 text-left h-52">
@@ -71,7 +71,7 @@ const PricingSection = () => {
               </li>
             </ul>
             <a
-              href="https://buy.stripe.com/aEU16f4bl5oS9TGdR1"
+              href="https://affiliate.notion.so/adhd-template-neuro-notion"
               id="GetBasicButton"
               className="text-white bg-gray-600 hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logBasicPackageEvent}
