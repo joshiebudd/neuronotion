@@ -71,7 +71,7 @@ const PricingSection = () => {
               </li>
             </ul>
             <a
-              href="https://affiliate.notion.so/adhd-template-neuro-notion"
+              href="https://buy.stripe.com/dR6aGP8rBg3we9W9AS"
               id="GetBasicButton"
               className="text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:ring-blue-200 font-baloo font-bold rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={logBasicPackageEvent}
