@@ -32,7 +32,6 @@ const HeroSection = () => {
           anytime soon.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
-          {/* Get NeuroNotes Button */}
           <a
             href="#pricing"
             onClick={handleButtonClick}
@@ -42,7 +41,6 @@ const HeroSection = () => {
           </a>
         </div>
         <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12 lg:py-4">
-          {/* Next.js Image component for optimized image loading */}
           <div className="centered-image max-w-full lg:max-w-[800px] sm:pb-12">
             <Image
               style={{ width: "100%" }}
@@ -55,6 +53,7 @@ const HeroSection = () => {
             />
           </div>
         </div>
+      
         {/* Testimonials */}
         <div className="mb-2 flex justify-center">
           <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">
@@ -78,7 +77,7 @@ const HeroSection = () => {
           </span>
         </div>
         <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
-          &quot;Don't sleep on this one people! The promises are real!&quot;
+          &quot;Don&apos;t sleep on this one people! The promises are real!&quot;
         </span>
       </div>
     </section>
