@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Benefits2 = () => {
   return (
-    <section id="benefits" className="bg-gray-100 benefits-section">
+    <section id="benefits" className="bg-blue-50 benefits-section">
       <div className="py-1 pb-8 sm:pb-24 px-8 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
         <div className="gap-x-4 lg:gap-y-2 flex justify-center flex-wrap md:flex-nowrap items-center mt-14">
           <div className="flex items-center text-center justify-center mb-2 mt-2 order-2 w-full md:w-fit">

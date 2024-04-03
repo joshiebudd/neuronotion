@@ -20,7 +20,7 @@ const FeaturesSection = () => {
   return (
     <section
       id="features"
-      className="pt-24 bg-gray-100 features_section mb-0 pb-16"
+      className="pt-24 bg-blue-50 features_section mb-0 pb-16"
     >
       <div className="sm:pb-20 px-4">
         <div className="max-w-7xl mx-auto">

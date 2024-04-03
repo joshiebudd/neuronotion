@@ -13,7 +13,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faqs" className="bg-gray-100 pb-12 pt-24 FAQ_section">
+    <section id="faqs" className="bg-blue-50 pb-12 pt-24 FAQ_section">
       <div className="text-center">
         <h2 className="font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-900">
           Frequently Asked Questions ❔
