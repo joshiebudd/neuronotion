@@ -36,7 +36,7 @@ const PricingSection = () => {
           <div className="flex flex-col p-6 pb-12 pt-16 w-80 md:w-72 text-center text-gray-800 bg-gray-100 rounded-2xl border border-gray-200 shadow-xl items-center">
             <h3 className="mb-1 text-3xl font-baloo font-baloo font-semibold">Basic</h3>
             <div className="flex justify-center items-baseline my-2">
-              <span className="mr-2 text-5xl font-baloo font-semibold">$0.00</span>
+              <span className="mr-2 text-5xl font-baloo font-semibold">Free</span>
             </div>
             <p className="mt-3 mb-3 font-baloo italic text-gray-800 sm:text-lg">
               Lifetime Access Free.

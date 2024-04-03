@@ -11,12 +11,12 @@ const ReviewSection = () => {
     >
       <div className="gap-3.5 max-w-screen-sm	overflow-hidden p-10">
         <div>
-          <h2 className=" text-4xl tracking-tight font-baloo font-bold leading-10	text-gray-900 text-center">
+          <h2 className=" text-4xl sm:px-24 tracking-tight font-baloo font-bold leading-10	text-gray-900 text-center">
             What Our Community Thinks About Us 👨‍👩‍👦‍👦
           </h2>
         </div>
         <div className="pt-3">
-          <p className="text-center text-lg font-baloo text-center leading-6 text-gray-800">
+          <p className="text-center sm:px-24 text-lg font-baloo text-center leading-6 text-gray-800">
             Over 1,000 users have transformed their study system with Neuro Notion.
           </p>
         </div>

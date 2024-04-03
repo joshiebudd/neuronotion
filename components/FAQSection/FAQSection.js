@@ -13,12 +13,12 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faqs" className="bg-blue-50 pb-12 pt-24 FAQ_section">
+    <section id="faqs" className="bg-gray-800 pb-12 pt-24 FAQ_section">
       <div className="text-center">
-        <h2 className="font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-900">
+        <h2 className="font-baloo font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-100">
           Frequently Asked Questions ❔
         </h2>
-        <p className="font-normal text-base leading-6 text-gray-900 lg:w-8/12 md:w-9/12 mx-auto text-xl mt-6">
+        <p className="font-baloo leading-6 text-gray-100 lg:w-8/12 md:w-9/12 mx-auto text-xl mt-3 px-14 sm:px-24">
           Answers to some commonly asked questions.
         </p>
       </div>
@@ -28,7 +28,7 @@ const FAQSection = () => {
         <div className="w-full md:w-6/12 lg:w-6/12 mx-auto">
           {/* FAQ Item 0 */}
           <FAQItem>
-            <h3 className="font-semibold text-xl leading-5 text-gray-800">
+            <h3 className="font-baloo font-semibold text-xl leading-5 text-gray-800">
               What is a Notion Template?
             </h3>
             <p

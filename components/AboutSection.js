@@ -3,23 +3,29 @@ import React from "react";
 const AboutSection = () => {
   return (
     <section id="about" className="bg-blue-50 About_NeuroNotion">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:pt-10 lg:px-6 text-center">
+      <div className="py-12 px-4 mx-auto max-w-screen-xl lg:pt-10 lg:px-6 text-center">
         <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg">
-          <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900">
+          <h2 className="mb-4 text-4xl tracking-tight font-baloo font-bold text-gray-900">
             About Neuro Notion
           </h2>
-          <p className="mb-4 mt-6 font-light text-xl">
-            Neuro Notion was founded out of frustration for a lack of tools for
+          <p className="mb-4 mt-6 font-baloo text-xl">
+            Neuro Notion was <b>founded out of frustration </b> for a lack of tools for
             people with ADHD. There are so many amazing productivity tools out
             there, Notion being one of them, but using 10 different apps only
-            leads to inevitable distractions. <br /> <br /> So, we made it our
-            job to create something simple, but mightily impressive that would
-            leave no choice but to stay focused. <br /> <br /> We spoke to
-            countless ADHDers and listened to what they wanted in a tool like
+            leads to <b>inevitable distractions. </b> 
+            <br /> 
+            <br /> 
+            So, we made it our
+            job to create something <b>simple, but mightily impressive </b> that would
+            leave no choice but to stay focused. 
+            <br />
+            <br /> We spoke to countless ADHDers and <b> listened to what they wanted </b> in a tool like
             this - and made exactly that. All of our team use it and find it
             extremely helpful - and we hope you do too!
+            <br />
+            <br />
           </p>
-          <p className="mb-4 font-medium text-xl text-gray-900">
+          <p className="mb-4 font-baloo font-medium italic text-xl text-gray-900">
             We would love to hear your thoughts or testimonials to display on
             our website - please reach out and contact the team!
           </p>

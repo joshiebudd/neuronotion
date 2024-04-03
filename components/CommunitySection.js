@@ -22,13 +22,15 @@ const CommunitySection = () => {
 
   return (
     <section className="bg-white community-section">
-      <div className="py-0 pb-0 px-4 mx-auto max-w-screen-xl pt-20">
+      <div className="px-4 mx-auto max-w-screen-xl pt-16">
         <div className="max-w-screen-md mb-2 lg:mb-16 mx-auto text-center">
-          <h2 className="mb-4 text-4xl tracking-tight font-bold text-black">
-            Join our growing community.
-            <br /> Find your Body Double Buddy 🤝
-          </h2>
-          <p className="text-xl mt-12 mb-0 text-gray-900">
+        <h2 className="mb-4 text-4xl tracking-tight font-baloo font-bold text-gray-900">
+        Find your{' '}
+        <span className="from-blue-400 to-blue-700 bg-gradient-to-tr bg-clip-text text-transparent">
+        Body Double Buddy.
+        </span> Join our growing community🤍
+        </h2>
+          <p className="text-xl mt-4 mb-0 font-baloo text-gray-900">
             Access our exclusive community, find fellow ADHDers, learn effective
             study tools, and stay in the loop with updates and tutorials.
           </p>
@@ -48,11 +50,11 @@ const CommunitySection = () => {
 
         <div
           id="counter_container"
-          className="max-w-screen-xl px-4 py-1 mt-12 sm:mt-0 text-center lg:py-16 lg:px-6"
+          className="max-w-screen-xl px-4 py-1 mt-4 sm:mt-0 text-center lg:py-16 lg:px-6"
         >
           <div className="grid max-w-screen-md text-gray-900 grid-cols-3 mx-auto justify-items-center">
             <div className="flex flex-col items-center py-2 w-auto">
-              <dt className="mb-1 text-3xl md:text-4xl font-bold">
+              <dt className="mb-1 text-3xl md:text-4xl font-baloo font-bold">
                 <CountUp
                   start={countStart ? 0 : null}
                   end={1354}
@@ -61,10 +63,10 @@ const CommunitySection = () => {
                   redraw
                 ></CountUp>
               </dt>
-              <dd className="mb-4 font-light text-black">Study buddies</dd>
+              <dd className="mb-6 font-light font-baloo text-gray-900">Study buddies</dd>
             </div>
             <div className="flex flex-col items-center py-2 w-auto">
-              <dt className="mb-1 text-3xl md:text-4xl font-bold">
+              <dt className="mb-1 text-3xl md:text-4xl font-baloo font-bold">
                 <CountUp
                   start={countStart ? 0 : null}
                   end={27245}
@@ -73,10 +75,10 @@ const CommunitySection = () => {
                   redraw
                 ></CountUp>
               </dt>
-              <dd className="mb-4 font-light text-black">Notes created</dd>
+              <dd className="mb-2 font-light font-baloo text-gray-900">Notes created</dd>
             </div>
             <div className="flex flex-col items-center py-2 w-auto">
-              <dt className="mb-1 text-3xl md:text-4xl font-bold">
+              <dt className="mb-1 text-3xl md:text-4xl font-baloo font-bold">
                 <CountUp
                   start={countStart ? 0 : null}
                   end={51}
@@ -85,7 +87,7 @@ const CommunitySection = () => {
                   redraw
                 ></CountUp>
               </dt>
-              <dd className="mb-4 font-light text-black">Countries </dd>
+              <dd className="mb-2 font-light font-baloo text-gray-900">Countries </dd>
             </div>
           </div>
         </div>
