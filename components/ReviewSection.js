@@ -9,9 +9,12 @@ const ReviewSection = () => {
        flex-col flex-nowrap gap-5 h-min justify-start overflow-visible position-relative
         w-full"
     >
-      <div className="gap-3.5 max-w-screen-sm	overflow-hidden p-10">
+      <div className="gap-3.5 max-w-screen-sm	text-center overflow-hidden p-10">
+      <div className="inline-block px-3 py-1 mb-6 bg-blue-300 rounded-full text-xs text-grey-950 font-baloo font-semibold">
+            Reviews
+            </div>
         <div>
-          <h2 className=" text-4xl sm:px-24 tracking-tight font-baloo font-bold leading-10	text-gray-900 text-center">
+          <h2 className=" text-4xl sm:px-24 tracking-tight font-baloo font-bold leading-10	text-gray-900">
             What Our Community Thinks About Us 👨‍👩‍👦‍👦
           </h2>
         </div>

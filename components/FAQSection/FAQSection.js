@@ -13,8 +13,11 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faqs" className="bg-gray-800 pb-12 pt-24 FAQ_section">
+    <section id="faqs" className="bg-gray-800 py-12 sm:py-16 FAQ_section">
       <div className="text-center">
+      <div className="inline-block px-3 py-1 mb-6 bg-blue-300 rounded-full text-xs text-grey-950 font-baloo font-semibold">
+            FAQs
+            </div>
         <h2 className="font-baloo font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-100">
           Frequently Asked Questions ❔
         </h2>

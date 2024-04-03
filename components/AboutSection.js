@@ -3,7 +3,10 @@ import React from "react";
 const AboutSection = () => {
   return (
     <section id="about" className="bg-blue-50 About_NeuroNotion">
-      <div className="py-12 px-4 mx-auto max-w-screen-xl lg:pt-10 lg:px-6 text-center">
+      <div className="py-12 sm:px-16 px-4 mx-auto max-w-screen-xl sm:px-6 text-center">
+      <div className="inline-block px-3 py-1 mb-6 bg-blue-300 rounded-full text-xs text-grey-950 font-baloo font-semibold">
+            About us
+            </div>
         <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg">
           <h2 className="mb-4 text-4xl tracking-tight font-baloo font-bold text-gray-900">
             About Neuro Notion

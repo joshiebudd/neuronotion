@@ -26,14 +26,17 @@ const DemoSection = () => {
   };
 
   return (
-    <section id="demo" className="bg-gray-800 demo-section pt-12">
+    <section id="demo" className="bg-gray-800 demo-section pt-12 pb-12 sm:pb-16 sm:pt-16">
       {zoomed && (
         <ImageViewer
           src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
           onClose={handleImageViewerClose}
         />
       )}
-      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
+      <div className="mx-auto max-w-screen-xl px-4 text-center sm:px-16">
+      <div className="inline-block px-3 py-1 mb-6 bg-blue-300 rounded-full text-xs text-grey-950 font-baloo font-semibold">
+            Demo
+            </div>
         <h1 className="mb-4 text-4xl font-baloo font-bold text-gray-100 leading-none tracking-tight">
           How does it work? 🤷‍♂️
         </h1>

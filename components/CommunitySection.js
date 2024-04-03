@@ -21,9 +21,12 @@ const CommunitySection = () => {
   }, []);
 
   return (
-    <section className="bg-white community-section">
-      <div className="px-4 mx-auto max-w-screen-xl pt-16">
-        <div className="max-w-screen-md mb-2 lg:mb-16 mx-auto text-center">
+    <section className="bg-white text-center community-section">
+      <div className="px-4 mx-auto max-w-screen-xl py-12 sm:py-16">
+      <div className="inline-block px-3 py-1 mb-6 bg-blue-300 rounded-full text-xs text-grey-950 font-baloo font-semibold">
+            Community
+            </div>
+        <div className="max-w-screen-md mb-2 mx-auto text-center">
         <h2 className="mb-4 text-4xl tracking-tight font-baloo font-bold text-gray-900">
         Find your{' '}
         <span className="from-blue-400 to-blue-700 bg-gradient-to-tr bg-clip-text text-transparent">
@@ -63,7 +66,7 @@ const CommunitySection = () => {
                   redraw
                 ></CountUp>
               </dt>
-              <dd className="mb-6 font-light font-baloo text-gray-900">Study buddies</dd>
+              <dd className="mb-3 sm:mb-6 font-light font-baloo text-gray-900">Study buddies</dd>
             </div>
             <div className="flex flex-col items-center py-2 w-auto">
               <dt className="mb-1 text-3xl md:text-4xl font-baloo font-bold">

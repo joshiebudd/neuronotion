@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import CheckIcon from "./Common/Icons/CheckIcon";
 import CrossIcon from "./Common/Icons/CrossIcon";
 import { track } from "@vercel/analytics";
@@ -20,9 +19,12 @@ const PricingSection = () => {
   return (
     <section
       id="pricing"
-      className="bg-white payment_section pt-16 mb-8 sm:mb-20"
+      className="bg-white payment_section py-12 sm:py-16"
     >
-      <div className="py-8 px-4 md:px-52">
+      <div className="px-4 text-center md:px-52">
+      <div className="inline-block px-3 py-1 mb-6 bg-blue-300 rounded-full text-xs text-grey-950 font-baloo font-semibold">
+            Pricing
+            </div>
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
           <h2 className="mb-2 text-4xl tracking-tight font-baloo font-bold text-gray-900">
             One Payment, Unlimited Usage ♾️
