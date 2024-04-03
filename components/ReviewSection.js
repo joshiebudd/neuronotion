@@ -11,12 +11,12 @@ const ReviewSection = () => {
     >
       <div className="gap-3.5 max-w-screen-sm	overflow-hidden p-10">
         <div>
-          <h2 className=" text-4xl tracking-tight font-bold  leading-10	text-center">
-            What Our Community Thinks About Us
+          <h2 className=" text-4xl tracking-tight font-baloo font-bold leading-10	text-gray-900 text-center">
+            What Our Community Thinks About Us 👨‍👩‍👦‍👦
           </h2>
         </div>
         <div className="pt-3">
-          <p className="text-center text-xl text-center leading-6 text-gray-700">
+          <p className="text-center text-lg font-baloo text-center leading-6 text-gray-800">
             Over 1,000 users have transformed their study system with Neuro Notion.
           </p>
         </div>
@@ -28,7 +28,7 @@ const ReviewSection = () => {
           marginBottom: "30px",
         }}
         src="https://widget.senja.io/widget/d2b3e6ba-b6ed-47f2-8c12-3fb4bfae5ed1"
-        scrolling="no"
+        scrolling="yes"
       />
     </section>
   );

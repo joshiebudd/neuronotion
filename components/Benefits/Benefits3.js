@@ -4,13 +4,13 @@ import Image from "next/image";
 const Benefits3 = () => {
   return (
     <section id="benefits" className="bg-white benefits-section flex justify-center">
-      <div className="py-2 pb-8 sm:pb-24 px-8 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
+      <div className="pt-2 pb-4 sm:pb-24 px-8 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
         <div className="gap-x-4 lg:gap-y-2 flex items-center mt-12 flex-wrap md:flex-nowrap">
-          <div className="flex items-center text-center justify-center mb-2 mt-2 mx-12 order-2 md:order-1 w-full min-w-[200px] md:w-fit">
+          <div className="flex items-center text-center justify-center order-2 md:order-1 w-full min-w-[200px] md:w-fit">
             <Image
               src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit3.webp"
               alt="More Hyper-focus, Less Distractions"
-              width={240}
+              width={320}
               height={320}
             />
           </div>

@@ -7,14 +7,14 @@ const Benefits2 = () => {
       id="benefits"
       className="bg-blue-50 benefits-section flex justify-center"
     >
-      <div className="py-1 pb-8 sm:pb-24 px-8 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
+      <div className="py-1 pb-8 sm:pb-12 px-8 mx-auto max-w-screen-xl">
         <div className="gap-x-4 lg:gap-y-2 flex justify-center flex-wrap md:flex-nowrap items-center mt-14">
           <div className="flex items-center text-center justify-center mb-2 mt-2 order-2 w-full md:w-fit">
             <Image
               src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/benefit2.webp"
               alt="Features Showcase"
-              width={320}
-              height={320}
+              width={360}
+              height={360}
             />
           </div>
           <div className="lg:mx-4 flex flex-col max-w-[600px] items-start mb-12 md:mb-0 order-1">
