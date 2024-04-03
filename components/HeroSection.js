@@ -34,22 +34,12 @@ const HeroSection = () => {
         href="#pricing"
         onClick={handleButtonClick}
         className="StandardCheckoutButton inline-block 
-        bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-blue-400 to-blue-700
+        bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-sky-500 to-blue-700
         mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
         >
         Get for Free.
       </a>
     </div>
-    {/* Stars */}
-    <div className="mb-2 flex justify-center">
-      <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">
-        ★★★★★
-      </span>
-    </div>
-    <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
-       &quot;Completely changed my study system - for the better!&quot;
-    </span>
-  </div>
     
   <div className="mx-auto max-w-screen-xl px-4 py-4 text-center lg:px-12 lg:py-4">
     {/* Next.js Image component for optimized image loading */}
@@ -65,6 +55,18 @@ const HeroSection = () => {
       />
     </div>
   </div>
+
+ {/* Stars */}
+ <div className="mb-2 flex justify-center">
+      <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">
+        ★★★★★
+      </span>
+    </div>
+    <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
+       &quot;Completely changed my study system - for the better!&quot;
+    </span>
+  </div>
+
 </section>
 
 
