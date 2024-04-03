@@ -1,6 +1,4 @@
 import React from "react";
-import UpArrowIcon from "../Common/Icons/UpArrowIcon";
-import DownArrowIcon from "../Common/Icons/DownArrowIcon";
 import Image from "next/image";
 
 const Benefits1 = () => {
@@ -48,10 +46,10 @@ const Benefits1 = () => {
               </div>
               <div className="flex items-center mt-4">
               <Image
-                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/blueArrowUp.webp"
+                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/redArrowDown.webp"
                 alt="Blue Up Arrow"
-                width={64}
-                height={64}
+                width={48}
+                height={48}
               />
                 <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 ml-4">
                   Less Distractions
