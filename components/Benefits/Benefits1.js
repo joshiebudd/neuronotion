@@ -37,21 +37,20 @@ const Benefits1 = () => {
               <Image
                 src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/blueArrowUp.webp"
                 alt="Blue Up Arrow"
-                width={48}
-                height={48}
-              />
-                <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 ml-4">
+                width={36}
+                height={36}
+              />                <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 ml-4">
         More <span className="from-blue-400 to-blue-700 bg-gradient-to-br bg-clip-text text-transparent">Hyperfocus</span>
       </div>
               </div>
               <div className="flex items-center mt-4">
               <Image
                 src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/redArrowDown.webp"
-                alt="Blue Up Arrow"
-                width={48}
-                height={48}
+                alt="Red Down Arrow"
+                width={36}
+                height={36}
               />
-                <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 ml-4">
+            <div className="text-4xl tracking-tight font-baloo font-bold text-gray-900 text-opacity-80 ml-4">
                   Less Distractions
                 </div>
               </div>
@@ -62,7 +61,7 @@ const Benefits1 = () => {
             </div>
             <div className="text-2xl font-baloo font-semibold text-gray-900 flex items-center mt-6">
               <Image
-                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
+                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/blueTick.webp"
                 alt="Tick Icon"
                 width={32}
                 height={32}
@@ -71,7 +70,7 @@ const Benefits1 = () => {
             </div>
             <div className="text-2xl font-baloo font-semibold text-gray-900 flex items-center mt-6">
               <Image
-                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
+                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/blueTick.webp"
                 alt="Tick Icon"
                 width={32}
                 height={32}
@@ -80,7 +79,7 @@ const Benefits1 = () => {
             </div>
             <div className="text-2xl font-baloo font-semibold text-gray-900 flex items-center mt-6">
               <Image
-                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick.png"
+                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/blueTick.webp"
                 alt="Tick Icon"
                 width={32}
                 height={32}
