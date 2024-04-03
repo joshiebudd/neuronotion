@@ -58,10 +58,10 @@ const DemoSection = () => {
         </div>
 
         <div className="flex flex-col mt-6 sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
-          <a
+        <a
             href="#pricing"
             onClick={handleButtonClick}
-            className="StandardCheckoutButton inline-block bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
           >
             Get for Free.
           </a>
