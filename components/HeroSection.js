@@ -18,7 +18,7 @@ const HeroSection = () => {
           <Image
             style={{ width: "100%" }}
             loading="eager"
-            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitle.webp"
+            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleGrad.webp"
             alt="titleheader"
             width={640}
             height={240}
@@ -34,7 +34,7 @@ const HeroSection = () => {
         href="#pricing"
         onClick={handleButtonClick}
         className="StandardCheckoutButton inline-block 
-        bg-[conic-gradient(at_top_left,_var(--tw-gradient-stops))] from-sky-500 to-blue-700
+        bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-blue-400 to-blue-700
         mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
         >
         Get for Free.

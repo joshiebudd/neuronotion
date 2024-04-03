@@ -169,9 +169,10 @@ const HeaderSection = () => {
               <a
                 href="#pricing"
                 onClick={handleButtonClick}
-                className="inline-block rounded-lg bg-blue-600 px-4 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-5 lg:py-3 hidden sm:block"
-              >
-                Get for Free
+                className="inline-block rounded-lg
+                bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-blue-400 to-blue-700
+                px-4 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-5 lg:py-3 hidden sm:block">
+                Get for Free.
               </a>
               <div className="block sm:hidden">
                 <Burger
