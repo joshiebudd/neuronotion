@@ -23,10 +23,10 @@ const Benefits1 = () => {
  Goodbye study stress 👋
 </div>
               </div>
-              <div className="text-xl mt-12 mb-16">
-                Finally, feel at peace with this blissfully organised study hub
-                which you can make your own. Access all your study resources
-                from the comfort of one single place.
+              <div className="text-xl font-baloo mt-12 mb-16">
+                Finally, feel at peace with this blissfully organised study hub. 
+                <br />
+                Access all your study resources from the comfort of one single place.
               </div>
               <div>
               <div className="text-2xl font-baloo font-semibold text-gray-900 flex items-center mt-6">

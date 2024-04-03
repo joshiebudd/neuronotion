@@ -25,11 +25,8 @@ const HeroSection = () => {
             priority={1}
           />
         </div>
-        <p className="mt-6 mb-6 text-xl font-baloo font-regular text-slate-950 sm:px-18 xl:px-24 mt-3">
-          Drown the noise in 90 seconds and study for as long as you want. This
-          Notion template helps you focus fast. And with tools that make
-          studying fun and effective, you won&apos;t need a new TikTok hack
-          anytime soon.
+        <p className="mt-5 mb-6 text-xl font-baloo font-regular text-slate-950 sm:px-24">
+          Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
           <a
@@ -40,48 +37,51 @@ const HeroSection = () => {
             Get for Free.
           </a>
         </div>
-        <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12 lg:py-4">
-          <div className="centered-image max-w-full lg:max-w-[800px] sm:pb-12">
+        <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
+          <div className="centered-image max-w-full lg:max-w-[750px] sm:pt-2 pb-4">
             <Image
               style={{ width: "100%" }}
               loading="eager"
               src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/ipaddemo.webp"
               alt="template"
-              width={800} // Set the width of the image (you can adjust as needed)
-              height={566} // Set the height of the image (adjust for the aspect ratio of your image)
+              width={800}
+              height={566}
               priority={1}
             />
           </div>
         </div>
-      
         {/* Testimonials */}
-        <div className="mb-2 flex justify-center">
-          <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">
-            ★★★★★
-          </span>
+        <div className="flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-y-0 lg:space-x-8">
+          <div className="text-center">
+            <div className="mb-2 flex justify-center">
+              <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">★★★★★</span>
+            </div>
+            <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
+            &quot;Completely changed my study system - for the better!&quot;
+            </span>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-2 flex justify-center">
+              <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">★★★★★</span>
+            </div>
+            <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
+            &quot;So easy to set up and use! Its so helpful already.&quot;
+            </span>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-2 flex justify-center">
+              <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">★★★★★</span>
+            </div>
+            <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
+              &quot;Don&qpos;t sleep on this one people! The promises are real!&quot;
+            </span>
+          </div>
         </div>
-        <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
-          &quot;Completely changed my study system - for the better!&quot;
-        </span>
-        <div className="mb-2 flex justify-center">
-          <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">
-            ★★★★★
-          </span>
-        </div>
-        <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
-          &quot;So easy to set up and use! Its so helpful already. &quot;
-        </span>
-        <div className="mb-2 flex justify-center">
-          <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">
-            ★★★★★
-          </span>
-        </div>
-        <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
-          &quot;Don&apos;t sleep on this one people! The promises are real!&quot;
-        </span>
       </div>
     </section>
   );
 };
 
-export default HeroSection; // Export the component
+export default HeroSection;
