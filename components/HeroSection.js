@@ -18,7 +18,7 @@ const HeroSection = () => {
           <Image
             style={{ width: "100%" }}
             loading="eager"
-            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleLarge.webp"
+            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleLargeLC.webp"
             alt="titleheader"
             width={640}
             height={240}
