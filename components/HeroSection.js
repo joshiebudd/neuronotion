@@ -44,10 +44,10 @@ const HeroSection = () => {
               loading="eager"
               src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/mainDemoNew.webp"
               alt="template"
-              width={1920}
-              height={1280}
+              width={3000}
+              height={1500}
               priority={1}
-            />
+            /> 
           </div>
         </div>
         {/* Testimonials */}
