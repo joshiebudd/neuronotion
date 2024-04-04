@@ -14,14 +14,12 @@ import ReviewSection from "../components/ReviewSection";
 import FAQSection from "../components/FAQSection/FAQSection";
 import FinalCTA from "../components/FinalCTASection";
 import FooterSection from "../components/FooterSection";
-import ToTop from "../components/Common/ToTop";
 import BlazingSection from "../components/BlazingSection.js";
 import {
   setupBeforeUnload,
   setupLoad,
   setupScroll,
 } from "../components/tracking";
-import { Stick } from "next/font/google";
 
 const FBPage = () => {
   <Head>
@@ -46,10 +44,7 @@ const FBPage = () => {
     return () => {
       window.removeEventListener("beforeunload", handleUnload);
     };
-    setupLoad();
-    setupScroll();
-    setupBeforeUnload();
-    track("Visited");
+   
   }, []);
 
   return (

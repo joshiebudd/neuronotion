@@ -59,7 +59,6 @@ const IndexPage = () => {
       <HeaderSection />
       <HeroSection />
       <BenefitsSection />
-      {/* <BenefitsSection /> */}
       <FeaturesSection />
       <BlazingSection />
       <DemoSection />
