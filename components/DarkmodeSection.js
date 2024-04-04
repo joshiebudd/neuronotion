@@ -17,8 +17,8 @@ const DarkModeSection = () => {
         </div>
         <div className="flex justify-center">
           {" "}
-          {/* Center horizontally */}
           <img
+            loading="lazy"
             style={{ width: "100%" }}
             src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/darkmodedemo.webp"
             alt="template"
