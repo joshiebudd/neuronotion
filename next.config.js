@@ -19,6 +19,7 @@ const nextConfig = {
     domains: [
       "github.com",
       "raw.githubusercontent.com", // Add the domain without the protocol
+      "neuronotionpullzonw.b-cdn.net",
     ],
     remotePatterns: [
       {

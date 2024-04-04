@@ -38,14 +38,14 @@ const HeroSection = () => {
           </a>
         </div>
         <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
-          <div className="centered-image max-w-full lg:max-w-[750px] sm:pt-2 pb-4">
+          <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4">
             <Image
               style={{ width: "100%" }}
               loading="eager"
-              src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/ipaddemo.webp"
+              src="https://NeuroNotionPullZonw.b-cdn.net/MainPageCroppedRoundedGlowPNG.png"
               alt="template"
-              width={800}
-              height={566}
+              width={6000}
+              height={4000}
               priority={1}
             />
           </div>
