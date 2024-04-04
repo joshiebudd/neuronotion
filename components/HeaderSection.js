@@ -138,28 +138,28 @@ const HeaderSection = () => {
             >
               <a
                 href="#features"
-                className="px-2 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Features")}
               >
                 Features
               </a>
               <a
                 href="#demo"
-                className="px-2 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Demo")}
               >
                 Demo
               </a>
               <a
                 href="#pricing"
-                className="px-2 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Pricing")}
               >
                 Pricing
               </a>
               <a
                 href="#faqs"
-                className="px-2 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_FAQ")}
               >
                 FAQs
