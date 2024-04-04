@@ -12,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="bg-blue-50 hero-section pt-24 sm:pt-32">
+    <section id="hero" className="bg-blue-50 hero-section pt-20 sm:pt-24">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <div className="px-0 md:px-80">
           <Image
