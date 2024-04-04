@@ -15,11 +15,7 @@ import FAQSection from "../components/FAQSection/FAQSection";
 import FinalCTA from "../components/FinalCTASection";
 import FooterSection from "../components/FooterSection";
 import BlazingSection from "../components/BlazingSection.js";
-import {
-  setupBeforeUnload,
-  setupLoad,
-  setupScroll,
-} from "../components/tracking";
+
 
 const FBPage = () => {
   <Head>
