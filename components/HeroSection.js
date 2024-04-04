@@ -42,7 +42,7 @@ const HeroSection = () => {
             <Image
               style={{ width: "100%" }}
               loading="eager"
-              src="https://NeuroNotionPullZonw.b-cdn.net/MainPageCroppedRoundedGlowPNG.png"
+              src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/mainDemoNew.webp"
               alt="template"
               width={6000}
               height={4000}
