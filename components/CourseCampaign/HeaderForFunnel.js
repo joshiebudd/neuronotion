@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import Image from "next/image";
 import Script from "next/script";
-import styles from "./HeaderSection.style.module.scss";
 
 const HeaderForFunnel = () => {
   const titleRef = useRef(null);

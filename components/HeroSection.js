@@ -15,7 +15,7 @@ const HeroSection = () => {
     <section id="hero" className="bg-blue-50 hero-section pt-20 sm:pt-24">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <div className="px-0 md:px-80">
-          <Image
+          <img
             style={{ width: "100%" }}
             loading="eager"
             src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleLargeLC.webp"
@@ -39,13 +39,13 @@ const HeroSection = () => {
         </div>
         <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
           <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4">
-            <Image
+            <img
               style={{ width: "100%" }}
               loading="eager"
               src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/mainDemoNew.webp"
               alt="template"
-              width={3000}
-              height={1500}
+              width={1920}
+              height={1280}
               priority={1}
             /> 
           </div>
