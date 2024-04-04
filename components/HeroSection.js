@@ -26,7 +26,7 @@ const HeroSection = () => {
           />
         </div>
         <p className="mt-5 mb-6 text-xl font-baloo font-regular text-slate-950 sm:px-24">
-          Drown the noise in 90 seconds and study for as long as you want. This Notion template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
+          Drown the noise in 90 seconds and study for as long as you want. This Notion Study template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
         <a
