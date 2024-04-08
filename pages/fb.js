@@ -8,7 +8,7 @@ import FeaturesSection from "../components/FeaturesSection";
 import DarkModeSection from "../components/DarkmodeSection";
 import DemoSection from "../components/DemoSection";
 import CommunitySection from "../components/CommunitySection";
-import PricingSectionFB from "../components/PricingSectionFB";
+import PricingSection from "../components/PricingSectionFB";
 import AboutSection from "../components/AboutSection";
 import ReviewSection from "../components/ReviewSection";
 import FAQSection from "../components/FAQSection/FAQSection";
@@ -62,7 +62,7 @@ const FBPage = () => {
       <DemoSection />
       <ReviewSection />
       <DarkModeSection />
-      <PricingSectionFB />
+      <PricingSection />
       <FAQSection />
       <CommunitySection />
       <AboutSection />
