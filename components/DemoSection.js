@@ -26,18 +26,21 @@ const DemoSection = () => {
   };
 
   return (
-    <section id="demo" className="bg-gray-800 demo-section pt-12">
+    <section id="demo" className="bg-gray-800 demo-section pt-12 pb-12 sm:pb-16 sm:pt-16">
       {zoomed && (
         <ImageViewer
           src="https://NeuroNotionPullZonw.b-cdn.net/Product%20Demo%20for%20Website.mp4"
           onClose={handleImageViewerClose}
         />
       )}
-      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-        <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-white">
-          How does it work? 🤫
+      <div className="mx-auto max-w-screen-xl px-4 text-center sm:px-16">
+      <div className="inline-block px-3 py-1 mb-6 bg-blue-300 rounded-full text-xs text-grey-950 font-baloo font-semibold">
+            Demo
+            </div>
+        <h1 className="mb-4 text-4xl font-baloo font-bold text-gray-100 leading-none tracking-tight">
+          How does it work? 🤷‍♂️
         </h1>
-        <p className="mb-8 text-xl font-normal text-white sm:px-16 md:px-48">
+        <p className="mb-8 text-lg font-baloo font-regular text-gray-100 sm:px-16 md:px-48">
           Press &quot;Play&quot; to have all your questions answered in under
           two minutes.
         </p>
@@ -57,46 +60,26 @@ const DemoSection = () => {
           </video>
         </div>
 
-        <div className="mt-4">
-          <a
+        <div className="flex flex-col mt-6 sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
+        <a
             href="#pricing"
             onClick={handleButtonClick}
-            className="StandardCheckoutButton inline-block rounded-lg bg-blue-500 px-8 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
           >
-            Get Lifetime Access
+            Get for Free.
           </a>
         </div>
 
-        {/* Stars */}
         <div className="mb-2 flex justify-center">
-          <span className="mt-3 mb-0 text-3xl leading-none text-orange-600 text-3xl">
-            ★
-          </span>
-          <span className="mt-3 mb-0 text-3xl leading-none text-orange-600 text-3xl">
-            ★
-          </span>
-          <span className="mt-3 mb-0 text-3xl leading-none text-orange-600 text-3xl">
-            ★
-          </span>
-          <span className="mt-3 mb-0 text-3xl leading-none text-orange-600 text-3xl">
-            ★
-          </span>
-          <span className="mt-3 mb-0 text-3xl leading-none text-orange-600 text-3xl">
-            ★
-          </span>
-        </div>
+              <span className="mt-2 mb-0 text-3xl leading-none text-orange-500">★★★★★</span>
+            </div>
 
         {/* Testimonial and Author Info */}
-        <div className="text-center mx-auto mt-4 px-4">
-          <span className="mt-0 text-sm text-gray-100">
-            &quot;Before I found Neuro Notion, every study session was this
-            awful long battle with distractions and procrastination. Now, I feel
-            like I&apos;ve got my own space that really helps to keep me in the
-            zone.&quot;
-          </span>
+        <div className="text-center mx-auto mt-4 px-4 sm:px-64">
+        <span className="mt-0 text-sm sm:text-md font-baloo text-gray-100"> &quot;Before I found Neuro Notion, every study session was this awful long <span className="font-bold">battle with distractions</span> and procrastination. Now, I feel like I&apos;ve got <span className="font-bold">my own space</span> that really helps to <span className="font-bold">keep me in the zone</span>.&quot; </span>
 
           <div className="mt-4">
-            <div className="flex justify-center flex-col items-center">
+            <div className="flex justify-center font-baloo flex-col items-center">
               <Image
                 className="w-16 h-16 rounded-full"
                 src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/lila.webp"
@@ -104,9 +87,9 @@ const DemoSection = () => {
                 width={96}
                 height={96}
               />
-              <span className="text-white">Lola Clarkes</span>
+              <span className="mt-1 text-white ">Lola Clarkes</span>
             </div>
-            <h2 className="text-lg text-white font-semibold"></h2>
+            <h2 className="text-lg text-white font-baloo"></h2>
             <p className="text-gray-300">
               Second Year Psychology Student @ Manchester University
             </p>

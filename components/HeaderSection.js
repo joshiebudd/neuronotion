@@ -127,7 +127,7 @@ const HeaderSection = () => {
                 alt="Neuro Notion Logo"
               />
               <div className="w-full grow text-center sm:text-left">
-                <span className="self-center whitespace-nowrap text-xl sm:text-2xl lg:text-2xl font-semibold text-black">
+                <span className="self-center whitespace-nowrap text-2xl sm:text-2xl font-baloo font-bold text-black">
                   Neuro Notion
                 </span>
               </div>
@@ -138,28 +138,28 @@ const HeaderSection = () => {
             >
               <a
                 href="#features"
-                className="px-2 py-1 text-md sm:text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Features")}
               >
                 Features
               </a>
               <a
                 href="#demo"
-                className="px-2 py-1 text-md sm:text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Demo")}
               >
                 Demo
               </a>
               <a
                 href="#pricing"
-                className="px-2 py-1 text-md sm:text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Pricing")}
               >
                 Pricing
               </a>
               <a
                 href="#faqs"
-                className="px-2 py-1 text-md sm:text-lg font-thin text-black hover:text-gray-600 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_FAQ")}
               >
                 FAQs
@@ -169,10 +169,12 @@ const HeaderSection = () => {
               <a
                 href="#pricing"
                 onClick={handleButtonClick}
-                className="inline-block rounded-lg bg-blue-500 px-4 py-2 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-8 lg:py-4 hidden sm:block"
-              >
-                Get Lifetime Access
+                className="inline-block rounded-lg
+                bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700
+                px-4 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-5 lg:py-3 hidden sm:block">
+                Get for Free.
               </a>
+
               <div className="block sm:hidden">
                 <Burger
                   handleToggle={handleBurgerClick}
