@@ -55,7 +55,7 @@ function MyApp({ Component, pageProps }) {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>Neuro Notion ┃ The Ultimate ADHD Study Notion Template</title>
+          <title>Neuro Notion - The First ADHD Study System</title>
           <link
             rel="icon"
             href="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
