@@ -242,12 +242,14 @@ const Timer = () => {
   </div>
 </div>
 <div className="mt-5 flex justify-center w-full items-center">
-  <div style={{ minWidth: '40px' }}>
-    <img className="w-10 h-10" src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/assets/logo.webp" alt="Avatar" />
-  </div>
-  <div className={`ml-2 md:text-base text-xs ${isDarkMode ? 'text-gray-50' : ''}`} id="dev">
-    Made by Neuro Notion © 2024
-  </div>
+  <a href="https://www.neuro-notion.com" style={{ textDecoration: 'none' }}>
+    <div style={{ minWidth: '40px' }}>
+      <img className="w-10 h-10" src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/assets/logo.webp" alt="Avatar" />
+    </div>
+    <div className={`ml-2 md:text-base text-xs ${isDarkMode ? 'text-gray-50' : ''}`} id="dev">
+      Made by Neuro Notion © 2024
+    </div>
+  </a>
 </div>
 </div>
 <audio ref={bellSound1Ref} src="https://NeuroNotionPullZonw.b-cdn.net/bell%20(1).mp3" />
