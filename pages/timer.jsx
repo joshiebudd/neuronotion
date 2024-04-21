@@ -241,8 +241,8 @@ const Timer = () => {
     </div>
   </div>
 </div>
-<div className="mt-5 flex justify-center w-full items-center">
-  <a href="https://www.neuro-notion.com" style={{ textDecoration: 'none' }}>
+<div className="mt-5 flex justify-center w-full">
+  <a href="https://www.neuro-notion.com" className="flex items-center" style={{ textDecoration: 'none' }}>
     <div style={{ minWidth: '40px' }}>
       <img className="w-10 h-10" src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/assets/logo.webp" alt="Avatar" />
     </div>
