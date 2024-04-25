@@ -29,7 +29,7 @@ const BlazingSection = () => {
             <div>
               <div className="text-2xl font-baloo font-bold text-gray-900 flex items-center mt-4">
                 <Image
-                  src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/1-min.png"
+                  src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/2.png"
                   alt="Tick Icon"
                   width={32}
                   height={32}
