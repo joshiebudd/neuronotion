@@ -2,6 +2,10 @@ import React from "react";
 import Image from "next/image";
 
 const BlazingSection = () => {
+  const handleButtonClick = () => {
+    // Add your button click handler logic here
+  };
+
   return (
     <section id="benefits" className="bg-white benefits-section">
       <div className="py-12 sm:py-12 px-8 mx-auto max-w-screen-xl lg:px-24">
@@ -102,6 +106,15 @@ const BlazingSection = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="flex justify-center mt-8">
+          <a
+            href="#pricing"
+            onClick={handleButtonClick}
+            className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-orange-400 to-orange-700 mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+          >
+            Get for Free.
+          </a>
         </div>
       </div>
     </section>

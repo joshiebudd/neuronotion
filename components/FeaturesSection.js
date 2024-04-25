@@ -20,7 +20,7 @@ const FeaturesSection = () => {
   return (
     <section
       id="features"
-      className="pt-12 bg-blue-50 features_section mb-0 pb-8">
+      className="pt-12 bg-white features_section mb-0 pb-8">
       <div className="sm:pb-20 px-4">
       <div className="pb-8 sm:pb-0 px-8 mx-auto max-w-screen-xl sm:pt-4 lg:px-12">
         <div className="max-w-screen-md mx-auto text-center mb-1 mt-2">
@@ -38,7 +38,7 @@ const FeaturesSection = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Task Card 1 */}
-            <div className="p-7 max-w-sm mx-auto bg-white rounded-lg shadow-md flex flex-col items-center">
+            <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md shadow-gray-300 flex flex-col items-center">
               <div className="flex-shrink-0">
                 <CalendarIcon color="#ef4444" />
               </div>
@@ -52,7 +52,7 @@ const FeaturesSection = () => {
             </div>
 
             {/* Task Card 2 */}
-            <div className="p-7 max-w-sm mx-auto bg-white rounded-lg shadow-md flex flex-col items-center">
+            <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md shadow-gray-300 flex flex-col items-center">
               <div className="flex-shrink-0">
                 <BrainIcon color="#16a34a" />
               </div>
@@ -66,7 +66,7 @@ const FeaturesSection = () => {
             </div>
 
             {/* Task Card 3 */}
-            <div className="p-7 max-w-sm mx-auto bg-white rounded-lg shadow-md flex flex-col items-center">
+            <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md shadow-gray-300 flex flex-col items-center">
               <div className="flex-shrink-0">
                 <TutorialIcon color="#0284c7" />
               </div>
@@ -81,7 +81,7 @@ const FeaturesSection = () => {
             </div>
 
             {/* Task Card 4 */}
-            <div className="p-7 max-w-sm mx-auto bg-white rounded-lg shadow-md flex flex-col items-center">
+            <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md shadow-gray-300 flex flex-col items-center">
               <div className="flex-shrink-0">
                 <BrushIcon color="#4f46e5" />
               </div>
@@ -95,7 +95,7 @@ const FeaturesSection = () => {
             </div>
 
             {/* Task Card 5 */}
-            <div className="p-7 max-w-sm mx-auto bg-white rounded-lg shadow-md flex flex-col items-center">
+            <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md shadow-gray-300 flex flex-col items-center">
               <div className="flex-shrink-0">
                 <MigrationIcon color="#c026d3" />
               </div>
@@ -109,7 +109,7 @@ const FeaturesSection = () => {
             </div>
 
             {/* Task Card 6 */}
-            <div className="p-7 max-w-sm mx-auto bg-white rounded-lg shadow-md flex flex-col items-center">
+            <div className="p-7 max-w-sm mx-auto bg-gray-50 rounded-lg shadow-md shadow-gray-300 flex flex-col items-center">
               <div className="flex-shrink-0">
                 <FolderIcon color="#e11d48" />
               </div>
