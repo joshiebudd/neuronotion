@@ -27,32 +27,78 @@ const BlazingSection = () => {
           {/* begin - description */}
           <div className="max-w-[600px] flex flex-col sm:items-start justify-center mb-12 order-2 md:mb-0">
             <div>
-              <div className="text-2xl font-baloo font-bold text-gray-900 flex items-center mt-4">
+              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-4">
                 <Image
-                  src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/2.png"
+                  src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/1-min.png"
                   alt="Tick Icon"
                   width={32}
                   height={32}
                 />
-                <div className="ml-2"> Super Simple Tutorials. </div>
+                <p className="ml-2">
+                  <span className="font-bold">Access:</span>{" "}
+                  <span className="font-regular">
+                    Get an email with the templace and access to in-depth
+                    tutorials.
+                  </span>
+                </p>
               </div>
-              <div className="text-2xl font-baloo font-bold text-gray-900 flex items-center mt-8">
+              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-8">
+                <Image
+                  src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/2-min.png"
+                  alt="Tick Icon"
+                  width={32}
+                  height={32}
+                />
+                <p className="ml-2">
+                  <span className="font-bold">Add to Notion:</span>{" "}
+                  <span className="font-regular">
+                    Sign in/Register with Notion to add it to your personal
+                    workspace.
+                  </span>
+                </p>
+              </div>
+              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-8">
+                <Image
+                  src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/3-min.png"
+                  alt="Tick Icon"
+                  width={32}
+                  height={32}
+                />
+                <p className="ml-2">
+                  <span className="font-bold">Make it your own:</span>{" "}
+                  <span className="font-regular">
+                    Customise to your subjects and deadlines in less than 60
+                    seconds.
+                  </span>
+                </p>
+              </div>
+              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-8">
+                <Image
+                  src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/4-min.png"
+                  alt="Tick Icon"
+                  width={32}
+                  height={32}
+                />
+                <p className="ml-2">
+                  <span className="font-bold">Import:</span>{" "}
+                  <span className="font-regular">
+                    Import your notes/flashcards from Notion or another app.
+                  </span>
+                </p>
+              </div>
+              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-8">
                 <Image
                   src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick_orange.png"
                   alt="Tick Icon"
                   width={32}
                   height={32}
                 />
-                <div className="ml-2">Transfer Notes with ease.</div>
-              </div>
-              <div className="text-2xl font-baloo font-bold text-gray-900 flex items-center mt-8">
-                <Image
-                  src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick_orange.png"
-                  alt="Tick Icon"
-                  width={32}
-                  height={32}
-                />
-                <div className="ml-2">Support always available.</div>
+                <p className="ml-2">
+                  <span className="font-bold">Ready to go!:</span>{" "}
+                  <span className="font-regular">
+                    Stay laser-focused, for longer, without distractions.
+                  </span>
+                </p>
               </div>
             </div>
           </div>
