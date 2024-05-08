@@ -5,7 +5,7 @@ const Benefits2 = () => {
   return (
     <section
       id="benefits"
-      className="bg-white benefits-section flex justify-center"
+      className="bg-blue-50 benefits-section flex justify-center"
     >
       <div className="py-1 pb-8 sm:pb-12 px-8 mx-auto max-w-screen-xl">
         <div className="gap-x-4 lg:gap-y-2 flex justify-center flex-wrap md:flex-nowrap items-center mt-14">
