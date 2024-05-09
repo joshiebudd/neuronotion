@@ -41,7 +41,7 @@ const BlazingSection = () => {
                 <p className="ml-2">
                   <span className="font-bold">Access:</span>{" "}
                   <span className="font-regular">
-                    Get an email with the templace and access to in-depth
+                    Get an email with the template and access to in-depth
                     tutorials.
                   </span>
                 </p>
