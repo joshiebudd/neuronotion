@@ -11,6 +11,8 @@
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.1",
+    "flowbite": "^2.3.0",
+    "flowbite-typography": "^1.0.3",
     "google-auth-library": "^9.7.0",
     "googleapis": "^134.0.0",
     "iframe-resizer-react": "^1.1.0",
