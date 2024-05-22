@@ -7,10 +7,10 @@ const BlazingSection = () => {
   };
 
   return (
-    <section id="benefits" className="bg-white benefits-section">
+    <section id="benefits" className="bg-gray-800 benefits-section">
       <div className="py-12 sm:py-12 px-8 mx-auto max-w-screen-xl lg:px-24">
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
-          <h2 className="mx-2 text-4xl tracking-tight font-baloo font-baloo font-bold text-gray-900 text-left sm:text-center">
+          <h2 className="mx-2 text-4xl tracking-tight font-baloo font-baloo font-bold text-gray-50 text-left sm:text-center">
             <span className="from-orange-400 to-orange-600 bg-gradient-to-r bg-clip-text text-transparent">
               Blazing fast set-up
             </span>
@@ -31,7 +31,7 @@ const BlazingSection = () => {
           {/* begin - description */}
           <div className="max-w-[600px] flex flex-col sm:items-start justify-center mb-12 order-2 md:mb-0">
             <div>
-              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-4">
+              <div className="text-2xl font-baloo text-gray-50 flex items-center mt-4">
                 <Image
                   src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/1-min.png"
                   alt="Tick Icon"
@@ -46,7 +46,7 @@ const BlazingSection = () => {
                   </span>
                 </p>
               </div>
-              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-8">
+              <div className="text-2xl font-baloo text-gray-50 flex items-center mt-8">
                 <Image
                   src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/2-min.png"
                   alt="Tick Icon"
@@ -61,7 +61,7 @@ const BlazingSection = () => {
                   </span>
                 </p>
               </div>
-              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-8">
+              <div className="text-2xl font-baloo text-gray-50 flex items-center mt-8">
                 <Image
                   src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/3-min.png"
                   alt="Tick Icon"
@@ -76,7 +76,7 @@ const BlazingSection = () => {
                   </span>
                 </p>
               </div>
-              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-8">
+              <div className="text-2xl font-baloo text-gray-50 flex items-center mt-8">
                 <Image
                   src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/4-min.png"
                   alt="Tick Icon"
@@ -90,7 +90,7 @@ const BlazingSection = () => {
                   </span>
                 </p>
               </div>
-              <div className="text-2xl font-baloo text-gray-900 flex items-center mt-8">
+              <div className="text-2xl font-baloo text-gray-50 flex items-center mt-8">
                 <Image
                   src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/tick_orange.png"
                   alt="Tick Icon"

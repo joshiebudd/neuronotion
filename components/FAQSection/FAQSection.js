@@ -13,15 +13,15 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faqs" className="bg-gray-800 py-12 sm:py-16 FAQ_section">
+    <section id="faqs" className="bg-blue-50 py-12 sm:py-16 FAQ_section">
       <div className="text-center">
       <div className="inline-block px-3 py-1 mb-6 bg-blue-300 rounded-full text-xs text-grey-950 font-baloo font-semibold">
             FAQs
             </div>
-        <h2 className="font-baloo font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-100">
+        <h2 className="font-baloo font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-900">
           Frequently Asked Questions ❔
         </h2>
-        <p className="font-baloo leading-6 text-gray-100 lg:w-8/12 md:w-9/12 mx-auto text-xl mt-3 px-14 sm:px-24">
+        <p className="font-baloo leading-6 text-gray-900 lg:w-8/12 md:w-9/12 mx-auto text-xl mt-3 px-14 sm:px-24">
           Answers to some commonly asked questions.
         </p>
       </div>
