@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { track } from "@vercel/analytics";
 import Head from "next/head";
-import ArticleSelect from "../components/articleselect";
+import ArticleSelect from "../components/Articles/articleselect";
 import posthog from "posthog-js";
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
