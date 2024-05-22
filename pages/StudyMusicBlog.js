@@ -26,7 +26,7 @@ const StudyMusicBlog = () => {
                     Graphic Designer, educator & CEO Flowbite
                   </p>
                   <p className="text-base text-gray-500 dark:text-gray-400">
-                    <time pubdate datetime="2022-02-08" title="February 8th, 2022">
+                    <time pubdate dateTime="2022-02-08" title="February 8th, 2022">
                       Feb. 8, 2022
                     </time>
                   </p>
@@ -78,73 +78,6 @@ const StudyMusicBlog = () => {
             href="https://flowbite.com/docs/components/tables/">comparison table</a> to better understand
             the differences between the open-source and pro version of Flowbite.
           </p>
-          <h2>When does design come in handy?</h2>
-          <p>
-            While it might seem like extra work at a first glance, here are some key moments in which prototyping
-            will come in handy:
-          </p>
-          <ol>
-            <li>
-              <strong>Usability testing</strong>. Does your user know how to exit out of screens? Can they
-              follow your intended user journey and buy something from the site you’ve designed? By running a
-              usability test, you’ll be able to see how users will interact with your design once it’s live;
-            </li>
-            <li>
-              <strong>Involving stakeholders</strong>. Need to check if your GDPR consent boxes are displaying
-              properly? Pass your prototype to your data protection team and they can test it for real;
-            </li>
-            <li>
-              <strong>Impressing a client</strong>. Prototypes can help explain or even sell your idea by
-              providing your client with a hands-on experience;
-            </li>
-            <li>
-              <strong>Communicating your vision</strong>. By using an interactive medium to preview and test
-              design elements, designers and developers can understand each other — and the project — better.
-            </li>
-          </ol>
-          <h3>Laying the groundwork for best design</h3>
-          <p>
-            Before going digital, you might benefit from scribbling down some ideas in a sketchbook. This way,
-            you can think things through before committing to an actual design project.
-          </p>
-          <p>
-            Let's start by including the CSS file inside the <code>head</code> tag of your HTML.
-          </p>
-          <h3>Understanding typography</h3>
-          <h4>Type properties</h4>
-          <p>
-            A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-            letters. A typeface represents shared patterns across a collection of letters.
-          </p>
-          <h4>Baseline</h4>
-          <p>
-            A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-            letters. A typeface represents shared patterns across a collection of letters.
-          </p>
-          <h4>Measurement from the baseline</h4>
-          <p>
-            A typeface is a collection of letters. While each letter is unique, certain shapes are shared across
-            letters. A typeface represents shared patterns across a collection of letters.
-          </p>
-          <h3>Type classification</h3>
-          <h4>Serif</h4>
-          <p>
-            A serif is a small shape or projection that appears at the beginning or end of a stroke on a letter.
-            Typefaces with serifs are called serif typefaces. Serif fonts are classified as one of the
-            following:
-          </p>
-          <h4>Old-Style serifs</h4>
-          <ul>
-            <li>Low contrast between thick and thin strokes</li>
-            <li>Diagonal stress in the strokes</li>
-            <li>Slanted serifs on lower-case ascenders</li>
-          </ul>
-          <img src="https://flowbite.s3.amazonaws.com/typography-plugin/typography-image-2.png" alt="" />
-          <ol>
-            <li>Low contrast between thick and thin strokes</li>
-            <li>Diagonal stress in the strokes</li>
-            <li>Slanted serifs on lower-case ascenders</li>
-          </ol>
           <h3>Laying the best for successful prototyping</h3>
           <p>
             A serif is a small shape or projection that appears at the beginning:
@@ -161,6 +94,24 @@ const StudyMusicBlog = () => {
             Typefaces with serifs are called serif typefaces. Serif fonts are classified as one of the
             following:
           </p>
+          <pre>
+            <code className="language-html">
+              &lt;dl class="grid grid-cols-2 gap-8 max-w-screen-md text-gray-900 sm:grid-cols-3 dark:text-white"&gt;
+              &lt;div class="flex flex-col justify-center items-center"&gt;
+              &lt;dt class="mb-2 text-3xl font-extrabold"&gt;73M+&lt;/dt&gt;
+              &lt;dd class="text-lg font-normal text-gray-500 dark:text-gray-400"&gt;developers&lt;/dd&gt;
+              &lt;/div&gt;
+              &lt;div class="flex flex-col justify-center items-center"&gt;
+              &lt;dt class="mb-2 text-3xl font-extrabold"&gt;1B+&lt;/dt&gt;
+              &lt;dd class="text-lg font-normal text-gray-500 dark:text-gray-400"&gt;contributors&lt;/dd&gt;
+              &lt;/div&gt;
+              &lt;div class="flex flex-col justify-center items-center"&gt;
+              &lt;dt class="mb-2 text-3xl font-extrabold"&gt;4M+&lt;/dt&gt;
+              &lt;dd class="text-lg font-normal text-gray-500 dark:text-gray-400"&gt;organizations&lt;/dd&gt;
+              &lt;/div&gt;
+              &lt;/dl&gt;
+            </code>
+          </pre>
         </article>
       </div>
     </main>
