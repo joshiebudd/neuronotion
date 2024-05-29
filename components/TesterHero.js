@@ -7,7 +7,7 @@ const TesterHeroSec = () => {
   };
 
   return (
-    <section id="testerhero" className="bg-blue-50 testhero-section sm:pt-20">
+    <section id="testerhero" className="bg-blue-50 testhero-section pt-20 sm:pt-10">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <div className="px-0 md:px-60">
           <img
