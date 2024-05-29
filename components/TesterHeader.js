@@ -122,7 +122,7 @@ const TesterHeaderSection = () => {
             />
             <div>
               <a
-                href="#pricing"
+                href="https://buy.stripe.com/00gdT123dbNg9TG28r"
                 onClick={handleButtonClick}
                 className="inline-block rounded-lg bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 px-4 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-5 lg:py-3 hidden sm:block"
               >
