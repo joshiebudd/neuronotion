@@ -3,6 +3,7 @@ import { track } from "@vercel/analytics";
 import Head from "next/head";
 import TesterHeroSec from "../components/TesterHero";
 import FooterSection from "../components/FooterSection";
+import TesterHeaderSection from "../components/TesterHeader";
 
 
 
@@ -34,6 +35,7 @@ const BecomeATester = () => {
 
   return (
     <>
+    <TesterHeaderSection />
     <TesterHeroSec />
     <FooterSection />
     </>
