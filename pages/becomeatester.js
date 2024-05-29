@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { track } from "@vercel/analytics";
 import Head from "next/head";
+import TesterHeroSec from "../components/TesterHero";
 import FooterSection from "../components/FooterSection";
 
 
@@ -33,7 +34,8 @@ const BecomeATester = () => {
 
   return (
     <>
-      <FooterSection />
+    <TesterHeroSec />
+    <FooterSection />
     </>
   );
 };
