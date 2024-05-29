@@ -4,17 +4,15 @@ const TesterHeroSec = () => {
   const handleButtonClick = (e) => {
     // Add any necessary logic here
   };
-
   return (
     <section id="testerhero" className="bg-blue-50 hero-section pt-20 sm:pt-24">
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-        <div className="px-0 md:px-80">
+        <div className="px-0 md:px-40">
           <img
             style={{ width: "100%" }}
             loading="eager"
-            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleLargeLC.webp"
+            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleLargeBaloo.png"
             alt="titleheader"
-            width={640}
             height={240}
             priority={1}
           />
@@ -36,7 +34,7 @@ const TesterHeroSec = () => {
             <img
               style={{ width: "100%" }}
               loading="eager"
-              src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/mainDemoNew.webp"
+              src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/UBDarkModeDemoRoundedShadow.webp"
               alt="template"
               width={1920}
               height={1280}
@@ -44,6 +42,7 @@ const TesterHeroSec = () => {
             />
           </div>
         </div>
+      </div>
     </section>
   );
 };
