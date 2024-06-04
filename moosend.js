@@ -1,6 +1,6 @@
 export const addSubscriberToList = async (email) => {
-    const listId = process.env.MOOSEND_LIST_ID;
-    const apiKey = process.env.MOOSEND_API_KEY;
+    const listId = process.env.REACT_APP_MOOSEND_LIST_ID;
+    const apiKey = process.env.REACT_APP_MOOSEND_API_KEY;
   
     try {
       const response = await fetch(`https://a.moosend.com/api/v3/subscribers/${listId}/subscribe.json`, {
@@ -12,12 +12,10 @@ export const addSubscriberToList = async (email) => {
         body: JSON.stringify({ email }),
       });
   
-      if (response.ok) {
-        console.log('Subscriber added successfully');
-      } else {
-        console.error('Error adding subscriber');
-      }
+      return response;
     } catch (error) {
       console.error('Error adding subscriber:', error);
+      throw error;
     }
   };
+  

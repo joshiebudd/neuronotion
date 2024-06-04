@@ -3,14 +3,26 @@ import { addSubscriberToList } from '/moosend';
 
 const TesterHeroSec = () => {
   const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleButtonClick = (e) => {
+  const handleButtonClick = async (e) => {
     e.preventDefault();
     const emailValue = email.trim();
 
     if (emailValue) {
-      addSubscriberToList(emailValue);
-      setEmail('');
+      try {
+        const response = await addSubscriberToList(emailValue);
+        if (response.ok) {
+          setMessage('Successfully subscribed!');
+          setEmail('');
+        } else {
+          setMessage('Failed to subscribe. Please try again.');
+        }
+      } catch (error) {
+        setMessage('An error occurred. Please try again.');
+      }
+    } else {
+      setMessage('Please enter a valid email address.');
     }
   };
 
@@ -60,14 +72,14 @@ const TesterHeroSec = () => {
             onChange={(e) => setEmail(e.target.value)}
             className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 sm:mb-0 w-full sm:w-auto"
           />
-          <a
-            href="#"
+          <button
             onClick={handleButtonClick}
             className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
           >
-            Secure your spot.
-          </a>
+            Secure your spot
+          </button>
         </div>
+        {message && <p className="mt-2 text-red-500">{message}</p>}
         <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
           <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4">
             <img
