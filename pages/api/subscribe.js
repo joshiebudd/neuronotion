@@ -18,23 +18,32 @@ export default async function handler(req, res) {
       return;
     }
   
+    const url = `https://api.moosend.com/v3/subscribers/${listId}/subscribe.json?apikey=${apiKey}`;
+  
     try {
-      const response = await fetch(`https://a.moosend.com/api/v3/subscribers/${listId}/subscribe.json`, {
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Moosend-APIKey': apiKey,
+          'Accept': 'application/json',
         },
         body: JSON.stringify({ email }),
       });
   
-      const data = await response.json();
+      const text = await response.text(); // Read the response as text
+      console.log('Moosend API response:', text);
   
-      if (response.ok) {
-        res.status(200).json(data);
-      } else {
-        console.error('Moosend API error:', data);
-        res.status(response.status).json({ error: data });
+      try {
+        const data = JSON.parse(text); // Attempt to parse the response as JSON
+  
+        if (response.ok) {
+          res.status(200).json(data);
+        } else {
+          res.status(response.status).json({ error: data });
+        }
+      } catch (jsonError) {
+        console.error('Failed to parse JSON response:', jsonError);
+        res.status(500).json({ error: 'Failed to parse JSON response from Moosend' });
       }
     } catch (error) {
       console.error('Internal server error:', error);
