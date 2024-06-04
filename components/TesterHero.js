@@ -83,7 +83,7 @@ const TesterHeroSec = () => {
             onClick={handleButtonClick}
             className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
           >
-            Secure your spot
+            Secure your spot!
           </button>
         </div>
         {message && <p className="mt-2 text-red-500">{message}</p>}
