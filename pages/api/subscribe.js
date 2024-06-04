@@ -7,8 +7,8 @@ export default async function handler(req, res) {
     }
   
     const { email } = req.body;
-    const listId = process.env.REACT_APP_MOOSEND_LIST_ID;
-    const apiKey = process.env.REACT_APP_MOOSEND_API_KEY;
+    const listId = process.env.NEXT_PUBLIC_MOOSEND_LIST_ID;
+    const apiKey = process.env.NEXT_PUBLIC_MOOSEND_API_KEY;
   
     try {
       const response = await fetch(`https://a.moosend.com/api/v3/subscribers/${listId}/subscribe.json`, {
