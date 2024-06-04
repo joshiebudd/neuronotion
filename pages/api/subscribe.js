@@ -1,5 +1,8 @@
 // pages/api/subscribe.js
 export default async function handler(req, res) {
+    console.log('API Key:', process.env.NEXT_PUBLIC_MOOSEND_API_KEY);
+    console.log('List ID:', process.env.NEXT_PUBLIC_MOOSEND_LIST_ID);
+  
     if (req.method !== 'POST') {
       res.setHeader('Allow', ['POST']);
       res.status(405).end(`Method ${req.method} Not Allowed`);
@@ -9,6 +12,11 @@ export default async function handler(req, res) {
     const { email } = req.body;
     const listId = process.env.NEXT_PUBLIC_MOOSEND_LIST_ID;
     const apiKey = process.env.NEXT_PUBLIC_MOOSEND_API_KEY;
+  
+    if (!email || !listId || !apiKey) {
+      res.status(400).json({ error: 'Missing required fields' });
+      return;
+    }
   
     try {
       const response = await fetch(`https://a.moosend.com/api/v3/subscribers/${listId}/subscribe.json`, {
@@ -25,9 +33,11 @@ export default async function handler(req, res) {
       if (response.ok) {
         res.status(200).json(data);
       } else {
+        console.error('Moosend API error:', data);
         res.status(response.status).json({ error: data });
       }
     } catch (error) {
+      console.error('Internal server error:', error);
       res.status(500).json({ error: 'Internal Server Error' });
     }
   }
