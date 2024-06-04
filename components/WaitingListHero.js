@@ -100,7 +100,7 @@ const WaitingListHeroSec = () => {
             />
           </div>
         </div>
-        <div className="mt-6 text-3xl font-baloo font-semibold">COMING SOON! JOIN THE WAITING LIST TODAY!</div>
+        <div className="mt-6 text-2xl font-baloo font-semibold">👀 More Details Coming Soon! Join the Waiting List to be the first to find out!</div>
       </div>
     </section>
   );
