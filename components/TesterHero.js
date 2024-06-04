@@ -13,7 +13,7 @@ const TesterHeroSec = () => {
           <img
             style={{ width: "100%" }}
             loading="eager"
-            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleLargeBaloo.png"
+            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/WaitingListHeroTitle.png"
             alt="titleheader"
             height={240}
             priority={1}
