@@ -1,24 +1,20 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { track } from "@vercel/analytics";
 import Image from "next/image";
 import Script from "next/script";
-import _ from "lodash";
-
+import * as _ from "lodash";
 import styles from "./HeaderSection.style.module.scss";
 
 const WaitingListHeaderSection = () => {
   const titleRef = useRef(null);
   const menuRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-  let isMobile = false;
-
-  const handleResize = () => {
-    const newIsMobile = innerWidth < 640;
-
+  const handleResize = useCallback(() => {
+    const newIsMobile = window.innerWidth < 640;
     if (newIsMobile !== isMobile) {
-      isMobile = newIsMobile;
-
+      setIsMobile(newIsMobile);
       if (newIsMobile) {
         menuRef.current.classList.add(styles.menu_mobile);
       } else {
@@ -28,17 +24,21 @@ const WaitingListHeaderSection = () => {
         titleRef.current.style.opacity = 1;
       }
     }
-  };
+  }, [isMobile]);
 
   const throttledHandleResize = _.throttle(handleResize, 300);
 
   useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", throttledHandleResize);
+    if (typeof window !== "undefined") {
+      handleResize();
+      window.addEventListener("resize", throttledHandleResize);
+    }
     return () => {
-      window.removeEventListener("resize", throttledHandleResize);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", throttledHandleResize);
+      }
     };
-  }, []);
+  }, [handleResize, throttledHandleResize]);
 
   const handleLogoClick = () => {
     window.location.href = "https://www.neuro-notion.com";
@@ -64,9 +64,7 @@ const WaitingListHeaderSection = () => {
           `,
         }}
       />
-
       <SpeedInsights />
-
       <div className="full-header bg-white bg-opacity-30 backdrop-blur-lg fixed top-0 right-0 left-0">
         <nav className="px-8 py-5 lg:px-6">
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-center">
