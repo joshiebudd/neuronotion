@@ -1,26 +1,33 @@
-import Image from "next/image";
+import { useState } from 'react';
+import { addSubscriberToList } from './moosend';
 
 const TesterHeroSec = () => {
+  const [email, setEmail] = useState('');
+
   const handleButtonClick = (e) => {
-    // Add any necessary logic here
-    window.location.href = "https://buy.stripe.com/00gdT123dbNg9TG28r";
+    e.preventDefault();
+    const emailValue = email.trim();
+
+    if (emailValue) {
+      addSubscriberToList(emailValue);
+      setEmail('');
+    }
   };
 
   return (
-    <section id="testerhero" className="bg-blue-50 testhero-section pt-20 sm:pt-20">
+    <section id="testerhero" className="bg-blue-50 testhero-section pt-20 sm:pt-10">
       <style>
         {`
           .heroTitleLarge-container {
             display: flex;
             justify-content: center;
           }
-
           .heroTitleLarge-container img {
             max-width: 240px;
           }
         `}
       </style>
-      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-2 lg:py-16">
+      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
         <div className="heroTitleLarge-container">
           <img
             style={{ width: "100%" }}
@@ -31,7 +38,7 @@ const TesterHeroSec = () => {
             priority={1}
           />
         </div>
-        <div className="px-0 md:px-60 pt-10">
+        <div className="px-0 md:px-60">
           <img
             style={{ width: "100%" }}
             loading="eager"
@@ -42,26 +49,21 @@ const TesterHeroSec = () => {
           />
         </div>
         <p className="mt-5 mb-6 text-xl font-baloo font-regular text-slate-950 sm:px-24">
-          Be a part of something huge for ADHDers. Join the waiting list today and be the first to get access. <br /> Plus, get over 50% discount on the final version worth $129+. Secure your spot now.
+          Be a part of something huge for ADHDers. Join the waiting list today and be the first to get access. <br /> Plus, get over 50% discount on the final release, worth $129+. Secure your spot now.
         </p>
-        {/* Added input fields */}
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-4 mb-4">
           <input
-            type="text"
-            placeholder="First Name"
-            className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <input
+            id="emailInput"
             type="email"
             placeholder="Email address"
-            className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 sm:mb-0 w-full sm:w-auto"
           />
-        </div>
-        <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
           <a
             href="#"
             onClick={handleButtonClick}
-            className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
           >
             Secure your spot.
           </a>
@@ -79,7 +81,6 @@ const TesterHeroSec = () => {
             />
           </div>
         </div>
-        {/* New section added below */}
         <div className="mt-6 text-3xl font-baloo font-semibold">COMING SOON! JOIN THE WAITING LIST TODAY!</div>
       </div>
     </section>
