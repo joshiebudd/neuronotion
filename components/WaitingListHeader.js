@@ -8,7 +8,7 @@ import _ from "lodash";
 
 import styles from "./HeaderSection.style.module.scss";
 
-const TesterHeaderSection = () => {
+const WaitingListHeaderSection = () => {
   const titleRef = useRef(null);
   const menuRef = useRef(null);
   const [menuActive, setMenuActive] = useState(false);
@@ -143,4 +143,4 @@ const TesterHeaderSection = () => {
   );
 };
 
-export default TesterHeaderSection;
+export default WaitingListHeaderSection;

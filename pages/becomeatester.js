@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
 import { track } from "@vercel/analytics";
 import Head from "next/head";
-import TesterHeroSec from "../components/TesterHero";
 import FooterSection from "../components/FooterSection";
-import TesterHeaderSection from "../components/TesterHeader";
+import WaitingListHeroSec from "../components/WaitingList";
+import WaitingListHeaderSection from "../components/WaitingListHeader";
 
 
 
-const BecomeATester = () => {
+const JoinTheWaitingList = () => {
   <Head>
     <meta
-      name="Join the testers"
-      content="Join the waiting list to become a product tester"
+      name="Join the Waiting List"
+      content="Join the waiting list to be the first to get access!"
     />
   </Head>;
   useEffect(() => {
@@ -35,11 +35,11 @@ const BecomeATester = () => {
 
   return (
     <>
-    <TesterHeaderSection />
-    <TesterHeroSec />
+    <WaitingListHeroSec />
+    <WaitingListHeaderSection />
     <FooterSection />
     </>
   );
 };
 
-export default BecomeATester;
+export default JoinTheWaitingList;

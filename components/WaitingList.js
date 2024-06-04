@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const TesterHeroSec = () => {
+const WaitingListHeroSec = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
@@ -106,4 +106,4 @@ const TesterHeroSec = () => {
   );
 };
 
-export default TesterHeroSec;
+export default WaitingListHeroSec;
