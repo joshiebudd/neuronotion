@@ -18,12 +18,12 @@ const WaitingListHeroSec = () => {
           body: JSON.stringify({ email: emailValue }),
         });
 
+        const responseData = await response.json();
         if (response.ok) {
           setMessage('Successfully subscribed!');
           setEmail('');
         } else {
-          const errorData = await response.json();
-          setMessage(`Failed to subscribe: ${errorData.error}`);
+          setMessage(`Failed to subscribe: ${responseData.error || responseData.message || 'Unknown error'}`);
         }
       } catch (error) {
         setMessage('An error occurred. Please try again.');
@@ -74,7 +74,7 @@ const WaitingListHeroSec = () => {
           <input
             id="emailInput"
             type="email"
-            placeholder="Email address"
+            placeholder="Enter your best email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 sm:mb-0 w-full sm:w-auto"
@@ -86,7 +86,7 @@ const WaitingListHeroSec = () => {
             Secure your spot
           </button>
         </div>
-        {message && <p className="mt-2 text-red-500">{message}</p>}
+        {message && <p className="mt-2 text-gray-800">{message}</p>}
         <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
           <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4">
             <img

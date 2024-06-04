@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { track } from "@vercel/analytics";
 import Head from "next/head";
 import FooterSection from "../components/FooterSection";
-import WaitingListHeroSec from "../components/WaitingList";
+import WaitingListHeroSec from "../components/WaitingListHero";
 import WaitingListHeaderSection from "../components/WaitingListHeader";
 
 
