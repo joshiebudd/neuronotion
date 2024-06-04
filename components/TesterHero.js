@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { addSubscriberToList } from '/moosend';
 
 const TesterHeroSec = () => {
   const [email, setEmail] = useState('');
@@ -11,12 +10,20 @@ const TesterHeroSec = () => {
 
     if (emailValue) {
       try {
-        const response = await addSubscriberToList(emailValue);
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email: emailValue }),
+        });
+
         if (response.ok) {
           setMessage('Successfully subscribed!');
           setEmail('');
         } else {
-          setMessage('Failed to subscribe. Please try again.');
+          const errorData = await response.json();
+          setMessage(`Failed to subscribe: ${errorData.error}`);
         }
       } catch (error) {
         setMessage('An error occurred. Please try again.');
