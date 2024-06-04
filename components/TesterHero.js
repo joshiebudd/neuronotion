@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { addSubscriberToList } from './moosend';
+import { addSubscriberToList } from '/moosend';
 
 const TesterHeroSec = () => {
   const [email, setEmail] = useState('');
