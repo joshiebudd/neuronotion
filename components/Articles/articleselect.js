@@ -69,7 +69,7 @@ const BlogCard = ({ image, date, CardTitle, CardDescription }) => {
             </span>
           )}
           <h3>
-            <Link href="/BlogPages/StudyMusicBlog">
+            <Link href="/blogs/adhd-and-study-music">
               <span className="mb-4 inline-block text-xl font-baloo font-semibold text-gray-900 hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl cursor-pointer">
                 {CardTitle}
               </span>
