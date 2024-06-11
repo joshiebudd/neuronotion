@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderSection from "../HeaderSection";
-
+import Link from "next/link";
 
 const Blog = () => {
   return (
@@ -12,7 +12,7 @@ const Blog = () => {
             <div className="-mx-4 flex flex-wrap justify-center">
               <div className="w-full px-4">
                 <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-                  <span className="mb-2 block text-lg font-baloo font-baloo font-semibold text-gray-900">
+                  <span className="mb-2 block text-lg font-baloo font-semibold text-gray-900">
                     Our Blogs
                   </span>
                   <h2 className="mb-4 text-3xl font-baloo font-bold text-gray-900 sm:text-4xl md:text-[40px]">
@@ -64,17 +64,16 @@ const BlogCard = ({ image, date, CardTitle, CardDescription }) => {
         </div>
         <div>
           {date && (
-            <span className="mb-5 inline-block rounded bg-primary px-4 py-1 text-center text-xs font-baloo font-baloo font-semibold leading-loose text-gray-900">
+            <span className="mb-5 inline-block rounded bg-primary px-4 py-1 text-center text-xs font-baloo font-semibold leading-loose text-gray-900">
               {date}
             </span>
           )}
           <h3>
-            <a
-              href="/BlogPages/StudyMusicBlog"
-              className="mb-4 inline-block text-xl font-baloo font-semibold text-gray-900 hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-            >
-              {CardTitle}
-            </a>
+            <Link href="/BlogPages/StudyMusicBlog">
+              <span className="mb-4 inline-block text-xl font-baloo font-semibold text-gray-900 hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl cursor-pointer">
+                {CardTitle}
+              </span>
+            </Link>
           </h3>
           <p className="text-base text-gray-900">{CardDescription}</p>
         </div>
