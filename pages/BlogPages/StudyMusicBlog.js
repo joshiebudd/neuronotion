@@ -73,7 +73,7 @@ const StudyMusicBlog = () => {
             purge and minify the generated CSS.
           </p>
           <p>
-            You'll also receive a lot of useful application UI, marketing UI, and e-commerce pages that can help
+            You&apos;ll also receive a lot of useful application UI, marketing UI, and e-commerce pages that can help
             you get started with your projects even faster. You can check out this <a
             href="https://flowbite.com/docs/components/tables/">comparison table</a> to better understand
             the differences between the open-source and pro version of Flowbite.
