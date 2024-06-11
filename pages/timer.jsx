@@ -59,8 +59,7 @@ const Timer = () => {
   const handleCountdownInput = (event) => {
     const inputValue = event.target.innerText;
     const minutes = inputValue.split(":")[0];
-    setCustomMinutes(minutes);
-    if (Number.isNaN(parseInt(inputValue))) {
+    if (parseInt(minutes) != minutes) {
       event.target.innerText = `${prevCustomMinutes}:00`;
       return;
     }
