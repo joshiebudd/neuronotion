@@ -1,26 +1,29 @@
 import { useState } from 'react';
 
 const WaitingListHeroSec = () => {
+  const [firstName, setFirstName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   const handleButtonClick = async (e) => {
     e.preventDefault();
+    const firstNameValue = firstName.trim();
     const emailValue = email.trim();
 
-    if (emailValue) {
+    if (firstNameValue && emailValue) {
       try {
         const response = await fetch('/api/subscribe', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ email: emailValue }),
+          body: JSON.stringify({ firstName: firstNameValue, email: emailValue }),
         });
 
         const responseData = await response.json();
         if (response.ok) {
           setMessage('Successfully subscribed!');
+          setFirstName('');
           setEmail('');
         } else {
           setMessage(`Failed to subscribe: ${responseData.error || responseData.message || 'Unknown error'}`);
@@ -29,7 +32,7 @@ const WaitingListHeroSec = () => {
         setMessage('An error occurred. Please try again.');
       }
     } else {
-      setMessage('Please enter a valid email address.');
+      setMessage('Please enter a valid first name and email address.');
     }
   };
 
@@ -71,6 +74,14 @@ const WaitingListHeroSec = () => {
           Be a part of something huge for ADHDers. Join the waiting list today and be the first to get access. <br /> Plus, get over 50% discount on the final release, worth $129+. Secure your spot now.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-4 mb-4">
+          <input
+            id="firstNameInput"
+            type="text"
+            placeholder="Enter your first name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4 sm:mb-0 w-full sm:w-auto"
+          />
           <input
             id="emailInput"
             type="email"
