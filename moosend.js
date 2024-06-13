@@ -11,9 +11,7 @@ export const addSubscriberToList = async (firstName, email) => {
       },
       body: JSON.stringify({ 
         Email: email,
-        CustomFields: {
-          "d7030b2a-7efb-4a73-960d-34b0078ff0d0": firstName
-        }
+        Name: firstName
       }),
     });
 

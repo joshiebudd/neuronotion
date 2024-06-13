@@ -27,12 +27,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
-      body: JSON.stringify({
-        Email: email,
-        CustomFields: {
-          "d7030b2a-7efb-4a73-960d-34b0078ff0d0": firstName
-        }
-      }),
+      body: JSON.stringify({ Name: firstName, Email: email }),
     });
 
     const text = await response.text(); // Read the response as text
