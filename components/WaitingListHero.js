@@ -97,6 +97,7 @@ const WaitingListHeroSec = () => {
             Secure your spot
           </button>
         </div>
+        <p className="mt-2 text-sm font-baloo font-regular text-gray-800">No Spam e-mails. Unsubscribe in one click, at any time.</p>
         {message && <p className="mt-2 text-gray-800">{message}</p>}
         <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
           <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4">
