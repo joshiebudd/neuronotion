@@ -71,7 +71,7 @@ const WaitingListHeroSec = () => {
           />
         </div>
         <p className="mt-5 mb-6 text-xl font-baloo font-regular text-slate-950 sm:px-24">
-          Be a part of something huge for ADHDers. Join the waiting list today and be the first to get access. <br /> Plus, get over 80% discount on the final release, worth $129+. Secure your spot now.
+          The new approach to managing your life with ADHD <br /> Join the waiting list to secure a spot and get more information!
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-4 mb-4">
           <input
