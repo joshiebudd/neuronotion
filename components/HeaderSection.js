@@ -123,7 +123,7 @@ const HeaderSection = () => {
                 height={56}
                 loading="eager"
                 className="w-10 h-auto mr-3"
-                src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
+                src="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
                 alt="Neuro Notion Logo"
               />
               <div className="w-full grow text-center sm:text-left">
