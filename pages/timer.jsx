@@ -328,7 +328,7 @@ const Timer = () => {
             <div style={{ minWidth: "40px" }}>
               <img
                 className="w-10 h-10"
-                src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/assets/logo.webp"
+                src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/Bubbles.svg"
                 alt="Avatar"
               />
             </div>
