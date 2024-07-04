@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <PostHogProvider client={posthog}>
       <>
-        {/* <Script
+        <Script
           id="track-pageview-pixel"
           src="https://connect.facebook.net/en_US/fbevents.js"
           onLoad={() => {
@@ -78,9 +78,9 @@ function MyApp({ Component, pageProps }) {
             href="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/maindemo.webp"
             as="image"
           />
-        </Head> */}
+        </Head>
 
-        {/* <Component {...pageProps} /> */}
+        <Component {...pageProps} />
       </>
     </PostHogProvider>
   );
