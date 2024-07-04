@@ -40,23 +40,23 @@ import {
 } from "../components/tracking";
 
 const IndexPage = () => {
-  <Head>
-    <meta
-      name="description"
-      content="Discover how Neuro Notion, built by ADHDers for ADHDers, addresses study struggles with features like hyper-focus tools, time-saving flashcards, custom ADHD focus timers, and AI-generated essay plans. Overcome distractions and work smarter with Neuro Notion."
-    />
-  </Head>;
+  // <Head>
+  //   <meta
+  //     name="description"
+  //     content="Discover how Neuro Notion, built by ADHDers for ADHDers, addresses study struggles with features like hyper-focus tools, time-saving flashcards, custom ADHD focus timers, and AI-generated essay plans. Overcome distractions and work smarter with Neuro Notion."
+  //   />
+  // </Head>;
 
   useEffect(() => {
     // setupLoad();
-    setupScroll();
-    setupBeforeUnload();
-    track("Visited");
+    // setupScroll();
+    // setupBeforeUnload();
+    // track("Visited");
   }, []);
 
   return (
     <>
-      <HeaderSection />
+      {/* <HeaderSection />
       <HeroSection />
       <BenefitsSection />
       <FeaturesSection />
@@ -69,7 +69,7 @@ const IndexPage = () => {
       <CommunitySection />
       <AboutSection />
       <FinalCTA />
-      <FooterSection />
+      <FooterSection /> */}
     </>
   );
 };
