@@ -40,6 +40,7 @@ html {
   font-family: "manrope";
   src: url("../fonts/Manrope.woff2") format("woff2");
 }
+
 @font-face {
   font-family: "inter";
   src: url("../fonts/Inter.ttf") format("truetype");
@@ -79,6 +80,73 @@ html {
   font-family: 'Baloo 2';
   src: url('../fonts/Baloo2-VariableFont_wght.ttf') format('truetype');
   font-weight: 400; /* Adjust as needed */
+}
+
+/* Poppins Fonts */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/fonts/Poppins-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Add more @font-face rules for each Poppins variation */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/fonts/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Century Gothic Fonts */
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/src/fonts/CenturyGothicPaneuropeanLightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/src/fonts/CenturyGothicPaneuropeanRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/src/fonts/CenturyGothicPaneuropeanSemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('/src/fonts/CenturyGothicPaneuropeanThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+.font-pop {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-CG {
+  font-family: 'Century Gothic', sans-serif;
 }
 
 /* Blog styles */

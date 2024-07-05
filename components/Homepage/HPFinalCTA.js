@@ -12,7 +12,7 @@ const HPFinalCTA = () => {
  </span>
 </h1>
 
-        <p className="mb-6 text-xl font-baloo font-regular text-black sm:px-16">
+        <p className="mb-6 text-xl font-baloo font- text-black sm:px-16">
           The <b> second brain for managing your ADHD </b>. Manage your entire life <br />
           in your own ADHD-friendly space.
         </p>
