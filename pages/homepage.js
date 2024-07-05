@@ -4,8 +4,9 @@ import HPHeroSection from '../components/Homepage/HPHero';
 import HPBundleSection from '../components/Homepage/HPBundle';
 import HPUBSection from '../components/Homepage/HPUB';
 import HPHowItWorksSection from '../components/Homepage/HPHowItWorks';
-import HPTestimonialsSection from '../components/Homepage/HPTestimonials';
-import HPFAQsSection from '../components/Homepage/HPFAQs';
+import ReviewSection from '../components/ReviewSection';
+import HPFAQSection from '../components/Homepage/HPFAQs';
+import HPFinalCTA from '../components/Homepage/HPFinalCTA';
 import FooterSection from '../components/FooterSection';
 
 const HomePage = () => {
@@ -16,8 +17,9 @@ const HomePage = () => {
       <HPBundleSection />
       <HPUBSection />
       <HPHowItWorksSection />
-      <HPTestimonialsSection />
-      <HPFAQsSection />
+      <ReviewSection />
+      <HPFAQSection />
+      <HPFinalCTA />
       <FooterSection />
     </div>
   );
