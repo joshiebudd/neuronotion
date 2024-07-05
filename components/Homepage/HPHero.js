@@ -13,7 +13,7 @@ const HPHeroSection = () => {
       <button className="bg-gray-300 text-gray-700 text-opacity-80 py-3 px-10 font-prim font-bold rounded-xl text-xl shadow-gray-400 shadow-sm hover:bg-gray-400 hover:text-gray-800 hover: hover:shadow-gray-600 hover:shadow-sm">Button</button>
       </div>
       <div className="mt-8">
-        <p className=" font-sec italic text-gray-700">Trusted by and Affiliated with:</p>
+        <p className=" font-sec italic text-gray-700">Trusted by and Affiliated with::</p>
         <div className="flex justify-center space-x-4 mt-4">
           <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
           <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
