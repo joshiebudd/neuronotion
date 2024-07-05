@@ -17,7 +17,7 @@ const Benefits1 = () => {
   For <span className="from-blue-400 to-blue-700 bg-gradient-to-tl bg-clip-text text-transparent">
   {' '} ADHD</span> students 🎓</span>
 </h2>
-<p className="mt-2 text-gray-700 text-lg font-baloo font-regular text-gray-900">
+<p className="mt-2 text-gray-700 text-lg font-baloo font-regular">
   We understand your struggles...{' '}
   <span className="inline sm:inline-block">
     <br /> and built this tool to directly tackle them.

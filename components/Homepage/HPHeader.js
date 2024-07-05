@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 
+
 const HPHeader = () => {
   return (
     <header className="bg-white bg-opacity-30 backdrop-blur-lg fixed top-0 right-0 left-0 shadow">
@@ -18,15 +19,15 @@ const HPHeader = () => {
             alt="Neuro Notion Logo"
           />
           <div className="w-full grow text-center sm:text-left">
-            <span className="self-center whitespace-nowrap text-2xl sm:text-2xl font-baloo font-bold text-black">
+            <span className="self-center whitespace-nowrap text-3xl sm:text-2xl font-pop font-bold text-prim">
               Neuro Notion
             </span>
           </div>
         </a>
         <nav className="space-x-4 flex items-center">
-          <a href="#" className="text-gray-600 hover:text-gray-900 text-lg md:xl font-baloo font-bold">ADHD Templates</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900 text-lg md:xl font-baloo font-bold">Bundles</a>
-          <a href="#" className="px-4 py-2 bg-purple-500 text-white rounded-md text-lg md:xl font-baloo font-bold hover:bg-purple-600 transition">
+          <a href="#" className="text-gray-700 hover:text-gray-900 text-lg md:xl font-pop font-bold">ADHD Templates</a>
+          <a href="#" className="text-gray-700 hover:text-gray-900 text-lg md:xl font-pop font-bold">Bundles</a>
+          <a href="#" className="bg-accent1 text-gray-50 py-2 px-4 font-prim font-bold rounded-xl text-lg shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-violet-700 hover:bg-opacity-80 hover:text-gray-50">
             Ultimate ADHD Brain
           </a>
         </nav>

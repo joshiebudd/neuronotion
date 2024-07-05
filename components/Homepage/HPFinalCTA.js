@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const HPFinalCTA = () => {
 
   return (
@@ -12,8 +13,8 @@ const HPFinalCTA = () => {
  </span>
 </h1>
 
-        <p className="mb-6 text-xl font-baloo font- text-black sm:px-16">
-          The <b> second brain for managing your ADHD </b>. Manage your entire life <br />
+        <p className="mb-6 text-xl font-pop font- text-black sm:px-16">
+          The <b> second brain for managing your ADHD</b>. Manage your entire life <br />
           in your own ADHD-friendly space.
         </p>
 
@@ -26,6 +27,7 @@ const HPFinalCTA = () => {
             Get for Free.
           </a>
         </div>
+
 
 {/* Star Rating */}
 <div className="mb-2 flex justify-center">

@@ -19,7 +19,7 @@ const ReviewSection = () => {
           </h2>
         </div>
         <div className="pt-3">
-          <p className="text-center sm:px-24 text-lg font-baloo text-center leading-6 text-gray-800">
+          <p className="sm:px-24 text-lg font-baloo text-center leading-6 text-gray-800">
             Over 1,000 users have transformed their systems with Neuro Notion&apos;s Templates.
           </p>
         </div>

@@ -127,7 +127,7 @@ const HeaderSection = () => {
                 alt="Neuro Notion Logo"
               />
               <div className="w-full grow text-center sm:text-left">
-                <span className="self-center whitespace-nowrap text-2xl sm:text-2xl font-baloo font-bold text-black">
+                <span className="self-center whitespace-nowrap text-2xl sm:text-2xl font-pop font-bold text-black">
                   Neuro Notion
                 </span>
               </div>
@@ -138,28 +138,28 @@ const HeaderSection = () => {
             >
               <a
                 href="#features"
-                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-pop font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Features")}
               >
                 Features
               </a>
               <a
                 href="#demo"
-                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-pop font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Demo")}
               >
                 Demo
               </a>
               <a
                 href="#pricing"
-                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-pop font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_Pricing")}
               >
                 Pricing
               </a>
               <a
                 href="#faqs"
-                className="px-1 py-1 text-lg md:xl font-baloo font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
+                className="px-1 py-1 text-lg md:xl font-pop font-regular text-slate-900 hover:text-slate-900 cursor-pointer hover:underline hover:text-xl transition-all duration-500"
                 onClick={() => track("CTA_FAQ")}
               >
                 FAQs
