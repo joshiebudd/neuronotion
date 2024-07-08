@@ -5,7 +5,7 @@ export default function Header() {
   const titleRef = useRef(null);
   return (
     <div className="full-header bg-white bg-opacity-30 backdrop-blur-lg fixed top-0 right-0 left-0">
-      <nav className="px-8 py-5 lg:px-6">
+      <div className="px-8 py-5 lg:px-6">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
           <a
             href="https://www.neuro-notion.com/#hero"
@@ -42,7 +42,7 @@ export default function Header() {
             </a>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
   );
 }
