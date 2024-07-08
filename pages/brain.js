@@ -29,7 +29,7 @@ const ADHDBrain = () => {
               <div className="rounded-full border-2 max-w-10 max-h-10 min-w-10 min-h-10 -mx-1 bg-white"></div>
               <div className="rounded-full border-2 max-w-10 max-h-10 min-w-10 min-h-10 -mx-1 bg-white"></div>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col pl-4">
               <span>⭐⭐⭐⭐⭐</span>
               <span>4.9/5 from other ADHDers.</span>
             </div>
