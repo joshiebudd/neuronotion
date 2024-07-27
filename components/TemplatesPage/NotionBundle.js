@@ -27,7 +27,7 @@ const cards = [
 
 const NotionBundle = () => {
   return (
-    <div className="md:p-16 mt-8 p-8">
+    <div className="ps-40 pt-10">
       <div className="text-[32px] font-bold text-gray-600">
         ADHD Notion Bundles
       </div>

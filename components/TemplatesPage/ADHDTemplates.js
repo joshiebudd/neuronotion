@@ -57,7 +57,7 @@ const ADHDTemplates = () => {
       : cards.filter((card) => card.category === selectedCategory);
 
   return (
-    <div className="md:p-16 p-8">
+    <div className="p-52">
       <div className="text-[32px] text-gray-600 font-bold">
         ADHD Notion Templates
       </div>

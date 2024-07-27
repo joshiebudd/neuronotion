@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSection from "../pages/mypage/Header";
+import HeaderSection from "../components/HeaderSection";
 import CommunitySection from "../components/CommunitySection";
 import PricingSection from "../components/PricingSection";
 import FAQSection from "../components/FAQSection/FAQSection";
