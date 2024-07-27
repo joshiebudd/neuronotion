@@ -1,36 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 
-export default function () {
+export default function ADHDNewsletterSignup() {
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log("Submitted:", { firstName, email });
+    // Reset form fields
+    setFirstName("");
+    setEmail("");
+  };
+
   return (
-    <div className="md:p-16 p-8 flex flex-col items-center justify-center">
-      <div className="pt-24 text-[32px] font-bold">
+    <div className="md:p-16 p-8 flex flex-col items-center justify-center max-w-4xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-bold text-center">
         Join the ADHD Newsletter
-      </div>
-      <div className="pt-12 text-lg lg:px-96 md:px-16">
-        Every Single Day, you'll receive a{" "}
+      </h2>
+      <p className="mt-8 text-lg text-center">
+        Every Single Day, you&apos;ll receive a{" "}
         <span className="font-bold">2-minute email</span> containing practical
-        tips, stories, and examples of how to better manage your ADHD ,
+        tips, stories, and examples of how to better manage your ADHD,
         completely free.
-      </div>
-      <div className="pt-4 flex flex-col space-y-4">
+      </p>
+      <form onSubmit={handleSubmit} className="w-full max-w-md mt-8 space-y-4">
         <input
           type="text"
           placeholder="Enter First Name"
-          className="border border-gray-400 p-2 rounded-md"
+          className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          required
         />
         <input
           type="email"
           placeholder="Enter Email"
-          className="border border-gray-400 p-2 rounded-md"
+          className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
         />
-        <button className="border-none px-4 py-3 bg-purple-600 text-white rounded-lg mt-2">
-          Join Email List.
+        <button
+          type="submit"
+          className="w-full px-4 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300"
+        >
+          Join Email List
         </button>
-        <div className="pt-4 font-bold font-italic">
+        <p className="text-sm text-center font-semibold italic">
           No Spam. Unsubscribe in one click.
-        </div>
-      </div>
-      <hr className="mt-8 w-full border-t border-gray-400" />
+        </p>
+      </form>
+      <hr className="mt-12 w-full border-t border-gray-300" />
     </div>
   );
 }
