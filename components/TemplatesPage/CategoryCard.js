@@ -2,20 +2,20 @@ import React from "react";
 
 const CategoryCard = ({ image, title, subtitle, price }) => {
   return (
-    <div className="border rounded-md p-4 m-2">
+    <div className="shadow-lg rounded-3xl bg-white p-6 text-left">
       {image ? (
-        <img src={image} alt={title} className="w-300 h-300 object-cover" />
+        <img src={image} alt={title} className="w-full h-64 object-cover rounded-t-3xl" />
       ) : (
-        <div className="w-300 h-[300px] md:h-[150px] bg-gray-200 flex items-center justify-center">
+        <div className="w-full h-64 bg-gray-200 flex items-center justify-center rounded-t-3xl">
           <span className="text-gray-500">No Image</span>
         </div>
       )}
-      <div className="flex items-center justify-between px-2">
+      <div className="mt-4 flex items-center justify-between">
         <div>
-          <h3 className="mt-2 text-lg font-bold">{title}</h3>
-          <p className="text-gray-600">{subtitle}</p>
+          <h3 className="text-2xl font-prim font-bold text-prim mb-2">{title}</h3>
+          <p className="text-gray-700 font-sec text-md">{subtitle}</p>
         </div>
-        <div className="text-[48px] md:text-[24px] font-bold">${price}</div>
+        <div className="text-3xl font-prim font-bold text-prim">${price}</div>
       </div>
     </div>
   );

@@ -57,23 +57,25 @@ const ADHDTemplates = () => {
       : cards.filter((card) => card.category === selectedCategory);
 
   return (
-    <div className="p-52">
-      <div className="text-[32px] text-gray-600 font-bold">
-        ADHD Notion Templates
-      </div>
-      <div className="text-[20px] text-gray-600 ">Search for some templates</div>
-      <div className="w-full">
-        <div className="flex flex-wrap">
-          {categories.map((category) => (
-            <CategoryButton
-              key={category}
-              category={category}
-              selectedCategory={selectedCategory}
-              onClick={setSelectedCategory}
-            />
-          ))}
+    <section className="pt-40 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center">
+          <h2 className="text-4xl font-prim font-bold text-prim mb-2">ADHD Notion Templates</h2>
+          <p className="text-xl text-gray-700 font-sec mb-8">Search for some templates</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+        <div className="flex justify-center mb-8">
+          <div className="flex flex-wrap justify-center space-x-4">
+            {categories.map((category) => (
+              <CategoryButton
+                key={category}
+                category={category}
+                selectedCategory={selectedCategory}
+                onClick={setSelectedCategory}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {filteredCards.map((card) => (
             <CategoryCard
               key={card.id}
@@ -84,7 +86,7 @@ const ADHDTemplates = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

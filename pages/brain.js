@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSection from "../components/HeaderSection";
+import HPHeader from '../components/Homepage/HPHeader';
 import CommunitySection from "../components/CommunitySection";
 import PricingSection from "../components/PricingSection";
 import FAQSection from "../components/FAQSection/FAQSection";
@@ -9,7 +9,7 @@ import FooterSection from "../components/FooterSection";
 const ADHDBrain = () => {
   return (
     <>
-      <HeaderSection />
+      <HPHeader />
       <div className="mt-32 lg:px-0 px-8">
         <div className="mx-auto flex flex-col items-center">
           <h1 className="text-center font-bold text-2xl lg:text-[60px]">
@@ -36,7 +36,7 @@ const ADHDBrain = () => {
           </div>
         </div>
 
-        <div className="lg:px-0 px-8 mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
+        <div className="px-8 mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
           <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4">
             <img
               style={{ width: "100%" }}

@@ -27,22 +27,24 @@ const cards = [
 
 const NotionBundle = () => {
   return (
-    <div className="ps-40 pt-10">
-      <div className="text-[32px] font-bold text-gray-600">
-        ADHD Notion Bundles
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-prim font-bold text-prim mb-8 text-left">
+          ADHD Notion Bundles
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {cards.map((card) => (
+            <CategoryCard
+              key={card.id}
+              title={card.title}
+              subtitle={card.subtitle}
+              price={card.price}
+            />
+          ))}
+        </div>
+        <hr className="mt-8 w-full border-t border-gray-400" />
       </div>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-        {cards.map((card) => (
-          <CategoryCard
-            key={card.id}
-            title={card.title}
-            subtitle={card.subtitle}
-            price={card.price}
-          />
-        ))}
-      </div>
-      <hr className="mt-8 w-full border-t border-gray-400" />
-    </div>
+    </section>
   );
 };
 

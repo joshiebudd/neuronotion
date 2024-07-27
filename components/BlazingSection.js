@@ -10,7 +10,7 @@ const BlazingSection = () => {
     <section id="benefits" className="bg-gray-800 benefits-section">
       <div className="py-12 sm:py-12 px-8 mx-auto max-w-screen-xl lg:px-24">
         <div className="max-w-screen-md mx-auto text-center mb-2 mt-2">
-          <h2 className="mx-2 text-4xl tracking-tight font-baloo font-baloo font-bold text-gray-50 text-left sm:text-center">
+          <h2 className="mx-2 text-4xl tracking-tight font-baloo font-bold text-gray-50 text-left sm:text-center">
             <span className="from-orange-400 to-orange-600 bg-gradient-to-r bg-clip-text text-transparent">
               Blazing fast set-up
             </span>
