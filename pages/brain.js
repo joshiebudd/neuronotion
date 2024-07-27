@@ -78,7 +78,7 @@ const ADHDBrain = () => {
           All ADHDers have these problems:
         </h1>
         <p className="pt-4 text-center text-lg">
-          As a team of ADHDers ourselves, we've been here before...
+          As a team of ADHDers ourselves, we&apos;ve been here before...
         </p>
         <div className="pt-4 flex justify-evenly">
           <div className="flex flex-col items-center">
@@ -111,7 +111,7 @@ const ADHDBrain = () => {
 
       <div className="pt-10 lg:px-0 px-8 ">
         <h1 className="text-center font-bold text-2xl lg:text-[40px]">
-          But it doesn't have to be like that:
+          But it doesn&apos;t have to be like that:
         </h1>
         <p className="text-center text-lg">
           With the Ultimate ADHD brain, all you have to do is brain dump, and
