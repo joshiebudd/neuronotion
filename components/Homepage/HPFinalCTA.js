@@ -9,7 +9,7 @@ const HPFinalCTA = () => {
       <h1 className="mb-4 text-4xl font-baloo font-bold leading-none tracking-tight text-gray-900">
  Silence the ADHD Chaos. <br />
  <span className="from-blue-400 to-blue-700 bg-gradient-to-tr bg-clip-text text-transparent">
-   Make Living Easy.
+   Regain Control of your ADHD.
  </span>
 </h1>
 

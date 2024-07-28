@@ -4,7 +4,7 @@ import HPHeroSection from '../components/Homepage/HPHero';
 import HPBundleSection from '../components/Homepage/HPBundle';
 import HPUBSection from '../components/Homepage/HPUB';
 import HPHowItWorksSection from '../components/Homepage/HPHowItWorks';
-import ReviewSection from '../components/ReviewSection';
+import HPReviews from '../components/Homepage/HPReviews';
 import HPFAQSection from '../components/Homepage/HPFAQs';
 import HPFinalCTA from '../components/Homepage/HPFinalCTA';
 import FooterSection from '../components/FooterSection';
@@ -17,7 +17,7 @@ const HomePage = () => {
       <HPBundleSection />
       <HPUBSection />
       <HPHowItWorksSection />
-      <ReviewSection />
+      <HPReviews />
       <HPFAQSection />
       <HPFinalCTA />
       <FooterSection />

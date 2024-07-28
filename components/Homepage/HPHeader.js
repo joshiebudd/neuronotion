@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const HPHeader = () => {
   return (
-    <header className="bg-white bg-opacity-30 backdrop-blur-lg fixed top-0 right-0 left-0 shadow">
+    <header className="bg-white bg-opacity-30 backdrop-blur-lg z-10 fixed top-0 right-0 left-0 shadow">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         <a
           href="https://www.neuro-notion.com/#hero"

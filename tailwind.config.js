@@ -44,6 +44,15 @@ module.exports = {
       spacing: {
         logoSpacing: 'var(--logo-spacing)', // Use the face or asset circles as reference for spacing logos
       },
+      keyframes: {
+        pulse: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+        },
+      },
+      animation: {
+        pulse: 'pulse 1s infinite',
+      },
     },
   },
   plugins: [],
