@@ -25,8 +25,8 @@ const HPHeader = () => {
           </div>
         </a>
         <nav className="space-x-4 flex items-center">
-          <a href="#" className="text-gray-700 hover:text-gray-900 text-lg md:xl font-pop font-bold">ADHD Templates</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900 text-lg md:xl font-pop font-bold">Bundles</a>
+          <a href="#" className="text-prim hover:text-gray-900 text-lg md:xl font-pop font-bold">ADHD Templates</a>
+          <a href="#" className="text-prim hover:text-gray-900 text-lg md:xl font-pop font-bold">Bundles</a>
           <a href="#" className="bg-accent1 text-gray-50 py-2 px-4 font-prim font-bold rounded-xl text-lg shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-violet-700 hover:bg-opacity-80 hover:text-gray-50">
             Ultimate ADHD Brain
           </a>
