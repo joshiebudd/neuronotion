@@ -72,7 +72,9 @@ const testimonials = [
 
 const TestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [expandedTestimonials, setExpandedTestimonials] = useState({});
   const cardsToShow = 5; // Number of cards to show at once
+  const previewLength = 200; // Maximum number of characters to show before "see more"
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -80,6 +82,13 @@ const TestimonialCarousel = () => {
 
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const toggleExpand = (index) => {
+    setExpandedTestimonials((prevExpanded) => ({
+      ...prevExpanded,
+      [index]: !prevExpanded[index],
+    }));
   };
 
   return (
@@ -100,7 +109,21 @@ const TestimonialCarousel = () => {
                 <div className="text-2xl mb-2 w-full flex justify-center">
                   <span className="mt-0 mb-0 text-3xl leading-none text-accent6">★★★★★</span>
                 </div>
-                <p className="mb-4 text-sm flex-grow">{testimonial.text}</p>
+                <p className="mb-4 text-sm flex-grow">
+                  {expandedTestimonials[index]
+                    ? testimonial.text
+                    : `${testimonial.text.substring(0, previewLength)}${
+                        testimonial.text.length > previewLength ? '...' : ''
+                      }`}
+                </p>
+                {testimonial.text.length > previewLength && (
+                  <button
+                    onClick={() => toggleExpand(index)}
+                    className="text-gray-400 font-pop text-xs"
+                  >
+                    {expandedTestimonials[index] ? 'Show less' : 'See more...'}
+                  </button>
+                )}
                 <div className="mt-auto">
                   <div className="flex items-center">
                     <img

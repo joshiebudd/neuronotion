@@ -3,7 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { track } from "@vercel/analytics";
 import Image from "next/image";
 import Script from "next/script";
-import Burger from "./Common/Burger";
+import Burger from "../Common/Burger";
 import _ from "lodash";
 
 import styles from "./HeaderSection.style.module.scss";

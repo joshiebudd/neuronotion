@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import CalendarIcon from "./Common/Icons/CalendarIcon";
-import BrainIcon from "./Common/Icons/BrainIcon";
-import TutorialIcon from "./Common/Icons/TutorialIcon";
-import MigrationIcon from "./Common/Icons/MigrationIcon";
-import BrushIcon from "./Common/Icons/BrushIcon";
-import FolderIcon from "./Common/Icons/FolderIcon";
+import CalendarIcon from "../Common/Icons/CalendarIcon";
+import BrainIcon from "../Common/Icons/BrainIcon";
+import TutorialIcon from "../Common/Icons/TutorialIcon";
+import MigrationIcon from "../Common/Icons/MigrationIcon";
+import BrushIcon from "../Common/Icons/BrushIcon";
+import FolderIcon from "../Common/Icons/FolderIcon";
 
 const FeaturesSection = () => {
   const handleButtonClick = (e) => {

@@ -2,49 +2,48 @@ import React, { useState } from "react";
 import CategoryButton from "./CategoryButton";
 import CategoryCard from "./CategoryCard";
 
-const categories = ["All", "Category1", "Category2", "Category3"];
+const categories = ["All", "Paid", "Free", "Mental Health", "Physical Health", "Productivity"];
 const cards = [
   {
     id: 1,
-    category: "Category1",
-    title: "Title 1",
-    subtitle: "Subtitle 1",
-    price: 99,
+    categories: ["Paid", "Productivity", "Mental Health", "Physical Health"],
+    title: "Ultimate ADHD Brain 2.0 ⚛️",
+    subtitle: "Your Perfect ADHD Digital Assistant.",
+    price: "$79",
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp"
   },
   {
     id: 2,
-    category: "Category2",
-    title: "Title 2",
-    subtitle: "Subtitle 2",
-    price: 99,
+    categories: ["Paid", "Productivity"],
+    title: "The ADHD Study System 📚🎓",
+    subtitle: "Every ADHD Study Hack/Tool in one place.",
+    price: "$19",
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/StudySystemShadowedDemoDark.webp"
   },
   {
     id: 3,
-    category: "Category3",
-    title: "Title 3",
-    subtitle: "Subtitle 3",
-    price: 99,
+    categories: ["Free", "Mental Health"],
+    title: "ADHD Journal & Mood Logger 🧠☮️",
+    subtitle: "ADHD Journals and 90s mood logs!",
+    price: "FREE",
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/MentalHealthShadowDemoUpdated.webp"
   },
   {
     id: 4,
-    category: "Category1",
-    title: "Title 4",
-    subtitle: "Subtitle 4",
-    price: 99,
+    categories: ["Free", "Productivity"],
+    title: "ADHD Task Manager 🏆☑️",
+    subtitle: "An awesome task list, with an ADHD twist!",
+    price: "FREE",
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/TaskManagerShadowedDemo.webp"
   },
+
   {
     id: 5,
-    category: "Category2",
-    title: "Title 5",
-    subtitle: "Subtitle 5",
-    price: 99,
-  },
-  {
-    id: 6,
-    category: "Category3",
-    title: "Title 6",
-    subtitle: "Subtitle 6",
-    price: 99,
+    categories: ["Free", "Mental Health", "Physical Health"],
+    title: "Habit & Routine Tracker🏆✅",
+    subtitle: "Finally, build habits and stick to routines.",
+    price: "FREE",
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/RoutinesShadowDemo.webp"
   },
 ];
 
@@ -54,14 +53,14 @@ const ADHDTemplates = () => {
   const filteredCards =
     selectedCategory === "All"
       ? cards
-      : cards.filter((card) => card.category === selectedCategory);
+      : cards.filter((card) => card.categories.includes(selectedCategory));
 
   return (
     <section className="pt-40 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center">
           <h2 className="text-4xl font-prim font-bold text-prim mb-2">ADHD Notion Templates</h2>
-          <p className="text-xl text-gray-700 font-sec mb-8">Search for some templates</p>
+          <p className="text-xl text-gray-700 font-sec mb-8">All <b>scientifically</b> designed around the ADHD Brain.</p>
         </div>
         <div className="flex justify-center mb-8">
           <div className="flex flex-wrap justify-center space-x-4">
@@ -70,7 +69,7 @@ const ADHDTemplates = () => {
                 key={category}
                 category={category}
                 selectedCategory={selectedCategory}
-                onClick={setSelectedCategory}
+                onClick={() => setSelectedCategory(category)}
               />
             ))}
           </div>
@@ -82,6 +81,7 @@ const ADHDTemplates = () => {
               title={card.title}
               subtitle={card.subtitle}
               price={card.price}
+              image={card.image}
             />
           ))}
         </div>

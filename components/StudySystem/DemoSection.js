@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import ImageViewer from "./Common/ImageViewer";
+import ImageViewer from "../Common/ImageViewer";
 
 const DemoSection = () => {
   const [zoomed, setZoomed] = useState(false);

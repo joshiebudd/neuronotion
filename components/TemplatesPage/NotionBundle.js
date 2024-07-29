@@ -42,7 +42,6 @@ const NotionBundle = () => {
             />
           ))}
         </div>
-        <hr className="mt-8 w-full border-t border-gray-400" />
       </div>
     </section>
   );

@@ -3,8 +3,8 @@ import React from 'react';
 const HPHowItWorksSection = () => {
   return (
     <section className="text-center pb-40 bg-opacity-10">
-      <div className="relative shadow-xl px-8 py-16 bg-accent4 bg-opacity-20 rounded-3xl max-w-5xl mx-auto">
-        <h2 className="text-5xl font-prim font-bold mb-8">How It Works</h2>
+      <div className="relative shadow-xl px-8 py-16 bg-accent2 bg-opacity-10 rounded-3xl max-w-5xl mx-auto">
+        <h2 className="text-5xl text-prim font-pop font-bold mb-8">How It Works</h2>
         <div className="flex justify-center space-x-12 items-center mb-12">
           <div className="text-center">
             <div className="text-9xl text-prim text-opacity-85 font-bold hover:text-sec transition-colors duration-300">1</div>

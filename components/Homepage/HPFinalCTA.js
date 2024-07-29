@@ -19,7 +19,7 @@ const HPFinalCTA = () => {
         <div className="m-8">
           <a
             href="#pricing"
-            className="bg-sec text-prim py-3 px-8 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-accent2 hover:text-prim"
+            className="bg-sec text-prim py-3 px-8 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-accent3 hover:text-prim"
           >
             Get for Free
           </a>

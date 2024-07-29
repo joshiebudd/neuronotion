@@ -21,7 +21,7 @@ const HPUBSection = () => {
             </p>
           </div>
     <button className="bg-accent2 text-gray-50 py-3 px-6 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim">
-      <span className="text-gray-50">Lean More</span>
+      <span className="text-gray-50">Learn More</span>
     </button>
         </div>
       </div>
