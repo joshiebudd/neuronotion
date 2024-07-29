@@ -10,7 +10,7 @@ import UBClarity from "../components/UBPage/UBVideoDemo";
 import UBCheckboxes from "../components/UBPage/UBCheckboxes";
 import UBSetUp from "../components/UBPage/UBSetUp";
 import CommunitySection from "../components/StudySystem/CommunitySection";
-import PricingSection from "../components/PricingSection";
+import PricingSection from "../components/StudySystem/PricingSection";
 import FAQSection from "../components/FAQSection/FAQSection";
 import FinalCTA from "../components/StudySystem/FinalCTASection";
 import FooterSection from "../components/FooterSection";

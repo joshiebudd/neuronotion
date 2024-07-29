@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderSection from '../../components/HeaderSection';
+import HeaderSection from '../../components/StudySystem/HeaderSection';
 
 const StudyMusicBlog = () => {
   return (

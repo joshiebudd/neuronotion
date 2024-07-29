@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSection from "../HeaderSection";
+import HeaderSection from "../StudySystem/HeaderSection";
 import Link from "next/link";
 
 const Blog = () => {

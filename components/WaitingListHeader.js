@@ -6,7 +6,7 @@ import Script from "next/script";
 import Burger from "./Common/Burger";
 import _ from "lodash";
 
-import styles from "./HeaderSection.style.module.scss";
+import styles from "./StudySystem/HeaderSection.style.module.scss";
 
 const WaitingListHeaderSection = () => {
   const titleRef = useRef(null);
