@@ -1,5 +1,3 @@
-// pages/ADHDBrain.js
-
 import React from "react";
 import HPHeader from '../components/Homepage/HPHeader';
 import UBHero from "../components/UBPage/UBHero";
@@ -10,9 +8,9 @@ import UBClarity from "../components/UBPage/UBVideoDemo";
 import UBCheckboxes from "../components/UBPage/UBCheckboxes";
 import UBSetUp from "../components/UBPage/UBSetUp";
 import CommunitySection from "../components/StudySystem/CommunitySection";
-import PricingSection from "../components/StudySystem/PricingSection";
-import FAQSection from "../components/FAQSection/FAQSection";
-import FinalCTA from "../components/StudySystem/FinalCTASection";
+import UBPricing from "../components/UBPage/UBPricing";
+import TemplatesFAQ from "../components/TemplatesPage/TemplatesFAQ";
+import HPFinalCTA from "../components/Homepage/HPFinalCTA";
 import FooterSection from "../components/FooterSection";
 
 const ADHDBrain = () => {
@@ -27,14 +25,9 @@ const ADHDBrain = () => {
       <UBCheckboxes />
       <UBSetUp />
       <CommunitySection />
-      <PricingSection />
-      <FAQSection />
-      <div>
-        <p className="text-center">
-          Still have questions? Send me an email <b>josh@neuro-notion.com</b>
-        </p>
-      </div>
-      <FinalCTA />
+      <UBPricing />
+      <TemplatesFAQ />
+      <HPFinalCTA />
       <FooterSection />
     </>
   );

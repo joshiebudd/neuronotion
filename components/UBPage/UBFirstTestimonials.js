@@ -7,14 +7,16 @@ const UBFirstTestimonials = () => {
   ];
 
   return (
-    <div className="flex justify-evenly">
+    <div className="flex justify-evenly py-4 bg-white">
       {testimonials.map((testimonial, index) => (
-        <div key={index} className="flex flex-col text-sm items-center">
-          <span>⭐⭐⭐⭐⭐</span>
-          <span className="max-w-56">{testimonial.text}</span>
-          <div className="rounded-full border-2 max-w-16 max-h-16 min-w-16 min-h-16 -mx-1 bg-white"></div>
-          <span className="font-bold">{testimonial.name}</span>
-          <span>{testimonial.occupation}</span>
+        <div key={index} className="flex flex-col items-center text-center max-w-md">
+          <span className="text-4xl text-accent4">★★★★★</span>
+          <span className="text-gray-700 font-cg font-normal mb-4">{testimonial.text}</span>
+          <div className="rounded-full border-2 w-16 h-16 bg-white flex items-center justify-center mb-2">
+            {/* Placeholder for image or initials */}
+          </div>
+          <span className="font-pop font-bold text-prim">{testimonial.name}</span>
+          <span className="text-gray-500 font-cg">{testimonial.occupation}</span>
         </div>
       ))}
     </div>
