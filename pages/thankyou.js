@@ -1,6 +1,6 @@
 import React from "react";
 import Script from "next/script";
-import HeaderSection from "../components/HeaderSection";
+import HeaderSection from "../components/StudySystem/HeaderSection";
 import FooterSection from "../components/FooterSection";
 
 function ThankYouPage() {
