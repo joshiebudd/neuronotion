@@ -1,95 +1,87 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from "next/image";
 
-const testimonials = [
-  {
-    text: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-    name: 'Gustavo Workman',
-    position: 'Head, Product Design'
-  },
-  {
-    text: 'It is a long established fact that a reader will be distracted by the readable content of a page when using Lorem Ipsum is that it has a more-or-less normal distribution of letters',
-    name: 'Casy Camilari',
-    position: 'Digital Marketing Director'
-  },
-  {
-    text: 'Class has a dynamic set of teaching tools built to be deployed and used during class. Teachers can handout assignments in real-time for students to complete and submit.',
-    name: 'Rayna Torff',
-    position: 'Lead, Design Systems'
-  },
-  {
-    text: 'This website is the best I have found so far. Firstly it has a huge range of components which are perfectly designed. All of them are responsive in both desktop and mobile version.',
-    name: 'Marcus Brown',
-    position: 'VP, Operations'
-  },
-  // Add more testimonials as needed
-];
-
-const TestimonialCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsToShow = 5; // Number of cards to show at once
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+const HeroSection = () => {
+  const handleButtonClick = (e) => {
+    // Log the custom pixel event
+    logCustomPixelEvent("HeroBuyNowClick");
   };
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  const logCustomPixelEvent = (eventName) => {
+    // Log event to Facebook Pixel
+    fbq("trackCustom", "HeroBuyNowClick");
   };
 
   return (
-    <div className="bg-gray-900 text-white p-8">
-      <h2 className="text-3xl font-bold mb-8 text-center">Loved By Industry Leaders</h2>
-      <div className="relative">
-        <div className="flex overflow-hidden">
-          {Array.from({ length: cardsToShow }).map((_, index) => {
-            const testimonialIndex = (currentIndex + index) % testimonials.length;
-            const testimonial = testimonials[testimonialIndex];
-            return (
-              <div
-                key={index}
-                className="w-1/5 flex-shrink-0 px-2 transition-all duration-300 ease-in-out"
-              >
-                <div className="bg-gray-800 p-4 rounded-lg shadow-lg h-full flex flex-col">
-                  <div className="text-2xl mb-2 w-full flex justify-center">
-                    <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">★★★★★</span>
-                  </div>
-                  <p className="mb-4 text-sm flex-grow">{testimonial.text}</p>
-                  <div className="mt-auto">
-                    <div className="flex items-center">
-                      <img
-                        src={`https://i.pravatar.cc/40?img=${testimonialIndex}`}
-                        alt={testimonial.name}
-                        className="w-8 h-8 rounded-full mr-2"
-                      />
-                      <div>
-                        <p className="font-semibold text-sm">{testimonial.name}</p>
-                        <p className="text-xs text-gray-400">{testimonial.position}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+    <section id="hero" className="bg-blue-50 hero-section pt-20 sm:pt-24">
+      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
+        <div className="px-0 md:px-80">
+          <img
+            style={{ width: "100%" }}
+            loading="eager"
+            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleLargeLC.webp"
+            alt="titleheader"
+            width={640}
+            height={240}
+            priority={1}
+          />
         </div>
-        <div className="flex justify-center mt-4">
-          <button
-            onClick={prevTestimonial}
-            className="bg-gray-700 p-2 rounded-full mx-2"
+        <p className="mt-5 mb-6 text-xl font-baloo font-regular text-slate-950 sm:px-24">
+          Drown the noise in 90 seconds and study for as long as you want. This Notion Study template helps you focus fast. And with tools that make studying fun and effective, you won&apos;t need a new TikTok hack anytime soon.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center items-center space-x-0 sm:space-x-4">
+        <a
+            href="#pricing"
+            onClick={handleButtonClick}
+            className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 mb-2 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
           >
-            <ChevronLeft size={20} />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            className="bg-gray-700 p-2 rounded-full mx-2"
-          >
-            <ChevronRight size={20} />
-          </button>
+            Get for Free.
+          </a>
+        </div>
+        <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
+          <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4">
+            <img
+              style={{ width: "100%" }}
+              loading="eager"
+              src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/mainDemoNew.webp"
+              alt="template"
+              width={1920}
+              height={1280}
+              priority={1}
+            /> 
+          </div>
+        </div>
+        {/* Testimonials */}
+        <div className="flex flex-col lg:flex-row justify-center items-center space-y-4 lg:space-y-0 lg:space-x-8">
+          <div className="text-center">
+            <div className="mb-2 flex justify-center">
+              <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">★★★★★</span>
+            </div>
+            <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
+            &quot;Completely changed my study system - for the better!&quot;
+            </span>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-2 flex justify-center">
+              <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">★★★★★</span>
+            </div>
+            <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
+            &quot;So easy to set up and use! Its so helpful already.&quot;
+            </span>
+          </div>
+
+          <div className="text-center">
+            <div className="mb-2 flex justify-center">
+              <span className="mt-0 mb-0 text-3xl leading-none text-blue-400">★★★★★</span>
+            </div>
+            <span className="mt-0 mb-0 text-md font-baloo font-regular text-slate-900">
+              &quot;Don&apos;t sleep on this one people! The promises are real!&quot;
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default TestimonialCarousel;
+export default HeroSection;
