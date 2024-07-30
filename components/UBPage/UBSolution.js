@@ -6,7 +6,7 @@ const Solution = ({ title, description }) => (
       {/* Placeholder for image or icon */}
     </div>
     <p className="font-pop font-bold text-xl text-prim">{title}</p>
-    <p className="max-w-72 text-center text-gray-700 font-cg mt-4">
+    <p className="max-w-72 text-center text-gray-700 font-cg">
       {description}
     </p>
   </div>
@@ -15,16 +15,16 @@ const Solution = ({ title, description }) => (
 const UBSolution = () => {
   const solutions = [
     {
-      title: "Brain is Overwhelmed",
-      description: "Too much to remember, too many things to keep on top of, not enough time or energy to do it all."
+      title: "Regain Control of your ADHD",
+      description: "Let the system handle the executive function tasks that your brain is rubbish at."
     },
     {
-      title: "Brain is Overwhelmed",
-      description: "Too much to remember, too many things to keep on top of, not enough time or energy to do it all."
+      title: "Peace of mind",
+      description: "Everything in one place, automatically organised for you."
     },
     {
-      title: "Brain is Overwhelmed",
-      description: "Too much to remember, too many things to keep on top of, not enough time or energy to do it all."
+      title: "Thriving in all areas",
+      description: "Routines in check, on top of tasks, progressing towards goals."
     }
   ];
 

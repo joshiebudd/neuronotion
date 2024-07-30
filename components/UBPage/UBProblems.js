@@ -6,7 +6,7 @@ const Problem = ({ title, description }) => (
       {/* Placeholder for image or icon */}
     </div>
     <p className="font-pop font-bold text-xl text-prim">{title}</p>
-    <p className="max-w-72 text-center text-gray-700 font-cg mt-4">
+    <p className="max-w-72 text-center text-gray-700 font-cg">
       {description}
     </p>
   </div>
@@ -19,12 +19,12 @@ const UBProblems = () => {
       description: "Too much to remember, too many things to keep on top of, not enough time or energy to do it all."
     },
     {
-      title: "Brain is Overwhelmed",
-      description: "Too much to remember, too many things to keep on top of, not enough time or energy to do it all."
+      title: "Chaotic Organisation",
+      description: "17 different apps. 10 different subscriptions. Yet still no feeling of calm."
     },
     {
-      title: "Brain is Overwhelmed",
-      description: "Too much to remember, too many things to keep on top of, not enough time or energy to do it all."
+      title: "Just scraping by...",
+      description: "Never thriving. Only surviving. Scraping by each day."
     }
   ];
 
