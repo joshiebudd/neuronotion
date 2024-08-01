@@ -24,7 +24,7 @@ const cards = [
 
 const NotionBundle = () => {
   return (
-    <section className="py-16 bg-white">
+    <section id="bundle" className="py-16 bg-white">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-prim font-bold text-prim mb-8 text-left">
           ADHD Notion Bundles

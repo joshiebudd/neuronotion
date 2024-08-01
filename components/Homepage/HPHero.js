@@ -10,7 +10,7 @@ const HPHeroSection = () => {
   ];
 
   return (
-    <section className="text-center mt-32 py-16 bg-white">
+    <section id="hero" className="text-center mt-32 py-16 bg-white">
       <h1 className="text-7xl font-prim font-bold text-prim mb-4">Take Control of your ADHD.</h1>
       <p className="text-sec font-cg font-bold mb-8 text-2xl">
         The world&apos;s first suite of scientifically designed ADHD tools <br /> to help you regain control of your life with ADHD.
