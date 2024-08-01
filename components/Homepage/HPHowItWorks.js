@@ -32,9 +32,10 @@ const HPHowItWorksSection = () => {
           </div>
         </div>
         <div className="flex justify-center mt-12">
-          <button className="bg-prim text-sec py-3 px-10 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim transition-colors duration-300">
-            Browse Templates
-          </button>
+        <a href="https://www.neuro-notion.com/templates" className="bg-prim text-sec py-3 px-10 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim transition-colors duration-300 inline-block">
+  Browse Templates
+</a>
+
         </div>
       </div>
     </section>

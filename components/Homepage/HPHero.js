@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const HPHeroSection = () => {
   const images = [
     "https://NeuroNotionPullZonw.b-cdn.net/Avatars/alang.webp",
@@ -20,7 +21,10 @@ const HPHeroSection = () => {
     onClick={() => window.location.href = "https://www.neuro-notion.com/templates"}>
     Browse Templates 
     </button>
-        <button className="bg-gray-300 text-gray-700 text-opacity-80 py-3 px-10 font-prim font-bold rounded-xl text-xl shadow-gray-400 shadow-sm hover:bg-gray-400 hover:text-gray-800 hover: hover:shadow-gray-600 hover:shadow-sm">View Bundles</button>
+        <button className="bg-gray-300 text-gray-700 text-opacity-80 py-3 px-10 font-prim font-bold rounded-xl text-xl shadow-gray-400 shadow-sm hover:bg-gray-400 hover:text-gray-800 hover: hover:shadow-gray-600 hover:shadow-sm"
+        onClick={() => window.location.href = "https://www.neuro-notion.com/templates#bundle"}>
+        View Bundles
+        </button>
       </div>
     </section>
   );

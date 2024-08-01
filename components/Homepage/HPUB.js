@@ -5,11 +5,13 @@ const HPUBSection = () => {
     <section className="flex justify-center items-center py-8 pb-20 bg-white">
       <div className="shadow-xl px-16 py-8 bg-accent1 bg-opacity-15 rounded-3xl max-w-5xl mx-auto text-left">
         <div className="relative z-1 transform rotate-0 transition-transform duration-500 hover:scale-105">
-          <img
-            src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp"
-            alt="ADHD Notion Starter Bundle"
-            className="px-8 py-4 w-full max-w-5xl"
-          />
+        <a href="https://neuronotionn.gumroad.com/l/ultimateadhdbrain?_gl=1*tx75fr*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUzNDk3Ny4xNjEuMC4xNzIyNTM0OTc3LjAuMC4w" target="_blank">
+        <img
+         src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp"
+         alt="ADHD Notion Starter Bundle"
+         className="px-8 py-4 w-full max-w-5xl"
+        />
+        </a>
         </div>
         <div className="flex justify-between items-center">
           <div>
@@ -17,7 +19,7 @@ const HPUBSection = () => {
               Your new best friend... <br /> <span className="text-accent2">Ultimate ADHD Brain 2.0</span>
             </h2>
             <p className="text-slate-700 font-prim text-md mb-4">
-              Your all-in-one ADHD Life Management Hub. <br /> Let your executive function relax for once...
+              Your all-in-one ADHD Life Management Hub. <br /> Let your executive function relax at last...
             </p>
           </div>
           <a href="https://neuronotionn.gumroad.com/l/ultimateadhdbrain?_gl=1*139oplk*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyNTU5Ny4xNjAuMS4xNzIyNTI1NzE1LjAuMC4w" className="inline-block">
