@@ -73,6 +73,7 @@ function MyApp({ Component, pageProps }) {
             href="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
             as="image"
           />
+
         </Head>
 
         <Component {...pageProps} />
