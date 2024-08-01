@@ -36,34 +36,34 @@ import {
 } from "../components/tracking";
 
 const IndexPage = () => {
-  <Head>
-     <meta
-       name="description"
-      content="Regain control of your life with ADHD. Discover the first suite of scientifically designed ADHD life management tools."
-     />
-   </Head>;
-
   useEffect(() => {
-     setupLoad();
-     setupScroll();
-     setupBeforeUnload();
-     track("Visited");
+    setupLoad();
+    setupScroll();
+    setupBeforeUnload();
+    track("Visited");
   }, []);
 
-  
   return (
-    <div>
-      <HPHeader />
-      <HPHeroSection />
-      <HPBundleSection />
-      <HPUBSection />
-      <HPHowItWorksSection />
-      <HPReviews />
-      <HPFAQSection />
-      <HPFinalCTA />
-      <FooterSection />
-      <Cookies />
-    </div>
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="Regain control of your life with ADHD. Discover the first suite of scientifically designed ADHD life management tools."
+        />
+      </Head>
+      <div>
+        <HPHeader />
+        <HPHeroSection />
+        <HPBundleSection />
+        <HPUBSection />
+        <HPHowItWorksSection />
+        <HPReviews />
+        <HPFAQSection />
+        <HPFinalCTA />
+        <FooterSection />
+        <Cookies />
+      </div>
+    </>
   );
 }
 
