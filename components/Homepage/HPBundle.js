@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 const HPBundleSection = () => {
   return (
@@ -7,33 +6,30 @@ const HPBundleSection = () => {
       <div className="relative shadow-xl px-8 py-8 bg-sec bg-opacity-15 rounded-3xl max-w-5xl mx-auto text-left">
         <div className="relative flex justify-center items-center mb-8">
           <a href="https://neuronotionn.gumroad.com/l/adhdtaskmanager?_gl=1*1x78gja*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyNTU5Ny4xNjAuMS4xNzIyNTI3MTMwLjAuMC4w" className="relative -mr-80 ml-4 z-0 transform -rotate-6 transition-transform duration-500 hover:scale-105">
-            <Image
+            <img
               src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/TaskManagerShadowedDemo.webp"
               alt="ADHD Notion Task Manager Template"
               className="rounded-lg"
               width={500}
               height={500}
-              layout="intrinsic"
             />
           </a>
           <a href="#" className="relative z-1 mb-20 transform rotate-0 transition-transform duration-500 hover:scale-105">
-            <Image
+            <img
               src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/StudySystemShadowedDemoDark.webp"
               alt="ADHD Notion Study System Template"
               className="rounded-lg"
               width={500}
               height={500}
-              layout="intrinsic"
             />
           </a>
           <a href="https://neuronotionn.gumroad.com/l/qnelxm?_gl=1*10n5db9*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyNTU5Ny4xNjAuMS4xNzIyNTI1NzE1LjAuMC4w" className="relative mr-4 -ml-80 z-2 transform rotate-6 transition-transform duration-500 hover:scale-105">
-            <Image
+            <img
               src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/RoutinesShadowDemoUpdated.webp"
               alt="ADHD Notion Mental Health Tracker Template"
               className="rounded-lg"
               width={500}
               height={500}
-              layout="intrinsic"
             />
           </a>
         </div>
