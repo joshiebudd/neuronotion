@@ -27,7 +27,7 @@ const FooterSection = () => {
             height={36}
             className="mr-3 sm:h-9"
             src="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
-            alt="NeuroNotes Logo"
+            alt="NeuroNotion Logo"
           />{" "}
           Neuro Notion App Limited ©
         </a>
