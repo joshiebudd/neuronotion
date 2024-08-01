@@ -53,7 +53,6 @@ const IndexPage = () => {
   
   return (
     <div>
-      <Head />
       <HPHeader />
       <HPHeroSection />
       <HPBundleSection />
