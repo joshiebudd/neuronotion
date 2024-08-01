@@ -13,7 +13,7 @@ const HPFAQs = () => {
   };
 
   return (
-    <section id="faqs" className="bg-prim pt-32 pb-10 FAQ_section">
+    <section id="faqs" className="bg-prim pt-16 pb-10 FAQ_section">
       <div className="text-center">
         <h2 className="font-pop font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-50">
           Frequently Asked Questions ?
