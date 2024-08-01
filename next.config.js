@@ -18,8 +18,9 @@ const nextConfig = {
   images: {
     domains: [
       "github.com",
-      "raw.githubusercontent.com", // Add the domain without the protocol
+      "raw.githubusercontent.com",
       "neuronotionpullzonw.b-cdn.net",
+      "NeuroNotionPullZonw.b-cdn.net"
     ],
     remotePatterns: [
       {
