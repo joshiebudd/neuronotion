@@ -55,10 +55,10 @@ function MyApp({ Component, pageProps }) {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>Neuro Notion - The First ADHD Study System</title>
+          <title>Neuro Notion - ADHD Life Management Tools</title>
           <link
             rel="icon"
-            href="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
+            href="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
             type="image/webp"
           />
           <style>
@@ -70,12 +70,7 @@ function MyApp({ Component, pageProps }) {
           <link rel="preconnect" href="https://connect.facebook.net" />
           <link
             rel="preload"
-            href="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
-            as="image"
-          />
-          <link
-            rel="preload"
-            href="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/maindemo.webp"
+            href="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
             as="image"
           />
         </Head>
