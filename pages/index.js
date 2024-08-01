@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { track } from "@vercel/analytics";
 import Head from "next/head";
 import HeaderSection from "../components/StudySystem/HeaderSection";
