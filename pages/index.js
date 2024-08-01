@@ -1,22 +1,17 @@
 import React, { useEffect } from "react";
 import { track } from "@vercel/analytics";
 import Head from "next/head";
-import HeaderSection from "../components/StudySystem/HeaderSection";
-import Cookies from "../components/Cookies.js";
-import HeroSection from "../components/StudySystem/HeroSection.js";
-import BenefitsSection from "../components/StudySystem/Benefits/index.js";
-import FeaturesSection from "../components/StudySystem/FeaturesSection";
-import DemoSection from "../components/StudySystem/DemoSection";
-import DarkModeSection from "../components/StudySystem/DarkmodeSection.js";
-import CommunitySection from "../components/StudySystem/CommunitySection.js";
-import ReviewSection from "../components/StudySystem/ReviewSection.js";
-import PricingSection from "../components/StudySystem/PricingSection";
-import AboutSection from "../components/StudySystem/AboutSection.js";
-import FAQSection from "../components/FAQSection/FAQSection.js";
-import FinalCTA from "../components/StudySystem/FinalCTASection.js";
-import FooterSection from "../components/FooterSection";
-import BlazingSection from "../components/StudySystem/BlazingSection.js";
+import HPHeader from '../components/Homepage/HPHeader';
+import HPHeroSection from '../components/Homepage/HPHero';
+import HPBundleSection from '../components/Homepage/HPBundle';
+import HPUBSection from '../components/Homepage/HPUB';
+import HPHowItWorksSection from '../components/Homepage/HPHowItWorks';
+import HPReviews from '../components/Homepage/HPReviews';
+import HPFAQSection from '../components/Homepage/HPFAQs';
+import HPFinalCTA from '../components/Homepage/HPFinalCTA';
+import FooterSection from '../components/FooterSection';
 import posthog from "posthog-js";
+import Cookies from "../components/Cookies.js";
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
 if (typeof window !== "undefined") {
@@ -55,25 +50,22 @@ const IndexPage = () => {
      track("Visited");
   }, []);
 
+  
   return (
-    <>
-      <HeaderSection />
-      <Cookies />
-      <HeroSection />
-      <BenefitsSection />
-      <FeaturesSection />
-      <DemoSection />
-      <ReviewSection />
-      <DarkModeSection />
-      <PricingSection />
-      <BlazingSection />
-      <FAQSection />
-      <CommunitySection />
-      <AboutSection />
-      <FinalCTA />
+    <div>
+      <Head />
+      <HPHeader />
+      <HPHeroSection />
+      <HPBundleSection />
+      <HPUBSection />
+      <HPHowItWorksSection />
+      <HPReviews />
+      <HPFAQSection />
+      <HPFinalCTA />
       <FooterSection />
-    </>
+      <Cookies />
+    </div>
   );
-};
+}
 
 export default IndexPage;
