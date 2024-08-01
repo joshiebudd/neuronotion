@@ -5,23 +5,20 @@ const cards = [
   {
     id: 1,
     category: "Category1",
-    title: "Title 1",
-    subtitle: "Subtitle 1",
-    price: 99,
+    title: "FREE Template Bundle",
+    subtitle: "COMING SOON!",
+    price: "",  // Changed to string "FREE"
+    image: "https://NeuroNotionPullZonw.b-cdn.net/FreeBundleDemoCropped.webp",
+    link: ""
   },
   {
     id: 2,
     category: "Category2",
-    title: "Title 2",
-    subtitle: "Subtitle 2",
-    price: 99,
-  },
-  {
-    id: 3,
-    category: "Category3",
-    title: "Title 3",
-    subtitle: "Subtitle 3",
-    price: 99,
+    title: "Personal Productivity Bundle",
+    subtitle: "COMING SOON!",
+    price: "",
+    image: "https://NeuroNotionPullZonw.b-cdn.net/FreeBundleDemoCropped.webp",
+    link: ""
   },
 ];
 
@@ -39,6 +36,8 @@ const NotionBundle = () => {
               title={card.title}
               subtitle={card.subtitle}
               price={card.price}
+              image={card.image}
+              link={card.link}
             />
           ))}
         </div>

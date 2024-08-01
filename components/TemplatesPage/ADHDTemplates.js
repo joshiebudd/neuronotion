@@ -7,18 +7,20 @@ const cards = [
   {
     id: 1,
     categories: ["Paid", "Productivity", "Mental Health", "Physical Health"],
-    title: "Ultimate ADHD Brain 2.0 ⚛️",
-    subtitle: "Your Perfect ADHD Digital Assistant.",
-    price: "$79",
-    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp"
+    title: "The Ultimate ADHD Brain 2.0 ⚛️",
+    subtitle: "Regain control with your ADHD Digital Assistant.",
+    price: "$99",
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp",
+    link: "https://neuronotionn.gumroad.com/l/ultimateadhdbrain?_gl=1*3zmfxv*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyMjcxMS4xNTkuMS4xNzIyNTIyNzQ1LjAuMC4w" 
   },
   {
     id: 2,
-    categories: ["Paid", "Productivity"],
-    title: "The ADHD Study System 📚🎓",
+    categories: ["Free", "Productivity"],
+    title: "The Ultimate ADHD Study System 📚🎓",
     subtitle: "Every ADHD Study Hack/Tool in one place.",
-    price: "$19",
-    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/StudySystemShadowedDemoDark.webp"
+    price: "FREE",
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/StudySystemShadowedDemoDark.webp",
+    link: "https://neuronotionn.gumroad.com/l/neuronotion?_gl=1*19bp9gb*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyMjcxMS4xNTkuMS4xNzIyNTIyOTY5LjAuMC4w"
   },
   {
     id: 3,
@@ -26,7 +28,8 @@ const cards = [
     title: "ADHD Journal & Mood Logger 🧠☮️",
     subtitle: "ADHD Journals and 90s mood logs!",
     price: "FREE",
-    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/MentalHealthShadowDemoUpdated.webp"
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/MentalHealthShadowDemoUpdated.webp",
+    link: "https://neuronotionn.gumroad.com/l/adhdjournals?_gl=1*1bk2mro*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyMjcxMS4xNTkuMS4xNzIyNTIyOTk5LjAuMC4w"
   },
   {
     id: 4,
@@ -34,16 +37,17 @@ const cards = [
     title: "ADHD Task Manager 🏆☑️",
     subtitle: "An awesome task list, with an ADHD twist!",
     price: "FREE",
-    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/TaskManagerShadowedDemo.webp"
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/TaskManagerShadowedDemo.webp",
+    link: "https://neuronotionn.gumroad.com/l/adhdtaskmanager?_gl=1*1ljagim*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyMjcxMS4xNTkuMS4xNzIyNTIyOTk5LjAuMC4w"
   },
-
   {
     id: 5,
     categories: ["Free", "Mental Health", "Physical Health"],
     title: "Habit & Routine Tracker🏆✅",
     subtitle: "Finally, build habits and stick to routines.",
     price: "FREE",
-    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/RoutinesShadowDemo.webp"
+    image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/RoutinesShadowDemo.webp",
+    link: "https://neuronotionn.gumroad.com/l/qnelxm?_gl=1*1ljagim*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyMjcxMS4xNTkuMS4xNzIyNTIyOTk5LjAuMC4w"
   },
 ];
 
@@ -76,13 +80,14 @@ const ADHDTemplates = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {filteredCards.map((card) => (
-            <CategoryCard
-              key={card.id}
-              title={card.title}
-              subtitle={card.subtitle}
-              price={card.price}
-              image={card.image}
-            />
+            <a key={card.id} href={card.link}>
+              <CategoryCard
+                title={card.title}
+                subtitle={card.subtitle}
+                price={card.price}
+                image={card.image}
+              />
+            </a>
           ))}
         </div>
       </div>

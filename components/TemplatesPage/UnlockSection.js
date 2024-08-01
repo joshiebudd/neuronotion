@@ -12,7 +12,7 @@ const UnlockSection = () => {
             Get access to all current and future templates with one single payment.
           </p>
           <button className="bg-prim text-sec py-3 px-10 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim transition-colors duration-300">
-            Get All Access
+            Coming Soon!
           </button>
         </div>
         <div className="md:w-1/2 relative flex justify-center items-center p-6">

@@ -20,9 +20,12 @@ const HPUBSection = () => {
               Your all-in-one ADHD Life Management Hub. <br /> Let your executive function relax for once...
             </p>
           </div>
-    <button className="bg-accent2 text-gray-50 py-3 px-6 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim">
-      <span className="text-gray-50">Learn More</span>
-    </button>
+          <a href="https://neuronotionn.gumroad.com/l/ultimateadhdbrain?_gl=1*139oplk*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyNTU5Ny4xNjAuMS4xNzIyNTI1NzE1LjAuMC4w" className="inline-block">
+           <button className="bg-accent2 text-gray-50 py-3 px-6 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim">
+            <span className="text-gray-50">Learn More</span>
+            </button>
+          </a>
+
         </div>
       </div>
     </section>

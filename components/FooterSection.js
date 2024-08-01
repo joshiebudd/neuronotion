@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 const FooterSection = () => {
-  const [showed, setShowed] = useState(false);
   const [emailCopied, setEmailCopied] = useState(false);
 
   const copyToClipboard = () => {
@@ -28,10 +27,10 @@ const FooterSection = () => {
             width={36}
             height={36}
             className="mr-3 sm:h-9"
-            src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
+            src="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
             alt="NeuroNotes Logo"
           />{" "}
-          Neuro Notion ©
+          Neuro Notion App Limited ©
         </a>
         <p className="my-6 text-gray-50 font-pop">
           The Ultimate Notion Template for Silencing the ADHD Chaos.
@@ -53,6 +52,14 @@ const FooterSection = () => {
           <li>
             <a href="#faqs" className="mr-4 font-pop hover:underline md:mr-6">
               FAQs
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://neuronotionn.gumroad.com/affiliates"
+              className="mr-4 font-pop hover:underline md:mr-6"
+            >
+              Become an affiliate
             </a>
           </li>
           <li>

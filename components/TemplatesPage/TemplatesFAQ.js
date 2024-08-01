@@ -13,7 +13,7 @@ const TemplatesFAQ = () => {
   };
 
   return (
-    <section id="faqs" className="bg-prim text-sec pt-32 pb-10 FAQ_section custom-rounded-t">
+    <section id="faqs" className="bg-prim pt-32 pb-10 FAQ_section custom-rounded-t">
       <div className="text-center">
         <h2 className="font-pop font-bold text-4xl lg:leading-9 md:leading-7 leading-9 text-gray-50">
           Frequently Asked Questions ?
@@ -38,9 +38,9 @@ const TemplatesFAQ = () => {
               A Notion template is a pre-designed layout in the{" "}
               <a
                 href="https://affiliate.notion.so/scq8k2tmgpnc"
-                className="text-blue-500"
+                className="text-sky-600 italic"
               >
-                Notion app, a super popular note-taking app for students{""}
+                Notion app, a super popular productivity platform ADHDers{""}
               </a>
               , especially among ADHDers. The template provides a ready-to-use
               structure for organizing notes, tasks, and schedules. It
@@ -79,13 +79,13 @@ const TemplatesFAQ = () => {
           {/* New FAQ Item */}
           <FAQItem>
             <h3 className="font-pop font-semibold text-xl leading-5 text-gray-800">
-              Why does Neuro Notion work so well?
+              Why do Neuro Notion&apos;s tools work so well?
             </h3>
             <p
               id="para6"
               className={`font-cg font-normal text-base leading-6 text-gray-700 mt-4 w-11/12`}
             >
-              Neuro Notion works because it reduces the amount of apps, items and tools you need for focusing, managing tasks, studying, writing essays, and testing yourself when you study to just ONE. This way, it leaves little room for the typical ADHD distractors or confusion to set in and disrupt your flow.
+              Our tools work because they&apos;re scientifically designed around your ADHD brain. Unlike any other tools out there - we get your brain... on a scientific level, and a personal one too! 
             </p>
           </FAQItem>
 
@@ -101,7 +101,7 @@ const TemplatesFAQ = () => {
               Nope! Notion Free plan is absolutely enough - you only need{" "}
               <a
                 href="https://affiliate.notion.so/neuro-notion-ai"
-                className="text-blue-500"
+                className="text-sky-600 italic"
               >
                 Notion Premium
               </a>{" "}

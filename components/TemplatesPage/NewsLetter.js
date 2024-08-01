@@ -27,7 +27,7 @@ const NewsLetter = () => {
             className="border border-gray-400 p-3 rounded-xl w-full max-w-lg"
           />
           <button className="bg-sec text-prim py-3 px-6 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-accent3 hover:text-prim transition-colors duration-300">
-            Join Email List
+            Coming Soon
           </button>
           <div className="pt-4 text-lg font-cg italic text-gray-300">
             No Spam. Unsubscribe in one click.
