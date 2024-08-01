@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { track } from "@vercel/analytics";
 import HeaderSection from "../components/StudySystem/HeaderSection";
 import Cookies from "../components/Cookies.js";
@@ -23,13 +22,6 @@ import {
 } from "../components/tracking";
 
 const StudySystem = () => {
-  useEfect(() => {
-     setupLoad();
-     setupScroll();
-     setupBeforeUnload();
-     track("Visited");
-  }, []);
-
   return (
     <>
       <HeaderSection />
