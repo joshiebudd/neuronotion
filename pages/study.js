@@ -1,4 +1,3 @@
-import { track } from "@vercel/analytics";
 import HeaderSection from "../components/StudySystem/HeaderSection";
 import Cookies from "../components/Cookies.js";
 import HeroSection from "../components/StudySystem/HeroSection.js";
@@ -14,12 +13,6 @@ import FAQSection from "../components/FAQSection/FAQSection.js";
 import FinalCTA from "../components/StudySystem/FinalCTASection.js";
 import FooterSection from "../components/FooterSection";
 import BlazingSection from "../components/StudySystem/BlazingSection.js";
-
-import {
-  setupBeforeUnload,
-  setupLoad,
-  setupScroll,
-} from "../components/tracking";
 
 const StudySystem = () => {
   return (
