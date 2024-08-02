@@ -30,7 +30,7 @@ const testimonials = [
     text: 'It has the structure that I need and struggle coming up with it myself. This helps me to keep on track with my tasks, projects and goals.',
     name: 'Anonymous',
     position: 'Teacher',
-    avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/anonymous.webp'
+    avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/anonymous2.webp'
   },
   {
     text: 'It helps me sort out all the junk in my brain to sort, prioritize, and understand every part of your brain and life. LOVE IT!',
@@ -54,7 +54,7 @@ const testimonials = [
     text: 'Ngl I am impressed. I am usually very picky with templates as they tend to have too many pages and overwhelm me. This one, however, has just the right amount of functions and properties. The template looks clean, it does not have useless buttons, pictures, or pages. I love the way the to-do is designed. My favourite thing, however, is the "Anti-ADHD Rut Protocol", having all of that written down with a checklist just makes it so much easier to get out of my head when I get over/understimulated or I have a meltdown. The only thing I didnt like were the emojis on the buttons/pages, but thats very easy to fix and personalize so I wouldnt say its a defect but rather a personal choice. Overall, great job!',
     name: 'Anonymous',
     position: 'Unknown',
-    avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/anonymous.webp'
+    avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/anonymous2.webp'
   },
   {
     text: 'This is an extremely well thought out template. I love the instructional videos that guide you through the template, and I love that everything is set up in a very organized, uncluttered way. I would have saved myself hours of attempting to organize my life if Id started out with this template on Notion! Definitely ADHD friendly. Very impressed.',
@@ -67,6 +67,30 @@ const testimonials = [
     name: 'Kristen Moura',
     position: 'Unknown',
     avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/kristen.webp'
+  },
+  {
+    text: 'Ultimate ADHD Brain Template 2.0 has significantly improved my ability to stay organized, focused, and motivated. Its more than just a template; its a powerful tool that empowers individuals with ADHD to take control of their lives. I highly recommend it to anyone looking for a structured and effective way to manage their ADHD.',
+    name: 'Tariq Alferis',
+    position: 'Unknown',
+    avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/Tariq.webp'
+  },
+  {
+    text: 'This template is so so cool! I love that its not just a planner or a life advice book, but is a big ol combo of easy to use planning, notes, journaling, etc tools, and science and tips that arent written like a textbook and are simple to read and understand. The tutorials are also super helpful, and I love the little extra detail that theyre put at 2x speed to make it easier for us ADHDers to watch. Thanks so much for making this!',
+    name: 'Anonymous',
+    position: 'Unknown',
+    avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/anonymous2.webp'
+  },
+  {
+    text: 'The effort put into this template is insane. The design is clean, but still looks nice. There are videos to guide you through every feature step by step, its so easy to get lost in templates and this one makes the on-boarding super easy. The brain dump section makes so much sense for me. Im really enjoying using it and recommend it to all!',
+    name: 'Bruno Gomes',
+    position: 'Unknown',
+    avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/Bruno.webp'
+  },
+  {
+    text: '"This template seems like a great all-in-one system with automation. Its great for use out of the box with instructions at every page. I would highly recommend it to anyone who isnt already using a complex template to give this a go!',
+    name: 'Anonymous',
+    position: 'Unknown',
+    avatar: 'https://NeuroNotionPullZonw.b-cdn.net/Avatars/anonymous2.webp'
   },
 ];
 
