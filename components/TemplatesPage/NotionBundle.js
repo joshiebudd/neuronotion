@@ -26,7 +26,7 @@ const NotionBundle = () => {
   return (
     <section id="bundle" className="py-16 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-prim font-bold text-prim mb-8 text-left">
+        <h2 className="text-4xl font-prim font-bold text-prim mb-8 text-center md:text-left">
           ADHD Notion Bundles
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

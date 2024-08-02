@@ -4,7 +4,7 @@ const CategoryButton = ({ category, selectedCategory, onClick }) => {
   const isSelected = selectedCategory === category;
   return (
     <button
-      className={`py-2 px-6 font-prim font-bold rounded-xl text-lg shadow-md transition-colors duration-300 m-2 ${
+      className={`py-2 px-4 md:px-6 font-prim font-bold rounded-xl text-md md:text-lg shadow-md transition-colors duration-300 m-2 ${
         isSelected
           ? 'bg-prim text-sec shadow-gray-600 hover:bg-sec hover:text-prim'
           : 'bg-gray-300 text-gray-700 hover:bg-gray-400 hover:text-gray-800'

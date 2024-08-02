@@ -63,11 +63,11 @@ const ADHDTemplates = () => {
     <section className="pt-40 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center">
-          <h2 className="text-4xl font-prim font-bold text-prim mb-2">ADHD Notion Templates</h2>
-          <p className="text-xl text-gray-700 font-sec mb-8">All <b>scientifically</b> designed around the ADHD Brain.</p>
+          <h2 className="text-4xl md:text-5xl font-prim font-bold text-prim mb-2">ADHD Notion Templates</h2>
+          <p className="text-xl text-gray-700 font-sec mb-8">Everything <b>scientifically</b> designed around the ADHD Brain!</p>
         </div>
         <div className="flex justify-center mb-8">
-          <div className="flex flex-wrap justify-center space-x-4">
+          <div className="flex flex-wrap justify-center space-x-2 md:space-x-4">
             {categories.map((category) => (
               <CategoryButton
                 key={category}

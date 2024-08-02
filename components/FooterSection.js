@@ -16,11 +16,11 @@ const FooterSection = () => {
   };
 
   return (
-    <footer id="footer" className="p-4 bg-black md:p-8 lg:p-10">
+    <footer id="footer" className="p-4 pt-8 md:pt-0 bg-black md:p-8 lg:p-10">
       <div className="mx-auto max-w-screen-xl text-center">
         <a
           href="#hero"
-          className="flex justify-center items-center text-2xl font-pop font-semibold text-white"
+          className="flex justify-center items-center text-xl md:text-2xl font-pop font-semibold text-white"
         >
           <img
             width={36}
@@ -31,10 +31,10 @@ const FooterSection = () => {
           />{" "}
           Neuro Notion App Limited ©
         </a>
-        <p className="my-6 text-gray-50 font-pop">
+        <p className="my-6 text-sm md:text-base text-gray-50 font-pop">
           The Ultimate Notion Template for Silencing the ADHD Chaos.
         </p>
-        <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-400 relative">
+        <ul className="flex flex-wrap justify-center items-center mb-6 text-xs md:text-sm text-gray-400 relative">
           {emailCopied && (
             <div
               className="absolute top-[-180px] flex flex-col p-3 bg-white rounded items-center w-64 shadow-lg border"
@@ -44,7 +44,7 @@ const FooterSection = () => {
             </div>
           )}
           <li>
-            <a href="#about" className="mr-4 font-pop hover:underline md:mr-6 ">
+            <a href="#about" className="mr-4 font-pop hover:underline md:mr-6">
               About
             </a>
           </li>
@@ -70,7 +70,7 @@ const FooterSection = () => {
             </a>
           </li>
         </ul>
-        <span className="text-sm text-white font-pop sm:text-center dark:text-gray-400">
+        <span className="text-xs md:text-sm text-white font-pop sm:text-center dark:text-gray-400">
           Neuro Notion © 2024<a href="#hero" className="hover:underline"></a>.
           All Rights Reserved. Contact: Josh@neuro-notion.com
         </span>
