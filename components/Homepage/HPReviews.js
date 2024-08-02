@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
@@ -72,9 +72,24 @@ const testimonials = [
 
 const TestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0); // Initialize with 0
   const [expandedTestimonials, setExpandedTestimonials] = useState({});
-  const cardsToShow = 5; // Number of cards to show at once
   const previewLength = 200; // Maximum number of characters to show before "see more"
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') { // Check if window is defined
+      setWindowWidth(window.innerWidth);
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -91,18 +106,22 @@ const TestimonialCarousel = () => {
     }));
   };
 
+  const cardsToShow = windowWidth < 768 ? 1 : 5; // 1 card on mobile, 5 cards on larger screens
+  const totalCards = testimonials.length;
+  const visibleTestimonials = testimonials.concat(testimonials); // Duplicate the testimonials list
+
   return (
-    <div className="bg-prim text-white p-16 custom-rounded-t">
-      <h2 className="text-4xl font-pop font-bold text-sec mb-8 text-center">The Wall of Love ❤️</h2>
+    <div className="bg-prim text-white p-8 md:p-16 custom-rounded-t">
+      <h2 className="text-3xl md:text-4xl font-pop font-bold text-sec mb-8 text-center">The Wall of Love ❤️</h2>
       <div className="relative overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${(currentIndex * 100) / cardsToShow}%)` }}
         >
-          {testimonials.concat(testimonials).map((testimonial, index) => (
+          {visibleTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="w-1/5 flex-shrink-0 px-2"
+              className={`w-full md:w-1/${cardsToShow} flex-shrink-0 px-2`}
               style={{ flex: `0 0 ${100 / cardsToShow}%` }}
             >
               <div className="bg-gray-800 p-4 rounded-lg shadow-lg h-full flex flex-col">
@@ -110,7 +129,7 @@ const TestimonialCarousel = () => {
                   <span className="mt-0 mb-0 text-3xl leading-none text-accent6">★★★★★</span>
                 </div>
                 <p className="mb-4 text-sm flex-grow">
-                  {expandedTestimonials[index]
+                  {expandedTestimonials[index % totalCards]
                     ? testimonial.text
                     : `${testimonial.text.substring(0, previewLength)}${
                         testimonial.text.length > previewLength ? '...' : ''
@@ -118,10 +137,10 @@ const TestimonialCarousel = () => {
                 </p>
                 {testimonial.text.length > previewLength && (
                   <button
-                    onClick={() => toggleExpand(index)}
+                    onClick={() => toggleExpand(index % totalCards)}
                     className="text-gray-400 font-pop text-xs"
                   >
-                    {expandedTestimonials[index] ? 'Show less' : 'See more...'}
+                    {expandedTestimonials[index % totalCards] ? 'Show less' : 'See more...'}
                   </button>
                 )}
                 <div className="mt-auto">

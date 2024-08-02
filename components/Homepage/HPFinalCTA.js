@@ -11,10 +11,10 @@ const HPFinalCTA = () => {
           </span>
         </h1>
 
-        <p className="mb-6 text-xl font-cg font-semibold text-gray-50 sm:px-16">
-          The <b>second brain for managing your ADHD</b>.
-          <br /> Regain control over your entire life.
-        </p>
+        <p className="mb-6 text-xl font-cg font-semibold text-gray-50 sm:px-4 lg:px-16">
+  The <b>second brain for managing your ADHD</b>. Regain control over your entire life.
+</p>
+
 
         <div className="m-8">
   <a
