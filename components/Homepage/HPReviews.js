@@ -112,7 +112,7 @@ const TestimonialCarousel = () => {
 
   return (
     <div className="bg-prim text-white p-8 md:p-16 custom-rounded-t">
-      <h2 className="text-3xl md:text-4xl font-pop font-bold text-sec mb-8 text-center">The Wall of Love ❤️</h2>
+      <h2 className="text-3xl md:text-4xl font-pop font-bold text-sec pt-6 md:pt-0 mb-8 text-center">The Wall of Love ❤️</h2>
       <div className="relative overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
