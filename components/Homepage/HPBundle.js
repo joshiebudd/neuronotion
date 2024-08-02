@@ -36,8 +36,7 @@ const HPBundleSection = () => {
         <div className="mx-3 md:mx-0 text-center">
           <h2 className="text-3xl md:mt-4 text-prim font-prim font-bold">Free ADHD Notion Starter Bundle</h2>
           <p className="text-slate-700 font-prim text-md mx-3 md:mx-0 mt-2 md:mx-0 mb-4"> Get free access to 4x ADHD Notion Templates to start taking back control. </p>
-          <a href="https://www.neuro-notion.com/templates" className="btn btn-primary">
-
+          <a href="https://neuronotionn.gumroad.com/l/freebundle" className="btn btn-primary">
           <button className="bg-prim text-sec py-3 px-10 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim">
             Get For Free
           </button>

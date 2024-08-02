@@ -5,11 +5,11 @@ const cards = [
   {
     id: 1,
     category: "Category1",
-    title: "FREE Template Bundle",
-    subtitle: "COMING SOON!",
-    price: "",  // Changed to string "FREE"
+    title: "FREE ADHD Starter Bundle",
+    subtitle: "The perfect Notion Starter pack for ADHD!",
+    price: "FREE",  // Changed to string "FREE"
     image: "https://NeuroNotionPullZonw.b-cdn.net/FreeBundleDemoCropped.webp",
-    link: ""
+    link: "https://neuronotionn.gumroad.com/l/freebundle"
   },
   {
     id: 2,
@@ -17,7 +17,6 @@ const cards = [
     title: "Personal Productivity Bundle",
     subtitle: "COMING SOON!",
     price: "",
-    image: "https://NeuroNotionPullZonw.b-cdn.net/FreeBundleDemoCropped.webp",
     link: ""
   },
 ];
