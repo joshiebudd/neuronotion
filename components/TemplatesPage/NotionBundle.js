@@ -7,7 +7,7 @@ const cards = [
     category: "Category1",
     title: "FREE ADHD Starter Bundle",
     subtitle: "The perfect Notion Starter pack for ADHD!",
-    price: "FREE",  // Changed to string "FREE"
+    price: "FREE",
     image: "https://NeuroNotionPullZonw.b-cdn.net/FreeBundleDemoCropped.webp",
     link: "https://neuronotionn.gumroad.com/l/freebundle"
   },
@@ -30,14 +30,32 @@ const NotionBundle = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {cards.map((card) => (
-            <CategoryCard
-              key={card.id}
-              title={card.title}
-              subtitle={card.subtitle}
-              price={card.price}
-              image={card.image}
-              link={card.link}
-            />
+            card.link ? (
+              <a 
+                key={card.id} 
+                href={card.link} 
+                className="block" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <CategoryCard
+                  title={card.title}
+                  subtitle={card.subtitle}
+                  price={card.price}
+                  image={card.image}
+                  link={card.link}
+                />
+              </a>
+            ) : (
+              <CategoryCard
+                key={card.id}
+                title={card.title}
+                subtitle={card.subtitle}
+                price={card.price}
+                image={card.image}
+                link={card.link}
+              />
+            )
           ))}
         </div>
       </div>
