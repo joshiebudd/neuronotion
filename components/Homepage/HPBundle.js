@@ -25,7 +25,7 @@ const HPBundleSection = () => {
           </a>
           <a href="https://neuronotionn.gumroad.com/l/qnelxm?_gl=1*10n5db9*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyNTU5Ny4xNjAuMS4xNzIyNTI1NzE1LjAuMC4w" className="relative mr-4 -ml-80 z-2 transform rotate-6 transition-transform duration-500 hover:scale-105">
             <img
-              src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/RoutinesShadowDemoUpdated.webp"
+              src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/MentalHealthShadowDemoUpdated.webp"
               alt="ADHD Notion Mental Health Tracker Template"
               className="rounded-lg"
               width={500}
