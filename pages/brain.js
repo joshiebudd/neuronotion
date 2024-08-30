@@ -7,9 +7,10 @@ import UBSolution from "../components/UBPage/UBSolution";
 import UBClarity from "../components/UBPage/UBVideoDemo";
 import UBCheckboxes from "../components/UBPage/UBCheckboxes";
 import UBSetUp from "../components/UBPage/UBSetUp";
-import CommunitySection from "../components/StudySystem/CommunitySection";
+import UBCommunity from "../components/UBPage/UBCommunity";
 import UBPricing from "../components/UBPage/UBPricing";
-import TemplatesFAQ from "../components/TemplatesPage/TemplatesFAQ";
+import TestimonialCarousel from "../components/Homepage/HPReviews";
+import UBFAQs from "../components/UBPage/UBFAQs";
 import HPFinalCTA from "../components/Homepage/HPFinalCTA";
 import FooterSection from "../components/FooterSection";
 
@@ -24,9 +25,10 @@ const ADHDBrain = () => {
       <UBClarity />
       <UBCheckboxes />
       <UBSetUp />
-      <CommunitySection />
+      <UBCommunity />
       <UBPricing />
-      <TemplatesFAQ />
+      <TestimonialCarousel />
+      <UBFAQs />
       <HPFinalCTA />
       <FooterSection />
     </>

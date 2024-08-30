@@ -1,10 +1,8 @@
 import React from "react";
 
-const Problem = ({ title, description }) => (
+const Problem = ({ title, description, iconUrl }) => (
   <div className="flex flex-col items-center max-w-xs lg:max-w-none px-4 mb-8">
-    <div className="rounded-full border-2 w-20 h-20 bg-white flex items-center justify-center mb-4 shadow-md">
-      {/* Placeholder for image or icon */}
-    </div>
+    <img src={iconUrl} alt={title} className="mb-4" style={{ width: '72px', height: '72px' }} />
     <p className="font-pop font-bold text-xl text-prim">{title}</p>
     <p className="max-w-72 text-center text-gray-700 font-cg">
       {description}
@@ -16,15 +14,18 @@ const UBProblems = () => {
   const problems = [
     {
       title: "Brain is Overwhelmed",
-      description: "Too much to remember, too many things to keep on top of, not enough time or energy to do it all."
+      description: "Too much to remember, too many things to keep on top of, not enough time or energy to do it all.",
+      iconUrl: "https://NeuroNotionPullZonw.b-cdn.net/icon%20svgs/scramble.png"
     },
     {
       title: "Chaotic Organisation",
-      description: "17 different apps. 10 different subscriptions. Yet still no feeling of calm."
+      description: "17 different apps. 10 different subscriptions. Yet still no feeling of calm.",
+      iconUrl: "https://NeuroNotionPullZonw.b-cdn.net/icon%20svgs/scatteredpuzzle.svg"
     },
     {
       title: "Just scraping by...",
-      description: "Never thriving. Only surviving. Scraping by each day."
+      description: "Never thriving. Only surviving. Scraping by each day.",
+      iconUrl: "https://NeuroNotionPullZonw.b-cdn.net/icon%20svgs/mid.svg"
     }
   ];
 
@@ -34,7 +35,7 @@ const UBProblems = () => {
       <p className="pt-4 text-lg text-sec font-cg">As a team of ADHDers ourselves, we&apos;ve been here before...</p>
       <div className="pt-12 mx-48 flex flex-col lg:flex-row justify-evenly items-center">
         {problems.map((problem, index) => (
-          <Problem key={index} title={problem.title} description={problem.description} />
+          <Problem key={index} title={problem.title} description={problem.description} iconUrl={problem.iconUrl} />
         ))}
       </div>
     </div>

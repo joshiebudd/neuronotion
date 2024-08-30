@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FAQItem from "../FAQSection/FAQItem";
 
-const HPFAQs = () => {
+const UBFAQs = () => {
   // State to track the open/close state of FAQ items
   const [isOpen, setIsOpen] = useState([false, false, false, false, false, false]);
 
@@ -132,4 +132,4 @@ const HPFAQs = () => {
   );
 };
 
-export default HPFAQs;
+export default UBFAQs;

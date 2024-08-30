@@ -53,8 +53,69 @@ const UBCheckboxes = () => {
           ))}
         </div>
       </div>
-      <p className="font-cg text-md text-gray-700">Insert a testimonial here</p>
-      <hr className="mt-10 border-gray-300" />
+
+      {/* Testimonials Section */}
+      <div className="flex justify-center items-center space-x-8">
+        {/* Testimonial 1 */}
+        <div className="flex flex-col items-center text-center max-w-md w-full">
+          <div className="flex flex-col justify-between h-full">
+            <div className="flex flex-col items-center">
+              <span className="text-4xl text-accent4 mb-4">★★★★★</span>
+              <div className="flex-grow flex items-center justify-center">
+                <span className="text-gray-700 font-cg font-normal">
+<b>                  I am usually very picky with templates as they tend to overwhelm me. But this one is just perfect. It has a super clean design and only has genuinely useful things.
+</b>                </span>
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="rounded-full border-2 w-16 h-16 bg-white flex items-center justify-center mb-2 mx-auto overflow-hidden">
+                <img
+                  src="https://NeuroNotionPullZonw.b-cdn.net/Avatars/saam.webp"
+                  alt="Anonymous"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="font-pop font-bold text-prim block">
+                Saam Sadeghian
+              </span>
+              <span className="text-gray-500 font-cg block">
+                Founder @ Rocket Crypto <br /> and ADHD Advocate
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonial 2 */}
+        <div className="flex flex-col items-center text-center max-w-md w-full">
+          <div className="flex flex-col justify-between h-full">
+            <div className="flex flex-col items-center">
+              <span className="text-4xl text-accent4 mb-4">★★★★★</span>
+              <div className="flex-grow flex items-center justify-center">
+                <span className="text-gray-700 font-cg font-normal">
+                  <b>This template has made it so much easier to get out of my head when I get over/understimulated or I have a meltdown. Thank you!!!</b>
+                </span>
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="rounded-full border-2 w-16 h-16 bg-white flex items-center justify-center mb-2 mx-auto overflow-hidden">
+                <img
+                  src="https://NeuroNotionPullZonw.b-cdn.net/Avatars/tav.webp"
+                  alt="Anonymous"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span className="font-pop font-bold text-prim block">
+                Travis Munter
+              </span>
+              <span className="text-gray-500 font-cg block">
+                Head of HR @ FluidStack
+                <br /> and ADHD Advocate
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="absolute text-left top-60 right-1/3 bg-accent3 text-prim font-pop font-semibold py-2 px-4 rounded-lg shadow-lg text-sm">
         <b>PSSSTT</b>... tick all the boxes <br /> for an<b> easter egg🥚</b>
       </div>
