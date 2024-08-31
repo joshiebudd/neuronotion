@@ -17,13 +17,13 @@ const UBHero = () => {
   };
 
   return (
-    <div className="mt-32 lg:px-0 px-8 bg-white py-16">
-      <div className="mx-auto flex flex-col items-center">
-        <h1 className="text-center font-prim font-bold text-4xl lg:text-[60px] text-prim">
+    <div className="pt-16 px-4 lg:px-0 mt-16 bg-white lg:mt-32">
+      <div className="flex flex-col items-center mx-auto max-w-full lg:max-w-screen-lg">
+        <h1 className="text-3xl font-bold text-center text-prim font-prim lg:text-[60px]">
           Regain Control of your ADHD
         </h1>
         <p
-          className="text-center font-cg font-semibold text-xl lg:text-[20px] text-sec pt-4"
+          className="pt-4 text-lg lg:text-[20px] font-semibold text-center text-sec font-cg"
           style={{ maxWidth: "600px", margin: "0 auto" }}
         >
           It&apos;s simple: You braindump. It shows you exactly what you need to
@@ -31,35 +31,33 @@ const UBHero = () => {
         </p>
         <button
           onClick={handleScrollToPricing}
-          className="bg-prim text-sec py-3 px-10 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim mt-6"
+          className="px-6 py-3 mt-6 text-lg lg:text-xl font-bold rounded-xl shadow-md bg-prim text-sec font-prim shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim"
         >
           Get Ultimate ADHD Brain
         </button>
-        <div className="flex mt-8 items-center">
-          <div className="flex space-x-1">
+        <div className="flex flex-col items-center mt-8 lg:flex-row lg:items-center">
+          <div className="flex -space-x-3 mb-4 lg:mb-0">
             {imageLinks.map((link, index) => (
               <div
                 key={index}
-                className="rounded-full border-2 w-10 h-10 bg-white flex items-center justify-center"
+                className="flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 bg-white border-2 rounded-full"
               >
                 <img
                   src={link}
                   alt={`User ${index + 1}`}
-                  className="rounded-full w-full h-full object-cover"
+                  className="object-cover w-full h-full rounded-full"
                 />
               </div>
             ))}
           </div>
-          <div className="flex flex-col pl-4 text-center">
-            <span className="text-2xl text-accent4">⭐⭐⭐⭐⭐</span>
-            <span className="font-cg text-gray-700">
-              4.9/5 from other ADHDers.
-            </span>
+          <div className="flex flex-col text-center lg:pl-4 lg:text-left">
+            <span className="text-xl lg:text-2xl text-accent4">⭐⭐⭐⭐⭐</span>
+            <span className="text-gray-700 font-cg">4.9/5 from other ADHDers.</span>
           </div>
         </div>
       </div>
-      <div className="px-8 mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
-        <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4 mx-auto">
+      <div className="pt-4 pb-2 mx-auto text-center max-w-full lg:max-w-screen-xl">
+        <div className="pb-0 mx-auto centered-image max-w-full sm:max-w-[950px] sm:pt-2">
           <img
             style={{ width: "100%" }}
             loading="eager"
