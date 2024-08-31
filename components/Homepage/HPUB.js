@@ -5,7 +5,7 @@ const HPUBSection = () => {
     <section className="flex justify-center items-center py-8 pb-20 bg-white">
       <div className="relative shadow-xl md:px-16 py-8 bg-accent1 bg-opacity-15 rounded-3xl max-w-5xl mx-4 md:mx-auto text-left">
         <div className="relative z-1 transform rotate-0 transition-transform duration-500 hover:scale-105 mb-6 md:mb-0">
-          <a href="https://neuronotionn.gumroad.com/l/ultimateadhdbrain?_gl=1*tx75fr*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUzNDk3Ny4xNjEuMC4xNzIyNTM0OTc3LjAuMC4w" target="_blank">
+          <a href="www.neuro-notion.com/brain" target="_blank">
             <img
               src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp"
               alt="ADHD Notion Starter Bundle"
@@ -23,7 +23,7 @@ const HPUBSection = () => {
             </p>
           </div>
           <div className="text-center md:text-left">
-            <a href="https://neuronotionn.gumroad.com/l/ultimateadhdbrain?_gl=1*139oplk*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyNTU5Ny4xNjAuMS4xNzIyNTI1NzE1LjAuMC4w" className="inline-block">
+            <a href="https://www.neuro-notion.com/brain" className="inline-block">
               <button className="bg-accent2 text-gray-50 py-3 px-6 font-prim font-bold rounded-xl text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim">
                 <span className="text-gray-50">Learn More</span>
               </button>

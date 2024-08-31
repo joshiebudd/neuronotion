@@ -31,10 +31,7 @@ const Howitworks = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-center mt-8 md:mt-12">
-          <a href="https://www.neuro-notion.com/templates" className="bg-prim text-sec py-3 px-8 md:px-10 font-prim font-bold rounded-xl text-lg md:text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim transition-colors duration-300 inline-block">
-            Browse Templates
-          </a>
+        <div className="flex justify-center">
         </div>
       </div>
     </section>
