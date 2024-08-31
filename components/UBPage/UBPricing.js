@@ -15,7 +15,7 @@ const UBPricing = () => {
   return (
     <section id="pricing" className="bg-white py-12 sm:py-16">
       <div className="px-4 text-center md:px-52">
-        <div className="inline-block px-3 py-1 mb-6 bg-accent1 rounded-full text-xs text-gray-950 font-pop font-semibold">
+        <div className="inline-block px-3 py-1 mb-6 bg-accent3 rounded-full text-xs text-prim font-pop font-semibold">
           Pricing
         </div>
         <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">

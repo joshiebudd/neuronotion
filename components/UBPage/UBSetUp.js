@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: "Customize",
-    description: "Make it your own. Be chaotic."
+    description: "Make it your own. Be chaotic inside structure."
   }
 ];
 
