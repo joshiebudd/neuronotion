@@ -11,7 +11,7 @@ const cards = [
     subtitle: "Regain control with your ADHD Digital Assistant.",
     price: "$99",
     image: "https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp",
-    link: "www.neuro-notion.com/brain" 
+    link: "https://www.neuro-notion.com/brain" 
   },
   {
     id: 2,

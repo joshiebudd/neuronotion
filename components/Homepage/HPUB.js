@@ -5,7 +5,7 @@ const HPUBSection = () => {
     <section className="flex justify-center items-center py-8 pb-20 bg-white">
       <div className="relative shadow-xl md:px-16 py-8 bg-accent1 bg-opacity-15 rounded-3xl max-w-5xl mx-4 md:mx-auto text-left">
         <div className="relative z-1 transform rotate-0 transition-transform duration-500 hover:scale-105 mb-6 md:mb-0">
-          <a href="www.neuro-notion.com/brain" target="_blank">
+          <a href="https://www.neuro-notion.com/brain" target="_blank">
             <img
               src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp"
               alt="ADHD Notion Starter Bundle"
