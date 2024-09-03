@@ -9,11 +9,8 @@ const UBHero = () => {
     "https://NeuroNotionPullZonw.b-cdn.net/Avatars/493.webp",
   ];
 
-  const handleScrollToPricing = () => {
-    const pricingSection = document.getElementById("pricing");
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleRedirectToGumroad = () => {
+    window.location.href = "https://buy.stripe.com/4gw3en6jtdVo9TG00k";
   };
 
   return (
@@ -30,7 +27,7 @@ const UBHero = () => {
           know at the perfect time.
         </p>
         <button
-          onClick={handleScrollToPricing}
+          onClick={handleRedirectToGumroad}
           className="px-6 py-3 mt-6 text-lg lg:text-xl font-bold rounded-xl shadow-md bg-prim text-sec font-prim shadow-gray-600 hover:shadow-sm hover:bg-sec hover:text-prim"
         >
           Get Ultimate ADHD Brain

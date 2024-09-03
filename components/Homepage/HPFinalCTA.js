@@ -17,7 +17,7 @@ const HPFinalCTA = () => {
 
         <div className="m-8">
           <a
-            href="https://neuronotionn.gumroad.com/l/ultimateadhdbrain?_gl=1*139oplk*_ga*MzkwMjUxNjgwLjE3MTMyMDY2OTc.*_ga_6LJN6D94N6*MTcyMjUyNTU5Ny4xNjAuMS4xNzIyNTI1NzE1LjAuMC4w"
+            href="https://buy.stripe.com/4gw3en6jtdVo9TG00k"
             className="bg-sec text-prim py-3 px-8 font-prim font-bold rounded-xl text-lg lg:text-xl shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-accent3 hover:text-prim"
           >
             Get Ultimate Brain

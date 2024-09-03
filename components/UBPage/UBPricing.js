@@ -77,7 +77,7 @@ const UBPricing = () => {
               </li>
             </ul>
             <a
-            href="https://neuronotionn.gumroad.com/l/ultimateadhdbrain"
+            href="https://buy.stripe.com/4gw3en6jtdVo9TG00k"
             id="GetStandardButton"
             className="bg-accent1 text-gray-50 py-2 px-4 font-prim font-bold rounded-xl text-lg shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-violet-700 hover:bg-opacity-80 hover:text-gray-50"
             onClick={logStandardPackageEvent}
