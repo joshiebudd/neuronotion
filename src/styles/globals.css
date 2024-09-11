@@ -161,19 +161,19 @@ html {
 .blog-body {
   @apply text-lg;
   color: var(--clr-text);
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .blog-header {
   @apply text-3xl font-extrabold leading-tight lg:text-4xl;
   color: var(--clr-text);
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .blog-subheader {
   @apply text-2xl font-bold;
   color: var(--clr-text);
-  font-family: 'Baloo 2', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .card-list {

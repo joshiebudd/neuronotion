@@ -2,31 +2,29 @@ import React from "react";
 import HPHeader from "../Homepage/HPHeader";
 import BlogCard from "./blogcard";
 
-const Blog = () => {
+const ArticleSelect = () => {
   return (
     <div className="flex justify-center">
       <HPHeader />
       <div className="max-w-screen-lg w-full">
         <section className="bg-white pt-16 pb-10 lg:pt-32 lg:pb-20">
           <div className="container px-4 lg:px-0">
-            <div className="-mx-4 flex flex-wrap justify-center">
-              <div className="w-full px-4">
-                <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
-                  <span className="mb-2 block text-lg font-baloo font-semibold text-gray-900">
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full">
+                <div className="mx-auto mb-12 lg:mb-20 max-w-[600px] text-center">
+                  <span className="mb-2 block text-lg font-semibold text-prim font-prim">
                     Our Blogs
                   </span>
-                  <h2 className="mb-4 text-3xl font-baloo font-bold text-gray-900 sm:text-4xl md:text-[40px]">
-                    Our Recent News
+                  <h2 className="mb-4 text-3xl lg:text-[40px] font-bold text-prim font-prim">
+                    Our Recent Blog Posts
                   </h2>
-                  <p className="font-baloo font-regular text-gray-900">
-                    There are many variations of passages of Lorem Ipsum
-                    available but the majority have suffered alteration in some
-                    form.
+                  <p className="text-lg text-sec font-cg">
+                    Packed with value to help you regain control of your ADHD. <br /> Pick from any of the articles below to learn more.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="-mx-2 flex flex-wrap font-baloo font-regular justify-center">
+            <div className="flex flex-wrap justify-center">
               <BlogCard
                 date="Dec 22, 2023"
                 CardTitle="Meet AutoManage, the best AI management tools"
@@ -50,4 +48,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default ArticleSelect;
