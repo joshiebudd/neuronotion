@@ -26,17 +26,17 @@ const ArticleSelect = () => {
             </div>
             <div className="flex flex-wrap justify-center">
               <BlogCard
-                date="Dec 22, 2023"
+                date="Sep 11, 2024"
                 CardTitle="Why can't I build habits with ADHD?"
                 CardDescription="A deep dive into why habits are hard to form with ADHD and how to fix it."
-                image="https://i.ibb.co/Cnwd4q6/image-01.jpg"
+                image="https://NeuroNotionPullZonw.b-cdn.net/Blog%20Cover%20Images/pexels-kadiravsarr-24877182.jpg"
                 slug="adhd-and-routines"
               />
               <BlogCard
                 date="Sep 09, 2024"
                 CardTitle="What should I listen to while studying with ADHD?"
                 CardDescription="A deep dive into the most effective study music and sounds for Students with ADHD."
-                image="https://i.ibb.co/Y23YC07/image-02.jpg"
+                image="https://NeuroNotionPullZonw.b-cdn.net/Blog%20Cover%20Images/pexels-armin-rimoldi-5553630.jpg"
                 slug="adhd-and-study-music"
               />
               {/* Add more BlogCard components with unique slugs */}
