@@ -1,14 +1,14 @@
 import React from "react";
-import HeaderSection from "../StudySystem/HeaderSection";
-import Link from "next/link";
+import HPHeader from "../Homepage/HPHeader";
+import BlogCard from "./blogcard";
 
 const Blog = () => {
   return (
     <div className="flex justify-center">
-      <HeaderSection />
+      <HPHeader />
       <div className="max-w-screen-lg w-full">
-        <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
-          <div className="container">
+        <section className="bg-white pt-16 pb-10 lg:pt-32 lg:pb-20">
+          <div className="container px-4 lg:px-0">
             <div className="-mx-4 flex flex-wrap justify-center">
               <div className="w-full px-4">
                 <div className="mx-auto mb-[60px] max-w-[510px] text-center lg:mb-20">
@@ -26,25 +26,22 @@ const Blog = () => {
                 </div>
               </div>
             </div>
-            <div className="-mx-4 flex flex-wrap font-baloo font-regular justify-center">
+            <div className="-mx-2 flex flex-wrap font-baloo font-regular justify-center">
               <BlogCard
                 date="Dec 22, 2023"
                 CardTitle="Meet AutoManage, the best AI management tools"
                 CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                 image="https://i.ibb.co/Cnwd4q6/image-01.jpg"
+                slug="automange-ai-tools"
               />
               <BlogCard
                 date="Dec 22, 2023"
-                CardTitle="Meet AutoManage, the best AI management tools"
+                CardTitle="What should I listen to while studying with ADHD?"
                 CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                 image="https://i.ibb.co/Y23YC07/image-02.jpg"
+                slug="adhd-and-study-music"
               />
-              <BlogCard
-                date="Dec 22, 2023"
-                CardTitle="Meet AutoManage, the best AI management tools"
-                CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                image="https://i.ibb.co/7jdcnwn/image-03.jpg"
-              />
+              {/* Add more BlogCard components with unique slugs */}
             </div>
           </div>
         </section>
@@ -54,30 +51,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
-const BlogCard = ({ image, date, CardTitle, CardDescription }) => {
-  return (
-    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-      <div className="mb-10 w-full">
-        <div className="mb-8 overflow-hidden rounded">
-          <img src={image} alt="" className="w-full" />
-        </div>
-        <div>
-          {date && (
-            <span className="mb-5 inline-block rounded bg-primary px-4 py-1 text-center text-xs font-baloo font-semibold leading-loose text-gray-900">
-              {date}
-            </span>
-          )}
-          <h3>
-            <Link href="/blogs/adhd-and-study-music">
-              <span className="mb-4 inline-block text-xl font-baloo font-semibold text-gray-900 hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl cursor-pointer">
-                {CardTitle}
-              </span>
-            </Link>
-          </h3>
-          <p className="text-base text-gray-900">{CardDescription}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
