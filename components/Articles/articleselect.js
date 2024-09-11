@@ -27,15 +27,15 @@ const ArticleSelect = () => {
             <div className="flex flex-wrap justify-center">
               <BlogCard
                 date="Dec 22, 2023"
-                CardTitle="Meet AutoManage, the best AI management tools"
-                CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                CardTitle="Why can't I build habits with ADHD?"
+                CardDescription="A deep dive into why habits are hard to form with ADHD and how to fix it."
                 image="https://i.ibb.co/Cnwd4q6/image-01.jpg"
-                slug="automange-ai-tools"
+                slug="adhd-and-routines"
               />
               <BlogCard
-                date="Dec 22, 2023"
+                date="Sep 09, 2024"
                 CardTitle="What should I listen to while studying with ADHD?"
-                CardDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                CardDescription="A deep dive into the most effective study music and sounds for Students with ADHD."
                 image="https://i.ibb.co/Y23YC07/image-02.jpg"
                 slug="adhd-and-study-music"
               />

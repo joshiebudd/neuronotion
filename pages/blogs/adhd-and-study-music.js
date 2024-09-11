@@ -1,11 +1,10 @@
 import React from 'react';
-import HeaderSection from '../../components/StudySystem/HeaderSection';
-
+import HPHeader from '../../components/Homepage/HPHeader';
 const StudyMusicBlog = () => {
   return (
     <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
       <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-        <HeaderSection />
+        <HPHeader />
         <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
           <header className="mb-4 lg:mb-6 not-format">
             <address className="flex items-center mb-6 not-italic">
