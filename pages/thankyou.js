@@ -1,11 +1,34 @@
 import React from "react";
 import Script from "next/script";
+import { useEffect } from 'react';
 import HeaderSection from "../components/StudySystem/HeaderSection";
 import FooterSection from "../components/FooterSection";
 
 function ThankYouPage() {
+  useEffect(() => {
+    // Check if gtag is available and fire the conversion event
+    if (window.gtag) {
+      window.gtag('event', 'ads_conversion_Purchase_1', {
+        // <event_parameters>
+      });
+    }
+  }, []);
+
   return (
     <>
+      <Script
+        id="gtag-conversion"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            if (window.gtag) {
+              gtag('event', 'ads_conversion_Purchase_1', {
+                // <event_parameters>
+              });
+            }
+          `,
+        }}
+      />
       <Script
         id="facebook-purchase-script"
         dangerouslySetInnerHTML={{
