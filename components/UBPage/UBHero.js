@@ -23,8 +23,8 @@ const UBHero = () => {
           className="pt-4 text-lg lg:text-[20px] font-semibold text-center text-sec font-cg"
           style={{ maxWidth: "600px", margin: "0 auto" }}
         >
-          It&apos;s simple: You braindump. It shows you exactly what you need to
-          know at the perfect time.
+          The perfect digital assistant for ADHDers, built by ADHDers, inside Notion.
+          Let Ultimate Brain help you achieve more and stress less, with less overwhelm.
         </p>
         <button
           onClick={handleRedirectToGumroad}
