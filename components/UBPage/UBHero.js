@@ -23,8 +23,8 @@ const UBHero = () => {
           className="pt-4 text-lg lg:text-[20px] font-semibold text-center text-sec font-cg"
           style={{ maxWidth: "600px", margin: "0 auto" }}
         >
-          The perfect digital assistant for ADHDers, built by ADHDers, inside Notion.
-          With Ultimate ADHD Brain, you use less effort to achieve more and stress less.
+          The perfect digital assistant for ADHDers, built by ADHDers, inside Notion. <br />
+          Use less effort to achieve more and stress less.
         </p>
         <button
           onClick={handleRedirectToGumroad}
