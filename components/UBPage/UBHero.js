@@ -58,7 +58,7 @@ const UBHero = () => {
           <img
             style={{ width: "100%" }}
             loading="eager"
-            src="https://NeuroNotionPullZonw.b-cdn.net/Compressed%20Shadow%20Demo%20WEBPs/UBDarkModeDemoRoundedShadowFinal.webp"
+            src="https://NeuroNotionPullZonw.b-cdn.net/UltimateBrainShadowDemo.webp"
             alt="template"
             width={1920}
             height={1280}
