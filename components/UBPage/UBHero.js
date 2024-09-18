@@ -24,7 +24,7 @@ const UBHero = () => {
           style={{ maxWidth: "600px", margin: "0 auto" }}
         >
           The perfect digital assistant for ADHDers, built by ADHDers, inside Notion.
-          Let Ultimate Brain help you achieve more and stress less, with less overwhelm.
+          With Ultimate ADHD Brain, you use less effort to achieve more and stress less.
         </p>
         <button
           onClick={handleRedirectToGumroad}
