@@ -14,7 +14,7 @@ const UBHero = () => {
   };
 
   return (
-    <div className="pt-16 px-4 lg:px-0 mt-16 bg-white lg:mt-32">
+    <div className="pt-16 px-4 lg:px-0 mt-16 bg-white pb-4 lg:mt-32">
       <div className="flex flex-col items-center mx-auto max-w-full lg:max-w-screen-lg">
         <h1 className="text-3xl font-bold text-center text-prim font-prim lg:text-[60px]">
           Regain Control of your ADHD
@@ -23,7 +23,7 @@ const UBHero = () => {
           className="pt-4 text-lg lg:text-[20px] font-semibold text-center text-sec font-cg"
           style={{ maxWidth: "600px", margin: "0 auto" }}
         >
-          The perfect digital assistant for ADHDers, built by ADHDers, inside Notion. <br />
+          The perfect digital assistant for ADHDers, built by ADHDers, inside Notion.
           Use less effort to achieve more and stress less.
         </p>
         <button
