@@ -39,6 +39,13 @@ const ArticleSelect = () => {
                 image="https://NeuroNotionPullZonw.b-cdn.net/Blog%20Cover%20Images/pexels-armin-rimoldi-5553630.jpg"
                 slug="adhd-and-study-music"
               />
+              <BlogCard
+                date="Nov 2, 2024"
+                CardTitle="How to manage ADHD in adults without Medication"
+                CardDescription="Discover effective non-medical strategies and lifestyle changes to manage adult ADHD symptoms."
+                image="https://NeuroNotionPullZonw.b-cdn.net/Blog%20Cover%20Images/pexels-karolina-grabowska-4210611.jpg"
+                slug="adhd-and-medication"
+              />
               {/* Add more BlogCard components with unique slugs */}
             </div>
           </div>
