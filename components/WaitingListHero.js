@@ -37,7 +37,7 @@ const WaitingListHeroSec = () => {
   };
 
   return (
-    <section id="testerhero" className="bg-blue-50 testhero-section pt-20 sm:pt-10">
+    <section id="testerhero" className="bg-prim testhero-section pt-20 sm:pt-10">
       <style>
         {`
           .heroTitleLarge-container {
@@ -49,28 +49,18 @@ const WaitingListHeroSec = () => {
           }
         `}
       </style>
-      <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-        <div className="heroTitleLarge-container">
-          <img
-            style={{ width: "100%" }}
-            loading="eager"
-            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/heroTitleLarge.png"
-            alt="titleheader"
-            height={240}
-            priority={1}
-          />
-        </div>
+      <div className="mx-auto max-w-screen-xl px-4 py-32 text-center">
         <div className="px-0 md:px-60">
           <img
             style={{ width: "100%" }}
             loading="eager"
-            src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/WaitingListHeroTitle.png"
+            src="https://NeuroNotionPullZonw.b-cdn.net/WaitingListHeroTitleFinal.png"
             alt="titleheader"
             height={240}
             priority={1}
           />
         </div>
-        <p className="mt-5 mb-6 text-xl font-baloo font-regular text-slate-950 sm:px-24">
+        <p className="mt-5 mb-6 text-xl font-pop font-regular text-white sm:px-24">
           The new approach to managing your life with ADHD <br /> Join the waiting list to secure a spot and get more information!
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center sm:space-x-4 mb-4">
@@ -92,19 +82,23 @@ const WaitingListHeroSec = () => {
           />
           <button
             onClick={handleButtonClick}
-            className="StandardCheckoutButton inline-block bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 rounded-lg px-5 py-3 text-lg font-baloo font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
+            className="StandardCheckoutButton inline-block bg-sec rounded-lg px-5 py-3 text-lg font-pop font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300"
           >
             Secure your spot
           </button>
         </div>
-        <p className="mt-2 text-sm font-baloo font-regular text-gray-800">No Spam e-mails. Unsubscribe in one click, at any time.</p>
-        {message && <p className="mt-2 text-gray-800">{message}</p>}
+        <p className="mt-2 text-sm font-pop font-regular text-white">No Spam e-mails. Unsubscribe in one click, at any time.</p>
+        {message && (
+          <p className={`mt-2 ${message.includes('Successfully') ? 'text-accent4' : 'text-white'}`}>
+            {message}
+          </p>
+        )}
         <div className="mx-auto max-w-screen-xl pt-4 pb-2 text-center lg:px-12">
           <div className="centered-image max-w-full sm:max-w-[950px] sm:pt-2 pb-4">
             <img
               style={{ width: "100%" }}
               loading="eager"
-              src="https://raw.githubusercontent.com/joshiebudd/neuronotion/main/public/RoundedUBProdDemo.png"
+              src="https://NeuroNotionPullZonw.b-cdn.net/nopeaking.png"
               alt="template"
               width={1920}
               height={1280}
@@ -112,7 +106,7 @@ const WaitingListHeroSec = () => {
             />
           </div>
         </div>
-        <div className="mt-6 text-2xl font-baloo font-semibold">👀 More Details Coming Soon! Join the Waiting List to be the first to find out!</div>
+        <div className="mt-6 text-2xl font-pop font-semibold text-white">👀 More Details Coming Soon! Join the Waiting List to be the first to find out!</div>
       </div>
     </section>
   );

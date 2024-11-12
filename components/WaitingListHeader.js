@@ -100,7 +100,7 @@ const WaitingListHeaderSection = () => {
 
       <SpeedInsights />
 
-      <div className="full-header bg-white bg-opacity-30 backdrop-blur-lg fixed top-0 right-0 left-0">
+      <div className="full-header bg-white bg-opacity-20 backdrop-blur-lg fixed top-0 right-0 left-0">
         <nav className="px-8 py-5 lg:px-6">
           <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between">
             <div
@@ -108,15 +108,15 @@ const WaitingListHeaderSection = () => {
               ref={titleRef}
             >
               <Image
-                width={56}
-                height={56}
+                width={400}
+                height={400}
                 loading="eager"
-                className="w-10 h-auto mr-3"
-                src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/logo.webp"
+                className="w-16 h-auto mr-3"
+                src="https://raw.githubusercontent.com/joshiebudd/notionwidgets/main/Bubbles.svg"
                 alt="Neuro Notion Logo"
               />
               <div className="w-full grow text-center sm:text-left">
-                <span className="self-center whitespace-nowrap text-2xl sm:text-2xl font-baloo font-bold text-black">
+                <span className="self-center whitespace-nowrap text-2xl sm:text-2xl font-pop font-bold text-sec">
                   Neuro Notion
                 </span>
               </div>
@@ -129,7 +129,7 @@ const WaitingListHeaderSection = () => {
               <a
                 href="#"
                 onClick={handleButtonClick}
-                className="inline-block rounded-lg bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-blue-400 to-blue-700 px-4 py-4 text-lg font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-5 lg:py-3 hidden sm:block"
+                className="inline-block rounded-lg bg-sec px-4 py-4 text-lg font-pop font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-gray-300 lg:px-5 lg:py-3 hidden sm:block"
               >
                 Secure your spot.
               </a>
