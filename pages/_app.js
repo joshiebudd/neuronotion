@@ -6,6 +6,13 @@ import { useRouter } from "next/router";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import "../src/styles/cardWidget.css";
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
 if (typeof window !== "undefined") {
@@ -133,10 +140,23 @@ function MyApp({ Component, pageProps }) {
           `}
         </Script>
 
-        <Component {...pageProps} />
+        <main className={poppins.className}>
+          <Component {...pageProps} />
+        </main>
       </>
     </PostHogProvider>
   );
 }
+
+// Add getInitialProps
+MyApp.getInitialProps = async ({ Component, ctx }) => {
+  let pageProps = {};
+
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+
+  return { pageProps };
+};
 
 export default MyApp;

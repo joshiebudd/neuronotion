@@ -8,20 +8,24 @@ import Howitworks from "../components/TemplatesPage/Howitworks";
 import TemplatesFAQ from "../components/TemplatesPage/TemplatesFAQ";
 import NewsLetter from "../components/TemplatesPage/NewsLetter";
 import FooterSection from "../components/FooterSection";
+import StickyWaitingList from '../components/StickyWaitingList';
 
 const TemplatesPage = () => {
   return (
-    <div>
-      <HPHeader />
-      <Cookies />
-      <ADHDTemplates />
-      <UnlockSection />
-      <NotionBundle />
-      <Howitworks />
-      <TemplatesFAQ />
-      <NewsLetter />
-      <FooterSection />
-    </div>
+    <>
+      <div>
+        <HPHeader />
+        <Cookies />
+        <ADHDTemplates />
+        <UnlockSection />
+        <NotionBundle />
+        <Howitworks />
+        <TemplatesFAQ />
+        <NewsLetter />
+        <FooterSection />
+        <StickyWaitingList />
+      </div>
+    </>
   );
 };
 

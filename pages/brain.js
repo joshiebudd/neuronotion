@@ -13,6 +13,7 @@ import TestimonialCarousel from "../components/Homepage/HPReviews";
 import UBFAQs from "../components/UBPage/UBFAQs";
 import HPFinalCTA from "../components/Homepage/HPFinalCTA";
 import FooterSection from "../components/FooterSection";
+import StickyWaitingList from '../components/StickyWaitingList';
 
 const ADHDBrain = () => {
   return (
@@ -31,6 +32,7 @@ const ADHDBrain = () => {
       <UBFAQs />
       <HPFinalCTA />
       <FooterSection />
+      <StickyWaitingList />
     </>
   );
 };
