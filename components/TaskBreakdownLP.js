@@ -64,9 +64,14 @@ const TaskBreakdownLP = () => {
               </a>
             </div>
             <nav className="flex items-center">
-              <button className="bg-[#3DBADB] text-white px-4 py-2 font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90">
-                See Claudia in Action
-              </button>
+              <div className="flex items-center">
+                <a 
+                  href="https://app.neuro-notion.com"
+                  className="bg-[#3DBADB] text-white px-4 py-2 font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
+                >
+                  See Claudia in Action
+                </a>
+              </div>
             </nav>
           </div>
         </div>
@@ -111,9 +116,9 @@ const TaskBreakdownLP = () => {
               </div>
               <div className="flex-1">
                 <img
-                  src="https://NeuroNotionPullZonw.b-cdn.net/Simple%20demo.jpeg"
+                  src="https://NeuroNotionPullZonw.b-cdn.net/Untitled%20design%20(48).png"
                   alt="Task Management Dashboard"
-                  className="rounded-2xl shadow-2xl w-[120%] max-w-none"
+                  className="rounded-2xl w-[140%] max-w-none -mr-20"
                 />
               </div>
             </div>
