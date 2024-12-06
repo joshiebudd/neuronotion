@@ -2,24 +2,18 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { Brain, Zap, Clock, Smile, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Trophy, Zap, Clock, Smile, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Testimonials data
 const testimonials = [
   {
-    quote: "It's crucial that our guidelines are self-service to maintain brand consistency and business efficiency as we continue to scale.",
-    author: "Courtney Gifford",
-    role: "Digital Engagement"
+    quote: "Oh this makes it so much easier to break things down"
   },
   {
-    quote: "The platform has revolutionized how we approach digital workflows and team collaboration.",
-    author: "Michael Chen",
-    role: "Product Manager"
+    quote: "It takes everything into account. Considers my energy levels and supports me to actually DO it."
   },
   {
-    quote: "This tool has transformed our productivity and streamlined our entire process.",
-    author: "Sarah Johnson",
-    role: "Operations Director"
+    quote: "This is mindblowing. It takes all the effort off my brain."
   }
 ];
 
@@ -27,17 +21,17 @@ const testimonials = [
 const features = [
   {
     title: 'Better',
-    description: 'AI-powered task breakdown that understands how ADHD minds work',
-    Icon: Zap
+    description: 'Outputs better than what you could produce on your own.',
+    Icon: Trophy
   },
   {
     title: 'Faster',
-    description: 'Complete tasks in record time with our focused workflow system',
-    Icon: Clock
+    description: "Much faster than processing everything down and writing it down yourself.",
+    Icon: Zap
   },
   {
     title: 'Easier',
-    description: 'Intuitive interface that reduces overwhelm and increases productivity',
+    description: 'Takes all the effort off your brain. So you can focus on doing.',
     Icon: Smile
   }
 ];
@@ -155,11 +149,7 @@ const TaskBreakdownLP = () => {
                   {testimonials.map((testimonial, index) => (
                     <div key={index} className="flex-[0_0_100%] min-w-0">
                       <div className="px-4 py-12 text-center">
-                        <div className="mb-8">
-                          <p className="font-prim font-semibold text-white text-xl">{testimonial.author}</p>
-                          <p className="font-prim text-white/70">{testimonial.role}</p>
-                        </div>
-                        <blockquote className="text-3xl font-prim font-medium text-white max-w-4xl mx-auto mb-8">
+                        <blockquote className="text-3xl font-prim font-medium text-white max-w-4xl mx-auto">
                           &ldquo;{testimonial.quote}&rdquo;
                         </blockquote>
                       </div>
