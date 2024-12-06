@@ -11,7 +11,7 @@ const StickyWaitingList = () => {
 
   useEffect(() => {
     // List of paths where the component should appear
-    const allowedPaths = ['/', '/templates', '/brain', '/blogs'];
+    const allowedPaths = ['/', '/templates', '/brain', '/blogs', '/timer'];
     setShouldShow(allowedPaths.includes(router.pathname));
   }, [router.pathname]);
 

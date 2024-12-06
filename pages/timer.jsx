@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import HPHeader from '../components/Homepage/HPHeader';
+import StickyWaitingList from '../components/StickyWaitingList';
 
 const Timer = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
