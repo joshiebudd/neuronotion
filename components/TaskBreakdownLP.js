@@ -208,8 +208,8 @@ const TaskBreakdownLP = () => {
                 <span className="font-pop font-bold text-xl text-white">Neuro Notion</span>
               </a>
               <div className="flex items-center gap-4 text-white/70 font-prim">
-                <a href="#" className="hover:text-[#3DBADB]">Privacy Policy</a>
-                <a href="#" className="hover:text-[#3DBADB]">Cookies Policy</a>
+                <a href="https://theblogspace.notion.site/Privacy-Policy-156c9c3da37d8095a0e4eb14fc93ed9e" className="hover:text-[#3DBADB]">Privacy Policy</a>
+                <a href="https://theblogspace.notion.site/Neuro-Notion-Cookies-Policy-c8fde8f3024a4a0389b888d0ec107e5b" className="hover:text-[#3DBADB]">Cookies Policy</a>
               </div>
             </div>
             <div className="mt-4 text-center text-white/70 font-prim">
