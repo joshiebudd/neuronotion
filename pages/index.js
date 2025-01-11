@@ -12,7 +12,6 @@ import HPFinalCTA from '../components/Homepage/HPFinalCTA';
 import FooterSection from '../components/FooterSection';
 import posthog from "posthog-js";
 import Cookies from "../components/Cookies.js";
-import StickyWaitingList from '../components/StickyWaitingList';
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
 if (typeof window !== "undefined") {
@@ -63,7 +62,6 @@ const IndexPage = () => {
         <HPFinalCTA />
         <FooterSection />
         <Cookies />
-        <StickyWaitingList />
       </div>
     </>
   );

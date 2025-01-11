@@ -11,7 +11,7 @@ const TaskBreakdownLP = () => {
 
   useEffect(() => {
     if (!emblaApi) return;
-    const interval = setInterval(() => emblaApi.scrollNext(), 3000);
+    const interval = setInterval(() => emblaApi.scrollNext(), 6000);
     return () => clearInterval(interval);
   }, [emblaApi]);
 
@@ -47,31 +47,31 @@ const TaskBreakdownLP = () => {
   return (
     <div className="min-h-screen bg-[#28305D]">
       <Head>
-        <title>Flow Club - ADHD Support Community</title>
+        <title>Claudia | by Neuro Notion</title>
         <meta name="description" content="Join our ADHD support community and harness your ADHD superpower" />
       </Head>
 
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-[#28305D]/80 backdrop-blur-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-3 sm:py-4">
             <div className="flex items-center gap-2">
               <a href="https://www.neuro-notion.com" className="flex items-center gap-2">
                 <img
                   src="https://NeuroNotionPullZonw.b-cdn.net/Logos/Lines%20and%20bubbles%20for%20dark%20background.svg"
                   alt="Neuro Notion Logo"
-                  className="w-8 h-8"
+                  className="w-6 h-6 sm:w-8 sm:h-8"
                 />
-                <span className="font-pop font-bold text-xl text-white">Neuro Notion</span>
+                <span className="font-pop font-bold text-lg sm:text-xl text-white">Neuro Notion</span>
               </a>
             </div>
-            <nav className="flex items-center gap-6">
+            <nav className="flex items-center gap-3 sm:gap-6">
               <button className="hidden md:block text-white/90 hover:text-white font-prim bg-white/10 px-4 py-2 rounded-xl">
                 Watch Demo
               </button>
               <a 
                 href="https://app.neuro-notion.com"
-                className="bg-[#3DBADB] text-white px-4 py-2 font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 shadow-sm hover:bg-[#3DBADB]/90"
+                className="bg-[#3DBADB] text-white px-3 sm:px-4 py-2 font-prim text-sm sm:text-base font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 shadow-sm hover:bg-[#3DBADB]/90"
               >
                 Try Claudia Free
               </a>
@@ -81,25 +81,25 @@ const TaskBreakdownLP = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-pop font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-pop font-bold text-white mb-4 sm:mb-6">
               Overwhelmed by ADHD?<br />
               <span className="text-[#3DBADB]">Meet Claudia</span> 👋
             </h1>
-            <p className="text-xl text-white/90 font-pop mb-8">
-              Finally, it&apos;s 10x easier to get started and actually follow through with the big stuff.<br />
+            <p className="text-lg sm:text-xl text-white/90 font-pop mb-6 sm:mb-8 px-2">
+              Finally, it&apos;s 10x easier to get started and actually follow through with the big stuff. <br className="hidden sm:block" />
               All done through a simple conversation.
             </p>
             <div className="flex flex-col items-center">
               <a 
                 href="https://app.neuro-notion.com"
-                className="bg-[#3DBADB] text-white px-8 py-3 font-prim font-bold rounded-xl hover:bg-[#3DBADB]/90"
+                className="bg-[#3DBADB] text-white px-6 sm:px-8 py-3 font-prim font-bold rounded-xl hover:bg-[#3DBADB]/90 text-sm sm:text-base"
               >
                 TRY FREE NOW
               </a>
-              <p className="text-white/70 text-sm mt-2 font-pop">No credit card required</p>
+              <p className="text-white/70 text-xs sm:text-sm mt-2 font-pop">No credit card required</p>
             </div>
           </div>
 
@@ -120,57 +120,55 @@ const TaskBreakdownLP = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-[#2E376A]">
+      <section className="py-12 sm:py-20 bg-[#2E376A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-pop font-bold text-center text-white mb-16">
+          <h2 className="text-3xl sm:text-4xl font-pop font-bold text-center text-white mb-8 sm:mb-16">
             Breaking down tasks with ADHD just got...
           </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-[#28305D] p-8 rounded-xl shadow-lg text-center">
-              <div className="w-12 h-12 bg-[#3DBADB]/20 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Trophy className="w-6 h-6 text-[#3DBADB]" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 max-w-5xl mx-auto">
+            <div className="bg-[#28305D] p-6 sm:p-8 rounded-xl shadow-lg text-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#3DBADB]/20 rounded-lg flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-[#3DBADB]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#3DBADB] mb-4">Better</h3>
-              <p className="text-white/80">Outputs better than what you could produce on your own.</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#3DBADB] mb-3 sm:mb-4">Better</h3>
+              <p className="text-white/80 text-sm sm:text-base">Outputs better than what you could produce on your own.</p>
             </div>
-            <div className="bg-[#28305D] p-8 rounded-xl shadow-lg text-center">
-              <div className="w-12 h-12 bg-[#3DBADB]/20 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-6 h-6 text-[#3DBADB]" />
+            <div className="bg-[#28305D] p-6 sm:p-8 rounded-xl shadow-lg text-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#3DBADB]/20 rounded-lg flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#3DBADB]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#3DBADB] mb-4">Faster</h3>
-              <p className="text-white/80">Much faster than processing everything down and writing it down yourself.</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#3DBADB] mb-3 sm:mb-4">Faster</h3>
+              <p className="text-white/80 text-sm sm:text-base">Much faster than processing everything down and writing it down yourself.</p>
             </div>
-            <div className="bg-[#28305D] p-8 rounded-xl shadow-lg text-center">
-              <div className="w-12 h-12 bg-[#3DBADB]/20 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <Smile className="w-6 h-6 text-[#3DBADB]" />
+            <div className="bg-[#28305D] p-6 sm:p-8 rounded-xl shadow-lg text-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#3DBADB]/20 rounded-lg flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                <Smile className="w-5 h-5 sm:w-6 sm:h-6 text-[#3DBADB]" />
               </div>
-              <h3 className="text-2xl font-bold text-[#3DBADB] mb-4">Easier</h3>
-              <p className="text-white/80">Takes all the effort off your brain. So you can focus on doing.</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#3DBADB] mb-3 sm:mb-4">Easier</h3>
+              <p className="text-white/80 text-sm sm:text-base">Takes all the effort off your brain. So you can focus on doing.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Members Section */}
-      <section className="py-20 bg-[#2E376A]">
+      <section className="py-12 sm:py-20 bg-[#2E376A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-pop font-bold text-center text-white mb-16">What Our Community Says</h2>
+          <h2 className="text-3xl sm:text-4xl font-pop font-bold text-center text-white mb-8 sm:mb-16">What Our Community Says</h2>
           
           {/* Stats */}
-          <div className="flex justify-center items-center gap-4 mb-16 max-w-3xl mx-auto">
-            <div className="flex-1 text-center">
-              <div className="text-4xl font-bold text-[#3DBADB]">5000+</div>
-              <div className="text-sm text-white/60">Active ADHDers</div>
+          <div className="grid grid-cols-3 gap-4 mb-8 sm:mb-16 max-w-3xl mx-auto">
+            <div className="text-center">
+              <div className="text-2xl sm:text-4xl font-bold text-[#3DBADB]">5000+</div>
+              <div className="text-[10px] sm:text-sm text-white/60">Active ADHDers</div>
             </div>
-            <div className="w-px h-12 bg-white/10"></div>
-            <div className="flex-1 text-center">
-              <div className="text-4xl mb-2">🧠</div>
-              <div className="text-sm text-white/60">ADHD-Optimized<br />Breakdowns</div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-4xl mb-2">🧠</div>
+              <div className="text-[10px] sm:text-sm text-white/60">ADHD-Optimized<br />Breakdowns</div>
             </div>
-            <div className="w-px h-12 bg-white/10"></div>
-            <div className="flex-1 text-center">
-              <div className="text-4xl font-bold text-[#3DBADB]">97%</div>
-              <div className="text-sm text-white/60">Report easier task<br />management</div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-4xl font-bold text-[#3DBADB]">97%</div>
+              <div className="text-[10px] sm:text-sm text-white/60">Report easier task<br />management</div>
             </div>
           </div>
 
@@ -180,8 +178,8 @@ const TaskBreakdownLP = () => {
               <div className="flex">
                 {members.map((member, index) => (
                   <div key={index} className="flex-[0_0_100%] min-w-0">
-                    <div className="px-4 py-12 text-center">
-                      <blockquote className="text-3xl font-prim font-medium text-white max-w-4xl mx-auto">
+                    <div className="px-4 py-8 sm:py-12 text-center">
+                      <blockquote className="text-xl sm:text-3xl font-prim font-medium text-white max-w-4xl mx-auto">
                         &ldquo;{member.description}&rdquo;
                       </blockquote>
                     </div>
@@ -192,25 +190,25 @@ const TaskBreakdownLP = () => {
 
             <button
               onClick={scrollPrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 p-2 text-white hover:text-[#3DBADB]"
+              className="absolute left-0 top-1/2 -translate-y-1/2 p-1 sm:p-2 text-white hover:text-[#3DBADB]"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-8 h-8" />
+              <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>
 
             <button
               onClick={scrollNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 p-2 text-white hover:text-[#3DBADB]"
+              className="absolute right-0 top-1/2 -translate-y-1/2 p-1 sm:p-2 text-white hover:text-[#3DBADB]"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-8 h-8" />
+              <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
             </button>
           </div>
 
           <div className="text-center mt-8">
             <a 
               href="https://app.neuro-notion.com"
-              className="bg-[#3DBADB] text-white px-8 py-3 font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
+              className="bg-[#3DBADB] text-white px-6 sm:px-8 py-2 sm:py-3 font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
             >
               TRY FREE NOW
             </a>
@@ -219,41 +217,43 @@ const TaskBreakdownLP = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-[#1E2445]">
+      <section className="py-12 sm:py-20 bg-[#1E2445]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-pop font-bold text-center text-white mb-16">How Claudia Helps You</h2>
-          <div className="space-y-24 max-w-5xl mx-auto">
-            <div className="flex items-center gap-8">
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-[#3DBADB] mb-4">Understands Your Energy</h3>
-                <p className="text-white/80">Claudia adapts task breakdowns based on your current energy levels, ensuring you&apos;re not overwhelmed when you&apos;re low and maximizing productivity when you&apos;re high.</p>
-              </div>
+          <h2 className="text-3xl sm:text-4xl font-pop font-bold text-center text-white mb-8 sm:mb-16">How Claudia Helps You</h2>
+          <div className="space-y-12 sm:space-y-24 max-w-5xl mx-auto">
+            <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
               <div className="flex-1 flex justify-center">
-                <div className="bg-[#FF6B6B]/10 p-6 rounded-xl">
-                  <BatteryMedium className="w-48 h-48 text-[#FF6B6B]" />
+                <div className="bg-[#FF6B6B]/10 p-4 sm:p-6 rounded-xl">
+                  <BatteryMedium className="w-24 h-24 sm:w-48 sm:h-48 text-[#FF6B6B]" />
                 </div>
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#3DBADB] mb-3 sm:mb-4">Understands Your Energy</h3>
+                <p className="text-white/80 text-sm sm:text-base">Claudia adapts task breakdowns based on your current energy levels, ensuring you&apos;re not overwhelmed when you&apos;re low and maximizing productivity when you&apos;re high.</p>
               </div>
             </div>
-            <div className="flex items-center gap-8">
-              <div className="flex-1 order-2">
-                <h3 className="text-2xl font-bold text-[#3DBADB] mb-4">Supportive Guidance</h3>
-                <p className="text-white/80">Get encouraging, ADHD-friendly guidance that helps you stay motivated and focused. Claudia&apos;s there to cheer you on every step of the way.</p>
-              </div>
-              <div className="flex-1 flex justify-center">
-                <div className="bg-[#FFD93D]/10 p-6 rounded-xl">
-                  <Bot className="w-48 h-48 text-[#FFD93D]" />
+            
+            <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+              <div className="flex-1 order-1 sm:order-2 flex justify-center">
+                <div className="bg-[#FFD93D]/10 p-4 sm:p-6 rounded-xl">
+                  <Bot className="w-24 h-24 sm:w-48 sm:h-48 text-[#FFD93D]" />
                 </div>
+              </div>
+              <div className="flex-1 order-2 sm:order-1 text-center sm:text-right">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#3DBADB] mb-3 sm:mb-4">Supportive Guidance</h3>
+                <p className="text-white/80 text-sm sm:text-base">Get encouraging, ADHD-friendly guidance that helps you stay motivated and focused. Claudia&apos;s there to cheer you on every step of the way.</p>
               </div>
             </div>
-            <div className="flex items-center gap-8">
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-[#3DBADB] mb-4">Smart Task Breakdown</h3>
-                <p className="text-white/80">Watch as Claudia transforms overwhelming projects into clear, manageable steps. No more getting stuck in analysis paralysis.</p>
-              </div>
+            
+            <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
               <div className="flex-1 flex justify-center">
-                <div className="bg-[#4ECDC4]/10 p-6 rounded-xl">
-                  <Brain className="w-48 h-48 text-[#4ECDC4]" />
+                <div className="bg-[#4ECDC4]/10 p-4 sm:p-6 rounded-xl">
+                  <Brain className="w-24 h-24 sm:w-48 sm:h-48 text-[#4ECDC4]" />
                 </div>
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <h3 className="text-xl sm:text-2xl font-bold text-[#3DBADB] mb-3 sm:mb-4">Smart Task Breakdown</h3>
+                <p className="text-white/80 text-sm sm:text-base">Watch as Claudia transforms overwhelming projects into clear, manageable steps. No more getting stuck in analysis paralysis.</p>
               </div>
             </div>
           </div>
@@ -261,32 +261,53 @@ const TaskBreakdownLP = () => {
       </section>
 
       {/* Expert Ways Section */}
-      <section className="py-20 bg-[#2E376A]">
+      <section className="py-12 sm:py-20 bg-[#2E376A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-pop font-bold text-center text-white mb-4">
+            <h2 className="text-2xl sm:text-3xl font-pop font-bold text-center text-white mb-4">
               Easiest Way To<br />Manage Your ADHD
             </h2>
-            <p className="text-white/80 mb-8 text-center">
-              Claudia is your AI-powered ADHD task breakdown assistant. She helps you break down overwhelming tasks into manageable steps, matches your energy levels, and provides the encouragement you need to actually get things done. She takes all the effort off your brain, making task management fun and effortless.
-            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 mb-12">
+              <div className="bg-[#28305D]/50 p-6 rounded-xl text-center">
+                <h3 className="text-[#3DBADB] font-bold mb-2 text-lg">AI-Powered Assistant</h3>
+                <p className="text-white/80 text-sm">Claudia breaks down overwhelming tasks into manageable steps</p>
+              </div>
+              
+              <div className="bg-[#28305D]/50 p-6 rounded-xl text-center">
+                <h3 className="text-[#3DBADB] font-bold mb-2 text-lg">Energy Aware</h3>
+                <p className="text-white/80 text-sm">Matches your energy levels for optimal productivity</p>
+              </div>
+              
+              <div className="bg-[#28305D]/50 p-6 rounded-xl text-center">
+                <h3 className="text-[#3DBADB] font-bold mb-2 text-lg">Personalized Support</h3>
+                <p className="text-white/80 text-sm">Provides encouragement and guidance every step of the way</p>
+              </div>
+              
+              <div className="bg-[#28305D]/50 p-6 rounded-xl text-center">
+                <h3 className="text-[#3DBADB] font-bold mb-2 text-lg">Effortless Management</h3>
+                <p className="text-white/80 text-sm">Makes task management fun and easy for your ADHD brain</p>
+              </div>
+            </div>
+
             <div className="text-center">
               <a 
                 href="https://app.neuro-notion.com"
-                className="bg-[#3DBADB] text-white px-8 py-3 font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90 mb-16"
+                className="bg-[#3DBADB] text-white px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
               >
                 TRY FREE NOW
               </a>
+              <p className="text-white/50 text-xs mt-4">Join thousands of ADHDers already using Claudia</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-[#28305D]">
+      <section className="py-12 sm:py-20 bg-[#28305D]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-pop font-bold text-center text-white mb-12">We&apos;re Sure You Have Questions</h2>
-          <div className="max-w-3xl mx-auto space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-pop font-bold text-center text-white mb-8 sm:mb-12">We&apos;re Sure You Have Questions</h2>
+          <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
             {[
               {
                 question: "How does the task breakdown system work?",
@@ -307,11 +328,11 @@ const TaskBreakdownLP = () => {
             ].map((faq, index) => (
               <div key={index} className="bg-[#2E376A] rounded-xl">
                 <button
-                  className="w-full text-left font-prim font-semibold text-lg text-white flex justify-between items-center p-6"
+                  className="w-full text-left font-prim font-semibold text-base sm:text-lg text-white flex justify-between items-center p-4 sm:p-6"
                   onClick={() => setActiveQuestion(activeQuestion === index ? null : index)}
                 >
-                  <span>{faq.question}</span>
-                  <span className="text-[#3DBADB] text-2xl transition-transform duration-300" style={{ transform: activeQuestion === index ? 'rotate(45deg)' : 'rotate(0deg)' }}>
+                  <span className="pr-4">{faq.question}</span>
+                  <span className="text-[#3DBADB] text-xl sm:text-2xl transition-transform duration-300 flex-shrink-0" style={{ transform: activeQuestion === index ? 'rotate(45deg)' : 'rotate(0deg)' }}>
                     +
                   </span>
                 </button>
@@ -322,7 +343,7 @@ const TaskBreakdownLP = () => {
                     opacity: activeQuestion === index ? 1 : 0
                   }}
                 >
-                  <p className="px-6 pb-6 text-white/80">
+                  <p className="px-4 sm:px-6 pb-4 sm:pb-6 text-sm sm:text-base text-white/80">
                     {faq.answer}
                   </p>
                 </div>
@@ -333,38 +354,38 @@ const TaskBreakdownLP = () => {
       </section>
 
       {/* Join the Club Section */}
-      <section className="py-20 bg-[#2E376A]">
+      <section className="py-12 sm:py-20 bg-[#2E376A]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-pop font-bold text-white mb-8">Revolutionise Task Breakdown for ADHD</h2>
+          <h2 className="text-3xl sm:text-4xl font-pop font-bold text-white mb-6 sm:mb-8">Revolutionise Task Breakdown for ADHD</h2>
           <div className="inline-flex flex-col items-center">
             <a 
               href="https://app.neuro-notion.com"
-              className="bg-[#3DBADB] text-white px-8 py-3 font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
+              className="bg-[#3DBADB] text-white px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
             >
               GET STARTED
             </a>
-            <p className="text-white/70 text-sm mt-2 font-pop">No credit card required</p>
+            <p className="text-white/70 text-xs sm:text-sm mt-2 font-pop">No credit card required</p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#2E376A] py-16">
+      <footer className="bg-[#2E376A] py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
             <div className="flex items-center gap-2">
               <img
                 src="https://NeuroNotionPullZonw.b-cdn.net/Logos/Lines%20and%20bubbles%20for%20dark%20background.svg"
                 alt="Neuro Notion Logo"
-                className="w-8 h-8"
+                className="w-6 h-6 sm:w-8 sm:h-8"
               />
-              <span className="font-pop font-bold text-xl text-white">Neuro Notion</span>
+              <span className="font-pop font-bold text-lg sm:text-xl text-white">Neuro Notion</span>
             </div>
-            <div className="flex gap-8">
+            <div className="flex gap-4 sm:gap-8 text-sm sm:text-base">
               <a href="https://theblogspace.notion.site/Privacy-Policy-156c9c3da37d8095a0e4eb14fc93ed9e" className="text-white/70 hover:text-white">Privacy Policy</a>
               <a href="https://theblogspace.notion.site/Neuro-Notion-Cookies-Policy-c8fde8f3024a4a0389b888d0ec107e5b" className="text-white/70 hover:text-white">Cookies Policy</a>
             </div>
-            <div className="text-white/70">
+            <div className="text-white/70 text-sm sm:text-base text-center md:text-left">
               Neuro Notion 2024 © All rights reserved.
             </div>
           </div>

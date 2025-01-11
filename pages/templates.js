@@ -8,7 +8,6 @@ import Howitworks from "../components/TemplatesPage/Howitworks";
 import TemplatesFAQ from "../components/TemplatesPage/TemplatesFAQ";
 import NewsLetter from "../components/TemplatesPage/NewsLetter";
 import FooterSection from "../components/FooterSection";
-import StickyWaitingList from '../components/StickyWaitingList';
 
 const TemplatesPage = () => {
   return (
@@ -23,7 +22,6 @@ const TemplatesPage = () => {
         <TemplatesFAQ />
         <NewsLetter />
         <FooterSection />
-        <StickyWaitingList />
       </div>
     </>
   );

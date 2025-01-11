@@ -3,7 +3,6 @@ import { track } from "@vercel/analytics";
 import Head from "next/head";
 import ArticleSelect from "../components/Articles/articleselect";
 import posthog from "posthog-js";
-import StickyWaitingList from '../components/StickyWaitingList';
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
 if (typeof window !== "undefined") {
@@ -41,7 +40,6 @@ const BlogPage = () => {
         <meta name="description" content="Learnin time :)." />
       </Head>
       <ArticleSelect />
-      <StickyWaitingList />
     </>
   );
 };
