@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.1",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "cors": "^2.8.5",
-    "embla-carousel-react": "^8.5.1",
+    "embla-carousel-react": "^8.5.2",
     "flowbite": "^2.3.0",
     "flowbite-typography": "^1.0.3",
     "framer-motion": "^11.13.1",
@@ -36,6 +40,7 @@
     "sass": "^1.70.0",
     "sharp": "^0.33.0",
     "stripe": "^14.8.0",
+    "tailwind-merge": "^2.6.0",
     "waterfalljs-layout": "^0.1.0"
   },
   "devDependencies": {

@@ -64,7 +64,7 @@ const FooterSection = () => {
           <li>
             <a
               onClick={copyToClipboard}
-              className="mr-4 font-pop hover:underline md:mr-6 cursor-pointer"
+              className="mr-4 font-pop text-accent hover:underline md:mr-6 cursor-pointer"
             >
               Contact
             </a>
