@@ -70,7 +70,7 @@ const TaskBreakdownLP = () => {
                 Watch Demo
               </button>
               <a 
-                href="https://app.neuro-notion.com/signup"
+                href="https://app.neuro-notion.com/?page=signup"
                 className="bg-[#3DBADB] text-white px-3 sm:px-4 py-2 font-prim text-sm sm:text-base font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 shadow-sm hover:bg-[#3DBADB]/90"
               >
                 TRY FREE NOW
@@ -94,7 +94,7 @@ const TaskBreakdownLP = () => {
             </p>
             <div className="flex flex-col items-center">
               <a 
-                href="https://app.neuro-notion.com/signup"
+                href="https://app.neuro-notion.com/?page=signup"
                 className="bg-[#3DBADB] text-white px-6 sm:px-8 py-3 font-prim font-bold rounded-xl hover:bg-[#3DBADB]/90 text-sm sm:text-base"
               >
                 TRY FREE NOW
@@ -207,7 +207,7 @@ const TaskBreakdownLP = () => {
 
           <div className="text-center mt-8">
             <a 
-              href="https://app.neuro-notion.com/signup"
+              href="https://app.neuro-notion.com/?page=signup"
               className="bg-[#3DBADB] text-white px-6 sm:px-8 py-2 sm:py-3 font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
             >
               TRY FREE NOW
@@ -292,7 +292,7 @@ const TaskBreakdownLP = () => {
 
             <div className="text-center">
               <a 
-                href="https://app.neuro-notion.com/signup"
+                href="https://app.neuro-notion.com/?page=signup"
                 className="bg-[#3DBADB] text-white px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
               >
                 TRY FREE NOW
@@ -359,7 +359,7 @@ const TaskBreakdownLP = () => {
           <h2 className="text-3xl sm:text-4xl font-pop font-bold text-white mb-6 sm:mb-8">Revolutionise Task Breakdown for ADHD</h2>
           <div className="inline-flex flex-col items-center">
             <a 
-              href="https://app.neuro-notion.com/signup"
+              href="https://app.neuro-notion.com/?page=signup"
               className="bg-[#3DBADB] text-white px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base font-prim font-bold rounded-xl shadow-gray-900 shadow-md hover:shadow-gray-900 hover:shadow-sm hover:bg-[#3DBADB]/90"
             >
               GET STARTED
