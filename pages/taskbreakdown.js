@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState, useCallback, useEffect } from 'react';
 import { Activity, Brain, Clock, Music, Users, Target, ChevronLeft, ChevronRight, Trophy, Zap, Smile, Sparkles, ListChecks, Bot, BatteryMedium } from 'lucide-react';
 import useEmblaCarousel from 'embla-carousel-react';
+import { RoughNotation } from 'react-rough-notation';
 
 const TaskBreakdownLP = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -85,8 +86,10 @@ const TaskBreakdownLP = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-pop font-bold text-white mb-4 sm:mb-6">
-              Overwhelmed by ADHD?<br />
-              <span className="text-[#3DBADB]">Meet Claudia</span> 👋
+              Overwhelmed by breaking <br /> stuff down with <RoughNotation type="underline" show={true} color="#3DBADB" strokeWidth={3} iterations={4} animationDuration={1500} roughness={100}>ADHD</RoughNotation>?
+              <br />
+              <br />
+              <span className="text-[#3DBADB]">Meet Claudia👋</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/90 font-pop mb-6 sm:mb-8 px-2">
               Finally, it&apos;s 10x easier to get started and actually follow through with the big stuff. <br className="hidden sm:block" />
