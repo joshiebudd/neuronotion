@@ -109,7 +109,7 @@ const TaskBreakdownLP = () => {
           {/* Task Management Preview */}
           <div className="max-w-5xl mx-auto">
             <img
-              src="https://NeuroNotionPullZonw.b-cdn.net/Untitled%20design%20(48).png"
+              src="https://NeuroNotionPullZonw.b-cdn.net/Task%20Breakdown%20Version%20Laptop%20and%20iPhone%20demo.png"
               alt="Task Management Dashboard"
               className="rounded-2xl w-full"
             />
