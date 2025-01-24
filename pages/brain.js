@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HPHeader from '../components/Homepage/HPHeader';
 import UBHero from "../components/UBPage/UBHero";
 import UBFirstTestimonials from "../components/UBPage/UBFirstTestimonials";
@@ -13,26 +13,29 @@ import TestimonialCarousel from "../components/Homepage/HPReviews";
 import UBFAQs from "../components/UBPage/UBFAQs";
 import HPFinalCTA from "../components/Homepage/HPFinalCTA";
 import FooterSection from "../components/FooterSection";
-import StickyWaitingList from '../components/StickyWaitingList';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
 
 const ADHDBrain = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Add any additional logic here if needed
+  }, [router.pathname]);
+
   return (
     <>
-      <HPHeader />
-      <UBHero />
-      <UBFirstTestimonials />
-      <UBProblems />
-      <UBSolution />
-      <UBClarity />
-      <UBCheckboxes />
-      <UBSetUp />
-      <UBCommunity />
-      <UBPricing />
-      <TestimonialCarousel />
-      <UBFAQs />
-      <HPFinalCTA />
-      <FooterSection />
-      <StickyWaitingList />
+      <Head>
+        <title>ADHD Brain</title>
+      </Head>
+      <main>
+        <Navbar />
+        <div className="flex flex-col items-center justify-center min-h-screen py-2">
+          <h1>Brain</h1>
+        </div>
+        <FooterSection />
+      </main>
     </>
   );
 };
