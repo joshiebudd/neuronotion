@@ -15,7 +15,6 @@ import HPFinalCTA from "../components/Homepage/HPFinalCTA";
 import FooterSection from "../components/FooterSection";
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
 
 const ADHDBrain = () => {
   const router = useRouter();
@@ -29,13 +28,20 @@ const ADHDBrain = () => {
       <Head>
         <title>ADHD Brain</title>
       </Head>
-      <main>
-        <Navbar />
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
-          <h1>Brain</h1>
-        </div>
-        <FooterSection />
-      </main>
+      <HPHeader />
+      <UBHero />
+      <UBFirstTestimonials />
+      <UBProblems />
+      <UBSolution />
+      <UBClarity />
+      <UBCheckboxes />
+      <UBSetUp />
+      <UBCommunity />
+      <UBPricing />
+      <TestimonialCarousel />
+      <UBFAQs />
+      <HPFinalCTA />
+      <FooterSection />
     </>
   );
 };
