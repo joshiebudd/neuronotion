@@ -157,8 +157,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-[#1e2a4a]">
       <Head>
-        <title>Claudia by Neuro - Your AI Life Assistant for ADHD Management</title>
-        <meta name="description" content="Claudia by Neuro is like Jarvis from Iron Man, but designed specifically for ADHD brains. Speak your thoughts, and let our AI organize your life so you can focus on what matters." />
+        <title>Neuro - AI ADHD Personal Assistant</title>
+        <meta name="description" content="The world's first AI Personal Assistant for Adults with ADHD. You speak, Claudia Organizes. Simple." />
       </Head>
       
       <ClaudiaHeader />
