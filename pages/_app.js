@@ -44,23 +44,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <PostHogProvider client={posthog}>
-      <Script
-        id="tawk-script"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-              s1.async=true;
-              s1.src='https://embed.tawk.to/6728aa264304e3196adcd092/1ibrdh9kq';
-              s1.charset='UTF-8';
-              s1.setAttribute('crossorigin','*');
-              s0.parentNode.insertBefore(s1,s0);
-            })();
-          `
-        }}
-      />
+
 
       <Script
         id="vtag-ai-js"
@@ -80,6 +64,21 @@ function MyApp({ Component, pageProps }) {
             content="width=device-width, initial-scale=1.0"
           />
           <title>Neuro Notion - ADHD Life Management Tools</title>
+          
+          {/* Open Graph Meta Tags for Social Media Sharing */}
+          <meta property="og:title" content="The AI Life Assistant for ADHD Adults" />
+          <meta property="og:description" content="The world's first AI Personal Assistant for Adults with ADHD. You speak, Claudia Organizes. Simple." />
+          <meta property="og:image" content="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20-%20Static%20Demo.png" />
+          <meta property="og:url" content="https://neuro-notion.com" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Neuro Notion" />
+          
+          {/* Twitter Card Meta Tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="The AI Life Assistant for ADHD Adults" />
+          <meta name="twitter:description" content="The world's first AI Personal Assistant for Adults with ADHD. You speak, Claudia Organizes. Simple." />
+          <meta name="twitter:image" content="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20-%20Static%20Demo.png" />
+          
           <link
             rel="icon"
             href="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
