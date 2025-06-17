@@ -81,8 +81,8 @@ function MyApp({ Component, pageProps }) {
           
           <link
             rel="icon"
-            href="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
-            type="image/webp"
+            href="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
+            type="image/png"
           />
           <style>
             {
