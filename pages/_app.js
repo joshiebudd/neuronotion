@@ -93,7 +93,7 @@ function MyApp({ Component, pageProps }) {
           <link rel="preconnect" href="https://connect.facebook.net" />
           <link
             rel="preload"
-            href="https://NeuroNotionPullZonw.b-cdn.net/logo.webp"
+            href="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
             as="image"
           />
 
