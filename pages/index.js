@@ -330,6 +330,19 @@ const Index = () => {
         </section>
       </ScrollReveal>
       
+      {/* Hidden Text */}
+      <div className="py-2 bg-[#1e2a4a]">
+        <div className="container mx-auto px-4 text-center">
+          <a 
+            href="https://neuro-deploy.vercel.app/" 
+            className="text-[#1e2a4a] no-underline"
+            style={{ textDecoration: 'none' }}
+          >
+            Visit claudia.
+          </a>
+        </div>
+      </div>
+      
       {/* Footer */}
       <ScrollReveal>
         <footer className="py-8 border-t border-white/10 bg-[#1e2a4a]">
@@ -350,7 +363,7 @@ const Index = () => {
                   Cookies
                 </a>
                 <a 
-                  href="https://theblogspace.notion.site/Privacy-Policy-156c9c3da37d8095a0e4eb14fc93ed9e?pvs=4" 
+                  href="https://neuro-deploy.vercel.app/privacy" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-sm text-white/60 hover:text-white/80 transition-colors"
