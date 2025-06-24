@@ -30,7 +30,7 @@ export const LPWhatIsThis = () => {
           </h2>
           
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0" style={{ fontWeight: 400 }}>
-            <span className="font-medium text-white" style={{ fontWeight: 700 }}>Not</span> another "ADHD friendly" hack. <span className="font-medium text-white" style={{ fontWeight: 700 }}>Not</span> another course you abandon.
+            <span className="font-medium text-white" style={{ fontWeight: 700 }}>Not</span> another &quot;ADHD friendly&quot; hack. <span className="font-medium text-white" style={{ fontWeight: 700 }}>Not</span> another course you abandon.
             <br />
             Claudia is an <span className="font-medium text-white" style={{ fontWeight: 700 }}>ADHD-centric platform</span> for doing. For getting
             <br />

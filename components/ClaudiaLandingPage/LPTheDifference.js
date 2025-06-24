@@ -32,7 +32,7 @@ export const LPTheDifference = () => {
                 <div className="w-6 sm:w-8 h-6 sm:h-8 bg-red-500 rounded-full flex items-center justify-center">
                   <XCircle className="h-4 sm:h-5 w-4 sm:w-5 text-white" />
                 </div>
-                <CardTitle className="text-red-400 text-base sm:text-lg" style={{ fontWeight: 700 }}>Other "ADHD-Friendly" Tools:</CardTitle>
+                <CardTitle className="text-red-400 text-base sm:text-lg" style={{ fontWeight: 700 }}>Other &quot;ADHD-Friendly&quot; Tools:</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-3 sm:space-y-4">
@@ -64,7 +64,7 @@ export const LPTheDifference = () => {
                 <div className="w-6 sm:w-8 h-6 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
                   <Check className="h-4 sm:h-5 w-4 sm:w-5 text-white" />
                 </div>
-                <CardTitle className="text-green-400 text-base sm:text-lg" style={{ fontWeight: 700 }}>Neuro's ADHD-First Design:</CardTitle>
+                <CardTitle className="text-green-400 text-base sm:text-lg" style={{ fontWeight: 700 }}>Neuro&apos;s ADHD-First Design:</CardTitle>
               </div>
             </CardHeader>
             <CardContent className="space-y-3 sm:space-y-4">
