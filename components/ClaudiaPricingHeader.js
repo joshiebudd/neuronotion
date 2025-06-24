@@ -5,7 +5,7 @@ import { cn } from "../lib/utils";
 import { useToast } from "../hooks/use-toast";
 import WaitlistModal from './WaitlistModal';
 
-const ClaudiaHeader = () => {
+const ClaudiaPricingHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -93,4 +93,4 @@ const ClaudiaHeader = () => {
   );
 };
 
-export default ClaudiaHeader; 
+export default ClaudiaPricingHeader; 

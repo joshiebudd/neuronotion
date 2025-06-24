@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
+import { track } from "@vercel/analytics";
 import ClaudiaHeader from '../components/ClaudiaHeader';
 import ResultDisplay from '../components/ResultDisplay';
 import FeatureSection from '../components/FeatureSection';
@@ -138,6 +139,7 @@ const Index = () => {
   };
 
   const openModal = () => {
+    track("Claudia_Join_Waitlist");
     setIsModalOpen(true);
   };
 
