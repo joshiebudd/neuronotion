@@ -257,7 +257,7 @@ export const LPADHDStruggles = () => {
           </div>
           
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            You're probably tired of the following...
+            You&apos;re probably tired of the following...
           </h2>
         </div>
 
@@ -272,7 +272,7 @@ export const LPADHDStruggles = () => {
           </div>
           
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0 max-w-4xl mx-auto" style={{ fontWeight: 400 }}>
-            Claudia isn't another app trying to "fix" you. She's built from the ground up to work with your ADHD brain, not against it.
+            Claudia isn&apos;t another app trying to &quot;fix&quot; you. She&apos;s built from the ground up to work with your ADHD brain, not against it.
           </p>
         </div>
 

@@ -9,15 +9,15 @@ export const LPFAQs = () => {
 
   const faqs = [
     {
-      question: "I've tried so many ADHD apps. How is this different?",
-      answer: "Most apps are built for neurotypical brains and then \"adapted\" for ADHD. Neuro is built from the ground up based on ADHD neuroscience. Every interaction is designed to work with your brain, not against it."
+      question: "I&apos;ve tried so many ADHD apps. How is this different?",
+      answer: "Most apps are built for neurotypical brains and then &quot;adapted&quot; for ADHD. Neuro is built from the ground up based on ADHD neuroscience. Every interaction is designed to work with your brain, not against it."
     },
     {
       question: "What if I forget to use it?",
-      answer: "That's exactly why we built it voice-first with smart nudging. Claudia learns your patterns and gently reminds you when you need her most - without being annoying."
+      answer: "That&apos;s exactly why we built it voice-first with smart nudging. Claudia learns your patterns and gently reminds you when you need her most - without being annoying."
     },
     {
-      question: "I'm not good with technology. Is this complicated?",
+      question: "I&apos;m not good with technology. Is this complicated?",
       answer: "If you can have a conversation, you can use Claudia. Just speak your thoughts. Everything else happens automatically."
     },
     {
@@ -41,7 +41,7 @@ export const LPFAQs = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            You're Not Alone in Wondering...
+            You&apos;re Not Alone in Wondering...
           </h2>
         </div>
 
