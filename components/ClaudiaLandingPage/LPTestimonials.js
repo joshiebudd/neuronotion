@@ -110,7 +110,7 @@ export const LPTestimonials = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            "Living with ADHD is 10x easier now."
+            &quot;Living with ADHD is 10x easier now.&quot;
           </h2>
         </div>
 
@@ -131,7 +131,7 @@ export const LPTestimonials = () => {
                   {testimonial.amount}
                 </div>
                 <p className="text-sm sm:text-base text-white mb-4 sm:mb-6 italic leading-relaxed text-center flex-grow flex items-center" style={{ fontWeight: 400 }}>
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
                 <div className="flex items-center justify-center gap-3">
                   <div className="w-8 sm:w-10 h-8 sm:h-10 bg-[#30bcd9] rounded-full flex items-center justify-center overflow-hidden">

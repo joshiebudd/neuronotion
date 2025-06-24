@@ -29,7 +29,7 @@ export const LPHero = () => {
             </h1>
             
             <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed px-2 sm:px-0" style={{ fontWeight: 400 }}>
-              Claudia is the personal assistant you've never had... that gets your ADHD brain. Voice your chaotic thoughts. Watch them transform into organized action. Feel in control for the first time.
+              Claudia is the personal assistant you&apos;ve never had... that gets your ADHD brain. Voice your chaotic thoughts. Watch them transform into organized action. Feel in control for the first time.
             </p>
             
                         <div className="flex flex-col items-center lg:items-start space-y-4">

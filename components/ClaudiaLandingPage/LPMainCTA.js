@@ -125,7 +125,7 @@ export const LPMainCTA = () => {
 
                 <div className="mb-6 sm:mb-8">
                   <h4 className="text-[#30bcd9] font-bold mb-3 sm:mb-4 text-left text-sm sm:text-base" style={{ fontWeight: 700 }}>
-                    What's included:
+                    What&apos;s included:
                   </h4>
                   <div className="space-y-2 sm:space-y-3">
                     {features.map((feature, index) => (
