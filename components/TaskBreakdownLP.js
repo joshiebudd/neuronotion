@@ -100,7 +100,7 @@ const TaskBreakdownLP = () => {
                     >
                       Try Free Now
                     </a>
-                    <p className="text-white/70 text-sm mt-2 font-pop">No credit card required</p>
+                    <p className="text-white/70 text-sm mt-2 font-pop">No card required</p>
                   </div>
                   <div className="flex items-start">
                     <a 
@@ -189,7 +189,7 @@ const TaskBreakdownLP = () => {
                 >
                   Try Free Now
                 </a>
-                <p className="text-white/70 text-sm mt-2 font-pop">No credit card required</p>
+                <p className="text-white/70 text-sm mt-2 font-pop">No card required</p>
               </div>
             </div>
           </div>

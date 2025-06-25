@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { track } from "@vercel/analytics";
 import { cn } from "../lib/utils";
 import { useToast } from "../hooks/use-toast";
@@ -8,6 +9,7 @@ import WaitlistModal from './WaitlistModal';
 const ClaudiaPricingHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +22,29 @@ const ClaudiaPricingHeader = () => {
     };
   }, []);
 
-  const openModal = () => {
-    track("Claudia_Join_Waitlist_Header");
-    setIsModalOpen(true);
+  const handleSectionNavigation = (sectionId, targetPage = '/claudianewlp') => {
+    if (router.pathname === targetPage) {
+      // Same page - smooth scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Different page - navigate then scroll
+      router.push(`${targetPage}#${sectionId}`).then(() => {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      });
+    }
+  };
+
+  const handleCTAClick = () => {
+    track("Claudia_Try_Free_Header");
+    window.open('https://buy.stripe.com/aEU9E41pL56efMA5kR', '_blank');
   };
 
   const closeModal = () => {
@@ -58,31 +80,32 @@ const ClaudiaPricingHeader = () => {
             </Link>
             <a 
               href="#how-it-works" 
-              className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
+              className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                handleSectionNavigation('how-it-works');
               }}
             >
               How It Works
             </a>
             <a 
               href="#about" 
-              className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
+              className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                handleSectionNavigation('about');
               }}
             >
-              Founder&apos;s Story
+              Founder's Story
             </a>
           </nav>
           <div className="flex items-center space-x-4">
             <button 
-              className="px-4 py-2 rounded-md text-sm font-medium bg-[#30bcd9] text-white shadow-sm hover:bg-[#2aa3c7] transition-all duration-300 hover:shadow-md"
-              onClick={openModal}
+              className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-2 px-6 rounded-lg text-sm shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
+              style={{ fontWeight: 700 }}
+              onClick={handleCTAClick}
             >
-              Join the waitlist
+              Try Claudia Free
             </button>
           </div>
         </div>

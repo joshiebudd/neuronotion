@@ -96,13 +96,13 @@ const TaskBreakdownLP = () => {
               All done through a simple conversation.
             </p>
             <div className="flex flex-col items-center">
-              <a 
+                            <a
                 href="https://app.neuro-notion.com/?page=signup"
                 className="bg-[#3DBADB] text-white px-6 sm:px-8 py-3 font-prim font-bold rounded-xl hover:bg-[#3DBADB]/90 text-sm sm:text-base"
               >
                 TRY FREE NOW
               </a>
-              <p className="text-white/70 text-xs sm:text-sm mt-2 font-pop">No credit card required</p>
+              <p className="text-white/70 text-xs sm:text-sm mt-2 font-pop">No card required</p>
             </div>
           </div>
 
@@ -367,7 +367,7 @@ const TaskBreakdownLP = () => {
             >
               GET STARTED
             </a>
-            <p className="text-white/70 text-xs sm:text-sm mt-2 font-pop">No credit card required</p>
+            <p className="text-white/70 text-xs sm:text-sm mt-2 font-pop">No card required</p>
           </div>
         </div>
       </section>

@@ -11,7 +11,7 @@ export const LPHowItWorks = () => {
   };
 
   return (
-    <section className="py-12 sm:py-18 lg:py-24 bg-[#253550]">
+    <section id="how-it-works" className="py-12 sm:py-18 lg:py-24 bg-[#253550]">
       <div className="container mx-auto px-3 sm:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -57,7 +57,7 @@ export const LPHowItWorks = () => {
               </Button>
               
               <p className="text-sm text-gray-400" style={{ fontWeight: 400 }}>
-                ✓ No credit card required
+                ✓ No card required
               </p>
             </div>
           </div>

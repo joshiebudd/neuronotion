@@ -29,7 +29,6 @@ const nextConfig = {
       },
     ],
   },
-  vercelAnalyticsId: "prj_XPGFnBtOVBZufVUGGE8tAiatzOtj",
 };
 
 module.exports = nextConfig;

@@ -50,8 +50,8 @@ export const LPWhatIsThis = () => {
           <div className="relative max-w-full sm:max-w-4xl w-full">
             <video 
               src="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20Demo%20v4.mp4"
-              controls
               autoPlay
+              playsInline
               muted
               loop
               className={`w-full h-auto rounded-lg shadow-lg px-2 sm:px-0 ${

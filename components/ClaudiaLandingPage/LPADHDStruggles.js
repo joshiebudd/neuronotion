@@ -330,7 +330,7 @@ export const LPADHDStruggles = () => {
             </Button>
             
             <p className="text-sm text-gray-400" style={{ fontWeight: 400 }}>
-              ✓ No credit card required
+              ✓ No card required
             </p>
           </div>
         </div>

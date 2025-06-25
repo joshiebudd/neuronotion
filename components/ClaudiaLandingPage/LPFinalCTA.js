@@ -34,7 +34,7 @@ export const LPFinalCTA = () => {
 
         <div className="text-center">
           <p className="text-sm text-gray-400 mb-4" style={{ fontWeight: 400 }}>
-            ✓ No credit card required
+                          ✓ No card required
           </p>
           
           {/* Star Rating */}

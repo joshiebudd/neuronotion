@@ -1,55 +1,75 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
-import { Check, Target, Users, Brain } from 'lucide-react';
+import { Check, Target, Users, Brain, CheckCircle, ChevronDown, ChevronUp, Timer } from 'lucide-react';
+import { CgSandClock } from 'react-icons/cg';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const LPMainCTA = () => {
-  const { elementRef: leftRef, isVisible: leftVisible } = useScrollAnimation();
-  const { elementRef: rightRef, isVisible: rightVisible } = useScrollAnimation();
+  const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const [expandedFAQ, setExpandedFAQ] = useState(null);
 
-  const features = [
-    "Complete ADHD Productivity OS",
-    "Weekly group coaching calls",
-    "Private community access",
-    "Proven planning templates",
-    "Email & chat support",
-    "30-day money-back guarantee"
-  ];
-
-  const leftSideFeatures = [
+  const pricingTiers = [
     {
-      icon: Target,
-      title: "Start your transformation today",
-      description: "Get immediate access to our complete ADHD productivity system with a 30-day free trial. No card needed."
+      name: "Free",
+      price: 0,
+      period: "",
+      credits: "10 Claudia credits/month (~10 minutes)",
+      bestFor: "Curious Users",
+      features: [
+        "10 Claudia credits/month (~10 minutes)",
+        "Access to all agents"
+      ]
     },
     {
-      icon: Users,
-      title: "Join a thriving community of ADHD entrepreneurs",
-      description: "Connect with like-minded business owners who understand your challenges and celebrate your wins."
+      name: "Standard",
+      price: 19,
+      period: "/month",
+      credits: "60 Claudia credits/month (~1 hour of conversation)",
+      bestFor: "Serious about making change",
+      features: [
+        "60 Claudia credits/month (~1 hour of conversation)",
+        "Access to all agents"
+      ],
+      popular: true
     },
     {
-      icon: Brain,
-      title: "ADHD-specific tools that actually work",
-      description: "Every system, template, and strategy is designed specifically for how the ADHD brain operates - no generic advice here."
+      name: "Premium",
+      price: 39,
+      period: "/month",
+      credits: "120 Claudia credits/month (~2 hours of conversation)",
+      bestFor: "Self-improvement people",
+      features: [
+        "120 Claudia credits/month (~2 hours of conversation)",
+        "Access to all agents"
+      ]
+    },
+    {
+      name: "Pro",
+      price: 79,
+      period: "/month",
+      credits: "240 Claudia credits/month (~4 hours of conversation)",
+      bestFor: "Power users",
+      features: [
+        "240 Claudia credits/month (~4 hours of conversation)",
+        "Access to all agents"
+      ]
     }
-  ];
-
-  const ctaIcons = [
-    { icon: Check, text: "No card needed" },
-    { icon: Check, text: "30-day money-back guarantee" },
-    { icon: Check, text: "Cancel anytime" }
   ];
 
   const handleCTAClick = () => {
     window.open('https://buy.stripe.com/aEU9E41pL56efMA5kR', '_blank');
   };
 
+  const handleFAQClick = (index) => {
+    setExpandedFAQ(expandedFAQ === index ? null : index);
+  };
+
   return (
-    <section className="py-12 sm:py-18 lg:py-24 px-3 sm:px-4 bg-[#1e2a4a]">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+    <section className="py-16 sm:py-24 lg:py-32 px-3 sm:px-4 bg-[#1e2a4a] min-h-screen">
+      <div className="container mx-auto max-w-7xl">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <div className="mb-4 sm:mb-6">
             <Badge className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium shadow-lg hover:bg-white/10" style={{ fontWeight: 400 }}>
               Start Your Free Trial
@@ -57,106 +77,186 @@ export const LPMainCTA = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            Ready to Stop <span className="text-[#30bcd9]">Spinning Your Wheels?</span>
+            Choose Your <span className="text-[#30bcd9]">Claudia Plan</span>
           </h2>
           
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 lg:mb-12 leading-relaxed max-w-3xl mx-auto px-2 sm:px-0" style={{ fontWeight: 400 }}>
-            Join thousands of ADHD entrepreneurs who are finally breaking through to consistent growth.
+            Find the perfect plan to transform your ADHD chaos into organized productivity.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
-          {/* Left Side - Features */}
-          <div 
-            ref={leftRef}
-            className={`space-y-6 sm:space-y-8 transition-all duration-700 px-2 sm:px-0 ${
-              leftVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
-            }`}
-          >
-            {leftSideFeatures.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="flex items-start sm:items-center gap-3 sm:gap-4">
-                                  <div className="w-10 sm:w-12 h-10 sm:h-12 bg-[#30bcd9]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <IconComponent className="h-5 sm:h-6 w-5 sm:w-6 text-[#30bcd9]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2" style={{ fontWeight: 700 }}>
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-300 leading-relaxed text-sm sm:text-base" style={{ fontWeight: 400 }}>
-                      {feature.description}
-                    </p>
-                  </div>
+        <div 
+          ref={headerRef}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 transition-all duration-700 mb-16 sm:mb-24 ${
+            headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          {pricingTiers.map((tier, index) => (
+            <Card 
+              key={tier.name} 
+              className={`${
+                tier.price === 0 
+                  ? 'bg-gray-700/50 border border-gray-600' 
+                  : 'bg-[#465e76] border-0'
+              } shadow-xl rounded-2xl hover:shadow-2xl transition-all duration-300 relative ${
+                tier.popular ? 'border-2 border-[#30bcd9] transform scale-105' : ''
+              }`}
+            >
+              {tier.popular && (
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <Badge className="bg-[#30bcd9] text-black font-bold py-1 px-3" style={{ fontWeight: 700 }}>
+                    Most Popular
+                  </Badge>
                 </div>
-              );
-            })}
-          </div>
-
-          {/* Right Side - Pricing Card */}
-          <div 
-            ref={rightRef}
-            className={`lg:sticky lg:top-8 transition-all duration-700 px-2 sm:px-0 ${
-              rightVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
-            }`}
-          >
-            <Card className="bg-[#2C3E50] border border-gray-600 shadow-2xl rounded-2xl overflow-hidden">
-              <CardContent className="p-4 sm:p-6 lg:p-8 text-center">
-                <div className="mb-4 sm:mb-6">
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#30bcd9] mb-2" style={{ fontWeight: 700 }}>
-                    ADHD Productivity OS
+              )}
+              
+              <CardContent className="p-8 text-center h-full flex flex-col min-h-[500px]">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-[#30bcd9] mb-3" style={{ fontWeight: 700 }}>
+                    {tier.name}
                   </h3>
-                  <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>
-                    Complete productivity system for ADHD entrepreneurs
-                  </p>
-                </div>
-
-                <div className="mb-4 sm:mb-6">
-                  <div className="text-xs sm:text-sm text-gray-300 mb-2" style={{ fontWeight: 400 }}>
-                    30-day free trial, then
-                  </div>
-                  <div className="text-3xl sm:text-4xl font-bold text-white mb-1" style={{ fontWeight: 700 }}>
-                    $95<span className="text-base sm:text-lg text-gray-300">/month</span>
-                  </div>
-                  <div className="text-xs sm:text-sm text-[#30bcd9]" style={{ fontWeight: 400 }}>
-                    Cancel anytime
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-white" style={{ fontWeight: 700 }}>
+                      {tier.price === 0 ? 'Free' : `$${tier.price}`}
+                    </span>
+                    {tier.period && (
+                      <span className="text-lg text-gray-300">{tier.period}</span>
+                    )}
                   </div>
                 </div>
 
-                <div className="mb-6 sm:mb-8">
-                  <h4 className="text-[#30bcd9] font-bold mb-3 sm:mb-4 text-left text-sm sm:text-base" style={{ fontWeight: 700 }}>
-                    What&apos;s included:
-                  </h4>
-                  <div className="space-y-2 sm:space-y-3">
-                    {features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-2 sm:gap-3 text-left">
-                                              <div className="w-4 sm:w-5 h-4 sm:h-5 bg-[#30bcd9]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Check className="h-2.5 sm:h-3 w-2.5 sm:w-3 text-[#30bcd9]" />
-                        </div>
-                        <span className="text-white text-xs sm:text-sm" style={{ fontWeight: 400 }}>
+                <div className="mb-8 flex-grow">
+                  <div className="space-y-4">
+                    {tier.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-start gap-3 text-left">
+                        <CheckCircle className="h-5 w-5 text-[#30bcd9] flex-shrink-0 mt-0.5" />
+                        <span className="text-white text-sm" style={{ fontWeight: 400 }}>
                           {feature}
                         </span>
                       </div>
                     ))}
                   </div>
+                  
+                  <div className="mt-6 p-4 bg-[#30bcd9]/10 rounded-lg">
+                    <div className="flex items-center gap-2 justify-center">
+                      <span className="text-yellow-400">⭐</span>
+                      <span className="text-sm text-white" style={{ fontWeight: 400 }}>
+                        Best for: {tier.bestFor}
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex flex-col items-center space-y-4">
+                <div className="mt-auto">
                   <Button 
-                    className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-[shimmer_3s_ease-in-out_infinite]"
+                    className={`w-full font-bold py-4 px-6 rounded-xl text-sm shadow-lg transform hover:scale-105 transition-all duration-300 ${
+                      tier.popular 
+                        ? 'bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black hover:shadow-2xl hover:shadow-[#30bcd9]/20' 
+                        : tier.price === 0
+                        ? 'bg-gray-600 hover:bg-gray-500 text-white border border-gray-500'
+                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                    }`}
                     style={{ fontWeight: 700 }}
                     onClick={handleCTAClick}
                   >
-                    Try Claudia Free
+                    {tier.price === 0 ? 'Get Started' : `Upgrade to ${tier.name}`}
                   </Button>
                   
-                  <p className="text-sm text-gray-400" style={{ fontWeight: 400 }}>
-                    ✓ No credit card required
+                  <p className="text-xs text-gray-400 mt-3" style={{ fontWeight: 400 }}>
+                    <Check className="h-3 w-3 inline mr-1" />
+                    No card required
                   </p>
                 </div>
               </CardContent>
             </Card>
+          ))}
+        </div>
+
+        {/* What can you do with credits section */}
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-6" style={{ fontWeight: 700 }}>
+              What can you do with credits?
+            </h3>
+            <div className="bg-[#253550] p-8 rounded-2xl">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="w-4 h-4 bg-[#30bcd9] rounded-full"></div>
+                <span className="text-[#30bcd9] text-xl font-semibold">Pay for what you use</span>
+                <div className="w-4 h-4 bg-[#30bcd9] rounded-full"></div>
+                <span className="text-[#30bcd9] text-xl font-semibold">Scale up when you need more</span>
+              </div>
+              <div className="flex items-center justify-center gap-3">
+                <CgSandClock className="h-8 w-8 text-white flex-shrink-0" />
+                <h4 className="text-xl font-bold text-white">
+                  Speaking with Claudia for 1 minute uses 1 credit. Nothing else uses credits.
+                </h4>
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <h3 className="text-3xl font-bold text-white text-center mb-12" style={{ fontWeight: 700 }}>
+            Frequently Asked Questions
+          </h3>
+          <div className="space-y-6">
+            {[
+              {
+                question: "How do Claudia credits work?",
+                answer: "Each credit represents one minute of voice conversation with Claudia. Credits reset monthly with your plan."
+              },
+              {
+                question: "Can I upgrade or downgrade my plan anytime?",
+                answer: "Yes! You can upgrade or downgrade your plan at any time. Changes take effect on the next billing period."
+              },
+              {
+                question: "What if I run out of credits?",
+                answer: "If you run out of credits, you can either upgrade to a higher plan or purchase additional credit packs. We'll notify you when you're running low."
+              },
+              {
+                question: "Is Claudia free forever?",
+                answer: "If you never use more than 10 credits per month, Claudia will be free forever!"
+              }
+            ].map((faq, index) => (
+              <div key={index} className="bg-[#253550] rounded-xl overflow-hidden">
+                <button
+                  onClick={() => handleFAQClick(index)}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-[#2a3d57] transition-colors"
+                >
+                  <h4 className="text-lg font-bold text-[#30bcd9]">{faq.question}</h4>
+                  {expandedFAQ === index ? (
+                    <ChevronUp className="h-5 w-5 text-[#30bcd9] flex-shrink-0" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-[#30bcd9] flex-shrink-0" />
+                  )}
+                </button>
+                {expandedFAQ === index && (
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-300">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Final CTA */}
+        <div className="text-center">
+          <h3 className="text-3xl font-bold text-white mb-6" style={{ fontWeight: 700 }}>
+            Ready to make living with ADHD 10x easier.
+          </h3>
+          <Button 
+            className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
+            style={{ fontWeight: 700 }}
+            onClick={handleCTAClick}
+          >
+            Try Claudia Free
+          </Button>
+          <p className="text-sm text-gray-400 mt-4" style={{ fontWeight: 400 }}>
+            <Check className="h-3 w-3 inline mr-1" />
+            No card required • Cancel anytime
+          </p>
         </div>
       </div>
     </section>

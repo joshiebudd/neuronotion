@@ -35,67 +35,67 @@ export const LPTestimonials = () => {
   
   const testimonials = [
     {
-      amount: "$60,000+ CAD Return",
-      quote: "I made over $60,000 CAD in my first full year as a solopreneur",
-      name: "Kristina",
-      location: "Founder",
-      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Accountable/Landing%20Page%20Assets/kristina.webp"
+      amount: "Finally Found Peace",
+      quote: "It helps me sort out all the junk in my brain to sort, prioritize, and understand every part of your brain and life. LOVE IT!",
+      name: "Ramona",
+      location: "Social Worker",
+      avatar: ""
     },
     {
-      amount: "$30K Contract", 
-      quote: "I signed a $30K contract just by finally doing the work I'd been avoiding",
-      name: "Max",
-      location: "Founder",
-      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Accountable/Landing%20Page%20Assets/max.webp"
+      amount: "No More Fighting My Brain", 
+      quote: "I've given up on countless ADHD tools that never worked for me. This one finally understands how my brain actually works.",
+      name: "Ryan",
+      location: "Student",
+      avatar: ""
     },
     {
-      amount: "150% Attainment",
-      quote: "In the past two months, I have achieved 150% attainment", 
-      name: "Jose",
-      location: "Sales Leader",
-      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Accountable/Landing%20Page%20Assets/jose.jpg"
+      amount: "Structure I Always Needed",
+      quote: "It has the structure that I need and struggle coming up with myself. This helps me keep on track with my tasks, projects and goals.", 
+      name: "Anonymous",
+      location: "Teacher",
+      avatar: ""
     },
     {
-      amount: "1000% ROI. 30 days.",
-      quote: "I collected $20k in invoices in my first month with Ian. The best investment I've ever made.",
-      name: "Paulina",
-      location: "Founder",
-      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Accountable/Landing%20Page%20Assets/paulina.jpg"
+      amount: "Perfect Amount of Function",
+      quote: "Usually new tools overwhelm me with too many functions. This has just the right amount.",
+      name: "Anonymous",
+      location: "User",
+      avatar: ""
     },
     {
-      amount: "$70K MRR added in 5mos",
-      quote: "Ian sliced through the noise and helped me execute like a pro. We added $70K MRR in 5 months, 10xing my investment.",
-      name: "Jason",
-      location: "Founder",
-      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Accountable/Landing%20Page%20Assets/jason.jpg"
+      amount: "Lightning Fast Capture",
+      quote: "I can get stuff out of my brain within seconds. I save time and energy, and remember better too.",
+      name: "Ayush",
+      location: "UI Designer",
+      avatar: ""
     },
     {
-      amount: "$1MM+ Closed",
-      quote: "Since I started working with Ian, I closed over $1mn+ putting me over 100% to goal!",
-      name: "Andrew",
-      location: "Sr. Director of Sales",
-      avatar: "https://www.accountable.live/lovable-uploads/38e169a2-e4e6-4376-a0cd-89a92da27651.png"
+      amount: "Stays With Me Through Change",
+      quote: "Just moved to a new state and started a new job - this made it so easy to stay on top of everything I need to do and not fall into chaos.",
+      name: "Parker",
+      location: "Sales Rep",
+      avatar: ""
     },
     {
-      amount: "3x'd my income",
-      quote: "I actually tripled my income from where it was prior to us working together.",
-      name: "Max",
-      location: "Founder",
-      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Accountable/Landing%20Page%20Assets/max2.jpg"
+      amount: "Finally Productive",
+      quote: "I've always been productive, but for the first time in my life, I actually feel good most of the time. I feel in control.",
+      name: "Sarah",
+      location: "Marketing Manager",
+      avatar: ""
     },
     {
-      amount: "Life-changing stuff",
-      quote: "Work with Ian if you want to change your life AND your business",
-      name: "Joseph",
-      location: "Founder",
-      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Accountable/Landing%20Page%20Assets/Joseph.png"
+      amount: "Game Changer",
+      quote: "The past 5 years of my life have been chaos. Then I found Claudia and within a few weeks, everything felt 10x calmer.",
+      name: "Michael",
+      location: "Software Developer",
+      avatar: ""
     },
     {
-      amount: "Rapid growth",
-      quote: "I have way more leads converting now. My business has really taken off since we started working together",
-      name: "Brenda",
-      location: "Founder",
-      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Accountable/Landing%20Page%20Assets/brenda.jpg"
+      amount: "Stress-Free Organization",
+      quote: "I've never been so organized, self reflective, and stress-free in my whole life. Where has this been hiding!?",
+      name: "Lisa",
+      location: "Project Manager",
+      avatar: ""
     }
   ];
 
@@ -110,7 +110,7 @@ export const LPTestimonials = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            &quot;Living with ADHD is 10x easier now.&quot;
+            "Living with ADHD is 10x easier now."
           </h2>
         </div>
 
@@ -118,7 +118,7 @@ export const LPTestimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className={`bg-[#2C3E50] border-0 shadow-xl rounded-2xl hover:shadow-2xl transition-all duration-300 ${
+              className={`bg-[#465e76] border-0 shadow-xl rounded-2xl hover:shadow-2xl transition-all duration-300 ${
                 isVisible ? 'animate-fade-up' : 'opacity-0'
               }`}
               style={{ 
@@ -131,7 +131,7 @@ export const LPTestimonials = () => {
                   {testimonial.amount}
                 </div>
                 <p className="text-sm sm:text-base text-white mb-4 sm:mb-6 italic leading-relaxed text-center flex-grow flex items-center" style={{ fontWeight: 400 }}>
-                  &quot;{testimonial.quote}&quot;
+                  "{testimonial.quote}"
                 </p>
                 <div className="flex items-center justify-center gap-3">
                   <div className="w-8 sm:w-10 h-8 sm:h-10 bg-[#30bcd9] rounded-full flex items-center justify-center overflow-hidden">
