@@ -41,7 +41,7 @@ export const LPFAQs = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            You're Not Alone in Wondering...
+            You&apos;re Not Alone in Wondering...
           </h2>
         </div>
 

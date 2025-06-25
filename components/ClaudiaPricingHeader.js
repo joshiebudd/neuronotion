@@ -43,8 +43,8 @@ const ClaudiaPricingHeader = () => {
   };
 
   const handleCTAClick = () => {
-    track("Claudia_Try_Free_Header");
-    window.open('https://buy.stripe.com/aEU9E41pL56efMA5kR', '_blank');
+    track("Claudia_Join_Waitlist_Header");
+    setIsModalOpen(true);
   };
 
   const closeModal = () => {
@@ -68,16 +68,10 @@ const ClaudiaPricingHeader = () => {
               alt="Neuro Logo" 
               className="h-8 w-auto" 
             />
-            <span className="text-xl font-semibold tracking-tight text-white">Claudia</span>
+            <span className="text-xl font-semibold tracking-tight text-white">Claudia by Neuro</span>
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              href="/pricing"
-              className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
-            >
-              Pricing
-            </Link>
             <a 
               href="#how-it-works" 
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
@@ -96,7 +90,7 @@ const ClaudiaPricingHeader = () => {
                 handleSectionNavigation('about');
               }}
             >
-              Founder's Story
+              Founder&apos;s Story
             </a>
           </nav>
           <div className="flex items-center space-x-4">
@@ -105,7 +99,7 @@ const ClaudiaPricingHeader = () => {
               style={{ fontWeight: 700 }}
               onClick={handleCTAClick}
             >
-              Try Claudia Free
+              Join the waitlist
             </button>
           </div>
         </div>

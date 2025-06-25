@@ -11,7 +11,7 @@ export const LPFoundersStory = () => {
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="mb-4 sm:mb-6">
             <Badge className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium shadow-lg hover:bg-white/10" style={{ fontWeight: 400 }}>
-              Founder's Story
+              Founder&apos;s Story
             </Badge>
           </div>
           
