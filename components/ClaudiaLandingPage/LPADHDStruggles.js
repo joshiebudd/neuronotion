@@ -94,13 +94,13 @@ export const LPADHDStruggles = () => {
     },
     {
       emoji: "🧠",
-      title: "ADHD-Science Driven",
+      title: "Built on science and experience",
       description: "Built on real neuroscience - reward loops, dopamine triggers, and motivation systems that actually work for ADHD brains."
     },
     {
-      emoji: "🎯",
-      title: "Context-Aware Nudging",
-      description: "Claudia knows when to show you what you need. Morning routine? Just the essentials. Afternoon crash? The perfect task to rebuild momentum."
+      emoji: "🔗",
+      title: "One App. Not Ten.",
+      description: "Stop juggling 10 different apps and subscriptions. Claudia handles tasks, notes, reminders, goals, and routines all in one place."
     }
   ];
 
@@ -121,7 +121,7 @@ export const LPADHDStruggles = () => {
   };
 
   const handleCTAClick = () => {
-    window.open('https://buy.stripe.com/aEU9E41pL56efMA5kR', '_blank');
+            // TODO: Implement Try Claudia Free functionality
   };
 
   const renderCarousel = (items, currentIdx) => (
@@ -271,9 +271,7 @@ export const LPADHDStruggles = () => {
             </Badge>
           </div>
           
-          <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0 max-w-4xl mx-auto" style={{ fontWeight: 400 }}>
-            Claudia isn&apos;t another app trying to &quot;fix&quot; you. She&apos;s built from the ground up to work with your ADHD brain, not against it.
-          </p>
+
         </div>
 
         {/* Solutions Quadrant Grid */}
@@ -289,21 +287,30 @@ export const LPADHDStruggles = () => {
             return (
               <div
                 key={index}
-                className="group absolute bg-[#465e76] border border-gray-600 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-in-out hover:z-50 hover:shadow-2xl hover:shadow-[#30bcd9]/20 hover:!top-0 hover:!left-0 hover:!w-full hover:!h-full"
-                style={defaultStyle}
+                className="group absolute bg-[#465e76] border border-gray-600 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-in-out hover:shadow-2xl hover:shadow-[#30bcd9]/20 hover:!top-0 hover:!left-0 hover:!w-full hover:!h-full"
+                style={{
+                  ...defaultStyle,
+                  zIndex: 10
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.zIndex = '50';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.zIndex = '10';
+                }}
               >
                 {/* Default state - compact card with just title and emoji */}
-                <div className="flex flex-col items-center justify-center h-full text-center p-3 sm:p-4 transition-opacity duration-300 group-hover:opacity-0">
-                  <div className="text-2xl sm:text-3xl mb-1 sm:mb-2">
+                <div className="flex flex-col items-center justify-center h-full text-center p-3 sm:p-4 transition-all duration-75 ease-out group-hover:opacity-0 group-hover:scale-75">
+                  <div className="text-2xl sm:text-3xl mb-1 sm:mb-2 transition-all duration-75 ease-out group-hover:scale-50">
                     {item.emoji}
                   </div>
-                  <h3 className="text-xs sm:text-sm font-bold text-[#30bcd9] leading-tight" style={{ fontWeight: 700 }}>
+                  <h3 className="text-xs sm:text-sm font-bold text-[#30bcd9] leading-tight transition-all duration-75 ease-out group-hover:scale-50" style={{ fontWeight: 700 }}>
                     {item.title}
                   </h3>
                 </div>
 
                 {/* Hover state - expanded card with full content */}
-                <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-[#465e76] border border-[#30bcd9]/50 rounded-2xl">
+                <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-center items-center text-center opacity-0 scale-110 group-hover:opacity-100 group-hover:scale-100 transition-all duration-400 delay-100 bg-[#465e76] border border-[#30bcd9]/50 rounded-2xl">
                   <div className="text-5xl sm:text-6xl mb-4 sm:mb-6">
                     {item.emoji}
                   </div>

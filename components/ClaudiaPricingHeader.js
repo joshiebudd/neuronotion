@@ -43,8 +43,8 @@ const ClaudiaPricingHeader = () => {
   };
 
   const handleCTAClick = () => {
-    track("Claudia_Join_Waitlist_Header");
-    setIsModalOpen(true);
+    track("Claudia_Try_Free_Header");
+    // TODO: Implement Try Claudia Free functionality
   };
 
   const closeModal = () => {
@@ -99,13 +99,13 @@ const ClaudiaPricingHeader = () => {
               style={{ fontWeight: 700 }}
               onClick={handleCTAClick}
             >
-              Join the waitlist
+              Try Claudia Free
             </button>
           </div>
         </div>
       </header>
 
-      <WaitlistModal isOpen={isModalOpen} onClose={closeModal} />
+
     </>
   );
 };

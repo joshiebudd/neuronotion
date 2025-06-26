@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { track } from "@vercel/analytics";
-import ClaudiaHeader from '../components/ClaudiaHeader';
+import OldClaudiaHeader from '../components/OldClaudiaHeader';
 import ResultDisplay from '../components/ResultDisplay';
 import FeatureSection from '../components/FeatureSection';
 import ScrollReveal from '../components/ScrollReveal';
 import WaitlistModal from '../components/WaitlistModal';
+import { VideoPlayer } from '../components/VideoPlayer';
 import { useToast } from "../hooks/use-toast";
 import { Toaster } from "../components/ui/toaster";
 
@@ -163,7 +164,7 @@ const Index = () => {
         <meta name="description" content="The world's first AI Personal Assistant for Adults with ADHD. You speak, Claudia Organizes. Simple." />
       </Head>
       
-      <ClaudiaHeader />
+      <OldClaudiaHeader />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-[#1e2a4a]">
@@ -229,14 +230,9 @@ const Index = () => {
                 Our ADHD life management system is designed to be frictionless and effective.
               </p>
               <div className="max-w-3xl mx-auto mb-12">
-                <video 
-                  src="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20Demo%20v4.mp4" 
-                  controls
-                  playsInline
-                  className="w-full h-auto rounded-xl shadow-2xl"
-                  style={{ 
-                    boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2)',
-                  }}
+                <VideoPlayer 
+                  videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20Demo%20v4.mp4"
+                  title="Claudia Demo"
                 />
               </div>
             </div>

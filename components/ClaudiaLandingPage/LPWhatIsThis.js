@@ -1,5 +1,6 @@
 import React from 'react';
 import { Badge } from '../ui/badge';
+import { VideoPlayer } from '../VideoPlayer';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const LPWhatIsThis = () => {
@@ -48,18 +49,17 @@ export const LPWhatIsThis = () => {
           style={{ transitionDelay: '0.2s' }}
         >
           <div className="relative max-w-full sm:max-w-4xl w-full">
-            <video 
-              src="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20Demo%20v4.mp4"
-              autoPlay
-              playsInline
-              muted
-              loop
-              className={`w-full h-auto rounded-lg shadow-lg px-2 sm:px-0 ${
+            <div className={`px-2 sm:px-0 ${
                 imageVisible ? 'animate-[float_4s_ease-in-out_infinite]' : ''
-              }`}
-            >
-              Your browser does not support the video tag.
-            </video>
+              }`}>
+              <VideoPlayer 
+                videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20Demo%20v4.mp4"
+                title="Claudia Demo"
+                autoPlay={true}
+                muted={true}
+                loop={false}
+              />
+            </div>
             
             {/* Sound On Arrow - positioned bottom-right of video */}
             <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 flex items-center space-x-2 bg-[#30bcd9] text-black px-3 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse">

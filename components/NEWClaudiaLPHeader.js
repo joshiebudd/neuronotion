@@ -2,21 +2,16 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { track } from "@vercel/analytics";
 import { cn } from "../lib/utils";
-import WaitlistModal from './WaitlistModal';
 
-const ClaudiaHeader = () => {
+const NEWClaudiaLPHeader = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleSectionNavigation = (sectionId) => {
@@ -27,37 +22,33 @@ const ClaudiaHeader = () => {
   };
 
   const handleCTAClick = () => {
-    track("Claudia_Join_Waitlist_Header");
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
+    track("Claudia_Try_Free_Header");
+    // TODO: Implement Try Claudia Free functionality
   };
 
   return (
     <>
-      <header 
+      <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out py-4 px-6",
-          scrolled ? 
-            "bg-[#1e2a4a]/90 backdrop-blur-md shadow-sm border-b border-white/10" : 
-            "bg-transparent"
+          scrolled
+            ? "bg-[#1e2a4a]/90 backdrop-blur-md shadow-sm border-b border-white/10"
+            : "bg-transparent"
         )}
       >
         <div className="container mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <img 
-              src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png" 
-              alt="Neuro Logo" 
-              className="h-8 w-auto" 
+          <Link href="/claudianewlp" className="flex items-center space-x-2">
+            <img
+              src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
+              alt="Neuro Logo"
+              className="h-8 w-auto"
             />
             <span className="text-xl font-semibold tracking-tight text-white">Claudia by Neuro</span>
           </Link>
-          
+
           <nav className="hidden md:flex items-center space-x-8">
-            <a 
-              href="#how-it-works" 
+            <a
+              href="#how-it-works"
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
@@ -66,8 +57,8 @@ const ClaudiaHeader = () => {
             >
               How It Works
             </a>
-            <a 
-              href="#about" 
+            <a
+              href="#about"
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
@@ -76,22 +67,25 @@ const ClaudiaHeader = () => {
             >
               Founder&apos;s Story
             </a>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <button 
-              className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-2 px-6 rounded-lg text-sm shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
-              style={{ fontWeight: 700 }}
-              onClick={handleCTAClick}
+            <Link
+              href="/pricing"
+              className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
             >
-              Join the waitlist
-            </button>
-          </div>
+              Pricing
+            </Link>
+          </nav>
+
+          <button
+            className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-1.5 px-4 rounded-lg text-sm shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
+            style={{ fontWeight: 700 }}
+            onClick={handleCTAClick}
+          >
+            Try Claudia Free
+          </button>
         </div>
       </header>
-
-      <WaitlistModal isOpen={isModalOpen} onClose={closeModal} />
     </>
   );
 };
 
-export default ClaudiaHeader; 
+export default NEWClaudiaLPHeader; 

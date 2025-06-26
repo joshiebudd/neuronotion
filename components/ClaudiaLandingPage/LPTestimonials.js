@@ -39,63 +39,63 @@ export const LPTestimonials = () => {
       quote: "It helps me sort out all the junk in my brain to sort, prioritize, and understand every part of your brain and life. LOVE IT!",
       name: "Ramona",
       location: "Social Worker",
-      avatar: ""
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Avatars/ramona.jpg"
     },
     {
       amount: "No More Fighting My Brain", 
       quote: "I've given up on countless ADHD tools that never worked for me. This one finally understands how my brain actually works.",
       name: "Ryan",
       location: "Student",
-      avatar: ""
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Avatars/Ryan.webp"
     },
     {
       amount: "Structure I Always Needed",
       quote: "It has the structure that I need and struggle coming up with myself. This helps me keep on track with my tasks, projects and goals.", 
-      name: "Anonymous",
+      name: "Amy",
       location: "Teacher",
-      avatar: ""
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/amy.jpg"
     },
     {
       amount: "Perfect Amount of Function",
       quote: "Usually new tools overwhelm me with too many functions. This has just the right amount.",
-      name: "Anonymous",
-      location: "User",
-      avatar: ""
+      name: "Matt",
+      location: "Software Developer",
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Matt.png"
     },
     {
       amount: "Lightning Fast Capture",
       quote: "I can get stuff out of my brain within seconds. I save time and energy, and remember better too.",
       name: "Ayush",
       location: "UI Designer",
-      avatar: ""
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Avatars/ayush.webp"
     },
     {
       amount: "Stays With Me Through Change",
       quote: "Just moved to a new state and started a new job - this made it so easy to stay on top of everything I need to do and not fall into chaos.",
       name: "Parker",
       location: "Sales Rep",
-      avatar: ""
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Avatars/parker.webp"
     },
     {
       amount: "Finally Productive",
       quote: "I've always been productive, but for the first time in my life, I actually feel good most of the time. I feel in control.",
-      name: "Sarah",
+      name: "Michelle",
       location: "Marketing Manager",
-      avatar: ""
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Avatars/michelle.jpg"
     },
     {
       amount: "Game Changer",
       quote: "The past 5 years of my life have been chaos. Then I found Claudia and within a few weeks, everything felt 10x calmer.",
-      name: "Michael",
-      location: "Software Developer",
-      avatar: ""
+      name: "Liv",
+      location: "User",
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Avatars/tanya.jpg"
     },
     {
       amount: "Stress-Free Organization",
       quote: "I've never been so organized, self reflective, and stress-free in my whole life. Where has this been hiding!?",
       name: "Lisa",
       location: "Project Manager",
-      avatar: ""
+      avatar: "https://NeuroNotionPullZonw.b-cdn.net/Avatars/michelle2.jpg"
     }
   ];
 

@@ -3,7 +3,7 @@ import { Button } from '../ui/button';
 
 export const LPFinalCTA = () => {
   const handleCTAClick = () => {
-    window.open('https://buy.stripe.com/aEU9E41pL56efMA5kR', '_blank');
+    // TODO: Implement Try Claudia Free functionality
   };
 
   return (
