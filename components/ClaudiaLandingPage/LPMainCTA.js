@@ -272,7 +272,7 @@ export const LPMainCTA = () => {
         {/* Final CTA */}
         <div className="text-center">
           <h3 className="text-3xl font-bold text-white mb-6" style={{ fontWeight: 700 }}>
-            Ready to make living with ADHD 10x easier.
+            Ready to make living with ADHD 10x easier?
           </h3>
           <Button 
             className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
