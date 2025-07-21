@@ -14,6 +14,7 @@ export const LPMainCTA = () => {
     {
       name: "Free",
       price: 0,
+      originalPrice: null,
       period: "",
       credits: "10 Claudia credits/month (~10 minutes)",
       bestFor: "Curious Users",
@@ -25,6 +26,7 @@ export const LPMainCTA = () => {
     {
       name: "Standard",
       price: 19,
+      originalPrice: 29,
       period: "/month",
       credits: "60 Claudia credits/month (~1 hour of conversation)",
       bestFor: "Serious about making change",
@@ -36,7 +38,8 @@ export const LPMainCTA = () => {
     },
     {
       name: "Premium",
-      price: 39,
+      price: 34,
+      originalPrice: 49,
       period: "/month",
       credits: "120 Claudia credits/month (~2 hours of conversation)",
       bestFor: "Self-improvement people",
@@ -47,7 +50,8 @@ export const LPMainCTA = () => {
     },
     {
       name: "Pro",
-      price: 79,
+      price: 69,
+      originalPrice: 99,
       period: "/month",
       credits: "240 Claudia credits/month (~4 hours of conversation)",
       bestFor: "Power users",
@@ -110,12 +114,19 @@ export const LPMainCTA = () => {
                 </div>
               )}
               
-              <CardContent className="p-8 text-center h-full flex flex-col min-h-[500px]">
+              <CardContent className="p-8 text-center h-full flex flex-col min-h-[550px]">
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-[#30bcd9] mb-3" style={{ fontWeight: 700 }}>
                     {tier.name}
                   </h3>
                   <div className="mb-4">
+                    {tier.originalPrice && (
+                      <div className="mb-2">
+                        <span className="text-lg text-gray-400 line-through">
+                          ${tier.originalPrice}{tier.period}
+                        </span>
+                      </div>
+                    )}
                     <span className="text-4xl font-bold text-white" style={{ fontWeight: 700 }}>
                       {tier.price === 0 ? 'Free' : `$${tier.price}`}
                     </span>
@@ -125,51 +136,68 @@ export const LPMainCTA = () => {
                   </div>
                 </div>
 
-                <div className="mb-8 flex-grow">
-                  <div className="space-y-4">
-                    {tier.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start gap-3 text-left">
-                        <CheckCircle className="h-5 w-5 text-[#30bcd9] flex-shrink-0 mt-0.5" />
-                        <span className="text-white text-sm" style={{ fontWeight: 400 }}>
-                          {feature}
+                <div className="flex-grow flex flex-col justify-between">
+                  <div>
+                    <div className="space-y-4 mb-6">
+                      {tier.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start gap-3 text-left">
+                          <CheckCircle className="h-5 w-5 text-[#30bcd9] flex-shrink-0 mt-0.5" />
+                          <span className="text-white text-sm" style={{ fontWeight: 400 }}>
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="p-4 bg-[#30bcd9]/10 rounded-lg mb-8">
+                      <div className="flex items-center gap-2 justify-center">
+                        <span className="text-yellow-400">⭐</span>
+                        <span className="text-sm text-white" style={{ fontWeight: 400 }}>
+                          Best for: {tier.bestFor}
                         </span>
                       </div>
-                    ))}
-                  </div>
-                  
-                  <div className="mt-6 p-4 bg-[#30bcd9]/10 rounded-lg">
-                    <div className="flex items-center gap-2 justify-center">
-                      <span className="text-yellow-400">⭐</span>
-                      <span className="text-sm text-white" style={{ fontWeight: 400 }}>
-                        Best for: {tier.bestFor}
-                      </span>
                     </div>
                   </div>
-                </div>
 
-                <div className="mt-auto">
-                  <Button 
-                    className={`w-full font-bold py-4 px-6 rounded-xl text-sm shadow-lg transform hover:scale-105 transition-all duration-300 ${
-                      tier.popular 
-                        ? 'bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black hover:shadow-2xl hover:shadow-[#30bcd9]/20' 
-                        : tier.price === 0
-                        ? 'bg-gray-600 hover:bg-gray-500 text-white border border-gray-500'
-                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
-                    }`}
-                    style={{ fontWeight: 700 }}
-                    onClick={handleCTAClick}
-                  >
-                    {tier.price === 0 ? 'Get Started' : `Upgrade to ${tier.name}`}
-                  </Button>
-                  
-                  <p className="text-xs text-gray-400 mt-3" style={{ fontWeight: 400 }}>
-                    <Check className="h-3 w-3 inline mr-1" />
-                    No card required
-                  </p>
+                  <div>
+                    <Button 
+                      className={`w-full font-bold py-4 px-6 rounded-xl text-sm shadow-lg transform hover:scale-105 transition-all duration-300 mb-3 ${
+                        tier.popular 
+                          ? 'bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black hover:shadow-2xl hover:shadow-[#30bcd9]/20' 
+                          : tier.price === 0
+                          ? 'bg-gray-600 hover:bg-gray-500 text-white border border-gray-500'
+                          : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                      }`}
+                      style={{ fontWeight: 700 }}
+                      onClick={handleCTAClick}
+                    >
+                      {tier.price === 0 ? 'Get Started' : `Upgrade to ${tier.name}`}
+                    </Button>
+                    
+                    <div className="h-6 flex items-center justify-center">
+                      {tier.price === 0 && (
+                        <p className="text-xs text-gray-400" style={{ fontWeight: 400 }}>
+                          <Check className="h-3 w-3 inline mr-1" />
+                          No card required
+                        </p>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Enterprise Contact Button */}
+        <div className="text-center mb-16">
+          <button 
+            className="bg-gray-600/50 text-gray-400 font-bold py-3 px-8 rounded-xl text-sm cursor-not-allowed border border-gray-600"
+            style={{ fontWeight: 700 }}
+            disabled
+          >
+            Contact josh@neuro-notion.com for Enterprise pricing
+          </button>
         </div>
 
         {/* What can you do with credits section */}
