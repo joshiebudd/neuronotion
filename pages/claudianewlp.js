@@ -6,7 +6,6 @@ import { LPHero } from '../components/ClaudiaLandingPage/LPHero';
 import { LPWhatIsThis } from '../components/ClaudiaLandingPage/LPWhatIsThis';
 import { LPTestimonials } from '../components/ClaudiaLandingPage/LPTestimonials';
 import { LPADHDStruggles } from '../components/ClaudiaLandingPage/LPADHDStruggles';
-import { LPHowItWorks } from '../components/ClaudiaLandingPage/LPHowItWorks';
 import { LPTheDifference } from '../components/ClaudiaLandingPage/LPTheDifference';
 import { LPFoundersStory } from '../components/ClaudiaLandingPage/LPFoundersStory';
 import { LPFAQs } from '../components/ClaudiaLandingPage/LPFAQs';
@@ -42,7 +41,6 @@ const ClaudiaNewLP = () => {
       <LPADHDStruggles />
       <LPWhatIsThis />
       <LPTestimonials />
-      <LPHowItWorks />
       <LPTheDifference />
       <LPFoundersStory />
       <LPFAQs />
