@@ -53,7 +53,7 @@ export const LPWhatIsThis = () => {
                 imageVisible ? 'animate-[float_4s_ease-in-out_infinite]' : ''
               }`}>
               <VideoPlayer 
-                videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20Demo%20v4.mp4"
+                videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Effortless%20ADHD%20Living.mp4"
                 title="Claudia Demo"
                 autoPlay={true}
                 muted={true}
