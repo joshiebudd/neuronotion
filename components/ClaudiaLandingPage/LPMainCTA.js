@@ -4,6 +4,7 @@ import { Button } from '../ui/button';
 import { Card, CardContent } from '../ui/card';
 import { Check, Target, Users, Brain, CheckCircle, ChevronDown, ChevronUp, Timer } from 'lucide-react';
 import { CgSandClock } from 'react-icons/cg';
+import { track } from '@vercel/analytics';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const LPMainCTA = () => {
@@ -19,8 +20,8 @@ export const LPMainCTA = () => {
       credits: "10 Claudia credits/month (~10 minutes)",
       bestFor: "Curious Users",
       features: [
-        "10 Claudia credits/month (~10 minutes)",
-        "Access to all agents"
+        "Full unrestricted access. Except from Voice Agents",
+        "10 Claudia credits/month (~10 minutes)"
       ]
     },
     {
@@ -63,10 +64,14 @@ export const LPMainCTA = () => {
   ];
 
   const handleCTAClick = () => {
-    // TODO: Implement Try Claudia Free functionality
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://app.neuro-notion.com';
+    }
   };
 
   const handleFAQClick = (index) => {
+    const eventName = `FAQ ${index + 1}`;
+    track(eventName);
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 

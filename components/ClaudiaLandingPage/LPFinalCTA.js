@@ -1,9 +1,13 @@
 import React from 'react';
 import { Button } from '../ui/button';
+import { track } from '@vercel/analytics';
 
 export const LPFinalCTA = () => {
   const handleCTAClick = () => {
-    // TODO: Implement Try Claudia Free functionality
+    track('Bottom CTA');
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://app.neuro-notion.com';
+    }
   };
 
   return (

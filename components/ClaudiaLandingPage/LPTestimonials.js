@@ -3,6 +3,7 @@ import { Badge } from '../ui/badge';
 import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { track } from '@vercel/analytics';
 
 const CountUpAnimation = ({ target, duration = 1500 }) => {
   const [count, setCount] = useState(0);
@@ -99,6 +100,13 @@ export const LPTestimonials = () => {
     }
   ];
 
+  const handleStartResultsClick = () => {
+    track('Testimonials CTA');
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://app.neuro-notion.com';
+    }
+  };
+
   return (
     <section className="py-10 sm:py-16 lg:py-20 px-3 sm:px-4 bg-[#1e2a4a]" data-section="testimonials">
       <div className="container mx-auto max-w-6xl">
@@ -162,7 +170,7 @@ export const LPTestimonials = () => {
         </div>
 
         <div className="text-center px-2 sm:px-0">
-          <Button className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 sm:py-6 px-8 sm:px-12 rounded-xl sm:rounded-2xl text-base sm:text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 w-full sm:w-auto" style={{ fontWeight: 700 }}>
+          <Button onClick={handleStartResultsClick} className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 sm:py-6 px-8 sm:px-12 rounded-xl sm:rounded-2xl text-base sm:text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 w-full sm:w-auto" style={{ fontWeight: 700 }}>
             Start creating your own results
           </Button>
           <div className="text-center mt-3 sm:mt-4">

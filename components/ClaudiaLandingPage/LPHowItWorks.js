@@ -7,7 +7,9 @@ export const LPHowItWorks = () => {
   const { elementRef, isVisible } = useScrollAnimation();
 
   const handleCTAClick = () => {
-    // TODO: Implement Try Claudia Free functionality
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://app.neuro-notion.com';
+    }
   };
 
   return (

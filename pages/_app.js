@@ -7,6 +7,7 @@ import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import "../src/styles/cardWidget.css";
 import { Poppins } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/react";
 
 const poppins = Poppins({
   weight: ['400', '700'],
@@ -142,6 +143,7 @@ function MyApp({ Component, pageProps }) {
         <main className={poppins.className}>
           <Component {...pageProps} />
         </main>
+        <Analytics />
       </>
     </PostHogProvider>
   );

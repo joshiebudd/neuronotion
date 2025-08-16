@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Badge } from '../ui/badge';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { track } from '@vercel/analytics';
 
 export const LPFAQs = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -27,6 +28,7 @@ export const LPFAQs = () => {
   ];
 
   const toggleFAQ = (index) => {
+    track(`FAQ ${index + 1}`);
     setOpenFAQ(openFAQ === index ? null : index);
   };
 

@@ -22,8 +22,10 @@ const NEWClaudiaLPHeader = () => {
   };
 
   const handleCTAClick = () => {
-    track("Claudia_Try_Free_Header");
-    // TODO: Implement Try Claudia Free functionality
+    track('Header CTA');
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://app.neuro-notion.com';
+    }
   };
 
   return (
@@ -52,6 +54,7 @@ const NEWClaudiaLPHeader = () => {
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
+                track('How it works from header');
                 handleSectionNavigation('how-it-works');
               }}
             >
@@ -62,6 +65,7 @@ const NEWClaudiaLPHeader = () => {
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
+                track("Founder's Story");
                 handleSectionNavigation('about');
               }}
             >
@@ -70,6 +74,7 @@ const NEWClaudiaLPHeader = () => {
             <Link
               href="/pricing"
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
+              onClick={() => track('Pricing')}
             >
               Pricing
             </Link>

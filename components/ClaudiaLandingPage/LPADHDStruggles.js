@@ -3,6 +3,7 @@ import { Badge } from '../ui/badge';
 import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { track } from '@vercel/analytics';
 
 const CountUpAnimation = ({ target, duration = 1500 }) => {
   const [count, setCount] = useState(0);
@@ -121,7 +122,10 @@ export const LPADHDStruggles = () => {
   };
 
   const handleCTAClick = () => {
-            // TODO: Implement Try Claudia Free functionality
+    track('How we tackle this CTA');
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://app.neuro-notion.com';
+    }
   };
 
   const renderCarousel = (items, currentIdx) => (
