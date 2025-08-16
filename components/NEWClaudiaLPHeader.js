@@ -50,12 +50,12 @@ const NEWClaudiaLPHeader = () => {
 
           <nav className="hidden md:flex items-center space-x-8">
             <a
-              href="#how-it-works"
+              href="#what-is-claudia"
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
                 track('How it works from header');
-                handleSectionNavigation('how-it-works');
+                handleSectionNavigation('what-is-claudia');
               }}
             >
               How It Works

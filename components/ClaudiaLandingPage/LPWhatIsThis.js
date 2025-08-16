@@ -8,7 +8,7 @@ export const LPWhatIsThis = () => {
   const { elementRef: imageRef, isVisible: imageVisible } = useScrollAnimation();
 
   return (
-    <section className="py-8 sm:py-12 lg:py-16 px-3 sm:px-4 bg-[#1e2a4a]">
+    <section id="what-is-claudia" className="py-8 sm:py-12 lg:py-16 px-3 sm:px-4 bg-[#1e2a4a]">
       <div className="container mx-auto max-w-4xl text-center">
         <div 
           ref={titleRef}

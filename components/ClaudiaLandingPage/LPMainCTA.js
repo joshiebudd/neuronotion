@@ -69,6 +69,13 @@ export const LPMainCTA = () => {
     }
   };
 
+  const handleTierCTAClick = (tierName) => {
+    track(`Get Started ${tierName}`);
+    if (typeof window !== 'undefined') {
+      window.location.href = 'https://app.neuro-notion.com';
+    }
+  };
+
   const handleFAQClick = (index) => {
     const eventName = `FAQ ${index + 1}`;
     track(eventName);
@@ -174,9 +181,9 @@ export const LPMainCTA = () => {
                           : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
                       }`}
                       style={{ fontWeight: 700 }}
-                      onClick={handleCTAClick}
+                      onClick={() => handleTierCTAClick(tier.name)}
                     >
-                      {tier.price === 0 ? 'Get Started' : `Upgrade to ${tier.name}`}
+                      Get Started
                     </Button>
                     
                     <div className="h-6 flex items-center justify-center">
@@ -282,9 +289,9 @@ export const LPMainCTA = () => {
           <Button 
             className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
             style={{ fontWeight: 700 }}
-            onClick={handleCTAClick}
+            onClick={() => { track('PricingPageCTA'); handleCTAClick(); }}
           >
-            Try Claudia Free
+            Get Started
           </Button>
           <p className="text-sm text-gray-400 mt-4" style={{ fontWeight: 400 }}>
             <Check className="h-3 w-3 inline mr-1" />
