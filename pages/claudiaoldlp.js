@@ -246,7 +246,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-lg font-medium mb-2 text-white">Speak Your Thoughts</h3>
                     <p className="text-sm text-white/70">
-                      Just talk to Claudia about whatever&apos;s on your mind - tasks, events, ideas, or concerns.
+                      Just talk to Claudia about whatever&amp;apos;s on your mind - tasks, events, ideas, or concerns.
                     </p>
                   </div>
                 </ScrollReveal>
@@ -291,7 +291,7 @@ const Index = () => {
                   I built Neuro because I know the struggle firsthand. After years of being misunderstood and left without support, I transformed my own experience into a mission: empower newly diagnosed adults with a scientifically-backed, voice-first platform that cuts through chaos.
                 </p>
                 <p className="text-lg text-white/80">
-                  This isn&apos;t just a tool—it&apos;s our shared lifeline to a clearer, more productive life. Claudia by Neuro represents everything I wish I had when first navigating life with ADHD.
+                  This isn&amp;apos;t just a tool—it&amp;apos;s our shared lifeline to a clearer, more productive life. Claudia by Neuro represents everything I wish I had when first navigating life with ADHD.
                 </p>
               </div>
               <div className="flex justify-center md:justify-end">
@@ -386,4 +386,6 @@ const Index = () => {
   );
 };
 
-export { default } from './claudianewlp';
+export default Index;
+
+
