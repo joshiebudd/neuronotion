@@ -68,7 +68,7 @@ function ThankYouPage() {
             </p>
             <p className="text-gray-600">
               Please check your emails for a link to the template and
-              instruction on how to install, order confirmation, and receipt.{" "}
+              instruction on how to install, order confirmation, and receipt!{" "}
               <br /> You can close this page now.
             </p>
           </div>
