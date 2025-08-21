@@ -38,8 +38,8 @@ export const LPHero = () => {
               Claudia is the personal assistant you&apos;ve never had... that gets your ADHD brain. Voice your chaotic thoughts. Watch them transform into organized action. Feel in control for the first time.
             </p>
             
-                        <div className="flex flex-col items-center lg:items-start space-y-4">
-              <div className="flex flex-col lg:flex-row items-center lg:items-center space-y-4 lg:space-y-0 lg:space-x-6">
+            <div className="flex flex-col items-center lg:items-start space-y-3 sm:space-y-4">
+              <div className="flex flex-col lg:flex-row items-center lg:items-center space-y-2 sm:space-y-0 lg:space-x-6">
                 <Button 
                   className="w-full sm:w-auto bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-8 sm:px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-[shimmer_3s_ease-in-out_infinite]"
                   style={{ fontWeight: 700 }}
@@ -47,6 +47,9 @@ export const LPHero = () => {
                 >
                   Try Claudia Free
                 </Button>
+                <p className="text-sm text-gray-400 lg:hidden" style={{ fontWeight: 400 }}>
+                  ✓ No card required
+                </p>
                 
                 {/* Star Ratings Section - Inline with button */}
                 <div className="flex flex-col items-center lg:items-start">
@@ -55,9 +58,17 @@ export const LPHero = () => {
                 </div>
               </div>
               
-              <p className="text-sm text-gray-400" style={{ fontWeight: 400 }}>
+              <p className="hidden lg:block text-sm text-gray-400" style={{ fontWeight: 400 }}>
                 ✓ No card required
               </p>
+              <div className="mt-3">
+                <img 
+                  src="https://NeuroNotionPullZonw.b-cdn.net/Untitled%20design%20(64).png" 
+                  alt="Trusted badges"
+                  loading="lazy"
+                  className="w-36 sm:w-44 md:w-52 h-auto object-contain mx-auto"
+                />
+              </div>
             </div>
           </div>
 
