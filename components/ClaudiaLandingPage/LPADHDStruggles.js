@@ -53,6 +53,7 @@ const CountUpAnimation = ({ target, duration = 1500 }) => {
 
 export const LPADHDStruggles = () => {
   const [currentIndex, setCurrentIndex] = useState(2); // Start at middle position
+  const [expandedCard, setExpandedCard] = useState(null); // For mobile tap-to-expand
 
   const strugglesItems = [
     {
@@ -134,7 +135,14 @@ export const LPADHDStruggles = () => {
       <div className="block sm:hidden mb-6">
         <div className="space-y-3">
           {items.map((item, index) => (
-            <Card key={index} className="bg-[#465e76] border border-gray-600 shadow-lg rounded-2xl">
+            <Card 
+              key={index} 
+              className="bg-[#465e76] border border-gray-600 shadow-lg rounded-2xl animate-fade-in-up"
+              style={{
+                animationDelay: `${index * 150}ms`,
+                animationFillMode: 'both'
+              }}
+            >
               <CardContent className="p-3">
                 <div className="flex justify-center mb-2">
                   <div className="text-3xl">
@@ -154,9 +162,9 @@ export const LPADHDStruggles = () => {
       </div>
 
       {/* Desktop 3D Carousel with Navigation (hidden on mobile) */}
-      <div className="hidden sm:block relative flex justify-center items-center mb-2" style={{ height: '400px', perspective: '1000px' }}>
+      <div className="hidden sm:flex relative justify-center items-center mb-2" style={{ height: '400px', perspective: '1000px' }}>
         {/* Left Arrow */}
-                 <button
+        <button
            onClick={() => goToPrevious()}
            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-[#30bcd9] hover:bg-[#30bcd9]/90 rounded-full flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-110"
          >
@@ -278,8 +286,73 @@ export const LPADHDStruggles = () => {
 
         </div>
 
-        {/* Solutions Quadrant Grid */}
-        <div className="relative max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16 px-2 sm:px-0 h-48 sm:h-64">
+        {/* Solutions Grid - Mobile with Quadrant Layout */}
+        <div className="block sm:hidden relative max-w-sm mx-auto mb-8 px-2 h-64">
+          {solutionsItems.map((item, index) => {
+            const isExpanded = expandedCard === index;
+            const defaultStyle = {
+              top: index < 2 ? '0' : '50%',
+              left: index % 2 === 0 ? '0' : '50%',
+              width: '48%',
+              height: '48%'
+            };
+
+            return (
+              <div
+                key={index}
+                className={`absolute bg-[#465e76] border border-gray-600 rounded-xl overflow-hidden cursor-pointer transition-all duration-500 ease-in-out ${
+                  isExpanded ? '!top-0 !left-0 !w-full !h-full shadow-2xl shadow-[#30bcd9]/20 z-50' : ''
+                }`}
+                style={{
+                  ...(!isExpanded ? defaultStyle : {}),
+                  zIndex: isExpanded ? 50 : 10
+                }}
+                onClick={() => setExpandedCard(isExpanded ? null : index)}
+              >
+                {/* Default state - compact card */}
+                <div className={`flex flex-col items-center justify-center h-full text-center p-2 transition-all duration-300 ${
+                  isExpanded ? 'opacity-0 scale-75' : 'opacity-100 scale-100'
+                }`}>
+                  <div className="text-2xl mb-1">
+                    {item.emoji}
+                  </div>
+                  <h3 className="text-[10px] font-bold text-[#30bcd9] leading-tight px-1" style={{ fontWeight: 700 }}>
+                    {item.title}
+                  </h3>
+                </div>
+
+                {/* Expanded state - full content */}
+                <div className={`absolute inset-0 p-6 flex flex-col justify-center items-center text-center bg-[#465e76] border border-[#30bcd9]/50 rounded-xl transition-all duration-300 ${
+                  isExpanded ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
+                }`}>
+                  <button 
+                    className="absolute top-3 right-3 text-white/60 hover:text-white"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setExpandedCard(null);
+                    }}
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <div className="text-4xl mb-4">
+                    {item.emoji}
+                  </div>
+                  <h3 className="text-lg font-bold text-[#30bcd9] mb-3" style={{ fontWeight: 700 }}>
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-white leading-relaxed" style={{ fontWeight: 400 }}>
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Solutions Quadrant Grid - Desktop */}
+        <div className="hidden sm:block relative max-w-2xl mx-auto mb-8 sm:mb-12 lg:mb-16 px-2 sm:px-0 h-48 sm:h-64">
           {solutionsItems.map((item, index) => {
             const defaultStyle = {
               top: index < 2 ? '0' : '50%',
@@ -333,7 +406,7 @@ export const LPADHDStruggles = () => {
         <div className="text-center px-2 sm:px-0">
           <div className="flex flex-col items-center space-y-4">
             <Button 
-              className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-[shimmer_3s_ease-in-out_infinite]"
+              className="w-full sm:w-auto bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-8 sm:px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-[shimmer_3s_ease-in-out_infinite]"
               style={{ fontWeight: 700 }}
               onClick={handleCTAClick}
             >

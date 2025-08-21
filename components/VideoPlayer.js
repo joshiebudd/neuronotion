@@ -72,12 +72,22 @@ export const VideoPlayer = ({ videoUrl, title, autoPlay = false, muted = false, 
     }
   };
 
-  const handleProgressClick = (e) => {
+  const handleProgressPointer = (clientX) => {
     const progressBar = progressRef.current;
+    if (!progressBar) return;
     const rect = progressBar.getBoundingClientRect();
-    const percent = (e.clientX - rect.left) / rect.width;
+    const percent = Math.min(Math.max((clientX - rect.left) / rect.width, 0), 1);
     const time = percent * duration;
     videoRef.current.currentTime = time;
+  };
+
+  const handleProgressClick = (e) => {
+    handleProgressPointer(e.clientX);
+  };
+
+  const handleProgressTouch = (e) => {
+    if (!e.touches || e.touches.length === 0) return;
+    handleProgressPointer(e.touches[0].clientX);
   };
 
   const handleVolumeChange = (e) => {
@@ -175,14 +185,16 @@ export const VideoPlayer = ({ videoUrl, title, autoPlay = false, muted = false, 
           {/* Progress Bar */}
           <div 
             ref={progressRef}
-            className="w-full h-2 bg-white/20 rounded-full cursor-pointer mb-4 group/progress"
+            className="w-full h-3 md:h-2 bg-white/20 rounded-full cursor-pointer mb-4 group/progress"
             onClick={handleProgressClick}
+            onTouchStart={handleProgressTouch}
+            onTouchMove={handleProgressTouch}
           >
             <div 
               className="h-full bg-[#30bcd9] rounded-full relative transition-all duration-150"
               style={{ width: `${progressPercent}%` }}
             >
-              <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-[#30bcd9] rounded-full opacity-0 group-hover/progress:opacity-100 transition-opacity duration-150 cursor-grab"></div>
+              <div className="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-5 h-5 md:w-4 md:h-4 bg-[#30bcd9] rounded-full opacity-100 md:opacity-0 md:group-hover/progress:opacity-100 transition-opacity duration-150 cursor-grab"></div>
             </div>
           </div>
 
@@ -232,7 +244,7 @@ export const VideoPlayer = ({ videoUrl, title, autoPlay = false, muted = false, 
                     step="0.1"
                     value={isMuted ? 0 : volume}
                     onChange={handleVolumeChange}
-                    className="w-0 group-hover/volume:w-20 transition-all duration-200 h-1 bg-white/20 rounded-lg appearance-none cursor-pointer opacity-0 group-hover/volume:opacity-100"
+                    className="w-24 md:w-0 md:group-hover/volume:w-20 transition-all duration-200 h-2 md:h-1 bg-white/20 rounded-lg appearance-none cursor-pointer opacity-100 md:opacity-0 md:group-hover/volume:opacity-100"
                     style={{
                       background: `linear-gradient(to right, #30bcd9 0%, #30bcd9 ${(isMuted ? 0 : volume) * 100}%, rgba(255,255,255,0.2) ${(isMuted ? 0 : volume) * 100}%, rgba(255,255,255,0.2) 100%)`
                     }}

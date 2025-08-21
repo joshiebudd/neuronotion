@@ -62,7 +62,7 @@ export const LPWhatIsThis = () => {
             </div>
             
             {/* Sound On Arrow - positioned bottom-right of video */}
-            <div className="absolute -bottom-2 -right-2 sm:-bottom-4 sm:-right-4 flex items-center space-x-2 bg-[#30bcd9] text-black px-3 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse">
+            <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 flex items-center space-x-2 bg-[#30bcd9] text-black px-3 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse">
               <svg 
                 className="w-4 h-4 transform rotate-[225deg]" 
                 fill="currentColor" 

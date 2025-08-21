@@ -194,15 +194,15 @@ const Index = () => {
                   <img 
                     src="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20-%20Static%20Demo.png" 
                     alt="Neuro App Interface" 
-                    className="rounded-lg max-w-full md:max-w-[110%]"
+                    className="rounded-lg w-full max-w-[520px] md:max-w-[110%] h-auto"
                   />
                 </div>
                 <div className="flex flex-col items-center mt-8 space-y-4">
-                  <p className="text-2xl md:text-3xl text-white/90">
+                  <p className="text-xl md:text-3xl text-white/90 text-center px-2">
                     Join the <span ref={counterRef} className="text-[#30bcd9] font-semibold">{count}</span><span className="text-[#30bcd9] font-semibold">+</span> other ADHDers waiting for access
                   </p>
                   <button 
-                    className="px-8 py-3 rounded-lg text-base font-medium bg-[#30bcd9] text-white shadow-lg hover:bg-[#2aa3c7] transition-colors"
+                    className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-lg text-base font-medium bg-[#30bcd9] text-white shadow-lg hover:bg-[#2aa3c7] transition-colors"
                     onClick={openModal}
                   >
                     Join the waitlist
@@ -225,8 +225,8 @@ const Index = () => {
         <section id="how-it-works" className="py-16 px-4 bg-[#1e2a4a]">
           <div className="container mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4 text-white">Like Jarvis, but for your ADHD brain</h2>
-              <p className="max-w-2xl mx-auto text-white/80 mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Like Jarvis, but for your ADHD brain</h2>
+              <p className="max-w-2xl mx-auto text-white/80 mb-10 text-base md:text-lg">
                 Our ADHD life management system is designed to be frictionless and effective.
               </p>
               <div className="max-w-3xl mx-auto mb-12">
@@ -238,7 +238,7 @@ const Index = () => {
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <ScrollReveal delay={100}>
                   <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
                     <div className="w-12 h-12 rounded-full bg-[#30bcd9] text-white flex items-center justify-center mb-4 font-bold">
@@ -284,13 +284,13 @@ const Index = () => {
       <ScrollReveal>
         <section id="about" className="py-16 px-4 bg-[#1e2a4a]">
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
               <div className="md:col-span-2">
-                <h2 className="text-4xl font-bold mb-6 text-white">Built by ADHDers for ADHDers</h2>
-                <p className="text-lg mb-6 text-white/80">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Built by ADHDers for ADHDers</h2>
+                <p className="text-base md:text-lg mb-6 text-white/80">
                   I built Neuro because I know the struggle firsthand. After years of being misunderstood and left without support, I transformed my own experience into a mission: empower newly diagnosed adults with a scientifically-backed, voice-first platform that cuts through chaos.
                 </p>
-                <p className="text-lg text-white/80">
+                <p className="text-base md:text-lg text-white/80">
                   This isn&apos;t just a tool—it&apos;s our shared lifeline to a clearer, more productive life. Claudia by Neuro represents everything I wish I had when first navigating life with ADHD.
                 </p>
               </div>
@@ -312,13 +312,13 @@ const Index = () => {
       <ScrollReveal>
         <section className="py-16 px-4 bg-[#1e2a4a]">
           <div className="container mx-auto">
-            <div className="max-w-3xl mx-auto text-center p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <h2 className="text-4xl font-bold mb-6 text-white">Ready to Manage ADHD More Effectively?</h2>
-              <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+            <div className="max-w-3xl mx-auto text-center p-6 md:p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Manage ADHD More Effectively?</h2>
+              <p className="text-base md:text-lg text-white/80 mb-8 max-w-2xl mx-auto">
                 Stop letting ADHD dictate your life. Let Claudia handle the organizational heavy lifting so you can focus on living.
               </p>
               <button 
-                className="px-8 py-3 rounded-lg text-base font-medium bg-[#30bcd9] text-white shadow-lg hover:bg-[#2aa3c7] transition-colors"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-lg text-base font-medium bg-[#30bcd9] text-white shadow-lg hover:bg-[#2aa3c7] transition-colors"
                 onClick={openModal}
               >
                 Join the waitlist

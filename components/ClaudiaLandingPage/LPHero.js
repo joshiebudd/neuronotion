@@ -16,7 +16,7 @@ export const LPHero = () => {
   };
 
   return (
-    <section className="pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16 px-3 sm:px-4 bg-[#1e2a4a]">
+    <section className="pt-24 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16 px-3 sm:px-4 bg-[#1e2a4a]">
       <div className="container mx-auto max-w-[1400px]">
         <div 
           ref={elementRef}
@@ -26,9 +26,11 @@ export const LPHero = () => {
         >
           {/* Left Content - 50% */}
           <div className="text-center lg:text-left">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-white mb-3 sm:mb-4 leading-tight" style={{ fontWeight: 700 }}>
-              The AI Personal Assistant
-              <br className="hidden sm:block" />
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-white mb-3 sm:mb-4 leading-normal sm:leading-tight" style={{ fontWeight: 700 }}>
+              The AI Personal
+              <br className="sm:hidden" />
+              {' '}Assistant
+              <br />
               <span className="text-[#30bcd9]">Engineered for ADHD</span>
             </h1>
             
@@ -39,7 +41,7 @@ export const LPHero = () => {
                         <div className="flex flex-col items-center lg:items-start space-y-4">
               <div className="flex flex-col lg:flex-row items-center lg:items-center space-y-4 lg:space-y-0 lg:space-x-6">
                 <Button 
-                  className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-[shimmer_3s_ease-in-out_infinite]"
+                  className="w-full sm:w-auto bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-4 px-8 sm:px-12 rounded-xl text-lg shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:animate-[shimmer_3s_ease-in-out_infinite]"
                   style={{ fontWeight: 700 }}
                   onClick={handleCTAClick}
                 >

@@ -16,8 +16,8 @@ const FeatureSection = () => {
   return (
     <section id="features" className="py-16 px-4 container mx-auto bg-[#1e2a4a]">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4 text-white">Why Use Claudia?</h2>
-        <p className="max-w-2xl mx-auto text-white/80">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Why Use Claudia?</h2>
+        <p className="max-w-2xl mx-auto text-white/80 text-base md:text-lg">
           Our AI life management platform is specifically designed for ADHD brains, reducing cognitive load 
           and helping you build an organized life with minimal effort.
         </p>

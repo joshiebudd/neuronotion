@@ -32,20 +32,21 @@ const NEWClaudiaLPHeader = () => {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out py-4 px-6",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out py-3 px-4 sm:py-4 sm:px-6 overflow-x-hidden",
           scrolled
             ? "bg-[#1e2a4a]/90 backdrop-blur-md shadow-sm border-b border-white/10"
             : "bg-transparent"
         )}
       >
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="flex items-center justify-between max-w-[1400px] mx-auto w-full">
           <Link href="/claudianewlp" className="flex items-center space-x-2">
             <img
               src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
               alt="Neuro Logo"
-              className="h-8 w-auto"
+              className="h-7 sm:h-8 w-auto"
             />
-            <span className="text-xl font-semibold tracking-tight text-white">Claudia by Neuro</span>
+            <span className="hidden sm:inline text-xl font-semibold tracking-tight text-white">Claudia by Neuro</span>
+            <span className="sm:hidden text-lg font-semibold tracking-tight text-white">Neuro</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -81,7 +82,7 @@ const NEWClaudiaLPHeader = () => {
           </nav>
 
           <button
-            className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-1.5 px-4 rounded-lg text-sm shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700"
+            className="bg-[#30bcd9] hover:bg-[#30bcd9]/90 text-black font-bold py-1.5 px-3 sm:px-4 rounded-lg text-[11px] sm:text-sm shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-[#30bcd9]/20 backdrop-blur-sm border border-[#30bcd9]/20 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] hover:before:translate-x-[100%] before:transition-transform before:duration-700 whitespace-nowrap"
             style={{ fontWeight: 700 }}
             onClick={handleCTAClick}
           >

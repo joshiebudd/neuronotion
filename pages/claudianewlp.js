@@ -30,7 +30,7 @@ const ClaudiaNewLP = () => {
   }, [router.asPath]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <Head>
         <title>Claudia - AI ADHD Personal Assistant</title>
         <meta name="description" content="The world's most productive group of ADHD Entrepreneurs. Accountable is a co-working crew of ADHD founders getting sh*t done. Together. Every single day." />
