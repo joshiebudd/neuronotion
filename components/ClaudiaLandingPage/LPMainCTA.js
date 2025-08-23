@@ -13,7 +13,7 @@ export const LPMainCTA = () => {
 
   const pricingTiers = [
     {
-      name: "Free",
+      name: "Basic",
       price: 0,
       originalPrice: null,
       period: "",
@@ -74,6 +74,15 @@ export const LPMainCTA = () => {
     if (typeof window !== 'undefined') {
       window.location.href = 'https://app.neuro-notion.com';
     }
+  };
+
+  // Helper to show daily price in the same inline style as the free plan note
+  const calculateDailyPriceDisplay = (monthlyPrice) => {
+    if (!monthlyPrice || monthlyPrice <= 0) return '';
+    const daysInMonth = 30;
+    const perDayRaw = monthlyPrice / daysInMonth;
+    const roundedUpTwoDp = Math.ceil(perDayRaw * 100) / 100;
+    return `Less than £${roundedUpTwoDp.toFixed(2)}/day`;
   };
 
   const handleFAQClick = (index) => {
@@ -187,10 +196,15 @@ export const LPMainCTA = () => {
                     </Button>
                     
                     <div className="h-6 flex items-center justify-center">
-                      {tier.price === 0 && (
+                      {tier.price === 0 ? (
                         <p className="text-xs text-gray-400" style={{ fontWeight: 400 }}>
                           <Check className="h-3 w-3 inline mr-1" />
                           No card required
+                        </p>
+                      ) : (
+                        <p className="text-xs text-gray-400" style={{ fontWeight: 400 }}>
+                          <Check className="h-3 w-3 inline mr-1" />
+                          {calculateDailyPriceDisplay(tier.price)}
                         </p>
                       )}
                     </div>
