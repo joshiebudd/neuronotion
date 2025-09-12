@@ -165,7 +165,7 @@ export const LPTestimonials = () => {
 
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <p className="text-xl sm:text-2xl italic font-medium text-white px-2 sm:px-0" style={{ fontWeight: 400 }}>
-            Real results from <span className="text-[#30bcd9]"><CountUpAnimation target={540} />+</span> Real ADHDers who regained control over their lives.
+            Real results from <span className="text-[#30bcd9]"><CountUpAnimation target={1026} />+</span> Real ADHDers who regained control over their lives.
           </p>
         </div>
 
