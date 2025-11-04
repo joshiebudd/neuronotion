@@ -31,7 +31,7 @@ const ExhaustedAgainBlog = () => {
 
           <div className="blog-content">
             <p className="lead blog-body italic">
-              The experience of being constantly **exhausted again** is a familiar and frustrating reality for many with **Neuro ADHD**. We often fall into the trap of believing that burnout is simply a result of "doing too much." This leads to a cycle of overwork, crash, guilt, and then a desperate attempt to "do less," which rarely solves the underlying problem.
+              The experience of being constantly **&quot;exhausted again&quot; is a familiar and frustrating reality for many with **Neuro ADHD**. We often fall into the trap of believing that burnout is simply a result of &quot;doing too much.&quot; This leads to a cycle of overwork, crash, guilt, and then a desperate attempt to &quot;do less,&quot; which rarely solves the underlying problem.
             </p>
             <br />
             <br />
@@ -41,7 +41,7 @@ const ExhaustedAgainBlog = () => {
             <br />
             <br />
             <p className="blog-body">
-              This is why the mantra needs to shift from **"How do I do less?"** to **"How can I do this in a way that feels safe and sustainable for my body and mind?"** This subtle but profound reframe is the key to long-term energy and productivity, and it's a philosophy perfectly supported by **Claudia by Neuro**, the revolutionary **AI ADHD Assistant**.
+              This is why the mantra needs to shift from **&quot;How do I do less?&quot;** to **&quot;How can I do this in a way that feels safe and sustainable for my body and mind?&quot;** This subtle but profound reframe is the key to long-term energy and productivity, and it's a philosophy perfectly supported by **Claudia by Neuro**, the revolutionary **AI ADHD Assistant**.
             </p>
             <br />
             <br />
@@ -100,8 +100,8 @@ const ExhaustedAgainBlog = () => {
               Burnout is a cumulative problem, and it requires a cumulative solution. A single long break is less effective than frequent, short, and intentional pauses.
             </p>
             <ul className="list-disc ml-8 blog-body">
-              <li>**The Power of Two Minutes:** Two minutes of deep breathing, stretching, or simply looking out a window can reset your nervous system. These are your "micro-rests."</li>
-              <li>**Claudia's Role:** As your **ADHD Assistant**, Claudia can be set to prompt these micro-rests at strategic intervals, such as every 90 minutes. Furthermore, it can help you identify and name "refuel stations" in your day—like making coffee or taking a shower—and ensure those moments are protected for genuine mental recharge.</li>
+              <li>**The Power of Two Minutes:** Two minutes of deep breathing, stretching, or simply looking out a window can reset your nervous system. These are your &quot;micro-rests&quot;</li>
+              <li>**Claudia's Role:** As your **ADHD Assistant**, Claudia can be set to prompt these micro-rests at strategic intervals, such as every 90 minutes. Furthermore, it can help you identify and name &quot;refuel stations&quot; in your day—like making coffee or taking a shower—and ensure those moments are protected for genuine mental recharge.</li>
             </ul>
             <br />
             <br />

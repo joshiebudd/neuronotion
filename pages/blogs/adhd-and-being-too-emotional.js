@@ -31,12 +31,12 @@ const AdhdTooEmotionalBlog = () => {
 
           <div className="blog-content">
             <p className="lead blog-body italic">
-              If you have **Neuro ADHD**, you know the feeling: a minor inconvenience&mdash;a burnt toastie, a delayed train, a slow walker&mdash;can trigger an emotional response that feels disproportionate to the event. You might be told you are "too emotional" or "unstable," but this is a fundamental misunderstanding of **Emotional Dysregulation**, a core symptom of ADHD.
+              If you have **Neuro ADHD**, you know the feeling: a minor inconvenience&mdash;a burnt toastie, a delayed train, a slow walker&mdash;can trigger an emotional response that feels disproportionate to the event. You might be told you are &quot;too emotional&quot; or &quot;unstable,&quot; but this is a fundamental misunderstanding of **Emotional Dysregulation**, a core symptom of ADHD.
             </p>
             <br />
             <br />
             <p className="blog-body">
-              This isn&apos;t a personality flaw; it&apos;s a matter of brain chemistry. For many with **Neuro ADHD**, the prefrontal cortex, which acts as the brain&apos;s emotional brake, is **underactive**. Simultaneously, the amygdala, the brain&apos;s threat detector, is **extra sensitive**. This means your "pause and think" system is slow to engage, and your panic system is on high alert. During peak emotional dysregulation, there is no moment for rational assessment&mdash;**you just feel**.
+              This isn&apos;t a personality flaw; it&apos;s a matter of brain chemistry. For many with **Neuro ADHD**, the prefrontal cortex, which acts as the brain&apos;s emotional brake, is **underactive**. Simultaneously, the amygdala, the brain&apos;s threat detector, is **extra sensitive**. This means your &quot;pause and think&quot; system is slow to engage, and your panic system is on high alert. During peak emotional dysregulation, there is no moment for rational assessment&mdash;**you &quot;just feel&quot;.
             </p>
             <br />
             <br />
@@ -46,13 +46,13 @@ const AdhdTooEmotionalBlog = () => {
             <ul className="list-disc ml-8 blog-body">
               <li>Irritability at tiny things (loud breathing, group chats).</li>
               <li>Meltdowns that seem to come out of nowhere.</li>
-              <li>Shame afterwards for "making a scene" or "being too much."</li>
+              <li>Shame afterwards for &quot;making a scene&quot; or &quot;being too much.&quot;</li>
             </ul>
             <br />
             <br />
             <h2 className="blog-subheader">Claudia ADHD: Your External Emotional Regulator</h2>
             <p className="blog-body">
-              The key to managing emotional dysregulation is to create an external system that provides the "pause and think" function your brain struggles with. This is the power of **Claudia by Neuro**, your dedicated **ADHD Assistant** and **Neuro AI**. Claudia is an **AI ADHD app** designed to help you build the tools, routines, and insights that let your brain work with you, not against you, for a calmer **Neuro Notion** life.
+              The key to managing emotional dysregulation is to create an external system that provides the &quot;pause and think&quot; function your brain struggles with. This is the power of **Claudia by Neuro**, your dedicated **ADHD Assistant** and **Neuro AI**. Claudia is an **AI ADHD app** designed to help you build the tools, routines, and insights that let your brain work with you, not against you, for a calmer **Neuro Notion** life.
             </p>
             <br />
             <br />
@@ -65,7 +65,7 @@ const AdhdTooEmotionalBlog = () => {
             <br />
             <br />
             <p className="blog-body">
-              You are not "too emotional." You have a powerful, intense brain that needs the right support system. With **Claudia by Neuro**, you gain a non-judgemental **AI ADHD app** that helps you understand, manage, and even harness your emotional intensity, leading to a more stable and fulfilling **Neuro Notion** experience.
+              You are not &quot;too emotional.&quot; You have a powerful, intense brain that needs the right support system. With **Claudia by Neuro**, you gain a non-judgemental **AI ADHD app** that helps you understand, manage, and even harness your emotional intensity, leading to a more stable and fulfilling **Neuro Notion** experience.
             </p>
             <br />
             <p className="blog-body italic">
