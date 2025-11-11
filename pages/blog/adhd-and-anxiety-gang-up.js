@@ -31,7 +31,7 @@ const ADHDAnxietyBlog = () => {
 
           <div className="blog-content">
             <p className="lead blog-body italic">
-              For many individuals with **Neuro ADHD**, the experience of anxiety is not a separate issue, but an intertwined partner in the daily struggle. When **ADHD and anxiety gang up on you**, the result is a debilitating cycle where executive dysfunction triggers panic, and panic further paralyzes executive function. This &apos;couple from hell&apos; can make even the smallest task feel like an insurmountable mountain.
+              For many individuals with <strong>Neuro ADHD</strong>, the experience of anxiety is not a separate issue, but an intertwined partner in the daily struggle. When <strong>ADHD and anxiety gang up on you</strong>, the result is a debilitating cycle where executive dysfunction triggers panic, and panic further paralyzes executive function. This &apos;couple from hell&apos; can make even the smallest task feel like an insurmountable mountain.
             </p>
             <br />
             <br />
@@ -41,7 +41,7 @@ const ADHDAnxietyBlog = () => {
             <br />
             <br />
             <p className="blog-body">
-              You are not broken, and you are certainly not alone; nearly half of adults with ADHD also experience an anxiety disorder. The solution is not to simply try harder, but to implement a system that tackles both the executive function deficit and the resulting anxiety. This is the precise mission of **Claudia by Neuro**, the **AI ADHD Assistant** designed to break this loop.
+              You are not broken, and you are certainly not alone; nearly half of adults with ADHD also experience an anxiety disorder. The solution is not to simply try harder, but to implement a system that tackles both the executive function deficit and the resulting anxiety. This is the precise mission of <strong>Claudia by Neuro</strong>, the <strong>AI ADHD Assistant</strong> designed to break this loop.
             </p>
             <br />
             <br />
@@ -81,38 +81,38 @@ const ADHDAnxietyBlog = () => {
             <br />
             <h2 className="blog-subheader">The 5-Minute Protocol: Instant Nervous System Reset</h2>
             <p className="blog-body">
-              While long-term systems are essential, sometimes you need an immediate fix to stop the spiral. This 5-Minute Break-the-Loop Protocol is a practical, in-the-moment technique for your **Neuro Notion** brain:
+              While long-term systems are essential, sometimes you need an immediate fix to stop the spiral. This 5-Minute Break-the-Loop Protocol is a practical, in-the-moment technique for your <strong>Neuro Notion</strong> brain:
             </p>
             <br />
             <br />
             <ul className="list-disc ml-8 blog-body">
-              <li>**2 Minutes: Regulated Breathing.** Sit down and focus on your breath. Inhale for 4 seconds, exhale for 6 seconds. Repeat six times. This simple act directly signals to your nervous system that you are safe, interrupting the fight-or-flight response.</li>
-              <li>**60 Seconds: Sensory Reset.** Step outside or move to a window. Fresh air and a change of scenery work wonders on regulating an overstimulated nervous system.</li>
-              <li>**30 Seconds: Physical Release.** Clench your fists and shoulders tightly for a few seconds, then release completely. This physical tension-release is an instant reset button for your body.</li>
-              <li>**10 Seconds: Name the Fear.** Write down three specific sources of your current anxiety. Naming the monster shrinks it, moving it from a vague, overwhelming feeling to a concrete, manageable problem.</li>
+              <li><strong>2 Minutes: Regulated Breathing.</strong> Sit down and focus on your breath. Inhale for 4 seconds, exhale for 6 seconds. Repeat six times. This simple act directly signals to your nervous system that you are safe, interrupting the fight-or-flight response.</li>
+              <li><strong>60 Seconds: Sensory Reset.</strong> Step outside or move to a window. Fresh air and a change of scenery work wonders on regulating an overstimulated nervous system.</li>
+              <li><strong>30 Seconds: Physical Release.</strong> Clench your fists and shoulders tightly for a few seconds, then release completely. This physical tension-release is an instant reset button for your body.</li>
+              <li><strong>10 Seconds: Name the Fear.</strong> Write down three specific sources of your current anxiety. Naming the monster shrinks it, moving it from a vague, overwhelming feeling to a concrete, manageable problem.</li>
             </ul>
             <br />
             <br />
             <h2 className="blog-subheader">The Deeper Fix: Preventing the Loop with Claudia by Neuro</h2>
             <p className="blog-body">
-              While the 5-minute protocol is a great emergency brake, the true power lies in prevention. This is where **Claudia by Neuro** shines as the ultimate **ADHD Assistant**.
+              While the 5-minute protocol is a great emergency brake, the true power lies in prevention. This is where <strong>Claudia by Neuro</strong> shines as the ultimate <strong>ADHD Assistant</strong>.
             </p>
             <br />
             <br />
             <p className="blog-body">
-              **Claudia ADHD** is an **ADHD AI app** that uses **Neuro AI** to provide a supportive, non-judgmental system that reduces the friction points that trigger anxiety:
+              <strong>Claudia ADHD</strong> is an <strong>ADHD AI app</strong> that uses <strong>Neuro AI</strong> to provide a supportive, non-judgmental system that reduces the friction points that trigger anxiety:
             </p>
             <br />
             <br />
             <ul className="list-disc ml-8 blog-body">
-              <li>**Task Decomposition:** Anxiety often stems from the overwhelming size of a task. Claudia automatically breaks down large projects into tiny, manageable micro-steps, making task initiation easier and reducing the fear of failure.</li>
-              <li>**Proactive Reminders:** Instead of relying on your fallible memory, Claudia provides gentle, context-aware reminders that prevent the &apos;oh no, I forgot!&apos; anxiety spike.</li>
-              <li>**Emotional Regulation Check-ins:** The **AI ADHD Assistant** can be designed to prompt you to use your coping strategies (like the 5-minute protocol) before you reach a crisis point, ensuring you are working *with* your energy, not against it.</li>
+              <li><strong>Task Decomposition:</strong> Anxiety often stems from the overwhelming size of a task. Claudia automatically breaks down large projects into tiny, manageable micro-steps, making task initiation easier and reducing the fear of failure.</li>
+              <li><strong>Proactive Reminders:</strong> Instead of relying on your fallible memory, Claudia provides gentle, context-aware reminders that prevent the &apos;oh no, I forgot!&apos; anxiety spike.</li>
+              <li><strong>Emotional Regulation Check-ins:</strong> The <strong>AI ADHD Assistant</strong> can be designed to prompt you to use your coping strategies (like the 5-minute protocol) before you reach a crisis point, ensuring you are working <em>with</em> your energy, not against it.</li>
             </ul>
             <br />
             <br />
             <p className="blog-body">
-              By integrating the principles of **Neuronotion**—understanding the unique needs of the neurodivergent brain—**Claudia by Neuro** helps you build a life where structure is a source of calm, not a cause for rebellion. Stop letting **ADHD and anxiety gang up on you**. Start using **Neuro AI** to build a system that supports your peace of mind.
+              By integrating the principles of <strong>Neuronotion</strong>—understanding the unique needs of the neurodivergent brain—<strong>Claudia by Neuro</strong> helps you build a life where structure is a source of calm, not a cause for rebellion. Stop letting <strong>ADHD and anxiety gang up on you</strong>. Start using <strong>Neuro AI</strong> to build a system that supports your peace of mind.
             </p>
             <br />
             <p className="blog-body italic">

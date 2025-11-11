@@ -31,18 +31,18 @@ const BrainSaysICantBlog = () => {
 
           <div className="blog-content">
             <p className="lead blog-body italic">
-              For the **Neuro ADHD** individual, there are days when the capacity is in the gutter, and the brain simply says, **&quot;I can&apos;t.&quot;** This is the painful reality of the **intention-action disconnect**—the gap between what you desperately *want* to do and what you are neurologically able to *actually* do. Traditional productivity tools, which demand an &quot;always organized you&quot; with a bottomless well of motivation, fail spectacularly on these low-capacity days.
+              For the <strong>Neuro ADHD</strong> individual, there are days when the capacity is in the gutter, and the brain simply says, <strong>&quot;I can&apos;t.&quot;</strong> This is the painful reality of the <strong>intention-action disconnect</strong>—the gap between what you desperately <em>want</em> to do and what you are neurologically able to <em>actually</em> do. Traditional productivity tools, which demand an &quot;always organized you&quot; with a bottomless well of motivation, fail spectacularly on these low-capacity days.
             </p>
             <br />
             <br />
             <p className="blog-body">
-              The truth is, your **Neuro Notion** brain doesn&apos;t need another tool to organize your chaos; it needs a bridge to bypass the chaos entirely. This is the fundamental design philosophy of **Claudia by Neuro**, the **AI ADHD Assistant** built for the days when you are barely functioning. You don&apos;t need to be ready to use Claudia; she was built for when you are *unready*.
+              The truth is, your <strong>Neuro Notion</strong> brain doesn&apos;t need another tool to organize your chaos; it needs a bridge to bypass the chaos entirely. This is the fundamental design philosophy of <strong>Claudia by Neuro</strong>, the <strong>AI ADHD Assistant</strong> built for the days when you are barely functioning. You don&apos;t need to be ready to use Claudia; she was built for when you are <em>unready</em>.
             </p>
             <br />
             <br />
             <h2 className="blog-subheader">The Intention-Action Disconnect: Why Effort Feels Overwhelming</h2>
             <p className="blog-body">
-              The **Neuro ADHD** brain often has an underactive prefrontal cortex, the area responsible for executive functions like planning, prioritizing, and task initiation. This neurological difference distorts the perception of time and effort, making even &quot;easy&quot; tasks feel overwhelmingly difficult.
+              The <strong>Neuro ADHD</strong> brain often has an underactive prefrontal cortex, the area responsible for executive functions like planning, prioritizing, and task initiation. This neurological difference distorts the perception of time and effort, making even &quot;easy&quot; tasks feel overwhelmingly difficult.
             </p>
             <br />
             <br />
@@ -76,37 +76,37 @@ const BrainSaysICantBlog = () => {
             <br />
             <h2 className="blog-subheader">Claudia by Neuro: The Bridge Across the Gap</h2>
             <p className="blog-body">
-              **Claudia by Neuro** is not just another **ADHD AI app**; she is the force that steadies your flow by translating your chaotic thoughts into calm, clear organization. She is the shortcut your nervous system has been begging for, especially when you are at your lowest capacity.
+              <strong>Claudia by Neuro</strong> is not just another <strong>ADHD AI app</strong>; she is the force that steadies your flow by translating your chaotic thoughts into calm, clear organization. She is the shortcut your nervous system has been begging for, especially when you are at your lowest capacity.
             </p>
             <br />
             <br />
             <p className="blog-body">
-              The **Neuro AI** within Claudia works by managing the cognitive heavy lifting for you:
+              The <strong>Neuro AI</strong> within Claudia works by managing the cognitive heavy lifting for you:
             </p>
             <br />
             <br />
             <ul className="list-disc ml-8 blog-body">
-              <li>**Chaos-to-Clarity Translation:** You can use the Brain Dump feature to rant, vent, or simply list three things you need to remember at 10 PM. Claudia quietly processes this chaotic stream of thought and turns it into a structured, actionable plan for the next day—one that respects your energy and brain type.</li>
-              <li>**Zero-Motivation Entry Point:** The first step to using Claudia requires zero motivation, organization, or hope. It requires only a single moment of honesty: &quot;I&apos;m tired. I need help.&quot; The simplest interaction—like tapping the Brain Dump button and saying three things—is the entire first step.</li>
-              <li>**Built Around You:** Unlike tools that demand you conform to their rigid structure, Claudia was built around the fluid, non-linear needs of the **Neuro ADHD** brain. The people who think they are &quot;too overwhelmed&quot; to use her are precisely the ones who experience the most profound relief.</li>
+              <li><strong>Chaos-to-Clarity Translation:</strong> You can use the Brain Dump feature to rant, vent, or simply list three things you need to remember at 10 PM. Claudia quietly processes this chaotic stream of thought and turns it into a structured, actionable plan for the next day—one that respects your energy and brain type.</li>
+              <li><strong>Zero-Motivation Entry Point:</strong> The first step to using Claudia requires zero motivation, organization, or hope. It requires only a single moment of honesty: &quot;I&apos;m tired. I need help.&quot; The simplest interaction—like tapping the Brain Dump button and saying three things—is the entire first step.</li>
+              <li><strong>Built Around You:</strong> Unlike tools that demand you conform to their rigid structure, Claudia was built around the fluid, non-linear needs of the <strong>Neuro ADHD</strong> brain. The people who think they are &quot;too overwhelmed&quot; to use her are precisely the ones who experience the most profound relief.</li>
             </ul>
             <br />
             <br />
             <h2 className="blog-subheader">The Neuro AI First Step: A Moment of Honesty</h2>
             <p className="blog-body">
-              If you are thinking, &quot;I don&apos;t have the mental bandwidth for another tool,&quot; that is the strongest signal that you need the support of an **ADHD Assistant**.
+              If you are thinking, &quot;I don&apos;t have the mental bandwidth for another tool,&quot; that is the strongest signal that you need the support of an <strong>ADHD Assistant</strong>.
             </p>
             <br />
             <br />
             <p className="blog-body">
-              Your first step with **Claudia ADHD** is simple:
+              Your first step with <strong>Claudia ADHD</strong> is simple:
             </p>
             <br />
             <br />
             <ol className="list-decimal ml-8 blog-body">
-              <li>**Open Claudia.**</li>
-              <li>**Tap the Brain Dump button.**</li>
-              <li>**Say three things that you need to remember.**</li>
+              <li><strong>Open Claudia.</strong></li>
+              <li><strong>Tap the Brain Dump button.</strong></li>
+              <li><strong>Say three things that you need to remember.</strong></li>
             </ol>
             <br />
             <br />
@@ -115,7 +115,7 @@ const BrainSaysICantBlog = () => {
             </p>
             <br />
             <p className="blog-body">
-              Let **Neuro AI** be the support system that allows you to show up, even when your brain says, &quot;I can&apos;t.&quot;
+              Let <strong>Neuro AI</strong> be the support system that allows you to show up, even when your brain says, &quot;I can&apos;t.&quot;
             </p>
             <br />
             <p className="blog-body italic">

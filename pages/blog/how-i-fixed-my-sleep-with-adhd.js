@@ -31,18 +31,18 @@ const ADHDSleepBlog = () => {
 
           <div className="blog-content">
             <p className="lead blog-body italic">
-              For the **Neuro ADHD** brain, the simple act of falling asleep can feel like a battle against a relentless internal monologue. The common advice to &quot;just go to sleep&quot; is not only unhelpful but deeply frustrating, as it ignores the underlying neurological differences that make sleep a minefield. Around 45% of adults with ADHD struggle with insomnia and other sleep difficulties, creating a vicious cycle where poor sleep amplifies ADHD symptoms, leading to even worse sleep.
+              For the <strong>Neuro ADHD</strong> brain, the simple act of falling asleep can feel like a battle against a relentless internal monologue. The common advice to &quot;just go to sleep&quot; is not only unhelpful but deeply frustrating, as it ignores the underlying neurological differences that make sleep a minefield. Around 45% of adults with ADHD struggle with insomnia and other sleep difficulties, creating a vicious cycle where poor sleep amplifies ADHD symptoms, leading to even worse sleep.
             </p>
             <br />
             <br />
             <p className="blog-body">
-              The problem is multifaceted: a delayed circadian rhythm, hyperarousal from emotional dysregulation, and heightened sensory sensitivity all conspire to keep the **Neuro Notion** brain awake. The solution is not a single trick, but a personalized, multi-pronged strategy that addresses these unique challenges. This is where **Claudia by Neuro**, the **AI ADHD Assistant**, can provide the necessary structure and consistency to finally achieve restorative sleep.
+              The problem is multifaceted: a delayed circadian rhythm, hyperarousal from emotional dysregulation, and heightened sensory sensitivity all conspire to keep the <strong>Neuro Notion</strong> brain awake. The solution is not a single trick, but a personalized, multi-pronged strategy that addresses these unique challenges. This is where <strong>Claudia by Neuro</strong>, the <strong>AI ADHD Assistant</strong>, can provide the necessary structure and consistency to finally achieve restorative sleep.
             </p>
             <br />
             <br />
             <h2 className="blog-subheader">Why Sleep is So Tricky for the Neuro ADHD Brain</h2>
             <p className="blog-body">
-              Understanding the root causes is the first step toward fixing your sleep. The **Neuro AI** approach acknowledges that the ADHD brain is fundamentally different in its sleep-wake regulation.
+              Understanding the root causes is the first step toward fixing your sleep. The <strong>Neuro AI</strong> approach acknowledges that the ADHD brain is fundamentally different in its sleep-wake regulation.
             </p>
             <br />
             <br />
@@ -76,38 +76,38 @@ const ADHDSleepBlog = () => {
             <br />
             <h2 className="blog-subheader">The 10-Step Neuro-Optimized Sleep Protocol</h2>
             <p className="blog-body">
-              Fixing your sleep requires experimentation and consistency. Do not try to implement all of these at once; pick one or two and integrate them with the help of your **ADHD Assistant**.
+              Fixing your sleep requires experimentation and consistency. Do not try to implement all of these at once; pick one or two and integrate them with the help of your <strong>ADHD Assistant</strong>.
             </p>
             <br />
             <br />
             <ol className="list-decimal ml-8 blog-body">
-              <li>**Advance Your Bedtime (Gently):** Go to bed 45 minutes earlier than your target sleep time. This allows for the inevitable &quot;brain dump&quot; time without sacrificing total sleep duration.</li>
-              <li>**Use a Gradual Alarm:** Ditch the jarring, abrupt alarm. Use an app or a sunrise lamp (like the Lumi Alarm Lamp) that gradually wakes you up. This gentler transition is far better for the sensitive **Neuro ADHD** nervous system.</li>
-              <li>**The Caffeine Cut-Off:** Implement a hard caffeine cut-off 8 hours before sleep (e.g., no coffee past 2 PM). Caffeine has a long half-life, and even small amounts can disrupt deep sleep.</li>
-              <li>**Optimize the Environment:** Make your room a sensory sanctuary: cool, dark, and quiet. Invest in a fan for white noise, a sleep mask, and earplugs to minimize sensory input.</li>
-              <li>**Micro-Regulation Before Bed:** Instead of a long, overwhelming meditation, start with 30 seconds of deep, regulated breathing (inhale for 4, exhale for 6). This is a quick, effective way to signal to your body that it&apos;s time to switch off.</li>
-              <li>**Strategic Snacking:** Avoid high-sugar snacks before bed, as they can cause energy spikes. If you must snack, choose something low in sugar and pair it with ice-cold water, which can provide a brief, stimulating sensory input that paradoxically helps some ADHD brains settle.</li>
-              <li>**Be Brutal with Screens:** Implement a strict 30-minute (or longer) phone cut-off before bed. The blue light and the constant novelty of scrolling are dopamine traps that prevent the brain from winding down.</li>
-              <li>**Embrace Background Noise:** If silence is too stimulating, use a consistent, non-engaging sound source: rain sounds, nature sounds, or even sleep music.</li>
-              <li>**NSDR for Recovery:** After a bad night&apos;s sleep, try a 5-minute Non-Sleep Deep Rest (NSDR) session. This guided relaxation can make you feel more rested without needing to fall back asleep.</li>
-              <li>**Exercise Timing:** Regular exercise is crucial, but avoid intense workouts within 2 hours of bedtime, as the resulting adrenaline can interfere with sleep initiation.</li>
+              <li><strong>Advance Your Bedtime (Gently):</strong> Go to bed 45 minutes earlier than your target sleep time. This allows for the inevitable &quot;brain dump&quot; time without sacrificing total sleep duration.</li>
+              <li><strong>Use a Gradual Alarm:</strong> Ditch the jarring, abrupt alarm. Use an app or a sunrise lamp (like the Lumi Alarm Lamp) that gradually wakes you up. This gentler transition is far better for the sensitive <strong>Neuro ADHD</strong> nervous system.</li>
+              <li><strong>The Caffeine Cut-Off:</strong> Implement a hard caffeine cut-off 8 hours before sleep (e.g., no coffee past 2 PM). Caffeine has a long half-life, and even small amounts can disrupt deep sleep.</li>
+              <li><strong>Optimize the Environment:</strong> Make your room a sensory sanctuary: cool, dark, and quiet. Invest in a fan for white noise, a sleep mask, and earplugs to minimize sensory input.</li>
+              <li><strong>Micro-Regulation Before Bed:</strong> Instead of a long, overwhelming meditation, start with 30 seconds of deep, regulated breathing (inhale for 4, exhale for 6). This is a quick, effective way to signal to your body that it&apos;s time to switch off.</li>
+              <li><strong>Strategic Snacking:</strong> Avoid high-sugar snacks before bed, as they can cause energy spikes. If you must snack, choose something low in sugar and pair it with ice-cold water, which can provide a brief, stimulating sensory input that paradoxically helps some ADHD brains settle.</li>
+              <li><strong>Be Brutal with Screens:</strong> Implement a strict 30-minute (or longer) phone cut-off before bed. The blue light and the constant novelty of scrolling are dopamine traps that prevent the brain from winding down.</li>
+              <li><strong>Embrace Background Noise:</strong> If silence is too stimulating, use a consistent, non-engaging sound source: rain sounds, nature sounds, or even sleep music.</li>
+              <li><strong>NSDR for Recovery:</strong> After a bad night&apos;s sleep, try a 5-minute Non-Sleep Deep Rest (NSDR) session. This guided relaxation can make you feel more rested without needing to fall back asleep.</li>
+              <li><strong>Exercise Timing:</strong> Regular exercise is crucial, but avoid intense workouts within 2 hours of bedtime, as the resulting adrenaline can interfere with sleep initiation.</li>
             </ol>
             <br />
             <br />
             <h2 className="blog-subheader">The Role of Claudia ADHD and Neuro Notion</h2>
             <p className="blog-body">
-              The biggest challenge in fixing sleep with ADHD is **consistency**. This is where **Claudia by Neuro** excels. As your **ADHD AI app**, it can:
+              The biggest challenge in fixing sleep with ADHD is <strong>consistency</strong>. This is where <strong>Claudia by Neuro</strong> excels. As your <strong>ADHD AI app</strong>, it can:
             </p>
             <br />
             <br />
             <ul className="list-disc ml-8 blog-body">
-              <li>**Automate Consistency:** Set up your entire wind-down routine as a series of simple, non-negotiable steps that Claudia reminds you of at the same time every night.</li>
-              <li>**Prevent Overwhelm:** By integrating the principles of **Neuronotion**, Claudia ensures you only focus on 1-2 new strategies at a time, preventing the overwhelm that leads to giving up.</li>
+              <li><strong>Automate Consistency:</strong> Set up your entire wind-down routine as a series of simple, non-negotiable steps that Claudia reminds you of at the same time every night.</li>
+              <li><strong>Prevent Overwhelm:</strong> By integrating the principles of <strong>Neuronotion</strong>, Claudia ensures you only focus on 1-2 new strategies at a time, preventing the overwhelm that leads to giving up.</li>
             </ul>
             <br />
             <br />
             <p className="blog-body">
-              By leveraging **Neuro AI** to manage the consistency and structure, you can focus on the small, cumulative steps that lead to perfect sleep. Stop being a zombie and start waking up feeling human. Let **Claudia ADHD** help you give your sleep the attention it deserves.
+              By leveraging <strong>Neuro AI</strong> to manage the consistency and structure, you can focus on the small, cumulative steps that lead to perfect sleep. Stop being a zombie and start waking up feeling human. Let <strong>Claudia ADHD</strong> help you give your sleep the attention it deserves.
             </p>
             <br />
             <p className="blog-body italic">
