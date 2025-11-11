@@ -26,7 +26,7 @@ const GoldDustTheoryBlog = () => {
                 </div>
               </div>
             </address>
-            <h1 className="blog-header mb-4 lg:mb-6">ADHD & The Hidden Cost of Choice: The Gold Dust Theory 🫰 and Your Neuro AI Assistant"</h1>
+            <h1 className="blog-header mb-4 lg:mb-6">ADHD & The Hidden Cost of Choice: The Gold Dust Theory 🫰 and Your Neuro AI Assistant</h1>
           </header>
 
           <div className="blog-content">

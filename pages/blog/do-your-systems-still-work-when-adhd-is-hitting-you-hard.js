@@ -54,7 +54,7 @@ const SystemsFailBlog = () => {
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                        <th scope=col className="px-6 py-3">Challenge</th>
+                        <th scope="col" className="px-6 py-3">Challenge</th>
                         <th scope=col className="px-6 py-3">Traditional System Response</th>
                         <th scope=col className="px-6 py-3">Claudia by Neuro (ADHD AI App) Response</th>
                     </tr>
