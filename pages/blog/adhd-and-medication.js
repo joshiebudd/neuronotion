@@ -1,35 +1,35 @@
-import React from react;
-import HPHeader from ../../components/Homepage/HPHeader;
+import React from 'react';
+import HPHeader from '../../components/Homepage/HPHeader';
 const ADHDManagementBlog = () => {
   return (
-    <main className=pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased>
-      <div className=flex justify-between px-4 mx-auto max-w-screen-xl>
+    <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
+      <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
         <HPHeader />
-        <article className=mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo>
-          <header className=mb-4 lg:mb-6 not-format>
-            <address className=flex items-center mb-6 not-italic>
-              <div className=inline-flex items-center mr-3 text-sm text-gray-900>
+        <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
+          <header className="mb-4 lg:mb-6 not-format">
+            <address className="flex items-center mb-6 not-italic">
+              <div className="inline-flex items-center mr-3 text-sm text-gray-900">
                 <img
-                  className=mr-4 w-16 h-16 rounded-full
-                  src=https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg
-                  alt=Josh Budd
+                  className="mr-4 w-16 h-16 rounded-full"
+                  src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
+                  alt="Josh Budd"
                 />
                 <div>
-                  <a href=# rel=author className=text-xl font-bold text-gray-900>Josh Budd</a>
-                  <p className=text-base text-gray-900>
+                  <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
+                  <p className="text-base text-gray-900">
                     Founder @ <b>Neuro Notion</b>
                   </p>
-                  <p className=text-base text-gray-900>
-                    <time pubdate dateTime=2024-11-04 title=November 4th, 2024>Nov. 4, 2024</time>
+                  <p className="text-base text-gray-900">
+                    <time pubdate dateTime="2024-11-04" title="November 4th, 2024">Nov. 4, 2024</time>
                   </p>
                 </div>
               </div>
             </address>
-            <h1 className=blog-header mb-4 lg:mb-6>How to Manage ADHD in Adults Without Medication</h1>
+            <h1 className="blog-header mb-4 lg:mb-6">How to Manage ADHD in Adults Without Medication</h1>
           </header>
 
-          <div className=blog-content>
-            <p className=lead blog-body italic>
+          <div className="blog-content">
+            <p className="lead blog-body italic">
               Disclaimer!: I am not a medical professional. This blog is in no way trying to give medical advice. It gives my perspective on ADHD medication.
               <br />
               <br />
@@ -40,13 +40,13 @@ const ADHDManagementBlog = () => {
             </p>
             <br />
             <br />
-            <p className=blog-body>
+            <p className="blog-body">
               Lets dive deep into what ADHD medication really is, why it can be helpful, and how it fits into a broader management plan.
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>What is ADHD?</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">What is ADHD?</h2>
+            <p className="blog-body">
               In short, one thing that connects adults with ADHD is a difficulty to juggle things mentally.
               <br />
               <br />
@@ -60,8 +60,8 @@ const ADHDManagementBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>What Is ADHD Medication?</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">What Is ADHD Medication?</h2>
+            <p className="blog-body">
               In simple terms, ADHD medications are tools designed to help manage symptoms by counteracting the parts of our brains that are imbalanced.
               <br />
               <br />
@@ -78,8 +78,8 @@ const ADHDManagementBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>The Benefits of ADHD Medication</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">The Benefits of ADHD Medication</h2>
+            <p className="blog-body">
               When ADHD medication works, it can feel like a superpower.
               <br />
               <br />
@@ -99,8 +99,8 @@ const ADHDManagementBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>Why Medication Isnt a Silver Bullet</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">Why Medication Isnt a Silver Bullet</h2>
+            <p className="blog-body">
               However, lets be clear: ADHD medication isnt a one-size-fits-all solution. It doesnt cure your ADHD, and it doesnt mean that managing ADHD is suddenly easy.
               <br />
               <br />
@@ -111,8 +111,8 @@ const ADHDManagementBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>How to Treat ADHD in Adults Without Meds</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">How to Treat ADHD in Adults Without Meds</h2>
+            <p className="blog-body">
               If youre someone who doesnt want to rely solely on medication, or you even want to continue taking them, there are natural ADHD management strategies you should be adopting.
               <br />
               <br />
@@ -144,8 +144,8 @@ const ADHDManagementBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>Finding a Balance Between Medication and Natural Strategies</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">Finding a Balance Between Medication and Natural Strategies</h2>
+            <p className="blog-body">
               Managing ADHD is about finding what works best for you. For some, medication is a non-negotiable part of staying functional.
               <br />
               <br />
@@ -156,8 +156,8 @@ const ADHDManagementBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>The Real Takeaway on ADHD Medication</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">The Real Takeaway on ADHD Medication</h2>
+            <p className="blog-body">
               ADHD medication can be life-changing, but its only one piece of the puzzle. The real lasting change occurs when you build foundational systems that make living life with ADHD 10x easier.
               <br />
               <br />
@@ -170,7 +170,7 @@ const ADHDManagementBlog = () => {
               Managing ADHD is tough, but with the right support and tools, its absolutely possible.
             </p>
             <br />
-            <p className=blog-body italic>
+            <p className="blog-body italic">
               By Josh Budd | Founder @ <b>Neuro Notion</b>
             </p>
           </div>

@@ -1,41 +1,41 @@
-import React from react;
-import HPHeader from ../../components/Homepage/HPHeader;
+import React from 'react';
+import HPHeader from '../../components/Homepage/HPHeader';
 
 const ADHDRoutinesBlog = () => {
   return (
-    <main className=pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased>
-      <div className=flex justify-between px-4 mx-auto max-w-screen-xl>
+    <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
+      <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
         <HPHeader />
-        <article className=mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo>
-          <header className=mb-4 lg:mb-6 not-format>
-            <address className=flex items-center mb-6 not-italic>
-              <div className=inline-flex items-center mr-3 text-sm text-gray-900>
+        <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
+          <header className="mb-4 lg:mb-6 not-format">
+            <address className="flex items-center mb-6 not-italic">
+              <div className="inline-flex items-center mr-3 text-sm text-gray-900">
                 <img
-                  className=mr-4 w-16 h-16 rounded-full
-                  src=https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg
-                  alt=Josh Budd
+                  className="mr-4 w-16 h-16 rounded-full"
+                  src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
+                  alt="Josh Budd"
                 />
                 <div>
-                  <a href=# rel=author className=text-xl font-bold text-gray-900>Josh Budd</a>
-                  <p className=text-base text-gray-900>
+                  <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
+                  <p className="text-base text-gray-900">
                     Founder @ <b>Neuro Notion</b>
                   </p>
-                  <p className=text-base text-gray-900>
-                    <time pubdate dateTime=2023-05-15 title=May 15th, 2023>May 15, 2023</time>
+                  <p className="text-base text-gray-900">
+                    <time pubdate dateTime="2023-05-15" title="May 15th, 2023">May 15, 2023</time>
                   </p>
                 </div>
               </div>
             </address>
-            <h1 className=blog-header mb-4 lg:mb-6>How to build habits and routines with ADHD 🏆</h1>
+            <h1 className="blog-header mb-4 lg:mb-6">How to build habits and routines with ADHD 🏆</h1>
           </header>
           
-          <div className=blog-content>
-            <p className=lead blog-body>
+          <div className="blog-content">
+            <p className="lead blog-body">
               Read Time: 8 minutes
             </p>
             <br />
             <br />
-            <p className=blog-body>
+            <p className="blog-body">
               How to build habits and routines with ADHD?
               <br />
               <br />
@@ -49,8 +49,8 @@ const ADHDRoutinesBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>What is ADHD? 🧠</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">What is ADHD? 🧠</h2>
+            <p className="blog-body">
               In short, something that connects most adults with ADHD is <b>struggling to juggle things mentally.</b>
               <br />
               <br />
@@ -64,8 +64,8 @@ const ADHDRoutinesBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>Why are habits hard to form with ADHD? 😵‍💫</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">Why are habits hard to form with ADHD? 😵‍💫</h2>
+            <p className="blog-body">
               As mentioned above, ADHD causes a massive reduction in mental capacity to act and think rationally, so instead <b>we often rely on how we feel when we act.</b>
               <br />
               <br />
@@ -120,9 +120,9 @@ const ADHDRoutinesBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>How to form habits with ADHD:</h2>
-            <h3 className=blog-subheader>1. Get slapped in the face by your why</h3>
-            <p className=blog-body>
+            <h2 className="blog-subheader">How to form habits with ADHD:</h2>
+            <h3 className="blog-subheader">1. Get slapped in the face by your why</h3>
+            <p className="blog-body">
               Having a really strong why and constantly reminding yourself of that why is crucial.
               <br />
               <br />
@@ -142,8 +142,8 @@ const ADHDRoutinesBlog = () => {
             </p>
             <br />
             <br />
-            <h3 className=blog-subheader>2. Start ridiculously small</h3>
-            <p className=blog-body>
+            <h3 className="blog-subheader">2. Start ridiculously small</h3>
+            <p className="blog-body">
               When it comes to habit formation with ADHD, think microscopic. Instead of Ill exercise for an hour every day, start with Ill do one push-up a day.
               <br />
               <br />
@@ -166,20 +166,20 @@ const ADHDRoutinesBlog = () => {
 </b>            </p>
             <br />
             <br />
-            <h3 className=blog-subheader>3. Use visual cues and reminders</h3>
-            <p className=blog-body>
+            <h3 className="blog-subheader">3. Use visual cues and reminders</h3>
+            <p className="blog-body">
               ADHD brains often struggle with working memory. Combat this by using visual cues:
               <br />
               → Set out your gym clothes the night before.
               <br />
               → Use colorful sticky notes as reminders.
               <br />
-              → Use an ADHD friendly habit tracker that is visually appealing (Try the <a href=https://www.neuro-notion.com/templates target=_blank rel=noopener noreferrer className=text-blue-600 hover:text-blue-800>Neuro Notion Free ADHD Routine & Habit Tracker Template</a>)
+              → Use an ADHD friendly habit tracker that is visually appealing (Try the <a href="https://www.neuro-notion.com/templates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Neuro Notion Free ADHD Routine & Habit Tracker Template</a>)
             </p>
             <br />
             <br />
-            <h3 className=blog-subheader>4. Gamify your habits</h3>
-            <p className=blog-body>
+            <h3 className="blog-subheader">4. Gamify your habits</h3>
+            <p className="blog-body">
               Yes, after 1 week youll probably dread the idea of going to the gym. But if you set yourself a specific reward for completing the gym then you have a short-term goal at the end of it.
               <br />
               <br />
@@ -190,8 +190,8 @@ const ADHDRoutinesBlog = () => {
             </p>
             <br />
             <br />
-            <h3 className=blog-subheader>5. Prepare for setbacks</h3>
-            <p className=blog-body>
+            <h3 className="blog-subheader">5. Prepare for setbacks</h3>
+            <p className="blog-body">
               With ADHD, no one is immune from having one of those days. Prepare for this by:
               <br />
               • Having an <b>if-then</b> plan for obstacles. (e.g., If I miss a day at the gym, then Ill do a 10-minute home workout.)
@@ -202,8 +202,8 @@ const ADHDRoutinesBlog = () => {
             </p>
             <br />
             <br />
-            <h3 className=blog-subheader>6. Capitalize on your good days</h3>
-            <p className=blog-body>
+            <h3 className="blog-subheader">6. Capitalize on your good days</h3>
+            <p className="blog-body">
               If youre having a day where your symptoms are less severe, use that energy to set up systems that will help you on your harder days.
               <br />
               <br />
@@ -211,8 +211,8 @@ const ADHDRoutinesBlog = () => {
             </p>
             <br />
             <br />
-            <h3 className=blog-subheader>7. Body Double!</h3>
-            <p className=blog-body>
+            <h3 className="blog-subheader">7. Body Double!</h3>
+            <p className="blog-body">
               All ADHDers know that nothing is more motivating than having someone else to battle through it with.
               <br />
               <br />
@@ -222,12 +222,12 @@ const ADHDRoutinesBlog = () => {
               <br />
               → Set reminders to check in with each other - take pictures for evidence every time.
               <br />
-              → You can even do this virtually with strangers in <a href=https://discord.gg/6drDpUnYVG target=_blank rel=noopener noreferrer>communities</a>.
+              → You can even do this virtually with strangers in <a href="https://discord.gg/6drDpUnYVG" target="_blank" rel="noopener noreferrer">communities</a>.
             </p>
             <br />
             <br />
-            <h2 className=blog-subheader>Conclusion ☁️</h2>
-            <p className=blog-body>
+            <h2 className="blog-subheader">Conclusion ☁️</h2>
+            <p className="blog-body">
               Building habits with ADHD is challenging, but its far from impossible.
               <br />
               <br />
@@ -247,7 +247,7 @@ const ADHDRoutinesBlog = () => {
             </p>
             <br />
             <br />
-            <p className=blog-body italic>
+            <p className="blog-body italic">
               by <b>Josh Budd | Founder of Neuro Notion</b>
             </p>
           </div>
