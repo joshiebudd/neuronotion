@@ -46,7 +46,7 @@ const OldClaudiaHeader = () => {
         )}
       >
         <div className="container mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="https://www.neuro-notion.com" className="flex items-center space-x-2">
             <img 
               src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png" 
               alt="Neuro Logo" 

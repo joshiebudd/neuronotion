@@ -1,11 +1,11 @@
 import React from "react";
-import HPHeader from "../Homepage/HPHeader";
+import OldClaudiaHeader from "../OldClaudiaHeader";
 import BlogCard from "./blogcard";
 
 const ArticleSelect = () => {
   return (
     <div className="flex justify-center">
-      <HPHeader />
+      <OldClaudiaHeader />
       <div className="max-w-screen-lg w-full">
         <section className="bg-white pt-16 pb-10 lg:pt-32 lg:pb-20">
           <div className="container px-4 lg:px-0">
