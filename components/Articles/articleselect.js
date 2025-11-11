@@ -141,7 +141,7 @@ const ArticleSelect = () => {
                 date="Aug 23, 2025"
                 CardTitle="Want a Clearer, Calmer Version of You?"
                 CardDescription="Discover how AI-powered tools can help you achieve mental clarity and calm."
-                image="https://NeuroNotionPullZonw.b-cdn.net/Blog%20Cover%20Images/pexels-olly-3807738.jpg"
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/riwkbOhGxUQuCLUZ.jpeg"
                 slug="want-a-chance-at-a-clearer-calmer-version-of-you"
               />
             </div>
