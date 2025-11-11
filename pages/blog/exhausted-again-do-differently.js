@@ -31,12 +31,12 @@ const ExhaustedAgainBlog = () => {
 
           <div className="blog-content">
             <p className="lead blog-body italic">
-              The experience of being constantly &quot;exhausted again&quot; is a familiar and frustrating reality for many with **Neuro ADHD**. We often fall into the trap of believing that burnout is simply a result of &quot;doing too much.&quot; This leads to a cycle of overwork, crash, guilt, and then a desperate attempt to &quot;do less,&quot; which rarely solves the underlying problem..
+              The experience of being constantly &quot;exhausted again&quot; is a familiar and frustrating reality for many with **Neuro ADHD**. We often fall into the trap of believing that burnout is simply a result of &quot;doing too much.&quot; This leads to a cycle of overwork, crash, guilt, and then a desperate attempt to &quot;do less,&quot; which rarely solves the underlying problem.
             </p>
             <br />
             <br />
             <p className="blog-body">
-              The truth, as understood by the principles of **Neuro Notion**, is that burnout isn't just about the quantity of work; it's about the *quality* of the effort and whether it aligns with your unique cognitive operating system. Burnout occurs when your nervous system is perpetually stuck in survival mode, forcing you to operate in ways that are fundamentally unsustainable for your brain.
+              The truth, as understood by the principles of **Neuro Notion**, is that burnout isn&apos;t just about the quantity of work; it&apos;s about the *quality* of the effort and whether it aligns with your unique cognitive operating system. Burnout occurs when your nervous system is perpetually stuck in survival mode, forcing you to operate in ways that are fundamentally unsustainable for your brain.
             </p>
             <br />
             <br />
@@ -45,9 +45,9 @@ const ExhaustedAgainBlog = () => {
             </p>
             <br />
             <br />
-            <h2 className="blog-subheader">The ADHD Burnout Equation: Why Rest Isn't Enough</h2>
+            <h2 className="blog-subheader">The ADHD Burnout Equation: Why Rest Isn&apos;t Enough</h2>
             <p className="blog-body">
-              For the **Neuro ADHD** brain, rest alone is often a temporary fix because it doesn't address the core issue: an unsustainable system. You can take a vacation, but if you return to the same patterns of work that fight your brain's natural rhythm, the exhaustion will quickly return.
+              For the **Neuro ADHD** brain, rest alone is often a temporary fix because it doesn&apos;t address the core issue: an unsustainable system. You can take a vacation, but if you return to the same patterns of work that fight your brain&apos;s natural rhythm, the exhaustion will quickly return.
             </p>
             <br />
             <br />
@@ -67,12 +67,12 @@ const ExhaustedAgainBlog = () => {
                     </tr>
                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Shallow Breathing/Tight Shoulders</th>
-                        <td className="px-6 py-4">The body's physical response to a state of perpetual urgency and overwhelm.</td>
+                        <td className="px-6 py-4">The body&apos;s physical response to a state of perpetual urgency and overwhelm.</td>
                         <td className="px-6 py-4">The **ADHD Assistant** breaks down overwhelming tasks into micro-steps, reducing the perceived urgency and cognitive load.</td>
                     </tr>
                     <tr className="bg-white dark:bg-gray-800">
                         <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">The Guilt Spiral</th>
-                        <td className="px-6 py-4">Feeling like a failure because you can't keep up with neurotypical expectations.</td>
+                        <td className="px-6 py-4">Feeling like a failure because you can&apos;t keep up with neurotypical expectations.</td>
                         <td className="px-6 py-4">**Neuro AI** reframes success around sustainability and energy alignment, not just output, reducing the pressure to conform.</td>
                     </tr>
                 </tbody>
@@ -81,7 +81,7 @@ const ExhaustedAgainBlog = () => {
             <br />
             <h2 className="blog-subheader">Doing Differently: Three Pillars of Sustainable Energy</h2>
             <p className="blog-body">
-              To truly escape the cycle of being **exhausted again**, you need to implement strategies that respect your brain's need for novelty, manage your energy, and regulate your nervous system. **Claudia by Neuro** is the **ADHD AI app** that integrates these pillars into your daily life.
+              To truly escape the cycle of being **exhausted again**, you need to implement strategies that respect your brain&apos;s need for novelty, manage your energy, and regulate your nervous system. **Claudia by Neuro** is the **ADHD AI app** that integrates these pillars into your daily life.
             </p>
             <br />
             <br />
@@ -91,7 +91,7 @@ const ExhaustedAgainBlog = () => {
             </p>
             <ul className="list-disc ml-8 blog-body">
               <li>**Work with Your Peaks:** Reserve your highest-energy times for your most demanding, non-negotiable tasks.</li>
-              <li>**Claudia's Role:** The **AI ADHD Assistant** uses **Neuronotion**'s data-driven insights to help you track your energy and focus levels. It then intelligently schedules your tasks, ensuring that deep work is aligned with your natural peaks and lighter, administrative tasks are reserved for lower-energy periods. This is true energy alignment, powered by **Neuro AI**.</li>
+              <li>**Claudia&apos;s Role:** The **AI ADHD Assistant** uses **Neuronotion**&apos;s data-driven insights to help you track your energy and focus levels. It then intelligently schedules your tasks, ensuring that deep work is aligned with your natural peaks and lighter, administrative tasks are reserved for lower-energy periods. This is true energy alignment, powered by **Neuro AI**.</li>
             </ul>
             <br />
             <br />
@@ -101,7 +101,7 @@ const ExhaustedAgainBlog = () => {
             </p>
             <ul className="list-disc ml-8 blog-body">
               <li>**The Power of Two Minutes:** Two minutes of deep breathing, stretching, or simply looking out a window can reset your nervous system. These are your &quot;micro-rests&quot;</li>
-              <li>**Claudia's Role:** As your **ADHD Assistant**, Claudia can be set to prompt these micro-rests at strategic intervals, such as every 90 minutes. Furthermore, it can help you identify and name &quot;refuel stations&quot; in your day—like making coffee or taking a shower—and ensure those moments are protected for genuine mental recharge.</li>
+              <li>**Claudia&apos;s Role:** As your **ADHD Assistant**, Claudia can be set to prompt these micro-rests at strategic intervals, such as every 90 minutes. Furthermore, it can help you identify and name &quot;refuel stations&quot; in your day—like making coffee or taking a shower—and ensure those moments are protected for genuine mental recharge.</li>
             </ul>
             <br />
             <br />
@@ -111,7 +111,7 @@ const ExhaustedAgainBlog = () => {
             </p>
             <ul className="list-disc ml-8 blog-body">
               <li>**The 80% Rule:** Aiming for 80% completion while maintaining enough energy to show up the next day is a massive win.</li>
-              <li>**Claudia's Role:** **Claudia by Neuro** helps you celebrate consistency and sustainability. It shifts the focus from a rigid, all-or-nothing mindset to a flexible, iterative approach. By integrating the principles of **Neuro Notion**, the **ADHD AI app** ensures that your systems are a support structure, not a source of stress.</li>
+              <li>**Claudia&apos;s Role:** **Claudia by Neuro** helps you celebrate consistency and sustainability. It shifts the focus from a rigid, all-or-nothing mindset to a flexible, iterative approach. By integrating the principles of **Neuro Notion**, the **ADHD AI app** ensures that your systems are a support structure, not a source of stress.</li>
             </ul>
             <br />
             <br />

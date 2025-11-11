@@ -3,7 +3,7 @@ import HPHeader from '../../components/Homepage/HPHeader';
 
 const AdhdMaskingImposterBlog = () => {
   return (
-    <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiastd">
+    <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
       <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
         <HPHeader />
         <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">

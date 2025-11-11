@@ -42,10 +42,10 @@ const ADHDRoutinesBlog = () => {
               This is a burning question on the lips of every ADHDer: <b>How do I build habits with ADHD.</b>
               <br />
               <br />
-              Or maybe you werent even aware that it was harder for you with ADHD and just thought you were broken?
+              Or maybe you weren&apos;t even aware that it was harder for you with ADHD and just thought you were broken?
               <br />
               <br />
-              Well, either way... were gonna deep dive into the <b>relationship between ADHD and habits/routines.</b>
+              Well, either way... we&apos;re gonna deep dive into the <b>relationship between ADHD and habits/routines.</b>
             </p>
             <br />
             <br />
@@ -54,7 +54,7 @@ const ADHDRoutinesBlog = () => {
               In short, something that connects most adults with ADHD is <b>struggling to juggle things mentally.</b>
               <br />
               <br />
-              Whether were juggling tasks, events, or even just remembering to take tonights dinner out of the freezer to defrost, we get <b>mentally overwhelmed WAY faster than the average, neurotypical person</b>.
+              Whether we&apos;re juggling tasks, events, or even just remembering to take tonight&apos;s dinner out of the freezer to defrost, we get <b>mentally overwhelmed WAY faster than the average, neurotypical person</b>.
               <br />
               <br />
               So, for many of us, ADHD presents itself as<i> chaos </i>because we tend not to have enough mental capacity to act out of rational thinking, so instead we often rely on how we feel.
@@ -69,7 +69,7 @@ const ADHDRoutinesBlog = () => {
               As mentioned above, ADHD causes a massive reduction in mental capacity to act and think rationally, so instead <b>we often rely on how we feel when we act.</b>
               <br />
               <br />
-              This doesnt sound so bad - but it means that controlling our behaviors is really difficult and so, we dont have much luck forming habits (spoiler: there is hope!)
+              This doesn&apos;t sound so bad - but it means that controlling our behaviors is really difficult and so, we don&apos;t have much luck forming habits (spoiler: there is hope!)
               <br />
               <br />
 <b>              Let me paint a picture that might resemble your attempt at building habits as an adult with ADHD 👁️
@@ -88,13 +88,13 @@ const ADHDRoutinesBlog = () => {
               → and eat healthily.
               <br />
               <br />
-              Well... now imagine youre having a long day at work.
+              Well... now imagine you&apos;re having a long day at work.
               <br />
               <br />
-              Youve got loads on your plate.
+              You&apos;ve got loads on your plate.
               <br />
               <br />
-              You feel mentally overwhelmed and youre out of capacity to make any more rational decisions.
+              You feel mentally overwhelmed and you&apos;re out of capacity to make any more rational decisions.
               <br />
               <br />
               You go to the fridge for something to eat and see two options:
@@ -104,10 +104,10 @@ const ADHDRoutinesBlog = () => {
               • One unhealthy processed food that you can eat right away.
               <br />
               <br />
-              You, obviously, take the unhealthy option because <b>you dont have the mental capacity to remember act with your goals in mind</b> at that moment.
+              You, obviously, take the unhealthy option because <b>you don&apos;t have the mental capacity to remember act with your goals in mind</b> at that moment.
               <br />
               <br />
-              Impulsivity of ADHD takes over and you dont even have the chance to make that intervention.
+              Impulsivity of ADHD takes over and you don&apos;t even have the chance to make that intervention.
               <br />
               <br />
               This is where our ADHD fails most of us in building habits.
@@ -116,7 +116,7 @@ const ADHDRoutinesBlog = () => {
               Even when we have a super clear goal, we act impulsively before those goals and that rational thought process even gets a chance to have a say.
               <br />
               <br />
-              Seems impossible to prevent, right? Well... its not. Heres how to conquer that.
+              Seems impossible to prevent, right? Well... it&apos;s not. Here&apos;s how to conquer that.
             </p>
             <br />
             <br />
@@ -134,7 +134,7 @@ const ADHDRoutinesBlog = () => {
               <br />
 <b>              To make your why effective:
 </b>              <br />
-              • Write it down and place it somewhere youll see it daily (e.g., bathroom mirror, phone wallpaper or for our example - on the fridge).
+              • Write it down and place it somewhere you&apos;ll see it daily (e.g., bathroom mirror, phone wallpaper or for our example - on the fridge).
               <br />
               • Set daily reminders and notifications on your phone to remind you on your why.
               <br />
@@ -144,16 +144,16 @@ const ADHDRoutinesBlog = () => {
             <br />
             <h3 className="blog-subheader">2. Start ridiculously small</h3>
             <p className="blog-body">
-              When it comes to habit formation with ADHD, think microscopic. Instead of Ill exercise for an hour every day, start with Ill do one push-up a day.
+              When it comes to habit formation with ADHD, think microscopic. Instead of I&apos;ll exercise for an hour every day, start with I&apos;ll do one push-up a day.
               <br />
               <br />
-              This might seem too easy, but thats the point. Its so small that your brain wont resist it, making it easier to overcome the initial inertia.
+              This might seem too easy, but that&apos;s the point. It&apos;s so small that your brain won&apos;t resist it, making it easier to overcome the initial inertia.
               <br />
               <br />
               Then do two the next day etc.
               <br />
               <br />
-              If you fail one day, just do 1 less than the previous day - so its easier.
+              If you fail one day, just do 1 less than the previous day - so it&apos;s easier.
               <br />
               <br />
               Motivation only lasts a few days with building habits and routines.
@@ -162,7 +162,7 @@ const ADHDRoutinesBlog = () => {
               Once the motivation fades, it needs to be easy to make continuous incremental imporovements.
               <br />
               <br />
-<b>              Huge changes DONT happen overnight!
+<b>              Huge changes DON&apos;T happen overnight!
 </b>            </p>
             <br />
             <br />
@@ -180,10 +180,10 @@ const ADHDRoutinesBlog = () => {
             <br />
             <h3 className="blog-subheader">4. Gamify your habits</h3>
             <p className="blog-body">
-              Yes, after 1 week youll probably dread the idea of going to the gym. But if you set yourself a specific reward for completing the gym then you have a short-term goal at the end of it.
+              Yes, after 1 week you&apos;ll probably dread the idea of going to the gym. But if you set yourself a specific reward for completing the gym then you have a short-term goal at the end of it.
               <br />
               <br />
-              Eventually youll form an association between the hard task and the fun reward.
+              Eventually you&apos;ll form an association between the hard task and the fun reward.
               <br />
               <br />
               This REALLY works.
@@ -194,20 +194,20 @@ const ADHDRoutinesBlog = () => {
             <p className="blog-body">
               With ADHD, no one is immune from having one of those days. Prepare for this by:
               <br />
-              • Having an <b>if-then</b> plan for obstacles. (e.g., If I miss a day at the gym, then Ill do a 10-minute home workout.)
+              • Having an <b>if-then</b> plan for obstacles. (e.g., If I miss a day at the gym, then I&apos;ll do a 10-minute home workout.)
               <br />
-              • Practicing <b>self-compassion</b>. Remember, progress isnt linear. Sometimes we take one step back to take two steps forward.
+              • Practicing <b>self-compassion</b>. Remember, progress isn&apos;t linear. Sometimes we take one step back to take two steps forward.
               <br />
-              • Try not to excuse yourself with this too much but also remember, <b>youre human</b> - dont beat yourself up about it!
+              • Try not to excuse yourself with this too much but also remember, <b>you&apos;re human</b> - don&apos;t beat yourself up about it!
             </p>
             <br />
             <br />
             <h3 className="blog-subheader">6. Capitalize on your good days</h3>
             <p className="blog-body">
-              If youre having a day where your symptoms are less severe, use that energy to set up systems that will help you on your harder days.
+              If you&apos;re having a day where your symptoms are less severe, use that energy to set up systems that will help you on your harder days.
               <br />
               <br />
-              This might involve meal prepping, building a system that makes working out easier, or even planning your week. This can be SO energising on those days where you               really need that helping hand.
+              This might involve meal prepping, building a system that makes working out easier, or even planning your week. This can be SO energising on those days where you really need that helping hand.
             </p>
             <br />
             <br />
@@ -228,13 +228,13 @@ const ADHDRoutinesBlog = () => {
             <br />
             <h2 className="blog-subheader">Conclusion ☁️</h2>
             <p className="blog-body">
-              Building habits with ADHD is challenging, but its far from impossible.
+              Building habits with ADHD is challenging, but it&apos;s far from impossible.
               <br />
               <br />
               By understanding how your ADHD brain works and implementing these strategies, you can create lasting change.
               <br />
               <br />
-              Remember, its about progress, not perfection.
+              Remember, it&apos;s about progress, not perfection.
               <br />
               <br />
               Celebrate your wins, learn from your setbacks, and keep moving forward.
@@ -243,7 +243,7 @@ const ADHDRoutinesBlog = () => {
               With time and persistence, you can build the habits and routines that will help you thrive with ADHD.
               <br />
               <br />
-              Its an uphill battle but youve got this - its not impossible I promise! 💙
+              It&apos;s an uphill battle but you&apos;ve got this - it&apos;s not impossible I promise! 💙
             </p>
             <br />
             <br />

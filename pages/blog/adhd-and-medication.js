@@ -36,12 +36,12 @@ const ADHDManagementBlog = () => {
               ADHD medication: a topic of endless debate, curiosity, and confusion.
               <br />
               <br />
-              If you’ve ever wondered how to go cold turkey with ADHD meds, you’re not alone.
+              If you&apos;ve ever wondered how to go cold turkey with ADHD meds, you&apos;re not alone.
             </p>
             <br />
             <br />
             <p className="blog-body">
-              Lets dive deep into what ADHD medication really is, why it can be helpful, and how it fits into a broader management plan.
+              Let&apos;s dive deep into what ADHD medication really is, why it can be helpful, and how it fits into a broader management plan.
             </p>
             <br />
             <br />
@@ -50,7 +50,7 @@ const ADHDManagementBlog = () => {
               In short, one thing that connects adults with ADHD is a difficulty to juggle things mentally.
               <br />
               <br />
-              Whether were juggling tasks, events, or even just remembering to take tonights dinner out of the freezer to defrost, we get mentally overwhelmed WAY faster than the average, neurotypical person.
+              Whether we&apos;re juggling tasks, events, or even just remembering to take tonight&apos;s dinner out of the freezer to defrost, we get mentally overwhelmed WAY faster than the average, neurotypical person.
               <br />
               <br />
               So, for many of us, ADHD presents itself as chaos because we tend not to have enough mental capacity to act out of rational thinking, so instead we often rely on how we feel.
@@ -65,16 +65,16 @@ const ADHDManagementBlog = () => {
               In simple terms, ADHD medications are tools designed to help manage symptoms by counteracting the parts of our brains that are imbalanced.
               <br />
               <br />
-              Theyre not a cure, but they can be life-changing for many people.
+              They&apos;re not a cure, but they can be life-changing for many people.
               <br />
               <br />
               They work by altering neurotransmitters in the brain, helping to improve focus and self-control.
               <br />
               <br />
-              But heres the deal: ADHD medication works differently for everyone. What makes one person feel laser-focused might make another feel jittery and anxious.
+              But here&apos;s the deal: ADHD medication works differently for everyone. What makes one person feel laser-focused might make another feel jittery and anxious.
               <br />
               <br />
-              Finding the right medication and dosage often involves trial and error, and its a process that requires patience and close communication with your healthcare provider.
+              Finding the right medication and dosage often involves trial and error, and it&apos;s a process that requires patience and close communication with your healthcare provider.
             </p>
             <br />
             <br />
@@ -83,10 +83,10 @@ const ADHDManagementBlog = () => {
               When ADHD medication works, it can feel like a superpower.
               <br />
               <br />
-              Suddenly, youre not constantly distracted or acting on every impulse. Youre able to follow through on things youre not particularly interested in doing.
+              Suddenly, you&apos;re not constantly distracted or acting on every impulse. You&apos;re able to follow through on things you&apos;re not particularly interested in doing.
               <br />
               <br />
-              You have some degree of self-control, and your brain isnt in a constant fog.
+              You have some degree of self-control, and your brain isn&apos;t in a constant fog.
               <br />
               <br />
               For many adults, medication can lead to better work performance and an improved ability to manage daily responsibilities.
@@ -95,16 +95,16 @@ const ADHDManagementBlog = () => {
               Interestingly, research shows that people with ADHD who are on medication are less likely to turn to unhealthy coping mechanisms.
               <br />
               <br />
-              It makes sense: when your brain feels more balanced, theres less need to seek external ways to calm the chaos.
+              It makes sense: when your brain feels more balanced, there&apos;s less need to seek external ways to calm the chaos.
             </p>
             <br />
             <br />
-            <h2 className="blog-subheader">Why Medication Isnt a Silver Bullet</h2>
+            <h2 className="blog-subheader">Why Medication Isn&apos;t a Silver Bullet</h2>
             <p className="blog-body">
-              However, lets be clear: ADHD medication isnt a one-size-fits-all solution. It doesnt cure your ADHD, and it doesnt mean that managing ADHD is suddenly easy.
+              However, let&apos;s be clear: ADHD medication isn&apos;t a one-size-fits-all solution. It doesn&apos;t cure your ADHD, and it doesn&apos;t mean that managing ADHD is suddenly easy.
               <br />
               <br />
-              It doesnt teach you how to organize your life, keep up with routines, or make boring tasks more exciting. Its simply a tool to give you a fighting chance at doing those things.
+              It doesn&apos;t teach you how to organize your life, keep up with routines, or make boring tasks more exciting. It&apos;s simply a tool to give you a fighting chance at doing those things.
               <br />
               <br />
               For some, the benefits are undeniable, but there are also side effects. Common issues include appetite loss, trouble sleeping, or increased anxiety. Some people even feel like their personality is muted.
@@ -113,7 +113,7 @@ const ADHDManagementBlog = () => {
             <br />
             <h2 className="blog-subheader">How to Treat ADHD in Adults Without Meds</h2>
             <p className="blog-body">
-              If youre someone who doesnt want to rely solely on medication, or you even want to continue taking them, there are natural ADHD management strategies you should be adopting.
+              If you&apos;re someone who doesn&apos;t want to rely solely on medication, or you even want to continue taking them, there are natural ADHD management strategies you should be adopting.
               <br />
               <br />
               While medication can be a great foundation, real, lasting change happens when you design a lifestyle that works alongside your ADHD.
@@ -158,16 +158,16 @@ const ADHDManagementBlog = () => {
             <br />
             <h2 className="blog-subheader">The Real Takeaway on ADHD Medication</h2>
             <p className="blog-body">
-              ADHD medication can be life-changing, but its only one piece of the puzzle. The real lasting change occurs when you build foundational systems that make living life with ADHD 10x easier.
+              ADHD medication can be life-changing, but it&apos;s only one piece of the puzzle. The real lasting change occurs when you build foundational systems that make living life with ADHD 10x easier.
               <br />
               <br />
-              Theres no right or wrong answer—just what works for you.
+              There&apos;s no right or wrong answer—just what works for you.
               <br />
               <br />
               Take the time to explore different options, stay flexible, and give yourself grace.
               <br />
               <br />
-              Managing ADHD is tough, but with the right support and tools, its absolutely possible.
+              Managing ADHD is tough, but with the right support and tools, it&apos;s absolutely possible.
             </p>
             <br />
             <p className="blog-body italic">
