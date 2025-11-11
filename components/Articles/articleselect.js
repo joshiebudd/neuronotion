@@ -1,11 +1,11 @@
 import React from "react";
-import OldClaudiaHeader from "../OldClaudiaHeader";
+import NEWClaudiaLPHeader from "../NEWClaudiaLPHeader";
 import BlogCard from "./blogcard";
 
 const ArticleSelect = () => {
   return (
     <div className="flex justify-center">
-      <OldClaudiaHeader />
+      <NEWClaudiaLPHeader />
       <div className="max-w-screen-lg w-full">
         <section className="bg-white pt-16 pb-10 lg:pt-32 lg:pb-20">
           <div className="container px-4 lg:px-0">
@@ -134,14 +134,14 @@ const ArticleSelect = () => {
                 date="Jan 8, 2025"
                 CardTitle="The ADHD Goldilocks Zone (Rewrite)"
                 CardDescription="Finding the perfect balance of structure and freedom for your ADHD brain."
-                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/riwkbOhGxUQuCLUZ.jpeg"
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QmVAiCioodSCLvuC.jpeg"
                 slug="the-adhd-goldilocks-zone-rewrite"
               />
               <BlogCard
                 date="Aug 23, 2025"
                 CardTitle="Want a Clearer, Calmer Version of You?"
                 CardDescription="Discover how AI-powered tools can help you achieve mental clarity and calm."
-                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/riwkbOhGxUQuCLUZ.jpeg"
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/vvvtStinZQXxtjIq.jpeg"
                 slug="want-a-chance-at-a-clearer-calmer-version-of-you"
               />
             </div>
