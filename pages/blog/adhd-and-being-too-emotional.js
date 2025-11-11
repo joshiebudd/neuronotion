@@ -36,7 +36,7 @@ const AdhdTooEmotionalBlog = () => {
             <br />
             <br />
             <p className="blog-body">
-              This isn&apos;t a personality flaw; it&apos;s a matter of brain chemistry. For many with **Neuro ADHD**, the prefrontal cortex, which acts as the brain&apos;s emotional brake, is **underactive**. Simultaneously, the amygdala, the brain&apos;s threat detector, is **extra sensitive**. This means your &quot;pause and think&quot; system is slow to engage, and your panic system is on high alert. During peak emotional dysregulation, there is no moment for rational assessment&mdash;**you &quot;just feel&quot;.
+              This isn&apos;t a personality flaw; it&apos;s a matter of brain chemistry. For many with **Neuro ADHD**, the prefrontal cortex, which acts as the brain&apos;s emotional brake, is **underactive**. Simultaneously, the amygdala, the brain&apos;s threat detector, is **extra sensitive**. This means your &quot;pause and think&quot; system is slow to engage, and your panic system is on high alert. During peak emotional dysregulation, there is no moment for rational assessment&mdash;**you &quot;just feel&quot;**.
             </p>
             <br />
             <br />

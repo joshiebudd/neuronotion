@@ -31,7 +31,7 @@ const ExhaustedAgainBlog = () => {
 
           <div className="blog-content">
             <p className="lead blog-body italic">
-              The experience of being constantly **&quot;exhausted again&quot; is a familiar and frustrating reality for many with **Neuro ADHD**. We often fall into the trap of believing that burnout is simply a result of &quot;doing too much.&quot; This leads to a cycle of overwork, crash, guilt, and then a desperate attempt to &quot;do less,&quot; which rarely solves the underlying problem.
+              The experience of being constantly &quot;exhausted again&quot; is a familiar and frustrating reality for many with **Neuro ADHD**. We often fall into the trap of believing that burnout is simply a result of &quot;doing too much.&quot; This leads to a cycle of overwork, crash, guilt, and then a desperate attempt to &quot;do less,&quot; which rarely solves the underlying problem..
             </p>
             <br />
             <br />
@@ -41,7 +41,7 @@ const ExhaustedAgainBlog = () => {
             <br />
             <br />
             <p className="blog-body">
-              This is why the mantra needs to shift from **&quot;How do I do less?&quot;** to **&quot;How can I do this in a way that feels safe and sustainable for my body and mind?&quot;** This subtle but profound reframe is the key to long-term energy and productivity, and it's a philosophy perfectly supported by **Claudia by Neuro**, the revolutionary **AI ADHD Assistant**.
+              This is why the mantra needs to shift from **&quot;How do I do less?&quot;** to **&quot;How can I do this in a way that feels safe and sustainable for my body and mind?&quot;** This subtle but profound reframe is the key to long-term energy and productivity, and it&apos;s a philosophy perfectly supported by **Claudia by Neuro**, the revolutionary **AI ADHD Assistant**.
             </p>
             <br />
             <br />
