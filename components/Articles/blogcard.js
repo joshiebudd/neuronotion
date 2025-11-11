@@ -14,7 +14,7 @@ const BlogCard = ({ image, date, CardTitle, CardDescription, slug }) => {
               </span>
             )}
             <h3>
-              <a href={`/blogs/${slug}`}>
+              <a href={`/blog/${slug}`}>
                 <span className="inline-block mb-2 text-xl font-semibold text-prim hover:text-sec font-prim lg:text-2xl cursor-pointer">
                   {CardTitle}
                 </span>
