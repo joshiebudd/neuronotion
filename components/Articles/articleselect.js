@@ -26,106 +26,106 @@ const ArticleSelect = () => {
             </div>
             <div className="flex flex-wrap justify-center">
               <BlogCard
-                date="Sep 30, 2025"
-                CardTitle="When ADHD and Anxiety Gang Up on You"
+                date="Jan 18, 2025"
+                CardTitle="When ADHD and Anxiety Gang Up on You: Practical Steps to Break the Loop Fast"
                 CardDescription="Learn practical steps to break the anxiety-ADHD loop and regain control of your mental health."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/wvIWFSbiCjCQqVaq.jpeg"
                 slug="adhd-and-anxiety-gang-up"
               />
               <BlogCard
-                date="Jun 5, 2025"
-                CardTitle="ADHD and Being Too Emotional"
+                date="Jan 25, 2025"
+                CardTitle="ADHD and Being Too Emotional: Understanding Emotional Dysregulation"
                 CardDescription="Understand emotional dysregulation in ADHD and discover strategies to manage intense feelings."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/riwkbOhGxUQuCLUZ.jpeg"
                 slug="adhd-and-being-too-emotional"
               />
               <BlogCard
-                date="Nov 4, 2024"
-                CardTitle="How to Manage ADHD in Adults Without Medication"
+                date="Feb 09, 2025"
+                CardTitle="How to Manage ADHD in Adults: With or Without Medication"
                 CardDescription="Discover effective non-medical strategies and lifestyle changes to manage adult ADHD symptoms."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/McgXjtOeRfqjcOnq.jpeg"
                 slug="adhd-and-medication"
               />
               <BlogCard
-                date="May 15, 2023"
-                CardTitle="How to Build Habits and Routines with ADHD"
+                date="Feb 07, 2025"
+                CardTitle="How to Build Habits and Routines with ADHD That Actually Stick"
                 CardDescription="A deep dive into why habits are hard to form with ADHD and how to fix it."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/GPvWuqqMlJXqGfva.jpeg"
                 slug="adhd-and-routines"
               />
               <BlogCard
-                date="Feb 8, 2022"
-                CardTitle="What Should ADHDers Listen To When Studying?"
+                date="Feb 13, 2025"
+                CardTitle="What Should People with ADHD Listen To When Studying? The Science of Focus Music"
                 CardDescription="A deep dive into the most effective study music and sounds for students with ADHD."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/axuRxHXILJREfGFZ.jpeg"
                 slug="adhd-and-study-music"
               />
               <BlogCard
-                date="Sep 11, 2025"
-                CardTitle="ADHD Brains Don&apos;t Do &apos;Small&apos;"
+                date="Feb 03, 2025"
+                CardTitle="ADHD Brains Don&apos;t Do &apos;Small&apos;: Why You Procrastinate Until Conditions Are &apos;Perfect&apos;"
                 CardDescription="Why you procrastinate until conditions are &apos;perfect&apos; and how to overcome it."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/VEnHjHYXPZefhmTJ.jpeg"
                 slug="adhd-brains-dont-do-small"
               />
               <BlogCard
-                date="Jun 10, 2025"
-                CardTitle="ADHD, Masking, and Imposter Syndrome"
+                date="Jan 30, 2025"
+                CardTitle="ADHD, Masking, and Imposter Syndrome: Breaking Free from the Exhausting Performance"
                 CardDescription="Explore the connection between ADHD masking and imposter syndrome, and find relief."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/SMWxbHIGQazTUxDR.jpeg"
                 slug="adhd-masking-and-imposter-syndrome"
               />
               <BlogCard
-                date="May 28, 2025"
-                CardTitle="ADHD & The Hidden Cost of Choice"
+                date="Jan 20, 2025"
+                CardTitle="ADHD & The Hidden Cost of Choice: The Gold Dust Theory 🫰"
                 CardDescription="Understanding the Gold Dust Theory and how decision fatigue affects your ADHD brain."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/JnHGETMOzTffoZOO.jpeg"
                 slug="adhd-the-hidden-cost-of-choice-the-gold-dust-theory"
               />
               <BlogCard
-                date="Aug 27, 2025"
+                date="Feb 17, 2025"
                 CardTitle="Do Your Systems Still Work When ADHD is Hitting You Hard?"
                 CardDescription="Discover how to maintain your productivity systems even during the toughest ADHD days."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/zWDJHJhFuLbxsfmv.jpeg"
                 slug="do-your-systems-still-work-when-adhd-is-hitting-you-hard"
               />
               <BlogCard
-                date="Oct 1, 2025"
-                CardTitle="Exhausted Again? Do Differently, Not Less"
+                date="Feb 05, 2025"
+                CardTitle="Exhausted Again? Why Your ADHD Brain Needs to Do Differently, Not Less"
                 CardDescription="Why your ADHD brain needs to approach tasks differently rather than doing less."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/LltYgvQAcoKhzxqs.jpeg"
                 slug="exhausted-again-do-differently"
               />
               <BlogCard
-                date="Sep 24, 2025"
-                CardTitle="How I Fixed My Sleep with ADHD"
+                date="Feb 11, 2025"
+                CardTitle="How I Fixed My Sleep with ADHD: Shutting Down the 2 A.M. TED Talk"
                 CardDescription="A practical approach to shutting down the 2 A.M. TED Talk in your ADHD brain."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/DnEgXsmJYbbjSTrt.jpeg"
                 slug="how-i-fixed-my-sleep-with-adhd"
               />
               <BlogCard
-                date="Sep 26, 2025"
-                CardTitle="I Can Do the Thing... But My Brain Says No"
+                date="Feb 15, 2025"
+                CardTitle="I Can Do the Thing... But My Brain Says No: Overcoming Executive Dysfunction"
                 CardDescription="Overcoming executive dysfunction and the intention-action gap with ADHD."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fsJKZJxgvoVKpFGz.jpeg"
                 slug="i-can-do-the-thing-but-my-brain-says-no"
               />
               <BlogCard
-                date="Sep 3, 2025"
-                CardTitle="When Your Brain Says &quot;I Can&apos;t&quot;"
+                date="Jan 28, 2025"
+                CardTitle="When Your Brain Says &quot;I Can&apos;t&quot;: Bridging the ADHD Intention-Action Gap"
                 CardDescription="Bridging the intention-action disconnect and getting unstuck with ADHD."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QOuSXcrsBzPJJTLN.jpeg"
                 slug="something-for-when-your-brain-says-i-cant"
               />
               <BlogCard
-                date="Jun 3, 2025"
-                CardTitle="Stuck in Fight, Flight, or Scroll?"
+                date="Jan 22, 2025"
+                CardTitle="Stuck in Fight, Flight, or Scroll? 📱 Understanding ADHD Nervous System Dysregulation"
                 CardDescription="How to calm your nervous system and break free from the stress response cycle."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/FXbxnmUvXUPZYprM.jpeg"
                 slug="stuck-in-fight-flight-or-scroll"
               />
               <BlogCard
-                date="Jan 8, 2025"
-                CardTitle="The ADHD Goldilocks Zone"
+                date="Feb 01, 2025"
+                CardTitle="The ADHD Goldilocks Zone: Finding the Perfect Balance of Structure and Freedom"
                 CardDescription="Finding the perfect balance of structure and freedom for your ADHD brain."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/juoQygcofodGdLMN.jpeg"
                 slug="the-adhd-goldilocks-zone"
@@ -133,7 +133,7 @@ const ArticleSelect = () => {
               
               <BlogCard
                 date="Aug 23, 2025"
-                CardTitle="Want a Clearer, Calmer Version of You?"
+                CardTitle="Want a Chance at a Clearer, Calmer Version of You? Neuro AI Makes it Possible with Claudia by Neuro"
                 CardDescription="Discover how AI-powered tools can help you achieve mental clarity and calm."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/vvvtStinZQXxtjIq.jpeg"
                 slug="want-a-chance-at-a-clearer-calmer-version-of-you"

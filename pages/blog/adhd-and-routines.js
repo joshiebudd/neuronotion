@@ -1,259 +1,249 @@
 import React from 'react';
-import NEWClaudiaLPHeader from '../../components/NEWClaudiaLPHeader';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import HPHeader from '../../components/Homepage/HPHeader';
 
 const ADHDRoutinesBlog = () => {
   return (
-    <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-      <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-        <NEWClaudiaLPHeader />
-        <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-          <header className="mb-4 lg:mb-6 not-format">
-            <address className="flex items-center mb-6 not-italic">
-              <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                <img
-                  className="mr-4 w-16 h-16 rounded-full"
-                  src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                  alt="Josh Budd"
-                />
-                <div>
-                  <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                  <p className="text-base text-gray-900">
-                    Founder @ <b>Neuro Notion</b>
-                  </p>
-                  <p className="text-base text-gray-900">
-                    <time pubdate dateTime="2023-05-15" title="May 15th, 2023">May 15, 2023</time>
-                  </p>
+    <>
+      <Head>
+        <title>How to Build Habits and Routines with ADHD That Actually Stick | Neuro Notion</title>
+        <meta name="description" content="Discover why traditional habit-building fails for ADHD brains and learn the adaptive approach that creates sustainable routines without willpower." />
+        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-and-routines" />
+        <meta property="og:title" content="Building ADHD Habits That Actually Stick" />
+        <meta property="og:description" content="Traditional habit advice doesn't work for ADHD. Learn the adaptive approach that creates sustainable routines for your brain." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-and-routines" />
+        <meta name="keywords" content="ADHD habits, ADHD routines, building habits with ADHD, ADHD consistency, sustainable ADHD routines" />
+      </Head>
+
+      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
+        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
+          <HPHeader />
+          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
+            <header className="mb-4 lg:mb-6 not-format">
+              <address className="flex items-center mb-6 not-italic">
+                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
+                  <Image
+                    className="mr-4 w-16 h-16 rounded-full"
+                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
+                    alt="Josh Budd, Founder of Neuro Notion and ADHD habit formation specialist"
+                    width={64}
+                    height={64}
+                    priority
+                  />
+                  <div>
+                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
+                    <p className="text-base text-gray-900">
+                      Founder @ <b>Neuro Notion</b>
+                    </p>
+                    <p className="text-base text-gray-900">
+                      <time pubdate dateTime="2025-02-07" title="February 7th, 2025">Feb. 7, 2025</time>
+                    </p>
+                  </div>
                 </div>
+              </address>
+              <h1 className="blog-header mb-4 lg:mb-6">How to Build Habits and Routines with ADHD That Actually Stick</h1>
+            </header>
+
+            <div className="blog-content">
+              {/* TL;DR Section */}
+              <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
+                <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
+                <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
+                  <li>ADHD makes habits 3-4x harder to form due to working memory deficits and dopamine dysregulation</li>
+                  <li>Traditional habit advice (21-day rules, willpower, consistency) fails because it requires the very executive function ADHD impairs</li>
+                  <li>Sustainable ADHD routines must be flexible, externally supported, and dopamine-friendly</li>
+                  <li>The key is adaptive systems that adjust to your capacity, not rigid rules that demand perfection</li>
+                  <li>External scaffolding replaces reliance on memory and willpower, making consistency finally possible</li>
+                </ul>
               </div>
-            </address>
-            <h1 className="blog-header mb-4 lg:mb-6">How to build habits and routines with ADHD 🏆</h1>
-          </header>
-          
-          <div className="blog-content">
-            <p className="lead blog-body">
-              Read Time: 8 minutes
-            </p>
-            <br />
-            <br />
-            <p className="blog-body">
-              How to build habits and routines with ADHD?
+
+              <p className="lead blog-body italic">
+                This is a burning question on the lips of every person with ADHD: How do I build habits that actually stick? Or maybe you weren&apos;t even aware that it was harder for you with ADHD and just thought you were broken? Well, either way, we&apos;re going to deep dive into the relationship between ADHD and habits, and why traditional advice sets you up for failure.
+              </p>
               <br />
               <br />
-              This is a burning question on the lips of every ADHDer: <b>How do I build habits with ADHD.</b>
+              <p className="blog-body">
+                The truth is that ADHD fundamentally changes how habits form in your brain. What works for neurotypical people—repetition, willpower, 21-day rules—simply doesn&apos;t translate to ADHD neurology. You&apos;re not failing at habits because you lack discipline. You&apos;re failing because you&apos;re trying to use tools designed for a completely different operating system.
+              </p>
               <br />
               <br />
-              Or maybe you weren&apos;t even aware that it was harder for you with ADHD and just thought you were broken?
+              <h2 className="blog-subheader">Why ADHD Makes Habits Exponentially Harder</h2>
+              <p className="blog-body">
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4010367/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and habit formation</a> shows that adults with ADHD require significantly more repetitions to form automatic behaviors compared to neurotypical adults. While neurotypical brains might automate a behavior after 60-90 repetitions, ADHD brains might need 200-300 repetitions or more.
+              </p>
               <br />
               <br />
-              Well, either way... we&apos;re gonna deep dive into the <b>relationship between ADHD and habits/routines.</b>
-            </p>
-            <br />
-            <br />
-            <h2 className="blog-subheader">What is ADHD? 🧠</h2>
-            <p className="blog-body">
-              In short, something that connects most adults with ADHD is <b>struggling to juggle things mentally.</b>
+              <p className="blog-body">
+                This massive difference stems from three core ADHD traits that sabotage traditional habit-building approaches:
+              </p>
               <br />
               <br />
-              Whether we&apos;re juggling tasks, events, or even just remembering to take tonight&apos;s dinner out of the freezer to defrost, we get <b>mentally overwhelmed WAY faster than the average, neurotypical person</b>.
+              <ol className="list-decimal ml-8 blog-body space-y-3">
+                <li><strong>Working Memory Deficits:</strong> You can&apos;t consistently remember to do a habit if you can&apos;t hold it in your working memory. By the time you finish breakfast, you&apos;ve forgotten your intention to take your vitamins. By the time you get home from work, your evening routine has vanished from your mind. Working memory is where intentions live, and ADHD significantly impairs this function.</li>
+                <li><strong>Time Blindness:</strong> Habits rely on temporal awareness—doing things at specific times or in specific sequences. But ADHD brains experience time in only two states: now and not now. This makes it incredibly difficult to perform time-based routines consistently. Morning routines fall apart because 7 AM and 9 AM feel identical to your brain.</li>
+                <li><strong>Dopamine Dysregulation:</strong> Habit formation requires the brain&apos;s reward system to reinforce behaviors through repetition. But ADHD brains have chronically low baseline dopamine, making it nearly impossible to generate the reward signals needed for automatic behavior formation. The neurotypical brain gets a little dopamine hit from completing a routine task; your ADHD brain barely registers it.</li>
+              </ol>
               <br />
               <br />
-              So, for many of us, ADHD presents itself as<i> chaos </i>because we tend not to have enough mental capacity to act out of rational thinking, so instead we often rely on how we feel.
+              <p className="blog-body">
+                Understanding <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">why decision fatigue hits you so hard</Link> explains why maintaining routines depletes your mental energy so quickly.
+              </p>
               <br />
               <br />
-              This is where difficulty forming habits comes in.
-            </p>
-            <br />
-            <br />
-            <h2 className="blog-subheader">Why are habits hard to form with ADHD? 😵‍💫</h2>
-            <p className="blog-body">
-              As mentioned above, ADHD causes a massive reduction in mental capacity to act and think rationally, so instead <b>we often rely on how we feel when we act.</b>
+              <h2 className="blog-subheader">The Fatal Flaws of Traditional Habit Advice</h2>
+              <p className="blog-body">
+                Traditional habit-building advice is built on neurotypical assumptions that simply don&apos;t hold true for ADHD brains. Let&apos;s break down why the most common advice fails spectacularly:
+              </p>
               <br />
               <br />
-              This doesn&apos;t sound so bad - but it means that controlling our behaviors is really difficult and so, we don&apos;t have much luck forming habits (spoiler: there is hope!)
+              <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                  <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                      <tr>
+                          <th scope="col" className="px-6 py-3">Traditional Advice</th>
+                          <th scope="col" className="px-6 py-3">Why It Fails for ADHD</th>
+                          <th scope="col" className="px-6 py-3">What Works Instead</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">&quot;Just do it for 21 days&quot;</th>
+                          <td className="px-6 py-4">ADHD brains need 3-4x more repetitions to automate behaviors. 21 days isn&apos;t even close to enough.</td>
+                          <td className="px-6 py-4">External reminders and support systems that don&apos;t rely on the habit being automatic yet.</td>
+                      </tr>
+                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">&quot;Use willpower&quot;</th>
+                          <td className="px-6 py-4">Willpower requires executive function, which is precisely what ADHD impairs. You&apos;re running on empty trying to access a resource you don&apos;t have.</td>
+                          <td className="px-6 py-4">Reduce friction, increase external structure, eliminate the need for willpower through smart design.</td>
+                      </tr>
+                      <tr className="bg-white dark:bg-gray-800">
+                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">&quot;Be consistent&quot;</th>
+                          <td className="px-6 py-4">Variable capacity means what&apos;s possible Monday might be impossible Tuesday. Demanding consistency sets you up for shame spirals when you inevitably can&apos;t maintain it.</td>
+                          <td className="px-6 py-4">Flexible routines that adapt to your current capacity rather than rigid consistency.</td>
+                      </tr>
+                  </tbody>
+              </table>
               <br />
               <br />
-<b>              Let me paint a picture that might resemble your attempt at building habits as an adult with ADHD 👁️
-</b>              <br />
+              <p className="blog-body">
+                The fundamental problem is that traditional habit advice requires you to have the very capabilities that ADHD impairs. It&apos;s like telling someone with a broken leg to &quot;just run faster.&quot; The advice isn&apos;t wrong for people with working legs; it&apos;s simply incompatible with your neurology.
+              </p>
               <br />
-              You have a goal to get more fit.
               <br />
+              <h2 className="blog-subheader">The ADHD-Friendly Approach to Routines</h2>
+              <p className="blog-body">
+                If traditional methods don&apos;t work, what does? The answer is building routines that accommodate ADHD traits rather than fighting them. This means creating systems with five essential characteristics:
+              </p>
               <br />
-              You know that to achieve this you should go to the gym.
               <br />
+              <ul className="list-disc ml-8 blog-body space-y-3">
+                <li><strong>Externally Scaffolded:</strong> Don&apos;t rely on memory or willpower. Use external reminders, visual cues, and support systems like **Claudia by Neuro** to handle the remembering for you. When you externalize the cognitive load, you free up mental resources for actually doing the habit rather than remembering to do it.</li>
+                <li><strong>Dopamine-Enhanced:</strong> Make routines rewarding. Add music, gamification, novelty, or pairing boring habits with enjoyable ones. Your ADHD brain needs extra dopamine to form habits, so deliberately engineer it into the routine. This isn&apos;t &quot;cheating&quot;—it&apos;s accommodating your neurology.</li>
+                <li><strong>Friction-Reduced:</strong> Eliminate every possible obstacle. Put your vitamins next to your coffee maker. Lay out your gym clothes the night before. Reduce steps wherever possible. ADHD brains are exquisitely sensitive to friction; even small obstacles can completely derail a routine.</li>
+                <li><strong>Capacity-Adaptive:</strong> Build flexibility into your routines. Have a full version for high-capacity days and a minimal version for low-capacity days. The minimal version might be just one core element, but completing it counts as success. This prevents the all-or-nothing thinking that destroys routines.</li>
+                <li><strong>Progress-Celebrated:</strong> Track completion and celebrate wins. Your brain needs the reward signal to reinforce the behavior. External tools can provide objective tracking and positive reinforcement that your brain struggles to generate internally.</li>
+              </ul>
               <br />
-              So, you want to build <b>two habits in particular:</b>
               <br />
-              → exercise regularly
+              <p className="blog-body">
+                Many people find that when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">exhausted from doing things in unsustainable ways</Link>, even simple routines feel impossible—this is when adaptive support becomes crucial.
+              </p>
               <br />
-              → and eat healthily.
               <br />
+              <h2 className="blog-subheader">How Claudia by Neuro Makes Routines Sustainable</h2>
+              <p className="blog-body">
+                The challenge with ADHD-friendly routines is that implementing and maintaining them requires significant executive function. You need to set up reminders, track progress, adjust for capacity, and troubleshoot when things break down. For an ADHD brain, this meta-work often becomes more overwhelming than the original habit.
+              </p>
               <br />
-              Well... now imagine you&apos;re having a long day at work.
               <br />
+              <p className="blog-body">
+                This is where **Claudia by Neuro** transforms routine-building from aspirational to achievable:
+              </p>
               <br />
-              You&apos;ve got loads on your plate.
               <br />
+              <ul className="list-disc ml-8 blog-body space-y-3">
+                <li><strong>Intelligent Reminders:</strong> Not just calendar alerts you ignore, but context-aware prompts that arrive when you&apos;re actually able to act on them. The system learns your patterns and adjusts timing for maximum effectiveness.</li>
+                <li><strong>Automatic Tracking:</strong> No manual logging required. The system tracks completion, identifies patterns, and shows you objective data about what&apos;s working and what isn&apos;t. This removes the cognitive load of self-monitoring.</li>
+                <li><strong>Capacity Recognition:</strong> The system can detect when you&apos;re having a low-capacity day and automatically simplify routines to just the essentials. You don&apos;t have to decide—it adapts for you.</li>
+                <li><strong>Streak Flexibility:</strong> Unlike rigid habit trackers that reset to zero if you miss a day, ADHD-friendly support recognizes that missing one day doesn&apos;t erase all your progress. It celebrates your overall pattern rather than demanding perfection.</li>
+                <li><strong>Routine Templates:</strong> Pre-built, ADHD-optimized routine structures you can customize rather than building from scratch. This reduces the executive function required to even start implementing routines.</li>
+              </ul>
               <br />
-              You feel mentally overwhelmed and you&apos;re out of capacity to make any more rational decisions.
               <br />
+              <h2 className="blog-subheader">Starting Microscopic: The Power of Tiny Routines</h2>
+              <p className="blog-body">
+                One of the biggest mistakes people with ADHD make is starting with elaborate routines. A 45-minute morning routine with 12 steps sounds great in theory but is practically guaranteed to fail. The friction is too high, the dopamine reward too delayed, and the executive function required too enormous.
+              </p>
               <br />
-              You go to the fridge for something to eat and see two options:
               <br />
-              • One healthy option that takes 10 mins to prepare.
+              <p className="blog-body">
+                Instead, start absurdly small. Not small—absurdly small. If you want a morning routine, start with: &quot;Put on socks.&quot; That&apos;s it. Just socks. Once that becomes automatic (and remember, this might take months for ADHD brains), add the next microscopic step. This approach works because it eliminates resistance. Your brain can&apos;t generate opposition to something so small.
+              </p>
               <br />
-              • One unhealthy processed food that you can eat right away.
               <br />
+              <p className="blog-body">
+                **Claudia by Neuro** excels at this micro-habit approach by breaking down any routine into its smallest possible components and helping you build them one at a time. It provides the scaffolding that prevents the routine from collapsing while you&apos;re still in the building phase.
+              </p>
               <br />
-              You, obviously, take the unhealthy option because <b>you don&apos;t have the mental capacity to remember act with your goals in mind</b> at that moment.
               <br />
+              <p className="blog-body">
+                If you struggle with <Link href="/blog/adhd-brains-dont-do-small" className="text-blue-600 hover:underline">your brain refusing to engage with small tasks</Link>, understanding this resistance helps you design routines that work with it rather than against it.
+              </p>
               <br />
-              Impulsivity of ADHD takes over and you don&apos;t even have the chance to make that intervention.
               <br />
+              <h2 className="blog-subheader">When Routines Break: The Recovery Protocol</h2>
+              <p className="blog-body">
+                Here&apos;s the truth: your routines will break. Life happens, capacity fluctuates, interest wanes. For people with ADHD, routine disruption is inevitable and frequent. The key isn&apos;t preventing breaks—it&apos;s having a recovery protocol that makes restarting possible.
+              </p>
               <br />
-              This is where our ADHD fails most of us in building habits.
               <br />
+              <p className="blog-body">
+                Traditional habit tracking makes you feel like a failure when routines break. You see that broken streak and feel shame, which makes restarting even harder. ADHD-friendly support reframes broken routines as data, not failure. The system asks: &quot;What changed? What can we learn? How do we make this easier to restart?&quot;
+              </p>
               <br />
-              Even when we have a super clear goal, we act impulsively before those goals and that rational thought process even gets a chance to have a say.
               <br />
+              <p className="blog-body">
+                Modern ADHD tools can identify patterns in routine breaks. Maybe you consistently abandon routines on Wednesdays (high-stress day?). Maybe your morning routine works in summer but fails in winter (seasonal affect?). This data allows you to proactively adjust rather than reactively shame yourself.
+              </p>
               <br />
-              Seems impossible to prevent, right? Well... it&apos;s not. Here&apos;s how to conquer that.
-            </p>
-            <br />
-            <br />
-            <h2 className="blog-subheader">How to form habits with ADHD:</h2>
-            <h3 className="blog-subheader">1. Get slapped in the face by your why</h3>
-            <p className="blog-body">
-              Having a really strong why and constantly reminding yourself of that why is crucial.
               <br />
+              <h2 className="blog-subheader">From Chaos to Sustainable Structure</h2>
+              <p className="blog-body">
+                Building habits and routines with ADHD isn&apos;t about becoming more disciplined or consistent. It&apos;s about accepting your neurology and building systems that work with it rather than against it. Your ADHD brain will never form habits the way neurotypical brains do—and that&apos;s okay.
+              </p>
               <br />
-              Your why is the deeply personal reason behind your desire to form a new habit.
               <br />
+              <p className="blog-body">
+                What you need are routines that are externally scaffolded, dopamine-enhanced, friction-reduced, capacity-adaptive, and progress-celebrated. You need support systems that handle the cognitive load of maintaining routines while you focus on actually executing them. You need tools that adapt to your variability rather than demanding your consistency.
+              </p>
               <br />
-              For example, if you want to exercise regularly, your why might be I want to be healthy enough to play actively with my kids as they grow up.
               <br />
+              <p className="blog-body">
+                **Claudia by Neuro** provides exactly this kind of support. It doesn&apos;t try to fix your ADHD or make you more like neurotypical people. It simply makes sustainable routines possible by accommodating the very traits that make traditional habit-building impossible for you.
+              </p>
               <br />
-<b>              To make your why effective:
-</b>              <br />
-              • Write it down and place it somewhere you&apos;ll see it daily (e.g., bathroom mirror, phone wallpaper or for our example - on the fridge).
               <br />
-              • Set daily reminders and notifications on your phone to remind you on your why.
+              <p className="blog-body">
+                Stop trying to build habits through willpower and consistency. Start building them through external support and adaptive systems. Your ADHD brain can absolutely maintain routines—when those routines are designed for your neurology, not against it.
+              </p>
               <br />
-              • Make it absolutely unavoidable to remember the deepest reason for you to build that habit.
-            </p>
-            <br />
-            <br />
-            <h3 className="blog-subheader">2. Start ridiculously small</h3>
-            <p className="blog-body">
-              When it comes to habit formation with ADHD, think microscopic. Instead of I&apos;ll exercise for an hour every day, start with I&apos;ll do one push-up a day.
               <br />
+              <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
+                <p className="blog-body text-lg leading-relaxed">
+                  <strong>Ready to build routines that finally stick?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that provides external scaffolding, intelligent reminders, and adaptive support for sustainable habit formation. Stop fighting your neurology. Start working with it.
+                </p>
+              </div>
               <br />
-              This might seem too easy, but that&apos;s the point. It&apos;s so small that your brain won&apos;t resist it, making it easier to overcome the initial inertia.
-              <br />
-              <br />
-              Then do two the next day etc.
-              <br />
-              <br />
-              If you fail one day, just do 1 less than the previous day - so it&apos;s easier.
-              <br />
-              <br />
-              Motivation only lasts a few days with building habits and routines.
-              <br />
-              <br />
-              Once the motivation fades, it needs to be easy to make continuous incremental imporovements.
-              <br />
-              <br />
-<b>              Huge changes DON&apos;T happen overnight!
-</b>            </p>
-            <br />
-            <br />
-            <h3 className="blog-subheader">3. Use visual cues and reminders</h3>
-            <p className="blog-body">
-              ADHD brains often struggle with working memory. Combat this by using visual cues:
-              <br />
-              → Set out your gym clothes the night before.
-              <br />
-              → Use colorful sticky notes as reminders.
-              <br />
-              → Use an ADHD friendly habit tracker that is visually appealing (Try the <a href="https://www.neuro-notion.com/templates" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">Neuro Notion Free ADHD Routine & Habit Tracker Template</a>)
-            </p>
-            <br />
-            <br />
-            <h3 className="blog-subheader">4. Gamify your habits</h3>
-            <p className="blog-body">
-              Yes, after 1 week you&apos;ll probably dread the idea of going to the gym. But if you set yourself a specific reward for completing the gym then you have a short-term goal at the end of it.
-              <br />
-              <br />
-              Eventually you&apos;ll form an association between the hard task and the fun reward.
-              <br />
-              <br />
-              This REALLY works.
-            </p>
-            <br />
-            <br />
-            <h3 className="blog-subheader">5. Prepare for setbacks</h3>
-            <p className="blog-body">
-              With ADHD, no one is immune from having one of those days. Prepare for this by:
-              <br />
-              • Having an <b>if-then</b> plan for obstacles. (e.g., If I miss a day at the gym, then I&apos;ll do a 10-minute home workout.)
-              <br />
-              • Practicing <b>self-compassion</b>. Remember, progress isn&apos;t linear. Sometimes we take one step back to take two steps forward.
-              <br />
-              • Try not to excuse yourself with this too much but also remember, <b>you&apos;re human</b> - don&apos;t beat yourself up about it!
-            </p>
-            <br />
-            <br />
-            <h3 className="blog-subheader">6. Capitalize on your good days</h3>
-            <p className="blog-body">
-              If you&apos;re having a day where your symptoms are less severe, use that energy to set up systems that will help you on your harder days.
-              <br />
-              <br />
-              This might involve meal prepping, building a system that makes working out easier, or even planning your week. This can be SO energising on those days where you really need that helping hand.
-            </p>
-            <br />
-            <br />
-            <h3 className="blog-subheader">7. Body Double!</h3>
-            <p className="blog-body">
-              All ADHDers know that nothing is more motivating than having someone else to battle through it with.
-              <br />
-              <br />
-              If you know someone else with ADHD who might also want to form this habit:
-              <br />
-              → Organize a system where you keep each other accountable.
-              <br />
-              → Set reminders to check in with each other - take pictures for evidence every time.
-              <br />
-              → You can even do this virtually with strangers in <a href="https://discord.gg/6drDpUnYVG" target="_blank" rel="noopener noreferrer">communities</a>.
-            </p>
-            <br />
-            <br />
-            <h2 className="blog-subheader">Conclusion ☁️</h2>
-            <p className="blog-body">
-              Building habits with ADHD is challenging, but it&apos;s far from impossible.
-              <br />
-              <br />
-              By understanding how your ADHD brain works and implementing these strategies, you can create lasting change.
-              <br />
-              <br />
-              Remember, it&apos;s about progress, not perfection.
-              <br />
-              <br />
-              Celebrate your wins, learn from your setbacks, and keep moving forward.
-              <br />
-              <br />
-              With time and persistence, you can build the habits and routines that will help you thrive with ADHD.
-              <br />
-              <br />
-              It&apos;s an uphill battle but you&apos;ve got this - it&apos;s not impossible I promise! 💙
-            </p>
-            <br />
-            <br />
-            <p className="blog-body italic">
-              by <b>Josh Budd | Founder of Neuro Notion</b>
-            </p>
-          </div>
-        </article>
-      </div>
-    </main>
+              <p className="blog-body italic">
+                By Josh Budd | Founder @ <b>Neuro Notion</b>
+              </p>
+            </div>
+          </article>
+        </div>
+      </main>
+    </>
   );
 };
 
