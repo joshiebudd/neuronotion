@@ -187,8 +187,8 @@ const TakeControlADHDBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>A messy plan you follow > A perfect plan you don&apos;t</li>
-                <li>Starting before you&apos;re ready > Waiting for the &quot;right moment&quot;</li>
+                <li>A messy plan you follow &gt; A perfect plan you don&apos;t</li>
+                <li>Starting before you&apos;re ready &gt; Waiting for the &quot;right moment&quot;</li>
                 <li>Progress over perfection, always</li>
               </ul>
               <br />
