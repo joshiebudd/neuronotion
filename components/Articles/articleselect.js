@@ -173,6 +173,20 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/jLhDjJNxGODgXDBr.jpeg"
                 slug="why-simple-things-feel-impossible-with-adhd"
               />
+              <BlogCard
+                date="Feb 27, 2025"
+                CardTitle="How to Make Your ADHD Motivation Actually Useful"
+                CardDescription="Harness your ADHD motivation bursts and turn them into sustainable action."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fGXyhQpTXhpjFeaI.jpeg"
+                slug="how-to-make-adhd-motivation-useful"
+              />
+              <BlogCard
+                date="Feb 28, 2025"
+                CardTitle="Why ADHD Task Breakdown Actually Works (When Everything Else Fails)"
+                CardDescription="Discover why breaking tasks down is the most effective ADHD strategy."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/EHGHCUTRaWBwtZcR.jpg"
+                slug="why-adhd-task-breakdown-works"
+              />
             </div>
           </div>
         </section>
