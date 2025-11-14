@@ -138,6 +138,41 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/vvvtStinZQXxtjIq.jpeg"
                 slug="want-a-chance-at-a-clearer-calmer-version-of-you"
               />
+              <BlogCard
+                date="Feb 22, 2025"
+                CardTitle="Be Honest With Me... Are You Scared to Try New Things with ADHD?"
+                CardDescription="Explore why ADHD makes trying new things scary and how to overcome that fear."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/ZZoUTrygimUJlMwe.jpeg"
+                slug="adhd-fear-of-trying-new-things"
+              />
+              <BlogCard
+                date="Feb 23, 2025"
+                CardTitle="ADHD is Not What You Think: What It&apos;s Really Like"
+                CardDescription="Discover what ADHD really feels like beyond the stereotypes and misconceptions."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fSIaPDNaTFZggEfb.jpeg"
+                slug="adhd-is-not-what-you-think"
+              />
+              <BlogCard
+                date="Feb 20, 2025"
+                CardTitle="How to Reduce ADHD Procrastination: Stop Waiting for Motivation"
+                CardDescription="Learn practical strategies to stop procrastinating and start taking action with ADHD."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/cZyekxPYEmrpoxfd.jpeg"
+                slug="how-to-reduce-adhd-procrastination"
+              />
+              <BlogCard
+                date="Feb 19, 2025"
+                CardTitle="How to Take Control of Your ADHD (Instead of Letting It Control You)"
+                CardDescription="Take back control from ADHD with proven strategies and mindset shifts."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/aHPlhULEzomtJJSq.jpeg"
+                slug="how-to-take-control-of-your-adhd"
+              />
+              <BlogCard
+                date="Feb 21, 2025"
+                CardTitle="Why Do &quot;Simple&quot; Things Feel Impossible with ADHD?"
+                CardDescription="Understand why everyday tasks feel overwhelming and how to make them manageable."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/jLhDjJNxGODgXDBr.jpeg"
+                slug="why-simple-things-feel-impossible-with-adhd"
+              />
             </div>
           </div>
         </section>
