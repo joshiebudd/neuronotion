@@ -187,6 +187,27 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/EHGHCUTRaWBwtZcR.jpg"
                 slug="why-adhd-task-breakdown-works"
               />
+              <BlogCard
+                date="Feb 24, 2025"
+                CardTitle="23 Ways to Make Living with ADHD 10x Easier"
+                CardDescription="Practical tips and strategies to simplify daily life with ADHD."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/uaajkRZBUiEbGLxb.jpeg"
+                slug="23-ways-to-make-living-with-adhd-easier"
+              />
+              <BlogCard
+                date="Feb 25, 2025"
+                CardTitle="Everyone Isn&apos;t &quot;A Little ADHD&quot;"
+                CardDescription="Why ADHD is a real condition, not just a personality quirk everyone has."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/DsUQnwIJdBgOxKRM.jpeg"
+                slug="everyone-isnt-a-little-adhd"
+              />
+              <BlogCard
+                date="Feb 26, 2025"
+                CardTitle="The Truth About How ADHD Affects Every Part of Your Life"
+                CardDescription="Understanding the far-reaching impact of ADHD beyond focus and attention."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/kvktnPCUiQTmfJVx.jpeg"
+                slug="how-adhd-affects-every-part-of-your-life"
+              />
             </div>
           </div>
         </section>
