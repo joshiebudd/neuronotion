@@ -208,6 +208,20 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/kvktnPCUiQTmfJVx.jpeg"
                 slug="how-adhd-affects-every-part-of-your-life"
               />
+              <BlogCard
+                date="Feb 28, 2025"
+                CardTitle="Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip)"
+                CardDescription="Why quality sleep is the most important foundation for managing ADHD effectively."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/kMamzgpPkERhwZgR.jpeg"
+                slug="adhd-sleep-foundation"
+              />
+              <BlogCard
+                date="Feb 28, 2025"
+                CardTitle="How to Build Habits with ADHD That Actually Stick (The 4 Laws)"
+                CardDescription="Master the 4 laws of habit formation designed specifically for ADHD brains."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/MyZTUZWInbBbQIKc.jpg"
+                slug="building-habits-that-stick-4-laws"
+              />
             </div>
           </div>
         </section>
