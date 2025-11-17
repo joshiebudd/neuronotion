@@ -243,6 +243,13 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QRBLUTtjMlDxDQnj.jpeg"
                 slug="my-adhd-journey-story"
               />
+              <BlogCard
+                date="Feb 17, 2025"
+                CardTitle="Why Is ADHD on the Rise? The Modern World Is Making Your Symptoms Worse"
+                CardDescription="Explore why ADHD diagnoses are increasing and how modern life amplifies symptoms."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/PyHzaRRBUwMYKNFb.jpeg"
+                slug="adhd-is-rising-why"
+              />
             </div>
           </div>
         </section>

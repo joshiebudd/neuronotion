@@ -9,39 +9,39 @@ const ADHDDiagnosisNotReductionBlog = () => {
     <>
       <Head>
         <title>ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction: What Comes Next | Neuro Notion</title>
-        <meta name="description" content="Getting an ADHD diagnosis doesn't magically reduce symptoms. Learn why diagnosis is just step one and what actually works to manage ADHD effectively." />
+        <meta name="description" content="Getting an ADHD diagnosis doesn&apos;t magically reduce symptoms. Learn why diagnosis is just step one and what actually works to manage ADHD effectively." />
         <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-diagnosis-not-symptom-reduction" />
         <meta property="og:title" content="ADHD Diagnosis ≠ Symptom Reduction: The Reality" />
-        <meta property="og:description" content="Waiting for an ADHD diagnosis won't fix your symptoms. Discover what actually reduces ADHD symptoms and why action matters more than diagnosis." />
+        <meta property="og:description" content="Waiting for an ADHD diagnosis won&apos;t fix your symptoms. Discover what actually reduces ADHD symptoms and why action matters more than diagnosis." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-diagnosis-not-symptom-reduction" />
         <meta property="og:image" content="https://www.neuro-notion.com/images/adhd-diagnosis-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ADHD Diagnosis Doesn't Equal Symptom Reduction" />
-        <meta name="twitter:description" content="A diagnosis doesn't automatically reduce ADHD symptoms. Learn what actually works." />
+        <meta name="twitter:title" content="ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction" />
+        <meta name="twitter:description" content="A diagnosis doesn&apos;t automatically reduce ADHD symptoms. Learn what actually works." />
         <meta name="keywords" content="ADHD diagnosis, ADHD without treatment, managing ADHD symptoms, ADHD diagnosis and treatment, living with undiagnosed ADHD, ADHD symptom management" />
         <meta name="author" content="Josh Budd" />
         <script type="application/ld+json">
           {JSON.stringify({
-            &quot;@context&quot;: &quot;https://schema.org&quot;,
-            &quot;@type&quot;: &quot;BlogPosting&quot;,
-            &quot;headline&quot;: &quot;ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction: What Comes Next&quot;,
-            &quot;author&quot;: {
-              &quot;@type&quot;: &quot;Person&quot;,
-              &quot;name&quot;: &quot;Josh Budd&quot;
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "ADHD Diagnosis Doesn't Equal Symptom Reduction: What Comes Next",
+            "author": {
+              "@type": "Person",
+              "name": "Josh Budd"
             },
-            &quot;publisher&quot;: {
-              &quot;@type&quot;: &quot;Organization&quot;,
-              &quot;name&quot;: &quot;Neuro Notion&quot;,
-              &quot;logo&quot;: {
-                &quot;@type&quot;: &quot;ImageObject&quot;,
-                &quot;url&quot;: &quot;https://www.neuro-notion.com/logo.png&quot;
+            "publisher": {
+              "@type": "Organization",
+              "name": "Neuro Notion",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.neuro-notion.com/logo.png"
               }
             },
-            &quot;datePublished&quot;: &quot;2025-03-01&quot;,
-            &quot;dateModified&quot;: &quot;2025-03-01&quot;,
-            &quot;image&quot;: &quot;https://www.neuro-notion.com/images/adhd-diagnosis-og.jpg&quot;,
-            &quot;description&quot;: &quot;Getting an ADHD diagnosis doesn&apos;t magically reduce symptoms. Learn why diagnosis is just step one and what actually works to manage ADHD effectively.&quot;
+            "datePublished": "2025-03-01",
+            "dateModified": "2025-03-01",
+            "image": "https://www.neuro-notion.com/images/adhd-diagnosis-og.jpg",
+            "description": "Getting an ADHD diagnosis doesn't magically reduce symptoms. Learn why diagnosis is just step one and what actually works to manage ADHD effectively."
           })}
         </script>
       </Head>
