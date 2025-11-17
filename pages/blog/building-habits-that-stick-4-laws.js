@@ -69,7 +69,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Here&apos;s how I "hacked" my ADHD brain using The Four Laws of Behavior Change to either build good habits or break bad ones. This isn&apos;t theory—these are strategies I&apos;ve actually used and that have transformed how I function daily.
+                Here&apos;s how I &quot;hacked&quot; my ADHD brain using The Four Laws of Behavior Change to either build good habits or break bad ones. This isn&apos;t theory—these are strategies I&apos;ve actually used and that have transformed how I function daily.
               </p>
               <br />
               <br />
@@ -178,7 +178,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Your brain won&apos;t generate the satisfaction signal automatically for routine habits. You have to create it artificially. Visual tracking (like crossing off a calendar) provides immediate satisfaction. Reward systems work. Even just telling yourself "Good job, I did the thing" helps. The satisfaction needs to be immediate and tangible, not some vague sense of accomplishment three months from now.
+                <strong>The ADHD hack:</strong> Your brain won&apos;t generate the satisfaction signal automatically for routine habits. You have to create it artificially. Visual tracking (like crossing off a calendar) provides immediate satisfaction. Reward systems work. Even just telling yourself &quot;Good job, I did the thing&quot; helps. The satisfaction needs to be immediate and tangible, not some vague sense of accomplishment three months from now.
               </p>
               <br />
               <br />
@@ -200,7 +200,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Your impulsivity makes resisting visible temptations nearly impossible. Don&apos;t fight it—remove the temptation entirely. Can&apos;t see it? Can&apos;t be tempted by it. This is why "just have willpower" doesn&apos;t work for ADHD. Willpower is a limited resource you don&apos;t have enough of. Environmental design is unlimited.
+                <strong>The ADHD hack:</strong> Your impulsivity makes resisting visible temptations nearly impossible. Don&apos;t fight it—remove the temptation entirely. Can&apos;t see it? Can&apos;t be tempted by it. This is why &quot;just have willpower&quot; doesn&apos;t work for ADHD. Willpower is a limited resource you don&apos;t have enough of. Environmental design is unlimited.
               </p>
               <br />
               <br />
@@ -216,7 +216,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Your brain seeks dopamine constantly. If you can make the bad habit provide negative sensory feedback instead, you create an aversion. The pinch works because it&apos;s immediate and unpleasant. You can also reframe the habit mentally—every time you reach for your phone, remind yourself "This is stealing my focus and making me less effective." The negative association helps over time.
+                <strong>The ADHD hack:</strong> Your brain seeks dopamine constantly. If you can make the bad habit provide negative sensory feedback instead, you create an aversion. The pinch works because it&apos;s immediate and unpleasant. You can also reframe the habit mentally—every time you reach for your phone, remind yourself &quot;This is stealing my focus and making me less effective.&quot; The negative association helps over time.
               </p>
               <br />
               <br />
@@ -227,7 +227,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Friction is your friend when breaking bad habits. Each barrier you add gives your prefrontal cortex a moment to catch up to your impulse. By the time you&apos;ve typed that long password and navigated past the app blocker, your conscious brain has had time to ask "Do I really need to do this right now?" Often, the answer is no, and you can redirect.
+                <strong>The ADHD hack:</strong> Friction is your friend when breaking bad habits. Each barrier you add gives your prefrontal cortex a moment to catch up to your impulse. By the time you&apos;ve typed that long password and navigated past the app blocker, your conscious brain has had time to ask &quot;Do I really need to do this right now?&quot; Often, the answer is no, and you can redirect.
               </p>
               <br />
               <br />

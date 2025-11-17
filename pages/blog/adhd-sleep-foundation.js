@@ -23,25 +23,25 @@ const ADHDSleepFoundationBlog = () => {
         <meta name="author" content="Josh Budd" />
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip)",
-            "author": {
-              "@type": "Person",
-              "name": "Josh Budd"
+            &quot;@context&quot;: &quot;https://schema.org&quot;,
+            &quot;@type&quot;: &quot;BlogPosting&quot;,
+            &quot;headline&quot;: &quot;Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip)&quot;,
+            &quot;author&quot;: {
+              &quot;@type&quot;: &quot;Person&quot;,
+              &quot;name&quot;: &quot;Josh Budd&quot;
             },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Neuro Notion",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.neuro-notion.com/logo.png"
+            &quot;publisher&quot;: {
+              &quot;@type&quot;: &quot;Organization&quot;,
+              &quot;name&quot;: &quot;Neuro Notion&quot;,
+              &quot;logo&quot;: {
+                &quot;@type&quot;: &quot;ImageObject&quot;,
+                &quot;url&quot;: &quot;https://www.neuro-notion.com/logo.png&quot;
               }
             },
-            "datePublished": "2025-02-28",
-            "dateModified": "2025-02-28",
-            "image": "https://www.neuro-notion.com/images/adhd-sleep-og.jpg",
-            "description": "Discover why sleep isn't optional for ADHD—it's THE foundation. Learn how poor sleep amplifies every ADHD symptom and practical strategies to fix it."
+            &quot;datePublished&quot;: &quot;2025-02-28&quot;,
+            &quot;dateModified&quot;: &quot;2025-02-28&quot;,
+            &quot;image&quot;: &quot;https://www.neuro-notion.com/images/adhd-sleep-og.jpg&quot;,
+            &quot;description&quot;: &quot;Discover why sleep isn&apos;t optional for ADHD—it&apos;s THE foundation. Learn how poor sleep amplifies every ADHD symptom and practical strategies to fix it.&quot;
           })}
         </script>
       </Head>
@@ -88,13 +88,13 @@ const ADHDSleepFoundationBlog = () => {
                   <li>Poor sleep amplifies EVERY ADHD symptom—distractibility, emotional dysregulation, impulsivity, and executive dysfunction</li>
                   <li>Just 6 hours of sleep (instead of 8) massively increases negative emotions and appetite for junk food</li>
                   <li>Bad sleep creates a vicious cycle: ADHD makes sleep hard, poor sleep makes ADHD worse</li>
-                  <li>Sleep deprivation gives you an "excuse" to make other poor decisions, compounding the problem</li>
-                  <li>Fixing sleep is not optional for ADHD management—it's THE foundation everything else builds on</li>
+                  <li>Sleep deprivation gives you an &quot;excuse&quot; to make other poor decisions, compounding the problem</li>
+                  <li>Fixing sleep is not optional for ADHD management—it&apos;s THE foundation everything else builds on</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                I don&apos;t know a single "successful" person who doesn&apos;t get at least 7 hours of sleep per night. Nothing impacts your day and your wellbeing more than sleep. Especially if you&apos;re ADHD.
+                I don&apos;t know a single &quot;successful&quot; person who doesn&apos;t get at least 7 hours of sleep per night. Nothing impacts your day and your wellbeing more than sleep. Especially if you&apos;re ADHD.
               </p>
               <br />
               <br />
@@ -138,9 +138,9 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>"I didn&apos;t sleep much last night… I&apos;ll treat myself to a McDonalds."</li>
-                <li>"I didn&apos;t sleep much last night… I really need nicotine today."</li>
-                <li>"I didn&apos;t sleep much last night… I&apos;m not gonna go to the gym."</li>
+                <li>&quot;I didn&apos;t sleep much last night… I&apos;ll treat myself to a McDonalds.&quot;</li>
+                <li>&quot;I didn&apos;t sleep much last night… I really need nicotine today.&quot;</li>
+                <li>&quot;I didn&apos;t sleep much last night… I&apos;m not gonna go to the gym.&quot;</li>
               </ul>
               <br />
               <br />
@@ -176,7 +176,7 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why you can&apos;t just "try harder" with ADHD. When you&apos;re sleep deprived, your brain literally doesn&apos;t have the resources to function properly. Willpower can&apos;t compensate for neurological depletion.
+                This is why you can&apos;t just &quot;try harder&quot; with ADHD. When you&apos;re sleep deprived, your brain literally doesn&apos;t have the resources to function properly. Willpower can&apos;t compensate for neurological depletion.
               </p>
               <br />
               <br />

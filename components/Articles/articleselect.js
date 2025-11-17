@@ -222,6 +222,27 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/MyZTUZWInbBbQIKc.jpg"
                 slug="building-habits-that-stick-4-laws"
               />
+              <BlogCard
+                date="Mar 01, 2025"
+                CardTitle="ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction: What Actually Works"
+                CardDescription="Understanding that ADHD diagnosis is just the beginning—learn what actually creates lasting change."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/NPluqgDnQNuJKKmP.jpeg"
+                slug="adhd-diagnosis-not-symptom-reduction"
+              />
+              <BlogCard
+                date="Mar 02, 2025"
+                CardTitle="Your ADHD is Bleeding Time: Why Organization is Non-Negotiable"
+                CardDescription="How disorganization costs you hours every day and why getting organized is essential for ADHD."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/MSjTIgDGEtyceKtq.jpeg"
+                slug="adhd-wasting-time-disorganization"
+              />
+              <BlogCard
+                date="Mar 03, 2025"
+                CardTitle="From &quot;The Naughty Kid&quot; to High-Performing Entrepreneur: My ADHD Journey"
+                CardDescription="A personal story of transformation from struggling student to successful entrepreneur with ADHD."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QRBLUTtjMlDxDQnj.jpeg"
+                slug="my-adhd-journey-story"
+              />
             </div>
           </div>
         </section>
