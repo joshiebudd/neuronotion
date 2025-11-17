@@ -4,44 +4,44 @@ import Image from 'next/image';
 import Link from 'next/link';
 import HPHeader from '../../components/Homepage/HPHeader';
 
-const ADHDBurningTimeBlog = () => {
+const ADHDSleepFoundationBlog = () => {
   return (
     <>
       <Head>
-        <title>Your ADHD is Bleeding Time: Why Organization is Non-Negotiable | Neuro Notion</title>
-        <meta name="description" content="ADHD disorganization wastes hours of your life daily. Learn why getting organized isn't optional and how to reclaim precious time burned by chaos." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-wasting-time-disorganization" />
-        <meta property="og:title" content="ADHD is Bleeding Your Time: Get Organized or Stay Stuck" />
-        <meta property="og:description" content="Every second spent disorganized burns mental energy you can't spare. Stop wasting time on chaos and reclaim hours for what matters." />
+        <title>Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip) | Neuro Notion</title>
+        <meta name="description" content="Discover why sleep isn&apos;t optional for ADHD—it&apos;s THE foundation. Learn how poor sleep amplifies every ADHD symptom and practical strategies to fix it." />
+        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-sleep-foundation" />
+        <meta property="og:title" content="ADHD and Sleep: Why It&apos;s THE Foundation (Not Optional)" />
+        <meta property="og:description" content="Bad sleep makes ADHD symptoms 10x worse. Discover why sleep is the #1 priority for ADHD management and how to finally fix it." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-wasting-time-disorganization" />
-        <meta property="og:image" content="https://www.neuro-notion.com/images/adhd-time-og.jpg" />
+        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-sleep-foundation" />
+        <meta property="og:image" content="https://www.neuro-notion.com/images/adhd-sleep-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Your ADHD is Bleeding Time: Why Organization is Non-Negotiable" />
-        <meta name="twitter:description" content="Disorganization wastes your most valuable resource: time. Learn how to stop the bleeding." />
-        <meta name="keywords" content="ADHD disorganization, ADHD time management, ADHD wasting time, ADHD organization tips, ADHD productivity, managing ADHD chaos" />
+        <meta name="twitter:title" content="Why Sleep is THE Foundation for Managing ADHD" />
+        <meta name="twitter:description" content="Poor sleep amplifies every ADHD symptom. Learn why sleep is non-negotiable for ADHD brains." />
+        <meta name="keywords" content="ADHD and sleep, ADHD sleep problems, ADHD insomnia, sleep deprivation ADHD, improving sleep with ADHD, ADHD sleep quality" />
         <meta name="author" content="Josh Budd" />
         <script type="application/ld+json">
           {JSON.stringify({
-            &quot;@context&quot;: &quot;https://schema.org&quot;,
-            &quot;@type&quot;: &quot;BlogPosting&quot;,
-            &quot;headline&quot;: &quot;Your ADHD is Bleeding Time: Why Organization is Non-Negotiable&quot;,
-            &quot;author&quot;: {
-              &quot;@type&quot;: &quot;Person&quot;,
-              &quot;name&quot;: &quot;Josh Budd&quot;
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip)",
+            "author": {
+              "@type": "Person",
+              "name": "Josh Budd"
             },
-            &quot;publisher&quot;: {
-              &quot;@type&quot;: &quot;Organization&quot;,
-              &quot;name&quot;: &quot;Neuro Notion&quot;,
-              &quot;logo&quot;: {
-                &quot;@type&quot;: &quot;ImageObject&quot;,
-                &quot;url&quot;: &quot;https://www.neuro-notion.com/logo.png&quot;
+            "publisher": {
+              "@type": "Organization",
+              "name": "Neuro Notion",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.neuro-notion.com/logo.png"
               }
             },
-            &quot;datePublished&quot;: &quot;2025-03-02&quot;,
-            &quot;dateModified&quot;: &quot;2025-03-02&quot;,
-            &quot;image&quot;: &quot;https://www.neuro-notion.com/images/adhd-time-og.jpg&quot;,
-            &quot;description&quot;: &quot;ADHD disorganization wastes hours of your life daily. Learn why getting organized isn&apos;t optional and how to reclaim precious time burned by chaos.&quot;
+            "datePublished": "2025-02-28",
+            "dateModified": "2025-02-28",
+            "image": "https://www.neuro-notion.com/images/adhd-sleep-og.jpg",
+            "description": "Discover why sleep isn't optional for ADHD—it's THE foundation. Learn how poor sleep amplifies every ADHD symptom and practical strategies to fix it."
           })}
         </script>
       </Head>
@@ -56,7 +56,7 @@ const ADHDBurningTimeBlog = () => {
                   <Image
                     className="mr-4 w-16 h-16 rounded-full"
                     src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD organization specialist"
+                    alt="Josh Budd, Founder of Neuro Notion and ADHD sleep optimization specialist"
                     width={64}
                     height={64}
                     priority
@@ -67,9 +67,9 @@ const ADHDBurningTimeBlog = () => {
                       Founder @ <b>Neuro Notion</b>
                     </p>
                     <p className="text-base text-gray-900">
-                      <time pubdate="pubdate" dateTime="2025-03-02" title="March 2nd, 2025">Mar. 2, 2025</time>
+                      <time pubdate="pubdate" dateTime="2025-02-28" title="February 28th, 2025">Feb. 28, 2025</time>
                       <span className="mx-2">•</span>
-                      <span className="text-sm">Last updated: Mar. 2, 2025</span>
+                      <span className="text-sm">Last updated: Feb. 28, 2025</span>
                     </p>
                     <p className="text-sm text-gray-600">
                       Reading time: 7 minutes
@@ -77,7 +77,7 @@ const ADHDBurningTimeBlog = () => {
                   </div>
                 </div>
               </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Your ADHD is Bleeding Time: Why Organization is Non-Negotiable</h1>
+              <h1 className="blog-header mb-4 lg:mb-6">Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip)</h1>
             </header>
 
             <div className="blog-content">
@@ -85,443 +85,285 @@ const ADHDBurningTimeBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm" role="complementary" aria-label="Key Takeaways">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD disorganization bleeds time and mental energy you literally cannot spare</li>
-                  <li>Every second spent searching, rewriting, or remembering is time you could spend on what matters</li>
-                  <li>Organization isn&apos;t about being perfect—it&apos;s about reclaiming hours of your life daily</li>
-                  <li>Systems that work FOR your ADHD brain prevent the chaos that wastes your most valuable resource</li>
-                  <li>The cost of disorganization compounds: wasted time, missed opportunities, constant stress, burnout</li>
+                  <li>Poor sleep amplifies EVERY ADHD symptom—distractibility, emotional dysregulation, impulsivity, and executive dysfunction</li>
+                  <li>Just 6 hours of sleep (instead of 8) massively increases negative emotions and appetite for junk food</li>
+                  <li>Bad sleep creates a vicious cycle: ADHD makes sleep hard, poor sleep makes ADHD worse</li>
+                  <li>Sleep deprivation gives you an &quot;excuse&quot; to make other poor decisions, compounding the problem</li>
+                  <li>Fixing sleep is not optional for ADHD management—it&apos;s THE foundation everything else builds on</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                Your ADHD is causing you to bleed time.
+                I don&apos;t know a single &quot;successful&quot; person who doesn&apos;t get at least 7 hours of sleep per night. Nothing impacts your day and your wellbeing more than sleep. Especially if you&apos;re ADHD.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                If you&apos;re ADHD - you&apos;re one of either two types:
+                This isn&apos;t some wellness trend or lifestyle optimization hack. This is foundational neuroscience. When you have ADHD and sleep, you need to understand that sleep isn&apos;t just important—it&apos;s THE thing that determines whether you can function or whether you spend the day in survival mode.
               </p>
               <br />
               <br />
+              <h2 className="blog-subheader">How Poor Sleep Destroys Your ADHD Brain</h2>
               <p className="blog-body">
-                → Hyper organised to hell. Your calendar is your bible and you&apos;ve really got your sh*t together (that&apos;s about 2% of us).
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                → Or option 2: a chaotic tornado who says they &quot;can&apos;t find the time or energy&quot; to get organised (the other 98%).
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                If you&apos;re option two…
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                You&apos;ve completely missed the point of why organization is a non-negotiable for our ADHD brains.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                <strong>Every second you spend disorganised you&apos;re using up extra mental energy (which you really haven&apos;t got to spare if you&apos;re ADHD).</strong>
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">The Hidden Cost of ADHD Disorganization</h2>
-              <p className="blog-body">
-                Every time you:
+                Getting just 6 hours of sleep (instead of the recommended 8) can massively increase:
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>Search for an idea you wrote down</li>
-                <li>Rewrite notes on something because you lost the first one</li>
-                <li>Forget important stuff (or live in a constant state of anxiety that you are forgetting something)</li>
+                <li><strong>Your likelihood of getting distracted</strong> by things you don&apos;t really want to focus on</li>
+                <li><strong>Your experience of negative emotions</strong> (anxiety, stress, and that ughhh feeling)</li>
+                <li><strong>Your appetite for processed, high calorie foods</strong></li>
               </ul>
               <br />
               <br />
               <p className="blog-body">
-                You could be spending that time (and that energy!) on something that actually matters to you.
+                And massively decrease:
+              </p>
+              <br />
+              <br />
+              <ul className="list-disc ml-8 blog-body">
+                <li><strong>Your ability to go into deep focus</strong></li>
+                <li><strong>Your executive function skills</strong> (which is already significantly lower in ADHD)</li>
+              </ul>
+              <br />
+              <br />
+              <p className="blog-body">
+                But that&apos;s not it. Having less sleep makes us feel excused for making other poor decisions.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Think about it—how much of your day is wasted on being scrambled and disorganised?
+                So we end up compounding bad choices:
+              </p>
+              <br />
+              <br />
+              <ul className="list-disc ml-8 blog-body">
+                <li>&quot;I didn&apos;t sleep much last night… I&apos;ll treat myself to a McDonalds.&quot;</li>
+                <li>&quot;I didn&apos;t sleep much last night… I really need nicotine today.&quot;</li>
+                <li>&quot;I didn&apos;t sleep much last night… I&apos;m not gonna go to the gym.&quot;</li>
+              </ul>
+              <br />
+              <br />
+              <p className="blog-body">
+                Poor sleep really is the root cause of so many of your ADHD problems. Especially if you&apos;re dealing with ADHD sleep problems daily.
+              </p>
+              <br />
+              <br />
+              <h2 className="blog-subheader">The Vicious Cycle of ADHD and Sleep</h2>
+              <p className="blog-body">
+                Here&apos;s what makes this particularly brutal for ADHD brains: you&apos;re stuck in a vicious cycle.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6406620/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and time management</a> shows that people with ADHD struggle significantly with organization and productivity not because they&apos;re lazy, but because executive dysfunction makes these tasks neurologically difficult. The time wasted compounds daily.
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">The Real Cost: Years of Your Life</h2>
-              <p className="blog-body">
-                I remember a time before my calendar (don&apos;t know how I survived lol).
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2855699/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and sleep disturbances</a> shows that ADHD makes falling asleep harder through delayed circadian rhythms, racing thoughts, and sensory sensitivity. Then poor sleep amplifies every ADHD symptom, making the next night&apos;s sleep even harder.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                I double booked everything.
+                The cycle looks like this:
+              </p>
+              <br />
+              <br />
+              <ol className="list-decimal ml-8 blog-body">
+                <li>Your ADHD makes it hard to fall asleep (racing thoughts, delayed sleep phase, restlessness)</li>
+                <li>You get 5-6 hours instead of 8</li>
+                <li>Your executive function, already impaired, becomes nearly non-existent</li>
+                <li>You make poor decisions all day (food, focus, emotional regulation)</li>
+                <li>The stress and overwhelm from a dysfunctional day make falling asleep even harder</li>
+                <li>Repeat, getting worse each cycle</li>
+              </ol>
+              <br />
+              <br />
+              <p className="blog-body">
+                This is why you can&apos;t just &quot;try harder&quot; with ADHD. When you&apos;re sleep deprived, your brain literally doesn&apos;t have the resources to function properly. Willpower can&apos;t compensate for neurological depletion.
+              </p>
+              <br />
+              <br />
+              <h2 className="blog-subheader">Why Sleep Deprivation Hits ADHD Harder</h2>
+              <p className="blog-body">
+                Everyone struggles with poor sleep. But for ADHD brains, the impact is exponentially worse.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Had no clear direction on where I was going.
+                Your prefrontal cortex—the part responsible for executive function, impulse control, and emotional regulation—is already underactive with ADHD. Sleep deprivation makes it even less functional.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                And spent every day mindlessly doing stuff I thought was a priority.
+                A neurotypical person with 6 hours of sleep might be slightly less productive. You with 6 hours of sleep? You can barely function. Tasks that were manageable yesterday become impossible today. Your emotional regulation disappears. Your impulsivity skyrockets.
               </p>
               <br />
               <br />
+              <h2 className="blog-subheader">The Cascade Effect of Bad Sleep</h2>
               <p className="blog-body">
-                And it cost me. Big time.
+                Poor sleep doesn&apos;t just make you tired. It triggers a cascade of negative effects that destroy your entire day:
               </p>
               <br />
               <br />
-              <p className="blog-body">
-                I wasted years thinking I was being productive when really I was just convincing myself I was making progress.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Not only did I miss opportunities, but more importantly I was constantly stressed, burned out, and feeling like I was playing catch-up while everyone else sprinted ahead.
-              </p>
-              <br />
-              <br />
-              <table className="w-full text-sm text-left text-gray-500" role="table" aria-label="The compounding costs of ADHD disorganization">
+              <table className="w-full text-sm text-left text-gray-500" role="table" aria-label="Sleep deprivation effects on ADHD">
                   <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                       <tr>
-                          <th scope="col" className="px-6 py-3">What ADHD Disorganization Costs You</th>
-                          <th scope="col" className="px-6 py-3">Daily Impact</th>
-                          <th scope="col" className="px-6 py-3">Long-Term Consequences</th>
+                          <th scope="col" className="px-6 py-3">Sleep-Deprived Impact</th>
+                          <th scope="col" className="px-6 py-3">How It Manifests in ADHD</th>
+                          <th scope="col" className="px-6 py-3">The Compounding Effect</th>
                       </tr>
                   </thead>
                   <tbody>
                       <tr className="bg-white border-b">
-                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Wasted Time</th>
-                          <td className="px-6 py-4">Searching for lost items, rewriting notes, remembering what you forgot—easily 1-3 hours daily</td>
-                          <td className="px-6 py-4">Thousands of hours yearly that could have built businesses, relationships, skills, memories</td>
+                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Reduced Executive Function</th>
+                          <td className="px-6 py-4">Can&apos;t plan, organize, or initiate tasks. Even simple decisions feel overwhelming.</td>
+                          <td className="px-6 py-4">Nothing gets done, shame spiral begins, stress prevents sleep tonight.</td>
                       </tr>
                       <tr className="bg-white border-b">
-                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Mental Energy Depletion</th>
-                          <td className="px-6 py-4">Constant low-level anxiety about forgetting things, background stress from chaos drains your already limited executive function</td>
-                          <td className="px-6 py-4">Chronic burnout, inability to do deep work, never feeling &quot;caught up,&quot; perpetual survival mode</td>
+                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Emotional Dysregulation</th>
+                          <td className="px-6 py-4">Tiny frustrations trigger meltdowns. Rejection sensitivity amplified. Zero patience.</td>
+                          <td className="px-6 py-4">Relationship conflicts, self-hatred, more anxiety keeping you awake.</td>
                       </tr>
                       <tr className="bg-white">
-                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Missed Opportunities</th>
-                          <td className="px-6 py-4">Forget meetings, miss deadlines, fail to follow up on important connections or projects</td>
-                          <td className="px-6 py-4">Career stagnation, lost relationships, unrealized potential, constant sense of underachievement</td>
+                          <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Increased Impulsivity</th>
+                          <td className="px-6 py-4">More likely to doomscroll, binge, overspend, or procrastinate</td>
+                          <td className="px-6 py-4">Short-term relief, long-term problems, more regret, more stress.</td>
                       </tr>
                   </tbody>
               </table>
               <br />
               <br />
+              <h2 className="blog-subheader">Building an ADHD-Friendly Sleep System</h2>
               <p className="blog-body">
-                This isn&apos;t about being a perfectionist with color-coded files. This is about reclaiming hours of your life every single day.
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">Why ADHD Brains NEED Organization More Than Others</h2>
-              <p className="blog-body">
-                Here&apos;s what most people don&apos;t understand about ADHD and organization:
+                Fixing sleep with ADHD isn&apos;t about becoming a perfect wellness influencer who goes to bed at 9pm with a cup of herbal tea and journaling by candlelight.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                <strong>Neurotypical people can afford to be somewhat disorganized.</strong> Their working memory compensates. Their executive function kicks in when needed. They remember things naturally.
+                It&apos;s about building a realistic, ADHD-friendly system that makes decent sleep your default most nights.
+              </p>
+              <br />
+              <br />
+              <h3 className="text-xl font-bold text-gray-900 mb-4">1. Create a &quot;Shutdown&quot; Routine</h3>
+              <p className="blog-body">
+                ADHD brains struggle to transition from &quot;on&quot; to &quot;off&quot;. You can&apos;t go from hyperfocus or stimulation straight into deep sleep.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                You? Your ADHD brain doesn&apos;t have those safety nets.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Your working memory is limited. Your executive function is already taxed. Your brain doesn&apos;t naturally hold onto information.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Which means every bit of disorganization costs you exponentially more than it costs neurotypical people.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                A neurotypical person forgets where they put their keys? Annoying. Takes them 2 minutes to find them.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                You forget where you put your keys? It triggers a cascade: stress spikes, executive function depletes further, you forget what you were about to do, now you&apos;re late, which creates more stress, which makes everything harder. Twenty minutes gone. Mental energy destroyed.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                <strong>Organization isn&apos;t a luxury for ADHD brains. It&apos;s compensation for neurological differences.</strong>
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">The Transformation: Getting Your Sh*t Together</h2>
-              <p className="blog-body">
-                Until I got my sh*t together.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                I stopped winging it and started implementing systems. Just simple stuff to begin with to organize my life.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                And guess what happened?
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                I reclaimed hours of my day.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Hours I now spend on what I love—growing my business, pursuing my passions, actually living my life.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                But more importantly, I feel 10x better everyday because I&apos;m not wasting mental energy on remembering stuff or stressing about things I&apos;ve got to remember.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Because it&apos;s handled for me.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                This is the point everyone misses: <strong>Organization doesn&apos;t cost you time. Disorganization does.</strong>
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                The 10 minutes you spend setting up a system saves you hours daily. Forever.
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">What Organization Actually Means for ADHD</h2>
-              <p className="blog-body">
-                Let&apos;s be clear about what we&apos;re talking about. Organization for ADHD doesn&apos;t mean:
+                Build a simple shutdown routine 60-90 minutes before bed that might include:
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>Having a spotless desk</li>
-                <li>Color-coding everything</li>
-                <li>Maintaining complex filing systems</li>
-                <li>Being type-A perfect</li>
+                <li>Writing down tomorrow&apos;s tasks so they&apos;re not spinning in your head</li>
+                <li>Setting alarms and reminders so you&apos;re not scared of forgetting something</li>
+                <li>Doing something low-stimulation: stretching, reading, light YouTube (not doomscrolling TikTok)</li>
               </ul>
               <br />
               <br />
               <p className="blog-body">
-                It means:
+                The goal is to signal to your brain: &quot;We&apos;re powering down.&quot;
+              </p>
+              <br />
+              <br />
+              <h3 className="text-xl font-bold text-gray-900 mb-4">2. Use Externalisation to Calm Racing Thoughts</h3>
+              <p className="blog-body">
+                One of the biggest ADHD sleep killers is the &quot;brain race&quot; at night. You lie down and your brain starts throwing out:
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li><strong>Having one place where everything goes.</strong> Calendar for appointments. App for tasks. System for notes. No hunting across 12 locations.</li>
-                <li><strong>Externalizing your working memory.</strong> Stop trying to remember everything. Write it down immediately. Let systems hold information for you.</li>
-                <li><strong>Building capture habits.</strong> Thought pops in? Capture it instantly. Task comes up? Add it immediately. No &quot;I&apos;ll remember later.&quot;</li>
-                <li><strong>Having consistent routines.</strong> Same place for keys every time. Same morning sequence. Autopilot removes decision fatigue.</li>
-                <li><strong>Using visual cues.</strong> Can&apos;t remember? Make it impossible to forget. Put it where you&apos;ll see it.</li>
+                <li>Things you forgot to do</li>
+                <li>Random worries from 2014</li>
+                <li>Ideas for businesses, projects, or life changes</li>
               </ul>
               <br />
               <br />
               <p className="blog-body">
-                Simple. Sustainable. Designed for brains that don&apos;t naturally organize.
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">The Hard Truth</h2>
-              <p className="blog-body">
-                So here&apos;s the hard truth:
+                Your brain doesn&apos;t trust that these thoughts will be handled tomorrow, so it keeps you awake with them.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                If you don&apos;t get organized:
+                The fix? <strong>Externalise everything.</strong>
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                Keep a notebook by your bed, or use a voice assistant like <strong>Claudia by Neuro</strong> to brain dump everything spinning in your mind into a system that will handle it tomorrow.
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                Your brain can relax when it knows:
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                &quot;It&apos;s written down. It&apos;s safe. It&apos;ll be dealt with.&quot;
+              </p>
+              <br />
+              <br />
+              <h3 className="text-xl font-bold text-gray-900 mb-4">3. Make Good Sleep the Default, Not the Exception</h3>
+              <p className="blog-body">
+                With ADHD, relying on willpower to go to bed &quot;on time&quot; doesn&apos;t work. You need structure that makes good sleep the default.
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                Some practical ADHD-friendly strategies:
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>You&apos;re choosing to stay stuck.</li>
-                <li>You&apos;re choosing frustration over progress.</li>
-                <li>You&apos;re choosing to watch life pass you by while you sift through the mess.</li>
+                <li><strong>Set a &quot;bedtime alarm&quot;:</strong> Not just a wake-up alarm. An alarm that reminds you when to start your shutdown routine.</li>
+                <li><strong>Remove high-stimulation devices from your bed area:</strong> If your phone is where you sleep, your brain will associate bed with stimulation, not rest.</li>
+                <li><strong>Use automation:</strong> Smart lights dimming at certain times, do not disturb turning on, apps locking you out late at night.</li>
               </ul>
               <br />
               <br />
+              <h3 className="text-xl font-bold text-gray-900 mb-4">4. Optimise the Environment for Sensory Comfort</h3>
               <p className="blog-body">
-                I know that sounds harsh. But it&apos;s true.
+                ADHD often comes with sensory sensitivities. Your sleep environment matters more than you think:
+              </p>
+              <br />
+              <br />
+              <ul className="list-disc ml-8 blog-body">
+                <li><strong>Temperature:</strong> Cooler rooms promote better sleep—around 18-20°C is ideal.</li>
+                <li><strong>Light:</strong> Blackout curtains or eye masks help signal &quot;night mode&quot; to your brain.</li>
+                <li><strong>Sound:</strong> White noise, fans, or earplugs can reduce auditory distractions. Your sensory sensitivity makes this crucial.</li>
+                <li><strong>Limit screens 1 hour before bed:</strong> Blue light delays melatonin production, making your already-delayed sleep phase even worse.</li>
+                <li><strong>Exercise earlier in the day:</strong> Provides natural dopamine and helps with regulation, but too close to bedtime can be activating.</li>
+              </ul>
+              <br />
+              <br />
+              <h2 className="blog-subheader">Sleep Isn&apos;t Optional</h2>
+              <p className="blog-body">
+                I&apos;ll say it again: improving sleep with ADHD is not just another wellness tip. It&apos;s THE foundation everything else builds on.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                You can keep telling yourself you &quot;don&apos;t have time&quot; to get organized. But that&apos;s backwards thinking.
+                You can have the best productivity systems, the perfect routine, the most supportive tools—but if you&apos;re sleep deprived, none of it will work. Your brain simply won&apos;t have the resources to execute.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                You don&apos;t have time NOT to get organized.
+                Conversely, when you prioritize sleep, everything else becomes easier. Your focus improves. Your emotional regulation strengthens. Your executive function returns. Your impulse control increases. Your decision-making sharpens.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Every day you stay disorganized is another day you bleed time and mental energy you desperately need for the things that actually matter.
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">Starting Simple: The Minimum Viable Organization</h2>
-              <p className="blog-body">
-                Don&apos;t overcomplicate this. You don&apos;t need a perfect system. You need a functional one.
+                This isn&apos;t about being perfect. You&apos;ll have bad sleep nights. Life happens. What matters is making sleep a non-negotiable priority most nights.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Start with these three things:
-              </p>
-              <br />
-              <br />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">1. One Calendar, Everything In It</h3>
-              <p className="blog-body">
-                Every appointment. Every deadline. Every commitment. One place. Check it three times daily (morning, midday, evening). Non-negotiable.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Stop keeping some stuff in your head, some on paper, some in your phone. One system. All information.
-              </p>
-              <br />
-              <br />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">2. Immediate Capture System</h3>
-              <p className="blog-body">
-                Thought enters your brain? Capture it within 10 seconds. Not later. Not when you get home. NOW.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Use voice memos. Use a notes app. Use <strong>Claudia by Neuro</strong> for instant brain dumps. Whatever works. Just capture immediately.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Your working memory will lose that thought within seconds. Externalize it instantly.
-              </p>
-              <br />
-              <br />
-              <h3 className="text-xl font-bold text-gray-900 mb-4">3. Designated Homes for Physical Items</h3>
-              <p className="blog-body">
-                Keys always go in the same bowl by the door. Phone always charges in the same spot. Wallet always goes in the same pocket or bag location.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Not sometimes. Always. Build the muscle memory so returning items to their home becomes automatic.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                These three things alone will save you hours every week.
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">Why Systems Trump Willpower</h2>
-              <p className="blog-body">
-                Here&apos;s why organization works for ADHD when willpower doesn&apos;t:
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                <strong>Willpower depletes.</strong> By afternoon, your executive function is shot. You can&apos;t rely on it.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                <strong>Systems persist.</strong> A good system works whether you&apos;re motivated or not. Whether you&apos;re having a good ADHD day or a terrible one.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                The calendar doesn&apos;t care if you&apos;re tired. It still shows your appointments.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                The bowl by the door doesn&apos;t care if you&apos;re overwhelmed. Your keys are still there.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                The capture app doesn&apos;t care if you&apos;re distracted. Your thought is still saved.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                <strong>Organization compensates for ADHD. It doesn&apos;t fight it.</strong>
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">Stop Wasting Time on Pointless Chaos</h2>
-              <p className="blog-body">
-                If you&apos;ve got ADHD... it&apos;s time to get your stuff together.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Stop wasting time on pointless chaos.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Start clawing back time to use on things that move you forward.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Because life&apos;s short, and you can&apos;t afford to waste another minute.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                The years you&apos;ve lost to disorganization are gone. You can&apos;t get them back.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                But every day going forward is yours to reclaim.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Set up that calendar. Build that capture system. Create those designated homes.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                And watch as hours materialize in your day. Mental energy returns. Stress decreases. Progress becomes visible.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                Not because you became a different person. Because you stopped fighting your ADHD brain and started supporting it.
+                Because when you consistently get 7-8 hours, you&apos;re not just managing your ADHD symptoms—you&apos;re giving your brain the basic resource it needs to function. Everything else flows from that foundation.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md" role="complementary" aria-label="Call to Action">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop bleeding time?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the organization system built specifically for ADHD brains. Instant capture, external working memory, zero maintenance. Stop wasting mental energy on chaos. Start reclaiming hours of your life daily. Get your sh*t together today.
+                  <strong>Ready to make sleep THE priority?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that helps you brain dump before bed, reducing the racing thoughts that prevent sleep. When your brain knows everything is safely captured, it can finally rest. Start building the foundation tonight.
                 </p>
               </div>
               <br />
@@ -536,4 +378,4 @@ const ADHDBurningTimeBlog = () => {
   );
 };
 
-export default ADHDBurningTimeBlog;
+export default ADHDSleepFoundationBlog;

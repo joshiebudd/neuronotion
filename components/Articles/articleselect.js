@@ -250,6 +250,20 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/PyHzaRRBUwMYKNFb.jpeg"
                 slug="adhd-is-rising-why"
               />
+              <BlogCard
+                date="Feb 19, 2025"
+                CardTitle="The Three Pillars of ADHD Control: Sleep, Diet, and Exercise"
+                CardDescription="Master the foundational lifestyle factors that make the biggest difference in ADHD management."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/ZBzjTRaDqDchxuLR.jpg"
+                slug="three-pillars-adhd-control"
+              />
+              <BlogCard
+                date="Feb 18, 2025"
+                CardTitle="Finally, Someone Gets It: Why Being Understood Changes Everything with ADHD"
+                CardDescription="Why feeling understood is transformative for people with ADHD and how to find your people."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/AERmRCdhXAECATTn.jpeg"
+                slug="you-just-get-me"
+              />
             </div>
           </div>
         </section>

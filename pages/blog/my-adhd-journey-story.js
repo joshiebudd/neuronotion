@@ -9,39 +9,39 @@ const ADHDJourneyBlog = () => {
     <>
       <Head>
         <title>From &quot;Naughty Kid&quot; to High-Performing Entrepreneur: My ADHD Journey | Neuro Notion</title>
-        <meta name="description" content="How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses. My journey proves your past doesn't define your future." />
+        <meta name="description" content="How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses. My journey proves your past doesn&apos;t define your future." />
         <link rel="canonical" href="https://www.neuro-notion.com/blog/my-adhd-journey-story" />
         <meta property="og:title" content="My ADHD Journey: From Naughty Kid to Entrepreneur" />
-        <meta property="og:description" content="Diagnosed at 10 with severe ADHD. Kicked out of 7+ schools. Now running two businesses. Your past identity doesn't define your future." />
+        <meta property="og:description" content="Diagnosed at 10 with severe ADHD. Kicked out of 7+ schools. Now running two businesses. Your past identity doesn&apos;t define your future." />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.neuro-notion.com/blog/my-adhd-journey-story" />
         <meta property="og:image" content="https://www.neuro-notion.com/images/adhd-journey-og.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="My ADHD Journey: From Naughty Kid to Entrepreneur" />
-        <meta name="twitter:description" content="Severe ADHD, 7+ school expulsions, now thriving. Your past doesn't define you." />
+        <meta name="twitter:description" content="Severe ADHD, 7+ school expulsions, now thriving. Your past doesn&apos;t define you." />
         <meta name="keywords" content="ADHD personal story, ADHD success story, living with ADHD, ADHD entrepreneur, ADHD journey, overcoming ADHD, adult ADHD diagnosis story" />
         <meta name="author" content="Josh Budd" />
         <script type="application/ld+json">
           {JSON.stringify({
-            &quot;@context&quot;: &quot;https://schema.org&quot;,
-            &quot;@type&quot;: &quot;BlogPosting&quot;,
-            &quot;headline&quot;: &quot;From Naughty Kid to High-Performing Entrepreneur: My ADHD Journey&quot;,
-            &quot;author&quot;: {
-              &quot;@type&quot;: &quot;Person&quot;,
-              &quot;name&quot;: &quot;Josh Budd&quot;
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "From Naughty Kid to High-Performing Entrepreneur: My ADHD Journey",
+            "author": {
+              "@type": "Person",
+              "name": "Josh Budd"
             },
-            &quot;publisher&quot;: {
-              &quot;@type&quot;: &quot;Organization&quot;,
-              &quot;name&quot;: &quot;Neuro Notion&quot;,
-              &quot;logo&quot;: {
-                &quot;@type&quot;: &quot;ImageObject&quot;,
-                &quot;url&quot;: &quot;https://www.neuro-notion.com/logo.png&quot;
+            "publisher": {
+              "@type": "Organization",
+              "name": "Neuro Notion",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.neuro-notion.com/logo.png"
               }
             },
-            &quot;datePublished&quot;: &quot;2025-03-03&quot;,
-            &quot;dateModified&quot;: &quot;2025-03-03&quot;,
-            &quot;image&quot;: &quot;https://www.neuro-notion.com/images/adhd-journey-og.jpg&quot;,
-            &quot;description&quot;: &quot;How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses. My journey proves your past doesn&apos;t define your future.&quot;
+            "datePublished": "2025-03-03",
+            "dateModified": "2025-03-03",
+            "image": "https://www.neuro-notion.com/images/adhd-journey-og.jpg",
+            "description": "How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses. My journey proves your past doesn't define your future."
           })}
         </script>
       </Head>
@@ -298,34 +298,66 @@ const ADHDJourneyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                I&apos;m by no means a millionaire, nor have I achieved even a fraction of the things I want to in business.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                But I know that I&apos;m on the trajectory to do so, and it all comes from UNDERSTANDING my own brain.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                I&apos;m running two businesses. I have systems that actually work for me. I&apos;m building tools (like <strong>Claudia by Neuro</strong>) to help others do what I did.
-              </p>
-              <br />
-              <br />
-              <p className="blog-body">
-                More importantly: I&apos;m not constantly ashamed. I&apos;m not drowning in overwhelm. I&apos;m not the &quot;naughty kid&quot; anymore.
-              </p>
-              <br />
-              <br />
-              <h2 className="blog-subheader">The Two Things That Changed Everything</h2>
-              <p className="blog-body">
-                So if your ADHD is causing you to:
+                I&apos;m now running two businesses:
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>Struggle with getting &quot;simple&quot; stuff done</li>
-                <li>Making you feel swamped by things you&apos;ve gotta do</li>
+                <li><strong>Neuro Notion</strong> - Helping people with ADHD take control of their lives through systems built for ADHD brains</li>
+                <li><strong>A Marketing Agency</strong> - Working with clients to build effective digital strategies</li>
+              </ul>
+              <br />
+              <br />
+              <p className="blog-body">
+                Both require intense focus, organization, and consistency—things that supposedly people with ADHD can&apos;t do.
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                Except I can. Because I&apos;ve built my life around systems that work FOR my ADHD brain, not against it.
+              </p>
+              <br />
+              <br />
+              <h2 className="blog-subheader">The Systems That Changed Everything</h2>
+              <p className="blog-body">
+                People always ask me: &quot;What changed? How did you go from expelled to entrepreneur?&quot;
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                The answer isn&apos;t a miracle cure or some revolutionary productivity hack.
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                It&apos;s systems. Specifically, systems designed around how ADHD brains actually work:
+              </p>
+              <br />
+              <br />
+              <ul className="list-disc ml-8 blog-body space-y-2">
+                <li><strong>External memory systems</strong> - I don&apos;t rely on my working memory for anything. Everything is externalized immediately.</li>
+                <li><strong>Task initiation support</strong> - Breaking everything down into micro-steps so small my brain can&apos;t generate resistance</li>
+                <li><strong>Dopamine-friendly design</strong> - Quick wins, gamification, and reward systems that work with my brain&apos;s chemistry</li>
+                <li><strong>Time-awareness tools</strong> - Because time blindness is real and I need external help to understand how time is passing</li>
+                <li><strong>Decision minimization</strong> - Reducing cognitive load wherever possible so I have capacity for what matters</li>
+              </ul>
+              <br />
+              <br />
+              <p className="blog-body">
+                Understanding <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">why every decision depletes you</Link> was one of the key insights that helped me build systems that actually work.
+              </p>
+              <br />
+              <br />
+              <h2 className="blog-subheader">What You Need to Know About Taking Control</h2>
+              <p className="blog-body">
+                If you&apos;re struggling with ADHD and feeling like it&apos;s:
+              </p>
+              <br />
+              <br />
+              <ul className="list-disc ml-8 blog-body">
+                <li>Holding you back from what you want to achieve…</li>
+                <li>Making you feel like you&apos;re constantly failing…</li>
+                <li>Stopping you from living the life you know you&apos;re capable of…</li>
                 <li>Controlling you rather than the other way round…</li>
               </ul>
               <br />
