@@ -264,6 +264,27 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/AERmRCdhXAECATTn.jpeg"
                 slug="you-just-get-me"
               />
+              <BlogCard
+                date="Nov 18, 2025"
+                CardTitle="ADHD Systems Not Goals: Why You Don&apos;t Rise to Your Goals, You Fall to Your Systems"
+                CardDescription="Learn why building reliable systems is more effective than setting goals for ADHD success."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/WCkiQUZEfiWXRMhf.jpeg"
+                slug="adhd-systems-not-goals"
+              />
+              <BlogCard
+                date="Nov 18, 2025"
+                CardTitle="ADHD Prioritization: The Non-Negotiables List That Stops Decision Paralysis"
+                CardDescription="Create a non-negotiables list that eliminates decision fatigue and keeps you on track."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/nDXLblRyNfsoLgJU.jpeg"
+                slug="adhd-prioritization-daily-non-negotiables"
+              />
+              <BlogCard
+                date="Nov 18, 2025"
+                CardTitle="ADHD Idea Overwhelm: How to Navigate Your Idea Storm Without Drowning"
+                CardDescription="Build a capture system to manage your endless stream of ideas without losing focus."
+                image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/VTKaigXqhtqEKEPr.jpeg"
+                slug="adhd-idea-overwhelm-capture-system"
+              />
             </div>
           </div>
         </section>
