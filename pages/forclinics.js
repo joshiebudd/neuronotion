@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Play, 
   ArrowRight, 
+  Menu, 
+  X,
   LineChart,     
   Banknote,      
   Hourglass,     
@@ -27,14 +29,78 @@ import {
   CalendarCheck,
   Briefcase,
   HeartPulse,
-  Search
+  Search,
+  Calendar
 } from 'lucide-react';
+import HPHeader from '../components/Homepage/HPHeader';
+import FooterSection from '../components/FooterSection';
 
-const App = () => {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+// --- Modal Component ---
+const BookingModal = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
 
   return (
-    <div className="min-h-screen bg-[#0F172A] text-white selection:bg-[#0EA5E9] selection:text-white font-lexend overflow-x-hidden">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm animate-in fade-in duration-200">
+      <div className="bg-[#1E293B] border border-slate-700 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden relative animate-in zoom-in-95 duration-300">
+        <button 
+          onClick={onClose}
+          className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
+        >
+          <X size={24} />
+        </button>
+        
+        <div className="p-8 text-center">
+          <div className="w-16 h-16 bg-[#0EA5E9]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CalendarCheck size={32} className="text-[#0EA5E9]" />
+          </div>
+          
+          <h3 className="text-2xl font-bold text-white mb-4 font-poppins leading-tight">
+            Learn more about White Labelling Claudia by Neuro for your clinic.
+          </h3>
+          
+          <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+            Speak with the founder of Claudia to see how you can provide better patient outcomes, and make more money doing it.
+          </p>
+          
+          <a 
+            href="https://app.usemotion.com/meet/josh-budd/qvgpsxk" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-xl py-4 rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-1"
+          >
+            Book a Call
+          </a>
+          
+          <p className="mt-4 text-xs text-slate-500">
+            No commitment required. 15-minute intro call.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Handle scroll for navbar styling
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <>
+      <HPHeader />
+      <div className="min-h-screen bg-[#0F172A] text-white selection:bg-[#0EA5E9] selection:text-white font-lexend overflow-x-hidden">
       
       {/* Font Imports */}
       <style>{`
@@ -61,6 +127,7 @@ const App = () => {
           background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
         }
 
+        /* Straight Line Strikethrough (Reverted) */
         .strikethrough-red {
           position: relative;
           display: inline-block;
@@ -90,6 +157,8 @@ const App = () => {
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
       `}</style>
 
+      <BookingModal isOpen={isModalOpen} onClose={closeModal} />
+
       {/* Hero Section */}
       <section className="pt-20 pb-20 lg:pt-32 lg:pb-32 px-6 relative overflow-hidden">
         {/* Background Glow */}
@@ -107,7 +176,7 @@ const App = () => {
           </div>
           
           <h1 className="font-poppins font-bold text-4xl md:text-6xl tracking-tight mb-8 leading-[1.15]">
-            Post-Diagnosis Care is <br/>
+            Post-Diagnosis ADHD Care is <br/>
             <span className="text-slate-500 strikethrough-red mr-4">Expensive</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Profitable.</span>
           </h1>
@@ -117,10 +186,13 @@ const App = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
-            <a href="https://www.neuro-notion.com" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white rounded-xl font-semibold text-lg transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2 hover:-translate-y-1">
+            <button 
+              onClick={openModal}
+              className="w-full sm:w-auto px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white rounded-xl font-semibold text-lg transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2 hover:-translate-y-1"
+            >
               Learn more
               <ArrowRight size={20} />
-            </a>
+            </button>
             <a href="https://www.neuro-notion.com" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-slate-600 hover:border-slate-400 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 hover:bg-slate-800/50">
               What is Claudia by Neuro?
             </a>
@@ -176,9 +248,9 @@ const App = () => {
             </div>
           </div>
 
-          {/* Affiliates */}
+          {/* Supported By (Affiliates) */}
           <div className="mb-14 text-center">
-             <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Affiliated with</p>
+             <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Supported by</p>
              <div className="flex flex-wrap justify-center items-start gap-12">
                 <AffiliateProfile 
                   name="Dr Tony Lloyd" 
@@ -230,7 +302,7 @@ const App = () => {
                 <ProblemItem 
                   icon={<Hourglass className="text-orange-400" size={24} />}
                   title="Clinicians are wasting time"
-                  desc="Clinicians spend ages writing generic reports that no one reads or acts on. They need an automated default that adapts to the individual."
+                  desc="Clinicians spend hours writing generic reports that rarely get read or actioned. They need an automated default that adapts to the individual."
                 />
               </div>
             </div>
@@ -417,10 +489,13 @@ const App = () => {
           <div className="bg-[#1E293B] p-8 rounded-2xl shadow-2xl border border-slate-700 text-left">
             <h3 className="font-bold text-xl mb-6 text-center font-poppins text-white">Get the White Label Deck</h3>
             <p className="text-slate-400 text-center mb-8">
-              Join the leading clinics transforming their post-diagnosis care with Neuro Notion.
+              Join the leading clinics transforming their post-diagnosis care with Neuro
             </p>
             <div className="flex justify-center">
-              <button className="w-full md:w-auto px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-lg rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20">
+              <button 
+                onClick={openModal}
+                className="w-full md:w-auto px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-lg rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20"
+              >
                 Learn More
                 <ArrowRight size={20} />
               </button>
@@ -429,6 +504,8 @@ const App = () => {
         </div>
       </section>
     </div>
+      <FooterSection />
+    </>
   );
 };
 
