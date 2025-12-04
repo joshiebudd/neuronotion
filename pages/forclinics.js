@@ -32,8 +32,10 @@ import {
   Search,
   Calendar
 } from 'lucide-react';
-import HPHeader from '../components/Homepage/HPHeader';
-import FooterSection from '../components/FooterSection';
+import OldClaudiaHeader from '../components/OldClaudiaHeader';
+// The footer is inline in index.js, so we will use the same inline footer structure.
+// The index.js file uses a simple inline footer. We will replicate that structure.
+// The original forclinics.js had its own footer-like section, which we will keep.
 
 // --- Modal Component ---
 const BookingModal = ({ isOpen, onClose }) => {
@@ -99,7 +101,7 @@ const App = () => {
 
   return (
     <>
-      <HPHeader />
+      <OldClaudiaHeader />
       <div className="min-h-screen bg-[#0F172A] text-white selection:bg-[#0EA5E9] selection:text-white font-lexend overflow-x-hidden">
       
       {/* Font Imports */}
@@ -504,7 +506,7 @@ const App = () => {
         </div>
       </section>
     </div>
-      <FooterSection />
+
     </>
   );
 };
