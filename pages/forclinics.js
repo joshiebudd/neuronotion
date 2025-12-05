@@ -65,7 +65,7 @@ const BookingModal = ({ isOpen, onClose }) => {
           </p>
           
           <a 
-            href="https://app.usemotion.com/meet/josh-budd/qvgpsxk" 
+            href="https://app.usemotion.com/meet/josh-budd/meeting" 
             target="_blank" 
             rel="noopener noreferrer"
             className="block w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-xl py-4 rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-1"
@@ -74,7 +74,7 @@ const BookingModal = ({ isOpen, onClose }) => {
           </a>
           
           <p className="mt-4 text-xs text-slate-500">
-            No commitment required. 15-minute intro call.
+            Let&apos;s explore how this might fit into your clinic
           </p>
         </div>
       </div>
@@ -101,7 +101,7 @@ const App = () => {
 
   return (
     <>
-      <ClinicPageHeader />
+      <ClinicPageHeader onLearnMoreClick={openModal} />
       <div className="min-h-screen bg-[#0F172A] text-white selection:bg-[#0EA5E9] selection:text-white font-lexend overflow-x-hidden">
       
       {/* Font Imports */}
@@ -203,7 +203,7 @@ const App = () => {
           {/* VSL Container */}
           <div className="relative max-w-3xl mx-auto">
             <VideoPlayer 
-              videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Enhance%20ADHD%20Patient%20Support%20for%20Clinics.mp4"
+              videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Enhance%20ADHD%20Patient%20Support%20for%20Clinics%20(1).mp4"
               title="Turn Support into Profit - Demo for Directors"
               autoPlay={false}
               muted={false}
@@ -476,24 +476,19 @@ const App = () => {
       <section className="py-24 bg-[#0F172A] relative">
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-[#0F172A]"></div>
         
-        <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
-          <h2 className="font-poppins font-bold text-4xl text-white mb-6">Win Contracts with Better Data</h2>
-          <p className="text-xl text-slate-400 mb-10">
-            Big shifts are coming. RTC & Insurers are about to start asking for outcomes. Be the first to give them proof, not promises.
-          </p>
-          
-          <div className="bg-[#1E293B] p-8 rounded-2xl shadow-2xl border border-slate-700 text-left">
-            <h3 className="font-bold text-xl mb-6 text-center font-poppins text-white">Get the White Label Deck</h3>
-            <p className="text-slate-400 text-center mb-8">
-              Join the leading clinics transforming their post-diagnosis care with Neuro
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <div className="bg-[#1E293B] p-12 rounded-2xl shadow-2xl border border-slate-700">
+            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">Win Contracts with Better Data</h2>
+            <p className="text-xl md:text-2xl text-slate-400 mb-10 leading-relaxed">
+              Big shifts are coming. RTC &amp; Insurers are about to start asking for outcomes. Be the first to give them proof, not promises.
             </p>
             <div className="flex justify-center">
               <button 
                 onClick={openModal}
-                className="w-full md:w-auto px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-lg rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20"
+                className="w-full md:w-auto px-10 py-5 bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-xl rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 hover:-translate-y-1"
               >
                 Learn More
-                <ArrowRight size={20} />
+                <ArrowRight size={24} />
               </button>
             </div>
           </div>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { track } from "@vercel/analytics";
 import { cn } from "../lib/utils";
 
-const ClinicPageHeader = () => {
+const ClinicPageHeader = ({ onLearnMoreClick }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -16,8 +16,8 @@ const ClinicPageHeader = () => {
 
   const handleLearnMoreClick = () => {
     track('Header Learn More');
-    if (typeof window !== 'undefined') {
-      window.open('https://www.neuro-notion.com', '_blank', 'noopener,noreferrer');
+    if (onLearnMoreClick) {
+      onLearnMoreClick();
     }
   };
 
@@ -32,7 +32,7 @@ const ClinicPageHeader = () => {
         )}
       >
         <div className="flex items-center justify-between max-w-[1400px] mx-auto w-full">
-          <Link href="/forclinics" className="flex items-center space-x-2">
+          <a href="https://www.neuro-notion.com" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
             <img
               src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
               alt="Neuro Logo"
@@ -40,7 +40,7 @@ const ClinicPageHeader = () => {
             />
             <span className="hidden sm:inline text-xl font-semibold tracking-tight text-white">Claudia by Neuro</span>
             <span className="sm:hidden text-lg font-semibold tracking-tight text-white">Neuro</span>
-          </Link>
+          </a>
 
           <div className="flex items-center gap-1">
             <button
