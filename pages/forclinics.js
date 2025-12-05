@@ -32,10 +32,10 @@ import {
   Search,
   Calendar
 } from 'lucide-react';
-import OldClaudiaHeader from '../components/OldClaudiaHeader';
-// The footer is inline in index.js, so we will use the same inline footer structure.
-// The index.js file uses a simple inline footer. We will replicate that structure.
-// The original forclinics.js had its own footer-like section, which we will keep.
+import ClinicPageHeader from '../components/ClinicPageHeader';
+import { LPFooter } from '../components/ClaudiaLandingPage/LPFooter';
+import { VideoPlayer } from '../components/VideoPlayer';
+import { Toaster } from '../components/ui/toaster';
 
 // --- Modal Component ---
 const BookingModal = ({ isOpen, onClose }) => {
@@ -101,7 +101,7 @@ const App = () => {
 
   return (
     <>
-      <OldClaudiaHeader />
+      <ClinicPageHeader />
       <div className="min-h-screen bg-[#0F172A] text-white selection:bg-[#0EA5E9] selection:text-white font-lexend overflow-x-hidden">
       
       {/* Font Imports */}
@@ -201,31 +201,25 @@ const App = () => {
           </div>
 
           {/* VSL Container */}
-          <div className="relative max-w-3xl mx-auto rounded-2xl shadow-2xl overflow-hidden bg-slate-900 aspect-video group cursor-pointer border border-slate-700/50" onClick={() => setIsVideoPlaying(true)}>
-            {!isVideoPlaying ? (
-              <div className="absolute inset-0 flex items-center justify-center bg-slate-900/50 backdrop-blur-sm">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90 z-0"></div>
-                <div className="relative z-10 text-center px-4">
-                  <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl border border-white/20 group-hover:scale-110 transition-transform duration-300 group-hover:bg-[#0EA5E9] group-hover:border-transparent">
-                    <Play className="text-white ml-2" size={32} fill="currentColor" />
-                  </div>
-                  <h3 className="text-white font-poppins font-bold text-2xl mb-2">Turn Support into Profit</h3>
-                  <p className="text-slate-400 font-medium">2 min Demo for Directors</p>
-                </div>
-              </div>
-            ) : (
-              <div className="absolute inset-0 bg-black flex items-center justify-center">
-                 <div className="text-center text-white">
-                    <p className="mb-4 font-medium">Video Player Placeholder</p>
-                    <button 
-                      onClick={(e) => { e.stopPropagation(); setIsVideoPlaying(false); }}
-                      className="text-sm text-slate-400 hover:text-white underline"
-                    >
-                      Close Video
-                    </button>
-                 </div>
-              </div>
-            )}
+          <div className="relative max-w-3xl mx-auto">
+            <VideoPlayer 
+              videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Enhance%20ADHD%20Patient%20Support%20for%20Clinics.mp4"
+              title="Turn Support into Profit - Demo for Directors"
+              autoPlay={false}
+              muted={false}
+              loop={false}
+            />
+            {/* Sound On Arrow - positioned just outside bottom-right of video */}
+            <div className="absolute -bottom-3 -right-2 sm:-bottom-5 sm:-right-5 flex items-center space-x-2 bg-[#30bcd9] text-black px-3 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse">
+              <svg 
+                className="w-4 h-4 transform rotate-[225deg]" 
+                fill="currentColor" 
+                viewBox="0 0 20 20"
+              >
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm font-bold" style={{ fontWeight: 700 }}>Sound on!</span>
+            </div>
           </div>
         </div>
       </section>
@@ -506,7 +500,8 @@ const App = () => {
         </div>
       </section>
     </div>
-
+      <LPFooter />
+      <Toaster />
     </>
   );
 };
