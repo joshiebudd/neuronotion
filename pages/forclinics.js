@@ -50,7 +50,7 @@ const FounderStory = ({ isOpen, onClose }) => {
         <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#1E293B] border-t border-l border-slate-700 rotate-45"></div>
         <button onClick={onClose} className="absolute top-2 right-2 text-slate-400 hover:text-white"><X size={16} /></button>
         
-        <h4 className="text-white font-bold text-lg mb-4 text-center">Read more about the founder's story</h4>
+        <h4 className="text-white font-bold text-lg mb-4 text-center">Read more about the founder&apos;s story</h4>
         
         <div className="space-y-4 text-sm text-slate-300">
           <p>
@@ -319,7 +319,7 @@ const App = () => {
                   link="https://www.linkedin.com/in/tony-l-ba67301/"
                   isLarge={true}
                   bio={[
-                     "#1 ADHD Doctor in England",
+                     "&#35;1 ADHD Doctor in England",
                      "Ex-CEO of ADHD Foundation",
                      "Advisor to NHS, government & ADHD bodies."
                   ]}
@@ -417,7 +417,7 @@ const App = () => {
 
                 <div className="mt-8 text-center pt-6 border-t border-white/10 relative group tooltip-container">
                   <p className="text-slate-300 text-lg font-medium">
-                    This "Gap" costs you <span className="text-red-400 font-bold border-b-2 border-dashed border-red-400 cursor-help">£1,360/patient</span>.
+                    This &quot;Gap&quot; costs you <span className="text-red-400 font-bold border-b-2 border-dashed border-red-400 cursor-help">£1,360/patient</span>.
                   </p>
                   
                   {/* Tooltip */}
