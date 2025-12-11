@@ -30,20 +30,66 @@ import {
   Briefcase,
   HeartPulse,
   Search,
-  Calendar
+  Calendar,
+  Lock
 } from 'lucide-react';
+
 import ClinicPageHeader from '../components/ClinicPageHeader';
 import { LPFooter } from '../components/ClaudiaLandingPage/LPFooter';
 import { VideoPlayer } from '../components/VideoPlayer';
 import { Toaster } from '../components/ui/toaster';
 
+
+// --- Founder Story Modal/Tooltip ---
+const FounderStory = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+  
+  return (
+    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-96 z-50 animate-in zoom-in-95 duration-200">
+      <div className="bg-[#1E293B] border border-slate-700 rounded-xl shadow-2xl p-6 text-left relative">
+        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#1E293B] border-t border-l border-slate-700 rotate-45"></div>
+        <button onClick={onClose} className="absolute top-2 right-2 text-slate-400 hover:text-white"><X size={16} /></button>
+        
+        <h4 className="text-white font-bold text-lg mb-4 text-center">Read more about the founder's story</h4>
+        
+        <div className="space-y-4 text-sm text-slate-300">
+          <p>
+            Hi, I&apos;m Josh, and I&apos;m diagnosed severe combined ADHD. By age 11 I&apos;d been expelled from 13 schools and discarded as a &quot;problem child&quot;.
+          </p>
+          <div className="flex justify-center py-2">
+            <img 
+               src="https://NeuroNotionPullZonw.b-cdn.net/Pitchshot.jpg" 
+               alt="Josh Budd" 
+               className="w-20 h-20 rounded-full object-cover border-2 border-[#0EA5E9]" 
+               onError={(e) => {
+                 e.target.src = "https://ui-avatars.com/api/?name=Josh+Budd&background=0EA5E9&color=fff";
+               }}
+            />
+          </div>
+          <p>
+            As an adult, I&apos;ve tried every productivity/life management system, app, and &quot;ADHD hack&quot; out there. Most were built by neurotypical minds for neurotypical brains. Some of those slapped an &quot;ADHD friendly&quot; label on there.
+          </p>
+          <p>
+            This just didn&apos;t work for my ADHD brain, so I spent two years building my own (in true ADHD fashion 😂). Something that actually understands how we think, process information, and get things done.
+          </p>
+          <p className="border-t border-slate-700 pt-3 mt-3 italic text-slate-400 text-xs">
+            We are all unique, but there are some things that 95% of us with ADHD struggle with, Claudia tries to make managing those things 10x easier.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // --- Modal Component ---
 const BookingModal = ({ isOpen, onClose }) => {
+  const [showFounderStory, setShowFounderStory] = useState(false);
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-[#1E293B] border border-slate-700 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden relative animate-in zoom-in-95 duration-300">
+      <div className="bg-[#1E293B] border border-slate-700 rounded-2xl shadow-2xl w-full max-w-lg overflow-visible relative animate-in zoom-in-95 duration-300">
         <button 
           onClick={onClose}
           className="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors"
@@ -60,9 +106,20 @@ const BookingModal = ({ isOpen, onClose }) => {
             Learn more about White Labelling Claudia by Neuro for your clinic.
           </h3>
           
-          <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-            Speak with the founder of Claudia to see how you can provide better patient outcomes, and make more money doing it.
-          </p>
+          <div className="relative inline-block mb-8">
+            <p className="text-slate-400 text-lg leading-relaxed">
+              Speak with the{" "}
+              <button 
+                onMouseEnter={() => setShowFounderStory(true)}
+                onMouseLeave={() => setShowFounderStory(false)}
+                className="text-white font-bold underline decoration-[#0EA5E9] underline-offset-4 decoration-2 cursor-pointer hover:text-[#0EA5E9] transition-colors relative"
+              >
+                founder of Claudia
+                {showFounderStory && <FounderStory isOpen={true} onClose={() => setShowFounderStory(false)} />}
+              </button>
+              {" "}to see how you can provide better patient outcomes, and make more money doing it.
+            </p>
+          </div>
           
           <a 
             href="https://app.usemotion.com/meet/josh-budd/meeting" 
@@ -82,20 +139,10 @@ const BookingModal = ({ isOpen, onClose }) => {
   );
 };
 
+// --- Main App Component ---
 const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Handle scroll for navbar styling
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
@@ -129,7 +176,7 @@ const App = () => {
           background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
         }
 
-        /* Straight Line Strikethrough (Reverted) */
+        /* Straight Line Strikethrough */
         .strikethrough-red {
           position: relative;
           display: inline-block;
@@ -178,13 +225,13 @@ const App = () => {
           </div>
           
           <h1 className="font-poppins font-bold text-4xl md:text-6xl tracking-tight mb-8 leading-[1.15]">
-            Post-Diagnosis ADHD Care is <br/>
+            Exceptional Post-Diagnosis ADHD Care is <br/>
             <span className="text-slate-500 strikethrough-red mr-4">Expensive</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Profitable.</span>
           </h1>
           
           <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-xl mx-auto leading-relaxed font-light">
-            Give your ADHD patients better end-to-end support, and make way more money doing it by white labelling <a href="https://www.neuro-notion.com" target="_blank" rel="noopener noreferrer" className="text-[#0EA5E9] hover:text-[#0284C7] underline decoration-from-font underline-offset-4 transition-colors">Claudia by Neuro</a>.
+            Give your ADHD patients better end-to-end support, and unlock an additional <span className="text-red-400 font-bold">£1300/patient</span> doing it by white labelling <a href="https://www.neuro-notion.com" target="_blank" rel="noopener noreferrer" className="text-[#0EA5E9] hover:text-[#0284C7] underline decoration-from-font underline-offset-4 transition-colors">Claudia by Neuro</a>.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
@@ -205,9 +252,6 @@ const App = () => {
             <VideoPlayer 
               videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Enhance%20ADHD%20Patient%20Support%20for%20Clinics%20(1).mp4"
               title="Turn Support into Profit - Demo for Directors"
-              autoPlay={false}
-              muted={false}
-              loop={false}
             />
             {/* Sound On Arrow - positioned just outside bottom-right of video */}
             <div className="absolute -bottom-3 -right-2 sm:-bottom-5 sm:-right-5 flex items-center space-x-2 bg-[#30bcd9] text-black px-3 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse">
@@ -232,33 +276,63 @@ const App = () => {
           <div className="mb-14 text-center">
             <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Endorsed by</p>
             <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-               <div className="h-24 w-auto flex items-center justify-center p-2 px-4 hover:scale-105 transition-transform duration-300">
-                  <img src="https://NeuroNotionPullZonw.b-cdn.net/evolvewebp.webp" alt="Evolve Psychology Clinic" className="h-full w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
-               </div>
-               <div className="h-24 w-auto flex items-center justify-center p-2 px-4 hover:scale-105 transition-transform duration-300">
-                  <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="h-full w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
-               </div>
-               <div className="h-24 w-auto flex items-center justify-center p-2 px-4 hover:scale-105 transition-transform duration-300">
-                  <img src="https://NeuroNotionPullZonw.b-cdn.net/innovateadhdwebp.webp" alt="Innovate ADHD" className="h-full w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" />
-               </div>
+               <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-auto flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="h-full w-auto object-contain brightness-0 invert" />
+                   </div>
+                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors">Leicester Psychology Clinic</span>
+               </a>
+
+               <a href="https://evolvepsychology.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-auto flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/evolvewebp.webp" alt="Evolve Psychology Clinic" className="h-full w-auto object-contain brightness-0 invert" />
+                   </div>
+                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors">Evolve Psychology</span>
+               </a>
+
+               <a href="https://innovateadhd.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-auto flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/innovateadhdwebp.webp" alt="Innovate ADHD" className="h-full w-auto object-contain brightness-0 invert" />
+                   </div>
+                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors">Innovate ADHD</span>
+               </a>
             </div>
           </div>
 
-          {/* Supported By (Affiliates) */}
+          {/* Advised By (Affiliates) */}
           <div className="mb-14 text-center">
-             <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Supported by</p>
-             <div className="flex flex-wrap justify-center items-start gap-12">
+             <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Advised by</p>
+             <div className="flex flex-wrap justify-center items-end gap-12">
                 <AffiliateProfile 
-                  name="Dr Tony Lloyd" 
+                  name="Dr. James Kustow" 
+                  image="https://NeuroNotionPullZonw.b-cdn.net/jameskustow.webp"
+                  link="https://www.thegrovepractice.com/profle/dr-james-kustow/"
+                  bio={[
+                    "Medical Director @ The Grove Practice",
+                    "Founding member and former chair of UKAAN",
+                    "Lead trainer for UK clinicians"
+                  ]}
+                />
+                <AffiliateProfile 
+                  name="Dr. Tony Lloyd" 
                   image="https://NeuroNotionPullZonw.b-cdn.net/tony.webp"
+                  link="https://www.linkedin.com/in/tony-l-ba67301/"
+                  isLarge={true}
+                  bio={[
+                     "#1 ADHD Doctor in England",
+                     "Ex-CEO of ADHD Foundation",
+                     "Advisor to NHS, government & ADHD bodies."
+                  ]}
                 />
                 <AffiliateProfile 
-                  name="Professor David Daley" 
+                  name="Prof. David Daley" 
                   image="https://NeuroNotionPullZonw.b-cdn.net/david%20(1).webp"
-                />
-                <AffiliateProfile 
-                  name="Elaine Taylor Klaus" 
-                  image="https://NeuroNotionPullZonw.b-cdn.net/elaine.webp"
+                  link="https://www.researchgate.net/profile/David-Daley-7"
+                  bio={[
+                    "Expert in digital ADHD interventions",
+                    "Leading ADHD academic in Europe.",
+                    "Principal investigator on major ADHD trials."
+                  ]}
                 />
              </div>
           </div>
@@ -281,7 +355,7 @@ const App = () => {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-8 leading-tight">
-                Current Private ADHD services are <span className="text-red-400">missing a big trick.</span>
+                Current Private ADHD pathways have a <span className="text-red-400">critical gap.</span>
               </h2>
               
               <div className="space-y-8">
@@ -293,7 +367,7 @@ const App = () => {
                 <ProblemItem 
                    icon={<EyeOff className="text-purple-400" size={24} />}
                    title="Data Blindness"
-                   desc="Contracts are decided by 'who knows who'. You are just saying 'pick me'. You need data that proves the positive outcomes of your service."
+                   desc="Contracts are decided by &apos;who knows who&apos;. You are just saying &apos;pick me&apos;. You need data that proves the positive outcomes of your service."
                 />
                 <ProblemItem 
                   icon={<Hourglass className="text-orange-400" size={24} />}
@@ -318,7 +392,7 @@ const App = () => {
                   <DashboardTile 
                     icon={<Smile className="text-emerald-400" size={20} />}
                     percentage="24%"
-                    label="Improvement in Positive Mood"
+                    label="Improvement in Emotional Regulation"
                     color="emerald"
                   />
                   <DashboardTile 
@@ -328,9 +402,9 @@ const App = () => {
                     color="purple"
                   />
                   <DashboardTile 
-                    icon={<Zap className="text-yellow-400" size={20} />}
+                    icon={<Brain className="text-yellow-400" size={20} />}
                     percentage="32%"
-                    label="Improvement in Productivity"
+                    label="Improvement in Executive Function"
                     color="yellow"
                   />
                   <DashboardTile 
@@ -342,8 +416,8 @@ const App = () => {
                 </div>
 
                 <div className="mt-8 text-center pt-6 border-t border-white/10 relative group tooltip-container">
-                  <p className="text-slate-400 text-sm font-medium">
-                    The &quot;Gap&quot; costs you <span className="text-red-400 border-b border-dashed border-red-400 cursor-help">£1,360/patient</span> in LTV.
+                  <p className="text-slate-300 text-lg font-medium">
+                    This "Gap" costs you <span className="text-red-400 font-bold border-b-2 border-dashed border-red-400 cursor-help">£1,360/patient</span>.
                   </p>
                   
                   {/* Tooltip */}
@@ -356,6 +430,12 @@ const App = () => {
                   </div>
                 </div>
               </div>
+              
+              {/* GDPR Compliance Notice */}
+              <div className="mt-6 flex items-center justify-center gap-2 text-white font-bold text-sm">
+                <Lock size={12} className="text-white" />
+                <span>Fully GDPR compliant. All patient data is encrypted and aggregated.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -367,7 +447,7 @@ const App = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">What Claudia by Neuro gives Private ADHD Clinics</h2>
             <p className="text-xl text-slate-400 font-light">
-              We support your patients with our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1] font-medium font-bold">Class-A Pre and Post-diagnosis support</span> through our digital self management tool.
+              We support your patients with our Exceptional non-pharmalogical <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1] font-medium font-bold">Pre and Post-diagnosis support</span> through our digital self management tool.
             </p>
           </div>
 
@@ -380,7 +460,7 @@ const App = () => {
             <BenefitCard 
               icon={<ScrollText size={32} className="text-yellow-400"/>}
               title="Win Big Contracts"
-              desc="Use our data to prove efficacy. Secure big contracts with NHS and Private Health that others can't touch."
+              desc="Use our data to prove efficacy. Secure big contracts with NHS and Private Health that others can&apos;t touch."
             />
             <BenefitCard 
               icon={<Banknote size={32} className="text-emerald-400"/>}
@@ -394,7 +474,7 @@ const App = () => {
             />
              <BenefitCard 
               icon={<Hourglass size={32} className="text-orange-400"/>}
-              title="Slash Admin Time"
+              title="Reduce Clinical Admin Burden"
               desc="Encourage patients to do admin tasks better. Clinicians save time by focusing on actual diagnosis, not paperwork."
             />
              <BenefitCard 
@@ -445,7 +525,7 @@ const App = () => {
               bg="bg-orange-400/10"
               icon={<Zap size={24} />}
               title="Actionable Steps"
-              desc="AI breaks daunting projects like 'Clean house' into micro-steps, overcoming ADHD paralysis."
+              desc="AI breaks daunting projects like &apos;Clean house&apos; into micro-steps, overcoming ADHD paralysis."
             />
             <FeatureCard 
               color="text-cyan-400"
@@ -502,13 +582,26 @@ const App = () => {
 };
 
 // Components
-const AffiliateProfile = ({ name, image }) => (
-  <div className="flex flex-col items-center gap-3 group">
-    <div className="w-32 h-32 rounded-full border-2 border-slate-700 p-1 overflow-hidden relative group-hover:border-[#0EA5E9] transition-colors bg-slate-800 shadow-xl">
+const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [] }) => (
+  <a href={link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 group relative cursor-pointer">
+    <div className={`${isLarge ? 'w-40 h-40' : 'w-32 h-32'} rounded-full border-2 border-slate-700 p-1 overflow-hidden relative group-hover:border-[#0EA5E9] transition-all bg-slate-800 shadow-xl group-hover:shadow-[#0EA5E9]/20`}>
        <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
     </div>
     <span className="text-slate-300 font-medium text-base text-center max-w-[160px] group-hover:text-white transition-colors">{name}</span>
-  </div>
+    
+    {/* Hover Modal */}
+    <div className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2 w-[280px] bg-slate-800 border border-slate-600 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-20 shadow-2xl pointer-events-none">
+       <ul className="space-y-1.5">
+         {bio.map((item, index) => (
+           <li key={index} className="text-xs text-slate-300 flex items-start text-left leading-snug">
+              <span className="text-[#0EA5E9] mr-1.5 flex-shrink-0">•</span>
+              <span>{item}</span>
+           </li>
+         ))}
+       </ul>
+       <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-slate-800 border-r border-b border-slate-600 transform rotate-45"></div>
+    </div>
+  </a>
 );
 
 const ProblemItem = ({ icon, title, desc }) => (
