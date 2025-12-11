@@ -276,25 +276,25 @@ const App = () => {
           <div className="mb-14 text-center">
             <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Endorsed by</p>
             <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
-               <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-20 w-auto flex items-center justify-center p-2">
-                     <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="h-full w-auto object-contain brightness-0 invert" />
+               <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-full flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
-                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors">Leicester Psychology Clinic</span>
+                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Leicester Psychology Clinic</span>
                </a>
 
-               <a href="https://evolvepsychology.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-20 w-auto flex items-center justify-center p-2">
-                     <img src="https://NeuroNotionPullZonw.b-cdn.net/evolvewebp.webp" alt="Evolve Psychology Clinic" className="h-full w-auto object-contain brightness-0 invert mx-auto" />
+               <a href="https://evolvepsychology.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-full flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/evolvewebp.webp" alt="Evolve Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
                    <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Evolve Psychology</span>
                </a>
 
-               <a href="https://innovateadhd.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-20 w-auto flex items-center justify-center p-2">
-                     <img src="https://NeuroNotionPullZonw.b-cdn.net/innovateadhdwebp.webp" alt="Innovate ADHD" className="h-full w-auto object-contain brightness-0 invert" />
+               <a href="https://innovateadhd.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-full flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/innovateadhdwebp.webp" alt="Innovate ADHD" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
-                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors">Innovate ADHD</span>
+                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Innovate ADHD</span>
                </a>
             </div>
           </div>
