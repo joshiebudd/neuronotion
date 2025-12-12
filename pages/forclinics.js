@@ -600,7 +600,7 @@ const FAQAccordion = () => {
   const faqs = [
     {
       question: "Do I have to plug this into my other systems?",
-      answer: "No deep integrations required. We don&apos;t replace your EHR or require complex technical setup. We simply provide you with clean CSV or Excel exports mapped to your specific reporting needs, including MHSDS-style structures where relevant. You get the data you need in formats that work with your existing workflows."
+      answer: "No deep integrations required. We don&apos;t replace your EHR or require complex technical setup. We simply provide you with clean CSV or Excel exports mapped to your specific reporting needs, including MHSDS-style structures where relevant. You get the data you need in formats that work with your existing workflows but the setup is completely minimal."
     },
     {
       question: "What outcomes do you track for ADHD pathways?",
@@ -608,11 +608,11 @@ const FAQAccordion = () => {
     },
     {
       question: "Can we evidence intervention adherence (medication, coaching, strategies)?",
-      answer: "Absolutely. Because our platform passively collects thousands of data points over several months of patient engagement, we can map longitudinal trends that show exactly what kind of impact other interventions are having. Whether it&apos;s medication titration, CBT sessions, or coaching—you get clear before/after comparisons that demonstrate intervention efficacy to commissioners and insurers."
+      answer: "Absolutely. Because our platform passively collects thousands of data points over several months of patient engagement, we can map longitudinal trends that show exactly what kind of impact other interventions are having. Whether it&apos;s medication titration, CBT sessions, or coaching, you get clear before/after comparisons that demonstrate intervention efficacy to commissioners and insurers."
     },
     {
       question: "How quickly can we get started?",
-      answer: "Most clinics are live within 2 weeks. We handle the white-labelling setup, provide staff training materials, and give you templated patient onboarding flows. There&apos;s no IT project required on your end—just a decision to start offering better post-diagnosis support."
+      answer: "Most clinics are live within 2 weeks. We handle the white-labelling setup, provide staff training materials, and give you templated patient onboarding flows. There&apos;s no IT project required on your end, just a decision to start offering better post-diagnosis support."
     }
   ];
 
@@ -643,7 +643,7 @@ const FAQAccordion = () => {
             className={`overflow-hidden transition-all duration-300 ease-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
           >
             <div className="px-6 pb-6 pt-0">
-              <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
+              <p className="text-slate-400 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
             </div>
           </div>
         </div>
