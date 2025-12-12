@@ -187,7 +187,7 @@ const FounderStory = ({ isOpen, onClose }) => {
         <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#1E293B] border-t border-l border-slate-700 rotate-45"></div>
         <button onClick={onClose} className="absolute top-2 right-2 text-slate-400 hover:text-white"><X size={16} /></button>
         
-        <h4 className="text-white font-bold text-lg mb-4 text-center">Read more about the founder's story</h4>
+        <h4 className="text-white font-bold text-lg mb-4 text-center">Read more about the founder&apos;s story</h4>
         
         <div className="space-y-4 text-sm text-slate-300">
           <p>
