@@ -361,7 +361,7 @@ const App = () => {
               <div className="space-y-8">
                 <ProblemItem 
                   icon={<Frown className="text-red-400" size={24} />}
-                  title="Great Diagnosis. Zero Support."
+                  title="Great Diagnosis. Ineffective Support."
                   desc="You do the hard work. The patient leaves with only medication. 50% discontinue within 12 months and fall through the cracks."
                 />
                 <ProblemItem 
@@ -417,7 +417,7 @@ const App = () => {
 
                 <div className="mt-8 text-center pt-6 border-t border-white/10 relative group tooltip-container">
                   <p className="text-slate-300 text-lg font-medium">
-                    This &quot;Gap&quot; costs you <span className="text-red-400 font-bold border-b-2 border-dashed border-red-400 cursor-help">£1,360/patient</span>.
+                    This &quot;Gap&quot; costs you estimated <span className="text-red-400 font-bold border-b-2 border-dashed border-red-400 cursor-help">£1,360/patient</span>.
                   </p>
                   
                   {/* Tooltip */}
@@ -455,7 +455,7 @@ const App = () => {
             <BenefitCard 
               icon={<LineChart size={32} className="text-cyan-400"/>}
               title="Rare Data"
-              desc="Realtime data about patient outcomes and pre-diagnostics. Notoriously hard to get. We hand it to you."
+              desc="Realtime data about patient outcomes and intervention adherence. Notoriously hard to get."
             />
             <BenefitCard 
               icon={<ScrollText size={32} className="text-yellow-400"/>}
@@ -470,7 +470,7 @@ const App = () => {
              <BenefitCard 
               icon={<Smile size={32} className="text-purple-400"/>}
               title="Better Patient Outcomes"
-              desc="End-to-End Stability. Patients become organized and stay engaged. Outcomes improve, and they tell their friends."
+              desc="End-to-End patient support. Your patients improve self-management and regulation. Intervention outcomes improve too."
             />
              <BenefitCard 
               icon={<Hourglass size={32} className="text-orange-400"/>}
@@ -552,6 +552,19 @@ const App = () => {
         </div>
       </section>
 
+
+      {/* FAQ Section */}
+      <section className="py-24 bg-[#0B1120]">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">FAQs</div>
+            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white">Common Questions</h2>
+          </div>
+
+          <FAQAccordion />
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-24 bg-[#0F172A] relative">
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-[#0F172A]"></div>
@@ -580,6 +593,65 @@ const App = () => {
     </>
   );
 };
+
+const FAQAccordion = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const faqs = [
+    {
+      question: "Do I have to plug this into my other systems?",
+      answer: "No deep integrations required. We don&apos;t replace your EHR or require complex technical setup. We simply provide you with clean CSV or Excel exports mapped to your specific reporting needs, including MHSDS-style structures where relevant. You get the data you need in formats that work with your existing workflows."
+    },
+    {
+      question: "What outcomes do you track for ADHD pathways?",
+      answer: "Our data collection framework aligns with the Mental Health Services Data Set (MHSDS), making it straightforward to feed into your existing reporting structures. We track affect measures like anxiety levels, executive function indicators including emotional regulation and planning/organizing capabilities, and behavioral markers such as use of habitual stress management techniques (exercise, breathwork, sleep hygiene). All structured for clinical relevance."
+    },
+    {
+      question: "Can we evidence intervention adherence (medication, coaching, strategies)?",
+      answer: "Absolutely. Because our platform passively collects thousands of data points over several months of patient engagement, we can map longitudinal trends that show exactly what kind of impact other interventions are having. Whether it&apos;s medication titration, CBT sessions, or coaching—you get clear before/after comparisons that demonstrate intervention efficacy to commissioners and insurers."
+    },
+    {
+      question: "How quickly can we get started?",
+      answer: "Most clinics are live within 2 weeks. We handle the white-labelling setup, provide staff training materials, and give you templated patient onboarding flows. There&apos;s no IT project required on your end—just a decision to start offering better post-diagnosis support."
+    }
+  ];
+
+  return (
+    <div className="space-y-4">
+      {faqs.map((faq, index) => (
+        <div 
+          key={index} 
+          className="glass-card rounded-xl overflow-hidden transition-all duration-300 hover:border-slate-500"
+        >
+          <button 
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            className="w-full px-6 py-5 flex items-center justify-between text-left"
+          >
+            <span className="font-poppins font-semibold text-white text-lg pr-4">{faq.question}</span>
+            <div className={`flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+              <svg 
+                className="w-4 h-4 text-[#0EA5E9]" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
+          </button>
+          <div 
+            className={`overflow-hidden transition-all duration-300 ease-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+          >
+            <div className="px-6 pb-6 pt-0">
+              <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 
 // Components
 const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [] }) => (
