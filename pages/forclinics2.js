@@ -191,7 +191,7 @@ const FounderStory = ({ isOpen, onClose }) => {
         
         <div className="space-y-4 text-sm text-slate-300">
           <p>
-            Hi, I'm Josh, and I'm diagnosed severe combined ADHD. By age 11 I'd been expelled from 13 schools and discarded as a "problem child".
+            Hi, I&apos;m Josh, and I&apos;m diagnosed severe combined ADHD. By age 11 I&apos;d been expelled from 13 schools and discarded as a &quot;problem child&quot;.
           </p>
           <div className="flex justify-center py-2">
             <img 
@@ -204,10 +204,10 @@ const FounderStory = ({ isOpen, onClose }) => {
             />
           </div>
           <p>
-            As an adult, I've tried every productivity/life management system, app, and "ADHD hack" out there. Most were built by neurotypical minds for neurotypical brains. Some of those slapped an "ADHD friendly" label on there.
+            As an adult, I&apos;ve tried every productivity/life management system, app, and &quot;ADHD hack&quot; out there. Most were built by neurotypical minds for neurotypical brains. Some of those slapped an &quot;ADHD friendly&quot; label on there.
           </p>
           <p>
-            This just didn't work for my ADHD brain, so I spent two years building my own (in true ADHD fashion 😂). Something that actually understands how we think, process information, and get things done.
+            This just didn&apos;t work for my ADHD brain, so I spent two years building my own (in true ADHD fashion 😂). Something that actually understands how we think, process information, and get things done.
           </p>
           <p className="border-t border-slate-700 pt-3 mt-3 italic text-slate-400 text-xs">
             We are all unique, but there are some things that 95% of us with ADHD struggle with, Claudia tries to make managing those things 10x easier.
@@ -268,7 +268,7 @@ const BookingModal = ({ isOpen, onClose }) => {
           </a>
           
           <p className="mt-4 text-xs text-slate-500">
-            Let's explore how this might fit into your clinic
+            Let&apos;s explore how this might fit into your clinic
           </p>
         </div>
       </div>
@@ -367,7 +367,7 @@ const App = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-            The market is shifting from access to outcomes. Don't fly blind. Automate patient support, capture clinical-grade data, and unlock <span className="text-red-400 font-bold">£1300/patient</span> in retained revenue.
+            The market is shifting from access to outcomes. Don&apos;t fly blind. Automate patient support, capture clinical-grade data, and unlock <span className="text-red-400 font-bold">£1300/patient</span> in retained revenue.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
@@ -474,11 +474,11 @@ const App = () => {
             <div>
               <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">Market Insight</div>
               <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6 leading-tight">
-                The Era of "Diagnose & Discharge" <br/>is <span className="text-red-400">Ending.</span>
+                The Era of &quot;Diagnose & Discharge&quot; <br/>is <span className="text-red-400">Ending.</span>
               </h2>
               
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                Insurers and the NHS are tightening scrutiny. They no longer just pay for diagnosis; they demand proof of long-term patient stability. Most clinics are operating in a <strong>"data-blind"</strong> spot that puts future contracts at risk.
+                Insurers and the NHS are tightening scrutiny. They no longer just pay for diagnosis; they demand proof of long-term patient stability. Most clinics are operating in a <strong>&quot;data-blind&quot;</strong> spot that puts future contracts at risk.
               </p>
 
               <div className="space-y-6">
@@ -595,7 +595,7 @@ const App = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">The Automated Patient Retention & Outcome Platform</h2>
             <p className="text-xl text-slate-400 font-light">
-              Claudia by Neuro isn't just an app. It's a white-label infrastructure that turns post-diagnosis support from a <span className="text-red-400 font-medium">cost center</span> into a <span className="text-emerald-400 font-medium font-bold">revenue generator</span>.
+              Claudia by Neuro isn&apos;t just an app. It&apos;s a white-label infrastructure that turns post-diagnosis support from a <span className="text-red-400 font-medium">cost center</span> into a <span className="text-emerald-400 font-medium font-bold">revenue generator</span>.
             </p>
           </div>
 
