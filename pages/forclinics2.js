@@ -445,7 +445,7 @@ const App = () => {
                   image="https://NeuroNotionPullZonw.b-cdn.net/tony.webp"
                   link="https://www.linkedin.com/in/tony-l-ba67301/"
                   isLarge={true}
-                  bio={["&#35;1 ADHD Doctor in England", "Ex-CEO of ADHD Foundation", "Advisor to NHS, government & ADHD bodies."]}
+                  bio={["#1 ADHD Doctor in England", "Ex-CEO of ADHD Foundation", "Advisor to NHS, government & ADHD bodies."]}
                 />
                 <AffiliateProfile 
                   name="Prof. David Daley" 
@@ -474,11 +474,11 @@ const App = () => {
             <div>
               <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">Market Insight</div>
               <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6 leading-tight">
-                The Era of &quot;Diagnose &amp; Discharge&quot; <br/>is <span className="text-red-400">Ending.</span>
+                The Era of "Diagnose & Discharge" <br/>is <span className="text-red-400">Ending.</span>
               </h2>
               
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                Insurers and the NHS are tightening scrutiny. They no longer just pay for diagnosis; they demand proof of long-term patient stability. Most clinics are operating in a <strong>&quot;data-blind&quot;</strong> spot that puts future contracts at risk.
+                Insurers and the NHS are tightening scrutiny. They no longer just pay for diagnosis; they demand proof of long-term patient stability. Most clinics are operating in a <strong>"data-blind"</strong> spot that puts future contracts at risk.
               </p>
 
               <div className="space-y-6">
@@ -593,9 +593,9 @@ const App = () => {
       <section id="benefits" className="py-24 bg-[#0F172A] relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">The Automated Patient Retention &amp; Outcome Platform</h2>
+            <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">The Automated Patient Retention & Outcome Platform</h2>
             <p className="text-xl text-slate-400 font-light">
-              Claudia by Neuro isn&apos;t just an app. It&apos;s a white-label infrastructure that turns post-diagnosis support from a <span className="text-red-400 font-medium">cost center</span> into a <span className="text-emerald-400 font-medium font-bold">revenue generator</span>.
+              Claudia by Neuro isn't just an app. It's a white-label infrastructure that turns post-diagnosis support from a <span className="text-red-400 font-medium">cost center</span> into a <span className="text-emerald-400 font-medium font-bold">revenue generator</span>.
             </p>
           </div>
 
@@ -721,7 +721,7 @@ const App = () => {
           <div className="bg-[#1E293B] p-12 rounded-2xl shadow-2xl border border-slate-700">
             <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">Win Contracts with Better Data</h2>
             <p className="text-xl md:text-2xl text-slate-400 mb-10 leading-relaxed">
-              Big shifts are coming. RTC &amp; Insurers are about to start asking for outcomes. Be the first to give them proof, not promises.
+              Big shifts are coming. RTC & Insurers are about to start asking for outcomes. Be the first to give them proof, not promises.
             </p>
             <div className="flex justify-center">
               <button 
