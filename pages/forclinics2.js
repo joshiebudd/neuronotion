@@ -30,6 +30,8 @@ import { LPFooter } from '../components/ClaudiaLandingPage/LPFooter';
 import { VideoPlayer } from '../components/VideoPlayer';
 import { Toaster } from '../components/ui/toaster';
 
+// --- Inline Components (formerly external) ---
+
 // --- Feature Components ---
 
 const InsightItem = ({ icon, title, desc }) => (
@@ -185,11 +187,11 @@ const FounderStory = ({ isOpen, onClose }) => {
         <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#1E293B] border-t border-l border-slate-700 rotate-45"></div>
         <button onClick={onClose} className="absolute top-2 right-2 text-slate-400 hover:text-white"><X size={16} /></button>
         
-        <h4 className="text-white font-bold text-lg mb-4 text-center">Read more about the founder&apos;s story</h4>
+        <h4 className="text-white font-bold text-lg mb-4 text-center">Read more about the founder's story</h4>
         
         <div className="space-y-4 text-sm text-slate-300">
           <p>
-            Hi, I&apos;m Josh, and I&apos;m diagnosed severe combined ADHD. By age 11 I&apos;d been expelled from 13 schools and discarded as a &quot;problem child&quot;.
+            Hi, I'm Josh, and I'm diagnosed severe combined ADHD. By age 11 I'd been expelled from 13 schools and discarded as a "problem child".
           </p>
           <div className="flex justify-center py-2">
             <img 
@@ -202,10 +204,10 @@ const FounderStory = ({ isOpen, onClose }) => {
             />
           </div>
           <p>
-            As an adult, I&apos;ve tried every productivity/life management system, app, and &quot;ADHD hack&quot; out there. Most were built by neurotypical minds for neurotypical brains. Some of those slapped an &quot;ADHD friendly&quot; label on there.
+            As an adult, I've tried every productivity/life management system, app, and "ADHD hack" out there. Most were built by neurotypical minds for neurotypical brains. Some of those slapped an "ADHD friendly" label on there.
           </p>
           <p>
-            This just didn&apos;t work for my ADHD brain, so I spent two years building my own (in true ADHD fashion 😂). Something that actually understands how we think, process information, and get things done.
+            This just didn't work for my ADHD brain, so I spent two years building my own (in true ADHD fashion 😂). Something that actually understands how we think, process information, and get things done.
           </p>
           <p className="border-t border-slate-700 pt-3 mt-3 italic text-slate-400 text-xs">
             We are all unique, but there are some things that 95% of us with ADHD struggle with, Claudia tries to make managing those things 10x easier.
@@ -216,7 +218,7 @@ const FounderStory = ({ isOpen, onClose }) => {
   );
 };
 
-// --- Modal Component ---
+// --- Main Modal Component ---
 const BookingModal = ({ isOpen, onClose }) => {
   const [showFounderStory, setShowFounderStory] = useState(false);
 
@@ -233,48 +235,41 @@ const BookingModal = ({ isOpen, onClose }) => {
         </button>
         
         <div className="p-8 text-center">
-          <div className="w-16 h-16 bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] rounded-2xl flex items-center justify-center text-white font-bold text-3xl mx-auto mb-6 shadow-lg shadow-blue-500/30">C</div>
+          <div className="w-16 h-16 bg-[#0EA5E9]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CalendarCheck size={32} className="text-[#0EA5E9]" />
+          </div>
           
-          <h3 className="font-poppins font-bold text-3xl text-white mb-4">Book Your Pilot</h3>
-          <p className="text-slate-400 text-lg mb-8">
-            See how Claudia can transform your clinic&apos;s patient outcomes and revenue.
-          </p>
-
-          <div className="space-y-4 mb-8">
-            <div className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-              <CalendarCheck className="text-[#0EA5E9] flex-shrink-0" size={24} />
-              <div className="text-left">
-                <div className="text-white font-semibold">30-Minute Discovery Call</div>
-                <div className="text-slate-400 text-sm">Learn how we integrate with your workflow</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-              <CheckCircle2 className="text-emerald-400 flex-shrink-0" size={24} />
-              <div className="text-left">
-                <div className="text-white font-semibold">2-Week Pilot Program</div>
-                <div className="text-slate-400 text-sm">Test with real patients, see real results</div>
-              </div>
-            </div>
+          <h3 className="text-2xl font-bold text-white mb-4 font-poppins leading-tight">
+            Learn more about White Labelling Claudia by Neuro for your clinic.
+          </h3>
+          
+          <div className="relative inline-block mb-8">
+            <p className="text-slate-400 text-lg leading-relaxed">
+              Speak with the{" "}
+              <button 
+                onMouseEnter={() => setShowFounderStory(true)}
+                onMouseLeave={() => setShowFounderStory(false)}
+                className="text-white font-bold underline decoration-[#0EA5E9] underline-offset-4 decoration-2 cursor-pointer hover:text-[#0EA5E9] transition-colors relative"
+              >
+                founder of Claudia
+                {showFounderStory && <FounderStory isOpen={true} onClose={() => setShowFounderStory(false)} />}
+              </button>
+              {" "}to see how you can provide better patient outcomes, and make more money doing it.
+            </p>
           </div>
-
+          
           <a 
-            href="https://calendly.com/josh-neuronotion/30min"
-            target="_blank"
+            href="https://app.usemotion.com/meet/josh-budd/meeting" 
+            target="_blank" 
             rel="noopener noreferrer"
-            className="block w-full px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-cyan-500/20 hover:-translate-y-1 mb-6"
+            className="block w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-xl py-4 rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-1"
           >
-            Schedule Your Call
+            Book a Call
           </a>
-
-          <div className="relative">
-            <button 
-              onClick={() => setShowFounderStory(!showFounderStory)}
-              className="text-[#0EA5E9] hover:text-[#0284C7] text-sm font-medium transition-colors underline"
-            >
-              Why did we build this?
-            </button>
-            {showFounderStory && <FounderStory isOpen={showFounderStory} onClose={() => setShowFounderStory(false)} />}
-          </div>
+          
+          <p className="mt-4 text-xs text-slate-500">
+            Let's explore how this might fit into your clinic
+          </p>
         </div>
       </div>
     </div>
@@ -290,185 +285,172 @@ const App = () => {
 
   return (
     <>
-    <style>{`
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap');
-      
-      .font-poppins {
-        font-family: 'Poppins', sans-serif;
-      }
-      
-      .font-lexend {
-        font-family: 'Lexend', sans-serif;
-      }
-      
-      .glass-card {
-        background: rgba(30, 41, 59, 0.5);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(148, 163, 184, 0.1);
-      }
-      
-      .dashboard-card {
-        background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(148, 163, 184, 0.2);
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-      }
-      
-      .hero-glow {
-        box-shadow: 0 0 80px rgba(14, 165, 233, 0.3);
-      }
-      
-      .tooltip-container:hover .tooltip-text {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-      }
-      
-      .strikethrough-red {
-        position: relative;
-        display: inline-block;
-      }
-      
-      .strikethrough-red::after {
-        content: '';
-        position: absolute;
-        left: -5%;
-        top: 50%;
-        width: 110%;
-        height: 3px;
-        background: #EF4444;
-        transform: rotate(-5deg);
-      }
-    `}</style>
-    <div className="min-h-screen bg-[#0B1120] text-white font-lexend">
       <ClinicPageHeader onLearnMoreClick={openModal} />
+      <div className="min-h-screen bg-[#0F172A] text-white selection:bg-[#0EA5E9] selection:text-white font-lexend overflow-x-hidden">
+      
+      {/* Font Imports & Styles */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap');
+        
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        .font-lexend { font-family: 'Lexend Deca', sans-serif; }
+        
+        /* Custom Utilities */
+        .glass-card { 
+          background: rgba(30, 41, 59, 0.7); 
+          backdrop-filter: blur(12px); 
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .dashboard-card {
+          background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-glow {
+          background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+        }
+
+        /* Straight Line Strikethrough */
+        .strikethrough-red {
+          position: relative;
+          display: inline-block;
+        }
+        .strikethrough-red::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          height: 4px;
+          background: #EF4444;
+          transform: rotate(-3deg);
+          opacity: 0.9;
+        }
+        
+        /* Tooltip Styles */
+        .tooltip-container:hover .tooltip-text {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+      `}</style>
+
       <BookingModal isOpen={isModalOpen} onClose={closeModal} />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-24 px-6 bg-gradient-to-b from-[#0B1120] via-[#0F172A] to-[#0B1120] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(99,102,241,0.08),transparent_50%)]"></div>
+      {/* Hero Section - The Hook (Market Insight) */}
+      <section className="pt-20 pb-20 lg:pt-32 lg:pb-32 px-6 relative overflow-hidden">
+        {/* Background Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[800px] hero-glow pointer-events-none -z-10"></div>
         
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-6">For ADHD Clinics</div>
-              
-              <h1 className="font-poppins font-bold text-4xl md:text-6xl mb-6 leading-tight">
-                Stop Losing <span className="text-[#0EA5E9]">£1,360</span> Per Patient
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-slate-400 mb-4 leading-relaxed">
-                The <span className="strikethrough-red text-slate-500">Diagnose &amp; Discharge</span> model is costing you revenue and contracts.
-              </p>
-              
-              <p className="text-lg text-slate-300 mb-10 leading-relaxed">
-                Claudia by Neuro is the <strong className="text-white">white-label patient retention platform</strong> that generates the clinical outcome data you need to win NHS and private contracts—while adding <strong className="text-emerald-400">£1,300+ recurring revenue per patient</strong>.
-              </p>
+        {/* Decorative Blobs */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button 
-                  onClick={openModal}
-                  className="px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-lg rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 hover:-translate-y-1"
-                >
-                  Book a Pilot
-                  <ArrowRight size={20} />
-                </button>
-                <a 
-                  href="#benefits"
-                  className="px-8 py-4 bg-[#1E293B] hover:bg-[#334155] text-white font-medium text-lg rounded-xl border border-slate-700 transition-all hover:border-slate-500 text-center"
-                >
-                  See How It Works
-                </a>
-              </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 text-cyan-400 font-medium text-xs mb-8 animate-fade-in backdrop-blur-sm">
+            <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            Limited pilot spots remaining. Starting Jan 2025.
+          </div>
+          
+          <h1 className="font-poppins font-bold text-4xl md:text-6xl tracking-tight mb-8 leading-[1.15]">
+            Secure Contracts and Revenue with the Only <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Outcome-Data Platform for ADHD</span>
+          </h1>
+          
+          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+            The market is shifting from access to outcomes. Don't fly blind. Automate patient support, capture clinical-grade data, and unlock <span className="text-red-400 font-bold">£1300/patient</span> in retained revenue.
+          </p>
 
-              <div className="flex items-center gap-3 text-sm text-slate-400">
-                <Lock size={16} className="text-slate-500" />
-                <span>GDPR compliant • NHS-grade security • White-label ready</span>
-              </div>
-            </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
+            <button 
+              onClick={openModal}
+              className="w-full sm:w-auto px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white rounded-xl font-semibold text-lg transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2 hover:-translate-y-1"
+            >
+              Learn more
+              <ArrowRight size={20} />
+            </button>
+            <a href="https://www.neuro-notion.com" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-slate-600 hover:border-slate-400 text-white rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-2 hover:bg-slate-800/50">
+              What is Claudia by Neuro?
+            </a>
+          </div>
 
-            <div className="relative">
-              <div className="glass-card p-8 rounded-2xl hero-glow">
-                <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-700">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
-                    <span className="text-lg font-bold text-white">Live Patient Outcomes</span>
-                  </div>
-                  <span className="text-xs font-mono text-slate-400 bg-white/5 px-2 py-1 rounded">REAL DATA</span>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-emerald-400/10 rounded-lg flex items-center justify-center">
-                        <Smile className="text-emerald-400" size={20} />
-                      </div>
-                      <div>
-                        <div className="text-white font-semibold">Emotional Regulation</div>
-                        <div className="text-slate-400 text-sm">3-month average</div>
-                      </div>
-                    </div>
-                    <div className="text-2xl font-bold text-emerald-400">+24%</div>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-purple-400/10 rounded-lg flex items-center justify-center">
-                        <Layout className="text-purple-400" size={20} />
-                      </div>
-                      <div>
-                        <div className="text-white font-semibold">Organization Skills</div>
-                        <div className="text-slate-400 text-sm">3-month average</div>
-                      </div>
-                    </div>
-                    <div className="text-2xl font-bold text-purple-400">+35%</div>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-cyan-400/10 rounded-lg flex items-center justify-center">
-                        <Brain className="text-cyan-400" size={20} />
-                      </div>
-                      <div>
-                        <div className="text-white font-semibold">Executive Function</div>
-                        <div className="text-slate-400 text-sm">3-month average</div>
-                      </div>
-                    </div>
-                    <div className="text-2xl font-bold text-cyan-400">+32%</div>
-                  </div>
-                </div>
-
-                <div className="mt-6 pt-6 border-t border-slate-700 text-center">
-                  <p className="text-slate-300 font-medium">
-                    Data your competitors <span className="text-red-400 font-bold">can&apos;t</span> provide
-                  </p>
-                </div>
-              </div>
+          {/* VSL Container */}
+          <div className="relative max-w-3xl mx-auto">
+            <VideoPlayer 
+              videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Enhance%20ADHD%20Patient%20Support%20for%20Clinics%20(1).mp4"
+              title="Turn Support into Profit - Demo for Directors"
+            />
+            {/* Sound On Arrow */}
+            <div className="absolute -bottom-3 -right-2 sm:-bottom-5 sm:-right-5 flex items-center space-x-2 bg-[#30bcd9] text-black px-3 py-2 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 animate-pulse">
+              <svg 
+                className="w-4 h-4 transform rotate-[225deg]" 
+                fill="currentColor" 
+                viewBox="0 0 20 20"
+              >
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+              <span className="text-sm font-bold" style={{ fontWeight: 700 }}>Sound on!</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Signals - Advisors */}
-      <section className="py-16 bg-[#0B1120] border-y border-slate-800">
+      {/* Social Proof Section */}
+      <section className="py-12 border-y border-slate-800 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h3 className="text-slate-400 text-sm font-medium mb-8">Advised by leading ADHD experts</h3>
-            
-            <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
-               <AffiliateProfile 
-                  name="Prof. Philip Asherson"
-                  image="https://NeuroNotionPullZonw.b-cdn.net/Philip.jpg"
-                  link="https://kclpure.kcl.ac.uk/portal/en/persons/philip-asherson"
-                  isLarge={true}
-                  bio={["Leading ADHD academic in Europe.", "Professor of Molecular Psychiatry at King's College London.", "Principal investigator on major ADHD trials."]}
+          <div className="mb-14 text-center">
+            <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Endorsed by</p>
+            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+               <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-full flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
+                   </div>
+                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Leicester Psychology Clinic</span>
+               </a>
+               <a href="https://evolvepsychology.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-full flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/evolvewebp.webp" alt="Evolve Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
+                   </div>
+                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Evolve Psychology</span>
+               </a>
+               <a href="https://innovateadhd.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-20 w-full flex items-center justify-center p-2">
+                     <img src="https://NeuroNotionPullZonw.b-cdn.net/innovateadhdwebp.webp" alt="Innovate ADHD" className="max-h-full max-w-full object-contain brightness-0 invert" />
+                   </div>
+                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Innovate ADHD</span>
+               </a>
+            </div>
+          </div>
+
+          <div className="mb-14 text-center">
+             <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Advised by</p>
+             <div className="flex flex-wrap justify-center items-end gap-12">
+                <AffiliateProfile 
+                  name="Dr. James Kustow" 
+                  image="https://NeuroNotionPullZonw.b-cdn.net/jameskustow.webp"
+                  link="https://www.thegrovepractice.com/profle/dr-james-kustow/"
+                  bio={["Medical Director @ The Grove Practice", "Founding member and former chair of UKAAN", "Lead trainer for UK clinicians"]}
                 />
-               <AffiliateProfile 
-                  name="Dr. Ulrich Müller-Sedgwick"
-                  image="https://NeuroNotionPullZonw.b-cdn.net/Ulrich.jpg"
-                  link="https://bacp.co.uk"
-                  isLarge={false}
+                <AffiliateProfile 
+                  name="Dr. Tony Lloyd" 
+                  image="https://NeuroNotionPullZonw.b-cdn.net/tony.webp"
+                  link="https://www.linkedin.com/in/tony-l-ba67301/"
+                  isLarge={true}
+                  bio={["&#35;1 ADHD Doctor in England", "Ex-CEO of ADHD Foundation", "Advisor to NHS, government & ADHD bodies."]}
+                />
+                <AffiliateProfile 
+                  name="Prof. David Daley" 
+                  image="https://NeuroNotionPullZonw.b-cdn.net/david%20(1).webp"
+                  link="https://www.researchgate.net/profile/David-Daley-7"
                   bio={["Expert in digital ADHD interventions", "Leading ADHD academic in Europe.", "Principal investigator on major ADHD trials."]}
                 />
              </div>
