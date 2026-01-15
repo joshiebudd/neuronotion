@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Play, 
-  ArrowRight, 
-  Menu, 
+import {
+  Play,
+  ArrowRight,
+  Menu,
   X,
-  LineChart,     
-  Banknote,      
-  Hourglass,     
-  Frown,         
-  EyeOff,        
-  ShieldCheck,   
-  ScrollText,    
-  Smile,         
-  Zap,           
-  Brain,         
-  Layout,        
-  Activity,      
-  Lightbulb,     
+  LineChart,
+  Banknote,
+  Hourglass,
+  Frown,
+  EyeOff,
+  ShieldCheck,
+  ScrollText,
+  Smile,
+  Zap,
+  Brain,
+  Layout,
+  Activity,
+  Lightbulb,
   Database,
   Award,
   TrendingUp,
@@ -31,7 +31,9 @@ import {
   HeartPulse,
   Search,
   Calendar,
-  Lock
+  Lock,
+  Moon,
+  FileText
 } from 'lucide-react';
 
 import ClinicPageHeader from '../components/ClinicPageHeader';
@@ -225,13 +227,13 @@ const App = () => {
           </div>
           
           <h1 className="font-poppins font-bold text-4xl md:text-6xl tracking-tight mb-8 leading-[1.15]">
-            Exceptional Post-Diagnosis ADHD Care is <br/>
-            <span className="text-slate-500 strikethrough-red mr-4">Expensive</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Profitable.</span>
+            Patient Outcome Data is <br/>
+            <span className="text-slate-500 strikethrough-red mr-4">Unavailable</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Collected Automatically</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-xl mx-auto leading-relaxed font-light">
-            Give your ADHD patients better end-to-end support, and unlock an additional <span className="text-red-400 font-bold">£1300/patient</span> doing it by white labelling <a href="https://www.neuro-notion.com" target="_blank" rel="noopener noreferrer" className="text-[#0EA5E9] hover:text-[#0284C7] underline decoration-from-font underline-offset-4 transition-colors">Claudia by Neuro</a>.
+          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+            Claudia captures what happens after patients get diagnosed, automatically. Data on sleep, regulation, mood, medication adherence, daily functioning - all packaged neatly into outcome reports you can use to win big NHS and Insurance contracts.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
@@ -349,30 +351,36 @@ const App = () => {
         </div>
       </section>
 
-      {/* The Problem (Missing a Big Trick) */}
+      {/* Market Insight Section */}
       <section className="py-24 bg-[#0F172A] relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-8 leading-tight">
-                Current Private ADHD pathways have a <span className="text-red-400">critical gap.</span>
+                The Era of &quot;Diagnose &amp; Discharge&quot; is Ending
               </h2>
-              
+
+              <p className="text-slate-400 text-lg leading-relaxed mb-8">
+                Right now you diagnose → prescribe → hope for the best.
+                <br/><br/>
+                In 2026, insurers and the NHS are tightening scrutiny. They want real data on long-term patient stability. We provide that.
+              </p>
+
               <div className="space-y-8">
-                <ProblemItem 
+                <ProblemItem
                   icon={<Frown className="text-red-400" size={24} />}
-                  title="Great Diagnosis. Ineffective Support."
-                  desc="You do the hard work. The patient leaves with only medication. 50% discontinue within 12 months and fall through the cracks."
+                  title="Patient Silence"
+                  desc="ADHD patients forget to report back. You&apos;re left guessing."
                 />
-                <ProblemItem 
+                <ProblemItem
                    icon={<EyeOff className="text-purple-400" size={24} />}
-                   title="Data Blindness"
-                   desc="Contracts are decided by &apos;who knows who&apos;. You are just saying &apos;pick me&apos;. You need data that proves the positive outcomes of your service."
+                   title="No Outcome Data"
+                   desc="Commissioners and insurers are asking for evidence in 2026. You need data."
                 />
-                <ProblemItem 
-                  icon={<Hourglass className="text-orange-400" size={24} />}
-                  title="Clinicians are wasting time"
-                  desc="Clinicians spend hours writing generic reports that rarely get read or actioned. They need an automated default that adapts to the individual."
+                <ProblemItem
+                  icon={<Banknote className="text-orange-400" size={24} />}
+                  title="CBT too expensive"
+                  desc="Tight contract budgets mean support has to be affordable. CBT or coaching is not."
                 />
               </div>
             </div>
@@ -389,43 +397,43 @@ const App = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <DashboardTile 
+                  <DashboardTile
+                    icon={<FileText className="text-purple-400" size={20} />}
+                    percentage="35%"
+                    label="Improvement in ASRS symptoms"
+                    color="purple"
+                  />
+                  <DashboardTile
                     icon={<Smile className="text-emerald-400" size={20} />}
                     percentage="24%"
                     label="Improvement in Emotional Regulation"
                     color="emerald"
                   />
-                  <DashboardTile 
-                    icon={<Layout className="text-purple-400" size={20} />}
-                    percentage="35%"
-                    label="Improvement in Organization"
-                    color="purple"
-                  />
-                  <DashboardTile 
+                  <DashboardTile
                     icon={<Brain className="text-yellow-400" size={20} />}
                     percentage="32%"
                     label="Improvement in Executive Function"
                     color="yellow"
                   />
-                  <DashboardTile 
-                    icon={<CheckCircle2 className="text-cyan-400" size={20} />}
+                  <DashboardTile
+                    icon={<Moon className="text-cyan-400" size={20} />}
                     percentage="32%"
-                    label="Improvement in Routine Adherence"
+                    label="Improvement in Sleep hygiene"
                     color="cyan"
                   />
                 </div>
 
                 <div className="mt-8 text-center pt-6 border-t border-white/10 relative group tooltip-container">
                   <p className="text-slate-300 text-lg font-medium">
-                    This &quot;Gap&quot; costs you estimated <span className="text-red-400 font-bold border-b-2 border-dashed border-red-400 cursor-help">£1,360/patient</span>.
+                    Without this data, you&apos;re losing <span className="text-red-400 font-bold border-b-2 border-dashed border-red-400 cursor-help">£800/patient</span>
                   </p>
-                  
+
                   {/* Tooltip */}
                   <div className="tooltip-text invisible absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 bg-slate-900 border border-slate-700 text-slate-300 text-xs p-4 rounded-lg shadow-xl z-20 opacity-0 transition-all duration-300 pointer-events-none text-left leading-relaxed">
                     <div className="flex items-center gap-2 mb-2 text-white font-semibold">
-                      <Info size={14} className="text-[#0EA5E9]" /> Calculation:
+                      <Info size={14} className="text-[#0EA5E9]" /> Why £800?
                     </div>
-                    3 years worth of app revenue, £200 in wasted clinician time on support and follow ups, and the missed opportunity for each referral&apos;s outcome data to win new contracts.
+                    Each patient&apos;s data can be used to prove positive patient outcomes and thus, be granted an additional patient&apos;s diagnosis.
                     <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-slate-900 border-r border-b border-slate-700 transform rotate-45"></div>
                   </div>
                 </div>
@@ -441,47 +449,74 @@ const App = () => {
         </div>
       </section>
 
-      {/* Benefits - What Claudia Gives */}
-      <section id="benefits" className="py-24 bg-[#0B1120] relative">
+      {/* What If Section */}
+      <section className="py-16 bg-[#0B1120] border-y border-slate-800">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="font-poppins font-bold text-2xl md:text-3xl text-white mb-8">What if you could:</h2>
+
+          <div className="grid sm:grid-cols-2 gap-6 text-left">
+             <div className="bg-[#1E293B] p-6 rounded-xl border border-slate-700 flex gap-4">
+                <div className="bg-emerald-500/10 p-2 h-fit rounded-lg"><CheckCircle2 className="text-emerald-400" size={20}/></div>
+                <p className="text-slate-300">Actually support patients after diagnosis without adding clinical hours</p>
+             </div>
+             <div className="bg-[#1E293B] p-6 rounded-xl border border-slate-700 flex gap-4">
+                <div className="bg-emerald-500/10 p-2 h-fit rounded-lg"><CheckCircle2 className="text-emerald-400" size={20}/></div>
+                <p className="text-slate-300">See exactly how positive your support is on their sleep, mood, daily functioning, adherence</p>
+             </div>
+             <div className="bg-[#1E293B] p-6 rounded-xl border border-slate-700 flex gap-4">
+                <div className="bg-emerald-500/10 p-2 h-fit rounded-lg"><CheckCircle2 className="text-emerald-400" size={20}/></div>
+                <p className="text-slate-300">Generate Outcome Reports automatically, ready for commissioners and insurers</p>
+             </div>
+             <div className="bg-[#1E293B] p-6 rounded-xl border border-slate-700 flex gap-4">
+                <div className="bg-emerald-500/10 p-2 h-fit rounded-lg"><CheckCircle2 className="text-emerald-400" size={20}/></div>
+                <p className="text-slate-300">And unlock a recurring revenue model doing ALL of that</p>
+             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Automated Patient Retention & Outcome Platform */}
+      <section id="benefits" className="py-24 bg-[#0F172A] relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">What Claudia by Neuro gives Private ADHD Clinics</h2>
+            <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">The Automated Patient Retention &amp; Outcome Platform</h2>
             <p className="text-xl text-slate-400 font-light">
-              We support your patients with our Exceptional non-pharmalogical <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1] font-medium font-bold">Pre and Post-diagnosis support</span> through our digital self management tool.
+              Claudia by Neuro isn&apos;t just an app. It&apos;s a white-label infrastructure that turns post-diagnosis support from a cost center into a revenue generator.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BenefitCard 
-              icon={<LineChart size={32} className="text-cyan-400"/>}
-              title="Rare Data"
-              desc="Realtime data about patient outcomes and intervention adherence. Notoriously hard to get."
-            />
-            <BenefitCard 
-              icon={<ScrollText size={32} className="text-yellow-400"/>}
-              title="Win Big Contracts"
-              desc="Use our data to prove efficacy. Secure big contracts with NHS and Private Health that others can&apos;t touch."
-            />
-            <BenefitCard 
-              icon={<Banknote size={32} className="text-emerald-400"/>}
-              title="Unlock Repeating Revenue"
-              desc="White labelling means you unlock repeated continuous revenue, allowing you to scale super fast."
-            />
-             <BenefitCard 
-              icon={<Smile size={32} className="text-purple-400"/>}
-              title="Better Patient Outcomes"
-              desc="End-to-End patient support. Your patients improve self-management and regulation. Intervention outcomes improve too."
-            />
-             <BenefitCard 
-              icon={<Hourglass size={32} className="text-orange-400"/>}
-              title="Reduce Clinical Admin Burden"
-              desc="Encourage patients to do admin tasks better. Clinicians save time by focusing on actual diagnosis, not paperwork."
-            />
-             <BenefitCard 
-              icon={<ShieldCheck size={32} className="text-pink-400"/>}
-              title="Enhance Your Brand"
-              desc="We embed into your system. You get better reviews, better reputation, and a superior end-to-end service."
-            />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
+              <div className="mb-6 w-20 h-20 rounded-full bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center border-4 border-slate-700 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
+                <span className="text-white font-bold text-3xl font-poppins">1</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 font-poppins text-white">Improves patient outcomes</h3>
+              <p className="text-slate-400 leading-relaxed text-sm">End-to-end support that helps patients improve self-management and regulation.</p>
+            </div>
+
+            <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
+              <div className="mb-6 w-20 h-20 rounded-full bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center border-4 border-slate-700 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
+                <span className="text-white font-bold text-3xl font-poppins">2</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 font-poppins text-white">Captures the realtime data</h3>
+              <p className="text-slate-400 leading-relaxed text-sm">Automatically collects patient outcomes and intervention adherence data.</p>
+            </div>
+
+            <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
+              <div className="mb-6 w-20 h-20 rounded-full bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center border-4 border-slate-700 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
+                <span className="text-white font-bold text-3xl font-poppins">3</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 font-poppins text-white">Packages and reports it</h3>
+              <p className="text-slate-400 leading-relaxed text-sm">Generates outcome reports ready for commissioners and insurers.</p>
+            </div>
+
+            <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
+              <div className="mb-6 w-20 h-20 rounded-full bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center border-4 border-slate-700 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
+                <span className="text-white font-bold text-3xl font-poppins">4</span>
+              </div>
+              <h3 className="text-xl font-bold mb-3 font-poppins text-white">Grows your revenue in 2 ways</h3>
+              <p className="text-slate-400 leading-relaxed text-sm">Unlock recurring revenue while winning bigger contracts with proven outcomes.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -604,7 +639,7 @@ const FAQAccordion = () => {
     },
     {
       question: "What outcomes do you track for ADHD pathways?",
-      answer: "Our data collection framework aligns with the Mental Health Services Data Set (MHSDS), making it straightforward to feed into your existing reporting structures. We track affect measures like anxiety levels, executive function indicators including emotional regulation and planning/organizing capabilities, and behavioral markers such as use of habitual stress management techniques (exercise, breathwork, sleep hygiene). All structured for clinical relevance."
+      answer: "We track the outcome data that matters: ASRS symptoms, emotional regulation, executive function, sleep hygiene, medication adherence, and daily functioning. Our framework aligns with the Mental Health Services Data Set (MHSDS), making it easy to feed into your existing reporting structures."
     },
     {
       question: "Can we evidence intervention adherence (medication, coaching, strategies)?",
