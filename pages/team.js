@@ -12,10 +12,10 @@ export default function Team() {
       image: 'https://NeuroNotionPullZonw.b-cdn.net/Pitchshot.jpg',
       linkedin: 'https://www.linkedin.com/in/joshua-budd/',
       bio: [
-        'Diagnosed severe combined ADHD',
+        'Diagnosed Severe ADHD',
         'Expelled from 13 schools by age 11',
-        'Built Claudia for ADHD brains',
-        'Leading product vision'
+        'Spent 8 years deeply learning about ADHD',
+        'Poured everything I knew into Claudia'
       ]
     },
     {
@@ -23,10 +23,10 @@ export default function Team() {
       role: 'Co-Founder & CTO',
       image: 'https://NeuroNotionPullZonw.b-cdn.net/vladheadshot.png',
       bio: [
-        'Leading technical architecture',
-        'Expert in scalable AI systems',
-        'Building reliable infrastructure',
-        'Ensuring platform performance'
+        'The technical brains behind Claudia',
+        'Neuro\'s resident Mad Scientist',
+        'Huge personal experience w/ ADHD',
+        'AI Engineer'
       ]
     },
     {
@@ -34,10 +34,9 @@ export default function Team() {
       role: 'Clinical Lead',
       image: 'https://NeuroNotionPullZonw.b-cdn.net/jameskustow.webp',
       bio: [
-        'ADHD treatment specialist',
-        'Clinical psychology expert',
-        'Evidence-based practice focus',
-        'Guiding clinical approach'
+        'Leading adult ADHD expert',
+        'Director of The Grove',
+        '#1 Best selling ADHD Author - "How to Thrive with ADHD"'
       ]
     },
     {
@@ -45,10 +44,9 @@ export default function Team() {
       role: 'Clinical Advisor',
       image: 'https://NeuroNotionPullZonw.b-cdn.net/tony.webp',
       bio: [
-        'Strategic clinical guidance',
-        'ADHD management expert',
-        'Research-backed methods',
-        'Best practice alignment'
+        'Leading adult ADHD educator',
+        'Doctorate in ADHD care',
+        'Ex-CEO of ADHD Foundation'
       ]
     }
   ];
@@ -83,7 +81,7 @@ export default function Team() {
       </section>
 
       {/* Team Section - Same background as hero */}
-      <section className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-[#1e2a4a]">
+      <section className="py-12 sm:py-16 lg:py-20 px-2 sm:px-3 bg-[#1e2a4a]">
         <div className="container mx-auto max-w-[1600px]">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             {teamMembers.map((member, index) => (
