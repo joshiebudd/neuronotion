@@ -13,7 +13,6 @@ export default function Team() {
       linkedin: 'https://www.linkedin.com/in/joshua-budd/',
       bio: [
         'Diagnosed Severe ADHD',
-        'Expelled from 13 schools by age 11',
         'Spent 8 years deeply learning about ADHD',
         'Poured everything I knew into Claudia'
       ]
@@ -25,8 +24,7 @@ export default function Team() {
       bio: [
         'The technical brains behind Claudia',
         'Neuro\'s resident Mad Scientist',
-        'Huge personal experience w/ ADHD',
-        'AI Engineer'
+        'Huge personal experience w/ ADHD'
       ]
     },
     {

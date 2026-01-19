@@ -61,17 +61,6 @@ const NEWClaudiaLPHeader = () => {
             >
               How It Works
             </a>
-            <a
-              href="#about"
-              className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
-                track("Founder's Story");
-                handleSectionNavigation('about');
-              }}
-            >
-              Founder&apos;s Story
-            </a>
             <Link
               href="/pricing"
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
