@@ -27,7 +27,7 @@ export const LPSupportedBy = () => {
           <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-[#1e2a4a] to-transparent z-10 pointer-events-none"></div>
           
           {/* Scrolling container */}
-          <div className="flex animate-scroll">
+          <div className="flex animate-scroll" style={{ transform: 'translateX(-50%)' }}>
             {/* First set of logos */}
             {logos.map((logo) => (
               <div
@@ -37,7 +37,7 @@ export const LPSupportedBy = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12 sm:h-14 lg:h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="h-18 sm:h-21 lg:h-24 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -50,7 +50,7 @@ export const LPSupportedBy = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-12 sm:h-14 lg:h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="h-18 sm:h-21 lg:h-24 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -61,10 +61,10 @@ export const LPSupportedBy = () => {
       <style jsx>{`
         @keyframes scroll {
           0% {
-            transform: translateX(0);
+            transform: translateX(-50%);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
         }
 
