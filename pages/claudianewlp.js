@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import NEWClaudiaLPHeader from '../components/NEWClaudiaLPHeader';
 import { LPHero } from '../components/ClaudiaLandingPage/LPHero';
+import { LPSupportedBy } from '../components/ClaudiaLandingPage/LPSupportedBy';
 import { LPWhatIsThis } from '../components/ClaudiaLandingPage/LPWhatIsThis';
 import { LPTestimonials } from '../components/ClaudiaLandingPage/LPTestimonials';
 import { LPADHDStruggles } from '../components/ClaudiaLandingPage/LPADHDStruggles';
@@ -38,6 +39,7 @@ const ClaudiaNewLP = () => {
       
       <NEWClaudiaLPHeader />
       <LPHero />
+      <LPSupportedBy />
       <LPADHDStruggles />
       <LPWhatIsThis />
       <LPTestimonials />
