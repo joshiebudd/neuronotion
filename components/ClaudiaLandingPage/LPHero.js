@@ -16,7 +16,7 @@ export const LPHero = () => {
   };
 
   return (
-    <section className="pt-24 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16 px-3 sm:px-4 bg-[#1e2a4a]">
+    <section className="pt-24 sm:pt-20 lg:pt-24 pb-0 px-3 sm:px-4 bg-[#1e2a4a]">
       <div className="container mx-auto max-w-[1400px]">
         <div 
           ref={elementRef}

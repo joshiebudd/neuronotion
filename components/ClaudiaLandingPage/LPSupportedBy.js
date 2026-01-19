@@ -16,17 +16,13 @@ export const LPSupportedBy = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 bg-[#1e2a4a] overflow-hidden">
+    <section className="py-8 sm:py-10 bg-[#1e2a4a] overflow-hidden">
       <div className="container mx-auto max-w-7xl px-6 lg:px-8">
         <h2 className="text-center text-lg sm:text-xl font-semibold text-white mb-8 sm:mb-10" style={{ fontWeight: 600 }}>
           Supported by
         </h2>
         
         <div className="relative">
-          {/* Gradient overlays for fade effect */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-[#1e2a4a] to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-[#1e2a4a] to-transparent z-10 pointer-events-none"></div>
-          
           {/* Scrolling container */}
           <div className="flex animate-scroll" style={{ transform: 'translateX(-50%)' }}>
             {/* First set of logos */}
