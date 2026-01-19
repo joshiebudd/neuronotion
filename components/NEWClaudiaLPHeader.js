@@ -79,6 +79,13 @@ const NEWClaudiaLPHeader = () => {
             >
               Pricing
             </Link>
+            <Link
+              href="/team"
+              className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
+              onClick={() => track('Our Team')}
+            >
+              Our Team
+            </Link>
           </nav>
 
           <div className="flex items-center gap-1">

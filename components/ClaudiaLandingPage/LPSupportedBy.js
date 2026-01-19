@@ -6,6 +6,7 @@ export const LPSupportedBy = () => {
     { id: 2, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/2.webp', alt: 'Supported by logo 2' },
     { id: 7, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/7.webp', alt: 'Supported by logo 7' },
     { id: 6, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/6.webp', alt: 'Supported by logo 6' },
+    { id: 11, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/11.webp', alt: 'Supported by logo 11' },
     { id: 10, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/10.webp', alt: 'Supported by logo 10' },
     { id: 4, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/4.webp', alt: 'Supported by logo 4' },
     { id: 5, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/5.webp', alt: 'Supported by logo 5' },
@@ -37,7 +38,7 @@ export const LPSupportedBy = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-18 sm:h-21 lg:h-24 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="h-18 sm:h-21 lg:h-24 w-auto object-contain transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -50,7 +51,7 @@ export const LPSupportedBy = () => {
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-18 sm:h-21 lg:h-24 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="h-18 sm:h-21 lg:h-24 w-auto object-contain transition-opacity duration-300"
                 />
               </div>
             ))}

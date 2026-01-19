@@ -18,7 +18,7 @@ export const LPFoundersStory = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            Built for ADHDers, by ADHDers
+            Clinically built for ADHDers, by ADHDers
           </h2>
         </div>
 
