@@ -82,38 +82,38 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-[#253550]">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+      {/* Team Section - Same background as hero */}
+      <section className="py-12 sm:py-16 lg:py-20 px-3 sm:px-4 bg-[#1e2a4a]">
+        <div className="container mx-auto max-w-[1600px]">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-[#465e76] rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300">
-                <div className="flex flex-col items-center text-center">
+              <div key={index} className="bg-[#465e76] rounded-2xl shadow-xl p-8 sm:p-10 hover:shadow-2xl transition-all duration-300 flex flex-col">
+                <div className="flex flex-col items-center text-center flex-grow">
                   {member.linkedin ? (
-                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="block mb-4">
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="block mb-6">
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-28 h-28 rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+                        className="w-36 h-36 sm:w-40 sm:h-40 rounded-full object-cover shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
                       />
                     </a>
                   ) : (
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-28 h-28 rounded-full object-cover shadow-lg mb-4"
+                      className="w-36 h-36 sm:w-40 sm:h-40 rounded-full object-cover shadow-lg mb-6"
                     />
                   )}
-                  <h3 className="text-lg font-bold text-white mb-1" style={{ fontWeight: 700 }}>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2" style={{ fontWeight: 700 }}>
                     {member.name}
                   </h3>
-                  <p className="text-sm text-[#30bcd9] font-semibold mb-4" style={{ fontWeight: 600 }}>
+                  <p className="text-base sm:text-lg text-[#30bcd9] font-semibold mb-6" style={{ fontWeight: 600 }}>
                     {member.role}
                   </p>
-                  <ul className="text-xs text-gray-300 leading-relaxed space-y-1.5 text-left w-full" style={{ fontWeight: 400 }}>
+                  <ul className="text-sm sm:text-base text-gray-300 leading-relaxed space-y-2.5 text-left w-full" style={{ fontWeight: 400 }}>
                     {member.bio.map((point, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="text-[#30bcd9] mr-2">•</span>
+                        <span className="text-[#30bcd9] mr-2 text-lg">•</span>
                         <span>{point}</span>
                       </li>
                     ))}
