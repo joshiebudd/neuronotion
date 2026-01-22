@@ -29,12 +29,12 @@ export const LPSupportedBy = () => {
             {logos.map((logo) => (
               <div
                 key={`first-${logo.id}`}
-                className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-10"
+                className="flex-shrink-0 mx-3 sm:mx-6 md:mx-8 lg:mx-10"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-18 sm:h-21 lg:h-24 w-auto object-contain transition-opacity duration-300"
+                  className="h-8 sm:h-12 md:h-16 lg:h-24 w-auto object-contain transition-opacity duration-300"
                 />
               </div>
             ))}
@@ -42,12 +42,12 @@ export const LPSupportedBy = () => {
             {logos.map((logo) => (
               <div
                 key={`second-${logo.id}`}
-                className="flex-shrink-0 mx-6 sm:mx-8 lg:mx-10"
+                className="flex-shrink-0 mx-3 sm:mx-6 md:mx-8 lg:mx-10"
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-18 sm:h-21 lg:h-24 w-auto object-contain transition-opacity duration-300"
+                  className="h-8 sm:h-12 md:h-16 lg:h-24 w-auto object-contain transition-opacity duration-300"
                 />
               </div>
             ))}
