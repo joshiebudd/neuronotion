@@ -41,7 +41,7 @@ const NEWClaudiaLPHeader = () => {
         )}
       >
         <div className="flex items-center justify-between max-w-[1400px] mx-auto w-full">
-          <Link href="/claudianewlp" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <img
               src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
               alt="Neuro Logo"
@@ -99,7 +99,7 @@ const NEWClaudiaLPHeader = () => {
             
             {/* Mobile burger menu button */}
             <button
-              className="md:hidden ml-2 text-white p-2"
+              className="md:hidden ml-2 text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -122,13 +122,13 @@ const NEWClaudiaLPHeader = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu - redesigned with cleaner styling */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-white/10">
-            <nav className="flex flex-col space-y-4 pt-4">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-[#1e2a4a]/95 backdrop-blur-lg border-b border-white/10 shadow-xl">
+            <nav className="flex flex-col max-w-[1400px] mx-auto px-4 py-6 space-y-1">
               <a
                 href="#what-is-claudia"
-                className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer px-2"
+                className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg cursor-pointer font-medium"
                 onClick={(e) => {
                   e.preventDefault();
                   track('How it works from mobile menu');
@@ -139,7 +139,7 @@ const NEWClaudiaLPHeader = () => {
               </a>
               <Link
                 href="/pricing"
-                className="text-white/80 hover:text-white transition-colors duration-300 text-sm px-2"
+                className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium"
                 onClick={() => {
                   track('Pricing from mobile menu');
                   setMobileMenuOpen(false);
@@ -149,7 +149,7 @@ const NEWClaudiaLPHeader = () => {
               </Link>
               <Link
                 href="/team"
-                className="text-white/80 hover:text-white transition-colors duration-300 text-sm px-2"
+                className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium"
                 onClick={() => {
                   track('Our Team from mobile menu');
                   setMobileMenuOpen(false);
@@ -157,13 +157,15 @@ const NEWClaudiaLPHeader = () => {
               >
                 Our Team
               </Link>
-              <a
-                href="https://app.neuro-notion.com/?page=login"
-                className="text-white/80 hover:text-white transition-colors duration-300 text-sm px-2 sm:hidden"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Login
-              </a>
+              <div className="pt-2 mt-2 border-t border-white/10">
+                <a
+                  href="https://app.neuro-notion.com/?page=login"
+                  className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium block"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Login
+                </a>
+              </div>
             </nav>
           </div>
         )}
