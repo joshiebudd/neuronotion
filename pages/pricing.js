@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { LPMainCTA } from '../components/ClaudiaLandingPage/LPMainCTA';
 import { LPFooter } from '../components/ClaudiaLandingPage/LPFooter';
-import ClaudiaPricingHeader from '../components/ClaudiaPricingHeader';
+import NEWClaudiaLPHeader from '../components/NEWClaudiaLPHeader';
 
 export default function Pricing() {
   return (
@@ -12,7 +12,7 @@ export default function Pricing() {
         <link rel="icon" href="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png" />
       </Head>
 
-      <ClaudiaPricingHeader />
+      <NEWClaudiaLPHeader />
       <LPMainCTA />
       <LPFooter />
     </>

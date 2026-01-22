@@ -5,6 +5,7 @@ import { cn } from "../lib/utils";
 
 const NEWClaudiaLPHeader = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,7 @@ const NEWClaudiaLPHeader = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setMobileMenuOpen(false);
   };
 
   const handleCTAClick = () => {
@@ -80,7 +82,7 @@ const NEWClaudiaLPHeader = () => {
           <div className="flex items-center gap-1">
             <a
               href="https://app.neuro-notion.com/?page=login"
-              className="bg-gray-100/80 border border-gray-300 text-gray-700 font-pop font-semibold py-1.5 px-3 sm:px-4 rounded-lg text-[11px] sm:text-sm shadow hover:bg-gray-200/80 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#30bcd9] focus:ring-offset-2 transition-colors duration-200 whitespace-nowrap"
+              className="hidden sm:inline-block bg-gray-100/80 border border-gray-300 text-gray-700 font-pop font-semibold py-1.5 px-3 sm:px-4 rounded-lg text-[11px] sm:text-sm shadow hover:bg-gray-200/80 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#30bcd9] focus:ring-offset-2 transition-colors duration-200 whitespace-nowrap"
               aria-label="Login"
               tabIndex={0}
               onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { window.location.href = 'https://app.neuro-notion.com/?page=login'; } }}
@@ -94,11 +96,80 @@ const NEWClaudiaLPHeader = () => {
             >
               Try Claudia Free
             </button>
+            
+            {/* Mobile burger menu button */}
+            <button
+              className="md:hidden ml-2 text-white p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {mobileMenuOpen ? (
+                  <path d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
         </div>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-white/10">
+            <nav className="flex flex-col space-y-4 pt-4">
+              <a
+                href="#what-is-claudia"
+                className="text-white/80 hover:text-white transition-colors duration-300 text-sm cursor-pointer px-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  track('How it works from mobile menu');
+                  handleSectionNavigation('what-is-claudia');
+                }}
+              >
+                How It Works
+              </a>
+              <Link
+                href="/pricing"
+                className="text-white/80 hover:text-white transition-colors duration-300 text-sm px-2"
+                onClick={() => {
+                  track('Pricing from mobile menu');
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Pricing
+              </Link>
+              <Link
+                href="/team"
+                className="text-white/80 hover:text-white transition-colors duration-300 text-sm px-2"
+                onClick={() => {
+                  track('Our Team from mobile menu');
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Our Team
+              </Link>
+              <a
+                href="https://app.neuro-notion.com/?page=login"
+                className="text-white/80 hover:text-white transition-colors duration-300 text-sm px-2 sm:hidden"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Login
+              </a>
+            </nav>
+          </div>
+        )}
       </header>
     </>
   );
 };
 
-export default NEWClaudiaLPHeader; 
+export default NEWClaudiaLPHeader;
