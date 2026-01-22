@@ -122,9 +122,11 @@ const NEWClaudiaLPHeader = () => {
           </div>
         </div>
 
-        {/* Mobile menu - redesigned with cleaner styling */}
-        {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-[#1e2a4a]/95 backdrop-blur-lg border-b border-white/10 shadow-xl">
+      </header>
+      
+      {/* Mobile menu - redesigned with cleaner styling */}
+      {mobileMenuOpen && (
+        <div className="md:hidden fixed top-[60px] left-0 right-0 bg-[#1e2a4a]/98 backdrop-blur-lg border-b border-white/10 shadow-xl z-40">
             <nav className="flex flex-col max-w-[1400px] mx-auto px-4 py-6 space-y-1">
               <a
                 href="#what-is-claudia"
@@ -166,10 +168,9 @@ const NEWClaudiaLPHeader = () => {
                   Login
                 </a>
               </div>
-            </nav>
-          </div>
-        )}
-      </header>
+          </nav>
+        </div>
+      )}
     </>
   );
 };
