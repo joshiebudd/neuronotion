@@ -30,11 +30,11 @@ export default function Team() {
     {
       name: 'Dr James Kustow',
       role: 'Clinical Lead',
-      image: 'https://NeuroNotionPullZonw.b-cdn.net/jameskustow.webp',
+      image: 'https://NeuroNotionPullZonw.b-cdn.net/jamesk.webp',
       bio: [
         'Leading adult ADHD expert',
         'Director of The Grove',
-        '#1 Best selling ADHD Author - "How to Thrive with ADHD"'
+        '#1 Best selling ADHD Author - "How to Thrive with Adult ADHD"'
       ]
     },
     {
