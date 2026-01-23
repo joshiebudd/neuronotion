@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { track } from "@vercel/analytics";
 import { cn } from "../lib/utils";
 
@@ -52,12 +53,12 @@ const NEWClaudiaLPHeader = () => {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <a
+            <Link
               href="/#what-is-claudia"
               className="text-white/90 hover:text-white transition-colors duration-200 text-sm cursor-pointer font-medium"
             >
               How It Works
-            </a>
+            </Link>
             <Link
               href="/pricing"
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
@@ -123,13 +124,13 @@ const NEWClaudiaLPHeader = () => {
       {mobileMenuOpen && (
         <div className="md:hidden fixed top-[60px] left-0 right-0 bg-[#1e2a4a]/98 backdrop-blur-lg border-b border-white/10 shadow-xl z-40">
             <nav className="flex flex-col max-w-[1400px] mx-auto px-4 py-6 space-y-1">
-              <a
+              <Link
                 href="/#what-is-claudia"
                 className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg cursor-pointer font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 How It Works
-              </a>
+              </Link>
               <Link
                 href="/pricing"
                 className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium"
