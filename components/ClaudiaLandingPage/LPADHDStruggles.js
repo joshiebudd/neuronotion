@@ -87,17 +87,17 @@ export const LPADHDStruggles = () => {
     {
       emoji: "🎙️",
       title: "Voice-First, Always",
-      description: "No typing. No menus. Just speak your thoughts and watch magic happen."
+      description: "No typing. No hunting through menus. Just talk to Claudia like you would a friend."
     },
     {
       emoji: "⚡",
-      title: "Instant Organization",
-      description: "\"Remind me to email Sarah after I finish the Johnson report and pick up groceries before 6pm\" → Claudia breaks this down, prioritizes it, and schedules it. Automatically."
+      title: "Takes the Weight Off",
+      description: "\"Remind me to email Sarah after I finish the Work report and pick up groceries before 6pm\" → Claudia sorts it, breaks it down, prioritizes it, and schedules it. One less thing on your mind."
     },
     {
       emoji: "🧠",
       title: "Built on science and experience",
-      description: "Built on real neuroscience - reward loops, dopamine triggers, and motivation systems that actually work for ADHD brains."
+      description: "Built by people with ADHD who understand the real challenges. Every feature exists because we needed it ourselves."
     },
     {
       emoji: "🔗",
@@ -269,7 +269,7 @@ export const LPADHDStruggles = () => {
           </div>
           
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            You&apos;re probably tired of the following...
+            We know how tiring ADHD can be…
           </h2>
         </div>
 
@@ -279,7 +279,7 @@ export const LPADHDStruggles = () => {
         <div className="text-center mb-6 sm:mb-8 lg:mb-16 mt-16 sm:mt-20 lg:mt-24">
           <div className="mb-3 sm:mb-4 lg:mb-6">
             <Badge className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-2 sm:px-3 lg:px-4 py-1 sm:py-1.5 lg:py-2 text-xs sm:text-sm font-medium shadow-lg hover:bg-white/10" style={{ fontWeight: 400 }}>
-              How We Tackle This
+              How Claudia Helps
             </Badge>
           </div>
           

@@ -113,12 +113,12 @@ export const LPTestimonials = () => {
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="mb-4 sm:mb-6">
             <Badge className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium shadow-lg hover:bg-white/10" style={{ fontWeight: 400 }}>
-              The Results
+              What ADHDers Are Saying
             </Badge>
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            &quot;Living with ADHD is 10x easier now.&quot;
+            &quot;Living with ADHD genuinely feels easier now.&quot;
           </h2>
         </div>
 

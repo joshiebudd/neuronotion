@@ -13,12 +13,12 @@ export const LPTheDifference = () => {
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <div className="mb-4 sm:mb-6">
             <Badge className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium shadow-lg hover:bg-white/10" style={{ fontWeight: 400 }}>
-              What Makes Neuro Different
+              Why Claudia Feels Different
             </Badge>
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            Why This Works When Everything Else Failed
+            Built with care, because everything else failed us.
           </h2>
         </div>
 
@@ -38,19 +38,19 @@ export const LPTheDifference = () => {
             <CardContent className="space-y-3 sm:space-y-4">
               <div className="flex items-start gap-3">
                 <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>Engineered specifically for ADHD brains</p>
+                <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>Built for ADHD brains by ADHD brains</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>Reduces friction to near-zero</p>
+                <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>Removes the friction that trips you up</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>Gets smarter the more chaotic your input</p>
+                <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>Learns about you over time</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>Celebrates how your mind actually works</p>
+                <p className="text-white text-sm sm:text-base" style={{ fontWeight: 400 }}>Celebrates your brain exactly as it is</p>
               </div>
             </CardContent>
           </Card>

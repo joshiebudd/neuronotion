@@ -25,17 +25,13 @@ export const LPWhatIsThis = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            An ADHD management platform,
-            <br />
-            That <span className="italic">actually</span> works.
+            A personal companion for your ADHD journey.
           </h2>
           
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 leading-relaxed px-2 sm:px-0" style={{ fontWeight: 400 }}>
-            <span className="font-medium text-white" style={{ fontWeight: 700 }}>Not</span> another &quot;ADHD friendly&quot; hack. <span className="font-medium text-white" style={{ fontWeight: 700 }}>Not</span> another course you abandon.
+            <span className="font-medium text-white" style={{ fontWeight: 700 }}>Not</span> another quick fix that disappears when things get hard.
             <br />
-            Claudia is an <span className="font-medium text-white" style={{ fontWeight: 700 }}>ADHD-centric platform</span> for doing. For getting
-            <br />
-            organized, regaining control of your life, and thriving.
+            Claudia is built to be here with you through the good days, the hard days, and everything in between.
           </p>
         </div>
         

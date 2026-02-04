@@ -14,16 +14,15 @@ export const LPFinalCTA = () => {
     <section className="py-12 sm:py-16 lg:py-20 px-4 bg-[#1e2a4a]">
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="mb-4 sm:mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-white" style={{ fontWeight: 700 }}>
-          Stop Fighting Your ADHD Brain.
+          Don&apos;t Battle ADHD alone.
           <br />
           <span className="text-[#30bcd9]">
-            Start Working With It.
+            Do it alongside Claudia.
           </span>
         </h1>
 
         <p className="mb-6 sm:mb-8 text-lg sm:text-xl text-gray-300 px-4 lg:px-16 leading-relaxed" style={{ fontWeight: 400 }}>
-          The <strong style={{ fontWeight: 700 }}>AI personal assistant built specifically for ADHD minds</strong>. 
-          Transform your chaotic thoughts into organized action.
+          Life with ADHD is hard - but together, it&apos;s a little easier.
         </p>
 
         <div className="mb-6 sm:mb-8 px-4 sm:px-0">
