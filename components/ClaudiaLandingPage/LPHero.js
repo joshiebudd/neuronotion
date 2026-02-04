@@ -31,7 +31,7 @@ export const LPHero = () => {
               <br className="sm:hidden" />
               {' '}
               <br />
-              <span className="text-[#30bcd9]">That <span className="italic">actually</span> works.</span>
+              <span className="text-[#30bcd9]">that <span className="italic">actually</span> works.</span>
             </h1>
             
             <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed px-2 sm:px-0" style={{ fontWeight: 400 }}>
