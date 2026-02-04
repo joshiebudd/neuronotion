@@ -75,7 +75,7 @@ export const LPHero = () => {
           {/* Right Image - 50% */}
           <div className="mt-6 sm:mt-4 lg:mt-0">
             <img 
-              src="https://NeuroNotionPullZonw.b-cdn.net/ClaudiaOfficialupdatedshadowedmockup%20webp.webp" 
+              src="https://NeuroNotionPullZonw.b-cdn.net/Desktop%20and%20Mobile%20mockup%20webp.webp" 
               alt="Claudia AI Personal Assistant Demo"
               className="w-full h-auto rounded-lg transform scale-[1.1] hover:scale-[1.12] transition-transform duration-300 ease-out"
             />
