@@ -27,15 +27,15 @@ export const LPHero = () => {
           {/* Left Content - 50% */}
           <div className="text-center lg:text-left">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-white mb-3 sm:mb-4 leading-normal sm:leading-tight" style={{ fontWeight: 700 }}>
-              The AI Companion
+              The ADHD Companion
               <br className="sm:hidden" />
               {' '}
               <br />
-              <span className="text-[#30bcd9]">That Actually Gets Your ADHD Brain</span>
+              <span className="text-[#30bcd9]">That <span className="italic">actually</span> works.</span>
             </h1>
             
             <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 leading-relaxed px-2 sm:px-0" style={{ fontWeight: 400 }}>
-              Claudia is the helpful companion you&apos;ve never had - one who truly understands how your brain works. Speak your thoughts (however messy) and we&apos;ll work through it together, so you can feel in control for the first time.
+              Claudia truly understands how your ADHD brain works. Speak your thoughts (however messy) and she&apos;ll work through it with you, so you can feel in control for the first time.
             </p>
             
             <div className="flex flex-col items-center lg:items-start space-y-3 sm:space-y-4">

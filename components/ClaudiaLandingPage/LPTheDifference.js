@@ -18,7 +18,7 @@ export const LPTheDifference = () => {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0" style={{ fontWeight: 700 }}>
-            Built with care, because everything else failed us.
+            Built with care, when nothing else is.
           </h2>
         </div>
 

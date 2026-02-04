@@ -22,7 +22,7 @@ export const LPFinalCTA = () => {
         </h1>
 
         <p className="mb-6 sm:mb-8 text-lg sm:text-xl text-gray-300 px-4 lg:px-16 leading-relaxed" style={{ fontWeight: 400 }}>
-          Life with ADHD is hard - but together, it&apos;s a little easier.
+          Life with ADHD is hard. But together with Claudia, it&apos;s a little easier.
         </p>
 
         <div className="mb-6 sm:mb-8 px-4 sm:px-0">
