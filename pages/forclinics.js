@@ -48,7 +48,7 @@ const FounderStory = ({ isOpen, onClose }) => {
   
   return (
     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[90vw] max-w-md mx-4 z-50 animate-in zoom-in-95 duration-200">
-      <div className="bg-[#1E293B] border border-slate-700 rounded-xl shadow-2xl p-6 text-left relative">
+      <div className="bg-[#1E293B] border border-slate-700 rounded-xl shadow-2xl p-6 text-left relative max-h-[80vh] overflow-y-auto">
         <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#1E293B] border-t border-l border-slate-700 rotate-45"></div>
         <button onClick={onClose} className="absolute top-2 right-2 text-slate-400 hover:text-white"><X size={16} /></button>
         
@@ -124,7 +124,7 @@ const BookingModal = ({ isOpen, onClose }) => {
           </div>
           
           <a 
-            href="https://app.usemotion.com/meet/josh-budd/meeting" 
+            href="https://app.usemotion.com/meet/josh-budd/clinicaldisc" 
             target="_blank" 
             rel="noopener noreferrer"
             className="block w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-xl py-4 rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-1"
