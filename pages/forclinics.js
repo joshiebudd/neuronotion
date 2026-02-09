@@ -223,7 +223,7 @@ const App = () => {
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 text-cyan-400 font-medium text-xs mb-8 animate-fade-in backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            Limited pilot spots remaining. Starting Jan 2025.
+            Limited pilot spots remaining. Starting April 2025.
           </div>
           
           <h1 className="font-poppins font-bold text-4xl md:text-6xl tracking-tight mb-8 leading-[1.15]">
@@ -276,7 +276,7 @@ const App = () => {
           
           {/* Clinic Endorsements */}
           <div className="mb-14 text-center">
-            <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Endorsed by</p>
+            <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-8">Endorsed by</div>
             <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
                <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
                    <div className="h-20 w-full flex items-center justify-center p-2">
@@ -303,23 +303,13 @@ const App = () => {
 
           {/* Advised By (Affiliates) */}
           <div className="mb-14 text-center">
-             <p className="text-xs font-bold text-slate-600 uppercase tracking-widest mb-8">Advised by</p>
+             <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-8">Advised by</div>
              <div className="flex flex-wrap justify-center items-end gap-12">
-                <AffiliateProfile 
-                  name="Dr. James Kustow" 
-                  image="https://NeuroNotionPullZonw.b-cdn.net/jameskustow.webp"
-                  link="https://www.thegrovepractice.com/profle/dr-james-kustow/"
-                  bio={[
-                    "Medical Director @ The Grove Practice",
-                    "Founding member and former chair of UKAAN",
-                    "Lead trainer for UK clinicians"
-                  ]}
-                />
                 <AffiliateProfile 
                   name="Dr. Tony Lloyd" 
                   image="https://NeuroNotionPullZonw.b-cdn.net/tony.webp"
                   link="https://www.linkedin.com/in/tony-l-ba67301/"
-                  isLarge={true}
+                  role="Clinical Advisor"
                   bio={[
                      "&#35;1 ADHD Doctor in England",
                      "Ex-CEO of ADHD Foundation",
@@ -327,9 +317,23 @@ const App = () => {
                   ]}
                 />
                 <AffiliateProfile 
+                  name="Dr. James Kustow" 
+                  image="https://NeuroNotionPullZonw.b-cdn.net/jameskustow.webp"
+                  link="https://www.thegrovepractice.com/profle/dr-james-kustow/"
+                  isLarge={true}
+                  role="Clinical Lead"
+                  bio={[
+                    "Medical Director @ The Grove Practice",
+                    "Founding member and former chair of UKAAN",
+                    "Lead trainer for UK clinicians",
+                    "Author of How to thrive with Adult ADHD"
+                  ]}
+                />
+                <AffiliateProfile 
                   name="Prof. David Daley" 
                   image="https://NeuroNotionPullZonw.b-cdn.net/david%20(1).webp"
                   link="https://www.researchgate.net/profile/David-Daley-7"
+                  role="Clinical Advisor"
                   bio={[
                     "Expert in digital ADHD interventions",
                     "Leading ADHD academic in Europe.",
@@ -689,12 +693,15 @@ const FAQAccordion = () => {
 
 
 // Components
-const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [] }) => (
+const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [], role = null }) => (
   <a href={link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 group relative cursor-pointer">
     <div className={`${isLarge ? 'w-40 h-40' : 'w-32 h-32'} rounded-full border-2 border-slate-700 p-1 overflow-hidden relative group-hover:border-[#0EA5E9] transition-all bg-slate-800 shadow-xl group-hover:shadow-[#0EA5E9]/20`}>
        <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
     </div>
-    <span className="text-slate-300 font-medium text-base text-center max-w-[160px] group-hover:text-white transition-colors">{name}</span>
+    <div className="flex flex-col items-center gap-1">
+      <span className="text-slate-300 font-medium text-base text-center max-w-[160px] group-hover:text-white transition-colors">{name}</span>
+      {role && <span className="text-[#0EA5E9] font-medium text-xs text-center">{role}</span>}
+    </div>
     
     {/* Hover Modal */}
     <div className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2 w-[280px] bg-slate-800 border border-slate-600 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-20 shadow-2xl pointer-events-none">
