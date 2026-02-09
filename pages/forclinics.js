@@ -47,9 +47,9 @@ const FounderStory = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   
   return (
-    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[90vw] max-w-md mx-4 z-50 animate-in zoom-in-95 duration-200">
-      <div className="bg-[#1E293B] border border-slate-700 rounded-xl shadow-2xl p-6 text-left relative max-h-[80vh] overflow-y-auto">
-        <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#1E293B] border-t border-l border-slate-700 rotate-45"></div>
+    <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 pointer-events-none">
+      <div className="bg-[#1E293B] border border-slate-700 rounded-xl shadow-2xl p-6 text-left relative max-h-[80vh] overflow-y-auto w-full max-w-md pointer-events-auto animate-in zoom-in-95 duration-200">
+
         <button onClick={onClose} className="absolute top-2 right-2 text-slate-400 hover:text-white"><X size={16} /></button>
         
         <h4 className="text-white font-bold text-lg mb-4 text-center">Read more about the founder&apos;s story</h4>
