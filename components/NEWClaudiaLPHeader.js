@@ -67,6 +67,13 @@ const NEWClaudiaLPHeader = () => {
               Pricing
             </Link>
             <Link
+              href="https://www.neuro-notion.com/forclinics"
+              className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
+              onClick={() => track('For Clinics')}
+            >
+              For Clinics
+            </Link>
+            <Link
               href="/team"
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
               onClick={() => track('Our Team')}
@@ -140,6 +147,16 @@ const NEWClaudiaLPHeader = () => {
                 }}
               >
                 Pricing
+              </Link>
+              <Link
+                href="https://www.neuro-notion.com/forclinics"
+                className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium"
+                onClick={() => {
+                  track('For Clinics from mobile menu');
+                  setMobileMenuOpen(false);
+                }}
+              >
+                For Clinics
               </Link>
               <Link
                 href="/team"
