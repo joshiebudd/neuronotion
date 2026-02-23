@@ -28,8 +28,6 @@ export const LPHero = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.85rem] font-bold text-white mb-3 sm:mb-4 leading-normal sm:leading-tight" style={{ fontWeight: 700 }}>
               The ADHD Companion
-              <br className="sm:hidden" />
-              {' '}
               <br />
               <span className="text-[#30bcd9]">that <span className="italic">actually</span> works.</span>
             </h1>
