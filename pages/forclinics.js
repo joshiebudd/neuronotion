@@ -278,26 +278,26 @@ const App = () => {
           {/* Clinic Endorsements */}
           <div className="mb-8 sm:mb-14 text-center">
             <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Endorsed by</div>
-            <div className="flex flex-wrap justify-center items-center gap-x-8 sm:gap-x-12 gap-y-6 sm:gap-y-8">
-               <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-20 w-full flex items-center justify-center p-2">
+            <div className="flex justify-center items-center gap-3 sm:gap-x-12 sm:gap-y-8 sm:flex-wrap">
+               <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-[29%] sm:w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-14 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
                      <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
-                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Leicester Psychology Clinic</span>
+                   <span className="text-[10px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Leicester Psychology Clinic</span>
                </a>
 
-               <a href="https://evolvepsychology.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-20 w-full flex items-center justify-center p-2">
+               <a href="https://evolvepsychology.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-[29%] sm:w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-14 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
                      <img src="https://NeuroNotionPullZonw.b-cdn.net/evolvewebp.webp" alt="Evolve Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
-                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Evolve Psychology</span>
+                   <span className="text-[10px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Evolve Psychology</span>
                </a>
 
-               <a href="https://innovateadhd.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-20 w-full flex items-center justify-center p-2">
+               <a href="https://innovateadhd.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-[29%] sm:w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-14 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
                      <img src="https://NeuroNotionPullZonw.b-cdn.net/innovateadhdwebp.webp" alt="Innovate ADHD" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
-                   <span className="text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center">Innovate ADHD</span>
+                   <span className="text-[10px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Innovate ADHD</span>
                </a>
             </div>
           </div>
@@ -305,7 +305,7 @@ const App = () => {
           {/* Advised By (Affiliates) */}
           <div className="mb-8 sm:mb-14 text-center">
              <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Advised by</div>
-             <div className="flex flex-wrap justify-center items-end gap-8 sm:gap-12">
+             <div className="flex justify-center items-end gap-4 sm:gap-12">
                 <AffiliateProfile 
                   name="Dr. Tony Lloyd" 
                   image="https://NeuroNotionPullZonw.b-cdn.net/tony.webp"
@@ -696,11 +696,11 @@ const FAQAccordion = () => {
 // Components
 const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [], role = null }) => (
   <a href={link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 group relative cursor-pointer">
-    <div className={`${isLarge ? 'w-40 h-40' : 'w-32 h-32'} rounded-full border-2 border-slate-700 p-1 overflow-hidden relative group-hover:border-[#0EA5E9] transition-all bg-slate-800 shadow-xl group-hover:shadow-[#0EA5E9]/20`}>
+    <div className={`${isLarge ? 'w-20 h-20 sm:w-40 sm:h-40' : 'w-16 h-16 sm:w-32 sm:h-32'} rounded-full border-2 border-slate-700 p-1 overflow-hidden relative group-hover:border-[#0EA5E9] transition-all bg-slate-800 shadow-xl group-hover:shadow-[#0EA5E9]/20`}>
        <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
     </div>
     <div className="flex flex-col items-center gap-1">
-      <span className="text-slate-300 font-medium text-base text-center max-w-[160px] group-hover:text-white transition-colors">{name}</span>
+      <span className="text-slate-300 font-medium text-[10px] sm:text-base text-center max-w-[80px] sm:max-w-[160px] group-hover:text-white transition-colors leading-tight">{name}</span>
       {role && <span className="text-[#0EA5E9] font-medium text-xs text-center">{role}</span>}
     </div>
     
