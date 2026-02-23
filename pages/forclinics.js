@@ -306,11 +306,12 @@ const App = () => {
           <div className="mb-8 sm:mb-14 text-center">
              <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Advised by</div>
              <div className="grid grid-cols-3 gap-2 sm:flex sm:justify-center sm:items-end sm:gap-12">
-                <AffiliateProfile 
-                  name="Dr. Tony Lloyd" 
+                <AffiliateProfile
+                  name="Dr. Tony Lloyd"
                   image="https://NeuroNotionPullZonw.b-cdn.net/tony.webp"
                   link="https://www.linkedin.com/in/tony-l-ba67301/"
                   role="Clinical Advisor"
+                  tooltipSide="left"
                   bio={[
                      "&#35;1 ADHD Doctor in England",
                      "Ex-CEO of ADHD Foundation",
@@ -330,11 +331,12 @@ const App = () => {
                     "Author of How to thrive with Adult ADHD"
                   ]}
                 />
-                <AffiliateProfile 
-                  name="Prof. David Daley" 
+                <AffiliateProfile
+                  name="Prof. David Daley"
                   image="https://NeuroNotionPullZonw.b-cdn.net/david%20(1).webp"
                   link="https://www.researchgate.net/profile/David-Daley-7"
                   role="Clinical Advisor"
+                  tooltipSide="right"
                   bio={[
                     "Expert in digital ADHD interventions",
                     "Leading ADHD academic in Europe.",
@@ -434,7 +436,7 @@ const App = () => {
                   </p>
 
                   {/* Tooltip */}
-                  <div className="tooltip-text invisible absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 bg-slate-900 border border-slate-700 text-slate-300 text-xs p-4 rounded-lg shadow-xl z-20 opacity-0 transition-all duration-300 pointer-events-none text-left leading-relaxed">
+                  <div className="tooltip-text invisible absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-[85vw] max-w-[288px] sm:w-72 bg-slate-900 border border-slate-700 text-slate-300 text-xs p-4 rounded-lg shadow-xl z-20 opacity-0 transition-all duration-300 pointer-events-none text-left leading-relaxed">
                     <div className="flex items-center gap-2 mb-2 text-white font-semibold">
                       <Info size={14} className="text-[#0EA5E9]" /> Why £800?
                     </div>
@@ -694,7 +696,8 @@ const FAQAccordion = () => {
 
 
 // Components
-const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [], role = null }) => {
+// tooltipSide controls mobile horizontal alignment: 'left' | 'center' | 'right'
+const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [], role = null, tooltipSide = 'center' }) => {
   const [active, setActive] = React.useState(false);
   const ref = React.useRef(null);
 
@@ -706,9 +709,17 @@ const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [], role =
   }, []);
 
   const handleClick = (e) => {
-    // On first tap show tooltip; second tap follows link
     if (!active) { e.preventDefault(); setActive(true); }
   };
+
+  // On mobile: pin tooltip to the edge it's closest to so it never bleeds off-screen.
+  // On sm+: always centre it under the cursor (left-1/2 -translate-x-1/2).
+  const tooltipPos =
+    tooltipSide === 'left'
+      ? 'left-0 sm:left-1/2 sm:-translate-x-1/2'
+      : tooltipSide === 'right'
+      ? 'right-0 sm:right-auto sm:left-1/2 sm:-translate-x-1/2'
+      : 'left-1/2 -translate-x-1/2';
 
   return (
     <a
@@ -728,7 +739,7 @@ const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [], role =
       </div>
 
       {/* Tooltip – hover on desktop, tap on mobile */}
-      <div className={`absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-[200px] sm:w-[280px] bg-slate-800 border border-slate-600 rounded-xl p-3 sm:p-4 transition-all duration-300 z-20 shadow-2xl pointer-events-none ${active ? 'opacity-100 visible' : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}>
+      <div className={`absolute bottom-full mb-3 ${tooltipPos} w-[190px] sm:w-[280px] bg-slate-800 border border-slate-600 rounded-xl p-3 sm:p-4 transition-all duration-300 z-20 shadow-2xl pointer-events-none ${active ? 'opacity-100 visible' : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}>
         <ul className="space-y-1.5">
           {bio.map((item, index) => (
             <li key={index} className="text-[10px] sm:text-xs text-slate-300 flex items-start text-left leading-snug">
