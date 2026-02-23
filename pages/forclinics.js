@@ -199,7 +199,7 @@ const App = () => {
         .tooltip-container:hover .tooltip-text {
           visibility: visible;
           opacity: 1;
-          transform: translateY(0);
+          transform: translateX(-50%);
         }
         
         /* Custom Scrollbar */
