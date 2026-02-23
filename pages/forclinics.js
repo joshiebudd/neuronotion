@@ -223,20 +223,21 @@ const App = () => {
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 border border-slate-700 text-cyan-400 font-medium text-xs mb-8 animate-fade-in backdrop-blur-sm">
             <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            Limited pilot spots remaining. Starting April 2025.
+            Limited pilot spots remaining. Starting April 2026.
           </div>
           
-          <h1 className="font-poppins font-bold text-4xl md:text-6xl tracking-tight mb-8 leading-[1.15]">
-            Patient Outcome Data is <br/>
+          <h1 className="font-poppins font-bold text-3xl sm:text-4xl md:text-6xl tracking-tight mb-6 sm:mb-8 leading-[1.15]">
+            Patient Outcome Data is{' '}
+            <span className="hidden sm:inline"><br/></span>
             <span className="text-slate-500 strikethrough-red mr-4">Unavailable</span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Collected Automatically</span>
           </h1>
-          
-          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+
+          <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-light">
             Claudia captures what happens after patients get diagnosed, automatically. Data on sleep, regulation, mood, medication adherence, daily functioning - all packaged neatly into outcome reports you can use to win big NHS and Insurance contracts.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mb-10 sm:mb-16">
             <button 
               onClick={openModal}
               className="w-full sm:w-auto px-8 py-4 bg-[#0EA5E9] hover:bg-[#0284C7] text-white rounded-xl font-semibold text-lg transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2 hover:-translate-y-1"
@@ -275,9 +276,9 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-6">
           
           {/* Clinic Endorsements */}
-          <div className="mb-14 text-center">
-            <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-8">Endorsed by</div>
-            <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+          <div className="mb-8 sm:mb-14 text-center">
+            <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Endorsed by</div>
+            <div className="flex flex-wrap justify-center items-center gap-x-8 sm:gap-x-12 gap-y-6 sm:gap-y-8">
                <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-40 hover:opacity-100 opacity-70 transition-all">
                    <div className="h-20 w-full flex items-center justify-center p-2">
                      <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
@@ -302,9 +303,9 @@ const App = () => {
           </div>
 
           {/* Advised By (Affiliates) */}
-          <div className="mb-14 text-center">
-             <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-8">Advised by</div>
-             <div className="flex flex-wrap justify-center items-end gap-12">
+          <div className="mb-8 sm:mb-14 text-center">
+             <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Advised by</div>
+             <div className="flex flex-wrap justify-center items-end gap-8 sm:gap-12">
                 <AffiliateProfile 
                   name="Dr. Tony Lloyd" 
                   image="https://NeuroNotionPullZonw.b-cdn.net/tony.webp"
@@ -345,9 +346,9 @@ const App = () => {
 
           {/* NHS Badge */}
           <div className="flex justify-center">
-             <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-[#1E293B] border border-slate-700 shadow-xl hover:border-blue-500/50 transition-colors">
-                <img src="https://NeuroNotionPullZonw.b-cdn.net/NHS.webp" alt="NHS" className="h-8 w-auto object-contain" />
-                <span className="text-sm md:text-base font-medium text-slate-200 border-l border-slate-600 pl-4">
+             <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 px-5 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full bg-[#1E293B] border border-slate-700 shadow-xl hover:border-blue-500/50 transition-colors text-center sm:text-left">
+                <img src="https://NeuroNotionPullZonw.b-cdn.net/NHS.webp" alt="NHS" className="h-7 sm:h-8 w-auto object-contain" />
+                <span className="text-xs sm:text-sm md:text-base font-medium text-slate-200 sm:border-l sm:border-slate-600 sm:pl-4">
                   Ongoing work with HIN to gather real world clinical evidence through NHS
                 </span>
              </div>
@@ -356,11 +357,11 @@ const App = () => {
       </section>
 
       {/* Market Insight Section */}
-      <section className="py-24 bg-[#0F172A] relative">
+      <section className="py-16 md:py-24 bg-[#0F172A] relative">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             <div>
-              <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-8 leading-tight">
+              <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-6 sm:mb-8 leading-tight">
                 The Era of &quot;Diagnose &amp; Discharge&quot; is Ending
               </h2>
 
@@ -456,7 +457,7 @@ const App = () => {
       {/* What If Section */}
       <section className="py-16 bg-[#0B1120] border-y border-slate-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="font-poppins font-bold text-2xl md:text-3xl text-white mb-8">What if you could:</h2>
+          <h2 className="font-poppins font-bold text-xl sm:text-2xl md:text-3xl text-white mb-6 sm:mb-8">What if you could:</h2>
 
           <div className="grid sm:grid-cols-2 gap-6 text-left">
              <div className="bg-[#1E293B] p-6 rounded-xl border border-slate-700 flex gap-4">
@@ -480,17 +481,17 @@ const App = () => {
       </section>
 
       {/* The Automated Patient Retention & Outcome Platform */}
-      <section id="benefits" className="py-24 bg-[#0F172A] relative">
+      <section id="benefits" className="py-16 md:py-24 bg-[#0F172A] relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">The Automated Patient Retention &amp; Outcome Platform</h2>
+          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+            <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-5xl mb-4 sm:mb-6 text-white">The Automated Patient Retention &amp; Outcome Platform</h2>
             <p className="text-xl text-slate-400 font-light">
               Claudia by Neuro isn&apos;t just an app. It&apos;s a white-label infrastructure that turns post-diagnosis support from a cost center into a revenue generator.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
+            <div className="glass-card p-5 sm:p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
               <div className="mb-6 w-20 h-20 rounded-full bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center border-4 border-slate-700 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
                 <span className="text-white font-bold text-3xl font-poppins">1</span>
               </div>
@@ -498,7 +499,7 @@ const App = () => {
               <p className="text-slate-400 leading-relaxed text-sm">End-to-end support that helps patients improve self-management and regulation.</p>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
+            <div className="glass-card p-5 sm:p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
               <div className="mb-6 w-20 h-20 rounded-full bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center border-4 border-slate-700 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
                 <span className="text-white font-bold text-3xl font-poppins">2</span>
               </div>
@@ -506,7 +507,7 @@ const App = () => {
               <p className="text-slate-400 leading-relaxed text-sm">Automatically collects patient outcomes and intervention adherence data.</p>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
+            <div className="glass-card p-5 sm:p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
               <div className="mb-6 w-20 h-20 rounded-full bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center border-4 border-slate-700 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
                 <span className="text-white font-bold text-3xl font-poppins">3</span>
               </div>
@@ -514,7 +515,7 @@ const App = () => {
               <p className="text-slate-400 leading-relaxed text-sm">Generates outcome reports ready for commissioners and insurers.</p>
             </div>
 
-            <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
+            <div className="glass-card p-5 sm:p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
               <div className="mb-6 w-20 h-20 rounded-full bg-gradient-to-br from-[#0EA5E9] to-[#6366F1] flex items-center justify-center border-4 border-slate-700 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
                 <span className="text-white font-bold text-3xl font-poppins">4</span>
               </div>
@@ -526,11 +527,11 @@ const App = () => {
       </section>
 
       {/* Product Features */}
-      <section id="product" className="py-24 bg-[#0F172A]">
+      <section id="product" className="py-16 md:py-24 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-16">
             <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">The Product</div>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-8">Engineered specifically for ADHD. So it actually works…</h2>
+            <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-6 sm:mb-8">Engineered specifically for ADHD. So it actually works…</h2>
             
             {/* Video Player */}
             <div className="w-full max-w-4xl mx-auto aspect-[16/9] bg-slate-800/50 rounded-2xl border border-slate-700 mb-12 flex items-center justify-center relative overflow-hidden group shadow-2xl">
@@ -593,11 +594,11 @@ const App = () => {
 
 
       {/* FAQ Section */}
-      <section className="py-24 bg-[#0B1120]">
+      <section className="py-16 md:py-24 bg-[#0B1120]">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-16">
             <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">FAQs</div>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white">Common Questions</h2>
+            <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl text-white">Common Questions</h2>
           </div>
 
           <FAQAccordion />
@@ -605,19 +606,19 @@ const App = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-[#0F172A] relative">
+      <section className="py-16 md:py-24 bg-[#0F172A] relative">
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-[#0F172A]"></div>
-        
+
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <div className="bg-[#1E293B] p-12 rounded-2xl shadow-2xl border border-slate-700">
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-white mb-6">Win Contracts with Better Data</h2>
-            <p className="text-xl md:text-2xl text-slate-400 mb-10 leading-relaxed">
+          <div className="bg-[#1E293B] p-6 sm:p-12 rounded-2xl shadow-2xl border border-slate-700">
+            <h2 className="font-poppins font-bold text-2xl sm:text-4xl md:text-5xl text-white mb-4 sm:mb-6">Win Contracts with Better Data</h2>
+            <p className="text-base sm:text-xl md:text-2xl text-slate-400 mb-7 sm:mb-10 leading-relaxed">
               Big shifts are coming. RTC &amp; Insurers are about to start asking for outcomes. Be the first to give them proof, not promises.
             </p>
             <div className="flex justify-center">
               <button 
                 onClick={openModal}
-                className="w-full md:w-auto px-10 py-5 bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-xl rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 hover:-translate-y-1"
+                className="w-full md:w-auto px-7 sm:px-10 py-4 sm:py-5 bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-lg sm:text-xl rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 hover:-translate-y-1"
               >
                 Learn More
                 <ArrowRight size={24} />
@@ -666,7 +667,7 @@ const FAQAccordion = () => {
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
             className="w-full px-6 py-5 flex items-center justify-between text-left"
           >
-            <span className="font-poppins font-semibold text-white text-lg pr-4">{faq.question}</span>
+            <span className="font-poppins font-semibold text-white text-sm sm:text-lg pr-4">{faq.question}</span>
             <div className={`flex-shrink-0 w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
               <svg 
                 className="w-4 h-4 text-[#0EA5E9]" 
