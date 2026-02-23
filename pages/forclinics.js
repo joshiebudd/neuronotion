@@ -481,7 +481,7 @@ const App = () => {
       </section>
 
       {/* The Automated Patient Retention & Outcome Platform */}
-      <section id="benefits" className="py-16 md:py-24 bg-[#0F172A] relative">
+      <section id="benefits" className="py-10 md:py-24 bg-[#0F172A] relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
             <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-5xl mb-4 sm:mb-6 text-white">The Automated Patient Retention &amp; Outcome Platform</h2>
@@ -527,7 +527,7 @@ const App = () => {
       </section>
 
       {/* Product Features */}
-      <section id="product" className="py-16 md:py-24 bg-[#0F172A]">
+      <section id="product" className="py-10 md:py-24 bg-[#0F172A]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-10 sm:mb-16">
             <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">The Product</div>
