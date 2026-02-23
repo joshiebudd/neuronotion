@@ -278,26 +278,26 @@ const App = () => {
           {/* Clinic Endorsements */}
           <div className="mb-8 sm:mb-14 text-center">
             <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Endorsed by</div>
-            <div className="flex justify-center items-center gap-3 sm:gap-x-12 sm:gap-y-8 sm:flex-wrap">
-               <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-[29%] sm:w-40 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-14 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
+            <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:gap-x-12 sm:gap-y-8">
+               <a href="https://leicesterpsychologyclinic.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-1 sm:gap-2 w-full sm:w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-12 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
                      <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
-                   <span className="text-[10px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Leicester Psychology Clinic</span>
+                   <span className="text-[9px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Leicester Psychology Clinic</span>
                </a>
 
-               <a href="https://evolvepsychology.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-[29%] sm:w-40 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-14 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
+               <a href="https://evolvepsychology.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-1 sm:gap-2 w-full sm:w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-12 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
                      <img src="https://NeuroNotionPullZonw.b-cdn.net/evolvewebp.webp" alt="Evolve Psychology Clinic" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
-                   <span className="text-[10px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Evolve Psychology</span>
+                   <span className="text-[9px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Evolve Psychology</span>
                </a>
 
-               <a href="https://innovateadhd.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-2 w-[29%] sm:w-40 hover:opacity-100 opacity-70 transition-all">
-                   <div className="h-14 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
+               <a href="https://innovateadhd.com/" target="_blank" rel="noopener noreferrer" className="group flex flex-col items-center gap-1 sm:gap-2 w-full sm:w-40 hover:opacity-100 opacity-70 transition-all">
+                   <div className="h-12 sm:h-20 w-full flex items-center justify-center p-1 sm:p-2">
                      <img src="https://NeuroNotionPullZonw.b-cdn.net/innovateadhdwebp.webp" alt="Innovate ADHD" className="max-h-full max-w-full object-contain brightness-0 invert" />
                    </div>
-                   <span className="text-[10px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Innovate ADHD</span>
+                   <span className="text-[9px] sm:text-xs font-medium text-slate-400 group-hover:text-[#0EA5E9] transition-colors text-center leading-tight">Innovate ADHD</span>
                </a>
             </div>
           </div>
@@ -305,7 +305,7 @@ const App = () => {
           {/* Advised By (Affiliates) */}
           <div className="mb-8 sm:mb-14 text-center">
              <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Advised by</div>
-             <div className="flex justify-center items-end gap-4 sm:gap-12">
+             <div className="grid grid-cols-3 gap-2 sm:flex sm:justify-center sm:items-end sm:gap-12">
                 <AffiliateProfile 
                   name="Dr. Tony Lloyd" 
                   image="https://NeuroNotionPullZonw.b-cdn.net/tony.webp"
@@ -694,30 +694,54 @@ const FAQAccordion = () => {
 
 
 // Components
-const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [], role = null }) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 group relative cursor-pointer">
-    <div className={`${isLarge ? 'w-20 h-20 sm:w-40 sm:h-40' : 'w-16 h-16 sm:w-32 sm:h-32'} rounded-full border-2 border-slate-700 p-1 overflow-hidden relative group-hover:border-[#0EA5E9] transition-all bg-slate-800 shadow-xl group-hover:shadow-[#0EA5E9]/20`}>
-       <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
-    </div>
-    <div className="flex flex-col items-center gap-1">
-      <span className="text-slate-300 font-medium text-[10px] sm:text-base text-center max-w-[80px] sm:max-w-[160px] group-hover:text-white transition-colors leading-tight">{name}</span>
-      {role && <span className="text-[#0EA5E9] font-medium text-xs text-center">{role}</span>}
-    </div>
-    
-    {/* Hover Modal */}
-    <div className="absolute bottom-full mb-4 left-1/2 -translate-x-1/2 w-[280px] bg-slate-800 border border-slate-600 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-20 shadow-2xl pointer-events-none">
-       <ul className="space-y-1.5">
-         {bio.map((item, index) => (
-           <li key={index} className="text-xs text-slate-300 flex items-start text-left leading-snug">
+const AffiliateProfile = ({ name, image, link, isLarge = false, bio = [], role = null }) => {
+  const [active, setActive] = React.useState(false);
+  const ref = React.useRef(null);
+
+  React.useEffect(() => {
+    const close = (e) => { if (ref.current && !ref.current.contains(e.target)) setActive(false); };
+    document.addEventListener('mousedown', close);
+    document.addEventListener('touchstart', close);
+    return () => { document.removeEventListener('mousedown', close); document.removeEventListener('touchstart', close); };
+  }, []);
+
+  const handleClick = (e) => {
+    // On first tap show tooltip; second tap follows link
+    if (!active) { e.preventDefault(); setActive(true); }
+  };
+
+  return (
+    <a
+      ref={ref}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex flex-col items-center gap-1 sm:gap-3 group relative cursor-pointer"
+      onClick={handleClick}
+    >
+      <div className={`${isLarge ? 'w-20 h-20 sm:w-40 sm:h-40' : 'w-16 h-16 sm:w-32 sm:h-32'} rounded-full border-2 p-1 overflow-hidden relative transition-all bg-slate-800 shadow-xl ${active ? 'border-[#0EA5E9] shadow-[#0EA5E9]/20' : 'border-slate-700 group-hover:border-[#0EA5E9] group-hover:shadow-[#0EA5E9]/20'}`}>
+        <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
+      </div>
+      <div className="flex flex-col items-center gap-0.5 sm:gap-1">
+        <span className={`font-medium text-[10px] sm:text-base text-center max-w-[80px] sm:max-w-[160px] transition-colors leading-tight ${active ? 'text-white' : 'text-slate-300 group-hover:text-white'}`}>{name}</span>
+        {role && <span className="text-[#0EA5E9] font-medium text-[9px] sm:text-xs text-center leading-tight">{role}</span>}
+      </div>
+
+      {/* Tooltip – hover on desktop, tap on mobile */}
+      <div className={`absolute bottom-full mb-3 left-1/2 -translate-x-1/2 w-[200px] sm:w-[280px] bg-slate-800 border border-slate-600 rounded-xl p-3 sm:p-4 transition-all duration-300 z-20 shadow-2xl pointer-events-none ${active ? 'opacity-100 visible' : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible'}`}>
+        <ul className="space-y-1.5">
+          {bio.map((item, index) => (
+            <li key={index} className="text-[10px] sm:text-xs text-slate-300 flex items-start text-left leading-snug">
               <span className="text-[#0EA5E9] mr-1.5 flex-shrink-0">•</span>
               <span dangerouslySetInnerHTML={{ __html: item }} />
-           </li>
-         ))}
-       </ul>
-       <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-slate-800 border-r border-b border-slate-600 transform rotate-45"></div>
-    </div>
-  </a>
-);
+            </li>
+          ))}
+        </ul>
+        <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-slate-800 border-r border-b border-slate-600 transform rotate-45"></div>
+      </div>
+    </a>
+  );
+};
 
 const ProblemItem = ({ icon, title, desc }) => (
   <div className="flex gap-4 p-4 rounded-xl hover:bg-slate-800/50 transition-colors">
