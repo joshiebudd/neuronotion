@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { track } from "@vercel/analytics";
@@ -7,6 +7,10 @@ import { cn } from "../lib/utils";
 const NEWClaudiaLPHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [forDropdownOpen, setForDropdownOpen] = useState(false);
+  const [mobileForOpen, setMobileForOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const dropdownTimeout = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +18,17 @@ const NEWClaudiaLPHeader = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setForDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const handleSectionNavigation = (sectionId) => {
@@ -29,6 +44,20 @@ const NEWClaudiaLPHeader = () => {
     if (typeof window !== 'undefined') {
       window.location.href = 'https://app.neuro-notion.com';
     }
+  };
+
+  const handleDropdownEnter = () => {
+    if (dropdownTimeout.current) {
+      clearTimeout(dropdownTimeout.current);
+      dropdownTimeout.current = null;
+    }
+    setForDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeout.current = setTimeout(() => {
+      setForDropdownOpen(false);
+    }, 150);
   };
 
   return (
@@ -67,19 +96,85 @@ const NEWClaudiaLPHeader = () => {
               Pricing
             </Link>
             <Link
-              href="https://www.neuro-notion.com/forclinics"
-              className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
-              onClick={() => track('For Clinics')}
-            >
-              For Clinics
-            </Link>
-            <Link
               href="/team"
               className="text-white/80 hover:text-white transition-colors duration-300 text-sm"
               onClick={() => track('Our Team')}
             >
               Our Team
             </Link>
+
+            {/* For... Dropdown */}
+            <div
+              ref={dropdownRef}
+              className="relative"
+              onMouseEnter={handleDropdownEnter}
+              onMouseLeave={handleDropdownLeave}
+            >
+              <button
+                className="text-white/80 hover:text-white transition-colors duration-300 text-sm flex items-center gap-1"
+                onClick={() => setForDropdownOpen(!forDropdownOpen)}
+              >
+                For...
+                <svg
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${forDropdownOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Dropdown menu */}
+              <div
+                className={`absolute top-full right-0 mt-2 w-56 bg-[#1e2a4a]/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl overflow-hidden transition-all duration-200 ${
+                  forDropdownOpen
+                    ? 'opacity-100 visible translate-y-0'
+                    : 'opacity-0 invisible -translate-y-2'
+                }`}
+              >
+                <Link
+                  href="/forclinics"
+                  className="flex items-center gap-3 px-4 py-3.5 text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
+                  onClick={() => {
+                    track('For Clinics');
+                    setForDropdownOpen(false);
+                  }}
+                >
+                  <span className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-emerald-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                      <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div className="text-sm font-medium">For Private Clinics</div>
+                    <div className="text-xs text-white/50">ADHD support for your patients</div>
+                  </div>
+                </Link>
+                <div className="border-t border-white/5"></div>
+                <Link
+                  href="/forcorporate"
+                  className="flex items-center gap-3 px-4 py-3.5 text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
+                  onClick={() => {
+                    track('For Corporates');
+                    setForDropdownOpen(false);
+                  }}
+                >
+                  <span className="w-8 h-8 rounded-lg bg-[#0EA5E9]/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-[#0EA5E9]" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                      <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div className="text-sm font-medium">For Corporates</div>
+                    <div className="text-xs text-white/50">Support neurodiverse employees</div>
+                  </div>
+                </Link>
+              </div>
+            </div>
           </nav>
 
           <div className="flex items-center gap-1">
@@ -127,7 +222,7 @@ const NEWClaudiaLPHeader = () => {
 
       </header>
       
-      {/* Mobile menu - redesigned with cleaner styling */}
+      {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed top-[60px] left-0 right-0 bg-[#1e2a4a]/98 backdrop-blur-lg border-b border-white/10 shadow-xl z-40">
             <nav className="flex flex-col max-w-[1400px] mx-auto px-4 py-6 space-y-1">
@@ -149,16 +244,6 @@ const NEWClaudiaLPHeader = () => {
                 Pricing
               </Link>
               <Link
-                href="https://www.neuro-notion.com/forclinics"
-                className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium"
-                onClick={() => {
-                  track('For Clinics from mobile menu');
-                  setMobileMenuOpen(false);
-                }}
-              >
-                For Clinics
-              </Link>
-              <Link
                 href="/team"
                 className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium"
                 onClick={() => {
@@ -168,6 +253,60 @@ const NEWClaudiaLPHeader = () => {
               >
                 Our Team
               </Link>
+
+              {/* Mobile For... section */}
+              <button
+                className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium flex items-center justify-between w-full text-left"
+                onClick={() => setMobileForOpen(!mobileForOpen)}
+              >
+                For...
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${mobileForOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileForOpen && (
+                <div className="pl-4 space-y-1">
+                  <Link
+                    href="/forclinics"
+                    className="text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm py-2.5 px-4 rounded-lg font-medium flex items-center gap-3"
+                    onClick={() => {
+                      track('For Clinics from mobile menu');
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="w-7 h-7 rounded-md bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3.5 h-3.5 text-emerald-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                      </svg>
+                    </span>
+                    For Private Clinics
+                  </Link>
+                  <Link
+                    href="/forcorporate"
+                    className="text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm py-2.5 px-4 rounded-lg font-medium flex items-center gap-3"
+                    onClick={() => {
+                      track('For Corporates from mobile menu');
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="w-7 h-7 rounded-md bg-[#0EA5E9]/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3.5 h-3.5 text-[#0EA5E9]" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </span>
+                    For Corporates
+                  </Link>
+                </div>
+              )}
+
               <div className="pt-2 mt-2 border-t border-white/10">
                 <a
                   href="https://app.neuro-notion.com/?page=login"

@@ -99,12 +99,33 @@ const EnquiryModal = ({ isOpen, onClose }) => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError('');
+
+    try {
+      const res = await fetch('/api/corporate-enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error('Failed to send enquiry');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError('Something went wrong. Please try again or email us directly at josh@neuro-notion.com');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -194,6 +215,8 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   onChange={(e) => setFormData({...formData, companySize: e.target.value})}
                 >
                   <option value="">Select company size</option>
+                  <option value="0-100">0 - 100 employees</option>
+                  <option value="100-250">100 - 250 employees</option>
                   <option value="250-500">250 - 500 employees</option>
                   <option value="500-1000">500 - 1,000 employees</option>
                   <option value="1000-5000">1,000 - 5,000 employees</option>
@@ -210,12 +233,18 @@ const EnquiryModal = ({ isOpen, onClose }) => {
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                 />
               </div>
+              {error && (
+                <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 text-red-400 text-sm text-center">
+                  {error}
+                </div>
+              )}
               <button
                 type="submit"
-                className="w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-lg py-3.5 rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                disabled={submitting}
+                className={`w-full bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold text-lg py-3.5 rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2 ${submitting ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 <Send size={18} />
-                Get in Touch
+                {submitting ? 'Sending...' : 'Get in Touch'}
               </button>
               <p className="text-xs text-slate-500 text-center">
                 No commitment required. We will respond within one business day.
@@ -341,9 +370,18 @@ const ForCorporate = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Neurodiverse Employees</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed font-light">
             Claudia is an ADHD-first productivity and wellbeing tool that helps your neurodiverse employees stay organised, reduce overwhelm, and perform more consistently. Low admin burden. No heavy integration. Real outcomes.
           </p>
+
+          {/* Product Mockup Image */}
+          <div className="mb-8 sm:mb-10 max-w-3xl mx-auto">
+            <img
+              src="https://NeuroNotionPullZonw.b-cdn.net/Desktopandmobilemockupfinal.webp"
+              alt="Claudia AI Personal Assistant - Desktop and Mobile"
+              className="w-full h-auto rounded-lg transform hover:scale-[1.02] transition-transform duration-300 ease-out"
+            />
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 mb-10">
             <button
@@ -470,9 +508,15 @@ const ForCorporate = () => {
                 Your Neurodiverse Employees Are Struggling in Silence
               </h2>
 
-              <p className="text-slate-400 text-lg leading-relaxed mb-8">
+              <p className="text-slate-400 text-lg leading-relaxed mb-6">
                 ADHD affects 5 to 8% of the adult workforce. In knowledge-work sectors like recruitment, creative agencies, and tech, that figure rises to 15 to 21%. Without the right support, these employees lose productivity, disengage, and eventually leave.
               </p>
+
+              <div className="bg-amber-500/5 border border-amber-500/15 rounded-lg px-4 py-3 mb-8">
+                <p className="text-amber-300/90 text-sm leading-relaxed">
+                  <span className="font-semibold">Worth noting:</span> The majority of ADHD in the workforce is either undisclosed (due to stigma and fear of judgement) or undiagnosed entirely. The real number of affected employees is almost certainly higher than reported prevalence suggests.
+                </p>
+              </div>
 
               <div className="space-y-6">
                 <ProblemItem
@@ -512,9 +556,13 @@ const ForCorporate = () => {
                   <CostItem label="Reduced team morale and engagement" value="Significant" color="purple" />
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/10 text-center">
-                  <p className="text-slate-300 text-sm mb-1">And 25% lower job satisfaction across affected employees</p>
-                  <p className="text-red-400 font-bold text-lg">The cost of inaction compounds every quarter.</p>
+                <div className="mt-6 pt-4 border-t border-white/10">
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <span className="text-3xl sm:text-4xl font-bold text-red-400 font-poppins">~£4,000</span>
+                  </div>
+                  <p className="text-slate-300 text-sm mb-1">Estimated lost productivity per affected employee, per year</p>
+                  <p className="text-slate-500 text-xs italic mb-3">Kessler et al., 2009; de Graaf et al., 2008</p>
+                  <p className="text-red-400 font-bold text-sm">For 1,000 employees, that could exceed £200,000 annually in hidden costs.</p>
                 </div>
               </div>
             </div>
@@ -533,33 +581,33 @@ const ForCorporate = () => {
               With the Right Support, Everything Changes
             </h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Research shows that when neurodivergent employees receive appropriate support, the impact on both wellbeing and performance is substantial.
+              Research shows that when neurodivergent employees receive appropriate support, the impact on output, organisation, and wellbeing is substantial.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <StatCard
-              value="60%"
-              label="Less Absenteeism"
-              desc="Significant reduction in unplanned absences"
-              color="cyan"
-            />
-            <StatCard
               value="36%"
-              label="Higher Performance"
-              desc="Measurable improvement in workplace output"
+              label="Higher Output"
+              desc="Measurable improvement in day-to-day work performance and task completion"
               color="purple"
             />
             <StatCard
+              value="60%"
+              label="Less Absenteeism"
+              desc="Significant reduction in unplanned absences and lost workdays"
+              color="cyan"
+            />
+            <StatCard
               value="87%"
-              label="Less Stress & Anxiety"
-              desc="Employees report feeling calmer and more in control"
+              label="Reduced Stress"
+              desc="Employees report feeling calmer, more organised, and more in control"
               color="emerald"
             />
             <StatCard
               value="18%"
               label="Higher Job Satisfaction"
-              desc="Improved motivation and loyalty to employer"
+              desc="Improved motivation, loyalty, and day-to-day engagement"
               color="cyan"
             />
           </div>
@@ -604,7 +652,7 @@ const ForCorporate = () => {
             <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">How It Works</div>
             <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-5xl mb-4 sm:mb-6 text-white">Low Admin. High Impact. Real Outcomes.</h2>
             <p className="text-xl text-slate-400 font-light">
-              Claudia is not another corporate wellness checkbox. It is a purpose-built companion for ADHD minds that delivers measurable improvements in daily functioning, with minimal effort from your People team.
+              Claudia is not another corporate wellness checkbox. It is a purpose-built companion for ADHD minds that delivers measurable improvements in productivity, organisation, and wellbeing, with minimal effort from your People team.
             </p>
           </div>
 
@@ -630,7 +678,7 @@ const ForCorporate = () => {
                 <span className="text-white font-bold text-3xl font-poppins">3</span>
               </div>
               <h3 className="text-xl font-bold mb-3 font-poppins text-white">We measure what matters</h3>
-              <p className="text-slate-400 leading-relaxed text-sm">Self-reported productivity, organisation, stress, and wellbeing improvements tracked automatically.</p>
+              <p className="text-slate-400 leading-relaxed text-sm">Improvements in output, organisation, focus, and wellbeing tracked automatically through self-reported metrics.</p>
             </div>
 
             <div className="glass-card p-5 sm:p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col items-center text-center">
@@ -638,7 +686,7 @@ const ForCorporate = () => {
                 <span className="text-white font-bold text-3xl font-poppins">4</span>
               </div>
               <h3 className="text-xl font-bold mb-3 font-poppins text-white">You get aggregate insights</h3>
-              <p className="text-slate-400 leading-relaxed text-sm">Anonymised, aggregate reporting that proves ROI and supports your neuroinclusion strategy.</p>
+              <p className="text-slate-400 leading-relaxed text-sm">Anonymised, aggregate reporting on productivity gains, organisational improvements, and wellbeing outcomes that proves ROI.</p>
             </div>
           </div>
         </div>
@@ -739,13 +787,13 @@ const ForCorporate = () => {
             />
             <BenefitCard
               icon={<Smile className="text-yellow-400" size={28} />}
-              title="Happier, More Loyal Employees"
-              desc="Supported employees report higher job satisfaction, lower stress, and stronger loyalty to their employer."
+              title="Happier, More Productive Employees"
+              desc="Supported employees report higher job satisfaction, better daily output, lower stress, and stronger loyalty to their employer."
             />
             <BenefitCard
               icon={<TrendingUp className="text-red-400" size={28} />}
               title="Measurable Performance Gains"
-              desc="Reduced absenteeism and more consistent output across your workforce. Real outcomes, not promises."
+              desc="Improved output, better organisation, reduced absenteeism, and more consistent performance across your workforce. Real outcomes, not promises."
             />
           </div>
         </div>
@@ -794,11 +842,11 @@ const ForCorporate = () => {
                 </h3>
                 <ul className="space-y-3">
                   {[
-                    "Self-reported productivity improvement",
-                    "Self-reported organisation improvement",
-                    "Self-reported stress and wellbeing change",
-                    "Engagement and active usage rates",
-                    "Employee satisfaction with the tool",
+                    "Self-reported output and productivity improvement",
+                    "Self-reported organisation and task management improvement",
+                    "Self-reported focus and time management improvement",
+                    "Self-reported stress reduction and wellbeing change",
+                    "Engagement, active usage rates, and retention",
                     "Qualitative feedback and testimonials"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-slate-300 text-sm">
