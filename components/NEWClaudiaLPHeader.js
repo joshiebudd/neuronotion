@@ -64,7 +64,7 @@ const NEWClaudiaLPHeader = () => {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out py-3 px-4 sm:py-4 sm:px-6 overflow-x-hidden",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out py-3 px-4 sm:py-4 sm:px-6",
           scrolled
             ? "bg-[#1e2a4a]/90 backdrop-blur-md shadow-sm border-b border-white/10"
             : "bg-transparent"
@@ -112,6 +112,7 @@ const NEWClaudiaLPHeader = () => {
             >
               <button
                 className="text-white/80 hover:text-white transition-colors duration-300 text-sm flex items-center gap-1"
+                style={{ background: 'none', border: 'none', outline: 'none', padding: 0, cursor: 'pointer' }}
                 onClick={() => setForDropdownOpen(!forDropdownOpen)}
               >
                 For...
@@ -129,12 +130,10 @@ const NEWClaudiaLPHeader = () => {
               </button>
 
               {/* Dropdown menu */}
+              {forDropdownOpen && (
               <div
-                className={`absolute top-full right-0 mt-2 w-56 bg-[#1e2a4a]/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl overflow-hidden transition-all duration-200 ${
-                  forDropdownOpen
-                    ? 'opacity-100 visible translate-y-0'
-                    : 'opacity-0 invisible -translate-y-2'
-                }`}
+                className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-[#1e2a4a]/95 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl overflow-hidden"
+                style={{ animation: 'fadeIn 0.15s ease-out' }}
               >
                 <Link
                   href="/forclinics"
@@ -174,6 +173,7 @@ const NEWClaudiaLPHeader = () => {
                   </div>
                 </Link>
               </div>
+              )}
             </div>
           </nav>
 
