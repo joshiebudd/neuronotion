@@ -365,7 +365,7 @@ const ForCorporate = () => {
           </div>
 
           <h1 className="font-poppins font-bold text-3xl sm:text-4xl md:text-6xl tracking-tight mb-6 sm:mb-8 leading-[1.15]">
-            Healthier, Happier{' '}
+            Happier, More Productive{' '}
             <span className="hidden sm:inline"><br/></span>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Neurodiverse Employees</span>
           </h1>
