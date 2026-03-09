@@ -386,4 +386,4 @@ const Index = () => {
   );
 };
 
-export { default } from './claudianewlp';
+export default Index;
