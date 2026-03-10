@@ -6,6 +6,22 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  const smtpHost = process.env.SMTP_HOST || 'smtp.mailendo.com';
+  const smtpPort = Number.parseInt(process.env.SMTP_PORT || '25', 10);
+  const smtpSecure = process.env.SMTP_SECURE === 'true';
+  const smtpUser = process.env.SMTP_USER;
+  const smtpPass = process.env.SMTP_PASS;
+  const smtpFrom = process.env.SMTP_FROM || smtpUser;
+  const enterpriseEnquiryTo =
+    process.env.ENTERPRISE_ENQUIRY_TO || 'josh@neuro-notion.com';
+
+  if (!smtpUser || !smtpPass || !smtpFrom || !Number.isFinite(smtpPort)) {
+    console.error('Corporate enquiry email config is missing or invalid.');
+    return res
+      .status(500)
+      .json({ error: 'Email service is not configured. Please contact support.' });
+  }
+
   const { name, email, company, jobTitle, companySize, message } = req.body;
 
   // Validate required fields
@@ -13,16 +29,13 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
-  // Create transporter using environment variables
-  // For production, set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS in your Vercel env vars
-  // This supports any SMTP provider (Gmail, SendGrid, Mailgun, etc.)
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || 'smtp.gmail.com',
-    port: parseInt(process.env.SMTP_PORT || '587'),
-    secure: process.env.SMTP_SECURE === 'true',
+    host: smtpHost,
+    port: smtpPort,
+    secure: smtpSecure,
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
+      user: smtpUser,
+      pass: smtpPass,
     },
   });
 
@@ -92,8 +105,8 @@ Submitted via neuro-notion.com/forcorporate
 
   try {
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
-      to: 'josh@neuro-notion.com',
+      from: smtpFrom,
+      to: enterpriseEnquiryTo,
       replyTo: email,
       subject: `Corporate Enquiry: ${company} (${companySize}) - ${name}`,
       text: plainTextBody,
