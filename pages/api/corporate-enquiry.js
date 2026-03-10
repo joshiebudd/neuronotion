@@ -19,19 +19,19 @@ export default async function handler(req, res) {
   const smtpPort = Number.parseInt(process.env.SMTP_PORT || '587', 10);
   const smtpSecure = process.env.SMTP_SECURE === 'true';
   const smtpConnectionTimeoutMs = Number.parseInt(
-    process.env.SMTP_CONNECTION_TIMEOUT_MS || '4000',
+    process.env.SMTP_CONNECTION_TIMEOUT_MS || '2500',
     10
   );
   const smtpGreetingTimeoutMs = Number.parseInt(
-    process.env.SMTP_GREETING_TIMEOUT_MS || '4000',
+    process.env.SMTP_GREETING_TIMEOUT_MS || '2500',
     10
   );
   const smtpSocketTimeoutMs = Number.parseInt(
-    process.env.SMTP_SOCKET_TIMEOUT_MS || '7000',
+    process.env.SMTP_SOCKET_TIMEOUT_MS || '3500',
     10
   );
   const smtpSendTimeoutMs = Number.parseInt(
-    process.env.SMTP_SEND_TIMEOUT_MS || '8000',
+    process.env.SMTP_SEND_TIMEOUT_MS || '4500',
     10
   );
   const smtpUser = process.env.SMTP_USER;
@@ -127,8 +127,17 @@ ${message ? `Message: ${message}` : ''}
 Submitted via neuro-notion.com/forcorporate
   `.trim();
 
+  // Vercel functions are sensitive to long SMTP handshakes on port 25.
+  // Prefer 587 there to avoid FUNCTION_INVOCATION_TIMEOUT.
+  const runningOnVercel = Boolean(process.env.VERCEL || process.env.VERCEL_URL);
   const smtpPortsToTry =
-    smtpPort === 25 ? [25, 587] : smtpPort === 587 ? [587, 25] : [smtpPort];
+    smtpPort === 25
+      ? runningOnVercel
+        ? [587]
+        : [25, 587]
+      : smtpPort === 587
+        ? [587, 25]
+        : [smtpPort];
 
   let sendError = null;
 
