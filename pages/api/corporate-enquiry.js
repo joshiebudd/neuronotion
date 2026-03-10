@@ -1,5 +1,14 @@
 import nodemailer from 'nodemailer';
 
+function withTimeout(promise, ms) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error(`SMTP send timed out after ${ms}ms`)), ms)
+    ),
+  ]);
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -7,15 +16,40 @@ export default async function handler(req, res) {
   }
 
   const smtpHost = process.env.SMTP_HOST || 'smtp.mailendo.com';
-  const smtpPort = Number.parseInt(process.env.SMTP_PORT || '25', 10);
+  const smtpPort = Number.parseInt(process.env.SMTP_PORT || '587', 10);
   const smtpSecure = process.env.SMTP_SECURE === 'true';
+  const smtpConnectionTimeoutMs = Number.parseInt(
+    process.env.SMTP_CONNECTION_TIMEOUT_MS || '4000',
+    10
+  );
+  const smtpGreetingTimeoutMs = Number.parseInt(
+    process.env.SMTP_GREETING_TIMEOUT_MS || '4000',
+    10
+  );
+  const smtpSocketTimeoutMs = Number.parseInt(
+    process.env.SMTP_SOCKET_TIMEOUT_MS || '7000',
+    10
+  );
+  const smtpSendTimeoutMs = Number.parseInt(
+    process.env.SMTP_SEND_TIMEOUT_MS || '8000',
+    10
+  );
   const smtpUser = process.env.SMTP_USER;
   const smtpPass = process.env.SMTP_PASS;
   const smtpFrom = process.env.SMTP_FROM || smtpUser;
   const enterpriseEnquiryTo =
     process.env.ENTERPRISE_ENQUIRY_TO || 'josh@neuro-notion.com';
 
-  if (!smtpUser || !smtpPass || !smtpFrom || !Number.isFinite(smtpPort)) {
+  if (
+    !smtpUser ||
+    !smtpPass ||
+    !smtpFrom ||
+    !Number.isFinite(smtpPort) ||
+    !Number.isFinite(smtpConnectionTimeoutMs) ||
+    !Number.isFinite(smtpGreetingTimeoutMs) ||
+    !Number.isFinite(smtpSocketTimeoutMs) ||
+    !Number.isFinite(smtpSendTimeoutMs)
+  ) {
     console.error('Corporate enquiry email config is missing or invalid.');
     return res
       .status(500)
@@ -28,16 +62,6 @@ export default async function handler(req, res) {
   if (!name || !email || !company || !jobTitle || !companySize) {
     return res.status(400).json({ error: 'Missing required fields' });
   }
-
-  const transporter = nodemailer.createTransport({
-    host: smtpHost,
-    port: smtpPort,
-    secure: smtpSecure,
-    auth: {
-      user: smtpUser,
-      pass: smtpPass,
-    },
-  });
 
   const htmlBody = `
     <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background: #0F172A; color: #e2e8f0; padding: 32px; border-radius: 16px;">
@@ -103,19 +127,54 @@ ${message ? `Message: ${message}` : ''}
 Submitted via neuro-notion.com/forcorporate
   `.trim();
 
-  try {
-    await transporter.sendMail({
-      from: smtpFrom,
-      to: enterpriseEnquiryTo,
-      replyTo: email,
-      subject: `Corporate Enquiry: ${company} (${companySize}) - ${name}`,
-      text: plainTextBody,
-      html: htmlBody,
-    });
+  const smtpPortsToTry =
+    smtpPort === 25 ? [25, 587] : smtpPort === 587 ? [587, 25] : [smtpPort];
 
-    return res.status(200).json({ success: true });
+  let sendError = null;
+
+  try {
+    for (const port of smtpPortsToTry) {
+      const transporter = nodemailer.createTransport({
+        host: smtpHost,
+        port,
+        secure: port === 465 ? true : smtpSecure,
+        connectionTimeout: smtpConnectionTimeoutMs,
+        greetingTimeout: smtpGreetingTimeoutMs,
+        socketTimeout: smtpSocketTimeoutMs,
+        auth: {
+          user: smtpUser,
+          pass: smtpPass,
+        },
+      });
+
+      try {
+        await withTimeout(
+          transporter.sendMail({
+            from: smtpFrom,
+            to: enterpriseEnquiryTo,
+            replyTo: email,
+            subject: `Corporate Enquiry: ${company} (${companySize}) - ${name}`,
+            text: plainTextBody,
+            html: htmlBody,
+          }),
+          smtpSendTimeoutMs
+        );
+
+        return res.status(200).json({ success: true });
+      } catch (error) {
+        sendError = error;
+        console.error(
+          `Corporate enquiry email send failed on ${smtpHost}:${port}:`,
+          error?.message || error
+        );
+      }
+    }
   } catch (error) {
-    console.error('Email send error:', error);
-    return res.status(500).json({ error: 'Failed to send enquiry. Please try again.' });
+    sendError = error;
   }
+
+  console.error('Corporate enquiry email failed on all SMTP ports:', sendError);
+  return res
+    .status(500)
+    .json({ error: 'Failed to send enquiry. Please try again.' });
 }
