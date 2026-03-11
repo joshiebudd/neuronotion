@@ -475,7 +475,7 @@ const ForCorporate = () => {
             <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 px-5 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full bg-[#1E293B] border border-slate-700 shadow-xl hover:border-blue-500/50 transition-colors text-center sm:text-left">
               <img src="https://NeuroNotionPullZonw.b-cdn.net/NHS.webp" alt="NHS" className="h-7 sm:h-8 w-auto object-contain" />
               <span className="text-xs sm:text-sm md:text-base font-medium text-slate-200 sm:border-l sm:border-slate-600 sm:pl-4">
-                Ongoing work with HIN to gather real world clinical evidence through NHS
+                Trusted by various NHS Trusts to support adults with ADHD
               </span>
             </div>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-8">

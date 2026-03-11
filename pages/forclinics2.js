@@ -460,7 +460,7 @@ const App = () => {
              <div className="inline-flex items-center gap-4 px-8 py-4 rounded-full bg-[#1E293B] border border-slate-700 shadow-xl hover:border-blue-500/50 transition-colors">
                 <img src="https://NeuroNotionPullZonw.b-cdn.net/NHS.webp" alt="NHS" className="h-8 w-auto object-contain" />
                 <span className="text-sm md:text-base font-medium text-slate-200 border-l border-slate-600 pl-4">
-                  Ongoing work with HIN to gather real world clinical evidence through NHS
+                  Trusted by various NHS Trusts to support adults with ADHD
                 </span>
              </div>
           </div>
