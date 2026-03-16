@@ -562,7 +562,7 @@ const ForCorporate = () => {
                   </div>
                   <p className="text-slate-300 text-sm mb-1">Estimated lost productivity per affected employee, per year</p>
                   <p className="text-slate-500 text-xs italic mb-3">Kessler et al., 2009; de Graaf et al., 2008</p>
-                  <p className="text-red-400 font-bold text-sm">For 1,000 employees, that could exceed £200,000 annually in hidden costs.</p>
+                  <p className="text-red-400 font-bold text-sm">For 1,000 employees, that could exceed £400,000 annually in hidden costs.</p>
                 </div>
               </div>
             </div>
