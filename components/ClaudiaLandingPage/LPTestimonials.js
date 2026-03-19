@@ -4,6 +4,7 @@ import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { track } from '@vercel/analytics';
+import { getAppUrl } from '../../lib/appUrl';
 
 const CountUpAnimation = ({ target, duration = 1500 }) => {
   const [count, setCount] = useState(0);
@@ -103,7 +104,7 @@ export const LPTestimonials = () => {
   const handleStartResultsClick = () => {
     track('Testimonials CTA');
     if (typeof window !== 'undefined') {
-      window.location.href = 'https://app.neuro-notion.com';
+      window.location.href = getAppUrl();
     }
   };
 

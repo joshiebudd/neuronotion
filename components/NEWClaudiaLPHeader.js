@@ -3,14 +3,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { track } from "@vercel/analytics";
 import { cn } from "../lib/utils";
+import { getAppUrl } from "../lib/appUrl";
 
 const NEWClaudiaLPHeader = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [forDropdownOpen, setForDropdownOpen] = useState(false);
   const [mobileForOpen, setMobileForOpen] = useState(false);
+  const [loginUrl, setLoginUrl] = useState('https://app.neuro-notion.com/?page=login');
   const dropdownRef = useRef(null);
   const dropdownTimeout = useRef(null);
+
+  // Resolve the correct app URL after hydration (reads localStorage set by _app.js)
+  useEffect(() => {
+    setLoginUrl(getAppUrl('/?page=login'));
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +49,7 @@ const NEWClaudiaLPHeader = () => {
   const handleCTAClick = () => {
     track('Header CTA');
     if (typeof window !== 'undefined') {
-      window.location.href = 'https://app.neuro-notion.com';
+      window.location.href = getAppUrl();
     }
   };
 
@@ -179,11 +186,11 @@ const NEWClaudiaLPHeader = () => {
 
           <div className="flex items-center gap-1">
             <a
-              href="https://app.neuro-notion.com/?page=login"
+              href={loginUrl}
               className="hidden sm:inline-block bg-gray-100/80 border border-gray-300 text-gray-700 font-pop font-semibold py-1.5 px-3 sm:px-4 rounded-lg text-[11px] sm:text-sm shadow hover:bg-gray-200/80 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#30bcd9] focus:ring-offset-2 transition-colors duration-200 whitespace-nowrap"
               aria-label="Login"
               tabIndex={0}
-              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { window.location.href = 'https://app.neuro-notion.com/?page=login'; } }}
+              onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { window.location.href = loginUrl; } }}
             >
               Login
             </a>
@@ -309,7 +316,7 @@ const NEWClaudiaLPHeader = () => {
 
               <div className="pt-2 mt-2 border-t border-white/10">
                 <a
-                  href="https://app.neuro-notion.com/?page=login"
+                  href={loginUrl}
                   className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg font-medium block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
