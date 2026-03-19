@@ -3,6 +3,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { storeAppEnv } from "../lib/appUrl";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 import "../src/styles/cardWidget.css";
@@ -42,6 +43,17 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
+  // Store the app environment from ?app= param so CTA buttons redirect to the right version.
+  // Set by PromoHandoffPage when a promo code is being handed off to the marketing site.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const app = params.get('app');
+      if (app) storeAppEnv(app);
+    } catch {}
+  }, []);
 
   return (
     <PostHogProvider client={posthog}>

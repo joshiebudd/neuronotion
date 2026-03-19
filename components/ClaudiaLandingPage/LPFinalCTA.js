@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button } from '../ui/button';
 import { track } from '@vercel/analytics';
+import { getAppUrl } from '../../lib/appUrl';
 
 export const LPFinalCTA = () => {
   const handleCTAClick = () => {
     track('Bottom CTA');
     if (typeof window !== 'undefined') {
-      window.location.href = 'https://app.neuro-notion.com';
+      window.location.href = getAppUrl();
     }
   };
 

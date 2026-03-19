@@ -5,6 +5,7 @@ import { Card, CardContent } from '../ui/card';
 import { Check, Target, Users, Brain, CheckCircle, ChevronDown, ChevronUp, Timer } from 'lucide-react';
 import { CgSandClock } from 'react-icons/cg';
 import { track } from '@vercel/analytics';
+import { getAppUrl } from '../../lib/appUrl';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 
 export const LPMainCTA = () => {
@@ -36,14 +37,14 @@ export const LPMainCTA = () => {
 
   const handleCTAClick = () => {
     if (typeof window !== 'undefined') {
-      window.location.href = 'https://app.neuro-notion.com';
+      window.location.href = getAppUrl();
     }
   };
 
   const handleTierCTAClick = (tierName) => {
     track(`Get Started ${tierName}`);
     if (typeof window !== 'undefined') {
-      window.location.href = 'https://app.neuro-notion.com';
+      window.location.href = getAppUrl();
     }
   };
 

@@ -4,6 +4,7 @@ import { Button } from '../ui/button';
 import { VideoPlayer } from '../VideoPlayer';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import { track } from '@vercel/analytics';
+import { getAppUrl } from '../../lib/appUrl';
 
 export const LPHero = () => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -11,7 +12,7 @@ export const LPHero = () => {
   const handleCTAClick = () => {
     track('Hero CTA');
     if (typeof window !== 'undefined') {
-      window.location.href = 'https://app.neuro-notion.com';
+      window.location.href = getAppUrl();
     }
   };
 
