@@ -301,7 +301,7 @@ const App = () => {
           {/* VSL Container */}
           <div className="relative max-w-3xl mx-auto">
             <VideoPlayer 
-              videoUrl="https://NeuroNotionPullZonw.b-cdn.net/Enhance%20ADHD%20Patient%20Support%20for%20Clinics%20(1).mp4"
+              videoUrl="https://NeuroNotionPullZonw.b-cdn.net/How%20Claudia%20by%20Neuro%20Works.mp4"
               title="Turn Support into Profit - Demo for Directors"
             />
             {/* Sound On Arrow - positioned just outside bottom-right of video */}

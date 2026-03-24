@@ -88,19 +88,18 @@ const tiers = [
   },
 ];
 
-// --- Feature comparison rows ---
+// --- Feature comparison rows (waterfall order: most universal at top, most exclusive at bottom) ---
 const comparisonFeatures = [
   { label: 'Unlimited patient distribution', solo: true, small: true, growing: true, established: true, enterprise: true },
   { label: 'All pathways (RTC, insurance, private)', solo: true, small: true, growing: true, established: true, enterprise: true },
   { label: 'Unlimited patient access (no time limits)', solo: true, small: true, growing: true, established: true, enterprise: true },
-  { label: 'Full data and outcome measurement', solo: true, small: true, growing: true, established: true, enterprise: true },
-  { label: 'We handle all setup and onboarding', solo: true, small: true, growing: true, established: true, enterprise: true },
-  { label: 'Less than 1 hour of your time', solo: true, small: true, growing: true, established: true, enterprise: true },
-  { label: 'Optional clinician training module', solo: false, small: false, growing: true, established: true, enterprise: true },
-  { label: 'Clinician training included', solo: false, small: false, growing: false, established: true, enterprise: true },
+  { label: 'Fully handled onboarding', solo: true, small: true, growing: true, established: true, enterprise: true },
+  { label: 'Clinician training module (optional)', solo: true, small: true, growing: true, established: true, enterprise: true },
+  { label: 'Patient monitoring', solo: false, small: false, growing: true, established: true, enterprise: true },
+  { label: 'Packaged data reports', solo: false, small: false, growing: true, established: true, enterprise: true },
   { label: 'Priority support', solo: false, small: false, growing: true, established: true, enterprise: true },
-  { label: 'Direct line to founder', solo: false, small: false, growing: false, established: true, enterprise: true },
-  { label: 'Direct line to CTO', solo: false, small: false, growing: false, established: false, enterprise: true },
+  { label: 'White labelling', solo: false, small: false, growing: false, established: true, enterprise: true },
+  { label: 'Direct line to Founder and CTO', solo: false, small: false, growing: false, established: true, enterprise: true },
   { label: 'Top priority onboarding', solo: false, small: false, growing: false, established: false, enterprise: true },
 ];
 
@@ -166,11 +165,11 @@ export default function ClinicPricing() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Tiered by team size. Locked in at your rate. Roughly the price of a single clinician per year.
+              Tiered by team size. Locked in at your rate. Less than the annual cost of one hire.
             </p>
 
-            {/* Monthly / Annual Toggle - fixed layout */}
-            <div className="flex items-center justify-center gap-4 mb-4">
+            {/* Monthly / Annual Toggle - always centered */}
+            <div className="relative flex items-center justify-center gap-4 mb-4">
               <span className={`text-sm font-medium transition-colors ${!showAnnual ? 'text-white' : 'text-slate-400'}`}>Monthly</span>
               <button
                 onClick={() => setShowAnnual(!showAnnual)}
@@ -181,8 +180,8 @@ export default function ClinicPricing() {
               <span className={`text-sm font-medium transition-colors ${showAnnual ? 'text-white' : 'text-slate-400'}`}>
                 Annual
               </span>
-              {/* Fixed-width container for the pill so it doesn't shift the toggle */}
-              <div className="w-[120px] flex-shrink-0">
+              {/* Pill positioned absolutely so it never shifts the centered toggle */}
+              <div className="absolute left-[calc(50%+105px)] top-1/2 -translate-y-1/2">
                 {showAnnual && (
                   <span className="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full border border-emerald-500/30 animate-pulse whitespace-nowrap">
                     Save 2 months
@@ -226,7 +225,7 @@ export default function ClinicPricing() {
                 {/* Header row with tier names and prices */}
                 <thead>
                   <tr className="bg-[#1a2540]">
-                    <th className="p-5 w-[200px]"></th>
+                    <th className="p-5 w-[220px]"></th>
                     {tiers.map((tier) => {
                       const displayPrice = showAnnual
                         ? Math.round(tier.annualPrice / 12)
@@ -289,23 +288,16 @@ export default function ClinicPricing() {
                     </tr>
                   ))}
 
-                  {/* CTA row */}
+                  {/* Single CTA row spanning all columns */}
                   <tr className="border-t-2 border-[#0EA5E9]/30 bg-[#1a2540]">
-                    <td className="p-5"></td>
-                    {tiers.map((tier) => (
-                      <td key={tier.id} className="p-5 text-center">
-                        <button
-                          onClick={openModal}
-                          className={`w-full max-w-[160px] font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-0.5 ${
-                            tier.popular
-                              ? 'bg-[#0EA5E9] hover:bg-[#0284C7] text-white shadow-lg shadow-cyan-500/25'
-                              : 'bg-slate-700 hover:bg-slate-600 text-white'
-                          }`}
-                        >
-                          Book a Call
-                        </button>
-                      </td>
-                    ))}
+                    <td colSpan={6} className="p-5 text-center">
+                      <button
+                        onClick={openModal}
+                        className="bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold py-3 px-10 rounded-xl text-sm transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-0.5 shadow-lg shadow-cyan-500/25"
+                      >
+                        Book a Call
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -328,14 +320,14 @@ export default function ClinicPricing() {
                   <div>
                     <h3 className="text-xl font-bold text-white font-poppins mb-2">The Cost Savings Are Enormous</h3>
                     <p className="text-slate-300 text-sm leading-relaxed">
-                      The consumer price for Claudia is <span className="text-white font-bold">$19/month per user</span>. Even on the Solo Practitioner tier at £200/month, you are distributing unlimited access to every single patient across all your pathways. That is a fraction of what it would cost if each patient subscribed individually.
+                      The consumer price for Claudia is <span className="text-white font-bold">£15/month per user</span>. Even on the Solo Practitioner tier at £200/month, you are distributing unlimited access to every single patient across all your pathways. That is a fraction of what it would cost if each patient subscribed individually.
                     </p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="bg-slate-800/50 rounded-xl p-4 text-center">
-                    <p className="text-2xl font-bold text-[#0EA5E9] font-poppins">$19</p>
+                    <p className="text-2xl font-bold text-[#0EA5E9] font-poppins">£15</p>
                     <p className="text-slate-400 text-xs mt-1">Consumer price per patient/month</p>
                   </div>
                   <div className="bg-slate-800/50 rounded-xl p-4 text-center">
@@ -343,8 +335,8 @@ export default function ClinicPricing() {
                     <p className="text-slate-400 text-xs mt-1">Patients included at every tier</p>
                   </div>
                   <div className="bg-slate-800/50 rounded-xl p-4 text-center">
-                    <p className="text-2xl font-bold text-amber-400 font-poppins">~1 clinician</p>
-                    <p className="text-slate-400 text-xs mt-1">Roughly the annual cost of one hire</p>
+                    <p className="text-2xl font-bold text-amber-400 font-poppins">&lt;1 clinician</p>
+                    <p className="text-slate-400 text-xs mt-1">Less than the annual cost of one hire</p>
                   </div>
                 </div>
               </div>
@@ -519,11 +511,11 @@ export default function ClinicPricing() {
                 },
                 {
                   question: 'What kind of support do we get?',
-                  answer: 'All tiers get email support. The Growing Clinic tier and above get priority support. Established Clinic and Enterprise tiers get a direct line to Josh (Founder), and Enterprise also gets a direct line to Vlad (CTO). Higher tiers get priority onboarding and faster response times.',
+                  answer: 'All tiers get email support. The Growing Clinic tier and above get priority support. Established Clinic and Enterprise tiers get a direct line to Josh (Founder) and Vlad (CTO). Higher tiers get priority onboarding and faster response times.',
                 },
                 {
                   question: 'How does this compare to the consumer price?',
-                  answer: 'The consumer price for Claudia is $19/month per user. With clinic pricing, you get unlimited distribution to all patients for a flat monthly fee. Even on the Solo Practitioner tier at £200/month, the savings are significant compared to individual patient subscriptions.',
+                  answer: 'The consumer price for Claudia is £15/month per user. With clinic pricing, you get unlimited distribution to all patients for a flat monthly fee. Even on the Solo Practitioner tier at £200/month, the savings are significant compared to individual patient subscriptions.',
                 },
               ].map((faq, index) => (
                 <div key={index} className="bg-[#1a2540] rounded-xl overflow-hidden border border-slate-700/50">
