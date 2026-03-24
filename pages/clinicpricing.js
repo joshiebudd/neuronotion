@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import ClinicPageHeader from '../components/ClinicPageHeader';
 import { LPFooter } from '../components/ClaudiaLandingPage/LPFooter';
-import { Check, ChevronDown, ChevronUp, Shield, Clock, TrendingUp, Users, Zap, Phone, Star, CalendarCheck, X } from 'lucide-react';
+import { Check, ChevronDown, ChevronUp, Shield, Clock, TrendingUp, Users, Zap, Phone, Star, CalendarCheck, X, Package, Heart } from 'lucide-react';
 
 // --- Booking Modal ---
 const BookingModal = ({ isOpen, onClose }) => {
@@ -37,126 +37,58 @@ const BookingModal = ({ isOpen, onClose }) => {
   );
 };
 
-// --- Pricing Tiers Data ---
+// --- Tier data ---
 const tiers = [
   {
     id: 'solo',
     name: 'Solo Practitioner',
     clinicians: '1',
+    clinicianLabel: 'Clinician',
     price: 200,
-    period: '/month',
     annualSaving: 400,
     annualPrice: 2200,
-    highlight: false,
-    popular: false,
-    features: [
-      'Unlimited patient distribution',
-      'All pathways: RTC, insurance, private',
-      'Unlimited patient access (no time limits)',
-      'Full data and outcome measurement',
-      'We handle all setup and onboarding',
-      'Less than 1 hour of your time to get live',
-      'Email support',
-    ],
-    extras: [],
   },
   {
     id: 'small',
     name: 'Small Practice',
     clinicians: '2 - 5',
+    clinicianLabel: 'Clinicians',
     price: 500,
-    period: '/month',
     annualSaving: 1000,
     annualPrice: 5500,
-    highlight: false,
-    popular: false,
-    features: [
-      'Everything in Solo Practitioner',
-      'Unlimited patient distribution',
-      'All pathways: RTC, insurance, private',
-      'Unlimited patient access (no time limits)',
-      'Full data and outcome measurement',
-      'We handle all setup and onboarding',
-      'Less than 1 hour of your time to get live',
-      'Email support',
-    ],
-    extras: [],
   },
   {
     id: 'growing',
     name: 'Growing Clinic',
     clinicians: '5 - 15',
+    clinicianLabel: 'Clinicians',
     price: 1000,
-    period: '/month',
     annualSaving: 2000,
     annualPrice: 11000,
-    highlight: false,
     popular: true,
-    features: [
-      'Everything in Small Practice',
-      'Unlimited patient distribution',
-      'All pathways: RTC, insurance, private',
-      'Unlimited patient access (no time limits)',
-      'Full data and outcome measurement',
-      'We handle all setup and onboarding',
-      'Less than 1 hour of your time to get live',
-      'Optional clinician training module',
-      'Priority email support',
-    ],
-    extras: ['Clinician training module available'],
   },
   {
     id: 'established',
     name: 'Established Clinic',
     clinicians: '15 - 40',
+    clinicianLabel: 'Clinicians',
     price: 3000,
-    period: '/month',
     annualSaving: 6000,
     annualPrice: 33000,
-    highlight: true,
-    popular: false,
-    features: [
-      'Everything in Growing Clinic',
-      'Unlimited patient distribution',
-      'All pathways: RTC, insurance, private',
-      'Unlimited patient access (no time limits)',
-      'Full data and outcome measurement',
-      'We handle all setup and onboarding',
-      'Less than 1 hour of your time to get live',
-      'Clinician training module included',
-      'Priority support with faster response',
-      'Direct line to the founder',
-    ],
-    extras: ['Direct line to Josh (Founder)', 'Clinician training included'],
   },
   {
     id: 'enterprise',
     name: 'Enterprise',
     clinicians: '40+',
+    clinicianLabel: 'Clinicians',
     price: 5000,
-    period: '/month',
     annualSaving: 10000,
     annualPrice: 55000,
-    highlight: true,
-    popular: false,
-    features: [
-      'Everything in Established Clinic',
-      'Unlimited patient distribution',
-      'All pathways: RTC, insurance, private',
-      'Unlimited patient access (no time limits)',
-      'Full data and outcome measurement',
-      'We handle all setup and onboarding',
-      'Less than 1 hour of your time to get live',
-      'Clinician training module included',
-      'Top priority support',
-      'Direct line to Josh (Founder) and Vlad (CTO)',
-      'Priority onboarding and embedding',
-    ],
-    extras: ['Direct line to Josh + Vlad (CTO)', 'Top priority everything', 'Clinician training included'],
+    topPriority: true,
   },
 ];
 
-// --- Feature comparison rows for the table ---
+// --- Feature comparison rows ---
 const comparisonFeatures = [
   { label: 'Unlimited patient distribution', solo: true, small: true, growing: true, established: true, enterprise: true },
   { label: 'All pathways (RTC, insurance, private)', solo: true, small: true, growing: true, established: true, enterprise: true },
@@ -233,27 +165,30 @@ export default function ClinicPricing() {
               <span className="text-[#0EA5E9]">Pricing</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-300 mb-6 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed max-w-3xl mx-auto">
               Tiered by team size. Locked in at your rate. Roughly the price of a single clinician per year.
             </p>
 
-            {/* Monthly / Annual Toggle */}
+            {/* Monthly / Annual Toggle - fixed layout */}
             <div className="flex items-center justify-center gap-4 mb-4">
               <span className={`text-sm font-medium transition-colors ${!showAnnual ? 'text-white' : 'text-slate-400'}`}>Monthly</span>
               <button
                 onClick={() => setShowAnnual(!showAnnual)}
-                className={`relative w-14 h-7 rounded-full transition-colors duration-300 ${showAnnual ? 'bg-[#0EA5E9]' : 'bg-slate-600'}`}
+                className={`relative w-14 h-7 rounded-full transition-colors duration-300 flex-shrink-0 ${showAnnual ? 'bg-[#0EA5E9]' : 'bg-slate-600'}`}
               >
                 <div className={`absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 ${showAnnual ? 'translate-x-7' : 'translate-x-0'}`} />
               </button>
               <span className={`text-sm font-medium transition-colors ${showAnnual ? 'text-white' : 'text-slate-400'}`}>
                 Annual
               </span>
-              {showAnnual && (
-                <span className="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full border border-emerald-500/30 animate-pulse">
-                  Save 2 months
-                </span>
-              )}
+              {/* Fixed-width container for the pill so it doesn't shift the toggle */}
+              <div className="w-[120px] flex-shrink-0">
+                {showAnnual && (
+                  <span className="inline-block bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2.5 py-1 rounded-full border border-emerald-500/30 animate-pulse whitespace-nowrap">
+                    Save 2 months
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         </section>
@@ -264,132 +199,116 @@ export default function ClinicPricing() {
         <section className="px-4 sm:px-6 pb-8 sm:pb-12">
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             <div className="glass-card rounded-xl p-4 sm:p-5 text-center">
-              <Shield className="w-6 h-6 text-[#0EA5E9] mx-auto mb-2" />
-              <p className="text-white font-bold text-sm mb-1">Paid Pilot Month</p>
-              <p className="text-slate-400 text-xs leading-relaxed">First month is a trial. Not happy with results or data? Opt out and only pay for that one month.</p>
+              <Package className="w-6 h-6 text-[#0EA5E9] mx-auto mb-2" />
+              <p className="text-white font-bold text-sm mb-1">One Price, Unlimited Distribution</p>
+              <p className="text-slate-400 text-xs leading-relaxed">One flat fee covers unlimited patients across all pathways. No per-patient charges, no hidden costs, no surprises.</p>
             </div>
             <div className="glass-card rounded-xl p-4 sm:p-5 text-center">
-              <TrendingUp className="w-6 h-6 text-emerald-400 mx-auto mb-2" />
-              <p className="text-white font-bold text-sm mb-1">Price-Locked Forever</p>
-              <p className="text-slate-400 text-xs leading-relaxed">Your rate never increases as you grow. Even if you go from 5 to 60 clinicians next month, you stay on your original tier price.</p>
+              <Heart className="w-6 h-6 text-emerald-400 mx-auto mb-2" />
+              <p className="text-white font-bold text-sm mb-1">Two for the Price of One</p>
+              <p className="text-slate-400 text-xs leading-relaxed">Non-pharma support and patient outcome monitoring all packaged into one. Two tools for the price of one.</p>
             </div>
             <div className="glass-card rounded-xl p-4 sm:p-5 text-center">
-              <Clock className="w-6 h-6 text-amber-400 mx-auto mb-2" />
-              <p className="text-white font-bold text-sm mb-1">13-Month Contract</p>
-              <p className="text-slate-400 text-xs leading-relaxed">Month 1 is your paid pilot. The remaining 12 months only kick in if you choose to continue.</p>
+              <Shield className="w-6 h-6 text-amber-400 mx-auto mb-2" />
+              <p className="text-white font-bold text-sm mb-1">Low Risk. Pilot Pricing.</p>
+              <p className="text-slate-400 text-xs leading-relaxed">Month 1 is a paid pilot. Not happy with results or data after that month? Opt out. You only pay for the one month.</p>
             </div>
           </div>
         </section>
 
         {/* ============================================ */}
-        {/* PRICING CARDS (Mobile + Desktop) */}
+        {/* PRICING TABLE */}
         {/* ============================================ */}
         <section className="px-4 sm:px-6 pb-12 sm:pb-16">
-          <div className="max-w-7xl mx-auto">
-
-            {/* Desktop: Horizontal scrolling cards */}
-            <div className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-              {tiers.map((tier) => {
-                const displayPrice = showAnnual
-                  ? Math.round(tier.annualPrice / 12)
-                  : tier.price;
-                const isPopular = tier.id === 'growing';
-                const isEnterprise = tier.id === 'enterprise';
-                const isEstablished = tier.id === 'established';
-
-                return (
-                  <div
-                    key={tier.id}
-                    className={`flex-shrink-0 w-[280px] sm:w-[260px] lg:w-full snap-center rounded-2xl border transition-all duration-300 relative flex flex-col ${
-                      isPopular
-                        ? 'border-[#0EA5E9] shadow-lg shadow-[#0EA5E9]/10 bg-[#1E293B]'
-                        : isEnterprise || isEstablished
-                        ? 'border-slate-600 bg-[#1a2540]'
-                        : 'border-slate-700 bg-[#1E293B]/60'
-                    }`}
-                  >
-                    {/* Popular badge */}
-                    {isPopular && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <span className="bg-[#0EA5E9] text-black text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                          Most Popular
-                        </span>
-                      </div>
-                    )}
-
-                    {/* Enterprise badge */}
-                    {isEnterprise && (
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <span className="bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap flex items-center gap-1">
-                          <Star className="w-3 h-3" /> Top Priority
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="p-5 sm:p-6 flex flex-col flex-grow">
-                      {/* Tier header */}
-                      <div className="text-center mb-4">
-                        <p className="text-[#0EA5E9] text-xs font-bold uppercase tracking-wider mb-1">{tier.clinicians} {tier.clinicians === '1' ? 'Clinician' : 'Clinicians'}</p>
-                        <h3 className="text-lg font-bold text-white font-poppins mb-3">{tier.name}</h3>
-                        <div className="mb-1">
-                          <span className="text-3xl sm:text-4xl font-bold text-white font-poppins">
-                            £{showAnnual ? displayPrice.toLocaleString() : tier.price.toLocaleString()}
-                          </span>
-                          <span className="text-slate-400 text-sm">/month</span>
-                        </div>
-                        {showAnnual && (
-                          <div className="mt-1">
-                            <span className="text-emerald-400 text-xs font-bold">
-                              £{tier.annualPrice.toLocaleString()}/year (save £{tier.annualSaving.toLocaleString()})
-                            </span>
-                          </div>
-                        )}
-                        {!showAnnual && (
-                          <div className="mt-1">
-                            <span className="text-slate-500 text-xs">
-                              £{(tier.price * 13).toLocaleString()} total over 13 months
-                            </span>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Features */}
-                      <div className="space-y-2.5 mb-5 flex-grow">
-                        {tier.features.map((feature, i) => (
-                          <div key={i} className="flex items-start gap-2">
-                            <Check className="w-4 h-4 text-[#0EA5E9] flex-shrink-0 mt-0.5" />
-                            <span className="text-slate-300 text-xs leading-relaxed">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Extras callout */}
-                      {tier.extras.length > 0 && (
-                        <div className="bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 rounded-lg p-3 mb-4">
-                          {tier.extras.map((extra, i) => (
-                            <div key={i} className="flex items-center gap-2">
-                              <Zap className="w-3 h-3 text-[#0EA5E9] flex-shrink-0" />
-                              <span className="text-[#0EA5E9] text-xs font-medium">{extra}</span>
+          <div className="max-w-6xl mx-auto">
+            <div className="overflow-x-auto rounded-2xl border border-slate-700">
+              <table className="w-full min-w-[800px]">
+                {/* Header row with tier names and prices */}
+                <thead>
+                  <tr className="bg-[#1a2540]">
+                    <th className="p-5 w-[200px]"></th>
+                    {tiers.map((tier) => {
+                      const displayPrice = showAnnual
+                        ? Math.round(tier.annualPrice / 12)
+                        : tier.price;
+                      return (
+                        <th key={tier.id} className="p-5 text-center relative">
+                          {/* Badges */}
+                          {tier.popular && (
+                            <div className="absolute -top-0 left-1/2 -translate-x-1/2">
+                              <span className="bg-[#0EA5E9] text-black text-[10px] font-bold px-2.5 py-0.5 rounded-b-lg whitespace-nowrap">
+                                Most Popular
+                              </span>
                             </div>
-                          ))}
-                        </div>
-                      )}
+                          )}
+                          {tier.topPriority && (
+                            <div className="absolute -top-0 left-1/2 -translate-x-1/2">
+                              <span className="bg-amber-500 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-b-lg whitespace-nowrap flex items-center gap-1">
+                                <Star className="w-2.5 h-2.5" /> Top Priority
+                              </span>
+                            </div>
+                          )}
+                          <p className="text-[#0EA5E9] text-[10px] font-bold uppercase tracking-widest mb-0.5 mt-2">{tier.clinicians} {tier.clinicianLabel}</p>
+                          <p className="text-white text-sm font-bold font-poppins mb-2">{tier.name}</p>
+                          <div>
+                            <span className="text-2xl sm:text-3xl font-bold text-white font-poppins">
+                              £{displayPrice.toLocaleString()}
+                            </span>
+                            <span className="text-slate-400 text-xs">/mo</span>
+                          </div>
+                          {showAnnual && (
+                            <p className="text-emerald-400 text-[10px] font-bold mt-1">
+                              £{tier.annualPrice.toLocaleString()}/yr (save £{tier.annualSaving.toLocaleString()})
+                            </p>
+                          )}
+                          {!showAnnual && (
+                            <p className="text-slate-500 text-[10px] mt-1">
+                              £{(tier.price * 13).toLocaleString()} over 13 months
+                            </p>
+                          )}
+                        </th>
+                      );
+                    })}
+                  </tr>
+                </thead>
 
-                      {/* CTA */}
-                      <button
-                        onClick={openModal}
-                        className={`w-full font-bold py-3 px-4 rounded-xl text-sm transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-0.5 ${
-                          isPopular
-                            ? 'bg-[#0EA5E9] hover:bg-[#0284C7] text-white shadow-lg shadow-cyan-500/25'
-                            : 'bg-slate-700 hover:bg-slate-600 text-white'
-                        }`}
-                      >
-                        Book a Call
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
+                {/* Feature rows */}
+                <tbody>
+                  {comparisonFeatures.map((row, i) => (
+                    <tr key={i} className={`border-t border-slate-700/50 ${i % 2 === 0 ? 'bg-[#1E293B]/40' : 'bg-[#1E293B]/20'}`}>
+                      <td className="text-sm text-slate-200 p-4 pl-5 font-medium">{row.label}</td>
+                      {['solo', 'small', 'growing', 'established', 'enterprise'].map((tierId) => (
+                        <td key={tierId} className="text-center p-4">
+                          {row[tierId] ? (
+                            <Check className="w-6 h-6 text-[#0EA5E9] mx-auto" strokeWidth={3} />
+                          ) : (
+                            <span className="text-slate-600 text-xl">-</span>
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+
+                  {/* CTA row */}
+                  <tr className="border-t-2 border-[#0EA5E9]/30 bg-[#1a2540]">
+                    <td className="p-5"></td>
+                    {tiers.map((tier) => (
+                      <td key={tier.id} className="p-5 text-center">
+                        <button
+                          onClick={openModal}
+                          className={`w-full max-w-[160px] font-bold py-2.5 px-4 rounded-xl text-sm transition-all duration-300 transform hover:scale-[1.03] hover:-translate-y-0.5 ${
+                            tier.popular
+                              ? 'bg-[#0EA5E9] hover:bg-[#0284C7] text-white shadow-lg shadow-cyan-500/25'
+                              : 'bg-slate-700 hover:bg-slate-600 text-white'
+                          }`}
+                        >
+                          Book a Call
+                        </button>
+                      </td>
+                    ))}
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
@@ -439,15 +358,15 @@ export default function ClinicPricing() {
         <section className="px-4 sm:px-6 pb-12 sm:pb-16">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-[#0EA5E9]/10 to-emerald-500/10 border border-[#0EA5E9]/20 rounded-2xl p-6 sm:p-8 text-center relative overflow-hidden">
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2">
-                <span className="bg-emerald-500 text-white text-xs font-bold px-4 py-1 rounded-full">
+              <div className="absolute -top-0 left-1/2 -translate-x-1/2">
+                <span className="bg-emerald-500 text-white text-xs font-bold px-4 py-1 rounded-b-lg">
                   Save 2 Months
                 </span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white font-poppins mt-4 mb-3">
+              <h3 className="text-xl sm:text-2xl font-bold text-white font-poppins mt-6 mb-3">
                 Pay Annually and Get 2 Months Free
               </h3>
-              <p className="text-slate-300 text-sm leading-relaxed max-w-2xl mx-auto mb-4">
+              <p className="text-slate-300 text-sm leading-relaxed max-w-2xl mx-auto mb-6">
                 If you pay the full annual subscription up front, we discount two months off the annual price. That means your first 60 days are essentially free. Toggle to &quot;Annual&quot; above to see the discounted rates.
               </p>
               <button
@@ -457,62 +376,6 @@ export default function ClinicPricing() {
                 <Check className="w-4 h-4" />
                 {showAnnual ? 'Annual pricing active' : 'Switch to annual pricing'}
               </button>
-            </div>
-          </div>
-        </section>
-
-        {/* ============================================ */}
-        {/* FEATURE COMPARISON TABLE */}
-        {/* ============================================ */}
-        <section className="px-4 sm:px-6 pb-12 sm:pb-16">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-3 font-poppins">
-              Feature <span className="text-[#0EA5E9]">Comparison</span>
-            </h2>
-            <p className="text-slate-400 text-center text-sm mb-8 max-w-2xl mx-auto">
-              Every tier includes unlimited patient distribution and full data measurement. Higher tiers unlock priority support and direct access to leadership.
-            </p>
-
-            <div className="overflow-x-auto rounded-xl border border-slate-700">
-              <table className="w-full min-w-[700px]">
-                <thead>
-                  <tr className="bg-[#1a2540]">
-                    <th className="text-left text-sm font-bold text-slate-300 p-4 w-[280px]">Feature</th>
-                    {tiers.map((tier) => (
-                      <th key={tier.id} className="text-center p-4">
-                        <p className="text-xs text-[#0EA5E9] font-bold uppercase tracking-wider">{tier.clinicians}</p>
-                        <p className="text-xs text-slate-400 mt-0.5">{tier.name}</p>
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparisonFeatures.map((row, i) => (
-                    <tr key={i} className={`border-t border-slate-700/50 ${i % 2 === 0 ? 'bg-[#1E293B]/40' : 'bg-[#1E293B]/20'}`}>
-                      <td className="text-sm text-slate-300 p-4">{row.label}</td>
-                      {['solo', 'small', 'growing', 'established', 'enterprise'].map((tierId) => (
-                        <td key={tierId} className="text-center p-4">
-                          {row[tierId] ? (
-                            <Check className="w-5 h-5 text-[#0EA5E9] mx-auto" />
-                          ) : (
-                            <span className="text-slate-600 text-lg">-</span>
-                          )}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                  {/* Price row */}
-                  <tr className="border-t-2 border-[#0EA5E9]/30 bg-[#1a2540]">
-                    <td className="text-sm font-bold text-white p-4">Monthly Price</td>
-                    {tiers.map((tier) => (
-                      <td key={tier.id} className="text-center p-4">
-                        <span className="text-lg font-bold text-white font-poppins">£{tier.price.toLocaleString()}</span>
-                        <span className="text-slate-400 text-xs">/mo</span>
-                      </td>
-                    ))}
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
         </section>
@@ -574,7 +437,6 @@ export default function ClinicPricing() {
         {/* ============================================ */}
         <section className="px-4 sm:px-6 pb-12 sm:pb-16">
           <div className="max-w-4xl mx-auto space-y-4">
-            {/* Price lock */}
             <div className="flex items-start gap-4 glass-card rounded-xl p-5">
               <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                 <TrendingUp className="w-5 h-5 text-emerald-400" />
@@ -587,7 +449,6 @@ export default function ClinicPricing() {
               </div>
             </div>
 
-            {/* Unlimited everything */}
             <div className="flex items-start gap-4 glass-card rounded-xl p-5">
               <div className="w-10 h-10 bg-[#0EA5E9]/20 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Users className="w-5 h-5 text-[#0EA5E9]" />
@@ -600,7 +461,6 @@ export default function ClinicPricing() {
               </div>
             </div>
 
-            {/* Zero overhead */}
             <div className="flex items-start gap-4 glass-card rounded-xl p-5">
               <div className="w-10 h-10 bg-amber-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Clock className="w-5 h-5 text-amber-400" />
@@ -613,7 +473,6 @@ export default function ClinicPricing() {
               </div>
             </div>
 
-            {/* NHS context */}
             <div className="flex items-start gap-4 glass-card rounded-xl p-5">
               <div className="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Star className="w-5 h-5 text-purple-400" />
