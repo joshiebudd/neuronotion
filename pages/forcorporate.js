@@ -272,6 +272,7 @@ const SupportedByCarousel = () => {
     { id: 3, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/3.webp', alt: 'Supported by logo 3' },
     { id: 9, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/9.webp', alt: 'Supported by logo 9' },
     { id: 12, src: 'https://NeuroNotionPullZonw.b-cdn.net/11LabsLogowebp.webp', alt: '11Labs' },
+    { id: 13, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/12.webp', alt: 'Supported by logo 12' },
   ];
 
   return (

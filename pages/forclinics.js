@@ -42,6 +42,42 @@ import { VideoPlayer } from '../components/VideoPlayer';
 import { Toaster } from '../components/ui/toaster';
 
 
+// --- Supported By Logo Carousel ---
+const SupportedByCarousel = () => {
+  const logos = [
+    { id: 1, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/1.webp', alt: 'Supported by logo 1' },
+    { id: 2, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/2.webp', alt: 'Supported by logo 2' },
+    { id: 7, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/7.webp', alt: 'Supported by logo 7' },
+    { id: 6, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/6.webp', alt: 'Supported by logo 6' },
+    { id: 11, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/11.webp', alt: 'Supported by logo 11' },
+    { id: 10, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/10.webp', alt: 'Supported by logo 10' },
+    { id: 4, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/4.webp', alt: 'Supported by logo 4' },
+    { id: 5, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/5.webp', alt: 'Supported by logo 5' },
+    { id: 8, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/8.webp', alt: 'Supported by logo 8' },
+    { id: 3, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/3.webp', alt: 'Supported by logo 3' },
+    { id: 9, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/9.webp', alt: 'Supported by logo 9' },
+    { id: 12, src: 'https://NeuroNotionPullZonw.b-cdn.net/11LabsLogowebp.webp', alt: '11Labs' },
+    { id: 13, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/12.webp', alt: 'Supported by logo 12' },
+  ];
+
+  return (
+    <div className="relative overflow-hidden">
+      <div className="flex animate-scroll-clinic">
+        {logos.map((logo) => (
+          <div key={`first-${logo.id}`} className="flex-shrink-0 mx-3 sm:mx-6 md:mx-8 lg:mx-10">
+            <img src={logo.src} alt={logo.alt} className="h-6 sm:h-10 md:h-14 lg:h-16 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+          </div>
+        ))}
+        {logos.map((logo) => (
+          <div key={`second-${logo.id}`} className="flex-shrink-0 mx-3 sm:mx-6 md:mx-8 lg:mx-10">
+            <img src={logo.src} alt={logo.alt} className="h-6 sm:h-10 md:h-14 lg:h-16 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 // --- Founder Story Modal/Tooltip ---
 const FounderStory = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -202,6 +238,18 @@ const App = () => {
           transform: translateX(-50%);
         }
         
+        /* Supported By Carousel Animation */
+        @keyframes scroll-clinic {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-clinic {
+          animation: scroll-clinic 30s linear infinite;
+        }
+        .animate-scroll-clinic:hover {
+          animation-play-state: paused;
+        }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0F172A; }
@@ -303,6 +351,12 @@ const App = () => {
             </div>
           </div>
           */}
+
+          {/* Supported By Carousel */}
+          <div className="mb-8 sm:mb-14 text-center">
+            <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Supported by</div>
+            <SupportedByCarousel />
+          </div>
 
           {/* Advised By (Affiliates) */}
           <div className="mb-8 sm:mb-14 text-center">
