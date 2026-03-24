@@ -424,7 +424,9 @@ const App = () => {
               </h2>
 
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                As of April 2026, any NHS contracts are tighter. They want proof of non-pharma support and real data on patient outcomes as well. We provide both of those.
+                Right now you diagnose → prescribe → hope for the best.
+                <br/><br/>
+                As of April 2026, NHS contracts are tighter. They want proof of non-pharma support and real data on patient outcomes as well. We provide both of those. At a fraction of the cost of anyone else.
               </p>
 
               <div className="space-y-8">
