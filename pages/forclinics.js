@@ -424,9 +424,7 @@ const App = () => {
               </h2>
 
               <p className="text-slate-400 text-lg leading-relaxed mb-8">
-                Right now you diagnose → prescribe → hope for the best.
-                <br/><br/>
-                In 2026, insurers and the NHS are tightening scrutiny. They want real data on long-term patient stability. We provide that.
+                As of April 2026, any NHS contracts are tighter. They want proof of non-pharma support and real data on patient outcomes as well. We provide both of those.
               </p>
 
               <div className="space-y-8">
@@ -591,16 +589,7 @@ const App = () => {
             <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">The Product</div>
             <h2 className="font-poppins font-bold text-2xl sm:text-3xl md:text-4xl text-white mb-6 sm:mb-8">Engineered specifically for ADHD. So it actually works…</h2>
             
-            {/* Video Player */}
-            <div className="w-full max-w-4xl mx-auto aspect-[16/9] bg-slate-800/50 rounded-2xl border border-slate-700 mb-12 flex items-center justify-center relative overflow-hidden group shadow-2xl">
-               <video 
-                 controls
-                 className="w-full h-full object-cover"
-                 src="https://NeuroNotionPullZonw.b-cdn.net/Effortless%20ADHD%20Living.mp4"
-               >
-                 Your browser does not support the video tag.
-               </video>
-            </div>
+
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -671,7 +660,7 @@ const App = () => {
           <div className="bg-[#1E293B] p-6 sm:p-12 rounded-2xl shadow-2xl border border-slate-700">
             <h2 className="font-poppins font-bold text-2xl sm:text-4xl md:text-5xl text-white mb-4 sm:mb-6">Win Contracts with Better Data</h2>
             <p className="text-base sm:text-xl md:text-2xl text-slate-400 mb-7 sm:mb-10 leading-relaxed">
-              Big shifts are coming. RTC &amp; Insurers are about to start asking for outcomes. Be the first to give them proof, not promises.
+              RTC and insurers want better patient support and proof of outcomes. Be the first to give them this proof, not promises.
             </p>
             <div className="flex justify-center">
               <button 
@@ -711,6 +700,10 @@ const FAQAccordion = () => {
     {
       question: "How quickly can we get started?",
       answer: "Most clinics are live within 2 weeks. We handle the white-labelling setup, provide staff training materials, and give you templated patient onboarding flows. There&apos;s no IT project required on your end, just a decision to start offering better post-diagnosis support."
+    },
+    {
+      question: "Is Claudia DTAC compliant?",
+      answer: "We are actively working with support from MindTech and our clinical team to move towards full DTAC (Digital Technology Assessment Criteria) compliance. This is a core part of our roadmap and something we take very seriously as we scale across NHS and private clinic pathways."
     }
   ];
 

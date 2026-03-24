@@ -42,9 +42,15 @@ const ClinicPageHeader = ({ onLearnMoreClick }) => {
             <span className="sm:hidden text-lg font-semibold tracking-tight text-white">Neuro</span>
           </a>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              href="/clinicpricing"
+              className="text-slate-300 hover:text-white font-medium py-1.5 px-3 sm:px-4 rounded-xl text-[11px] sm:text-sm transition-colors duration-200 whitespace-nowrap"
+            >
+              Pricing
+            </Link>
             <button
-              className="bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold py-1.5 px-3 sm:px-4 rounded-xl text-[11px] sm:text-sm shadow-lg transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/25 whitespace-nowrap"
+              className="bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-bold py-1.5 px-3 sm:px-4 rounded-xl text-[11px] sm:text-sm transform hover:scale-105 transition-all duration-300 whitespace-nowrap"
               style={{ fontWeight: 700 }}
               onClick={handleLearnMoreClick}
             >
