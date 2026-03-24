@@ -275,7 +275,8 @@ const App = () => {
       <section className="py-12 border-y border-slate-800 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-6">
           
-          {/* Clinic Endorsements */}
+          {/* Clinic Endorsements - Hidden */}
+          {/*
           <div className="mb-8 sm:mb-14 text-center">
             <div className="inline-block px-4 py-1.5 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-5 sm:mb-8">Endorsed by</div>
             <div className="grid grid-cols-3 gap-3 sm:flex sm:flex-wrap sm:justify-center sm:items-center sm:gap-x-12 sm:gap-y-8">
@@ -301,6 +302,7 @@ const App = () => {
                </a>
             </div>
           </div>
+          */}
 
           {/* Advised By (Affiliates) */}
           <div className="mb-8 sm:mb-14 text-center">
