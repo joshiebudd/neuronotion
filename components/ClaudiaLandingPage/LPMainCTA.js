@@ -7,10 +7,12 @@ import { CgSandClock } from 'react-icons/cg';
 import { track } from '@vercel/analytics';
 import { getAppUrl } from '../../lib/appUrl';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { useCurrencyConversion } from '../../hooks/useCurrencyConversion';
 
 export const LPMainCTA = () => {
   const { elementRef: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const [expandedFAQ, setExpandedFAQ] = useState(null);
+  const { currencySymbol, convertPrice, isLoading, currencyCode } = useCurrencyConversion();
 
   const pricingTiers = [
     {
@@ -53,6 +55,15 @@ export const LPMainCTA = () => {
     track(eventName);
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
+
+  // Format the converted price for display
+  const formatPrice = (usdPrice) => {
+    const converted = convertPrice(usdPrice);
+    return `${currencySymbol}${converted.toLocaleString()}`;
+  };
+
+  // Build the FAQ answer for the free trial question dynamically
+  const freeTrialAnswer = `Start your 7-day free trial with full access to all features. No credit card required. After the trial, continue for just ${formatPrice(19)}/month.`;
 
   return (
     <section className="py-16 sm:py-24 lg:py-32 px-3 sm:px-4 bg-[#1e2a4a] min-h-screen">
@@ -98,9 +109,19 @@ export const LPMainCTA = () => {
                     {tier.name}
                   </h3>
                   <div className="mb-4">
-                    <span className="text-5xl font-bold text-white" style={{ fontWeight: 700 }}>
-                      ${tier.price}
+                    <span
+                      className={`text-5xl font-bold text-white transition-opacity duration-300 ${
+                        isLoading ? 'opacity-0' : 'opacity-100'
+                      }`}
+                      style={{ fontWeight: 700 }}
+                    >
+                      {formatPrice(tier.price)}
                     </span>
+                    {isLoading && (
+                      <span className="text-5xl font-bold text-white/30 absolute inset-0 flex items-center justify-center" style={{ fontWeight: 700 }}>
+                        ...
+                      </span>
+                    )}
                     {tier.period && (
                       <span className="text-lg text-gray-300">{tier.period}</span>
                     )}
@@ -171,7 +192,7 @@ export const LPMainCTA = () => {
               },
               {
                 question: "How does the free trial work?",
-                answer: "Start your 7-day free trial with full access to all features. No credit card required. After the trial, continue for just $19/month."
+                answer: freeTrialAnswer
               },
               {
                 question: "Do I need a credit card for the free trial?",

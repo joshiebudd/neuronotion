@@ -2,14 +2,22 @@ import React from "react";
 import CheckIcon from "../Common/Icons/CheckIcon";
 import CrossIcon from "../Common/Icons/CrossIcon";
 import { track } from "@vercel/analytics";
+import { useCurrencyConversion } from "../../hooks/useCurrencyConversion";
 
 const UBPricing = () => {
+  const { currencySymbol, convertPrice, isLoading } = useCurrencyConversion();
+
   const logStandardPackageEvent = () => {
     track("Buy Standard");
   };
 
   const logPremiumPackageEvent = () => {
     track("Buy Premium");
+  };
+
+  const formatPrice = (usdPrice) => {
+    const converted = convertPrice(usdPrice);
+    return `${currencySymbol}${converted.toLocaleString()}`;
   };
 
   return (
@@ -36,8 +44,8 @@ const UBPricing = () => {
               Standard
             </h3>
             <div className="flex justify-center items-baseline my-2">
-              <span className="text-5xl font-prim font-bold text-white">
-                $99
+              <span className={`text-5xl font-prim font-bold text-white transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+                {formatPrice(99)}
               </span>
             </div>
             <p className="mt-3 mb-3 italic text-gray-200 sm:text-lg">
@@ -91,7 +99,9 @@ const UBPricing = () => {
           <div className="flex flex-col p-6 pb-12 pt-16 w-80 md:w-72 text-center text-gray-800 bg-gray-200 rounded-3xl border border-gray-200 shadow-xl items-center">
             <h3 className="mb-1 text-3xl font-prim font-semibold">Premium</h3>
             <div className="flex justify-center items-baseline my-2">
-              <span className="text-5xl font-prim font-semibold">$129</span>
+              <span className={`text-5xl font-prim font-semibold transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+                {formatPrice(129)}
+              </span>
             </div>
             <p className="mt-3 mb-3 italic text-gray-800 sm:text-lg">
               Pay once. Access Forever.

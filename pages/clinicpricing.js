@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import ClinicPageHeader from '../components/ClinicPageHeader';
 import { LPFooter } from '../components/ClaudiaLandingPage/LPFooter';
 import { Check, ChevronDown, ChevronUp, Shield, Clock, TrendingUp, Users, Zap, Phone, Star, CalendarCheck, X, Package, Heart } from 'lucide-react';
+import { useCurrencyConversion } from '../hooks/useCurrencyConversion';
 
 // --- Booking Modal ---
 const BookingModal = ({ isOpen, onClose }) => {
@@ -37,34 +38,34 @@ const BookingModal = ({ isOpen, onClose }) => {
   );
 };
 
-// --- Tier data ---
+// --- Tier data (base prices in GBP) ---
 const tiers = [
   {
     id: 'solo',
     name: 'Solo Practitioner',
     clinicians: '1',
     clinicianLabel: 'Clinician',
-    price: 200,
-    annualSaving: 400,
-    annualPrice: 2200,
+    priceGBP: 200,
+    annualSavingGBP: 400,
+    annualPriceGBP: 2200,
   },
   {
     id: 'small',
     name: 'Small Practice',
     clinicians: '2 - 5',
     clinicianLabel: 'Clinicians',
-    price: 500,
-    annualSaving: 1000,
-    annualPrice: 5500,
+    priceGBP: 500,
+    annualSavingGBP: 1000,
+    annualPriceGBP: 5500,
   },
   {
     id: 'growing',
     name: 'Growing Clinic',
     clinicians: '5 - 15',
     clinicianLabel: 'Clinicians',
-    price: 1000,
-    annualSaving: 2000,
-    annualPrice: 11000,
+    priceGBP: 1000,
+    annualSavingGBP: 2000,
+    annualPriceGBP: 11000,
     popular: true,
   },
   {
@@ -72,18 +73,18 @@ const tiers = [
     name: 'Established Clinic',
     clinicians: '15 - 40',
     clinicianLabel: 'Clinicians',
-    price: 3000,
-    annualSaving: 6000,
-    annualPrice: 33000,
+    priceGBP: 3000,
+    annualSavingGBP: 6000,
+    annualPriceGBP: 33000,
   },
   {
     id: 'enterprise',
     name: 'Enterprise',
     clinicians: '40+',
     clinicianLabel: 'Clinicians',
-    price: 5000,
-    annualSaving: 10000,
-    annualPrice: 55000,
+    priceGBP: 5000,
+    annualSavingGBP: 10000,
+    annualPriceGBP: 55000,
     topPriority: true,
   },
 ];
@@ -108,9 +109,85 @@ export default function ClinicPricing() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [expandedFAQ, setExpandedFAQ] = useState(null);
   const [showAnnual, setShowAnnual] = useState(false);
+  const { currencySymbol, convertPrice, isLoading, currencyCode } = useCurrencyConversion();
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  // Helper: convert a GBP price to local currency
+  // Clinic prices are natively in GBP, so we convert GBP -> USD -> local currency
+  // The hook converts from USD, so we need to go GBP -> USD first
+  // Instead, we use a simpler approach: the hook detects currency and rate from USD.
+  // For clinic pricing (which is in GBP), we handle it by converting GBP to the user's currency.
+  // We'll use a GBP-aware conversion approach.
+
+  // Since the hook is USD-based, for clinic pricing we need a different approach.
+  // We'll create a dedicated hook call or handle it inline.
+  // Actually, the simplest approach: treat the base prices as GBP and use the hook's
+  // rate relative to GBP. We can do this by noting:
+  //   localPrice = gbpPrice * (localRate / gbpRate)
+  // where both rates are relative to USD.
+  // But the hook only gives us USD->local rate.
+  // 
+  // Better approach: If user is in GB, show GBP as-is. Otherwise, the hook gives us
+  // the USD->local rate. We also need USD->GBP rate to compute GBP->local.
+  // 
+  // Simplest: For clinic pricing, we note these are GBP prices. If user currency is GBP,
+  // show as-is. If user currency is something else, we convert via:
+  //   localPrice = gbpPrice / (USD_to_GBP_rate) * (USD_to_local_rate)
+  // 
+  // The hook doesn't expose the raw USD->GBP rate, so let's just use a separate
+  // fetch for GBP rate, or better yet, update the hook to support base currency.
+  //
+  // For now, the simplest and cleanest solution: since the hook converts USD to local,
+  // and we know the GBP prices, we can convert GBP to USD first (using 1/rate if GBP),
+  // then to local. But we don't have the GBP rate in the hook.
+  //
+  // DECISION: The clinic pricing page will use its own lightweight conversion.
+  // We fetch GBP->target from Frankfurter directly if needed.
+  // Actually, let's just enhance the hook to accept a base currency.
+  //
+  // SIMPLEST APPROACH: The clinic page prices are in GBP. We use the hook which
+  // gives us USD->local rate. We also know that if the user is in GB, currencyCode
+  // will be GBP and we show prices as-is. For other currencies, we need GBP->local.
+  // Let's use a separate state for the GBP->local rate.
+
+  const [gbpToLocalRate, setGbpToLocalRate] = React.useState(null);
+
+  React.useEffect(() => {
+    if (isLoading || currencyCode === 'GBP') return;
+
+    // Fetch GBP -> target currency rate
+    async function fetchGbpRate() {
+      try {
+        const response = await fetch(
+          `https://api.frankfurter.dev/v1/latest?base=GBP&symbols=${currencyCode}`,
+          { signal: AbortSignal.timeout(5000) }
+        );
+        if (!response.ok) throw new Error('Failed to fetch GBP rate');
+        const data = await response.json();
+        const rate = data.rates?.[currencyCode];
+        if (rate) setGbpToLocalRate(rate);
+      } catch {
+        // If fetch fails, we'll just show GBP
+        setGbpToLocalRate(null);
+      }
+    }
+
+    fetchGbpRate();
+  }, [isLoading, currencyCode]);
+
+  // Format a GBP price to local currency
+  const formatClinicPrice = (gbpPrice) => {
+    if (currencyCode === 'GBP' || gbpToLocalRate === null) {
+      return `£${gbpPrice.toLocaleString()}`;
+    }
+    const converted = Math.ceil(gbpPrice * gbpToLocalRate);
+    return `${currencySymbol}${converted.toLocaleString()}`;
+  };
+
+  // Get the effective symbol for display
+  const effectiveSymbol = (currencyCode === 'GBP' || gbpToLocalRate === null) ? '£' : currencySymbol;
 
   return (
     <>
@@ -227,9 +304,9 @@ export default function ClinicPricing() {
                   <tr className="bg-[#1a2540]">
                     <th className="p-5 w-[220px]"></th>
                     {tiers.map((tier) => {
-                      const displayPrice = showAnnual
-                        ? Math.round(tier.annualPrice / 12)
-                        : tier.price;
+                      const displayPriceGBP = showAnnual
+                        ? Math.round(tier.annualPriceGBP / 12)
+                        : tier.priceGBP;
                       return (
                         <th key={tier.id} className="p-5 text-center relative">
                           {/* Badges */}
@@ -250,19 +327,19 @@ export default function ClinicPricing() {
                           <p className="text-[#0EA5E9] text-[10px] font-bold uppercase tracking-widest mb-0.5 mt-2">{tier.clinicians} {tier.clinicianLabel}</p>
                           <p className="text-white text-sm font-bold font-poppins mb-2">{tier.name}</p>
                           <div>
-                            <span className="text-2xl sm:text-3xl font-bold text-white font-poppins">
-                              £{displayPrice.toLocaleString()}
+                            <span className={`text-2xl sm:text-3xl font-bold text-white font-poppins transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+                              {formatClinicPrice(displayPriceGBP)}
                             </span>
                             <span className="text-slate-400 text-xs">/mo</span>
                           </div>
                           {showAnnual && (
-                            <p className="text-emerald-400 text-[10px] font-bold mt-1">
-                              £{tier.annualPrice.toLocaleString()}/yr (save £{tier.annualSaving.toLocaleString()})
+                            <p className={`text-emerald-400 text-[10px] font-bold mt-1 transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+                              {formatClinicPrice(tier.annualPriceGBP)}/yr (save {formatClinicPrice(tier.annualSavingGBP)})
                             </p>
                           )}
                           {!showAnnual && (
-                            <p className="text-slate-500 text-[10px] mt-1">
-                              £{(tier.price * 13).toLocaleString()} over 13 months
+                            <p className={`text-slate-500 text-[10px] mt-1 transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+                              {formatClinicPrice(tier.priceGBP * 13)} over 13 months
                             </p>
                           )}
                         </th>
@@ -320,14 +397,14 @@ export default function ClinicPricing() {
                   <div>
                     <h3 className="text-xl font-bold text-white font-poppins mb-2">The Cost Savings Are Enormous</h3>
                     <p className="text-slate-300 text-sm leading-relaxed">
-                      The consumer price for Claudia is <span className="text-white font-bold">£15/month per user</span>. Even on the Solo Practitioner tier at £200/month, you are distributing unlimited access to every single patient across all your pathways. That is a fraction of what it would cost if each patient subscribed individually.
+                      The consumer price for Claudia is <span className="text-white font-bold">{formatClinicPrice(15)}/month per user</span>. Even on the Solo Practitioner tier at {formatClinicPrice(200)}/month, you are distributing unlimited access to every single patient across all your pathways. That is a fraction of what it would cost if each patient subscribed individually.
                     </p>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="bg-slate-800/50 rounded-xl p-4 text-center">
-                    <p className="text-2xl font-bold text-[#0EA5E9] font-poppins">£15</p>
+                    <p className={`text-2xl font-bold text-[#0EA5E9] font-poppins transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>{formatClinicPrice(15)}</p>
                     <p className="text-slate-400 text-xs mt-1">Consumer price per patient/month</p>
                   </div>
                   <div className="bg-slate-800/50 rounded-xl p-4 text-center">
@@ -495,11 +572,11 @@ export default function ClinicPricing() {
                 },
                 {
                   question: 'What does "price-locked" actually mean?',
-                  answer: 'It means the price you sign up at is the price you keep, regardless of how much you grow. If you sign up on the 5-15 clinician tier at £1,000/month and you scale to 60 clinicians, your price stays at £1,000/month. We do not penalise growth.',
+                  answer: `It means the price you sign up at is the price you keep, regardless of how much you grow. If you sign up on the 5-15 clinician tier at ${formatClinicPrice(1000)}/month and you scale to 60 clinicians, your price stays at ${formatClinicPrice(1000)}/month. We do not penalise growth.`,
                 },
                 {
                   question: 'How does the annual prepay discount work?',
-                  answer: 'If you pay the full annual subscription up front, we discount two months off the annual price. So your first 60 days are essentially free. For example, the Growing Clinic tier at £1,000/month would be £11,000 for the year instead of £13,000.',
+                  answer: `If you pay the full annual subscription up front, we discount two months off the annual price. So your first 60 days are essentially free. For example, the Growing Clinic tier at ${formatClinicPrice(1000)}/month would be ${formatClinicPrice(11000)} for the year instead of ${formatClinicPrice(13000)}.`,
                 },
                 {
                   question: 'How much work is required from our team?',
@@ -507,7 +584,7 @@ export default function ClinicPricing() {
                 },
                 {
                   question: 'Is there a limit on how many patients can use Claudia?',
-                  answer: 'No. Every tier includes unlimited patient distribution across all pathways: Right to Choose, insurance, and private customers. Patients also get unlimited access for as long as they want, so you can measure data and outcomes for as long as you need.',
+                  answer: 'No. Every tier includes unlimited patient distribution across all pathways: Right to Choose, insurance, and private customers. Patients also get unlimited access for as long as they want.',
                 },
                 {
                   question: 'What kind of support do we get?',
@@ -515,7 +592,7 @@ export default function ClinicPricing() {
                 },
                 {
                   question: 'How does this compare to the consumer price?',
-                  answer: 'The consumer price for Claudia is £15/month per user. With clinic pricing, you get unlimited distribution to all patients for a flat monthly fee. Even on the Solo Practitioner tier at £200/month, the savings are significant compared to individual patient subscriptions.',
+                  answer: `The consumer price for Claudia is ${formatClinicPrice(15)}/month per user. With clinic pricing, you get unlimited distribution to all patients for a flat monthly fee. Even on the Solo Practitioner tier at ${formatClinicPrice(200)}/month, the savings are significant compared to individual patient subscriptions.`,
                 },
               ].map((faq, index) => (
                 <div key={index} className="bg-[#1a2540] rounded-xl overflow-hidden border border-slate-700/50">
