@@ -45,9 +45,9 @@ const tiers = [
     name: 'Solo Practitioner',
     clinicians: '1',
     clinicianLabel: 'Clinician',
-    priceGBP: 200,
-    annualSavingGBP: 400,
-    annualPriceGBP: 2200,
+    priceGBP: 100,
+    annualSavingGBP: 200,
+    annualPriceGBP: 1100,
   },
   {
     id: 'small',
@@ -397,7 +397,7 @@ export default function ClinicPricing() {
                   <div>
                     <h3 className="text-xl font-bold text-white font-poppins mb-2">The Cost Savings Are Enormous</h3>
                     <p className="text-slate-300 text-sm leading-relaxed">
-                      The consumer price for Claudia is <span className="text-white font-bold">{formatClinicPrice(15)}/month per user</span>. Even on the Solo Practitioner tier at {formatClinicPrice(200)}/month, you are distributing unlimited access to every single patient across all your pathways. That is a fraction of what it would cost if each patient subscribed individually.
+                      The consumer price for Claudia is <span className="text-white font-bold">{formatClinicPrice(15)}/month per user</span>. Even on the Solo Practitioner tier at {formatClinicPrice(100)}/month, you are distributing unlimited access to every single patient across all your pathways. That is a fraction of what it would cost if each patient subscribed individually.
                     </p>
                   </div>
                 </div>
@@ -592,7 +592,7 @@ export default function ClinicPricing() {
                 },
                 {
                   question: 'How does this compare to the consumer price?',
-                  answer: `The consumer price for Claudia is ${formatClinicPrice(15)}/month per user. With clinic pricing, you get unlimited distribution to all patients for a flat monthly fee. Even on the Solo Practitioner tier at ${formatClinicPrice(200)}/month, the savings are significant compared to individual patient subscriptions.`,
+                  answer: `The consumer price for Claudia is ${formatClinicPrice(15)}/month per user. With clinic pricing, you get unlimited distribution to all patients for a flat monthly fee. Even on the Solo Practitioner tier at ${formatClinicPrice(100)}/month, the savings are significant compared to individual patient subscriptions.`,
                 },
               ].map((faq, index) => (
                 <div key={index} className="bg-[#1a2540] rounded-xl overflow-hidden border border-slate-700/50">
