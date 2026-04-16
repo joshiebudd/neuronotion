@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import {
   ArrowRight,
   BarChart3,
@@ -174,7 +175,7 @@ function CorporateHeader({ onPrimaryClick }) {
         Employer pilots for Q3 2026 are now open. Book a 30-minute demo to review fit, governance, and rollout options.
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-        <a href="/forcorporate2" className="flex items-center gap-3 min-w-0">
+        <Link href="/forcorporate2" className="flex items-center gap-3 min-w-0">
           <img
             src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
             alt="Neuro logo"
@@ -184,7 +185,7 @@ function CorporateHeader({ onPrimaryClick }) {
             <div className="text-white font-semibold leading-tight">Neuro for Employers</div>
             <div className="text-slate-400 text-xs hidden sm:block">ADHD-specific performance support for the workplace</div>
           </div>
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-6 text-sm text-slate-300">
           {NAV_LINKS.map((link) => (
