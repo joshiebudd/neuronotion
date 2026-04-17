@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {
@@ -10,244 +10,318 @@ import {
   CalendarCheck,
   CheckCircle2,
   ChevronDown,
-  Clock3,
   Download,
   Lock,
   Menu,
   ShieldCheck,
   Sparkles,
-  TrendingDown,
   TrendingUp,
-  UserCheck,
   Users,
   X,
 } from 'lucide-react';
 
-import { LPFooter } from '../components/ClaudiaLandingPage/LPFooter';
-import { Toaster } from '../components/ui/toaster';
-
 const NAV_LINKS = [
-  { label: 'Problem', href: '#problem' },
-  { label: 'How it works', href: '#how-it-works' },
-  { label: 'Comparison', href: '#comparison' },
+  { label: 'How it works', href: '#product' },
+  { label: 'Evidence', href: '#evidence' },
+  { label: 'Clinical team', href: '#clinical-team' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Pricing', href: '#pricing' },
 ];
 
-const TRUST_BADGES = [
-  'GDPR-ready workflows',
-  'DPA available',
-  'Aggregate reporting only',
-  'No diagnosis required',
+const HERO_STATS = [
+  { value: '~35', label: 'lost days per employee, per year' },
+  { value: '2x', label: 'higher absenteeism' },
+  { value: '25%', label: 'lower job satisfaction' },
 ];
 
-const PROBLEM_GAPS = [
+const PROBLEM_CARDS = [
+  {
+    title: 'Hidden cost',
+    body: '~£4,000 lost productivity per unsupported neurodivergent employee, per year. At scale, £400k a year in a 1,000-person business.',
+    citation: 'Sedgwick 2025, Canela 2024.',
+  },
+  {
+    title: 'Hidden signal',
+    body: 'Underperformance shows up long before disclosure. By the time HR spots the pattern, the employee has been struggling for months.',
+    citation: 'Canela 2024.',
+  },
+  {
+    title: 'Fixable',
+    body: 'The research is clear. The right support flips the numbers.',
+    citation: 'Hodgkins 2011, Theeboom 2014.',
+  },
+];
+
+const PREVALENCE_ROWS = [
+  ['Tech Sales', '15-20%'],
+  ['Recruitment', '15%'],
+  ['Sales', '15%'],
+  ['Marketing', '18%'],
+  ['Creative Media', '21%'],
+];
+
+const EVIDENCE_WITHOUT = [
+  '~35 lost days per year',
+  '2x higher absenteeism',
+  '2x higher mental health risk',
+  '25% lower job satisfaction',
+];
+
+const EVIDENCE_WITH = [
+  '60% less absenteeism',
+  '36% higher performance at work',
+  '87% feel less stressed and anxious at work',
+  '18% higher job satisfaction',
+];
+
+const CLINICAL_TILES = [
+  {
+    name: 'Dr Tony Lloyd',
+    role: 'Clinical Advisor',
+    image: 'https://NeuroNotionPullZonw.b-cdn.net/tony.webp',
+    summary: 'Former CEO of the ADHD Foundation. Thirty years advising the NHS and government.',
+  },
+  {
+    name: 'Dr James Kustow',
+    role: 'Clinical Lead',
+    image: 'https://NeuroNotionPullZonw.b-cdn.net/jameskustow.webp',
+    summary: 'Consultant Psychiatrist. Medical Director at The Grove Practice. UKAAN board.',
+  },
+  {
+    name: 'Prof David Daley',
+    role: 'Clinical Advisor',
+    image: 'https://NeuroNotionPullZonw.b-cdn.net/david%20(1).webp',
+    summary: 'Clinical Professor. Leading academic on digital interventions for ADHD.',
+  },
+  {
+    name: 'Trusted in clinical settings',
+    role: 'Clinical adoption',
+    image: '',
+    summary: 'Already in use across NHS and private ADHD clinic pilots, including Evolve, Innovate ADHD and Leicester Psychology. The same platform your clinicians are trialling is the one we bring to your workforce.',
+  },
+];
+
+const GAP_CARDS = [
   {
     title: 'Disclosure gap',
-    text: 'Employees often struggle with focus, planning, and overwhelm long before they feel safe enough to disclose what is happening.',
-    icon: UserCheck,
+    body: 'Most neurodivergent employees suspect for years before they tell anyone. HR only hears about it once performance has already dropped.',
   },
   {
     title: 'Support gap',
-    text: 'Generic wellbeing tools rarely address executive function challenges in a way that feels practical for ADHD profiles.',
-    icon: BrainCircuit,
+    body: 'Wellbeing apps treat stress. EAPs hand out counselling. Neither touches the day-to-day friction that actually costs the business.',
   },
   {
     title: 'Performance gap',
-    text: 'Managers see missed deadlines, inconsistency, and absence risk, but often lack a support option that is specific, scalable, and easy to adopt.',
-    icon: TrendingDown,
+    body: 'Managers see the missed deadlines. They rarely have a tool to offer that does not need formal disclosure. Neuro gives them one.',
   },
 ];
 
-const DEPLOYMENT_OPTIONS = [
+const PRODUCT_TILES = [
   {
-    title: 'Pilot',
-    subtitle: 'Low-friction starting point',
-    points: [
-      'Structured 12-week rollout for a defined cohort',
-      'Guided launch for HR, managers, and employees',
-      'Aggregate usage and feedback review at the end of the pilot',
-      'Designed to help internal buyers build the business case',
-    ],
+    title: 'Built for ADHD brains',
+    body: 'Designed from scratch with neurodivergent users. Not a neurotypical tool with a new label.',
   },
   {
-    title: 'Enterprise rollout',
-    subtitle: 'For organisations ready to scale',
-    points: [
-      'Ongoing licence for wider workforce access',
-      'Manager enablement and repeatable onboarding support',
-      'Recurring aggregate reporting for HR and leadership',
-      'Suitable for organisations looking for durable neuroinclusion infrastructure',
-    ],
-  },
-];
-
-const USE_CASES = [
-  'Performance reviews and preparation',
-  'Deadline overwhelm and prioritisation',
-  'Return-to-work support',
-  'Manager conversations and accommodations',
-  'Disclosure decisions',
-  'Daily planning and sustained focus',
-];
-
-const INDUSTRIES = [
-  'Technology',
-  'Financial services',
-  'Professional services',
-  'Public sector',
-];
-
-const FAQS = [
-  {
-    question: 'Will employees actually use it?',
-    answer:
-      'The product is designed around day-to-day executive function support, so it is built to feel useful in the flow of work rather than like another HR resource library. The pilot is structured to validate activation and repeat usage before any larger rollout decision.',
+    title: 'Voice-first',
+    body: 'Your people talk. The AI turns the chaos into a clear plan.',
   },
   {
-    question: 'How is this different from an EAP or a generic wellbeing platform?',
-    answer:
-      'EAPs and broad wellbeing apps serve important roles, but they are not built specifically for ADHD-related planning, prioritisation, and overwhelm. Neuro is positioned as an ADHD-specific performance support layer, not another generic wellbeing subscription.',
+    title: 'Learns the person',
+    body: 'The more an employee uses it, the better it adapts to their patterns.',
   },
   {
-    question: 'What happens if someone discloses a crisis or safeguarding concern?',
-    answer:
-      'The offer should sit within a clear safeguarding and escalation framework agreed with the employer. That includes signposting, escalation routes, and role clarity between the employer, existing support channels, and any clinical partners.',
-  },
-  {
-    question: 'How do I justify this to finance?',
-    answer:
-      'The page frames the commercial case around hidden productivity loss, activation, retention, and absence risk. The pilot option exists specifically to help HR and People leaders collect enough evidence to support a finance conversation with less internal friction.',
-  },
-  {
-    question: 'Do employees need a formal diagnosis?',
-    answer:
-      'No. The offer is designed for people who experience executive function challenges, including those who are undiagnosed, exploring diagnosis, or simply looking for practical support at work.',
-  },
-];
-
-const ADVISORS = [
-  {
-    name: 'Dr. Tony Lloyd',
-    role: 'Clinical Advisor',
-    image: 'https://NeuroNotionPullZonw.b-cdn.net/tony.webp',
-    summary: 'Former CEO of the ADHD Foundation and long-standing advisor to NHS and government bodies.',
-  },
-  {
-    name: 'Dr. James Kustow',
-    role: 'Clinical Lead',
-    image: 'https://NeuroNotionPullZonw.b-cdn.net/jameskustow.webp',
-    summary: 'Medical Director at The Grove Practice, founding member of UKAAN, and leading ADHD clinician.',
-  },
-  {
-    name: 'Prof. David Daley',
-    role: 'Clinical Advisor',
-    image: 'https://NeuroNotionPullZonw.b-cdn.net/david%20(1).webp',
-    summary: 'Leading ADHD academic with deep expertise in digital interventions and evidence generation.',
+    title: 'Ready from day one',
+    body: 'No referrals. No waiting lists. Access on sign-up.',
   },
 ];
 
 const COMPARISON_ROWS = [
-  ['ADHD-specific support', 'Low', 'Low', 'High'],
-  ['Clinical governance', 'Low', 'Medium', 'High'],
-  ['Manager enablement', 'Low', 'Low', 'High'],
-  ['Aggregate reporting', 'Low', 'Medium', 'High'],
-  ['Deployment speed', 'Medium', 'Medium', 'High'],
+  ['ADHD-specific support', '✗', '✗', '✓'],
+  ['Clinical governance', 'partial', '✓', '✓'],
+  ['Manager enablement', '✗', 'partial', '✓'],
+  ['Outcome tracking', 'partial', 'partial', '✓'],
+  ['Measurable ROI at renewal', '✗', 'partial', '✓'],
+  ['Ready in under 4 weeks', '✓', '✗', '✓'],
 ];
 
-function CorporateHeader({ onPrimaryClick }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+const BUYING_OPTIONS = [
+  {
+    title: 'Pilot',
+    body: '12-week structured pilot.',
+    points: ['50 to 200 employees', 'Guided HR onboarding', 'Outcome report at week 12', 'Fixed fee. No commitment.', 'Live in three weeks.'],
+  },
+  {
+    title: 'Enterprise rollout',
+    body: 'Ongoing licence across your workforce.',
+    points: ['Unlimited access', 'Quarterly reporting with trend analysis', 'Manager content and scripts included', 'Dedicated account contact', 'Annual, renewable'],
+  },
+];
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+const SCENARIOS = [
+  ['Performance reviews', 'employees arrive with clarity, not dread.'],
+  ['Deadline overwhelm', 'big tasks broken into next steps.'],
+  ['Return to work', 'low-friction re-entry after absence.'],
+  ['1-1 conversations', 'a shared language between manager and employee.'],
+  ['Task prioritisation', 'voice-led triage.'],
+  ['Disclosure decisions', 'private guidance when it matters.'],
+];
 
+const MANAGER_POINTS = [
+  'Manager content on supporting neurodivergent reports without overstepping.',
+  'Scripts for 1-1s, reviews and return-to-work chats.',
+  'A shared language that does not need formal disclosure.',
+];
+
+const PARTNER_ROWS = [
+  {
+    label: 'Clinical partners',
+    items: ['Evolve', 'Innovate ADHD', 'Leicester Psychology', 'NHS trusts when consented'],
+  },
+  {
+    label: 'Technology',
+    items: ['11Labs', 'Additional partners'],
+  },
+  {
+    label: 'Pilot settings',
+    items: ['Populated as they land'],
+  },
+];
+
+const INDUSTRY_CARDS = [
+  {
+    title: 'Technology',
+    body: '15 to 20% of your engineers are likely neurodivergent. The productivity drag hits velocity before it hits a wellness dashboard.',
+  },
+  {
+    title: 'Financial services',
+    body: 'Disclosure rates are among the lowest of any sector. The drag is there. Your current tools are not catching it.',
+  },
+  {
+    title: 'Professional services',
+    body: 'Output variability in a billable-hour model hits margin directly. Neurodivergent associates underperform against their own ceiling.',
+  },
+  {
+    title: 'Public sector',
+    body: 'Aligns with Equality Act and inclusion obligations. Procurement-ready.',
+  },
+];
+
+const PROCUREMENT_POINTS = [
+  'One point of contact from first call to go-live.',
+  'Standard DPA on request.',
+  'Security pack ready for your InfoSec team.',
+  'Clinically governed by our advisory board.',
+];
+
+const FAQS = [
+  {
+    question: 'Will my employees actually use it?',
+    answer: 'Pilot engagement is running ahead of typical workplace wellbeing benchmarks. The tool is voice-first, so there is no onboarding friction. Most employees are active in their first session.',
+  },
+  {
+    question: 'How is this different from our EAP or a wellbeing app?',
+    answer: 'EAPs offer counselling. Wellbeing apps offer meditation. Neither addresses the day-to-day friction neurodivergent employees actually face at work. Neuro is built for that.',
+  },
+  {
+    question: 'What happens if an employee discloses a crisis?',
+    answer: 'Our safeguarding protocols route anyone in crisis to human support, not AI. Your HR policies are respected, not bypassed.',
+  },
+  {
+    question: 'Do employees need a formal ADHD diagnosis?',
+    answer: 'No. Most neurodivergent employees are undiagnosed, often for years. Gating access behind diagnosis would exclude the people who need it most.',
+  },
+  {
+    question: 'How do I justify this to finance?',
+    answer: 'Two numbers to land on. First, the recovered productivity: a 1,000-person business with average prevalence typically recovers over £100k a year in absenteeism and output. Second, the inclusion credential: neuroinclusion is commercially visible to talent, clients and investors. Both show up at renewal.',
+  },
+  {
+    question: 'Who sees individual employee data?',
+    answer: 'No one inside your business. Employer reporting is aggregated and anonymised. That is architectural, not a setting.',
+  },
+  {
+    question: 'What happens after the pilot?',
+    answer: 'You get a full outcome report against the metrics agreed at the start. If it is working, we move to an enterprise licence. If not, the pilot ends cleanly with no further cost.',
+  },
+];
+
+const FOOTER_COLUMNS = [
+  {
+    title: 'Product',
+    links: [
+      { label: 'How it works', href: '#product' },
+      { label: 'Evidence', href: '#evidence' },
+      { label: 'Clinical team', href: '#clinical-team' },
+      { label: 'Pricing', href: '#pricing' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About', href: 'https://www.neuro-notion.com' },
+      { label: 'Careers', href: 'https://www.neuro-notion.com' },
+      { label: 'Press', href: 'https://www.neuro-notion.com' },
+    ],
+  },
+  {
+    title: 'Employers',
+    links: [
+      { label: 'For employers', href: '/forcorporate2' },
+      { label: 'Book a demo', href: '#final-cta' },
+      { label: 'One-pager', href: '#final-cta' },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { label: 'Privacy', href: 'https://www.neuro-notion.com' },
+      { label: 'Cookies', href: 'https://www.neuro-notion.com' },
+      { label: 'Terms', href: 'https://www.neuro-notion.com' },
+      { label: 'DPA', href: '#procurement' },
+    ],
+  },
+];
+
+function SectionEyebrow({ children }) {
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-[#081120]/90 backdrop-blur-md border-b border-white/10 shadow-lg' : 'bg-transparent'
-      }`}
-    >
-      <div className="bg-[#0EA5E9] text-white text-center text-xs sm:text-sm font-medium px-4 py-2">
-        Employer pilots for Q3 2026 are now open. Book a 30-minute demo to review fit, governance, and rollout options.
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-        <Link href="/forcorporate2" className="flex items-center gap-3 min-w-0">
-          <img
-            src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
-            alt="Neuro logo"
-            className="h-8 w-auto shrink-0"
-          />
-          <div className="min-w-0">
-            <div className="text-white font-semibold leading-tight">Neuro for Employers</div>
-            <div className="text-slate-400 text-xs hidden sm:block">ADHD-specific performance support for the workplace</div>
-          </div>
-        </Link>
+    <div className="inline-flex items-center gap-2 rounded-full border border-[#0EA5E9]/20 bg-[#0EA5E9]/10 px-3 py-1 text-[11px] font-semibold tracking-[0.18em] text-[#7DD3FC] uppercase mb-4">
+      <Sparkles size={12} />
+      {children}
+    </div>
+  );
+}
 
-        <nav className="hidden lg:flex items-center gap-6 text-sm text-slate-300">
-          {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className="hover:text-white transition-colors">
-              {link.label}
-            </a>
-          ))}
-        </nav>
+function CTAButtons({ onPrimaryClick, secondaryHref = '#product', secondaryLabel = 'See how it works' }) {
+  return (
+    <div className="flex flex-col sm:flex-row items-center gap-3">
+      <button
+        onClick={onPrimaryClick}
+        className="w-full sm:w-auto rounded-xl bg-[#0EA5E9] px-6 py-3.5 text-white font-semibold transition-colors hover:bg-[#0284C7] inline-flex items-center justify-center gap-2"
+      >
+        Book a demo
+        <ArrowRight size={18} />
+      </button>
+      <a
+        href={secondaryHref}
+        className="w-full sm:w-auto rounded-xl border border-slate-600 px-6 py-3.5 text-white font-semibold transition-colors hover:border-slate-400 inline-flex items-center justify-center gap-2"
+      >
+        {secondaryLabel}
+      </a>
+    </div>
+  );
+}
 
-        <div className="hidden lg:flex items-center gap-3">
-          <a
-            href="#pilot"
-            className="px-4 py-2 rounded-xl border border-slate-600 text-sm text-white hover:border-slate-400 transition-colors"
-          >
-            See pilot structure
-          </a>
-          <button
-            onClick={onPrimaryClick}
-            className="px-4 py-2 rounded-xl bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-semibold text-sm transition-colors"
-          >
-            Book a Demo
-          </button>
-        </div>
-
-        <button
-          onClick={() => setMenuOpen((current) => !current)}
-          className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-700 text-white"
-          aria-label="Toggle navigation"
-        >
-          <Menu size={18} />
-        </button>
-      </div>
-
-      {menuOpen && (
-        <div className="lg:hidden border-t border-white/10 bg-[#081120]/95 backdrop-blur-md">
-          <div className="px-4 pb-4 pt-3 flex flex-col gap-3">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="text-slate-200 text-sm"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a href="#pilot" onClick={() => setMenuOpen(false)} className="text-slate-200 text-sm">
-              See pilot structure
-            </a>
-            <button
-              onClick={() => {
-                setMenuOpen(false);
-                onPrimaryClick();
-              }}
-              className="mt-2 px-4 py-2 rounded-xl bg-[#0EA5E9] text-white font-semibold text-sm"
-            >
-              Book a Demo
-            </button>
-          </div>
-        </div>
-      )}
-    </header>
+function InputField({ label, value, onChange, type = 'text', required = false }) {
+  return (
+    <div>
+      <label className="mb-2 block text-sm text-slate-300">{label}</label>
+      <input
+        type={type}
+        required={required}
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
+        className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-white focus:border-[#38BDF8] focus:outline-none"
+      />
+    </div>
   );
 }
 
@@ -266,11 +340,11 @@ function EnquiryModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  const handleChange = (field, value) => {
+  const updateField = (field, value) => {
     setFormData((current) => ({ ...current, [field]: value }));
   };
 
-  const handleClose = () => {
+  const closeModal = () => {
     onClose();
     setSubmitted(false);
     setError('');
@@ -288,10 +362,7 @@ function EnquiryModal({ isOpen, onClose }) {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to send enquiry');
-      }
-
+      if (!response.ok) throw new Error('Failed to submit');
       setSubmitted(true);
     } catch (submissionError) {
       setError('Something went wrong. Please try again or email josh@neuro-notion.com directly.');
@@ -301,55 +372,51 @@ function EnquiryModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] bg-slate-950/80 backdrop-blur-sm p-4 flex items-center justify-center">
-      <div className="w-full max-w-xl rounded-3xl border border-slate-700 bg-[#0F172A] shadow-2xl max-h-[92vh] overflow-y-auto relative">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-sm">
+      <div className="relative max-h-[92vh] w-full max-w-xl overflow-y-auto rounded-3xl border border-slate-700 bg-[#0B1220] shadow-2xl">
         <button
-          onClick={handleClose}
-          className="absolute top-4 right-4 w-10 h-10 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 transition-colors"
+          onClick={closeModal}
+          className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-slate-700 text-slate-300 transition-colors hover:border-slate-500 hover:text-white"
           aria-label="Close modal"
         >
-          <X size={18} className="mx-auto" />
+          <X size={18} />
         </button>
 
         {submitted ? (
           <div className="p-8 sm:p-10 text-center">
-            <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-6">
-              <CheckCircle2 className="text-emerald-400" size={28} />
+            <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-emerald-500/20 bg-emerald-500/10">
+              <CheckCircle2 size={28} className="text-emerald-400" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-3 font-poppins">Thanks. We have your request.</h3>
-            <p className="text-slate-300 leading-relaxed max-w-md mx-auto">
-              A member of the team will review your enquiry and respond within one business day.
-            </p>
+            <h3 className="mb-3 font-poppins text-2xl font-bold text-white">Thanks. We have your request.</h3>
+            <p className="mx-auto max-w-md leading-relaxed text-slate-300">A member of the team will review your enquiry and respond within one business day.</p>
           </div>
         ) : (
           <div className="p-8 sm:p-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 text-[#7DD3FC] text-xs font-medium mb-5">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#0EA5E9]/20 bg-[#0EA5E9]/10 px-3 py-1 text-xs font-medium text-[#7DD3FC]">
               <CalendarCheck size={14} />
-              Book a 30-minute demo
+              Book a demo
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 font-poppins">See whether Neuro fits your workforce</h3>
-            <p className="text-slate-300 leading-relaxed mb-6">
-              No commitment required. We can walk through the commercial case, deployment options, and governance questions with you.
-            </p>
+            <h3 className="mb-3 font-poppins text-3xl font-bold text-white">See if Neuro fits your workforce</h3>
+            <p className="mb-6 leading-relaxed text-slate-300">30-minute call. No commitment. We respond within one business day.</p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <InputField label="Full name" value={formData.name} onChange={(value) => handleChange('name', value)} required />
-                <InputField label="Work email" type="email" value={formData.email} onChange={(value) => handleChange('email', value)} required />
+              <div className="grid gap-4 sm:grid-cols-2">
+                <InputField label="Full name" value={formData.name} onChange={(value) => updateField('name', value)} required />
+                <InputField label="Work email" type="email" value={formData.email} onChange={(value) => updateField('email', value)} required />
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
-                <InputField label="Company" value={formData.company} onChange={(value) => handleChange('company', value)} required />
-                <InputField label="Job title" value={formData.jobTitle} onChange={(value) => handleChange('jobTitle', value)} required />
+              <div className="grid gap-4 sm:grid-cols-2">
+                <InputField label="Company" value={formData.company} onChange={(value) => updateField('company', value)} required />
+                <InputField label="Job title" value={formData.jobTitle} onChange={(value) => updateField('jobTitle', value)} required />
               </div>
 
               <div>
-                <label className="block text-sm text-slate-300 mb-2">Company size</label>
+                <label className="mb-2 block text-sm text-slate-300">Company size</label>
                 <select
                   required
                   value={formData.companySize}
-                  onChange={(event) => handleChange('companySize', event.target.value)}
-                  className="w-full rounded-xl bg-slate-900 border border-slate-700 px-4 py-3 text-white focus:outline-none focus:border-[#38BDF8]"
+                  onChange={(event) => updateField('companySize', event.target.value)}
+                  className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-white focus:border-[#38BDF8] focus:outline-none"
                 >
                   <option value="">Select company size</option>
                   <option value="0-100">0 to 100 employees</option>
@@ -362,13 +429,13 @@ function EnquiryModal({ isOpen, onClose }) {
               </div>
 
               <div>
-                <label className="block text-sm text-slate-300 mb-2">What are you evaluating?</label>
+                <label className="mb-2 block text-sm text-slate-300">What are you evaluating?</label>
                 <textarea
                   rows={4}
                   value={formData.message}
-                  onChange={(event) => handleChange('message', event.target.value)}
-                  placeholder="Tell us about the problem you are trying to solve, your timeline, or the questions you want covered in the demo."
-                  className="w-full rounded-xl bg-slate-900 border border-slate-700 px-4 py-3 text-white focus:outline-none focus:border-[#38BDF8] resize-none"
+                  onChange={(event) => updateField('message', event.target.value)}
+                  placeholder="Tell us about the problem you want to solve, the team size, or any questions for the call."
+                  className="w-full resize-none rounded-xl border border-slate-700 bg-slate-900 px-4 py-3 text-white focus:border-[#38BDF8] focus:outline-none"
                 />
               </div>
 
@@ -377,13 +444,10 @@ function EnquiryModal({ isOpen, onClose }) {
               <button
                 type="submit"
                 disabled={submitting}
-                className={`w-full rounded-xl bg-[#0EA5E9] py-3.5 text-white font-semibold transition-colors ${
-                  submitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-[#0284C7]'
-                }`}
+                className={`w-full rounded-xl py-3.5 font-semibold text-white transition-colors ${submitting ? 'cursor-not-allowed bg-[#0EA5E9]/70' : 'bg-[#0EA5E9] hover:bg-[#0284C7]'}`}
               >
-                {submitting ? 'Sending...' : 'Book a Demo'}
+                {submitting ? 'Sending...' : 'Book a demo'}
               </button>
-              <p className="text-xs text-slate-400 text-center">30-minute call. No commitment. Response within 1 business day.</p>
             </form>
           </div>
         )}
@@ -392,68 +456,71 @@ function EnquiryModal({ isOpen, onClose }) {
   );
 }
 
-function InputField({ label, type = 'text', value, onChange, required = false }) {
-  return (
-    <div>
-      <label className="block text-sm text-slate-300 mb-2">{label}</label>
-      <input
-        type={type}
-        value={value}
-        required={required}
-        onChange={(event) => onChange(event.target.value)}
-        className="w-full rounded-xl bg-slate-900 border border-slate-700 px-4 py-3 text-white focus:outline-none focus:border-[#38BDF8]"
-      />
-    </div>
-  );
-}
+function CorporateHeader({ onPrimaryClick }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-function SectionTag({ children }) {
-  return (
-    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 text-[#7DD3FC] text-xs font-medium mb-4">
-      <Sparkles size={14} />
-      {children}
-    </div>
-  );
-}
-
-function StatCard({ icon: Icon, eyebrow, title, body, tone = 'cyan' }) {
-  const toneStyles = {
-    cyan: 'border-cyan-500/20 bg-cyan-500/10 text-cyan-300',
-    violet: 'border-violet-500/20 bg-violet-500/10 text-violet-300',
-    emerald: 'border-emerald-500/20 bg-emerald-500/10 text-emerald-300',
-  };
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 10);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 h-full">
-      <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-medium mb-4 ${toneStyles[tone]}`}>
-        <Icon size={14} />
-        {eyebrow}
+    <header className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${scrolled ? 'border-b border-white/10 bg-[#081120]/90 backdrop-blur-md' : 'bg-transparent'}`}>
+      <div className="bg-[#0EA5E9] px-4 py-2 text-center text-xs font-medium text-white sm:text-sm">
+        We have closed our latest funding round. <span className="underline underline-offset-2">Read the announcement.</span>
       </div>
-      <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 font-poppins">{title}</h3>
-      <p className="text-slate-300 leading-relaxed">{body}</p>
-    </div>
-  );
-}
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+        <Link href="/forcorporate2" className="flex items-center gap-3 min-w-0">
+          <img src="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png" alt="Neuro logo" className="h-8 w-auto shrink-0" />
+        </Link>
 
-function CTACluster({ onPrimaryClick, compact = false }) {
-  return (
-    <div className={`flex flex-col sm:flex-row items-center gap-3 ${compact ? '' : 'mt-8'}`}>
-      <button
-        onClick={onPrimaryClick}
-        className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#0EA5E9] hover:bg-[#0284C7] text-white font-semibold transition-colors inline-flex items-center justify-center gap-2"
-      >
-        Book a Demo
-        <ArrowRight size={18} />
-      </button>
-      <a
-        href="#pilot"
-        className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-600 text-white font-semibold hover:border-slate-400 transition-colors inline-flex items-center justify-center gap-2"
-      >
-        <Download size={18} />
-        See pilot structure
-      </a>
-      <div className="text-xs text-slate-400 text-center sm:text-left">30-minute call. No commitment. Response within 1 business day.</div>
-    </div>
+        <nav className="hidden items-center gap-6 text-sm text-slate-300 lg:flex">
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href} className="transition-colors hover:text-white">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden lg:block">
+          <button onClick={onPrimaryClick} className="rounded-xl bg-[#0EA5E9] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#0284C7]">
+            Book a demo
+          </button>
+        </div>
+
+        <button
+          onClick={() => setMenuOpen((current) => !current)}
+          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-700 text-white lg:hidden"
+          aria-label="Toggle navigation"
+        >
+          <Menu size={18} />
+        </button>
+      </div>
+
+      {menuOpen && (
+        <div className="border-t border-white/10 bg-[#081120]/95 px-4 pb-4 pt-3 backdrop-blur-md lg:hidden">
+          <div className="flex flex-col gap-3">
+            {NAV_LINKS.map((link) => (
+              <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)} className="text-sm text-slate-200">
+                {link.label}
+              </a>
+            ))}
+            <button
+              onClick={() => {
+                setMenuOpen(false);
+                onPrimaryClick();
+              }}
+              className="mt-2 rounded-xl bg-[#0EA5E9] px-4 py-2 text-sm font-semibold text-white"
+            >
+              Book a demo
+            </button>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
 
@@ -464,17 +531,16 @@ function FAQAccordion() {
     <div className="space-y-4">
       {FAQS.map((item, index) => {
         const isOpen = openIndex === index;
-
         return (
-          <div key={item.question} className="rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
+          <div key={item.question} className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]">
             <button
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="w-full px-5 sm:px-6 py-5 flex items-center justify-between gap-4 text-left"
+              className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6"
             >
-              <span className="text-white font-semibold pr-4">{item.question}</span>
-              <ChevronDown className={`text-slate-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} size={18} />
+              <span className="pr-4 font-semibold text-white">{item.question}</span>
+              <ChevronDown size={18} className={`text-slate-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
             </button>
-            {isOpen && <div className="px-5 sm:px-6 pb-5 text-slate-300 leading-relaxed">{item.answer}</div>}
+            {isOpen && <div className="px-5 pb-5 text-slate-300 sm:px-6">{item.answer}</div>}
           </div>
         );
       })}
@@ -482,61 +548,50 @@ function FAQAccordion() {
   );
 }
 
-function AdvisorCard({ name, role, image, summary }) {
+function DashboardMock() {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 text-center h-full">
-      <img src={image} alt={name} className="w-20 h-20 rounded-full mx-auto object-cover mb-4 border border-white/10" />
-      <div className="text-white font-semibold mb-1">{name}</div>
-      <div className="text-[#7DD3FC] text-sm mb-3">{role}</div>
-      <p className="text-slate-300 text-sm leading-relaxed">{summary}</p>
-    </div>
-  );
-}
-
-function DashboardMockup() {
-  return (
-    <div className="rounded-[28px] border border-white/10 bg-[#081120] p-5 sm:p-6 shadow-2xl shadow-cyan-950/30">
-      <div className="flex flex-col lg:flex-row gap-4 mb-4">
-        <div className="flex-1 rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-4">
-          <div className="text-cyan-300 text-xs uppercase tracking-[0.18em] mb-2">Activation</div>
-          <div className="text-white text-2xl font-bold mb-2">Weekly engagement view</div>
-          <div className="h-24 flex items-end gap-2">
-            {[36, 52, 57, 61, 65, 67].map((height, index) => (
+    <div className="rounded-[28px] border border-white/10 bg-[#081120] p-5 shadow-2xl shadow-cyan-950/30">
+      <div className="mb-4 grid gap-4 lg:grid-cols-2">
+        <div className="rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-4">
+          <div className="mb-2 text-xs uppercase tracking-[0.18em] text-cyan-300">Activation trend</div>
+          <div className="mb-4 text-2xl font-bold text-white">Weekly engagement</div>
+          <div className="flex h-24 items-end gap-2">
+            {[34, 41, 56, 62, 68, 74].map((height, index) => (
               <div key={index} className="flex-1 rounded-t-xl bg-cyan-400/80" style={{ height: `${height}%` }} />
             ))}
           </div>
         </div>
-        <div className="flex-1 rounded-2xl border border-violet-500/20 bg-violet-500/10 p-4">
-          <div className="text-violet-300 text-xs uppercase tracking-[0.18em] mb-2">Themes</div>
-          <div className="text-white text-2xl font-bold mb-2">What employees need help with</div>
-          <div className="space-y-3 mt-4">
+        <div className="rounded-2xl border border-violet-500/20 bg-violet-500/10 p-4">
+          <div className="mb-2 text-xs uppercase tracking-[0.18em] text-violet-300">Common themes</div>
+          <div className="mb-4 text-2xl font-bold text-white">What support is used for</div>
+          <div className="space-y-3">
             {[
-              ['Planning and prioritisation', '74%'],
+              ['Task prioritisation', '78%'],
               ['Deadline overwhelm', '61%'],
               ['Manager conversations', '42%'],
-            ].map(([label, value]) => (
+            ].map(([label, width]) => (
               <div key={label}>
-                <div className="flex items-center justify-between text-sm text-slate-200 mb-1">
+                <div className="mb-1 flex items-center justify-between text-sm text-slate-200">
                   <span>{label}</span>
-                  <span>{value}</span>
+                  <span>{width}</span>
                 </div>
-                <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-                  <div className="h-full rounded-full bg-violet-400" style={{ width: value }} />
+                <div className="h-2 overflow-hidden rounded-full bg-white/10">
+                  <div className="h-full rounded-full bg-violet-400" style={{ width }} />
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="grid sm:grid-cols-3 gap-4">
+      <div className="grid gap-4 sm:grid-cols-3">
         {[
-          ['Aggregate only', 'No employee-level reporting shown to employers'],
-          ['Manager-ready insight', 'Useful for business case reviews and steering discussions'],
-          ['Pilot review output', 'Supports renewal, rollout, or stop decisions'],
+          ['Aggregate only', 'No employee-level reporting shown to employers.'],
+          ['Trend view', 'Outcomes and usage patterns only.'],
+          ['Procurement-ready', 'Built for renewal conversations and reporting.'],
         ].map(([title, text]) => (
           <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-            <div className="text-white font-semibold mb-2">{title}</div>
-            <p className="text-slate-300 text-sm leading-relaxed">{text}</p>
+            <div className="mb-2 font-semibold text-white">{title}</div>
+            <p className="text-sm leading-relaxed text-slate-300">{text}</p>
           </div>
         ))}
       </div>
@@ -547,50 +602,28 @@ function DashboardMockup() {
 export default function ForCorporate2Page() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const commercialCase = useMemo(
-    () => [
-      {
-        icon: TrendingDown,
-        eyebrow: 'Commercial problem',
-        title: 'The £400k problem in a 1,000-person workforce',
-        body: 'Estimated lost productivity can exceed roughly £4,000 per affected employee per year. In a 1,000-person organisation, hidden cost can quickly move into the hundreds of thousands. Source shown on page: Kessler et al. 2009; de Graaf et al. 2008.',
-        tone: 'cyan',
-      },
-      {
-        icon: Clock3,
-        eyebrow: 'Buyer reality',
-        title: 'Underperformance often shows up before disclosure',
-        body: 'By the time HR sees a pattern, the problem may already be affecting deadlines, confidence, and manager time. That is why the page now leads with business impact and not just wellbeing language.',
-        tone: 'violet',
-      },
-      {
-        icon: TrendingUp,
-        eyebrow: 'Buyer outcome',
-        title: 'Higher output. Lower absence. No diagnosis required.',
-        body: 'The core proposition is now framed around the outcomes corporate buyers care about most, while keeping access simple for employees who need practical support right now.',
-        tone: 'emerald',
-      },
-    ],
-    []
-  );
-
   return (
     <>
       <Head>
-        <title>Neuro for Employers | forcorporate2</title>
+        <title>Neuro for Employers - ADHD Support at Work</title>
         <meta
           name="description"
-          content="ADHD-specific workplace support for employers. Improve productivity, reduce hidden performance drag, and give HR a more credible neuroinclusion offer."
+          content="Your neurodivergent employees are underperforming and not telling you. Neuro is the ADHD tool built for the workplace. Higher output. Lower absence. Clinically backed."
         />
       </Head>
 
-      <div className="min-h-screen bg-[#07111F] text-white font-lexend selection:bg-[#0EA5E9] selection:text-white overflow-x-hidden">
+      <div className="min-h-screen overflow-x-hidden bg-[#07111F] font-lexend text-white selection:bg-[#0EA5E9] selection:text-white">
         <style jsx global>{`
           html { scroll-behavior: smooth; }
           .font-poppins { font-family: 'Poppins', sans-serif; }
           .font-lexend { font-family: 'Lexend Deca', sans-serif; }
-          body {
-            background: #07111F;
+          body { background: #07111F; }
+          @keyframes slow-scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .partner-scroll {
+            animation: slow-scroll 34s linear infinite;
           }
         `}</style>
 
@@ -598,175 +631,207 @@ export default function ForCorporate2Page() {
         <EnquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
         <main>
-          <section className="pt-40 pb-20 px-4 sm:px-6 relative overflow-hidden">
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-cyan-500/10 blur-3xl rounded-full" />
-              <div className="absolute bottom-0 right-0 w-[380px] h-[380px] bg-violet-500/10 blur-3xl rounded-full" />
+          <section className="relative px-4 pb-16 pt-40 sm:px-6 sm:pb-20">
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+              <div className="absolute left-1/2 top-12 h-[800px] w-[800px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
+              <div className="absolute bottom-0 right-0 h-[320px] w-[320px] rounded-full bg-violet-500/10 blur-3xl" />
             </div>
-            <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+            <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
               <div>
-                <SectionTag>Sharper buyer positioning</SectionTag>
-                <h1 className="font-poppins text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tight mb-6">
-                  Your neurodivergent employees are underperforming. They are not telling you.
+                <SectionEyebrow>For employers</SectionEyebrow>
+                <h1 className="mb-6 font-poppins text-4xl font-bold leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-6xl">
+                  Your neurodivergent employees are underperforming. And they&apos;re not telling you.
                 </h1>
-                <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-                  Neuro is an ADHD-specific workplace support offer built for employers who need a more credible answer to hidden performance drag. Higher output. Lower absence. No diagnosis required.
+                <p className="mb-8 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+                  Neuro is the ADHD tool built for the workplace. Higher output. Lower absence. Backed by clinicians.
                 </p>
-
-                <div className="grid sm:grid-cols-2 gap-4 mt-8 max-w-2xl">
-                  {TRUST_BADGES.map((badge) => (
-                    <div key={badge} className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-200 flex items-center gap-3">
-                      <ShieldCheck size={16} className="text-emerald-400 shrink-0" />
-                      <span>{badge}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <CTACluster onPrimaryClick={() => setIsModalOpen(true)} />
+                <CTAButtons onPrimaryClick={() => setIsModalOpen(true)} secondaryHref="#product" secondaryLabel="See how it works" />
               </div>
 
               <div className="space-y-5">
                 <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-4 sm:p-5">
                   <img
                     src="https://NeuroNotionPullZonw.b-cdn.net/Desktopandmobilemockupfinal.webp"
-                    alt="Neuro product view"
-                    className="w-full h-auto rounded-2xl"
+                    alt="Neuro product interface"
+                    className="w-full rounded-2xl"
                   />
                 </div>
-                <div className="rounded-[28px] border border-cyan-500/20 bg-cyan-500/10 p-6">
-                  <div className="text-cyan-200 text-sm font-medium mb-3">Named financial anchor</div>
-                  <div className="text-3xl sm:text-4xl font-bold text-white mb-3 font-poppins">£400k+ hidden annual cost</div>
-                  <p className="text-slate-200 leading-relaxed mb-2">
-                    A practical way to frame the issue for HR and finance in a 1,000-person workforce.
-                  </p>
-                  <p className="text-xs text-cyan-100/80">Source on page: Kessler et al. 2009; de Graaf et al. 2008.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="pb-16 px-4 sm:px-6">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-5">
-              {commercialCase.map((item) => (
-                <StatCard key={item.title} {...item} />
-              ))}
-            </div>
-          </section>
-
-          <section className="py-20 px-4 sm:px-6 bg-[#091524] border-y border-white/5">
-            <div className="max-w-7xl mx-auto">
-              <div className="max-w-3xl mb-10">
-                <SectionTag>Clinical governance moved higher</SectionTag>
-                <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">Clinical oversight, built in as a core trust signal</h2>
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  The strongest asymmetric advantage on this page is now much earlier in the journey. Neuro is positioned with named clinical leadership, not just soft wellbeing language.
-                </p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-5 mb-8">
-                {ADVISORS.map((advisor) => (
-                  <AdvisorCard key={advisor.name} {...advisor} />
-                ))}
-              </div>
-              <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 flex flex-col lg:flex-row gap-6 lg:items-center lg:justify-between">
-                <div>
-                  <div className="text-white text-xl font-semibold mb-2">Clinical governance is now a named pillar</div>
-                  <p className="text-slate-300 leading-relaxed max-w-3xl">
-                    The page explicitly frames governance as a buying criterion. That helps corporate buyers separate Neuro from generic apps and gives procurement a clearer confidence signal.
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-3 text-sm">
-                  <div className="px-4 py-2 rounded-full border border-white/10 bg-white/[0.04]">Named clinicians</div>
-                  <div className="px-4 py-2 rounded-full border border-white/10 bg-white/[0.04]">Safeguarding route</div>
-                  <div className="px-4 py-2 rounded-full border border-white/10 bg-white/[0.04]">Aggregate reporting</div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section id="problem" className="py-20 px-4 sm:px-6">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-start">
-              <div>
-                <SectionTag>Problem framing</SectionTag>
-                <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">Frame the issue as disclosure, support, and performance gaps</h2>
-                <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                  The revised route shifts from broad wellbeing language to a sharper employer narrative. Buyers are shown what is going wrong, why existing support often misses it, and where Neuro sits in the category.
-                </p>
-                <div className="rounded-3xl border border-amber-400/20 bg-amber-400/10 p-6">
-                  <div className="text-amber-200 text-sm font-medium mb-2">An example anchor for the story</div>
-                  <p className="text-white text-lg font-semibold mb-2">At one professional services firm, the visible issue was missed deadlines. The hidden issue was executive function support.</p>
-                  <p className="text-slate-200 leading-relaxed text-sm">
-                    This is framed as an anonymised example to make the problem concrete without introducing unsourced outcome claims.
-                  </p>
-                </div>
-              </div>
-              <div className="grid sm:grid-cols-3 gap-4">
-                {PROBLEM_GAPS.map((gap) => {
-                  const Icon = gap.icon;
-                  return (
-                    <div key={gap.title} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-                      <div className="w-11 h-11 rounded-2xl bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 flex items-center justify-center mb-4">
-                        <Icon size={20} className="text-[#7DD3FC]" />
-                      </div>
-                      <h3 className="text-white text-xl font-semibold mb-3">{gap.title}</h3>
-                      <p className="text-slate-300 leading-relaxed text-sm">{gap.text}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </section>
-
-          <section id="how-it-works" className="py-20 px-4 sm:px-6 bg-[#091524] border-y border-white/5">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
-              <div>
-                <SectionTag>Category definition</SectionTag>
-                <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">Not another wellbeing platform. Not a generic EAP. An ADHD-specific performance tool.</h2>
-                <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                  The new route names the alternatives directly so Neuro can define the category on employer terms. That gives buyers a cleaner mental model and helps the page sound more precise.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    {
-                      title: 'Employee support that feels practical',
-                      text: 'Focus, planning, prioritisation, and overwhelm are treated as workplace performance issues, not just wellbeing talking points.',
-                    },
-                    {
-                      title: 'Manager-facing value',
-                      text: 'The page now makes room for manager conversations, accommodations, and escalations as part of the solution narrative.',
-                    },
-                    {
-                      title: 'HR-ready reporting',
-                      text: 'Aggregate-only reporting is positioned as a governance and procurement feature, not an afterthought.',
-                    },
-                  ].map((item) => (
-                    <div key={item.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                      <div className="text-white font-semibold mb-2">{item.title}</div>
-                      <p className="text-slate-300 text-sm leading-relaxed">{item.text}</p>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {HERO_STATS.map((item) => (
+                    <div key={item.label} className="rounded-3xl border border-white/10 bg-white/[0.04] p-5 text-center">
+                      <div className="mb-2 font-poppins text-3xl font-bold text-white">{item.value}</div>
+                      <div className="text-sm leading-relaxed text-slate-300">{item.label}</div>
                     </div>
                   ))}
                 </div>
-                <CTACluster onPrimaryClick={() => setIsModalOpen(true)} compact />
+                <div className="text-center text-xs text-slate-400">When unsupported. Kessler 2005, de Graaf 2008, Canela 2024.</div>
               </div>
-              <DashboardMockup />
             </div>
           </section>
 
-          <section id="comparison" className="py-20 px-4 sm:px-6">
-            <div className="max-w-7xl mx-auto">
-              <div className="max-w-3xl mb-10">
-                <SectionTag>Comparison table added</SectionTag>
-                <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">Where Neuro sits versus common corporate alternatives</h2>
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  The route now includes an explicit comparison to generic wellbeing apps and EAPs so the product is easier to place in a buyer discussion.
-                </p>
+          <section className="border-y border-white/5 bg-[#0A1424] px-4 py-16 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="grid gap-5 md:grid-cols-3">
+                {HERO_STATS.map((item) => (
+                  <div key={`strip-${item.label}`} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 text-center">
+                    <div className="mb-2 font-poppins text-4xl font-bold text-white">{item.value}</div>
+                    <div className="text-base text-slate-200">{item.label}</div>
+                  </div>
+                ))}
               </div>
+              <div className="mt-4 text-center text-sm text-slate-400">When unsupported. Kessler 2005, de Graaf 2008, Canela 2024.</div>
+            </div>
+          </section>
 
+          <section id="problem" className="px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>The problem</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">The £400k problem in a 1,000-person workforce</h2>
+                <p className="text-lg leading-relaxed text-slate-300">15 to 21% of your knowledge workers are neurodivergent. Each one loses around £4,000 a year in productivity without the right support. No one is reporting against this number.</p>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                {PROBLEM_CARDS.map((card) => (
+                  <div key={card.title} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+                    <div className="mb-3 text-xl font-semibold text-white">{card.title}</div>
+                    <p className="mb-4 leading-relaxed text-slate-300">{card.body}</p>
+                    <div className="text-sm text-slate-400">{card.citation}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="border-y border-white/5 bg-[#0A1424] px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-5xl">
+              <div className="mb-10 text-center">
+                <SectionEyebrow>Prevalence</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">This is already in your workforce</h2>
+              </div>
+              <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+                {PREVALENCE_ROWS.map(([label, value], index) => (
+                  <div key={label} className={`flex items-center justify-between gap-4 px-6 py-5 ${index !== PREVALENCE_ROWS.length - 1 ? 'border-b border-white/10' : ''}`}>
+                    <span className="text-lg text-slate-200">{label}</span>
+                    <span className="font-poppins text-2xl font-bold text-white">{value}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 text-center text-sm text-slate-400">Estimates from Neuro platform self-assessments.</div>
+            </div>
+          </section>
+
+          <section id="evidence" className="px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>The evidence</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">What changes when ADHD support actually lands</h2>
+              </div>
+              <div className="grid gap-6 lg:grid-cols-2">
+                <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+                  <div className="mb-5 text-xl font-semibold text-white">Without support</div>
+                  <ul className="space-y-4">
+                    {EVIDENCE_WITHOUT.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-slate-200">
+                        <div className="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6 text-sm text-slate-400">Kessler 2005, de Graaf 2008, Canela 2024.</div>
+                </div>
+                <div className="rounded-3xl border border-cyan-500/20 bg-cyan-500/10 p-6 sm:p-8">
+                  <div className="mb-5 text-xl font-semibold text-white">With the right support</div>
+                  <ul className="space-y-4">
+                    {EVIDENCE_WITH.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-slate-100">
+                        <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-300" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-6 text-sm text-cyan-100/80">Hodgkins 2011, Theeboom 2014, Sedgwick 2025, Canela 2024.</div>
+                </div>
+              </div>
+              <div className="mt-6 text-center text-lg text-slate-300">The gap between these two columns is the opportunity.</div>
+            </div>
+          </section>
+
+          <section id="clinical-team" className="border-y border-white/5 bg-[#0A1424] px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>Clinical team</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Clinicians run the platform. Not marketers.</h2>
+              </div>
+              <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+                {CLINICAL_TILES.map((person) => (
+                  <div key={person.name} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+                    {person.image ? (
+                      <img src={person.image} alt={person.name} className="mb-4 h-20 w-20 rounded-full object-cover border border-white/10" />
+                    ) : (
+                      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]">
+                        <ShieldCheck size={28} className="text-cyan-300" />
+                      </div>
+                    )}
+                    <div className="mb-1 text-xl font-semibold text-white">{person.name}</div>
+                    <div className="mb-3 text-sm text-cyan-300">{person.role}</div>
+                    <p className="text-sm leading-relaxed text-slate-300">{person.summary}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>Where employers get stuck</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Three gaps, not one</h2>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                {GAP_CARDS.map((card) => (
+                  <div key={card.title} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+                    <div className="mb-3 text-xl font-semibold text-white">{card.title}</div>
+                    <p className="leading-relaxed text-slate-300">{card.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="product" className="border-y border-white/5 bg-[#0A1424] px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+              <div>
+                <SectionEyebrow>The product</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Not another wellbeing app. Not a generic EAP. A performance tool built around ADHD.</h2>
+                <p className="mb-8 text-lg leading-relaxed text-slate-300">Neuro helps your people get more done, with less drag. Every design choice serves that.</p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {PRODUCT_TILES.map((tile) => (
+                    <div key={tile.title} className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+                      <div className="mb-2 text-lg font-semibold text-white">{tile.title}</div>
+                      <p className="text-sm leading-relaxed text-slate-300">{tile.body}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <DashboardMock />
+                <div className="mt-4 text-center text-sm text-slate-300"><span className="font-semibold text-white">The HR view. Outcomes and trends only.</span></div>
+              </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>The comparison</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">How Neuro compares</h2>
+              </div>
               <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
                 <table className="w-full text-left">
-                  <thead className="bg-white/[0.04] text-slate-200 text-sm">
+                  <thead className="bg-white/[0.04] text-sm text-slate-200">
                     <tr>
                       <th className="px-5 py-4 font-semibold">Capability</th>
-                      <th className="px-5 py-4 font-semibold">Generic wellbeing apps</th>
+                      <th className="px-5 py-4 font-semibold">Wellbeing apps</th>
                       <th className="px-5 py-4 font-semibold">EAPs</th>
                       <th className="px-5 py-4 font-semibold text-cyan-300">Neuro</th>
                     </tr>
@@ -775,7 +840,7 @@ export default function ForCorporate2Page() {
                     {COMPARISON_ROWS.map((row) => (
                       <tr key={row[0]} className="border-t border-white/10 text-sm sm:text-base">
                         {row.map((cell, index) => (
-                          <td key={`${row[0]}-${index}`} className={`px-5 py-4 ${index === 0 ? 'text-white font-medium' : 'text-slate-300'} ${index === 3 ? 'text-cyan-300 font-semibold' : ''}`}>
+                          <td key={`${row[0]}-${index}`} className={`px-5 py-4 ${index === 0 ? 'font-medium text-white' : 'text-slate-300'} ${index === 3 ? 'font-semibold text-cyan-300' : ''}`}>
                             {cell}
                           </td>
                         ))}
@@ -784,213 +849,243 @@ export default function ForCorporate2Page() {
                   </tbody>
                 </table>
               </div>
+              <div className="mt-4 text-sm text-slate-400">Full source notes on request.</div>
             </div>
           </section>
 
-          <section className="py-20 px-4 sm:px-6 bg-[#091524] border-y border-white/5">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
-              <div>
-                <SectionTag>Deployment options</SectionTag>
-                <h2 id="pilot" className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">Two routes for buyers: pilot first or enterprise rollout</h2>
-                <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                  Larger buyers need a path beyond a single pilot offer. This route now gives both a lower-friction pilot path and a scale-up option for employers who already know they want broader access.
-                </p>
-                <div className="grid gap-5">
-                  {DEPLOYMENT_OPTIONS.map((option) => (
-                    <div key={option.title} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-                      <div className="flex items-center justify-between gap-4 mb-3">
-                        <div>
-                          <h3 className="text-white text-2xl font-semibold font-poppins">{option.title}</h3>
-                          <p className="text-slate-400 text-sm">{option.subtitle}</p>
-                        </div>
-                        <Briefcase className="text-[#7DD3FC]" />
-                      </div>
-                      <ul className="space-y-3">
-                        {option.points.map((point) => (
-                          <li key={point} className="flex items-start gap-3 text-slate-300 text-sm leading-relaxed">
-                            <CheckCircle2 size={18} className="text-emerald-400 shrink-0 mt-0.5" />
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
+          <section id="pricing" className="border-y border-white/5 bg-[#0A1424] px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>How to buy</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Start with a pilot. Scale when it works.</h2>
               </div>
-
-              <div className="space-y-6">
-                <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-                  <SectionTag>Use cases made concrete</SectionTag>
-                  <h3 className="text-white text-2xl font-semibold mb-4 font-poppins">Specific workplace scenarios covered</h3>
-                  <div className="grid sm:grid-cols-2 gap-3">
-                    {USE_CASES.map((useCase) => (
-                      <div key={useCase} className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-200 flex items-center gap-3">
-                        <CheckCircle2 size={16} className="text-cyan-300 shrink-0" />
-                        <span>{useCase}</span>
+              <div className="grid gap-5 lg:grid-cols-2">
+                {BUYING_OPTIONS.map((option) => (
+                  <div key={option.title} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+                    <div className="mb-4 flex items-center justify-between gap-4">
+                      <div>
+                        <h3 className="font-poppins text-2xl font-bold text-white">{option.title}</h3>
+                        <p className="mt-1 text-slate-300">{option.body}</p>
                       </div>
-                    ))}
+                      <Briefcase className="text-cyan-300" />
+                    </div>
+                    <ul className="space-y-3">
+                      {option.points.map((point) => (
+                        <li key={point} className="flex items-start gap-3 text-slate-200">
+                          <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-400" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <CTAButtons onPrimaryClick={() => setIsModalOpen(true)} secondaryHref="#faq" secondaryLabel="Book a demo to find the right route" />
+              </div>
+            </div>
+          </section>
 
-                <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-                  <SectionTag>Manager layer included</SectionTag>
-                  <h3 className="text-white text-2xl font-semibold mb-3 font-poppins">Managers are part of the buying case</h3>
-                  <p className="text-slate-300 leading-relaxed mb-4">
-                    The revised page now speaks to the manager layer directly, including support for conversations, expectations, and practical response paths when performance concerns appear.
-                  </p>
-                  <div className="rounded-2xl border border-rose-400/20 bg-rose-400/10 p-4 text-sm text-rose-100 leading-relaxed">
-                    Safeguarding and crisis escalation are also called out explicitly, because regulated and risk-aware buyers will look for that before they buy.
+          <section className="px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>What it covers</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">The moments Neuro shows up in</h2>
+              </div>
+              <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                {SCENARIOS.map(([title, body]) => (
+                  <div key={title} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+                    <div className="mb-2 text-lg font-semibold text-white">{title}</div>
+                    <p className="text-slate-300">{body}</p>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </section>
 
-          <section className="py-20 px-4 sm:px-6">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-start">
+          <section className="border-y border-white/5 bg-[#0A1424] px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
               <div>
-                <SectionTag>Social proof clarified</SectionTag>
-                <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">Separate the story into clinical partners, technology, and usage context</h2>
-                <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                  The original mixed different logo types together. This route separates them so the credibility story reads more clearly to employers and procurement teams.
-                </p>
-                <div className="space-y-4">
-                  {[
-                    {
-                      label: 'Clinical partners',
-                      items: 'Dr. Tony Lloyd, Dr. James Kustow, Prof. David Daley',
-                    },
-                    {
-                      label: 'Technology',
-                      items: '11Labs and product infrastructure partners',
-                    },
-                    {
-                      label: 'Usage context',
-                      items: 'Trusted in NHS-linked and employer support settings',
-                    },
-                  ].map((group) => (
-                    <div key={group.label} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                      <div className="text-cyan-300 text-sm font-medium mb-2">{group.label}</div>
-                      <div className="text-white font-semibold">{group.items}</div>
-                    </div>
+                <SectionEyebrow>Managers</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Managers are half the buying case</h2>
+                <p className="mb-6 text-lg leading-relaxed text-slate-300">The biggest unlock for neurodivergent employees is not the tool. It is the manager knowing how to use it.</p>
+                <ul className="space-y-4">
+                  {MANAGER_POINTS.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-slate-200">
+                      <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-cyan-300" />
+                      <span>{item}</span>
+                    </li>
                   ))}
-                </div>
-              </div>
-              <div className="space-y-5">
-                <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
-                  <div className="text-cyan-300 text-sm font-medium mb-3">Named testimonial placeholder area</div>
-                  <blockquote className="text-white text-xl leading-relaxed font-medium mb-4">
-                    “This version now leaves room for a real named pilot quote and title, which would materially strengthen conversion once approved for use.”
-                  </blockquote>
-                  <div className="text-slate-400 text-sm">Recommended final content: named employer or clinic lead, title, and pilot context.</div>
-                </div>
-                <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
-                  <div className="text-cyan-300 text-sm font-medium mb-3">Case study block added</div>
-                  <h3 className="text-white text-2xl font-semibold mb-3 font-poppins">12-week pilot story format</h3>
-                  <p className="text-slate-300 leading-relaxed mb-4">
-                    The page now includes a clear placeholder for a specific, named, or anonymised pilot case study once approved metrics are available.
-                  </p>
-                  <ul className="space-y-3 text-sm text-slate-300">
-                    <li className="flex items-start gap-3"><CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" /><span>Organisation type and workforce context</span></li>
-                    <li className="flex items-start gap-3"><CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" /><span>Activation and repeat usage data</span></li>
-                    <li className="flex items-start gap-3"><CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" /><span>Qualitative manager and employee feedback</span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="py-20 px-4 sm:px-6 bg-[#091524] border-y border-white/5">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
-              <div>
-                <SectionTag>Solutions for</SectionTag>
-                <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">Segmented for the industries buyers expect to see</h2>
-                <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                  Buyers want proof that the message understands their environment. This section gives that signal without overclaiming vertical-specific outcomes.
-                </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {INDUSTRIES.map((industry) => (
-                    <div key={industry} className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
-                      <div className="flex items-center gap-3 mb-2">
-                        <Building2 size={18} className="text-cyan-300" />
-                        <div className="text-white font-semibold">{industry}</div>
-                      </div>
-                      <p className="text-slate-300 text-sm leading-relaxed">
-                        A sharper, more enterprise-ready framing for organisations that need support to be practical, governable, and easy to explain internally.
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <CTACluster onPrimaryClick={() => setIsModalOpen(true)} compact />
+                </ul>
               </div>
               <div className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-violet-500/10 p-8 sm:p-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-cyan-200 text-xs font-medium mb-4">
-                  <Users size={14} />
-                  Enterprise tone upgrade
-                </div>
-                <h3 className="text-white text-3xl font-bold font-poppins mb-4">One buyer-facing brand, clearer procurement language</h3>
-                <p className="text-slate-200 leading-relaxed mb-5">
-                  This route reduces the naming friction from using both Neuro and Claudia at once. It also shifts the voice from warm consumer language to a more precise enterprise style.
-                </p>
-                <div className="grid gap-3 text-sm">
-                  {[
-                    'Primary CTA changed to Book a Demo',
-                    'Persistent CTA added to the navigation',
-                    'Commercial impact moved into the first screen',
-                    'Unsourced round-number outcomes removed',
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-slate-100">
-                      <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
+                <blockquote className="mb-4 font-poppins text-2xl font-semibold leading-relaxed text-white">&quot;The biggest unlock is not the app. It is the manager knowing how to use it.&quot;</blockquote>
+                <div className="text-slate-300">Dr James Kustow, Clinical Lead</div>
+              </div>
+            </div>
+          </section>
+
+          <section className="px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>Working with</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Clinical partners and pilot settings</h2>
+              </div>
+              <div className="space-y-4 overflow-hidden">
+                {PARTNER_ROWS.map((row) => (
+                  <div key={row.label} className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
+                    <div className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">{row.label}</div>
+                    <div className="overflow-hidden">
+                      <div className="partner-scroll flex min-w-max gap-3">
+                        {[...row.items, ...row.items].map((item, index) => (
+                          <div key={`${row.label}-${item}-${index}`} className="flex min-h-[52px] min-w-[180px] items-center justify-center rounded-2xl border border-white/10 bg-[#111827] px-4 py-3 text-center text-sm text-slate-300 grayscale">
+                            {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section className="border-y border-white/5 bg-[#0A1424] px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl">
+              <div className="mb-10 max-w-3xl">
+                <SectionEyebrow>By industry</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Where we see the biggest impact</h2>
+              </div>
+              <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+                {INDUSTRY_CARDS.map((card) => (
+                  <div key={card.title} className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+                    <div className="mb-3 flex items-center gap-3">
+                      <Building2 size={18} className="text-cyan-300" />
+                      <div className="text-lg font-semibold text-white">{card.title}</div>
+                    </div>
+                    <p className="text-sm leading-relaxed text-slate-300">{card.body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="procurement" className="px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+              <div>
+                <SectionEyebrow>For procurement</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Easy to sign off</h2>
+                <div className="space-y-4">
+                  {PROCUREMENT_POINTS.map((item) => (
+                    <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-slate-200">
+                      <Lock size={18} className="mt-0.5 shrink-0 text-cyan-300" />
                       <span>{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
+              <div className="rounded-[32px] border border-cyan-500/20 bg-gradient-to-br from-[#0EA5E9]/12 to-violet-500/10 p-8 sm:p-10">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-3 py-1 text-xs uppercase tracking-[0.18em] text-cyan-200">
+                  <ShieldCheck size={14} />
+                  Built for approval
+                </div>
+                <h3 className="mb-4 font-poppins text-3xl font-bold text-white">Security, governance and commercial clarity in one flow</h3>
+                <p className="mb-6 leading-relaxed text-slate-200">From the first demo to go-live, this offer is structured to reduce friction for HR, InfoSec and procurement. That is part of the product, not an afterthought.</p>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {['Outcome tracking', 'Clinical governance', 'Aggregate reporting', 'DPA-ready'].map((item) => (
+                    <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-slate-100">{item}</div>
+                  ))}
+                </div>
+              </div>
             </div>
           </section>
 
-          <section id="faq" className="py-20 px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-10">
-                <SectionTag>Objection-led FAQ</SectionTag>
-                <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">Questions from HR, People, and finance stakeholders</h2>
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  The FAQ now focuses on purchase objections and governance questions rather than general information.
-                </p>
+          <section id="faq" className="border-y border-white/5 bg-[#0A1424] px-4 py-20 sm:px-6">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-10 text-center">
+                <SectionEyebrow>FAQ</SectionEyebrow>
+                <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-4xl">Questions we hear from HR, People and finance leaders</h2>
               </div>
               <FAQAccordion />
             </div>
           </section>
 
-          <section className="px-4 sm:px-6 pb-20">
-            <div className="max-w-6xl mx-auto rounded-[36px] border border-cyan-500/20 bg-gradient-to-br from-[#0EA5E9]/15 to-violet-500/10 p-8 sm:p-12 text-center">
-              <SectionTag>Final CTA</SectionTag>
-              <h2 className="font-poppins text-3xl sm:text-5xl font-bold text-white mb-4">Book a demo and see whether this solves a real employer problem</h2>
-              <p className="text-slate-200 text-lg leading-relaxed max-w-3xl mx-auto">
-                This version is designed to sound more credible to corporate buyers, surface the economic case earlier, and create more conversion opportunities throughout the page.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <section id="final-cta" className="px-4 pb-20 pt-20 sm:px-6">
+            <div className="mx-auto max-w-6xl rounded-[36px] border border-cyan-500/20 bg-gradient-to-br from-[#0EA5E9]/16 to-violet-500/10 p-8 text-center sm:p-12">
+              <SectionEyebrow>Talk to us</SectionEyebrow>
+              <h2 className="mb-4 font-poppins text-3xl font-bold text-white sm:text-5xl">Book a demo. See if this solves a real problem for your business.</h2>
+              <p className="mx-auto max-w-3xl text-lg leading-relaxed text-slate-200">30-minute call. No commitment. We respond within one business day.</p>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white text-[#07111F] hover:bg-slate-100 font-semibold transition-colors inline-flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto rounded-xl bg-white px-8 py-4 font-semibold text-[#07111F] transition-colors hover:bg-slate-100 inline-flex items-center justify-center gap-2"
                 >
-                  Book a Demo
+                  Book a demo
                   <ArrowRight size={18} />
                 </button>
                 <a
-                  href="#problem"
-                  className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/20 text-white hover:border-white/40 transition-colors"
+                  href="#final-cta"
+                  className="w-full sm:w-auto rounded-xl border border-white/20 px-8 py-4 font-semibold text-white transition-colors hover:border-white/40 inline-flex items-center justify-center gap-2"
                 >
-                  Review the business case
+                  <Download size={18} />
+                  Download the employer one-pager
                 </a>
               </div>
-              <p className="text-sm text-slate-200/80 mt-4">30-minute call. No commitment. Response within 1 business day.</p>
             </div>
           </section>
         </main>
 
-        <LPFooter />
-        <Toaster />
+        <footer className="border-t border-white/10 bg-[#060D18] px-4 py-14 sm:px-6">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-8 flex flex-col gap-4 border-b border-white/10 pb-8 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <div className="mb-2 font-poppins text-2xl font-bold text-white">Neuro is the ADHD tool built for the workplace.</div>
+                <a href="https://www.neuro-notion.com" target="_blank" rel="noopener noreferrer" className="text-sm text-cyan-300 underline underline-offset-2">
+                  Looking for Neuro for individuals? Visit our consumer site.
+                </a>
+              </div>
+              <button onClick={() => setIsModalOpen(true)} className="rounded-xl bg-[#0EA5E9] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#0284C7]">
+                Book a demo
+              </button>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+              {FOOTER_COLUMNS.map((column) => (
+                <div key={column.title}>
+                  <div className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-slate-400">{column.title}</div>
+                  <div className="space-y-3">
+                    {column.links.map((link) => {
+                      const isInternalRoute = link.href.startsWith('/');
+                      const isAnchor = link.href.startsWith('#');
+
+                      if (isInternalRoute) {
+                        return (
+                          <Link key={link.label} href={link.href} className="block text-slate-300 transition-colors hover:text-white">
+                            {link.label}
+                          </Link>
+                        );
+                      }
+
+                      return (
+                        <a
+                          key={link.label}
+                          href={link.href}
+                          target={isAnchor ? undefined : '_blank'}
+                          rel={isAnchor ? undefined : 'noopener noreferrer'}
+                          className="block text-slate-300 transition-colors hover:text-white"
+                        >
+                          {link.label}
+                        </a>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-400">Part of Neuro Ltd. Registered in England and Wales. © 2026 Neuro Ltd.</div>
+          </div>
+        </footer>
       </div>
     </>
   );
