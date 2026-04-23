@@ -353,14 +353,6 @@ const Index = () => {
               </div>
               <div className="flex items-center space-x-6">
                 <a 
-                  href="https://theblogspace.notion.site/Neuro-Notion-Cookies-Policy-c8fde8f3024a4a0389b888d0ec107e5b?pvs=4" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-sm text-white/60 hover:text-white/80 transition-colors"
-                >
-                  Cookies
-                </a>
-                <a 
                   href="https://neuro-deploy.vercel.app/privacy" 
                   target="_blank" 
                   rel="noopener noreferrer" 
