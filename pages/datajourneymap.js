@@ -17,7 +17,7 @@ const DataJourneyMap = () => {
       dataTypes: [
         { name: 'Email Address', category: 'identifier', retention: 'Account lifetime' },
         { name: 'Display Name', category: 'identifier', retention: 'Account lifetime' },
-        { name: 'Clinic Reference', category: 'identifier', retention: 'Account lifetime', clinicOnly: true },
+        { name: 'Clinic Reference Number', category: 'identifier', retention: 'Account lifetime', clinicOnly: true },
         { name: 'Device Info', category: 'technical', retention: '24 months' },
         { name: 'IP Address', category: 'technical', retention: 'Anonymized' },
       ],
@@ -67,6 +67,9 @@ const DataJourneyMap = () => {
         { name: 'Payment Data', category: 'financial', processor: 'Stripe', shared: 'Transaction only' },
         { name: 'Push Tokens', category: 'technical', processor: 'Firebase', shared: 'Device tokens' },
         { name: 'Support Chats', category: 'communication', processor: 'Crisp', shared: 'Conversations' },
+        { name: 'Transactional Email', category: 'communication', processor: 'Resend', shared: 'Account emails' },
+        { name: 'Marketing Email', category: 'communication', processor: 'Moosend', shared: 'With consent only' },
+        { name: 'Referral Tracking', category: 'technical', processor: 'Rewardful', shared: 'Cookie-based, no PII' },
         { name: 'Clinical Reports', category: 'health', processor: 'Healthcare Provider', shared: 'Progress data', clinicOnly: true },
       ],
       safeguards: ['Standard Contractual Clauses', 'DPAs in place', 'No data selling'],
@@ -106,12 +109,22 @@ const DataJourneyMap = () => {
   ];
 
   const processors = [
-    { name: 'Supabase', role: 'Database', color: '#3ECF8E', compliance: 'SOC 2 Type II, GDPR', location: 'UK/EEA' },
+    { name: 'Supabase', role: 'Database', color: '#3ECF8E', compliance: 'SOC 2 Type II, GDPR', location: 'UK/EEA (AWS EU)' },
+    { name: 'GCP', role: 'Cloud / Identity', color: '#4285F4', compliance: 'ISO 27001, GDPR', location: 'EU/UK' },
+    { name: 'Vercel', role: 'Web Hosting', color: '#FFFFFF', compliance: 'GDPR, TLS in transit', location: 'USA/EU' },
+    { name: 'Cloudflare', role: 'CDN / Security', color: '#F38020', compliance: 'SOC 2 Type II, GDPR', location: 'USA/EU' },
     { name: 'Stripe', role: 'Payments', color: '#635BFF', compliance: 'PCI DSS Level 1', location: 'USA (SCC)' },
     { name: 'Vapi AI', role: 'Voice', color: '#FF6B6B', compliance: 'Privacy-focused', location: 'Ephemeral' },
-    { name: 'PostHog', role: 'Analytics', color: '#F9BD2B', compliance: 'GDPR', location: 'USA (SCC)' },
-    { name: 'Crisp', role: 'Support', color: '#45B7D1', compliance: 'GDPR', location: 'EU' },
-    { name: 'Firebase', role: 'Push', color: '#FFCA28', compliance: 'Google DPA', location: 'Global' },
+    { name: 'Deepgram', role: 'Speech-to-Text', color: '#13EF93', compliance: 'SOC 2 Type II, GDPR', location: 'USA (SCC)' },
+    { name: 'ElevenLabs', role: 'Voice Synthesis', color: '#8B5CF6', compliance: 'GDPR', location: 'USA/EU' },
+    { name: 'OpenAI', role: 'AI / LLM', color: '#10A37F', compliance: 'GDPR, SCC, no training on API data', location: 'USA (SCC)' },
+    { name: 'Mem0', role: 'AI Memory', color: '#A855F7', compliance: 'GDPR', location: 'USA' },
+    { name: 'PostHog', role: 'Analytics', color: '#F9BD2B', compliance: 'GDPR', location: 'USA/EU' },
+    { name: 'Crisp', role: 'Support', color: '#45B7D1', compliance: 'GDPR, E2E encrypted', location: 'EU' },
+    { name: 'Firebase', role: 'Push', color: '#FFCA28', compliance: 'Google DPA', location: 'USA/EU' },
+    { name: 'Resend', role: 'Transactional Email', color: '#000000', compliance: 'GDPR, TLS', location: 'EU (Ireland)' },
+    { name: 'Moosend', role: 'Marketing Email', color: '#FF5A5F', compliance: 'GDPR, consent-based', location: 'EU' },
+    { name: 'Rewardful', role: 'Referrals', color: '#22C55E', compliance: 'GDPR, no PII shared', location: 'USA' },
   ];
 
   const userRights = [
@@ -121,6 +134,7 @@ const DataJourneyMap = () => {
     { right: 'Restriction', article: 'Art. 18', icon: '⏸️' },
     { right: 'Portability', article: 'Art. 20', icon: '📦' },
     { right: 'Object', article: 'Art. 21', icon: '✋' },
+    { right: 'Withdraw Consent', article: 'Art. 7(3)', icon: '🔓' },
   ];
 
   const getCategoryColor = (category) => {
@@ -806,7 +820,7 @@ const DataJourneyMap = () => {
                   <rect x="-70" y="-50" width="140" height="100" rx="14" fill="#1E1635" stroke="#7C3AED" strokeWidth="2" />
                   <text x="0" y="-22" textAnchor="middle" fontSize="22">🤖</text>
                   <text x="0" y="2" textAnchor="middle" fill="#7C3AED" fontSize="12" fontWeight="700">LLM</text>
-                  <text x="0" y="18" textAnchor="middle" fill="#C4B5FD" fontSize="9">Claudia / OpenAI</text>
+                  <text x="0" y="18" textAnchor="middle" fill="#C4B5FD" fontSize="9">OpenAI + Mem0</text>
                   <text x="0" y="35" textAnchor="middle" fill="#94A3B8" fontSize="8">AI Processing</text>
                 </g>
 
@@ -950,7 +964,7 @@ const DataJourneyMap = () => {
                 border: '1px solid rgba(255, 107, 107, 0.2)',
               }}>
                 <div style={{ fontSize: '13px', fontWeight: '600', color: '#FF6B6B', marginBottom: '4px' }}>🎙️ Voice Flow</div>
-                <div style={{ fontSize: '11px', color: '#94A3B8' }}>You → Vapi (transcribe) → LLM → Function → Supabase</div>
+                <div style={{ fontSize: '11px', color: '#94A3B8' }}>You → Vapi / Deepgram (transcribe, ephemeral) → LLM → ElevenLabs (reply) → Supabase</div>
               </div>
               <div style={{
                 padding: '12px 16px',
@@ -959,7 +973,7 @@ const DataJourneyMap = () => {
                 border: '1px solid rgba(124, 58, 237, 0.2)',
               }}>
                 <div style={{ fontSize: '13px', fontWeight: '600', color: '#7C3AED', marginBottom: '4px' }}>🤖 Chat Flow</div>
-                <div style={{ fontSize: '11px', color: '#94A3B8' }}>You → App → LLM (Claudia/OpenAI) → Function → Supabase</div>
+                <div style={{ fontSize: '11px', color: '#94A3B8' }}>You → App → LLM (OpenAI, with Mem0 memory layer) → Function → Supabase</div>
               </div>
               <div style={{
                 padding: '12px 16px',
@@ -1161,8 +1175,8 @@ const DataJourneyMap = () => {
             fontSize: '12px',
             color: '#475569',
           }}>
-            Neuro Notion App Limited | Company No. 15345630 | Loughborough, UK<br />
-            Privacy Policy v3.0 | Last Updated: December 2025
+            Neuro Notion App Limited | Company No. 15345630 | 124 City Road, London, England, EC1V 2NX<br />
+            Privacy Notice | Last Updated: 22 April 2026
           </div>
           <div style={{
             marginTop: '16px',
