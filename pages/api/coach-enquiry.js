@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
 
   const { firstName, email, isCoach } = req.body;
-  const listId = process.env.NEXT_PUBLIC_MOOSEND_LIST_ID;
+  const listId = 'fb23c9f9-183d-41d7-acd3-ac9c128a142a';
   const apiKey = process.env.NEXT_PUBLIC_MOOSEND_API_KEY;
 
   if (!firstName || !email || !listId || !apiKey) {

@@ -469,7 +469,7 @@ const ForCoaches = () => {
           {/* Hero Image - same as main page */}
           <div className="flex justify-center mb-10">
             <img 
-              src="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20-%20Static%20Demo.png" 
+              src="https://NeuroNotionPullZonw.b-cdn.net/Desktopandmobilemockupfinal.webp" 
               alt="Claudia ADHD App Interface" 
               className="rounded-lg w-full max-w-[520px] md:max-w-[680px] h-auto shadow-2xl shadow-cyan-500/10"
             />
@@ -547,15 +547,13 @@ const ForCoaches = () => {
             </p>
           </div>
 
-          {/* Analytics Placeholder */}
+          {/* Analytics Screenshot */}
           <div className="relative max-w-4xl mx-auto">
-            <div className="w-full aspect-[16/9] bg-slate-800/50 rounded-2xl border-2 border-dashed border-slate-600 flex items-center justify-center">
-              <div className="text-center p-8">
-                <BarChart3 size={48} className="text-slate-500 mx-auto mb-4" />
-                <p className="text-slate-400 text-lg font-medium">Coach Analytics Dashboard</p>
-                <p className="text-slate-500 text-sm mt-2">Track individual ADHD client progress over time</p>
-              </div>
-            </div>
+            <img 
+              src="https://NeuroNotionPullZonw.b-cdn.net/ADHD%20Coaching%20analytics%20dashboard.webp"
+              alt="ADHD Coaching Analytics Dashboard - Track client progress over time"
+              className="w-full rounded-2xl border border-slate-700 shadow-2xl shadow-cyan-500/10"
+            />
           </div>
         </div>
       </section>
