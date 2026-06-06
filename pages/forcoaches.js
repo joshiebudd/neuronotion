@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { 
   ArrowRight, 
@@ -8,14 +8,17 @@ import {
   Brain,
   Zap,
   TrendingUp,
-  Mic,
   Users,
   Star,
   Shield,
   BarChart3,
-  Clock,
   Heart,
-  Menu
+  Sparkles,
+  ListChecks,
+  RefreshCw,
+  Activity,
+  BookOpen,
+  Palette
 } from 'lucide-react';
 
 import { LPFooter } from '../components/ClaudiaLandingPage/LPFooter';
@@ -25,7 +28,7 @@ import { Toaster } from '../components/ui/toaster';
 const CoachPageHeader = ({ onGetStartedClick }) => {
   const [scrolled, setScrolled] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -214,7 +217,7 @@ const CTAModal = ({ isOpen, onClose, onOpenForm }) => {
           </div>
           
           <h3 className="text-2xl font-bold text-white mb-3 font-poppins leading-tight">
-            Get Claudia for your coaching practice
+            Get Claudia for your ADHD coaching practice
           </h3>
           <p className="text-slate-400 text-base leading-relaxed mb-8">
             Choose how you would like to get started.
@@ -250,27 +253,153 @@ const CTAModal = ({ isOpen, onClose, onOpenForm }) => {
   );
 };
 
-// --- Benefit Card ---
-const BenefitCard = ({ icon, title, desc }) => (
-  <div className="glass-card p-8 rounded-2xl hover:border-slate-500 transition-all hover:scale-[1.02] group h-full flex flex-col">
-    <div className="mb-6 group-hover:scale-110 transition-transform duration-300 bg-slate-800/50 w-16 h-16 rounded-xl flex items-center justify-center border border-slate-700">
-      {icon}
-    </div>
-    <h3 className="text-xl font-bold mb-3 font-poppins text-white">{title}</h3>
-    <p className="text-slate-400 leading-relaxed text-sm flex-grow">{desc}</p>
-  </div>
-);
+// --- Interactive Function Better / Feel Better Section ---
+const InteractiveCards = () => {
+  const [activeCard, setActiveCard] = useState(null); // 'function' | 'feel' | null
+  const [hoveredItem, setHoveredItem] = useState(null);
 
-// --- Feature Card ---
-const FeatureCard = ({ icon, title, desc, color, bg }) => (
-  <div className="glass-card p-6 h-full flex flex-col rounded-2xl hover:-translate-y-1 transition-transform duration-300 group hover:border-slate-600">
-    <div className={`w-12 h-12 ${bg} ${color} rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
-      {icon}
+  const functionItems = [
+    {
+      id: 'capture',
+      icon: <Brain size={24} className="text-cyan-400" />,
+      title: 'Capture chaotic thoughts and plan your day',
+      desc: 'Your ADHD clients can voice-dump everything in their head. Claudia captures it all and builds a realistic plan for their day, so nothing gets lost and nothing feels overwhelming.'
+    },
+    {
+      id: 'breakdown',
+      icon: <ListChecks size={24} className="text-emerald-400" />,
+      title: 'Break down tasks in the moment',
+      desc: 'When your client is staring at a task and cannot start, Claudia breaks it into micro-steps right there and then. The same approach you would use in a session, available instantly.'
+    },
+    {
+      id: 'routines',
+      icon: <RefreshCw size={24} className="text-purple-400" />,
+      title: 'Get support sticking to ADHD-friendly routines',
+      desc: 'Routines are hard for ADHD brains. Claudia provides gentle accountability and helps your clients follow through on the structures you build together in sessions.'
+    }
+  ];
+
+  const feelItems = [
+    {
+      id: 'regulation',
+      icon: <Activity size={24} className="text-pink-400" />,
+      title: 'State-based regulation exercises',
+      desc: 'As your ADHD client talks to Claudia, she detects when they are dysregulated and offers grounding and regulation exercises in the moment, right inside the app.'
+    },
+    {
+      id: 'mood',
+      icon: <BarChart3 size={24} className="text-orange-400" />,
+      title: 'Automatic mood logging',
+      desc: 'As your client converses with Claudia throughout the week, she tracks their mood patterns automatically. You can review this together in your next coaching session.'
+    },
+    {
+      id: 'mantras',
+      icon: <BookOpen size={24} className="text-yellow-400" />,
+      title: 'Coaching mantras and session learnings reinforced',
+      desc: 'The breakthroughs from your sessions do not get forgotten. Claudia reminds your ADHD clients of their mantras, reframes, and key learnings exactly when they need to hear them.'
+    }
+  ];
+
+  const handleCardClick = (card) => {
+    if (activeCard === card) {
+      setActiveCard(null);
+      setHoveredItem(null);
+    } else {
+      setActiveCard(card);
+      setHoveredItem(null);
+    }
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto">
+      {/* Two main cards */}
+      <div className={`flex flex-col sm:flex-row items-stretch justify-center gap-6 transition-all duration-500 ease-out ${activeCard ? 'mb-8' : ''}`}>
+        
+        {/* Function Better Card */}
+        <div
+          onClick={() => handleCardClick('function')}
+          className={`cursor-pointer rounded-2xl border p-8 transition-all duration-500 ease-out transform ${
+            activeCard === 'function'
+              ? 'bg-[#1E293B] border-cyan-500/50 shadow-lg shadow-cyan-500/10 scale-105 sm:mx-auto w-full sm:max-w-md'
+              : activeCard === 'feel'
+              ? 'opacity-0 scale-95 absolute pointer-events-none'
+              : 'bg-[#1E293B] border-slate-700 hover:border-cyan-500/30 hover:shadow-lg hover:shadow-cyan-500/5 hover:-translate-y-1 flex-1'
+          }`}
+        >
+          <div className="text-center">
+            <div className="w-16 h-16 bg-cyan-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <Zap size={32} className="text-cyan-400" />
+            </div>
+            <h3 className="text-2xl font-bold text-white font-poppins mb-2">Function Better</h3>
+            <p className="text-slate-400 text-sm">Help your ADHD clients get things done between sessions</p>
+            {!activeCard && (
+              <p className="text-cyan-400 text-xs mt-4 font-medium">Click to explore</p>
+            )}
+            {activeCard === 'function' && (
+              <p className="text-cyan-400 text-xs mt-4 font-medium">Click to collapse</p>
+            )}
+          </div>
+        </div>
+
+        {/* Feel Better Card */}
+        <div
+          onClick={() => handleCardClick('feel')}
+          className={`cursor-pointer rounded-2xl border p-8 transition-all duration-500 ease-out transform ${
+            activeCard === 'feel'
+              ? 'bg-[#1E293B] border-pink-500/50 shadow-lg shadow-pink-500/10 scale-105 sm:mx-auto w-full sm:max-w-md'
+              : activeCard === 'function'
+              ? 'opacity-0 scale-95 absolute pointer-events-none'
+              : 'bg-[#1E293B] border-slate-700 hover:border-pink-500/30 hover:shadow-lg hover:shadow-pink-500/5 hover:-translate-y-1 flex-1'
+          }`}
+        >
+          <div className="text-center">
+            <div className="w-16 h-16 bg-pink-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <Heart size={32} className="text-pink-400" />
+            </div>
+            <h3 className="text-2xl font-bold text-white font-poppins mb-2">Feel Better</h3>
+            <p className="text-slate-400 text-sm">Help your ADHD clients regulate and stay grounded</p>
+            {!activeCard && (
+              <p className="text-pink-400 text-xs mt-4 font-medium">Click to explore</p>
+            )}
+            {activeCard === 'feel' && (
+              <p className="text-pink-400 text-xs mt-4 font-medium">Click to collapse</p>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Expanded items */}
+      <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 transition-all duration-500 ease-out ${activeCard ? 'opacity-100 translate-y-0 max-h-[800px]' : 'opacity-0 -translate-y-4 max-h-0 overflow-hidden'}`}>
+        {(activeCard === 'function' ? functionItems : feelItems).map((item, idx) => (
+          <div
+            key={item.id}
+            onMouseEnter={() => setHoveredItem(item.id)}
+            onMouseLeave={() => setHoveredItem(null)}
+            className={`bg-slate-800/50 border border-slate-700 rounded-xl p-5 transition-all duration-300 ease-out cursor-default ${
+              hoveredItem === item.id ? 'border-slate-500 shadow-lg scale-[1.02] bg-slate-800/80' : ''
+            }`}
+            style={{ 
+              transitionDelay: `${idx * 100}ms`,
+              opacity: activeCard ? 1 : 0,
+              transform: activeCard ? 'translateY(0)' : 'translateY(20px)'
+            }}
+          >
+            <div className="flex items-center gap-3 mb-3">
+              {item.icon}
+              <h4 className="text-white font-semibold text-sm font-poppins">{item.title}</h4>
+            </div>
+            <div className={`transition-all duration-300 ease-out overflow-hidden ${hoveredItem === item.id ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
+            </div>
+            {hoveredItem !== item.id && (
+              <p className="text-slate-500 text-xs mt-1">Hover to read more</p>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
-    <h3 className="text-lg font-bold text-white mb-2 font-poppins">{title}</h3>
-    <p className="text-slate-400 leading-relaxed flex-grow text-sm">{desc}</p>
-  </div>
-);
+  );
+};
 
 // --- Main Page Component ---
 const ForCoaches = () => {
@@ -316,7 +445,7 @@ const ForCoaches = () => {
       <MoosendFormModal isOpen={isFormModalOpen} onClose={closeFormModal} />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-20 lg:pt-32 lg:pb-28 px-6 relative overflow-hidden">
+      <section className="pt-20 pb-12 lg:pt-32 lg:pb-20 px-6 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[800px] hero-glow pointer-events-none -z-10"></div>
         <div className="absolute top-20 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
@@ -329,13 +458,22 @@ const ForCoaches = () => {
           </div>
           
           <h1 className="font-poppins font-bold text-4xl md:text-6xl tracking-tight mb-8 leading-[1.15]">
-            Give Your Clients Support<br/>
+            Give Your ADHD Clients Support<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]">Between Every Session</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-            Your clients wake up at 1am overwhelmed. They need to plan their day and nobody is there. Claudia gives them someone to talk to when you are not available, helping them implement everything you work on together.
+          <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+            Your ADHD clients leave sessions motivated. Then real life hits. They get overwhelmed, they spiral, and the cycle continues before your next session. Claudia gives them someone to talk to when you are not available.
           </p>
+
+          {/* Hero Image - same as main page */}
+          <div className="flex justify-center mb-10">
+            <img 
+              src="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20-%20Static%20Demo.png" 
+              alt="Claudia ADHD App Interface" 
+              className="rounded-lg w-full max-w-[520px] md:max-w-[680px] h-auto shadow-2xl shadow-cyan-500/10"
+            />
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <button 
@@ -357,75 +495,44 @@ const ForCoaches = () => {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">The Gap</div>
           <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6 leading-tight">
-            Coaching sessions are powerful.<br/>But what happens in between?
+            ADHD coaching sessions are powerful.<br/>But the gap between them is where progress goes to die.
           </h2>
           <p className="text-slate-400 text-lg leading-relaxed max-w-2xl mx-auto mb-12">
-            Your clients leave sessions motivated and clear. Then real life hits. They get overwhelmed, they forget the plan, and they spiral before the next session. The gap between sessions is where progress goes to die.
+            Your ADHD clients leave sessions with clarity and motivation. Then they get overwhelmed, they forget the plan, they spiral, and the cycle continues. By the time they see you again, you are starting from scratch.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-6 text-left">
             <div className="bg-[#1E293B] p-6 rounded-xl border border-slate-700">
-              <Clock className="text-red-400 mb-4" size={28} />
-              <h3 className="text-white font-bold mb-2 font-poppins">The 1am panic</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">Your client wakes up overwhelmed. They need help breaking something down. You are asleep. They spiral.</p>
+              <Brain className="text-red-400 mb-4" size={28} />
+              <h3 className="text-white font-bold mb-2 font-poppins">The overwhelm hits</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">Your ADHD client wakes up with a racing mind. They need help breaking something down right now. You are not available. They spiral.</p>
             </div>
             <div className="bg-[#1E293B] p-6 rounded-xl border border-slate-700">
-              <Brain className="text-orange-400 mb-4" size={28} />
+              <RefreshCw className="text-orange-400 mb-4" size={28} />
               <h3 className="text-white font-bold mb-2 font-poppins">The implementation gap</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">They know what to do. They just cannot get started. Without support in the moment, the plan stays a plan.</p>
+              <p className="text-slate-400 text-sm leading-relaxed">They know what to do. They just cannot get started without support in the moment. The plan stays a plan, and the cycle continues.</p>
             </div>
             <div className="bg-[#1E293B] p-6 rounded-xl border border-slate-700">
               <TrendingUp className="text-yellow-400 mb-4" size={28} />
               <h3 className="text-white font-bold mb-2 font-poppins">Slow progress</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">Without daily reinforcement, clients take months to build habits that could take weeks with the right support system.</p>
+              <p className="text-slate-400 text-sm leading-relaxed">Without daily reinforcement, your ADHD clients take months to build habits that could take weeks with the right support system between sessions.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Solution Section */}
+      {/* Solution Section with Interactive Cards */}
       <section id="how-it-works" className="py-24 bg-[#0F172A] relative">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">The Solution</div>
-            <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">A 24/7 support system your clients can use between sessions</h2>
+            <h2 className="font-poppins font-bold text-3xl md:text-5xl mb-6 text-white">A 24/7 ADHD support system between sessions</h2>
             <p className="text-xl text-slate-400 font-light">
-              Claudia is not here to replace you. She is here to help your clients implement what you teach, exactly when they need it most.
+              Claudia is not here to replace ADHD coaches. She is here to help your ADHD clients implement what you teach, and get support when you cannot provide it.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BenefitCard 
-              icon={<Mic size={32} className="text-purple-400"/>}
-              title="Someone to talk to at 1am"
-              desc="When your client wakes up overwhelmed, they can speak to Claudia. She helps them process, plan, and calm down so they can get back to sleep."
-            />
-            <BenefitCard 
-              icon={<Zap size={32} className="text-cyan-400"/>}
-              title="Break tasks down in the moment"
-              desc="When they are staring at a task and cannot start, Claudia breaks it into micro-steps. The same approach you would use, available instantly."
-            />
-            <BenefitCard 
-              icon={<Brain size={32} className="text-emerald-400"/>}
-              title="Reinforce your coaching"
-              desc="Claudia helps your clients follow through on the strategies you build together. She is an extension of your practice, not a replacement."
-            />
-            <BenefitCard 
-              icon={<Clock size={32} className="text-orange-400"/>}
-              title="Daily planning support"
-              desc="Every morning, your clients can talk through their day with Claudia. She helps them prioritise, time-block, and set realistic expectations."
-            />
-            <BenefitCard 
-              icon={<Heart size={32} className="text-pink-400"/>}
-              title="Emotional regulation"
-              desc="When they are overwhelmed or stuck in a loop, Claudia helps them regulate. Grounding techniques, reframing, and gentle accountability."
-            />
-            <BenefitCard 
-              icon={<Shield size={32} className="text-yellow-400"/>}
-              title="Built for ADHD brains"
-              desc="This is not a generic chatbot. Claudia is designed from the ground up for how ADHD brains think, process, and get things done."
-            />
-          </div>
+          <InteractiveCards />
         </div>
       </section>
 
@@ -434,9 +541,9 @@ const ForCoaches = () => {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">Coach Dashboard</div>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6">See how each client is doing over time</h2>
+            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6">Track your ADHD clients&apos; progress between sessions</h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-              Track your clients&apos; progress between sessions. See their engagement, mood patterns, and how well they are implementing the strategies you work on together.
+              See how each individual client is doing over time. Track engagement, mood patterns, and even see progress on clinical measures like mCASS. Walk into every session fully informed.
             </p>
           </div>
 
@@ -446,7 +553,7 @@ const ForCoaches = () => {
               <div className="text-center p-8">
                 <BarChart3 size={48} className="text-slate-500 mx-auto mb-4" />
                 <p className="text-slate-400 text-lg font-medium">Coach Analytics Dashboard</p>
-                <p className="text-slate-500 text-sm mt-2">Track individual client progress over time</p>
+                <p className="text-slate-500 text-sm mt-2">Track individual ADHD client progress over time</p>
               </div>
             </div>
           </div>
@@ -458,7 +565,7 @@ const ForCoaches = () => {
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">Competitive Edge</div>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6">Differentiate yourself in a saturated market</h2>
+            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6">Differentiate yourself in a saturated ADHD coaching market</h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
               The ADHD coaching market is crowded. Claudia gives you an unfair advantage that makes your coaching more effective, your reviews better, and your referrals stronger.
             </p>
@@ -468,12 +575,12 @@ const ForCoaches = () => {
             <div className="bg-[#1E293B] p-8 rounded-2xl border border-slate-700 hover:border-slate-500 transition-all">
               <Star className="text-yellow-400 mb-5" size={32} />
               <h3 className="text-xl font-bold text-white mb-3 font-poppins">Better reviews</h3>
-              <p className="text-slate-400 leading-relaxed">When your clients get results faster because they have support between sessions, they leave better reviews. Better reviews mean more clients.</p>
+              <p className="text-slate-400 leading-relaxed">When your ADHD clients get results faster because they have support between sessions, they leave better reviews. Better reviews mean more clients finding you.</p>
             </div>
             <div className="bg-[#1E293B] p-8 rounded-2xl border border-slate-700 hover:border-slate-500 transition-all">
               <Users className="text-emerald-400 mb-5" size={32} />
               <h3 className="text-xl font-bold text-white mb-3 font-poppins">More referrals</h3>
-              <p className="text-slate-400 leading-relaxed">Clients who see real progress tell their friends. Claudia accelerates that progress, which accelerates your word-of-mouth growth.</p>
+              <p className="text-slate-400 leading-relaxed">ADHD clients who see real progress tell their friends. Claudia accelerates that progress, which accelerates your word-of-mouth growth.</p>
             </div>
             <div className="bg-[#1E293B] p-8 rounded-2xl border border-slate-700 hover:border-slate-500 transition-all">
               <TrendingUp className="text-cyan-400 mb-5" size={32} />
@@ -482,20 +589,41 @@ const ForCoaches = () => {
             </div>
             <div className="bg-[#1E293B] p-8 rounded-2xl border border-slate-700 hover:border-slate-500 transition-all">
               <Shield className="text-purple-400 mb-5" size={32} />
-              <h3 className="text-xl font-bold text-white mb-3 font-poppins">Stand out from every other coach</h3>
-              <p className="text-slate-400 leading-relaxed">Most coaches offer sessions. You offer sessions plus a complete support system. That is a fundamentally different proposition to potential clients.</p>
+              <h3 className="text-xl font-bold text-white mb-3 font-poppins">Stand out from every other ADHD coach</h3>
+              <p className="text-slate-400 leading-relaxed">Most coaches offer sessions. You offer sessions plus a complete ADHD support system. That is a fundamentally different proposition to potential clients.</p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* White Label Section */}
+      <section className="py-16 bg-[#0B1120] border-y border-slate-800">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="bg-[#1E293B] p-8 md:p-10 rounded-2xl border border-slate-700">
+            <div className="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
+              <Palette size={28} className="text-purple-400" />
+            </div>
+            <h3 className="font-poppins font-bold text-2xl md:text-3xl text-white mb-4">Want your own branding on it?</h3>
+            <p className="text-slate-400 text-lg leading-relaxed max-w-xl mx-auto mb-6">
+              White label Claudia with your own brand. Give your ADHD clients a seamless experience that feels like an extension of your coaching practice, not a third-party tool.
+            </p>
+            <button 
+              onClick={openCtaModal}
+              className="px-6 py-3 bg-purple-500/20 border border-purple-500/30 text-purple-300 hover:bg-purple-500/30 hover:text-white rounded-xl font-semibold transition-all"
+            >
+              Ask us about white labelling
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
-      <section id="pricing" className="py-24 bg-[#0B1120] border-y border-slate-800">
+      <section id="pricing" className="py-24 bg-[#0F172A]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <div className="inline-block px-3 py-1 bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/20 rounded-full font-medium text-xs mb-4">Simple Pricing</div>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6">One plan. Unlimited clients.</h2>
+          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6">One plan. Unlimited ADHD clients.</h2>
           <p className="text-slate-400 text-lg max-w-xl mx-auto leading-relaxed mb-12">
-            No tiers. No per-client fees. Just one flat monthly price that gives you and all your clients full access.
+            No tiers. No per-client fees. Just one flat monthly price that gives you and all your ADHD clients full access.
           </p>
 
           {/* Pricing Card */}
@@ -503,8 +631,8 @@ const ForCoaches = () => {
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0EA5E9] to-[#6366F1]"></div>
             
             <div className="mb-6">
-              <h3 className="font-poppins font-bold text-2xl text-white mb-2">Claudia for Coaches</h3>
-              <p className="text-slate-400 text-sm">Everything you need to support your clients between sessions</p>
+              <h3 className="font-poppins font-bold text-2xl text-white mb-2">Claudia for ADHD Coaches</h3>
+              <p className="text-slate-400 text-sm">Everything you need to support your ADHD clients between sessions</p>
             </div>
 
             <div className="mb-8">
@@ -517,7 +645,7 @@ const ForCoaches = () => {
             <ul className="space-y-4 text-left mb-8">
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={20} className="text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300">Unlimited client access</span>
+                <span className="text-slate-300">Unlimited ADHD client access</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={20} className="text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -535,14 +663,6 @@ const ForCoaches = () => {
                 <CheckCircle2 size={20} className="text-emerald-400 flex-shrink-0 mt-0.5" />
                 <span className="text-slate-300">Unlimited distribution to clients</span>
               </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 size={20} className="text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300">Voice-first ADHD support</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 size={20} className="text-emerald-400 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-300">Task breakdown and daily planning</span>
-              </li>
             </ul>
 
             <button 
@@ -557,14 +677,12 @@ const ForCoaches = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 bg-[#0F172A] relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-[#0F172A]"></div>
-        
+      <section className="py-24 bg-[#0B1120] border-t border-slate-800 relative">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <div className="bg-[#1E293B] p-12 rounded-2xl shadow-2xl border border-slate-700">
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6">Give your clients the support they deserve</h2>
+            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-white mb-6">Your ADHD coaching is already great. Now make it unstoppable.</h2>
             <p className="text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
-              You cannot be available 24/7. But your clients can still have someone to talk to when they need it most. Help them implement what you teach, every single day.
+              You do incredible work in your sessions. Claudia makes sure that work does not disappear the moment your client walks out the door. Together, you and Claudia give your ADHD clients something no other coach can offer: support that never sleeps.
             </p>
             <div className="flex justify-center">
               <button 
