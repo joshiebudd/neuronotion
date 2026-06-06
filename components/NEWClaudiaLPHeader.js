@@ -179,6 +179,25 @@ const NEWClaudiaLPHeader = () => {
                     <div className="text-xs text-white/50">Support neurodiverse employees</div>
                   </div>
                 </Link>
+                <div className="border-t border-white/5"></div>
+                <Link
+                  href="/forcoaches"
+                  className="flex items-center gap-3 px-4 py-3.5 text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
+                  onClick={() => {
+                    track('For Coaches');
+                    setForDropdownOpen(false);
+                  }}
+                >
+                  <span className="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-4 h-4 text-purple-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                      <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </span>
+                  <div>
+                    <div className="text-sm font-medium">For Coaches</div>
+                    <div className="text-xs text-white/50">Support clients between sessions</div>
+                  </div>
+                </Link>
               </div>
               )}
             </div>
@@ -310,6 +329,21 @@ const NEWClaudiaLPHeader = () => {
                       </svg>
                     </span>
                     For Corporates
+                  </Link>
+                  <Link
+                    href="/forcoaches"
+                    className="text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm py-2.5 px-4 rounded-lg font-medium flex items-center gap-3"
+                    onClick={() => {
+                      track('For Coaches from mobile menu');
+                      setMobileMenuOpen(false);
+                    }}
+                  >
+                    <span className="w-7 h-7 rounded-md bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+                      <svg className="w-3.5 h-3.5 text-purple-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    </span>
+                    For Coaches
                   </Link>
                 </div>
               )}
