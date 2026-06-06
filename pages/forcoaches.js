@@ -471,7 +471,7 @@ const ForCoaches = () => {
             <img 
               src="https://NeuroNotionPullZonw.b-cdn.net/Desktopandmobilemockupfinal.webp" 
               alt="Claudia ADHD App Interface" 
-              className="rounded-lg w-full max-w-[520px] md:max-w-[680px] h-auto shadow-2xl shadow-cyan-500/10"
+              className="rounded-lg w-full max-w-[520px] md:max-w-[680px] h-auto"
             />
           </div>
 
@@ -552,7 +552,7 @@ const ForCoaches = () => {
             <img 
               src="https://NeuroNotionPullZonw.b-cdn.net/ADHD%20Coaching%20analytics%20dashboard.webp"
               alt="ADHD Coaching Analytics Dashboard - Track client progress over time"
-              className="w-full rounded-2xl border border-slate-700 shadow-2xl shadow-cyan-500/10"
+              className="w-full rounded-2xl"
             />
           </div>
         </div>
