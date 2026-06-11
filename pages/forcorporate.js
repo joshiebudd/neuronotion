@@ -261,6 +261,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
 const SupportedByCarousel = () => {
   const logos = [
     { id: 1, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/1.webp', alt: 'Supported by logo 1' },
+    { id: 2, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/2.webp', alt: 'Supported by logo 2' },
     { id: 7, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/7.webp', alt: 'Supported by logo 7' },
     { id: 6, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/6.webp', alt: 'Supported by logo 6' },
     { id: 11, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/11.webp', alt: 'Supported by logo 11' },
@@ -469,8 +470,14 @@ const ForCorporate = () => {
             </div>
           </div>
 
-          {/* Clinic Endorsements */}
+          {/* NHS + Clinic Endorsements */}
           <div className="flex flex-col items-center gap-6">
+            <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 px-5 sm:px-8 py-3 sm:py-4 rounded-2xl sm:rounded-full bg-[#1E293B] border border-slate-700 shadow-xl hover:border-blue-500/50 transition-colors text-center sm:text-left">
+              <img src="https://NeuroNotionPullZonw.b-cdn.net/NHS.webp" alt="NHS" className="h-7 sm:h-8 w-auto object-contain" />
+              <span className="text-xs sm:text-sm md:text-base font-medium text-slate-200 sm:border-l sm:border-slate-600 sm:pl-4">
+                Trusted by various NHS Trusts to support adults with ADHD
+              </span>
+            </div>
             <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
               <div className="flex items-center gap-2 text-sm text-slate-400">
                 <img src="https://NeuroNotionPullZonw.b-cdn.net/LPCwebp.webp" alt="Leicester Psychology Clinic" className="h-6 w-auto object-contain brightness-0 invert opacity-60" />

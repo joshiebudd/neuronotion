@@ -3,6 +3,7 @@ import React from 'react';
 export const LPSupportedBy = () => {
   const logos = [
     { id: 1, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/1.webp', alt: 'Supported by logo 1' },
+    { id: 2, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/2.webp', alt: 'Supported by logo 2' },
     { id: 7, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/7.webp', alt: 'Supported by logo 7' },
     { id: 6, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/6.webp', alt: 'Supported by logo 6' },
     { id: 11, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/11.webp', alt: 'Supported by logo 11' },
