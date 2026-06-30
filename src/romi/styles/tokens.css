@@ -1,0 +1,164 @@
+/*
+ * Romi design tokens — derived directly from the Romi Playbook (canonical brand
+ * source of truth, /Romi Design Assets/Playbook). The Figma "Design System" file
+ * is the digital reference; where it and the playbook agree, these are the named
+ * brand tokens that matter.
+ *
+ * Model: NAMED brand colours (not a generic 50-950 ramp). Each primary/secondary
+ * has 80/60/40 tints (colour mixed toward white). Semantic aliases map these onto
+ * UI roles. Components should consume the SEMANTIC aliases, not raw hex.
+ */
+.romi-theme {
+  /* ---------- Base ---------- */
+  --romi-color-white: #ffffff;
+  --romi-color-black: #000000;
+
+  /* ---------- Primary palette (playbook 03 / Primary) ---------- */
+  /* Romi Purple — lead brand identifier, light accents, highlights */
+  --romi-purple: #bf96ff;
+  --romi-purple-80: #cdabff;
+  --romi-purple-60: #d9c0ff;
+  --romi-purple-40: #e5d5ff;
+  --romi-purple-pale: #f1e8ff;
+
+  /* Romi Indigo — deep purple, accessible CTAs + emphasis text */
+  --romi-indigo: #5d359b;
+  --romi-indigo-80: #7d5daf;
+  --romi-indigo-60: #9e86c3;
+  --romi-indigo-40: #beaed7;
+  --romi-indigo-deep: #46247b;
+
+  /* Romi Mint — secondary brand accent, CTAs, bands */
+  --romi-mint: #75e5d4;
+  --romi-mint-80: #91eadd;
+  --romi-mint-60: #acefe5;
+  --romi-mint-40: #c8f5ee;
+  --romi-mint-deep: #1e8e7e;
+
+  /* Romi Beige — warm page background */
+  --romi-beige: #fff7ee;
+  --romi-beige-deep: #f8e9d7;
+
+  /* Romi Charcoal — near-black neutral for text */
+  --romi-charcoal: #26232c;
+  --romi-charcoal-80: #514f56;
+  --romi-charcoal-60: #6b6577;
+  --romi-charcoal-40: #a8a7ab;
+
+  /* ---------- Design-system Brand ramp (Figma "❖ Design System") ----------
+     Drives COMPONENT states (buttons, focus, etc). Anchored on the same indigo
+     family as the playbook: Brand/800 == Romi Indigo #5D359B. Pulled from the
+     Figma component specs (e.g. Primary button fill = Brand/600 #8659C2). */
+  --romi-brand-50: #f9edf9;
+  --romi-brand-100: #f5e6f5;
+  --romi-brand-200: #dfc7ee;
+  --romi-brand-300: #c8a7e7;
+  --romi-brand-400: #b289df;
+  --romi-brand-500: #9d6dd8;
+  --romi-brand-600: #8659c2;
+  --romi-brand-700: #7247ae;
+  --romi-brand-800: #5d359b;
+  --romi-brand-900: #46247b;
+  --romi-brand-950: #2f135a;
+
+  /* ---------- Secondary palette (playbook 03 / Secondary — use sparingly) ---------- */
+  --romi-cherry: #ff7b7b;
+  --romi-honey: #ffbc69;
+  --romi-ocean: #76bbff;
+  --romi-sky: #87e3ff;
+  --romi-leaf: #a1ff9c;
+  --romi-rhubarb: #ff9cc1;
+  --romi-coffee: #e59775;
+
+  /* ---------- Gradients (playbook 03 / Gradients, balanced 50/50) ---------- */
+  --romi-gradient-purple-indigo: linear-gradient(135deg, var(--romi-purple) 0%, var(--romi-indigo) 100%);
+  --romi-gradient-beige-purple: linear-gradient(135deg, var(--romi-beige) 0%, var(--romi-purple-40) 100%);
+  --romi-gradient-mint-beige: linear-gradient(135deg, var(--romi-mint) 0%, var(--romi-beige) 100%);
+  --romi-gradient-purple-mint: linear-gradient(135deg, var(--romi-purple) 0%, var(--romi-mint) 100%);
+  --romi-gradient-soft: linear-gradient(135deg, var(--romi-beige) 0%, var(--romi-purple-pale) 100%);
+  --romi-gradient-band: linear-gradient(135deg, var(--romi-purple-pale) 0%, var(--romi-mint-40) 100%);
+
+  /* ---------- Semantic aliases (consume these in components) ---------- */
+  --romi-color-bg: var(--romi-beige);
+  --romi-color-surface: #ffffff;
+  --romi-color-surface-muted: var(--romi-beige-deep);
+  --romi-color-section-alt: var(--romi-purple-pale);
+
+  --romi-color-ink: var(--romi-charcoal);
+  --romi-color-ink-muted: var(--romi-charcoal-60);
+  --romi-color-ink-soft: var(--romi-charcoal-40);
+  --romi-color-heading: var(--romi-charcoal);
+  --romi-color-border: #ece2f4;
+
+  /* Brand / action — primary action uses the design-system Brand ramp
+     (Brand/600 is the Figma primary-button fill). */
+  --romi-color-brand: var(--romi-purple);
+  --romi-color-primary: var(--romi-brand-600);
+  --romi-color-primary-strong: var(--romi-brand-700);
+  --romi-color-primary-soft: var(--romi-brand-50);
+  --romi-color-accent: var(--romi-purple);
+  --romi-color-accent-soft: var(--romi-purple-pale);
+  --romi-color-mint: var(--romi-mint);
+  --romi-color-mint-strong: var(--romi-mint-deep);
+  --romi-color-mint-soft: var(--romi-mint-40);
+
+  /* States */
+  --romi-color-success: var(--romi-mint-deep);
+  --romi-color-warning: var(--romi-honey);
+  --romi-color-danger: var(--romi-cherry);
+  --romi-color-focus: var(--romi-purple);
+
+  /* ---------- Back-compat aliases (older components reference these) ---------- */
+  --romi-color-neutral-50: var(--romi-beige-deep);
+  --romi-color-brand-800: var(--romi-brand-800);
+  --romi-color-brand-900: var(--romi-brand-900);
+
+  /* ---------- Type ---------- */
+  --romi-font-display: "Circular", "Matter", Arial, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --romi-font-sans: "Matter", "Circular", Arial, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --romi-font-body: var(--romi-font-sans);
+
+  --romi-text-xs: 0.75rem;
+  --romi-text-sm: 0.875rem;
+  --romi-text-md: 1rem;
+  --romi-text-lg: 1.125rem;
+  --romi-text-xl: 1.25rem;
+  --romi-display-xs: 1.5rem;
+  --romi-display-sm: 1.875rem;
+  --romi-display-md: 2.25rem;
+  --romi-display-lg: 3rem;
+  --romi-display-xl: 3.75rem;
+  --romi-display-2xl: 4.5rem;
+
+  --romi-line-xs: 1.125rem;
+  --romi-line-sm: 1.25rem;
+  --romi-line-md: 1.5rem;
+  --romi-line-lg: 1.75rem;
+  --romi-line-xl: 1.875rem;
+  --romi-line-display-xs: 2rem;
+  --romi-line-display-sm: 2.375rem;
+  --romi-line-display-md: 2.75rem;
+  --romi-line-display-lg: 3.75rem;
+  --romi-line-display-xl: 4.5rem;
+  --romi-line-display-2xl: 5.625rem;
+
+  /* ---------- Radius (Romi is soft + rounded) ---------- */
+  --romi-radius-xs: 6px;
+  --romi-radius-sm: 10px;
+  --romi-radius-md: 14px;
+  --romi-radius-lg: 18px;
+  --romi-radius-xl: 24px;
+  --romi-radius-2xl: 32px;
+  --romi-radius-full: 9999px;
+  --romi-radius-button: 16px; /* Figma Button component radius */
+
+  /* ---------- Shadow (soft, warm-tinted) ---------- */
+  --romi-shadow-xs: 0 1px 2px rgb(38 35 44 / 0.06);
+  --romi-shadow-sm: 0 1px 2px -1px rgb(38 35 44 / 0.1), 0 1px 3px rgb(38 35 44 / 0.08);
+  --romi-shadow-md: 0 2px 4px -2px rgb(38 35 44 / 0.06), 0 4px 12px -2px rgb(93 53 155 / 0.1);
+  --romi-shadow-lg: 0 4px 6px -2px rgb(38 35 44 / 0.04), 0 12px 24px -6px rgb(93 53 155 / 0.12);
+  --romi-shadow-xl: 0 8px 10px -4px rgb(38 35 44 / 0.04), 0 24px 40px -8px rgb(93 53 155 / 0.16);
+
+  --romi-container: 1180px;
+  --romi-page-gutter: clamp(20px, 4vw, 48px);
+}

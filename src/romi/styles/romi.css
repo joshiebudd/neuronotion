@@ -1,0 +1,174 @@
+.romi-theme {
+  min-height: 100vh;
+  color: var(--romi-color-ink);
+  background: var(--romi-color-bg);
+  font-family: var(--romi-font-sans);
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.romi-theme *,
+.romi-theme *::before,
+.romi-theme *::after {
+  box-sizing: border-box;
+}
+
+:where(.romi-theme h1, .romi-theme h2, .romi-theme h3, .romi-theme h4, .romi-theme p) {
+  margin: 0;
+}
+
+:where(.romi-theme a) {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(.romi-theme button, .romi-theme input, .romi-theme textarea, .romi-theme select) {
+  font: inherit;
+}
+
+/* Headings default to the primary brand font (Circular). Body inherits Matter
+   from .romi-theme. This guarantees correct type without relying on per-component
+   font utility classes. */
+:where(.romi-theme h1, .romi-theme h2, .romi-theme h3, .romi-theme h4, .romi-theme h5, .romi-theme h6) {
+  font-family: var(--romi-font-display);
+}
+
+.romi-theme :focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--romi-color-focus), transparent 45%);
+  outline-offset: 3px;
+}
+
+.romi-shell {
+  min-height: 100vh;
+  /* clip (not hidden) so horizontal overflow is contained without turning this
+     into a scroll container — which would break position: sticky inside it. */
+  overflow-x: clip;
+}
+
+.romi-container {
+  width: min(100% - (var(--romi-page-gutter) * 2), var(--romi-container));
+  margin-inline: auto;
+}
+
+.romi-section {
+  padding-block: clamp(56px, 8vw, 112px);
+}
+
+.romi-kicker {
+  color: var(--romi-color-primary);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.romi-heading-xl {
+  max-width: 920px;
+  color: var(--romi-color-ink);
+  font-family: var(--romi-font-display);
+  font-size: clamp(var(--romi-display-lg), 7vw, var(--romi-display-2xl));
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 0.98;
+}
+
+.romi-heading-lg {
+  color: var(--romi-color-ink);
+  font-family: var(--romi-font-display);
+  font-size: clamp(var(--romi-display-sm), 4vw, var(--romi-display-xl));
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+}
+
+.romi-lede {
+  max-width: 680px;
+  color: var(--romi-color-ink-muted);
+  font-size: clamp(1.0625rem, 2vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.romi-muted {
+  color: var(--romi-color-ink-muted);
+}
+
+@supports not (color: color-mix(in srgb, red, white)) {
+  .romi-theme :focus-visible {
+    outline-color: var(--romi-color-focus);
+  }
+}
+
+@keyframes romiFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.romi-fade-up {
+  animation: romiFadeUp 0.45s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .romi-fade-up {
+    animation: none;
+  }
+}
+
+/* Logo marquee — seamless infinite scroll. The track holds two identical sets
+   and animates 0 -> -50%, so set two slides into the exact start position of
+   set one: no jump, no blank gap. (The legacy carousel animated -50% -> -100%,
+   which scrolled the track off into empty space and snapped back.) */
+@keyframes romiMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.romi-marquee {
+  display: flex;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: romiMarquee var(--romi-marquee-duration, 40s) linear infinite;
+  will-change: transform;
+}
+
+.romi-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .romi-marquee {
+    animation: none;
+  }
+}
+
+/* Gentle hover-float for device mockups (LandingTwo). */
+@keyframes romiPhoneFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.romi-phone-float {
+  animation: romiPhoneFloat 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .romi-phone-float {
+    animation: none;
+  }
+}
