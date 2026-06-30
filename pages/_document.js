@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en" className="h-full overflow-y-auto">
       <Head />
-      <body className="min-h-screen overflow-x-hidden overflow-y-visible">
+      <body className="min-h-screen" style={{ overflowX: "clip", overflowY: "visible" }}>
         <Main />
         <NextScript />
       </body>
