@@ -1,5 +1,6 @@
 import { Badge } from "../ui/Badge";
 import { Container } from "../layout/Container";
+import { cn } from "../../lib/cn";
 
 /*
  * "Seen On and Supported by" — a full-bleed logo marquee on the light cream band.
@@ -74,12 +75,12 @@ function LogoTrack() {
   );
 }
 
-export function RomiLogos({ bare = false, className }) {
+export function RomiLogos({ bare = false, curve = false, badge = "Seen On and Supported by", className }) {
   const inner = (
     <>
       <Container>
         <div className="flex justify-center">
-          <Badge avatar="/romi/characters/windows/02-mint.svg">Seen On and Supported by</Badge>
+          <Badge character={{ body: 3, expression: "03-loving" }}>{badge}</Badge>
         </div>
       </Container>
 
@@ -95,8 +96,17 @@ export function RomiLogos({ bare = false, className }) {
     return <div className={className}>{inner}</div>;
   }
 
+  // curve: full band that rounds + shadows at the bottom, so the next band
+  // tucks under it (used to close Band 1 on the corporate page).
   return (
-    <section className="bg-[var(--romi-beige)] pb-6 pt-12 md:pb-8 md:pt-14">
+    <section
+      className={cn(
+        "bg-[var(--romi-beige)] pt-12 md:pt-14",
+        curve
+          ? "relative z-10 rounded-b-[40px] pb-6 shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:rounded-b-[64px] md:pb-8"
+          : "pb-6 md:pb-8"
+      )}
+    >
       {inner}
     </section>
   );

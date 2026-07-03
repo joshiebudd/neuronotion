@@ -335,6 +335,15 @@ export function RomiStruggles() {
                 </div>
               );
             })}
+
+            {/* Circle rim sits ON TOP of the blobs (z-30). Its band-coloured ring
+                covers any blob that expands past the wall, so every bubble stays
+                visually contained within the circle. */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 z-30 rounded-full border border-[var(--romi-color-border)]"
+              style={{ boxShadow: "0 0 0 34px var(--romi-beige-deep)" }}
+            />
           </div>
         </div>
 

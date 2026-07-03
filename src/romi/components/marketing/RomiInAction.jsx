@@ -159,14 +159,23 @@ function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, po
   );
 }
 
-export function RomiInAction() {
+export function RomiInAction({
+  badgeLabel = "See Romi in action",
+  badgeAvatar = "/romi/landing/badge-window-inaction.svg",
+  badgeCharacter, // pass { body, expression } to use a live Romi glyph instead
+  posterDesktop = POSTER_DESKTOP,
+  posterMobile = POSTER_MOBILE,
+  srcDesktop = videoSrcDesktop,
+  srcMobile = videoSrcMobile,
+  // Landing default: flat beige. Other pages override to fit their band rhythm.
+  sectionClassName = "relative bg-[var(--romi-beige)] pt-12 pb-24 md:pt-14 md:pb-32",
+}) {
+  const badgeProps = badgeCharacter ? { character: badgeCharacter } : { avatar: badgeAvatar };
   return (
-    // Purple section above "cards down" over this beige one (rounded-b on Helps).
-    // We sit flat underneath with tight top padding.
-    <section className="relative bg-[var(--romi-beige)] pt-12 pb-24 md:pt-14 md:pb-32">
+    <section className={sectionClassName}>
       <Container>
         <div className="mb-12 flex justify-center md:mb-16">
-          <Badge avatar="/romi/landing/badge-window-inaction.svg">See Romi in action</Badge>
+          <Badge {...badgeProps}>{badgeLabel}</Badge>
         </div>
       </Container>
 
@@ -177,8 +186,8 @@ export function RomiInAction() {
         <div className="hidden md:block">
           <SafariFrame>
             <VideoOrPoster
-              src={videoSrcDesktop}
-              poster={POSTER_DESKTOP}
+              src={srcDesktop}
+              poster={posterDesktop}
               aspect="3 / 2"
               fit="cover"
               posterScale={0.87}
@@ -192,8 +201,8 @@ export function RomiInAction() {
         <div className="md:hidden">
           <div className="overflow-hidden rounded-[22px] border border-[#e6e6e6] shadow-[0_24px_50px_-30px_rgb(20_8_40_/_0.35)]">
             <VideoOrPoster
-              src={videoSrcMobile}
-              poster={POSTER_MOBILE}
+              src={srcMobile}
+              poster={posterMobile}
               aspect="3 / 2"
               fit="cover"
               controls={false}

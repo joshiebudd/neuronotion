@@ -17,7 +17,7 @@ export function RomiHero() {
             </h1>
             <p className="mx-auto mt-8 max-w-[540px] text-[clamp(1.15rem,1.5vw,1.4rem)] font-medium leading-[1.6] text-[var(--romi-color-ink-muted)] lg:mx-0">
               Life with ADHD is hard. Romi helps make it easier. Romi supports you to function
-              better and feel better in daily life through simple voice conversations.
+              better and feel well, at work and at home, through simple voice conversations.
             </p>
 
             <div className="mx-auto mt-9 inline-flex flex-col items-center gap-4 lg:mx-0">

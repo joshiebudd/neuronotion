@@ -1,21 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "../ui/Button";
 import { Container } from "../layout/Container";
 import { cn } from "../../lib/cn";
 
 const navItems = [
-  { label: "Team", href: "/rominewlanding#team" },
+  { label: "Team", target: "team", href: "/rominewlanding#team" },
+  { label: "Pricing", target: "pricing", href: "/rominewlanding#pricing" },
   { label: "For work", href: "/romiforcorporates" },
-  { label: "For healthcare", href: "/romiforhealthcare" },
+  // { label: "For healthcare", href: "/romiforhealthcare" }, // hidden for now
 ];
 
-const forItems = [
-  { label: "For ADHD Clinics", desc: "Offer Romi to your patients", href: "/romiforclinics" },
-  { label: "For Coaches", desc: "Support clients between sessions", href: "/romiforcoaches" },
-];
+// "For..." dropdown hidden for now.
+// const forItems = [
+//   { label: "For ADHD Clinics", desc: "Offer Romi to your patients", href: "/romiforclinics" },
+//   { label: "For Coaches", desc: "Support clients between sessions", href: "/romiforcoaches" },
+// ];
 
 const LOGIN_URL = "https://app.romiadhd.com/login";
 const SIGNUP_URL = "https://app.romiadhd.com/signup";
@@ -45,7 +47,7 @@ export function RomiHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [overDark, setOverDark] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [isForOpen, setIsForOpen] = useState(false);
+  // const [isForOpen, setIsForOpen] = useState(false); // for the hidden "For..." dropdown
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -98,13 +100,14 @@ export function RomiHeader() {
       : "text-[var(--romi-color-ink-muted)] hover:text-[var(--romi-color-ink)]"
   );
 
-  // Team: on the landing, smooth-scroll to the #team section (the native hash
-  // jump misfires under the GSAP-pinned Helps section). From another page, let
-  // the link navigate to /rominewlanding#team and RomiMission handles the scroll.
-  const handleTeamClick = (event) => {
-    if (typeof window !== "undefined" && window.location.pathname === "/rominewlanding") {
+  // Team / Pricing scroll to the matching section on WHATEVER page you're on
+  // (both the landing and the corporate page carry #team and #pricing). If the
+  // section isn't on this page, the Link falls through to the landing anchor.
+  const handleScrollNav = (target) => (event) => {
+    const el = typeof document !== "undefined" ? document.getElementById(target) : null;
+    if (el) {
       event.preventDefault();
-      document.getElementById("team")?.scrollIntoView({ behavior: "smooth" });
+      el.scrollIntoView({ behavior: "smooth" });
     }
     setIsMobileOpen(false);
   };
@@ -122,7 +125,7 @@ export function RomiHeader() {
       )}
     >
       <Container className="flex min-h-[76px] items-center justify-between gap-6">
-        <Link href="/" className="flex shrink-0 items-center" aria-label="Romi home">
+        <Link href="/rominewlanding" className="flex shrink-0 items-center" aria-label="Romi home">
           <Image
             src="/romi/romi-logo-linear.svg"
             alt="Romi"
@@ -139,11 +142,12 @@ export function RomiHeader() {
               key={item.href}
               href={item.href}
               className={navLink}
-              onClick={item.label === "Team" ? handleTeamClick : undefined}
+              onClick={item.target ? handleScrollNav(item.target) : undefined}
             >
               {item.label}
             </Link>
           ))}
+          {/* "For..." dropdown hidden for now
           <div
             className="relative"
             onMouseEnter={() => setIsForOpen(true)}
@@ -164,10 +168,7 @@ export function RomiHeader() {
             </button>
 
             {isForOpen && (
-              <div
-                className="absolute left-1/2 top-full w-72 -translate-x-1/2 pt-4"
-                role="menu"
-              >
+              <div className="absolute left-1/2 top-full w-72 -translate-x-1/2 pt-4" role="menu">
                 <div className="overflow-hidden rounded-[var(--romi-radius-xl)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] p-2 shadow-[var(--romi-shadow-lg)]">
                   {forItems.map((item) => (
                     <Link
@@ -185,6 +186,7 @@ export function RomiHeader() {
               </div>
             )}
           </div>
+          */}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -213,12 +215,12 @@ export function RomiHeader() {
       {isMobileOpen && (
         <div className="border-t border-[var(--romi-color-border)] bg-[var(--romi-color-bg)] lg:hidden">
           <Container className="flex flex-col gap-1 py-4">
-            {[...navItems, ...forItems].map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className="rounded-[var(--romi-radius-md)] px-3 py-3 text-base font-semibold text-[var(--romi-color-ink-muted)] transition-colors [font-family:var(--romi-font-display)] hover:bg-[color-mix(in_srgb,var(--romi-purple)_14%,transparent)] hover:text-[var(--romi-color-ink)]"
-                onClick={item.label === "Team" ? handleTeamClick : () => setIsMobileOpen(false)}
+                onClick={item.target ? handleScrollNav(item.target) : () => setIsMobileOpen(false)}
               >
                 {item.label}
               </Link>

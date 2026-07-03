@@ -4,17 +4,16 @@ import { CurvedCard } from "../ui/CurvedCard";
 import { Container } from "../layout/Container";
 
 /*
- * "What we do" — badge + one semi-bold statement + five capability cards.
- * Light band, curves down over the deep team band below. Card content from
- * the wireframe ("What Romi does"); redesigned into the Romi card language
- * (CurvedCard, purple-pale icon chips, display titles).
+ * "What we do" — badge + one big statement + a "Romi helps you:" lead-in +
+ * five capability cards. Light band, closes Band 3 and curves down over the
+ * deep team band below.
  */
 
 const capabilities = [
   {
     icon: Mic,
-    title: "Provides Support",
-    desc: "A voice-activated AI companion for neurodivergent people.",
+    title: "Provide Support",
+    desc: "An AI companion for neurodivergent people.",
   },
   {
     icon: Compass,
@@ -39,39 +38,66 @@ const capabilities = [
 ];
 
 export function CorpWhatWeDo() {
+  // anime.js hover: the card lifts + settles and its icon pops with a little tilt.
+  const onHover = (up) => (event) => {
+    const card = event.currentTarget;
+    const icon = card.querySelector("[data-icon]");
+    import("animejs").then(({ animate }) => {
+      animate(card, { translateY: up ? -10 : 0, scale: up ? 1.035 : 1, duration: 340, ease: "out(3)" });
+      if (icon) animate(icon, { scale: up ? 1.18 : 1, rotate: up ? -8 : 0, duration: 360, ease: "out(4)" });
+    });
+  };
+
   return (
-    <section className="relative z-10 bg-[var(--romi-color-bg)] pb-24 pt-12 rounded-b-[40px] shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:pb-32 md:pt-14 md:rounded-b-[64px]">
-      <Container>
+    <section className="relative -mt-12 bg-[var(--romi-color-bg)] pb-16 pt-24 md:-mt-16 md:pb-20 md:pt-32">
+      <Container style={{ "--romi-container": "1280px" }}>
         <div className="flex justify-center">
-          <Badge avatar="/romi/characters/windows/02-mint.svg">What we do</Badge>
+          <Badge character={{ body: 5, expression: "07-delighted" }}>What we do</Badge>
         </div>
 
-        <p
-          className="mx-auto mt-8 max-w-[720px] text-center font-semibold text-[var(--romi-color-heading)]"
-          style={{ fontSize: "var(--romi-display-xs)", lineHeight: "var(--romi-line-display-xs)", fontFamily: "var(--romi-font-body)" }}
+        <h2
+          className="mx-auto mt-8 max-w-[880px] text-center font-bold tracking-[-0.01em] text-[var(--romi-color-heading)]"
+          style={{
+            fontFamily: "var(--romi-font-display)",
+            fontSize: "var(--romi-display-md)",
+            lineHeight: "var(--romi-line-display-md)",
+          }}
         >
           The most cost-effective, scalable form of support for neurodivergent
           professionals.
+        </h2>
+
+        <p
+          className="mt-10 text-center font-semibold text-[var(--romi-color-primary)]"
+          style={{
+            fontFamily: "var(--romi-font-display)",
+            fontSize: "var(--romi-display-xs)",
+            lineHeight: "var(--romi-line-display-xs)",
+          }}
+        >
+          Romi helps you:
         </p>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
           {capabilities.map((cap) => (
             <CurvedCard
               key={cap.title}
-              className="flex flex-col p-6 shadow-[0_18px_40px_-28px_rgb(38_19_64_/_0.25)]"
+              onMouseEnter={onHover(true)}
+              onMouseLeave={onHover(false)}
+              className="flex flex-col p-7 shadow-[0_18px_40px_-28px_rgb(38_19_64_/_0.25)] will-change-transform"
             >
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-[var(--romi-purple-pale)]">
-                <cap.icon aria-hidden="true" className="h-5 w-5 text-[var(--romi-color-primary)]" />
+              <span data-icon className="grid h-14 w-14 place-items-center rounded-full bg-[var(--romi-purple-pale)]">
+                <cap.icon aria-hidden="true" className="h-6 w-6 text-[var(--romi-color-primary)]" />
               </span>
               <h3
-                className="mt-4 font-bold text-[var(--romi-color-heading)]"
-                style={{ fontFamily: "var(--romi-font-display)", fontSize: "1.15rem" }}
+                className="mt-5 font-bold text-[var(--romi-color-heading)]"
+                style={{ fontFamily: "var(--romi-font-display)", fontSize: "1.3rem" }}
               >
                 {cap.title}
               </h3>
               <p
-                className="mt-2 text-[var(--romi-color-ink-muted)]"
-                style={{ fontSize: "var(--romi-text-sm)", lineHeight: "var(--romi-line-sm)" }}
+                className="mt-2.5 text-[var(--romi-color-ink-muted)]"
+                style={{ fontSize: "var(--romi-text-md)", lineHeight: "var(--romi-line-md)" }}
               >
                 {cap.desc}
               </p>

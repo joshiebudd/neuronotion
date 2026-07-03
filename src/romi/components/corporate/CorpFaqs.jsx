@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: `Our people already use ChatGPT. What's actually different?`,
-    answer: `ChatGPT is general by design. Romi has a deep ADHD-specific knowledge base built with two of Europe's leading ADHD doctors sitting between the user and the AI, plus memory, calendar and task integrations, and clinically designed regulation exercises, all shaped by over 1,000 hours of interviews with real neurodivergent people. And pointing staff at ChatGPT doesn't tick the compliance box. Providing a tool actually built for different brains does.`,
+    answer: `ChatGPT is general by design. Romi has a deep, neurodivergence-specific knowledge base built with two of Europe's leading neurodevelopmental doctors sitting between the user and the AI, plus memory, calendar and task integrations, and clinically designed regulation exercises, all shaped by over 1,000 hours of interviews with real neurodivergent people. And pointing staff at ChatGPT doesn't tick the compliance box. Providing a tool actually built for different brains does.`,
   },
   {
     question: `What does rolling it out involve?`,
@@ -37,20 +37,20 @@ const faqs = [
     answer: `Romi doesn't need access to your systems or any integration to be useful. People speak or type in their own words and can keep inputs as general as they like. Everything is encrypted, we're GDPR compliant and Cyber Essentials+ certified, and our NHS work means we've been through serious due diligence.`,
   },
   {
-    question: `ADHD shows up differently in everyone. Will one tool fit our whole team?`,
+    question: `Neurodivergence shows up differently in everyone. Will one tool fit our whole team?`,
     answer: `That's the design principle. Romi builds a profile from day one, learns each person's patterns and preferences, and adapts to their version of neurodivergence rather than a template. At its core it's an executive function assistant, so it helps people with ADHD, autism, dyslexia, anxiety and beyond. We designed it for the person who struggles the most, which is exactly why it works for everyone else.`,
   },
   {
     question: `How do we know it's working?`,
-    answer: `You get monthly anonymised impact reports covering usage, output and wellbeing trends, backed by clinically recognised self-report measures tracked over time. We're also running trials with the NHS and ADHD UK to keep evidencing outcomes properly. For context: coaching shows little lasting effect after six weeks, and Romi does more in two weeks than a 12-week coaching block.`,
+    answer: `You get monthly anonymised impact reports covering usage, output and wellbeing trends, backed by clinically recognised self-report measures tracked over time. We're also running trials with the NHS to keep evidencing outcomes properly. For context: coaching shows little lasting effect after six weeks, and Romi does more in two weeks than a 12-week coaching block.`,
   },
   {
     question: `Is it clinically credible?`,
-    answer: `Yes. Everything advisory in Romi is built under our Medical Director, one of Europe's leading adult ADHD experts, and the regulation exercises are clinician-built from scratch. There's a safety system that signposts people to additional care if they ever need it.`,
+    answer: `Yes. Everything advisory in Romi is built under our Medical Director, one of Europe's leading adult neurodevelopmental experts, and the regulation exercises are clinician-built from scratch. There's a safety system that signposts people to additional care if they ever need it.`,
   },
   {
     question: `Will it work in an open-plan office? And for non-English speakers?`,
-    answer: `Yes. Voice is the most personal way to use Romi, but there's a full text mode for quiet or shared spaces, so nobody has to announce their ADHD to the room. And for global teams, we can deploy multi-language support covering hundreds of languages.`,
+    answer: `Yes. Voice is the most personal way to use Romi, but there's a full text mode for quiet or shared spaces, so nobody has to announce their neurodivergence to the room. And for global teams, we can deploy multi-language support covering hundreds of languages.`,
   },
 ];
 

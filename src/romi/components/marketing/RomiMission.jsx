@@ -226,8 +226,33 @@ function MobileFounders({ founders: list, activeIndex, setActiveIndex }) {
 export function RomiMission({
   badge = "The team behind the mission",
   tone = "light", // "light" (landing) | "deep" (corporate band)
+  corporate = false, // corporate page: Vlad's autism bullet + a work-specific mission
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  // Corporate reframes the team toward neurodiversity (broader than ADHD): Vlad
+  // leads with autism, and the clinicians' descriptors say "neurodiversity"
+  // (real org names like the ADHD Foundation stay factual). Landing is unchanged.
+  const corporateBios = {
+    Vlad: [
+      "Diagnosed with autism",
+      "The technical brains behind Romi",
+      "Romi's resident Mad Scientist",
+    ],
+    "Dr James": [
+      "Leading adult neurodiversity expert",
+      "Director of The Grove",
+      "#1 Best selling ADHD Author",
+    ],
+    "Dr Tony": [
+      "Leading adult neurodiversity educator",
+      "Doctorate in neurodiversity care",
+      "Ex-CEO of ADHD Foundation",
+    ],
+  };
+  const foundersList = corporate
+    ? founders.map((f) => (corporateBios[f.first] ? { ...f, bio: corporateBios[f.first] } : f))
+    : founders;
 
   // Landing arrived at via /rominewlanding#team (e.g. Team nav from another
   // page). On mobile there is no GSAP pin, so scroll here once laid out.
@@ -252,12 +277,12 @@ export function RomiMission({
       <Container>
         {/* Team */}
         <div className="flex flex-col items-center">
-          <Badge avatar="/romi/characters/windows/02-mint.svg">{badge}</Badge>
+          <Badge character={{ body: 2, expression: "16-cheerful" }}>{badge}</Badge>
         </div>
 
         {/* Desktop accordion */}
         <div className="mt-10 hidden gap-4 md:flex" style={{ height: "480px" }}>
-          {founders.map((founder, i) => (
+          {foundersList.map((founder, i) => (
             <AccordionCard
               key={founder.name}
               founder={founder}
@@ -270,7 +295,7 @@ export function RomiMission({
         {/* Mobile */}
         <div className="mt-10">
           <MobileFounders
-            founders={founders}
+            founders={foundersList}
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex}
           />
@@ -286,8 +311,10 @@ export function RomiMission({
               lineHeight: "var(--romi-line-display-xl)",
             }}
           >
-            <span className="text-[var(--romi-purple)]">Our Mission:</span> To give
-            people with ADHD an equal chance at thriving in life.
+            <span className="text-[var(--romi-purple)]">Our Mission:</span>{" "}
+            {corporate
+              ? "To give neurodivergent people an equal chance at thriving at work."
+              : "To give people with ADHD an equal chance at thriving in life."}
           </h2>
         </div>
       </Container>

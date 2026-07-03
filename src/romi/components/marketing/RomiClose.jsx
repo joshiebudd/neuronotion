@@ -31,10 +31,11 @@ const footerCols = [
   {
     title: "Who it's for",
     links: [
-      { label: "For Healthcare", href: "/romiforhealthcare" },
+      // Placeholder pages aren't live yet, so these show but don't link.
+      { label: "For Healthcare", href: "/romiforhealthcare", disabled: true },
       { label: "For Corporates", href: "/romiforcorporates" },
-      { label: "For Diagnosis Clinics", href: "/romiforclinics" },
-      { label: "For Coaches", href: "/romiforcoaches" },
+      { label: "For Diagnosis Clinics", href: "/romiforclinics", disabled: true },
+      { label: "For Coaches", href: "/romiforcoaches", disabled: true },
     ],
   },
   {
@@ -55,6 +56,7 @@ const certifications = [
   "Cyber Essentials+",
   "GDPR",
   "SOC II",
+  "UK storage",
 ];
 
 const stores = [
@@ -85,8 +87,24 @@ export function RomiClose({
   titleLine2 = "Talk it out with Romi",
   // The landing's short line 2 stays on one line; longer custom titles wrap.
   titleNoWrap = true,
+  subtitle = "Life with ADHD is hard. But together with Romi, it's a little easier.",
+  footerTagline = "The personal companion for adults with ADHD.",
+  ctaLabel = "Try Romi Free",
+  ctaHref = SIGNUP_URL,
+  // Force line 1 onto one line (corporate). Off by default so the landing's
+  // short line 1 can still wrap on very narrow phones. A longer line 1 pairs
+  // this with a smaller titleClamp so it actually fits.
+  line1NoWrap = false,
+  titleClamp = "clamp(2.25rem, 4.6vw, var(--romi-display-xl))",
 }) {
   const year = new Date().getFullYear();
+
+  const onCtaClick = (event) => {
+    if (ctaHref.startsWith("#")) {
+      event.preventDefault();
+      document.querySelector(ctaHref)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="bg-[var(--romi-color-bg)] px-[var(--romi-page-gutter)] pb-[var(--romi-page-gutter)] pt-12 md:pt-14">
@@ -107,11 +125,11 @@ export function RomiClose({
               className="font-bold tracking-[-0.015em] text-[var(--romi-color-ink)]"
               style={{
                 fontFamily: "var(--romi-font-display)",
-                fontSize: "clamp(2.25rem, 4.6vw, var(--romi-display-xl))",
+                fontSize: titleClamp,
                 lineHeight: "1.04",
               }}
             >
-              {titleLine1}
+              <span className={line1NoWrap ? "whitespace-nowrap" : undefined}>{titleLine1}</span>
               <br />
               <span className={titleNoWrap ? "whitespace-nowrap text-[var(--romi-color-primary)]" : "text-[var(--romi-color-primary)]"}>
                 {titleLine2}
@@ -127,18 +145,19 @@ export function RomiClose({
               className="mx-auto mt-6 max-w-[520px] font-medium text-[var(--romi-color-ink-muted)]"
               style={{ fontSize: "var(--romi-text-xl)", lineHeight: "var(--romi-line-xl)" }}
             >
-              Life with ADHD is hard. But together with Romi, it&apos;s a little easier.
+              {subtitle}
             </p>
 
             <div className="mt-9 flex flex-col items-center gap-3">
               <Button
                 as="a"
-                href={SIGNUP_URL}
+                href={ctaHref}
+                onClick={onCtaClick}
                 variant="primary"
                 size="xl"
                 className="px-10 text-[1.05rem] shadow-[var(--romi-shadow-md)]"
               >
-                Try Romi Free
+                {ctaLabel}
               </Button>
 
               <RomiRating />
@@ -155,12 +174,14 @@ export function RomiClose({
           <div className="grid gap-12 lg:grid-cols-3 lg:gap-16">
             {/* Left third: brand + app */}
             <div className="lg:col-span-1">
-              <Image src="/romi/romi-logo-linear.svg" alt="Romi" width={150} height={36} className="h-9 w-auto" />
+              <Link href="/rominewlanding" aria-label="Romi home" className="inline-block">
+                <Image src="/romi/romi-logo-linear.svg" alt="Romi" width={150} height={36} className="h-9 w-auto" />
+              </Link>
               <p
                 className="mt-5 max-w-[320px] text-[var(--romi-color-ink-muted)]"
                 style={{ fontSize: "var(--romi-text-md)", lineHeight: "var(--romi-line-md)" }}
               >
-                The personal companion for adults with ADHD.
+                {footerTagline}
               </p>
               <StoreButtons className="mt-6 flex flex-wrap gap-3" />
             </div>
@@ -181,7 +202,11 @@ export function RomiClose({
                         const linkStyle = { fontSize: "var(--romi-text-md)" };
                         return (
                           <li key={link.label}>
-                            {external ? (
+                            {link.disabled ? (
+                              <span className="cursor-default text-[var(--romi-color-ink-soft)]" style={linkStyle}>
+                                {link.label}
+                              </span>
+                            ) : external ? (
                               <a href={link.href} className={linkClass} style={linkStyle}>
                                 {link.label}
                               </a>

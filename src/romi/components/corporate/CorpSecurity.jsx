@@ -12,7 +12,7 @@ const pillars = [
   {
     icon: ShieldCheck,
     title: "Privacy",
-    desc: "Privacy by design. Employers never see individual conversations. You get anonymised impact reporting, nothing more.",
+    desc: "Privacy by design. Employers never see individual conversations, only anonymised, aggregated impact reporting.",
   },
   {
     icon: Lock,
@@ -21,12 +21,12 @@ const pillars = [
   },
   {
     icon: HeartPulse,
-    title: "Safety",
-    desc: "Built with leading ADHD clinicians, with a safety system that signposts people to additional care if they ever need it.",
+    title: "Safety & Safeguarding",
+    desc: "A safety system that detects when someone needs critical care and directs them to it, built with leading clinicians.",
   },
 ];
 
-const certifications = ["Cyber Essentials+", "GDPR", "SOC II"];
+const certifications = ["Cyber Essentials+", "GDPR", "SOC II", "UK storage"];
 
 export function CorpSecurity() {
   return (

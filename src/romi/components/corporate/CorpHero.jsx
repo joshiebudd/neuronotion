@@ -17,7 +17,7 @@ export function CorpHero() {
   return (
     <section className="relative bg-[var(--romi-color-bg)] pb-16 pt-14 md:pb-20 md:pt-20">
       <Container style={{ "--romi-container": "1340px" }}>
-        <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
           <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:text-left">
             <h1 className="max-w-[680px] text-[clamp(2.7rem,4.8vw,4.4rem)] font-bold leading-[1.06] tracking-[-0.015em] text-[var(--romi-color-ink)]">
               Happier, More Productive,{" "}
@@ -36,10 +36,10 @@ export function CorpHero() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[720px]">
+          <div className="relative mx-auto w-full max-w-[940px] lg:scale-[1.06] lg:origin-center">
             <img
-              src="/romi/landing/demo/landing-hero-poster.svg"
-              alt="The Romi app: brain dump, tasks, routines and regulation support"
+              src="/romi/landing/corp-hero.svg"
+              alt="The Romi app supporting neurodivergent employees at work"
               className="block h-auto w-full"
             />
           </div>

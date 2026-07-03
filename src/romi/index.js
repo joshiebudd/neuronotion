@@ -19,6 +19,7 @@ export { RomiTestimonials } from "./components/marketing/RomiTestimonials";
 export { RomiDifference } from "./components/marketing/RomiDifference";
 export { RomiMission } from "./components/marketing/RomiMission";
 export { RomiFaqs } from "./components/marketing/RomiFaqs";
+export { RomiPricing } from "./components/marketing/RomiPricing";
 export { RomiClose } from "./components/marketing/RomiClose";
 export { RomiRebrandBanner } from "./components/marketing/RomiRebrandBanner";
 export { RomiAwards } from "./components/marketing/RomiAwards";

@@ -1,20 +1,25 @@
 import { cn } from "../../lib/cn";
+import { RomiCharacter } from "../../character/RomiCharacter";
 
 /*
  * Badge — the section eyebrow. A soft rounded pill (consistent 16px curve) with
- * an optional leading dot + label. Two tones so it reads on either cream band:
+ * an optional leading glyph + label. Two tones so it reads on either cream band:
  *   light -> on the light beige sections (cool-white pill, slate text)
  *   dark  -> on the deep beige sections (lilac pill, purple text)
- * Pass dot={false} to drop the leading dot (e.g. in the rebrand banner).
- * Pass avatar={src} to swap the dot for a circular Romi character window.
+ * Glyph options (first match wins):
+ *   character={{ body, expression, window }} -> a live Romi character (window
+ *     defaults to mint) — use this to vary the little face per section
+ *   avatar={src}  -> a circular image (e.g. a baked window SVG)
+ *   dot           -> a plain mint dot (default)
+ * Pass dot={false} with no avatar/character to drop the glyph entirely.
  */
 const tones = {
   light: "bg-[#F8FAFC] text-[var(--romi-color-ink)]",
   dark: "bg-[#FAF5FF] text-[var(--romi-color-ink)]",
 };
 
-export function Badge({ tone = "light", dot = true, avatar, className, children, ...props }) {
-  const hasGlyph = Boolean(avatar) || dot;
+export function Badge({ tone = "light", dot = true, avatar, character, className, children, ...props }) {
+  const hasGlyph = Boolean(avatar) || Boolean(character) || dot;
   return (
     <span
       className={cn(
@@ -25,7 +30,17 @@ export function Badge({ tone = "light", dot = true, avatar, className, children,
       )}
       {...props}
     >
-      {avatar ? (
+      {character ? (
+        <span className="grid h-7 w-7 shrink-0 place-items-center overflow-hidden rounded-full">
+          <RomiCharacter
+            window={character.window ?? "mint"}
+            body={character.body}
+            expression={character.expression}
+            viewBox="117 117 846 846"
+            className="h-full w-full"
+          />
+        </span>
+      ) : avatar ? (
         <img
           src={avatar}
           alt=""

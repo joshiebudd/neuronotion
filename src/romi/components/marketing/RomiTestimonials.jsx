@@ -120,7 +120,18 @@ export function TestimonialCard({ item }) {
   );
 }
 
-export function RomiTestimonials({ curve = false }) {
+export function RomiTestimonials({
+  curve = false,
+  ctaLabel = "Get Romi in your corner",
+  ctaHref = "https://app.romiadhd.com/signup",
+}) {
+  const onCtaClick = (event) => {
+    if (ctaHref.startsWith("#")) {
+      event.preventDefault();
+      document.querySelector(ctaHref)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       className={cn(
@@ -131,7 +142,7 @@ export function RomiTestimonials({ curve = false }) {
     >
       <Container>
         <div className="mb-9 flex justify-center">
-          <Badge tone="dark" avatar="/romi/characters/windows/02-mint.svg">Don&apos;t just take it from us...</Badge>
+          <Badge tone="dark" character={{ body: 8, expression: "01-laughing" }}>Don&apos;t just take it from us...</Badge>
         </div>
 
         <h2
@@ -150,8 +161,8 @@ export function RomiTestimonials({ curve = false }) {
         </div>
 
         <div className="mt-14 flex flex-col items-center gap-6">
-          <Button as="a" href="https://app.romiadhd.com/signup" size="xl">
-            Get Romi in your corner
+          <Button as="a" href={ctaHref} onClick={onCtaClick} size="xl">
+            {ctaLabel}
             <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Button>
 
