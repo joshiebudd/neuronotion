@@ -7,17 +7,20 @@ import { Container } from "../layout/Container";
 import { cn } from "../../lib/cn";
 
 const navItems = [
-  { label: "Team", href: "/team" },
-  { label: "For work", href: "/forcorporate" },
-  { label: "For healthcare", href: "/forclinics" },
+  { label: "Team", href: "/rominewlanding#team" },
+  { label: "For work", href: "/romiforcorporates" },
+  { label: "For healthcare", href: "/romiforhealthcare" },
 ];
 
 const forItems = [
-  { label: "For ADHD Clinics", desc: "Offer Romi to your patients", href: "/forclinics" },
-  { label: "For Coaches", desc: "Support clients between sessions", href: "/forcoaches" },
+  { label: "For ADHD Clinics", desc: "Offer Romi to your patients", href: "/romiforclinics" },
+  { label: "For Coaches", desc: "Support clients between sessions", href: "/romiforcoaches" },
 ];
 
-function PlaceholderAction({ children, variant = "secondary", dark = false }) {
+const LOGIN_URL = "https://app.romiadhd.com/login";
+const SIGNUP_URL = "https://app.romiadhd.com/signup";
+
+function HeaderAction({ children, variant = "secondary", dark = false, href }) {
   // On indigo sections the light surface buttons would disappear, so swap to a
   // clean white-on-indigo treatment: primary -> white fill, secondary -> ghost.
   const darkOverride =
@@ -27,10 +30,10 @@ function PlaceholderAction({ children, variant = "secondary", dark = false }) {
 
   return (
     <Button
-      type="button"
+      as="a"
+      href={href}
       variant={variant}
       size="sm"
-      onClick={(event) => event.preventDefault()}
       className={cn("transition-colors duration-300 active:scale-[0.98]", dark && darkOverride)}
     >
       {children}
@@ -95,15 +98,26 @@ export function RomiHeader() {
       : "text-[var(--romi-color-ink-muted)] hover:text-[var(--romi-color-ink)]"
   );
 
+  // Team: on the landing, smooth-scroll to the #team section (the native hash
+  // jump misfires under the GSAP-pinned Helps section). From another page, let
+  // the link navigate to /rominewlanding#team and RomiMission handles the scroll.
+  const handleTeamClick = (event) => {
+    if (typeof window !== "undefined" && window.location.pathname === "/rominewlanding") {
+      event.preventDefault();
+      document.getElementById("team")?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMobileOpen(false);
+  };
+
   return (
     <header
       ref={headerRef}
       className={cn(
         "sticky top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-300",
         overDark
-          ? "border-white/10 bg-[var(--romi-indigo)]/80 shadow-none backdrop-blur-md"
+          ? "border-white/10 bg-[var(--romi-indigo)]/92 shadow-none backdrop-blur-md"
           : isScrolled
-            ? "border-[var(--romi-color-border)] bg-[var(--romi-color-bg)]/95 shadow-[var(--romi-shadow-sm)] backdrop-blur-md"
+            ? "border-[var(--romi-color-border)] bg-[var(--romi-color-bg)]/98 shadow-[var(--romi-shadow-sm)] backdrop-blur-md"
             : "border-[var(--romi-color-border)] bg-[var(--romi-color-bg)] shadow-none"
       )}
     >
@@ -119,9 +133,14 @@ export function RomiHeader() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 text-[15px] font-medium lg:flex">
+        <nav className="hidden items-center gap-8 text-[15px] font-medium [font-family:var(--romi-font-display)] lg:flex">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className={navLink}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className={navLink}
+              onClick={item.label === "Team" ? handleTeamClick : undefined}
+            >
               {item.label}
             </Link>
           ))}
@@ -154,11 +173,11 @@ export function RomiHeader() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="flex flex-col gap-0.5 rounded-[var(--romi-radius-md)] px-3.5 py-3 transition-colors hover:bg-[var(--romi-color-surface-muted)]"
+                      className="flex flex-col gap-0.5 rounded-[var(--romi-radius-md)] px-3.5 py-3 transition-colors hover:bg-[color-mix(in_srgb,var(--romi-purple)_14%,transparent)]"
                       role="menuitem"
                       onClick={() => setIsForOpen(false)}
                     >
-                      <span className="text-[15px] font-semibold text-[var(--romi-color-ink)]">{item.label}</span>
+                      <span className="text-[15px] font-semibold text-[var(--romi-color-ink)] [font-family:var(--romi-font-display)]">{item.label}</span>
                       <span className="text-[13px] text-[var(--romi-color-ink-muted)]">{item.desc}</span>
                     </Link>
                   ))}
@@ -169,10 +188,10 @@ export function RomiHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <PlaceholderAction dark={overDark}>Log in</PlaceholderAction>
-          <PlaceholderAction dark={overDark} variant="primary">
+          <HeaderAction dark={overDark} href={LOGIN_URL}>Log in</HeaderAction>
+          <HeaderAction dark={overDark} variant="primary" href={SIGNUP_URL}>
             Try Romi
-          </PlaceholderAction>
+          </HeaderAction>
         </div>
 
         <button
@@ -198,15 +217,15 @@ export function RomiHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-[var(--romi-radius-md)] px-3 py-3 text-base font-semibold text-[var(--romi-color-ink-muted)] transition-colors hover:bg-[var(--romi-color-surface-muted)] hover:text-[var(--romi-color-ink)]"
-                onClick={() => setIsMobileOpen(false)}
+                className="rounded-[var(--romi-radius-md)] px-3 py-3 text-base font-semibold text-[var(--romi-color-ink-muted)] transition-colors [font-family:var(--romi-font-display)] hover:bg-[color-mix(in_srgb,var(--romi-purple)_14%,transparent)] hover:text-[var(--romi-color-ink)]"
+                onClick={item.label === "Team" ? handleTeamClick : () => setIsMobileOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
             <div className="mt-3 grid grid-cols-2 gap-3">
-              <PlaceholderAction>Log in</PlaceholderAction>
-              <PlaceholderAction variant="primary">Try Romi</PlaceholderAction>
+              <HeaderAction href={LOGIN_URL}>Log in</HeaderAction>
+              <HeaderAction variant="primary" href={SIGNUP_URL}>Try Romi</HeaderAction>
             </div>
           </Container>
         </div>

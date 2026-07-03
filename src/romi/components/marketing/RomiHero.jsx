@@ -2,18 +2,11 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "../layout/Container";
 import { Button } from "../ui/Button";
-
-const awards = [
-  { src: "/romi/landing/award-startup-awards-26.webp", alt: "Startup Awards 2026 award" },
-  { src: "/romi/landing/award-tata-25.webp", alt: "Tata 2025 award" },
-  { src: "/romi/landing/award-google-25.webp", alt: "Google 2025 award" },
-  { src: "/romi/landing/award-tech-nation-25.webp", alt: "Tech Nation 2025 award" },
-  { src: "/romi/landing/award-startup-awards-25.webp", alt: "Startup Awards 2025 award" },
-];
+import { RomiLogos } from "./RomiLogos";
 
 export function RomiHero() {
   return (
-    <section className="relative bg-[var(--romi-color-bg)] pb-12 pt-14 md:pb-16 md:pt-20">
+    <section className="relative z-10 rounded-b-[40px] bg-[var(--romi-color-bg)] pb-24 pt-14 shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:rounded-b-[64px] md:pb-32 md:pt-20">
       <Container style={{ "--romi-container": "1340px" }}>
         <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:text-left">
@@ -29,7 +22,7 @@ export function RomiHero() {
 
             <div className="mx-auto mt-9 inline-flex flex-col items-center gap-4 lg:mx-0">
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="#" onClick={(event) => event.preventDefault()} aria-label="Download on the App Store">
+                <a href="https://app.romiadhd.com/signup" aria-label="Download on the App Store">
                   <Image
                     src="/romi/landing/store-app-store.webp"
                     alt="Download on the App Store"
@@ -38,7 +31,7 @@ export function RomiHero() {
                     className="h-[clamp(48px,5vw,58px)] w-auto transition-opacity hover:opacity-90"
                   />
                 </a>
-                <a href="#" onClick={(event) => event.preventDefault()} aria-label="Get it on Google Play">
+                <a href="https://app.romiadhd.com/signup" aria-label="Get it on Google Play">
                   <Image
                     src="/romi/landing/store-google-play.webp"
                     alt="Get it on Google Play"
@@ -51,8 +44,7 @@ export function RomiHero() {
 
               <Button
                 as="a"
-                href="#"
-                onClick={(event) => event.preventDefault()}
+                href="https://app.romiadhd.com/signup"
                 variant="tertiaryLilac"
                 size="lg"
                 className="border-0 px-2 text-[1.05rem]"
@@ -64,8 +56,11 @@ export function RomiHero() {
           </div>
 
           <div className="relative mx-auto w-full max-w-[760px]">
-            {/* EXPERIMENT: Romi avatar SVG as the hero, really big.
-                Revert: delete this <img> and uncomment the <Image> below (the new app-screens hero). */}
+            {/* The original baked Romi avatar, really big. For the live-composed
+                variant (12 bodies x 45 expressions x 11 windows) swap in
+                <RomiCharacter expression="07-delighted" body={1} window="mint" />
+                from src/romi/character. Or uncomment the <Image> below (the
+                app-screens hero). */}
             <img
               src="/romi/landing/romi-avatar.svg"
               alt="Romi"
@@ -85,23 +80,8 @@ export function RomiHero() {
 
       </Container>
 
-      {/* Awards / social proof — full bleed across the screen, tightened gap */}
-      <div className="mt-7 w-full px-[clamp(16px,5vw,72px)] md:mt-10">
-        <div className="flex gap-6 overflow-x-auto pb-1 [scrollbar-width:none] md:grid md:grid-cols-5 md:items-center md:gap-12 md:overflow-visible md:pb-0 [&::-webkit-scrollbar]:hidden">
-          {awards.map((award) => (
-            <div key={award.src} className="flex min-w-[148px] justify-center md:min-w-0">
-              <Image
-                src={award.src}
-                alt={award.alt}
-                width={210}
-                height={210}
-                sizes="(min-width: 768px) 19vw, 148px"
-                className="h-auto w-[148px] md:w-full md:max-w-[240px]"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Social proof — logo carousel (with its badge), full bleed under the hero */}
+      <RomiLogos bare className="mt-9 md:mt-12" />
     </section>
   );
 }

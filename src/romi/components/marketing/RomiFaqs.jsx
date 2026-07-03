@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { useRef, useState } from "react";
+import { ChevronDown, Plus, Minus } from "lucide-react";
 import { Container } from "../layout/Container";
 
 /*
@@ -14,28 +14,44 @@ import { Container } from "../layout/Container";
 
 const faqs = [
   {
-    question: "I've tried so many ADHD apps. How is this different?",
-    answer:
-      'Most apps are built for neurotypical brains and then "adapted" for ADHD. Neuro is built from the ground up based on ADHD neuroscience. Every interaction is designed to work with your brain, not against it.',
+    question: `What if I forget to use it?`,
+    answer: `Forgetting is kind of the whole point of ADHD, so we planned for it. From day one, Romi is built to give you a far better chance of coming back than a typical app, because we designed it around the psychology of how people actually build habits with something digital. And if you still forget? You can have Romi call your phone for a five-minute check-in each morning.`,
   },
   {
-    question: "What if I forget to use it?",
-    answer:
-      "That's exactly why we built it voice-first with smart nudging. Romi learns your patterns and gently reminds you when you need her most - without being annoying.",
+    question: `I'm not good with technology. Is this complicated?`,
+    answer: `Your grandmother could use this. If you can have a conversation, you can use Romi. Just speak your thoughts, and everything else happens automatically.`,
   },
   {
-    question: "I'm not good with technology. Is this complicated?",
-    answer:
-      "If you can have a conversation, you can use Romi. Just speak your thoughts. Everything else happens automatically.",
+    question: `Will this actually stick, or will I abandon it like everything else?`,
+    answer: `Honestly? There's no guarantee. But we've done everything in our power to build something that does. Romi isn't just another "ADHD-friendly" tool, it's ADHD-first. We spent years building it around how ADHD brains actually tick, not adapting something that was made for everyone else.`,
   },
   {
-    question: "Will this actually stick, or will I abandon it like everything else?",
-    answer:
-      "Romi is designed for ADHD consistency patterns. It gets easier the more you use it, not harder. Plus, it adapts when your routines change instead of breaking.",
+    question: `Does it learn about me over time?`,
+    answer: `Yes. The more you use Romi, the better it understands your patterns, your language, and what actually helps you. It shapes itself around how you work, instead of expecting you to adapt to it.`,
+  },
+  {
+    question: `My ADHD is different, and I have other conditions too. Will Romi get it?`,
+    answer: `That's exactly what Romi is built for. ADHD doesn't define you, and no two people experience it the same way, so your preferences, your personality, and your good and hard days all still matter. Romi learns your specific patterns and adapts to your version of ADHD, not a one-size-fits-all template. And if you're navigating more than ADHD, you're in good company. Romi is shaped by over 1,000 hours of interviews with real people, many of whom also live with autism, OCD, dyslexia, PTSD, processing differences, anxiety and more. It's built for ADHD first, by brains that work in lots of different ways.`,
+  },
+  {
+    question: `What does this integrate with?`,
+    answer: `Right now, Romi connects to your calendars, with wearables and other task tools coming soon. The goal is simple: Romi fits into what you already use, with no extra work from you.`,
+  },
+  {
+    question: `Will it nag me with endless reminders?`,
+    answer: `Only as much as you want. When you first meet Romi, they'll ask how often you'd like to be nudged. Prefer not to decide? Romi can read the shape of your day and what matters most, and check in only when it'll actually help.`,
+  },
+  {
+    question: `English isn't my first language. Can I use this?`,
+    answer: `Right now, Romi is designed mainly for English speakers. Support for more languages is coming very soon.`,
+  },
+  {
+    question: `Do I have to break tasks down myself?`,
+    answer: `Nope, Romi's great at this. It spots when a task looks meaty and helps you break it into small, doable steps, based on how much energy you've got right then. If the first step still feels too big, just ask Romi to go smaller. It'll always help you turn a mountain into a molehill, so your energy goes on actually doing the thing, not planning it.`,
   },
 ];
 
-function FaqItem({ faq, open, onToggle }) {
+export function FaqItem({ faq, open, onToggle }) {
   return (
     <div
       className="overflow-hidden border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)]"
@@ -100,23 +116,83 @@ function FaqItem({ faq, open, onToggle }) {
   );
 }
 
+const VISIBLE = 4;
+
 export function RomiFaqs() {
   const [openIndex, setOpenIndex] = useState(null);
+  const [expanded, setExpanded] = useState(false);
+  const extraRef = useRef(null);
+
+  const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
+
+  // Reveal the rest with a staggered anime.js fade-up.
+  const showMore = () => {
+    setExpanded(true);
+    requestAnimationFrame(() => {
+      if (!extraRef.current) return;
+      import("animejs").then(({ animate, stagger }) => {
+        animate(extraRef.current.children, {
+          opacity: [0, 1],
+          translateY: [16, 0],
+          duration: 460,
+          delay: stagger(80),
+          ease: "out(3)",
+        });
+      });
+    });
+  };
+
+  const showLess = () => {
+    setExpanded(false);
+    setOpenIndex(null);
+  };
 
   return (
     <section className="bg-[var(--romi-color-bg)] pb-24 pt-4 md:pb-32 md:pt-6">
       <Container>
         <div className="mx-auto max-w-[900px]">
           <div className="space-y-5">
-            {faqs.map((faq, i) => (
-              <FaqItem
-                key={faq.question}
-                faq={faq}
-                open={openIndex === i}
-                onToggle={() => setOpenIndex(openIndex === i ? null : i)}
-              />
+            {faqs.slice(0, VISIBLE).map((faq, i) => (
+              <FaqItem key={faq.question} faq={faq} open={openIndex === i} onToggle={() => toggle(i)} />
             ))}
           </div>
+
+          {expanded && (
+            <div ref={extraRef} className="mt-5 space-y-5">
+              {faqs.slice(VISIBLE).map((faq, i) => {
+                const idx = i + VISIBLE;
+                return (
+                  <div key={faq.question} className="opacity-0">
+                    <FaqItem faq={faq} open={openIndex === idx} onToggle={() => toggle(idx)} />
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {faqs.length > VISIBLE && (
+            <div className="mt-8 flex justify-center">
+              {!expanded ? (
+                <button
+                  type="button"
+                  onClick={showMore}
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] px-6 py-3 text-[15px] font-semibold text-[var(--romi-color-ink)] shadow-[var(--romi-shadow-sm)] transition-colors hover:bg-[var(--romi-color-primary-soft)] hover:text-[var(--romi-color-primary)]"
+                >
+                  Show more questions
+                  <Plus aria-hidden="true" className="h-5 w-5" />
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={showLess}
+                  className="inline-flex items-center gap-2 rounded-full border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] px-6 py-3 text-[15px] font-semibold text-[var(--romi-color-ink)] shadow-[var(--romi-shadow-sm)] transition-colors hover:bg-[var(--romi-color-primary-soft)] hover:text-[var(--romi-color-primary)]"
+                >
+                  Show less
+                  <Minus aria-hidden="true" className="h-5 w-5" />
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </Container>
     </section>

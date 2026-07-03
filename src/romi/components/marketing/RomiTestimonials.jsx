@@ -120,12 +120,18 @@ export function TestimonialCard({ item }) {
   );
 }
 
-export function RomiTestimonials() {
+export function RomiTestimonials({ curve = false }) {
   return (
-    <section className="relative -mt-12 bg-[var(--romi-beige-deep)] pb-24 pt-24 md:-mt-16 md:pb-32 md:pt-32">
+    <section
+      className={cn(
+        "relative -mt-12 bg-[var(--romi-beige-deep)] pb-14 pt-24 md:-mt-16 md:pb-20 md:pt-32",
+        curve &&
+          "z-10 rounded-b-[40px] pb-24 shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:rounded-b-[64px] md:pb-32"
+      )}
+    >
       <Container>
         <div className="mb-9 flex justify-center">
-          <Badge tone="dark">What ADHDers are saying</Badge>
+          <Badge tone="dark" avatar="/romi/characters/windows/02-mint.svg">Don&apos;t just take it from us...</Badge>
         </div>
 
         <h2
@@ -136,7 +142,7 @@ export function RomiTestimonials() {
             lineHeight: "var(--romi-line-display-md)",
           }}
         >
-          &quot;Living with ADHD feels easier now.&quot;
+          Loved by beautifully chaotic brains 💜
         </h2>
 
         <div className="mt-14">
@@ -144,8 +150,8 @@ export function RomiTestimonials() {
         </div>
 
         <div className="mt-14 flex flex-col items-center gap-6">
-          <Button as="a" href="#" onClick={(e) => e.preventDefault()} size="xl">
-            Start creating your own results
+          <Button as="a" href="https://app.romiadhd.com/signup" size="xl">
+            Get Romi in your corner
             <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Button>
 

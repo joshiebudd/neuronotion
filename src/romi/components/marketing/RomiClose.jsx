@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/Button";
 import { RomiRating } from "../ui/RomiRating";
+import { Lock } from "lucide-react";
 
 /*
  * RomiClose — the closing CTA + footer, combined into one floating, rounded
@@ -24,23 +25,24 @@ import { RomiRating } from "../ui/RomiRating";
  * the rebrand swap Claudia -> Romi.
  */
 
+const SIGNUP_URL = "https://app.romiadhd.com/signup";
+
 const footerCols = [
   {
     title: "Who it's for",
     links: [
-      { label: "For Healthcare", href: "/forclinics" },
-      { label: "For Corporates", href: "/forcorporate" },
-      { label: "For Diagnosis Clinics", href: "/forclinics" },
-      { label: "For Coaches", href: "/forcoaches" },
+      { label: "For Healthcare", href: "/romiforhealthcare" },
+      { label: "For Corporates", href: "/romiforcorporates" },
+      { label: "For Diagnosis Clinics", href: "/romiforclinics" },
+      { label: "For Coaches", href: "/romiforcoaches" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Blog", href: "/blog" },
-      { label: "Cookies", href: "/cookies" },
-      { label: "Privacy", href: "/privacy" },
-      { label: "Terms of Use", href: "/terms" },
+      { label: "Blog", href: "https://www.romiadhd.com/blogs" },
+      { label: "Privacy", href: "https://app.romiadhd.com/privacy" },
+      { label: "Terms of Use", href: "https://app.romiadhd.com/terms" },
     ],
   },
   {
@@ -50,12 +52,9 @@ const footerCols = [
 ];
 
 const certifications = [
-  "UK GDPR",
-  "ICO Registered",
-  "SOC 2 Type II",
   "Cyber Essentials+",
-  "AES-256",
-  "No Data Monetisation",
+  "GDPR",
+  "SOC II",
 ];
 
 const stores = [
@@ -67,7 +66,7 @@ function StoreButtons({ className }) {
   return (
     <div className={className}>
       {stores.map((store) => (
-        <a key={store.src} href="#" onClick={(event) => event.preventDefault()} aria-label={store.alt}>
+        <a key={store.src} href={SIGNUP_URL} aria-label={store.alt}>
           <Image
             src={store.src}
             alt={store.alt}
@@ -81,7 +80,12 @@ function StoreButtons({ className }) {
   );
 }
 
-export function RomiClose() {
+export function RomiClose({
+  titleLine1 = "Don't Battle ADHD alone.",
+  titleLine2 = "Talk it out with Romi",
+  // The landing's short line 2 stays on one line; longer custom titles wrap.
+  titleNoWrap = true,
+}) {
   const year = new Date().getFullYear();
 
   return (
@@ -90,7 +94,13 @@ export function RomiClose() {
         {/* ---------- CTA ---------- */}
         <div
           className="px-6 py-16 text-center md:px-10 md:py-24"
-          style={{ background: "var(--romi-color-section-alt)" }}
+          style={{
+            backgroundColor: "var(--romi-color-section-alt)",
+            backgroundImage: "url('/romi/landing/clouds-cta.webp')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
         >
           <div className="mx-auto max-w-[780px]">
             <h2
@@ -101,10 +111,10 @@ export function RomiClose() {
                 lineHeight: "1.04",
               }}
             >
-              Don&apos;t Battle ADHD alone.
+              {titleLine1}
               <br />
-              <span className="whitespace-nowrap text-[var(--romi-color-primary)]">
-                Talk it out with Romi
+              <span className={titleNoWrap ? "whitespace-nowrap text-[var(--romi-color-primary)]" : "text-[var(--romi-color-primary)]"}>
+                {titleLine2}
                 <img
                   src="/romi/landing/romi-avatar.svg"
                   alt="Romi"
@@ -123,8 +133,7 @@ export function RomiClose() {
             <div className="mt-9 flex flex-col items-center gap-3">
               <Button
                 as="a"
-                href="#"
-                onClick={(event) => event.preventDefault()}
+                href={SIGNUP_URL}
                 variant="primary"
                 size="xl"
                 className="px-10 text-[1.05rem] shadow-[var(--romi-shadow-md)]"
@@ -165,17 +174,25 @@ export function RomiClose() {
                       {col.title}
                     </h3>
                     <ul className="mt-4 space-y-3">
-                      {col.links.map((link) => (
-                        <li key={link.label}>
-                          <Link
-                            href={link.href}
-                            className="text-[var(--romi-color-ink-muted)] transition-colors hover:text-[var(--romi-color-primary)]"
-                            style={{ fontSize: "var(--romi-text-md)" }}
-                          >
-                            {link.label}
-                          </Link>
-                        </li>
-                      ))}
+                      {col.links.map((link) => {
+                        const external = /^(https?:|mailto:)/.test(link.href);
+                        const linkClass =
+                          "text-[var(--romi-color-ink-muted)] transition-colors hover:text-[var(--romi-color-primary)]";
+                        const linkStyle = { fontSize: "var(--romi-text-md)" };
+                        return (
+                          <li key={link.label}>
+                            {external ? (
+                              <a href={link.href} className={linkClass} style={linkStyle}>
+                                {link.label}
+                              </a>
+                            ) : (
+                              <Link href={link.href} className={linkClass} style={linkStyle}>
+                                {link.label}
+                              </Link>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 ))}
@@ -184,18 +201,16 @@ export function RomiClose() {
           </div>
 
           {/* Full-width bottom bar: security pills (left) + copyright (right) */}
-          <div className="mt-14 border-t border-[var(--romi-color-border)] pt-8">
+          <div className="mt-14 pt-8">
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--romi-color-ink-soft)]">
-                  Security &amp; data
-                </p>
-                <ul className="mt-4 flex flex-wrap gap-2.5">
+                <ul className="flex flex-wrap gap-2.5">
                   {certifications.map((cert) => (
                     <li
                       key={cert}
-                      className="rounded-full border border-[var(--romi-charcoal)]/15 bg-[var(--romi-color-surface)] px-4 py-2 text-sm font-semibold text-[var(--romi-color-ink-muted)]"
+                      className="flex items-center gap-2 rounded-full border border-[var(--romi-charcoal)]/15 bg-[var(--romi-color-surface)] px-4 py-2 text-sm font-semibold text-[var(--romi-color-ink-muted)]"
                     >
+                      <Lock aria-hidden="true" className="h-4 w-4 text-[var(--romi-indigo)]" />
                       {cert}
                     </li>
                   ))}

@@ -1,4 +1,4 @@
-import { RomiClose, RomiDifference, RomiFaqs, RomiHeader, RomiHero, RomiHelps, RomiInAction, RomiLogos, RomiMission, RomiPage, RomiRebrandBanner, RomiShowcase, RomiStats, RomiStruggles, RomiTestimonials } from "../src/romi";
+import { RomiAwards, RomiClose, RomiDifference, RomiFaqs, RomiHeader, RomiHero, RomiHelps, RomiInAction, RomiMission, RomiPage, RomiRebrandBanner, RomiStats, RomiStruggles, RomiTestimonials } from "../src/romi";
 
 export default function RomiNewLandingPage() {
   return (
@@ -8,7 +8,6 @@ export default function RomiNewLandingPage() {
     >
       <RomiHeader />
       <RomiHero />
-      <RomiShowcase />
       <RomiStruggles />
       <RomiHelps />
       <RomiInAction />
@@ -16,7 +15,9 @@ export default function RomiNewLandingPage() {
       <RomiTestimonials />
       <RomiDifference />
       <RomiMission />
-      <RomiLogos />
+      <section className="bg-[var(--romi-beige)] pb-10 pt-12 md:pb-12 md:pt-14">
+        <RomiAwards />
+      </section>
       <RomiFaqs />
       <RomiClose />
       <RomiRebrandBanner />

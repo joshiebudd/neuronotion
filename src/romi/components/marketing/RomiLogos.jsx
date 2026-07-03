@@ -74,12 +74,12 @@ function LogoTrack() {
   );
 }
 
-export function RomiLogos() {
-  return (
-    <section className="bg-[var(--romi-beige)] pb-6 pt-12 md:pb-8 md:pt-14">
+export function RomiLogos({ bare = false, className }) {
+  const inner = (
+    <>
       <Container>
         <div className="flex justify-center">
-          <Badge>Seen On and Supported by</Badge>
+          <Badge avatar="/romi/characters/windows/02-mint.svg">Seen On and Supported by</Badge>
         </div>
       </Container>
 
@@ -87,6 +87,17 @@ export function RomiLogos() {
       <div className="mt-9 overflow-hidden md:mt-10" style={edgeFade}>
         <LogoTrack />
       </div>
+    </>
+  );
+
+  // bare: badge + marquee only, no section band — for embedding inside the hero.
+  if (bare) {
+    return <div className={className}>{inner}</div>;
+  }
+
+  return (
+    <section className="bg-[var(--romi-beige)] pb-6 pt-12 md:pb-8 md:pt-14">
+      {inner}
     </section>
   );
 }

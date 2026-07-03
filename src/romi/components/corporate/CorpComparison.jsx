@@ -5,29 +5,24 @@ import { Container } from "../layout/Container";
 import { cn } from "../../lib/cn";
 
 /*
- * "Why Romi feels different" — ported from the legacy Claudia landing page and
- * refactored into the Romi design system. Light beige section, two contrasting
- * cards: Romi's ADHD-first design (mint / positive) vs other tools (coral /
- * negative). z-10 + rounded-b so the indigo Mission below curves up under it.
- * Copy is verbatim from the original ("Neuro's" -> "Romi's"); styling is new.
- *
- * Animation is ported verbatim from the legacy LPTheDifference: when the grid
- * scrolls into view the two cards slide in from opposite sides and fade up
- * (positive from the left, negative from the right) over 700ms.
+ * Corporate comparison — unsupported vs supported, in the exact visual
+ * language of the landing "This time is different" section (mint positive
+ * card vs light charcoal-tint negative card, opposite slide-in on scroll),
+ * followed by the "training is good, BUT..." bridge callout.
  */
 
-const romiPoints = [
-  "Built for ADHD brains by ADHD brains",
-  "Removes the friction that trips you up",
-  "Learns about you over time",
-  "Celebrates your brain exactly as it is",
+const unsupportedPoints = [
+  "50% of them want to leave",
+  "22 days of productivity lost, per person, per year",
+  "200% higher absenteeism",
+  "Employment tribunal risk",
 ];
 
-const otherPoints = [
-  "Built for neurotypicals, then adapted",
-  "Overwhelm you with features and options",
-  "Demand perfect input and maintenance",
-  "Treat ADHD like a problem to solve",
+const supportedPoints = [
+  "36% higher output",
+  "60% less absenteeism",
+  "87% less stress",
+  "90% better retention, and lower turnover costs",
 ];
 
 function ComparisonCard({ tone, icon: Icon, title, points, isVisible }) {
@@ -39,8 +34,8 @@ function ComparisonCard({ tone, icon: Icon, title, points, isVisible }) {
         isVisible
           ? "translate-x-0 opacity-100"
           : isPositive
-            ? "-translate-x-12 opacity-0"
-            : "translate-x-12 opacity-0"
+            ? "translate-x-12 opacity-0"
+            : "-translate-x-12 opacity-0"
       )}
       style={{
         borderColor: isPositive
@@ -77,9 +72,7 @@ function ComparisonCard({ tone, icon: Icon, title, points, isVisible }) {
               className="mt-2 h-2 w-2 flex-shrink-0 rounded-full"
               style={{ backgroundColor: isPositive ? "var(--romi-mint-deep)" : "var(--romi-charcoal)" }}
             />
-            <span className="text-[17px] leading-relaxed text-[var(--romi-color-ink)]">
-              {point}
-            </span>
+            <span className="text-[17px] leading-relaxed text-[var(--romi-color-ink)]">{point}</span>
           </li>
         ))}
       </ul>
@@ -87,7 +80,7 @@ function ComparisonCard({ tone, icon: Icon, title, points, isVisible }) {
   );
 }
 
-export function RomiDifference() {
+export function CorpComparison() {
   const gridRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -103,7 +96,7 @@ export function RomiDifference() {
   }, []);
 
   return (
-    <section className="relative z-10 bg-[var(--romi-beige-deep)] pb-24 pt-2 rounded-b-[40px] shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:pb-32 md:pt-4 md:rounded-b-[64px]">
+    <section className="relative -mt-12 bg-[var(--romi-beige-deep)] pb-6 pt-24 md:-mt-16 md:pb-8 md:pt-32">
       <Container>
         <h2
           className="mx-auto max-w-[760px] text-center font-bold tracking-[-0.01em] text-[var(--romi-color-heading)]"
@@ -113,27 +106,37 @@ export function RomiDifference() {
             lineHeight: "var(--romi-line-display-md)",
           }}
         >
-          We know you&apos;ve been failed before.
-          <br />
-          This time is different.
+          What happens when you actually support them.
         </h2>
 
         <div ref={gridRef} className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
           <ComparisonCard
-            tone="positive"
-            icon={Check}
-            title="Romi's ADHD-first design:"
-            points={romiPoints}
+            tone="negative"
+            icon={XCircle}
+            title="When unsupported:"
+            points={unsupportedPoints}
             isVisible={isVisible}
           />
           <ComparisonCard
-            tone="negative"
-            icon={XCircle}
-            title={'Other "ADHD-friendly" tools:'}
-            points={otherPoints}
+            tone="positive"
+            icon={Check}
+            title="With Romi's support:"
+            points={supportedPoints}
             isVisible={isVisible}
           />
         </div>
+
+        {/* Bridge: training / adjustments are good, but... */}
+        <CurvedCard className="mx-auto mt-10 max-w-[860px] border-0 bg-[var(--romi-purple-pale)] px-7 py-6 text-center md:px-10 md:py-7">
+          <p
+            className="font-semibold text-[var(--romi-color-ink)]"
+            style={{ fontSize: "var(--romi-text-xl)", lineHeight: "var(--romi-line-xl)" }}
+          >
+            Awareness training is good. Reasonable adjustments are good. But none of
+            it helps someone actually do better, day to day.{" "}
+            <span style={{ color: "var(--romi-color-primary)" }}>That&apos;s what Romi is for.</span>
+          </p>
+        </CurvedCard>
       </Container>
     </section>
   );

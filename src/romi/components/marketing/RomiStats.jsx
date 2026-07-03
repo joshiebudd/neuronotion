@@ -11,12 +11,12 @@ import { Container } from "../layout/Container";
 const SUPPORTED_COUNT = 15241;
 
 const stats = [
-  { value: "83%", label: "found daily functioning easier" },
+  { value: "83%", label: "improved daily functioning" },
   { value: "62%", label: "more in control of life" },
   { value: "60%", label: "less overwhelmed" },
   { value: "36%", label: "improvement in task execution & organisation" },
   { value: "32%", label: "reduction in ADHD symptoms while using Romi" },
-  { value: "32%", label: "increase in positive mood & regulation" },
+  { value: "33%", label: "increase in positive mood & regulation" },
 ];
 
 function useCountOnVisible(end, durationMs = 1800) {
@@ -70,7 +70,9 @@ export function RomiStats() {
     <section className="relative z-10 bg-[var(--romi-color-bg)] pb-24 pt-12 rounded-b-[40px] shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:pb-32 md:pt-14 md:rounded-b-[64px]">
       <Container>
         <div className="mb-10 flex justify-center">
-          <Badge avatar="/romi/landing/badge-window-stats.svg">Built on science and experience</Badge>
+          <Badge avatar="/romi/landing/badge-window-stats.svg">
+            <span>Shaped by lived experience <span className="italic">and</span> science.</span>
+          </Badge>
         </div>
 
         <h2
@@ -85,7 +87,7 @@ export function RomiStats() {
           <span className="text-[var(--romi-purple)]" style={{ fontSize: "1.12em", letterSpacing: "-0.03em" }}>
             {count.toLocaleString()}
           </span>{" "}
-          <span>ADHDers supported already</span>
+          <span>ADHDers already have Romi in their corner</span>
         </h2>
 
         <div className="mx-auto mt-14 grid max-w-[1040px] gap-y-12 sm:grid-cols-2 md:grid-cols-3 md:gap-x-10 md:gap-y-14">
@@ -113,16 +115,6 @@ export function RomiStats() {
               </div>
             ))}
         </div>
-
-        <p
-          className="mt-10 text-center text-[var(--romi-color-ink-muted)]"
-          style={{
-            fontSize: "var(--romi-text-lg)",
-            lineHeight: "var(--romi-line-lg)",
-          }}
-        >
-          This is what the average user achieves in just two weeks of use (clinically measured).
-        </p>
       </Container>
     </section>
   );

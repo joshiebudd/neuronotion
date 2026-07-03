@@ -44,7 +44,7 @@ const struggles = [
   { label: "You feel out of control", detail: "You are constantly scraping by, wondering how everyone else does it.", cx: 78, cy: 34, d: 28, tone: "mint", radius: "54% 46% 47% 53% / 48% 54% 46% 52%" },
   { label: "Everything feels urgent", detail: "It feels impossible to choose where to focus.", cx: 74, cy: 72, d: 26, tone: "purple", radius: "47% 53% 52% 48% / 56% 45% 55% 44%" },
   { label: "You start strong, then crash", detail: "Your brain only focuses when things feel new, or pressure is extreme.", cx: 46, cy: 80, d: 28, tone: "mint", radius: "52% 48% 50% 50% / 46% 54% 46% 54%" },
-  { label: "You've tried every app, system, and hack", detail: "They aren't truly built for ADHD brains.", cx: 22, cy: 66, d: 26, tone: "purple", radius: "50% 50% 57% 43% / 54% 49% 51% 46%" },
+  { label: "You've tried every app, system, and hack", detail: "Other apps aren't truly built for ADHD brains.", cx: 22, cy: 66, d: 26, tone: "purple", radius: "50% 50% 57% 43% / 54% 49% 51% 46%" },
   { label: "You lose brilliant ideas", detail: "By the time you find somewhere to write them down, they're gone.", cx: 26, cy: 32, d: 28, tone: "mint", radius: "53% 47% 48% 52% / 50% 56% 44% 50%" },
 ];
 
@@ -297,7 +297,7 @@ export function RomiStruggles() {
                     className={cn(
                       "relative grid h-full w-full place-items-center overflow-hidden p-3 text-center transition-[transform,box-shadow] duration-300 ease-out",
                       "focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--romi-purple)]/50",
-                      isActive ? "z-20 scale-[1.22]" : "scale-100 hover:scale-[1.05]"
+                      isActive ? "z-20 scale-[1.3]" : "scale-100 hover:scale-[1.05]"
                     )}
                   >
                     {/* Soft white sheen, top-left, for the balloon highlight */}
@@ -309,22 +309,27 @@ export function RomiStruggles() {
                           "radial-gradient(58% 48% at 32% 24%, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0) 62%)",
                       }}
                     />
-                    <span className="relative flex flex-col items-center px-1">
-                      <span
-                        className="text-[0.82rem] font-bold leading-tight tracking-[-0.01em] sm:text-[0.98rem]"
-                        style={{ fontFamily: "var(--romi-font-display)", color: blob.text }}
-                      >
-                        {item.label}
-                      </span>
-                      <span
-                        className={cn(
-                          "overflow-hidden text-[0.6rem] font-medium leading-snug transition-all duration-300 ease-out sm:text-[0.66rem]",
-                          isActive ? "mt-1 max-h-32 translate-y-0 opacity-100" : "-translate-y-1 max-h-0 opacity-0"
-                        )}
-                        style={{ color: blob.detail }}
-                      >
-                        {item.detail}
-                      </span>
+                    {/* Title (default) fades out and the body fades in to fill
+                        the bubble on hover / tap - so it never crams both at once. */}
+                    <span
+                      className={cn(
+                        "absolute inset-0 flex items-center justify-center p-[14%] text-center font-bold leading-tight tracking-[-0.01em] transition-opacity duration-200",
+                        "text-[0.82rem] sm:text-[0.98rem]",
+                        isActive ? "opacity-0" : "opacity-100"
+                      )}
+                      style={{ fontFamily: "var(--romi-font-display)", color: blob.text }}
+                    >
+                      {item.label}
+                    </span>
+                    <span
+                      className={cn(
+                        "absolute inset-0 flex items-center justify-center p-[13%] text-center font-medium leading-snug transition-opacity duration-200",
+                        "text-[0.68rem] sm:text-[0.82rem]",
+                        isActive ? "opacity-100" : "pointer-events-none opacity-0"
+                      )}
+                      style={{ color: blob.text }}
+                    >
+                      {item.detail}
                     </span>
                   </button>
                 </div>

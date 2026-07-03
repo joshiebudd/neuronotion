@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Badge } from "../ui/Badge";
 import { Container } from "../layout/Container";
@@ -21,9 +21,9 @@ const founders = [
     role: "Founder & CEO",
     image: "/romi/team/josh.webp",
     bio: [
-      "Diagnosed Severe ADHD",
-      "Spent 8 years deeply learning about ADHD",
-      "Poured everything I knew into Romi",
+      "Diagnosed ADHD",
+      "8+ years experience in the ADHD space",
+      "Building the support mechanisms he never had",
     ],
   },
   {
@@ -33,8 +33,8 @@ const founders = [
     image: "/romi/team/vlad.webp",
     bio: [
       "The technical brains behind Romi",
-      "Neuro's resident Mad Scientist",
-      "Huge personal experience w/ ADHD",
+      "Romi's resident Mad Scientist",
+      "Huge personal experience with ADHD",
     ],
   },
   {
@@ -223,15 +223,36 @@ function MobileFounders({ founders: list, activeIndex, setActiveIndex }) {
   );
 }
 
-export function RomiMission() {
+export function RomiMission({
+  badge = "The team behind the mission",
+  tone = "light", // "light" (landing) | "deep" (corporate band)
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Landing arrived at via /rominewlanding#team (e.g. Team nav from another
+  // page). On mobile there is no GSAP pin, so scroll here once laid out.
+  // On desktop RomiHelps handles it after the pin is built (correct position).
+  useEffect(() => {
+    if (typeof window === "undefined" || window.location.hash !== "#team") return undefined;
+    if (window.innerWidth >= 1024) return undefined;
+    const timer = setTimeout(() => {
+      document.getElementById("team")?.scrollIntoView({ behavior: "auto" });
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section className="relative -mt-12 bg-[var(--romi-beige)] pb-24 pt-24 md:-mt-16 md:pb-32 md:pt-32">
+    <section
+      id="team"
+      className={cn(
+        "relative -mt-12 scroll-mt-24 pb-24 pt-24 md:-mt-16 md:pb-32 md:pt-32",
+        tone === "deep" ? "bg-[var(--romi-beige-deep)]" : "bg-[var(--romi-beige)]"
+      )}
+    >
       <Container>
         {/* Team */}
         <div className="flex flex-col items-center">
-          <Badge>The people behind the mission</Badge>
+          <Badge avatar="/romi/characters/windows/02-mint.svg">{badge}</Badge>
         </div>
 
         {/* Desktop accordion */}

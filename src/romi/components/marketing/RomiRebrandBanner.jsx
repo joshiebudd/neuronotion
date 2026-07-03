@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, X } from "lucide-react";
+import { X } from "lucide-react";
 
 /*
  * Rebrand announcement — a small dismissible floating pill at the bottom of the
@@ -16,9 +16,8 @@ export function RomiRebrandBanner() {
           Formerly Claudia by Neuro
         </span>
         <p className="flex items-center gap-1 whitespace-nowrap text-sm font-medium leading-5 text-[#7247AE]">
-          <span>Say hello to</span>
+          <span>We&apos;ve rebranded to</span>
           <span className="font-semibold text-[#7247AE]">Romi</span>
-          <ArrowRight aria-hidden="true" className="h-4 w-4 text-[#9D6DD8]" />
         </p>
         <button
           type="button"
