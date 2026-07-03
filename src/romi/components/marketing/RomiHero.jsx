@@ -2,11 +2,12 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "../layout/Container";
 import { Button } from "../ui/Button";
-import { RomiLogos } from "./RomiLogos";
 
 export function RomiHero() {
   return (
-    <section className="relative z-10 rounded-b-[40px] bg-[var(--romi-color-bg)] pb-24 pt-14 shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:rounded-b-[64px] md:pb-32 md:pt-20">
+    // Logos now live in their own standalone <RomiLogos curve> section on the
+    // page (identical to the corporate page), so the hero is flat + no curve.
+    <section className="relative bg-[var(--romi-color-bg)] pb-12 pt-14 md:pb-16 md:pt-20">
       <Container style={{ "--romi-container": "1340px" }}>
         <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:text-left">
@@ -79,9 +80,6 @@ export function RomiHero() {
         </div>
 
       </Container>
-
-      {/* Social proof — logo carousel (with its badge), full bleed under the hero */}
-      <RomiLogos bare className="mt-9 md:mt-12" />
     </section>
   );
 }

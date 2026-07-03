@@ -1,4 +1,4 @@
-import { RomiAwards, RomiClose, RomiDifference, RomiFaqs, RomiHeader, RomiHero, RomiHelps, RomiInAction, RomiMission, RomiPage, RomiPricing, RomiRebrandBanner, RomiStats, RomiStruggles, RomiTestimonials } from "../src/romi";
+import { RomiAwards, RomiClose, RomiDifference, RomiFaqs, RomiHeader, RomiHero, RomiHelps, RomiInAction, RomiLogos, RomiMission, RomiPage, RomiPricing, RomiRebrandBanner, RomiStats, RomiStruggles, RomiTestimonials } from "../src/romi";
 
 export default function RomiNewLandingPage() {
   return (
@@ -8,6 +8,7 @@ export default function RomiNewLandingPage() {
     >
       <RomiHeader />
       <RomiHero />
+      <RomiLogos curve badge="Supported by" />
       <RomiStruggles />
       <RomiHelps />
       <RomiInAction />
