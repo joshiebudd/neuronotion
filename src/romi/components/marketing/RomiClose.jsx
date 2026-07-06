@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/Button";
 import { RomiRating } from "../ui/RomiRating";
+import { ClickTooltip } from "../ui/ClickTooltip";
 import { Lock } from "lucide-react";
 
 /*
@@ -25,7 +26,7 @@ import { Lock } from "lucide-react";
  * the rebrand swap Claudia -> Romi.
  */
 
-const SIGNUP_URL = "https://app.romiadhd.com/signup";
+const SIGNUP_URL = "https://app.romiadhd.com/?page=signup";
 
 const footerCols = [
   {
@@ -33,7 +34,7 @@ const footerCols = [
     links: [
       // Placeholder pages aren't live yet, so these show but don't link.
       { label: "For Healthcare", href: "/romiforhealthcare", disabled: true },
-      { label: "For Corporates", href: "/romiforcorporates" },
+      { label: "For Corporates", href: "/corporates" },
       { label: "For Diagnosis Clinics", href: "/romiforclinics", disabled: true },
       { label: "For Coaches", href: "/romiforcoaches", disabled: true },
     ],
@@ -68,15 +69,15 @@ function StoreButtons({ className }) {
   return (
     <div className={className}>
       {stores.map((store) => (
-        <a key={store.src} href={SIGNUP_URL} aria-label={store.alt}>
+        <ClickTooltip key={store.src} label="Temporarily disabled due to rebranding.">
           <Image
             src={store.src}
             alt={store.alt}
             width={196}
             height={67}
-            className="h-[44px] w-auto transition-opacity hover:opacity-90 md:h-[46px]"
+            className="h-[44px] w-auto md:h-[46px]"
           />
-        </a>
+        </ClickTooltip>
       ))}
     </div>
   );
@@ -174,7 +175,7 @@ export function RomiClose({
           <div className="grid gap-12 lg:grid-cols-3 lg:gap-16">
             {/* Left third: brand + app */}
             <div className="lg:col-span-1">
-              <Link href="/rominewlanding" aria-label="Romi home" className="inline-block">
+              <Link href="/" aria-label="Romi home" className="inline-block">
                 <Image src="/romi/romi-logo-linear.svg" alt="Romi" width={150} height={36} className="h-9 w-auto" />
               </Link>
               <p

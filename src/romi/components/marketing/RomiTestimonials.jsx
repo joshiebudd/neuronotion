@@ -123,7 +123,7 @@ export function TestimonialCard({ item }) {
 export function RomiTestimonials({
   curve = false,
   ctaLabel = "Get Romi in your corner",
-  ctaHref = "https://app.romiadhd.com/signup",
+  ctaHref = "https://app.romiadhd.com/?page=signup",
 }) {
   const onCtaClick = (event) => {
     if (ctaHref.startsWith("#")) {

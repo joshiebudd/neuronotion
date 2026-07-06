@@ -104,7 +104,7 @@ function StepText({ step }) {
         ))}
       </ul>
       <div className="mt-9 lg:mt-11">
-        <Button as="a" href="https://app.romiadhd.com/signup" size="xl" className="lg:px-10 lg:py-4 lg:text-[1.15rem]">
+        <Button as="a" href="https://app.romiadhd.com/?page=signup" size="xl" className="lg:px-10 lg:py-4 lg:text-[1.15rem]">
           Try Romi free
           <ArrowRight aria-hidden="true" className="h-5 w-5 lg:h-6 lg:w-6" />
         </Button>

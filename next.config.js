@@ -27,6 +27,17 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    // Route cutover: the new Romi pages took over /, /corporates, and the old
+    // Neuro Notion pages moved to /neuronotion*. Keep old links working.
+    return [
+      { source: "/rominewlanding", destination: "/", permanent: false },
+      { source: "/romiforcorporates", destination: "/corporates", permanent: false },
+      { source: "/forcorporate", destination: "/neuronotion-corporate", permanent: false },
+      { source: "/forclinics", destination: "/neuronotion-clinics", permanent: false },
+      { source: "/forcoaches", destination: "/neuronotion-coaches", permanent: false },
+    ];
+  },
   reactStrictMode: true,
   images: {
     domains: [

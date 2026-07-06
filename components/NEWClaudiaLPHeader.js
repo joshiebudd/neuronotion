@@ -90,7 +90,7 @@ const NEWClaudiaLPHeader = () => {
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link
-              href="/#what-is-claudia"
+              href="/neuronotion#what-is-claudia"
               className="text-white/90 hover:text-white transition-colors duration-200 text-sm cursor-pointer font-medium"
             >
               How It Works
@@ -143,7 +143,7 @@ const NEWClaudiaLPHeader = () => {
                 style={{ animation: 'fadeIn 0.15s ease-out' }}
               >
                 <Link
-                  href="/forclinics"
+                  href="/neuronotion-clinics"
                   className="flex items-center gap-3 px-4 py-3.5 text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
                   onClick={() => {
                     track('For Clinics');
@@ -162,7 +162,7 @@ const NEWClaudiaLPHeader = () => {
                 </Link>
                 <div className="border-t border-white/5"></div>
                 <Link
-                  href="/forcorporate"
+                  href="/neuronotion-corporate"
                   className="flex items-center gap-3 px-4 py-3.5 text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
                   onClick={() => {
                     track('For Corporates');
@@ -181,7 +181,7 @@ const NEWClaudiaLPHeader = () => {
                 </Link>
                 <div className="border-t border-white/5"></div>
                 <Link
-                  href="/forcoaches"
+                  href="/neuronotion-coaches"
                   className="flex items-center gap-3 px-4 py-3.5 text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
                   onClick={() => {
                     track('For Coaches');
@@ -253,7 +253,7 @@ const NEWClaudiaLPHeader = () => {
         <div className="md:hidden fixed top-[60px] left-0 right-0 bg-[#1e2a4a]/98 backdrop-blur-lg border-b border-white/10 shadow-xl z-40">
             <nav className="flex flex-col max-w-[1400px] mx-auto px-4 py-6 space-y-1">
               <Link
-                href="/#what-is-claudia"
+                href="/neuronotion#what-is-claudia"
                 className="text-white/90 hover:text-white hover:bg-white/10 transition-all duration-200 text-base py-3 px-4 rounded-lg cursor-pointer font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -301,7 +301,7 @@ const NEWClaudiaLPHeader = () => {
               {mobileForOpen && (
                 <div className="pl-4 space-y-1">
                   <Link
-                    href="/forclinics"
+                    href="/neuronotion-clinics"
                     className="text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm py-2.5 px-4 rounded-lg font-medium flex items-center gap-3"
                     onClick={() => {
                       track('For Clinics from mobile menu');
@@ -316,7 +316,7 @@ const NEWClaudiaLPHeader = () => {
                     For Private Clinics
                   </Link>
                   <Link
-                    href="/forcorporate"
+                    href="/neuronotion-corporate"
                     className="text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm py-2.5 px-4 rounded-lg font-medium flex items-center gap-3"
                     onClick={() => {
                       track('For Corporates from mobile menu');
@@ -331,7 +331,7 @@ const NEWClaudiaLPHeader = () => {
                     For Corporates
                   </Link>
                   <Link
-                    href="/forcoaches"
+                    href="/neuronotion-coaches"
                     className="text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm py-2.5 px-4 rounded-lg font-medium flex items-center gap-3"
                     onClick={() => {
                       track('For Coaches from mobile menu');

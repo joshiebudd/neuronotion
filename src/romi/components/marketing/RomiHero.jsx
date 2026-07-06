@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "../layout/Container";
 import { Button } from "../ui/Button";
+import { ClickTooltip } from "../ui/ClickTooltip";
 
 export function RomiHero() {
   return (
@@ -23,29 +24,29 @@ export function RomiHero() {
 
             <div className="mx-auto mt-9 inline-flex flex-col items-center gap-4 lg:mx-0">
               <div className="flex flex-wrap justify-center gap-4">
-                <a href="https://app.romiadhd.com/signup" aria-label="Download on the App Store">
+                <ClickTooltip label="Temporarily disabled due to rebranding.">
                   <Image
                     src="/romi/landing/store-app-store.webp"
                     alt="Download on the App Store"
                     width={196}
                     height={67}
-                    className="h-[clamp(48px,5vw,58px)] w-auto transition-opacity hover:opacity-90"
+                    className="h-[clamp(48px,5vw,58px)] w-auto"
                   />
-                </a>
-                <a href="https://app.romiadhd.com/signup" aria-label="Get it on Google Play">
+                </ClickTooltip>
+                <ClickTooltip label="Temporarily disabled due to rebranding.">
                   <Image
                     src="/romi/landing/store-google-play.webp"
                     alt="Get it on Google Play"
                     width={196}
                     height={67}
-                    className="h-[clamp(48px,5vw,58px)] w-auto transition-opacity hover:opacity-90"
+                    className="h-[clamp(48px,5vw,58px)] w-auto"
                   />
-                </a>
+                </ClickTooltip>
               </div>
 
               <Button
                 as="a"
-                href="https://app.romiadhd.com/signup"
+                href="https://app.romiadhd.com/?page=signup"
                 variant="tertiaryLilac"
                 size="lg"
                 className="border-0 px-2 text-[1.05rem]"

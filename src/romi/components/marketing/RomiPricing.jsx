@@ -11,7 +11,7 @@ import { Container } from "../layout/Container";
  * the awards strip and the FAQs.
  */
 
-const SIGNUP_URL = "https://app.romiadhd.com/signup";
+const SIGNUP_URL = "https://app.romiadhd.com/?page=signup";
 
 const features = [
   "Unlimited conversations with Romi",

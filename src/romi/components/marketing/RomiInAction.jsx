@@ -1,6 +1,7 @@
 import { Play, Volume2, Airplay, Maximize } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import { Container } from "../layout/Container";
+import { ClickTooltip } from "../ui/ClickTooltip";
 
 /*
  * "Romi in Action" section.
@@ -50,7 +51,7 @@ function SafariFrame({ children }) {
 function PlayButton({ size = 72 }) {
   return (
     <div
-      className="grid cursor-pointer place-items-center rounded-full transition-transform duration-200 hover:scale-105"
+      className="grid place-items-center rounded-full transition-transform duration-200 hover:scale-105"
       style={{
         width: size,
         height: size,
@@ -150,9 +151,11 @@ function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, po
       />
       {/* Faint dark overlay */}
       <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.10)" }} />
-      {/* Centre play */}
+      {/* Centre play — video not ready yet, so it explains itself on click. */}
       <div className="absolute inset-0 grid place-items-center">
-        <PlayButton />
+        <ClickTooltip label="Video under construction - come back soon!">
+          <PlayButton />
+        </ClickTooltip>
       </div>
       {controls && <ControlBar />}
     </div>

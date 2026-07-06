@@ -7,9 +7,9 @@ import { Container } from "../layout/Container";
 import { cn } from "../../lib/cn";
 
 const navItems = [
-  { label: "Team", target: "team", href: "/rominewlanding#team" },
-  { label: "Pricing", target: "pricing", href: "/rominewlanding#pricing" },
-  { label: "For work", href: "/romiforcorporates" },
+  { label: "Team", target: "team", href: "/#team" },
+  { label: "Pricing", target: "pricing", href: "/#pricing" },
+  { label: "For work", href: "/corporates" },
   // { label: "For healthcare", href: "/romiforhealthcare" }, // hidden for now
 ];
 
@@ -19,8 +19,8 @@ const navItems = [
 //   { label: "For Coaches", desc: "Support clients between sessions", href: "/romiforcoaches" },
 // ];
 
-const LOGIN_URL = "https://app.romiadhd.com/login";
-const SIGNUP_URL = "https://app.romiadhd.com/signup";
+const LOGIN_URL = "https://app.romiadhd.com/?page=login";
+const SIGNUP_URL = "https://app.romiadhd.com/?page=signup";
 
 function HeaderAction({ children, variant = "secondary", dark = false, href }) {
   // On indigo sections the light surface buttons would disappear, so swap to a
@@ -125,7 +125,7 @@ export function RomiHeader() {
       )}
     >
       <Container className="flex min-h-[76px] items-center justify-between gap-6">
-        <Link href="/rominewlanding" className="flex shrink-0 items-center" aria-label="Romi home">
+        <Link href="/" className="flex shrink-0 items-center" aria-label="Romi home">
           <Image
             src="/romi/romi-logo-linear.svg"
             alt="Romi"

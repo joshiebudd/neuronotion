@@ -269,6 +269,8 @@ export function RomiStruggles() {
               aria-hidden="true"
               className="absolute inset-0 rounded-full border border-[var(--romi-color-border)] bg-[var(--romi-beige)] shadow-[0_30px_60px_-30px_rgb(38_19_64_/_0.12)]"
             />
+            {/* Clip layer: keeps every blob AND its drop shadow inside the circle */}
+            <div className="absolute inset-0 overflow-hidden rounded-full">
             {struggles.map((item, index) => {
               const isActive = activeIndex === index;
               const blob = BLOBS[item.tone];
@@ -335,14 +337,12 @@ export function RomiStruggles() {
                 </div>
               );
             })}
+            </div>
 
-            {/* Circle rim sits ON TOP of the blobs (z-30). Its band-coloured ring
-                covers any blob that expands past the wall, so every bubble stays
-                visually contained within the circle. */}
+            {/* Crisp circle rim, on top of the clipped blobs. */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 z-30 rounded-full border border-[var(--romi-color-border)]"
-              style={{ boxShadow: "0 0 0 34px var(--romi-beige-deep)" }}
             />
           </div>
         </div>
