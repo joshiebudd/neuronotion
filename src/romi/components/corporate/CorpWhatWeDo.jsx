@@ -59,8 +59,8 @@ export function CorpWhatWeDo() {
           className="mx-auto mt-8 max-w-[880px] text-center font-bold tracking-[-0.01em] text-[var(--romi-color-heading)]"
           style={{
             fontFamily: "var(--romi-font-display)",
-            fontSize: "var(--romi-display-md)",
-            lineHeight: "var(--romi-line-display-md)",
+            fontSize: "clamp(1.8rem, 6vw, var(--romi-display-md))",
+            lineHeight: "clamp(2.2rem, 7.3vw, var(--romi-line-display-md))",
           }}
         >
           The most cost-effective, scalable form of support for neurodivergent

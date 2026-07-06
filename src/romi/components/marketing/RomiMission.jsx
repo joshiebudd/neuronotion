@@ -307,8 +307,8 @@ export function RomiMission({
             className="max-w-[920px] font-bold tracking-[-0.015em] text-[var(--romi-color-heading)]"
             style={{
               fontFamily: "var(--romi-font-display)",
-              fontSize: "var(--romi-display-xl)",
-              lineHeight: "var(--romi-line-display-xl)",
+              fontSize: "clamp(2rem, 8vw, var(--romi-display-xl))",
+              lineHeight: "clamp(2.4rem, 9.6vw, var(--romi-line-display-xl))",
             }}
           >
             <span className="text-[var(--romi-purple)]">Our Mission:</span>{" "}

@@ -80,8 +80,8 @@ export function RomiStats() {
           className="text-center font-bold tracking-[-0.01em] text-[var(--romi-color-heading)]"
           style={{
             fontFamily: "var(--romi-font-display)",
-            fontSize: "var(--romi-display-md)",
-            lineHeight: "var(--romi-line-display-md)",
+            fontSize: "clamp(1.8rem, 6vw, var(--romi-display-md))",
+            lineHeight: "clamp(2.2rem, 7.3vw, var(--romi-line-display-md))",
           }}
         >
           <span className="text-[var(--romi-purple)]" style={{ fontSize: "1.12em", letterSpacing: "-0.03em" }}>
@@ -90,15 +90,15 @@ export function RomiStats() {
           <span>ADHDers already have Romi in their corner</span>
         </h2>
 
-        <div className="mx-auto mt-14 grid max-w-[1040px] gap-y-12 sm:grid-cols-2 md:grid-cols-3 md:gap-x-10 md:gap-y-14">
+        <div className="mx-auto mt-14 grid max-w-[1040px] grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-3 md:gap-x-10 md:gap-y-14">
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col items-center text-center">
                 <div
                   className="font-bold text-[var(--romi-indigo)]"
                   style={{
                     fontFamily: "var(--romi-font-display)",
-                    fontSize: "var(--romi-display-lg)",
-                    lineHeight: "var(--romi-line-display-lg)",
+                    fontSize: "clamp(2.1rem, 7vw, var(--romi-display-lg))",
+                    lineHeight: "clamp(2.6rem, 8.7vw, var(--romi-line-display-lg))",
                   }}
                 >
                   {stat.value}

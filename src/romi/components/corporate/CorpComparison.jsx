@@ -14,8 +14,8 @@ export function CorpComparison() {
           className="mx-auto max-w-[820px] text-center font-semibold text-[var(--romi-color-ink)]"
           style={{
             fontFamily: "var(--romi-font-display)",
-            fontSize: "var(--romi-display-xs)",
-            lineHeight: "var(--romi-line-display-xs)",
+            fontSize: "clamp(1.3rem, 5vw, var(--romi-display-xs))",
+            lineHeight: "clamp(1.75rem, 6.6vw, var(--romi-line-display-xs))",
           }}
         >
           Awareness training is good. Reasonable adjustments are good. But none of it

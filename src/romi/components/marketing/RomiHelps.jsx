@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../ui/Button";
 import { Container } from "../layout/Container";
 import { cn } from "../../lib/cn";
@@ -85,7 +85,7 @@ function StepText({ step }) {
         {step.badge}
       </span>
       <h3
-        className="mt-5 text-[2.45rem] font-bold leading-[1.06] tracking-[-0.015em] text-[var(--romi-color-heading)] lg:mt-6 lg:text-[3.9rem]"
+        className="mt-5 text-[1.95rem] font-bold leading-[1.06] tracking-[-0.015em] text-[var(--romi-color-heading)] md:text-[2.45rem] lg:mt-6 lg:text-[3.9rem]"
         style={{ fontFamily: "var(--romi-font-display)" }}
       >
         {step.titleNode ?? step.title}
@@ -190,6 +190,59 @@ function HelpsInner({ index, onSelect }) {
   );
 }
 
+/* ---------- Mobile carousel: active step's badge + title + bullets (compact) ---------- */
+function MobileStepText({ step }) {
+  return (
+    <div className="flex flex-col">
+      <span
+        className="inline-flex w-fit items-center gap-2 rounded-[12px] py-1.5 pl-2 pr-3.5 text-[0.85rem] font-medium leading-tight [font-family:var(--romi-font-display)]"
+        style={{ backgroundColor: step.ebBg, color: "var(--romi-color-ink)" }}
+      >
+        <img
+          src="/romi/landing/badge-window-demo.svg"
+          alt=""
+          aria-hidden="true"
+          className="h-5 w-5 shrink-0 rounded-full object-cover"
+        />
+        {step.badge}
+      </span>
+      <h3
+        className="mt-3 text-[1.4rem] font-bold leading-[1.12] tracking-[-0.015em] text-[var(--romi-color-heading)]"
+        style={{ fontFamily: "var(--romi-font-display)" }}
+      >
+        {step.titleNode ?? step.title}
+      </h3>
+      <ul className="mt-3 space-y-2.5">
+        {step.bullets.map((b) => (
+          <li key={b} className="flex items-start gap-2.5 text-[0.92rem] leading-snug text-[var(--romi-color-ink-muted)]">
+            <span
+              className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full"
+              style={{ backgroundColor: "color-mix(in srgb, var(--romi-purple) 80%, transparent)" }}
+            >
+              <Check aria-hidden="true" className="h-3 w-3 text-white" />
+            </span>
+            <span>{b}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function CarouselArrow({ dir, onClick }) {
+  const Icon = dir === "prev" ? ChevronLeft : ChevronRight;
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={dir === "prev" ? "Previous" : "Next"}
+      className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] text-[var(--romi-color-ink)] shadow-[var(--romi-shadow-sm)] transition-transform hover:bg-[var(--romi-color-surface-muted)] active:scale-95"
+    >
+      <Icon className="h-5 w-5" aria-hidden="true" />
+    </button>
+  );
+}
+
 export function RomiHelps() {
   const pinRef = useRef(null);
   const stRef = useRef(null);
@@ -272,9 +325,60 @@ export function RomiHelps() {
         </div>
       </div>
 
-      {/* Mobile: dots drive it, no pin */}
+      {/* Mobile: a real carousel. Every step overlaps in one grid cell, so the
+          layout is always sized to the tallest step and NOTHING shifts when you
+          page through — text + phone cross-fade, arrows stay put. */}
       <div className="lg:hidden">
-        <HelpsInner index={index} onSelect={goTo} />
+        <Container className="py-8">
+          <div className="mx-auto max-w-[460px]">
+            {/* Text: overlapping cells (height = tallest step) */}
+            <div className="grid">
+              {helps.map((step, i) => (
+                <div
+                  key={step.title}
+                  aria-hidden={i !== index}
+                  className={cn(
+                    "col-start-1 row-start-1 transition-opacity duration-200",
+                    i === index ? "opacity-100" : "pointer-events-none opacity-0"
+                  )}
+                >
+                  <MobileStepText step={step} />
+                </div>
+              ))}
+            </div>
+
+            {/* Phone (fixed height) flanked by arrows */}
+            <div className="mt-6 flex items-center justify-center gap-1.5">
+              <CarouselArrow dir="prev" onClick={() => goTo((index - 1 + helps.length) % helps.length)} />
+              <div className="grid">
+                {helps.map((step, i) => (
+                  <img
+                    key={step.screenImg}
+                    src={step.screenImg}
+                    alt={i === index ? step.screenAlt : ""}
+                    aria-hidden={i !== index}
+                    className={cn(
+                      "col-start-1 row-start-1 h-[408px] w-auto object-contain transition-opacity duration-200",
+                      i === index ? "opacity-100" : "opacity-0"
+                    )}
+                  />
+                ))}
+              </div>
+              <CarouselArrow dir="next" onClick={() => goTo((index + 1) % helps.length)} />
+            </div>
+
+            <div className="mt-6 flex justify-center">
+              <Dots index={index} onSelect={goTo} />
+            </div>
+
+            <div className="mt-7 flex justify-center">
+              <Button as="a" href="https://app.romiadhd.com/?page=signup" size="xl">
+                Try Romi free
+                <ArrowRight aria-hidden="true" className="h-5 w-5" />
+              </Button>
+            </div>
+          </div>
+        </Container>
       </div>
     </section>
   );

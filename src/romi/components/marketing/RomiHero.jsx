@@ -12,7 +12,7 @@ export function RomiHero() {
       <Container style={{ "--romi-container": "1340px" }}>
         <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:text-left">
-            <h1 className="max-w-[680px] text-[clamp(2.9rem,5.4vw,5rem)] font-bold leading-[1.04] tracking-[-0.015em] text-[var(--romi-color-ink)]">
+            <h1 className="max-w-[680px] text-[clamp(2.05rem,5.4vw,2.9rem)] font-bold leading-[1.04] tracking-[-0.015em] text-[var(--romi-color-ink)] md:text-[clamp(2.9rem,5.4vw,5rem)]">
               Meet <span style={{ color: "var(--romi-purple)" }}>Romi</span>,
               <br />
               Your Personal ADHD Companion

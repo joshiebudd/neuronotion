@@ -61,13 +61,13 @@ export function CorpFinances() {
             <label
               htmlFor="corp-headcount"
               className="font-bold text-[var(--romi-color-heading)]"
-              style={{ fontFamily: "var(--romi-font-display)", fontSize: "1.35rem" }}
+              style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(1.15rem, 4vw, 1.35rem)" }}
             >
               How many employees do you have?
             </label>
             <div
               className="mt-3 font-bold text-[var(--romi-color-primary)]"
-              style={{ fontFamily: "var(--romi-font-display)", fontSize: "3.6rem", lineHeight: 1.02 }}
+              style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(2.5rem, 8vw, 3.6rem)", lineHeight: 1.02 }}
             >
               {headcount.toLocaleString("en-GB")}
               {headcount >= 5000 ? "+" : ""}
@@ -96,7 +96,7 @@ export function CorpFinances() {
                 </span>
                 <div
                   className="mt-3 font-bold text-[var(--romi-indigo)]"
-                  style={{ fontFamily: "var(--romi-font-display)", fontSize: "2.05rem", lineHeight: 1.12 }}
+                  style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(1.6rem, 5vw, 2.05rem)", lineHeight: 1.12 }}
                 >
                   {item.value}
                 </div>

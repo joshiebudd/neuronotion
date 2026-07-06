@@ -130,9 +130,9 @@ export function RomiClose({
                 lineHeight: "1.04",
               }}
             >
-              <span className={line1NoWrap ? "whitespace-nowrap" : undefined}>{titleLine1}</span>
+              <span className={line1NoWrap ? "whitespace-normal md:whitespace-nowrap" : undefined}>{titleLine1}</span>
               <br />
-              <span className={titleNoWrap ? "whitespace-nowrap text-[var(--romi-color-primary)]" : "text-[var(--romi-color-primary)]"}>
+              <span className={titleNoWrap ? "whitespace-normal md:whitespace-nowrap text-[var(--romi-color-primary)]" : "text-[var(--romi-color-primary)]"}>
                 {titleLine2}
                 <img
                   src="/romi/landing/romi-avatar.svg"

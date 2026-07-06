@@ -196,8 +196,8 @@ export function CorpPricing() {
           className="mx-auto mt-8 max-w-[720px] text-center font-bold tracking-[-0.01em] text-[var(--romi-color-heading)]"
           style={{
             fontFamily: "var(--romi-font-display)",
-            fontSize: "var(--romi-display-md)",
-            lineHeight: "var(--romi-line-display-md)",
+            fontSize: "clamp(1.8rem, 6vw, var(--romi-display-md))",
+            lineHeight: "clamp(2.2rem, 7.3vw, var(--romi-line-display-md))",
           }}
         >
           Pricing that scales with your team.
@@ -243,7 +243,7 @@ export function CorpPricing() {
               <div className="mt-6 text-center">
                 <div
                   className="font-bold text-[var(--romi-color-heading)]"
-                  style={{ fontFamily: "var(--romi-font-display)", fontSize: "2.8rem", lineHeight: 1.05 }}
+                  style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(2.1rem, 7vw, 2.8rem)", lineHeight: 1.05 }}
                 >
                   Let&apos;s talk
                 </div>
@@ -262,7 +262,7 @@ export function CorpPricing() {
                   <div className="mt-6 flex items-baseline justify-center gap-1.5">
                     <span
                       className="font-bold text-[var(--romi-color-heading)]"
-                      style={{ fontFamily: "var(--romi-font-display)", fontSize: "3.6rem", lineHeight: 1 }}
+                      style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(2.5rem, 8vw, 3.6rem)", lineHeight: 1 }}
                     >
                       £{(isAnnual ? annual : tier.monthly).toLocaleString("en-GB")}
                     </span>

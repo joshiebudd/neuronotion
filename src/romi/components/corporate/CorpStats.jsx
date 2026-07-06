@@ -65,8 +65,8 @@ export function CorpStats() {
           className="mx-auto max-w-[900px] text-center font-bold tracking-[-0.01em] text-[var(--romi-color-heading)]"
           style={{
             fontFamily: "var(--romi-font-display)",
-            fontSize: "var(--romi-display-md)",
-            lineHeight: "var(--romi-line-display-md)",
+            fontSize: "clamp(1.8rem, 6vw, var(--romi-display-md))",
+            lineHeight: "clamp(2.2rem, 7.3vw, var(--romi-line-display-md))",
           }}
         >
           Neurodivergent people can make or break a company&apos;s performance.

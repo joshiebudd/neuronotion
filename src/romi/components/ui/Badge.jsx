@@ -23,7 +23,7 @@ export function Badge({ tone = "light", dot = true, avatar, character, className
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2.5 rounded-[16px] py-2.5 pr-5 text-[1.2rem] font-medium leading-tight [font-family:var(--romi-font-display)]",
+        "inline-flex items-center gap-2.5 rounded-[16px] py-2.5 pr-5 text-[1rem] font-medium leading-tight [font-family:var(--romi-font-display)] md:text-[1.2rem]",
         hasGlyph ? "pl-3" : "pl-5",
         tones[tone] ?? tones.light,
         className

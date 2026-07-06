@@ -38,8 +38,8 @@ export function RomiPricing() {
           className="mx-auto mt-8 max-w-[720px] text-center font-bold tracking-[-0.01em] text-[var(--romi-color-heading)]"
           style={{
             fontFamily: "var(--romi-font-display)",
-            fontSize: "var(--romi-display-md)",
-            lineHeight: "var(--romi-line-display-md)",
+            fontSize: "clamp(1.8rem, 6vw, var(--romi-display-md))",
+            lineHeight: "clamp(2.2rem, 7.3vw, var(--romi-line-display-md))",
           }}
         >
           Simple, transparent pricing.
@@ -69,7 +69,7 @@ export function RomiPricing() {
               <div className="flex items-baseline justify-center gap-1.5">
                 <span
                   className="font-bold text-[var(--romi-color-heading)]"
-                  style={{ fontFamily: "var(--romi-font-display)", fontSize: "3.6rem", lineHeight: 1 }}
+                  style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(2.5rem, 8vw, 3.6rem)", lineHeight: 1 }}
                 >
                   £19
                 </span>
