@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.neuro-notion.com/sitemap.xml
+Sitemap: https://www.romiadhd.com/sitemap.xml

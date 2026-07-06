@@ -1,0 +1,13 @@
+{
+  "name": "Romi",
+  "short_name": "Romi",
+  "description": "Your personal ADHD companion.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#BF96FF",
+  "background_color": "#FFF7EE",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -95,27 +95,16 @@ function MyApp({ Component, pageProps }) {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>Neuro Notion - ADHD Life Management Tools</title>
-          
-          {/* Open Graph Meta Tags for Social Media Sharing */}
-          <meta property="og:title" content="The AI Life Assistant for ADHD Adults" />
-          <meta property="og:description" content="The world's first AI Personal Assistant for Adults with ADHD. You speak, Claudia Organizes. Simple." />
-          <meta property="og:image" content="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20-%20Static%20Demo.png" />
-          <meta property="og:url" content="https://neuro-notion.com" />
-          <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Neuro Notion" />
-          
-          {/* Twitter Card Meta Tags */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="The AI Life Assistant for ADHD Adults" />
-          <meta name="twitter:description" content="The world's first AI Personal Assistant for Adults with ADHD. You speak, Claudia Organizes. Simple." />
-          <meta name="twitter:image" content="https://NeuroNotionPullZonw.b-cdn.net/Claudia%20-%20Static%20Demo.png" />
-          
-          <link
-            rel="icon"
-            href="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
-            type="image/png"
-          />
+          <title>Romi - Your Personal ADHD Companion</title>
+
+          {/* Site-wide brand chrome. Per-page SEO + Open Graph live in RomiPage.
+              No Twitter tags (no X presence). */}
+          <meta name="theme-color" content="#BF96FF" />
+          <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="manifest" href="/site.webmanifest" />
           <style>
             {
               ".hero-section{margin-bottom:50px;} .star-rating{margin-bottom:50px;} .centered-image{display:block;margin-left:auto;margin-right:auto;max-width:100%;height:auto;} .full-header{z-index:10;} h3{color:black;}"
@@ -123,11 +112,6 @@ function MyApp({ Component, pageProps }) {
           </style>
           <link rel="dns-prefetch" href="https://connect.facebook.net" />
           <link rel="preconnect" href="https://connect.facebook.net" />
-          <link
-            rel="preload"
-            href="https://NeuroNotionPullZonw.b-cdn.net/Secondary%20logo.png"
-            as="image"
-          />
 
           {/* Meta Pixel Code */}
           <noscript>

@@ -31,8 +31,9 @@ import { PILOT_MAILTO } from "../src/romi/components/corporate/pricing-data";
 export default function RomiForCorporatesPage() {
   return (
     <RomiPage
-      title="Romi for Work"
+      title="Romi for Work - Support for Neurodivergent Employees"
       description="Happier, more productive, neurodiverse employees. Romi is the clinically backed AI companion that helps neurodivergent people function better and feel better."
+      canonical="https://www.romiadhd.com/corporates"
     >
       <RomiHeader />
 

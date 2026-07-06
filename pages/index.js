@@ -3,8 +3,9 @@ import { RomiAwards, RomiClose, RomiDifference, RomiFaqs, RomiHeader, RomiHero, 
 export default function RomiNewLandingPage() {
   return (
     <RomiPage
-      title="Romi"
-      description="A calmer way to plan, remember, and move through the day."
+      title="Romi - Your Personal ADHD Companion"
+      description="Romi is your personal ADHD companion. Honest, compassionate support that makes living with ADHD easier, walking alongside you at your pace."
+      canonical="https://www.romiadhd.com/"
     >
       <RomiHeader />
       <RomiHero />
