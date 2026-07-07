@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { cn } from "../../lib/cn";
+import { BookingModal } from "../ui/BookingModal";
 
 const SITE = "https://www.romiadhd.com";
 const OG_IMAGE = `${SITE}/og/romi-og.png`;
@@ -64,7 +65,10 @@ export function RomiPage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
         />
       </Head>
-      <div className={cn("romi-theme romi-shell", className)}>{children}</div>
+      <div className={cn("romi-theme romi-shell", className)}>
+        {children}
+        <BookingModal />
+      </div>
     </>
   );
 }

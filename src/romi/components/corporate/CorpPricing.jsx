@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Check, ChevronDown } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
+import { openBooking } from "../ui/BookingModal";
 import { CurvedCard } from "../ui/CurvedCard";
 import { Container } from "../layout/Container";
 import { cn } from "../../lib/cn";
-import { TIERS, PILOT_MAILTO, ENTERPRISE_MAILTO, perEmployee } from "./pricing-data";
+import { TIERS, perEmployee } from "./pricing-data";
 
 /*
  * Pricing. Light band (Band 5), tucks under the testimonials curve. A
@@ -304,8 +305,8 @@ export function CorpPricing() {
             </ul>
 
             <Button
-              as="a"
-              href={isEnterprise ? ENTERPRISE_MAILTO : PILOT_MAILTO}
+              type="button"
+              onClick={() => openBooking()}
               size="xl"
               className="mt-8 w-full text-[1.05rem]"
             >

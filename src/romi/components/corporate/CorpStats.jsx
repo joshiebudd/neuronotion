@@ -33,8 +33,8 @@ const unsupported = [
 const supported = [
   { value: "+36%", label: "higher output than neurotypical employees", href: SRC.cipd },
   { value: "+90%", label: "better retention", href: SRC.wef },
-  { value: "-60%", label: "less absenteeism", href: SRC.research },
-  { value: "-87%", label: "less stress", href: SRC.wellbeing },
+  { value: "60%", label: "less absenteeism", href: SRC.research },
+  { value: "87%", label: "less stress", href: SRC.wellbeing },
 ];
 
 // Number sits inside the circle; the fuller description sits below it, so longer

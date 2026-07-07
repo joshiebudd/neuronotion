@@ -20,7 +20,7 @@ export function CorpHero() {
         <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14">
           <div className="mx-auto max-w-[640px] text-center lg:mx-0 lg:text-left">
             <h1 className="max-w-[680px] text-[clamp(2rem,4.8vw,2.7rem)] font-bold leading-[1.06] tracking-[-0.015em] text-[var(--romi-color-ink)] md:text-[clamp(2.7rem,4.8vw,4.4rem)]">
-              Happier, More Productive,{" "}
+              Happier, More Productive{" "}
               <span style={{ color: "var(--romi-purple)" }}>Neurodiverse</span> Employees
             </h1>
             <p className="mx-auto mt-8 max-w-[540px] text-[clamp(1.15rem,1.5vw,1.4rem)] font-medium leading-[1.6] text-[var(--romi-color-ink-muted)] lg:mx-0">

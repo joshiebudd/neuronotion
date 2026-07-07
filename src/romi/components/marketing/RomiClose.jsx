@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "../ui/Button";
 import { RomiRating } from "../ui/RomiRating";
 import { ClickTooltip } from "../ui/ClickTooltip";
+import { openBooking } from "../ui/BookingModal";
 import { Lock } from "lucide-react";
 
 /*
@@ -92,6 +93,8 @@ export function RomiClose({
   footerTagline = "The personal companion for adults with ADHD.",
   ctaLabel = "Try Romi Free",
   ctaHref = SIGNUP_URL,
+  bookCta = false, // when true, the CTA opens the Motion booking modal instead
+
   // Force line 1 onto one line (corporate). Off by default so the landing's
   // short line 1 can still wrap on very narrow phones. A longer line 1 pairs
   // this with a smaller titleClamp so it actually fits.
@@ -151,9 +154,8 @@ export function RomiClose({
 
             <div className="mt-9 flex flex-col items-center gap-3">
               <Button
-                as="a"
-                href={ctaHref}
-                onClick={onCtaClick}
+                as={bookCta ? "button" : "a"}
+                {...(bookCta ? { type: "button", onClick: () => openBooking() } : { href: ctaHref, onClick: onCtaClick })}
                 variant="primary"
                 size="xl"
                 className="px-10 text-[1.05rem] shadow-[var(--romi-shadow-md)]"

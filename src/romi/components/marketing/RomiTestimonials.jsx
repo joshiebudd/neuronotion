@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { RomiRating } from "../ui/RomiRating";
 import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
+import { openBooking } from "../ui/BookingModal";
 import { CurvedCard } from "../ui/CurvedCard";
 import { Container } from "../layout/Container";
 import { cn } from "../../lib/cn";
@@ -124,6 +125,7 @@ export function RomiTestimonials({
   curve = false,
   ctaLabel = "Get Romi in your corner",
   ctaHref = "https://app.romiadhd.com/?page=signup",
+  bookCta = false, // when true, the CTA opens the Motion booking modal
 }) {
   const onCtaClick = (event) => {
     if (ctaHref.startsWith("#")) {
@@ -161,7 +163,11 @@ export function RomiTestimonials({
         </div>
 
         <div className="mt-14 flex flex-col items-center gap-6">
-          <Button as="a" href={ctaHref} onClick={onCtaClick} size="xl">
+          <Button
+            as={bookCta ? "button" : "a"}
+            {...(bookCta ? { type: "button", onClick: () => openBooking() } : { href: ctaHref, onClick: onCtaClick })}
+            size="xl"
+          >
             {ctaLabel}
             <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Button>

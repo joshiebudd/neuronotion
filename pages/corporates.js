@@ -16,7 +16,6 @@ import {
   RomiPage,
   RomiTestimonials,
 } from "../src/romi";
-import { PILOT_MAILTO } from "../src/romi/components/corporate/pricing-data";
 
 /*
  * Romi for Work - the corporate page. Alternating light / deep cream bands,
@@ -64,7 +63,7 @@ export default function RomiForCorporatesPage() {
       <section className="bg-[var(--romi-beige-deep)] pb-16 pt-2 md:pb-20">
         <RomiAwards />
       </section>
-      <RomiTestimonials curve ctaLabel="Bring Romi to your team" ctaHref="#pricing" />
+      <RomiTestimonials curve bookCta ctaLabel="Bring Romi to your team" />
 
       {/* Band 5 - light */}
       <CorpFinances />
@@ -80,7 +79,7 @@ export default function RomiForCorporatesPage() {
         subtitle="Being neurodivergent at work is hard. With Romi, your people don't have to face it alone."
         footerTagline="The personal companion for neurodivergent minds."
         ctaLabel="Book your 1-month pilot"
-        ctaHref={PILOT_MAILTO}
+        bookCta
       />
     </RomiPage>
   );
