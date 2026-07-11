@@ -10,6 +10,7 @@ const navItems = [
   { label: "Team", target: "team", href: "/#team" },
   { label: "Pricing", target: "pricing", href: "/#pricing" },
   { label: "For work", href: "/corporates" },
+  { label: "For clinics", href: "/romiforclinics" },
   // { label: "For healthcare", href: "/romiforhealthcare" }, // hidden for now
 ];
 

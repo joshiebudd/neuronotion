@@ -10,13 +10,21 @@ import { Container } from "../layout/Container";
 
 const SUPPORTED_COUNT = 15241;
 
+// `order` is mobile-only (2-up). `lg:order-none` resets to natural DOM order
+// so desktop (3-up) stays 83/62/60 - 36/32/33. Mobile sorts to the order Josh
+// wants: 83/36 - 60/62 - 32/33.
 const stats = [
-  { value: "83%", label: "improved daily functioning" },
-  { value: "62%", label: "more in control of life" },
-  { value: "60%", label: "less overwhelmed" },
-  { value: "36%", label: "improvement in task execution & organisation" },
-  { value: "32%", label: "reduction in ADHD symptoms while using Romi" },
-  { value: "33%", label: "increase in positive mood & regulation" },
+  { value: "83%", label: "improved daily functioning", order: "order-none lg:order-none" },
+  { value: "62%", label: "more in control of life", order: "order-3 lg:order-none" },
+  { value: "60%", label: "less overwhelmed", order: "order-2 lg:order-none" },
+  {
+    value: "36%",
+    label: "improvement in task execution & organisation",
+    mobileLabel: "improvement in execution and organisation",
+    order: "order-1 lg:order-none",
+  },
+  { value: "32%", label: "reduction in ADHD symptoms while using Romi", order: "order-4 lg:order-none" },
+  { value: "33%", label: "increase in positive mood & regulation", order: "order-5 lg:order-none" },
 ];
 
 function useCountOnVisible(end, durationMs = 1800) {
@@ -92,7 +100,7 @@ export function RomiStats() {
 
         <div className="mx-auto mt-14 grid max-w-[1040px] grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-3 md:gap-x-10 md:gap-y-14">
             {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center text-center">
+              <div key={stat.label} className={`flex flex-col items-center text-center ${stat.order}`}>
                 <div
                   className="font-bold text-[var(--romi-indigo)]"
                   style={{
@@ -110,7 +118,14 @@ export function RomiStats() {
                     lineHeight: "var(--romi-line-md)",
                   }}
                 >
-                  {stat.label}
+                  {stat.mobileLabel ? (
+                    <>
+                      <span className="lg:hidden">{stat.mobileLabel}</span>
+                      <span className="hidden lg:inline">{stat.label}</span>
+                    </>
+                  ) : (
+                    stat.label
+                  )}
                 </p>
               </div>
             ))}

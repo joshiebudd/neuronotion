@@ -16,22 +16,58 @@ const awards = [
 ];
 
 export function RomiAwards({ className }) {
+  // Duplicate the list so the mobile marquee loops seamlessly.
+  const marqueeRow = [...awards, ...awards];
+
   return (
     <div className={cn("w-full px-[clamp(16px,5vw,72px)]", className)}>
-      <div className="flex gap-6 overflow-x-auto pb-1 [scrollbar-width:none] md:grid md:grid-cols-5 md:items-center md:gap-12 md:overflow-visible md:pb-0 [&::-webkit-scrollbar]:hidden">
+      {/* Mobile: seamless auto-scrolling marquee. Manual swipe wasn't obvious,
+          so it now scrolls on its own. */}
+      <div className="overflow-hidden md:hidden">
+        <div
+          className="flex w-max items-center gap-10"
+          style={{ animation: "romi-award-marquee 20s linear infinite" }}
+        >
+          {marqueeRow.map((award, i) => (
+            <div key={`${award.src}-${i}`} className="flex min-w-[132px] justify-center">
+              <Image
+                src={award.src}
+                alt={award.alt}
+                width={210}
+                height={210}
+                sizes="132px"
+                className="h-auto w-[132px]"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop unchanged: 5-up grid */}
+      <div className="hidden md:grid md:grid-cols-5 md:items-center md:gap-12">
         {awards.map((award) => (
-          <div key={award.src} className="flex min-w-[148px] justify-center md:min-w-0">
+          <div key={award.src} className="flex justify-center">
             <Image
               src={award.src}
               alt={award.alt}
               width={210}
               height={210}
-              sizes="(min-width: 768px) 19vw, 148px"
-              className="h-auto w-[148px] md:w-full md:max-w-[240px]"
+              sizes="19vw"
+              className="h-auto w-full max-w-[240px]"
             />
           </div>
         ))}
       </div>
+
+      <style>{`
+        @keyframes romi-award-marquee {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          [style*="romi-award-marquee"] { animation: none !important; }
+        }
+      `}</style>
     </div>
   );
 }

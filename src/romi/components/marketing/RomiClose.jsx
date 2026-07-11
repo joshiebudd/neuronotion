@@ -36,7 +36,7 @@ const footerCols = [
       // Placeholder pages aren't live yet, so these show but don't link.
       { label: "For Healthcare", href: "/romiforhealthcare", disabled: true },
       { label: "For Corporates", href: "/corporates" },
-      { label: "For Diagnosis Clinics", href: "/romiforclinics", disabled: true },
+      { label: "For ADHD Clinics", href: "/romiforclinics" },
       { label: "For Coaches", href: "/romiforcoaches", disabled: true },
     ],
   },
@@ -94,6 +94,7 @@ export function RomiClose({
   ctaLabel = "Try Romi Free",
   ctaHref = SIGNUP_URL,
   bookCta = false, // when true, the CTA opens the Motion booking modal instead
+  bookUrl, // optional: a specific Motion booking page (e.g. the clinic call)
 
   // Force line 1 onto one line (corporate). Off by default so the landing's
   // short line 1 can still wrap on very narrow phones. A longer line 1 pairs
@@ -155,7 +156,7 @@ export function RomiClose({
             <div className="mt-9 flex flex-col items-center gap-3">
               <Button
                 as={bookCta ? "button" : "a"}
-                {...(bookCta ? { type: "button", onClick: () => openBooking() } : { href: ctaHref, onClick: onCtaClick })}
+                {...(bookCta ? { type: "button", onClick: () => openBooking(bookUrl) } : { href: ctaHref, onClick: onCtaClick })}
                 variant="primary"
                 size="xl"
                 className="px-10 text-[1.05rem] shadow-[var(--romi-shadow-md)]"
