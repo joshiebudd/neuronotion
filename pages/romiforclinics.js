@@ -24,10 +24,9 @@ import {
   Database,
 } from "lucide-react";
 
-import { RomiPage, RomiHeader, RomiLogos, RomiMission, RomiClose, Container, Button, CurvedCard, Badge } from "../src/romi";
+import { RomiPage, RomiHeader, RomiLogos, RomiInAction, RomiMission, RomiClose, Container, Button, CurvedCard, Badge } from "../src/romi";
 import { FaqItem } from "../src/romi/components/marketing/RomiFaqs";
 import { CLINIC_DISCOVERY_URL } from "../src/romi/components/clinic/clinic-data";
-import { VideoPlayer } from "../components/VideoPlayer";
 
 const CDN = "https://NeuroNotionPullZonw.b-cdn.net";
 const gbp = (n) => "£" + n.toLocaleString("en-GB");
@@ -311,9 +310,9 @@ export default function RomiForClinicsPage() {
       <RomiHeader />
       <ClinicBookingModal isOpen={isModalOpen} onClose={closeModal} />
 
-      {/* ============ BAND 1 (light) — Hero ============ */}
-      <section className={`${CURVE} z-[6] overflow-hidden bg-[var(--romi-color-bg)] px-6 pb-24 pt-16 md:pb-32 md:pt-20`}>
-        <div className="relative z-10 mx-auto max-w-4xl text-center">
+      {/* ============ BAND 1 (light) — Hero + demo placeholder ============ */}
+      <section className="overflow-hidden bg-[var(--romi-color-bg)] px-6 pb-10 pt-16 md:pb-12 md:pt-20">
+        <div className="relative mx-auto max-w-4xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[var(--romi-color-border)] bg-white px-4 py-2 text-xs font-semibold text-[var(--romi-color-ink-muted)] shadow-[var(--romi-shadow-xs)]" style={{ fontFamily: "var(--romi-font-display)" }}>
             <span className="flex h-2 w-2 animate-pulse rounded-full bg-[var(--romi-cherry)]" />
             Limited pilot spots remaining. Starting August 2026.
@@ -329,7 +328,7 @@ export default function RomiForClinicsPage() {
             right alongside the care your clinic already provides.
           </p>
 
-          <div className="mb-10 flex flex-col items-center justify-center gap-3 sm:mb-16 sm:flex-row sm:gap-5">
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-5">
             <Button type="button" onClick={openModal} size="xxl" className="w-full text-lg sm:w-auto">
               Learn more
               <ArrowRight size={20} />
@@ -338,18 +337,11 @@ export default function RomiForClinicsPage() {
               What is Romi?
             </Button>
           </div>
-
-          <div className="relative mx-auto max-w-3xl">
-            <VideoPlayer videoUrl={`${CDN}/How%20Claudia%20by%20Neuro%20Works.mp4`} title="Turn Support into Profit - Demo for Directors" />
-            <div className="absolute -bottom-3 -right-2 flex animate-pulse items-center space-x-2 rounded-full bg-[var(--romi-mint)] px-3 py-2 text-[var(--romi-charcoal)] shadow-lg sm:-bottom-5 sm:-right-5">
-              <svg className="h-4 w-4 rotate-[225deg]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-              <span className="text-sm font-bold">Sound on!</span>
-            </div>
-          </div>
         </div>
       </section>
+
+      {/* Demo — the same under-construction placeholder used on the landing page. Closes band 1. */}
+      <RomiInAction sectionClassName={`${CURVE} z-[6] bg-[var(--romi-color-bg)] pt-6 pb-24 md:pt-8 md:pb-32`} />
 
       {/* ============ BAND 2 (deep) — Supported by + Why it works ============ */}
       <section className={`${TUCK} ${CURVE} z-[5] bg-[var(--romi-beige-deep)] pt-24 pb-20 md:pt-32 md:pb-28`}>

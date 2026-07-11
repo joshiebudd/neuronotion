@@ -34,11 +34,11 @@ const nextConfig = {
       { source: "/rominewlanding", destination: "/", permanent: false },
       { source: "/romiforcorporates", destination: "/corporates", permanent: false },
       { source: "/forcorporate", destination: "/neuronotion-corporate", permanent: false },
-      // New (reskinned) Romi clinic page took over the clinic URL; the old page
-      // stays at /neuronotion-clinics (archived), matching the landing/corporate
-      // cutover. Pricing now lives on the clinic page, so /clinicpricing jumps
-      // to its #pricing section.
+      // /romiforclinics is the ONLY clinic page now. All old clinic routes (the
+      // Claudia clinic page + the standalone pricing page) redirect into it.
       { source: "/forclinics", destination: "/romiforclinics", permanent: false },
+      { source: "/forclinics2", destination: "/romiforclinics", permanent: false },
+      { source: "/neuronotion-clinics", destination: "/romiforclinics", permanent: false },
       { source: "/clinicpricing", destination: "/romiforclinics#pricing", permanent: false },
       { source: "/forcoaches", destination: "/neuronotion-coaches", permanent: false },
     ];
