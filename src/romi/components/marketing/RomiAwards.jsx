@@ -22,12 +22,10 @@ export function RomiAwards({ className }) {
   return (
     <div className={cn("w-full px-[clamp(16px,5vw,72px)]", className)}>
       {/* Mobile: seamless auto-scrolling marquee. Manual swipe wasn't obvious,
-          so it now scrolls on its own. */}
+          so it now scrolls on its own. Reuses the global .romi-marquee helper
+          (keyframes + reduced-motion live in romi.css). */}
       <div className="overflow-hidden md:hidden">
-        <div
-          className="flex w-max items-center gap-10"
-          style={{ animation: "romi-award-marquee 20s linear infinite" }}
-        >
+        <div className="romi-marquee items-center gap-10" style={{ "--romi-marquee-duration": "20s" }}>
           {marqueeRow.map((award, i) => (
             <div key={`${award.src}-${i}`} className="flex min-w-[132px] justify-center">
               <Image
@@ -58,16 +56,6 @@ export function RomiAwards({ className }) {
           </div>
         ))}
       </div>
-
-      <style>{`
-        @keyframes romi-award-marquee {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          [style*="romi-award-marquee"] { animation: none !important; }
-        }
-      `}</style>
     </div>
   );
 }
