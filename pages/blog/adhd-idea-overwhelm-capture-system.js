@@ -1,52 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDIdeaOverwhelmBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD Idea Overwhelm: The Capture & Categorize System That Stops Brilliant Ideas From Dying | Neuro Notion</title>
-        <meta name="description" content="Your ADHD brain generates brilliant ideas like popcorn. Learn the proven Capture & Categorize system that prevents idea overwhelm and turns creativity into results." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-idea-overwhelm-capture-system" />
-        <meta property="og:title" content="ADHD Idea Overwhelm: How to Capture Ideas Without Drowning in Them" />
-        <meta property="og:description" content="Stop letting brilliant ADHD ideas slip away or paralyze you. The Capture & Categorize system that works with your creative brain." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-idea-overwhelm-capture-system" />
-        <meta name="keywords" content="ADHD idea overwhelm, ADHD too many ideas, ADHD idea management, ADHD creative ideas, ADHD idea capture, ADHD divergent thinking, ADHD creativity" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD idea management expert"
-                    width={64}
-                    height={64}
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-11-18" title="November 18th, 2025">Nov. 18, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD Idea Overwhelm: How to Navigate Your Idea Storm Without Drowning</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD Idea Overwhelm: The Capture & Categorize System That Stops Brilliant Ideas From Dying | Romi"
+      description="Your ADHD brain generates brilliant ideas like popcorn. Learn the proven Capture & Categorize system that prevents idea overwhelm and turns creativity into results."
+      slug="adhd-idea-overwhelm-capture-system"
+      keywords="ADHD idea overwhelm, ADHD too many ideas, ADHD idea management, ADHD creative ideas, ADHD idea capture, ADHD divergent thinking, ADHD creativity"
+      ogTitle="ADHD Idea Overwhelm: How to Capture Ideas Without Drowning in Them"
+      ogDescription="Stop letting brilliant ADHD ideas slip away or paralyze you. The Capture & Categorize system that works with your creative brain."
+      heading="ADHD Idea Overwhelm: How to Navigate Your Idea Storm Without Drowning"
+      category="Productivity & Focus"
+      date="Nov. 18, 2025"
+      datePublished="2025-11-18"
+      readingTime="17 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/VTKaigXqhtqEKEPr.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -408,7 +380,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is where modern ADHD tools become invaluable. Tools like <strong>Claudia by Neuro</strong> don&apos;t just help you capture ideas—they help you remember to review them, organize them automatically, surface relevant ones at the right time, and integrate them into your broader task management system.
+                This is where modern ADHD tools become invaluable. Tools like <strong>Romi</strong> don&apos;t just help you capture ideas—they help you remember to review them, organize them automatically, surface relevant ones at the right time, and integrate them into your broader task management system.
               </p>
               <br />
               <br />
@@ -462,18 +434,15 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to transform your idea storm into your greatest advantage?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that captures, organizes, and helps you execute your brilliant ideas. Stop drowning in creativity. Start turning ideas into results.
+                  <strong>Ready to transform your idea storm into your greatest advantage?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that captures, organizes, and helps you execute your brilliant ideas. Stop drowning in creativity. Start turning ideas into results.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

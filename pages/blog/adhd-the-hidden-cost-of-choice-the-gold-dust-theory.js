@@ -1,51 +1,23 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const GoldDustTheoryBlog = () => {
   return (
-    <>
-      <Head>
-        <title>The Gold Dust Theory: Why Decision Fatigue Hits ADHD Harder | Neuro Notion</title>
-        <meta name="description" content="Discover why every decision drains ADHD brains faster than neurotypical ones. Learn the Gold Dust Theory and how to preserve your precious mental energy." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" />
-        <meta property="og:title" content="The Gold Dust Theory: ADHD and Decision Fatigue" />
-        <meta property="og:description" content="Your ADHD brain starts each day with limited mental energy. Learn why decisions deplete it faster and how to protect your gold dust." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate"
-                    width={64}
-                    height={64}
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-01-20" title="January 20th, 2025">Jan. 20, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD & The Hidden Cost of Choice: The Gold Dust Theory 🫰</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="The Gold Dust Theory: Why Decision Fatigue Hits ADHD Harder | Romi"
+      description="Discover why every decision drains ADHD brains faster than neurotypical ones. Learn the Gold Dust Theory and how to preserve your precious mental energy."
+      slug="adhd-the-hidden-cost-of-choice-the-gold-dust-theory"
+      ogTitle="The Gold Dust Theory: ADHD and Decision Fatigue"
+      ogDescription="Your ADHD brain starts each day with limited mental energy. Learn why decisions deplete it faster and how to protect your gold dust."
+      heading="ADHD & The Hidden Cost of Choice: The Gold Dust Theory 🫰"
+      category="Productivity & Focus"
+      date="Jan. 20, 2025"
+      datePublished="2025-01-20"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/JnHGETMOzTffoZOO.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -100,7 +72,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The traditional solution—&quot;just be more disciplined&quot; or &quot;make better choices&quot;—completely misses the point. You can&apos;t willpower your way out of gold dust depletion. What you need is a system that reduces the number of decisions you have to make in the first place. This is where **Claudia by Neuro** and the principles of smart ADHD support become game-changers.
+                The traditional solution—&quot;just be more disciplined&quot; or &quot;make better choices&quot;—completely misses the point. You can&apos;t willpower your way out of gold dust depletion. What you need is a system that reduces the number of decisions you have to make in the first place. This is where <strong>Romi</strong> and the principles of smart ADHD support become game-changers.
               </p>
               <br />
               <br />
@@ -116,11 +88,11 @@ const GoldDustTheoryBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>**Systemizing the Start of Your Day:** The morning is a critical time for gold dust consumption. External support can help you build and enforce a non-negotiable AMD protocol for your morning routine. Instead of deciding what to do, your system provides a simple, sequential checklist: Drink water, Take medication, Prepare pre-decided breakfast. This eliminates the need for moment-to-moment choices, preserving your energy.</li>
-                <li>**The Get Ready to Focus Protocol:** When it&apos;s time to work, a proper system can guide you through a personalized Get Ready to Focus AMD. This could include: Clean desk, Set phone to DND, Start 90-minute timer, and Play deep focus music. By automating these steps, you don&apos;t waste energy deciding how to start; you just start.</li>
-                <li>**Decision-Free Meal Planning:** What to eat is a massive gold dust drain. Smart systems can help you create a rotating list of simple, healthy, pre-decided meals. When you log &quot;hungry,&quot; the response isn&apos;t &quot;What should I eat?&quot; but &quot;Today is Monday: Quick Chicken Salad.&quot; This simple automation frees up significant mental bandwidth.</li>
-                <li>**Evening Wind-Down Routines:** Just as mornings matter, so do evenings. A consistent evening AMD prepares you for the next day: Review tomorrow&apos;s schedule, Set out clothes, Prepare lunch, 30-minute wind-down routine. When these become automatic, you eliminate the anxiety of morning chaos before it even begins.</li>
-                <li>**Tracking and Optimizing Gold Dust Usage:** The right tools help you track which activities and decisions are the biggest drains on your energy. By logging your fatigue levels and the preceding activities, you can get insights on where to build your next AMD, ensuring you are constantly optimizing your energy expenditure.</li>
+                <li><strong>Systemizing the Start of Your Day:</strong> The morning is a critical time for gold dust consumption. External support can help you build and enforce a non-negotiable AMD protocol for your morning routine. Instead of deciding what to do, your system provides a simple, sequential checklist: Drink water, Take medication, Prepare pre-decided breakfast. This eliminates the need for moment-to-moment choices, preserving your energy.</li>
+                <li><strong>The Get Ready to Focus Protocol:</strong> When it&apos;s time to work, a proper system can guide you through a personalized Get Ready to Focus AMD. This could include: Clean desk, Set phone to DND, Start 90-minute timer, and Play deep focus music. By automating these steps, you don&apos;t waste energy deciding how to start; you just start.</li>
+                <li><strong>Decision-Free Meal Planning:</strong> What to eat is a massive gold dust drain. Smart systems can help you create a rotating list of simple, healthy, pre-decided meals. When you log &quot;hungry,&quot; the response isn&apos;t &quot;What should I eat?&quot; but &quot;Today is Monday: Quick Chicken Salad.&quot; This simple automation frees up significant mental bandwidth.</li>
+                <li><strong>Evening Wind-Down Routines:</strong> Just as mornings matter, so do evenings. A consistent evening AMD prepares you for the next day: Review tomorrow&apos;s schedule, Set out clothes, Prepare lunch, 30-minute wind-down routine. When these become automatic, you eliminate the anxiety of morning chaos before it even begins.</li>
+                <li><strong>Tracking and Optimizing Gold Dust Usage:</strong> The right tools help you track which activities and decisions are the biggest drains on your energy. By logging your fatigue levels and the preceding activities, you can get insights on where to build your next AMD, ensuring you are constantly optimizing your energy expenditure.</li>
               </ul>
               <br />
               <br />
@@ -136,7 +108,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                For people with ADHD, building AMDs is harder because the neural pathways that support habit formation are less robust. This is where **Claudia by Neuro** provides crucial support. By offering consistent prompts, gentle reminders, and clear structure, modern ADHD tools help your brain establish these automatic patterns more effectively than you could on your own.
+                For people with ADHD, building AMDs is harder because the neural pathways that support habit formation are less robust. This is where <strong>Romi</strong> provides crucial support. By offering consistent prompts, gentle reminders, and clear structure, modern ADHD tools help your brain establish these automatic patterns more effectively than you could on your own.
               </p>
               <br />
               <br />
@@ -163,18 +135,15 @@ const GoldDustTheoryBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to stop wasting your gold dust on endless decisions?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that automates routine decisions and helps you build AMDs that actually stick. Preserve your mental energy for what matters most.
+                  <strong>Ready to stop wasting your gold dust on endless decisions?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that automates routine decisions and helps you build AMDs that actually stick. Preserve your mental energy for what matters most.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

@@ -1,86 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDSleepFoundationBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip) | Neuro Notion</title>
-        <meta name="description" content="Discover why sleep isn&apos;t optional for ADHD—it&apos;s THE foundation. Learn how poor sleep amplifies every ADHD symptom and practical strategies to fix it." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-sleep-foundation" />
-        <meta property="og:title" content="ADHD and Sleep: Why It&apos;s THE Foundation (Not Optional)" />
-        <meta property="og:description" content="Bad sleep makes ADHD symptoms 10x worse. Discover why sleep is the #1 priority for ADHD management and how to finally fix it." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-sleep-foundation" />
-        <meta property="og:image" content="https://www.neuro-notion.com/images/adhd-sleep-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Why Sleep is THE Foundation for Managing ADHD" />
-        <meta name="twitter:description" content="Poor sleep amplifies every ADHD symptom. Learn why sleep is non-negotiable for ADHD brains." />
-        <meta name="keywords" content="ADHD and sleep, ADHD sleep problems, ADHD insomnia, sleep deprivation ADHD, improving sleep with ADHD, ADHD sleep quality" />
-        <meta name="author" content="Josh Budd" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip)",
-            "author": {
-              "@type": "Person",
-              "name": "Josh Budd"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Neuro Notion",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.neuro-notion.com/logo.png"
-              }
-            },
-            "datePublished": "2025-02-28",
-            "dateModified": "2025-02-28",
-            "image": "https://www.neuro-notion.com/images/adhd-sleep-og.jpg",
-            "description": "Discover why sleep isn't optional for ADHD—it's THE foundation. Learn how poor sleep amplifies every ADHD symptom and practical strategies to fix it."
-          })}
-        </script>
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD sleep optimization specialist"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate="pubdate" dateTime="2025-02-28" title="February 28th, 2025">Feb. 28, 2025</time>
-                      <span className="mx-2">•</span>
-                      <span className="text-sm">Last updated: Feb. 28, 2025</span>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 7 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip)</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip) | Romi"
+      description="Discover why sleep isn&apos;t optional for ADHD—it&apos;s THE foundation. Learn how poor sleep amplifies every ADHD symptom and practical strategies to fix it."
+      slug="adhd-sleep-foundation"
+      keywords="ADHD and sleep, ADHD sleep problems, ADHD insomnia, sleep deprivation ADHD, improving sleep with ADHD, ADHD sleep quality"
+      ogTitle="ADHD and Sleep: Why It&apos;s THE Foundation (Not Optional)"
+      ogDescription="Bad sleep makes ADHD symptoms 10x worse. Discover why sleep is the #1 priority for ADHD management and how to finally fix it."
+      heading="Why Sleep is THE Foundation for Managing ADHD (Not Just Another Tip)"
+      category="Sleep"
+      date="Feb. 28, 2025"
+      datePublished="2025-02-28"
+      readingTime="6 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/kMamzgpPkERhwZgR.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm" role="complementary" aria-label="Key Takeaways">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -289,7 +227,7 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Claudia by Neuro</strong> can help with this through quick brain dumps before bed. Instead of lying awake worrying about everything you need to remember, you dump it all into the system in 60 seconds. Your brain can finally relax because the thoughts are safely stored externally.
+                <strong>Romi</strong> can help with this through quick brain dumps before bed. Instead of lying awake worrying about everything you need to remember, you dump it all into the system in 60 seconds. Your brain can finally relax because the thoughts are safely stored externally.
               </p>
               <br />
               <br />
@@ -336,18 +274,15 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md" role="complementary" aria-label="Call to Action">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to make sleep THE priority?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that helps you brain dump before bed, reducing the racing thoughts that prevent sleep. When your brain knows everything is safely captured, it can finally rest. Start building the foundation tonight.
+                  <strong>Ready to make sleep THE priority?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that helps you brain dump before bed, reducing the racing thoughts that prevent sleep. When your brain knows everything is safely captured, it can finally rest. Start building the foundation tonight.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDManagementBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Managing ADHD Without Medication: Comprehensive Strategies That Work | Neuro Notion</title>
-        <meta name="description" content="Discover evidence-based strategies for managing ADHD without medication. Learn how medication fits into comprehensive ADHD management and when support systems matter most." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-and-medication" />
-        <meta property="og:title" content="Managing ADHD Without Medication: What Actually Works" />
-        <meta property="og:description" content="ADHD medication is one tool among many. Discover comprehensive management strategies that work with or without medication." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-and-medication" />
-        <meta name="keywords" content="ADHD without medication, ADHD management, ADHD medication alternatives, non-medication ADHD treatment, ADHD support systems" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD management advocate"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-09" title="February 9th, 2025">Feb. 9, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">How to Manage ADHD in Adults: With or Without Medication</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Managing ADHD Without Medication: Comprehensive Strategies That Work | Romi"
+      description="Discover evidence-based strategies for managing ADHD without medication. Learn how medication fits into comprehensive ADHD management and when support systems matter most."
+      slug="adhd-and-medication"
+      keywords="ADHD without medication, ADHD management, ADHD medication alternatives, non-medication ADHD treatment, ADHD support systems"
+      ogTitle="Managing ADHD Without Medication: What Actually Works"
+      ogDescription="ADHD medication is one tool among many. Discover comprehensive management strategies that work with or without medication."
+      heading="How to Manage ADHD in Adults: With or Without Medication"
+      category="Diagnosis & Treatment"
+      date="Feb. 9, 2025"
+      datePublished="2025-02-09"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/McgXjtOeRfqjcOnq.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -120,7 +91,7 @@ const ADHDManagementBlog = () => {
               <br />
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-4">
-                <li><strong>External Support Systems:</strong> This is where tools like **Claudia by Neuro** become invaluable. External support systems handle the executive function tasks your ADHD brain struggles with—remembering, organizing, prioritizing, initiating tasks. When you externalize these functions, you free up mental resources and reduce the cognitive load that leads to exhaustion and overwhelm. This is especially critical if you&apos;re managing ADHD without medication, as you need extra support to compensate for the executive function challenges.</li>
+                <li><strong>External Support Systems:</strong> This is where tools like <strong>Romi</strong> become invaluable. External support systems handle the executive function tasks your ADHD brain struggles with—remembering, organizing, prioritizing, initiating tasks. When you externalize these functions, you free up mental resources and reduce the cognitive load that leads to exhaustion and overwhelm. This is especially critical if you&apos;re managing ADHD without medication, as you need extra support to compensate for the executive function challenges.</li>
                 <li><strong>Environmental Design:</strong> Your environment can either support or sabotage your ADHD management. Reduce visual clutter, create designated spaces for specific activities, use timers and visual reminders, minimize distractions during focus work. The right environment reduces friction and makes functioning easier regardless of medication status.</li>
                 <li><strong>Routine and Structure:</strong> ADHD brains struggle with creating internal structure, so external structure becomes essential. This doesn&apos;t mean rigid schedules (which often fail for ADHD), but rather flexible frameworks that provide direction without suffocation. As discussed in our guide to <Link href="/blog/adhd-and-routines" className="text-blue-600 hover:underline">building sustainable ADHD habits</Link>, routines need to be adaptive, externally supported, and dopamine-friendly.</li>
                 <li><strong>Physical Health Foundations:</strong> Sleep, nutrition, and exercise significantly impact ADHD symptoms. Poor sleep amplifies every ADHD challenge. Protein-rich meals help stabilize energy and focus. Regular exercise provides natural dopamine boosts and improves executive function. These aren&apos;t lifestyle &quot;bonuses&quot;—they&apos;re foundational to ADHD management.</li>
@@ -134,9 +105,9 @@ const ADHDManagementBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Supports ADHD Management</h2>
+              <h2 className="blog-subheader">How Romi Supports ADHD Management</h2>
               <p className="blog-body">
-                Regardless of whether you use medication, **Claudia by Neuro** addresses the core executive function challenges that make ADHD difficult:
+                Regardless of whether you use medication, <strong>Romi</strong> addresses the core executive function challenges that make ADHD difficult:
               </p>
               <br />
               <br />
@@ -204,7 +175,7 @@ const ADHDManagementBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** embodies this principle by providing support that adapts to you rather than demanding you adapt to it. The system works whether you&apos;re medicated or not, in high-capacity or low-capacity states, motivated or struggling. It meets you where you are and helps you function from there.
+                <strong>Romi</strong> embodies this principle by providing support that adapts to you rather than demanding you adapt to it. The system works whether you&apos;re medicated or not, in high-capacity or low-capacity states, motivated or struggling. It meets you where you are and helps you function from there.
               </p>
               <br />
               <br />
@@ -215,18 +186,15 @@ const ADHDManagementBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Looking for comprehensive ADHD support beyond medication?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that handles executive function challenges whether you use medication or not. External support that works with your brain, adapts to your capacity, and makes life more manageable.
+                  <strong>Looking for comprehensive ADHD support beyond medication?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that handles executive function challenges whether you use medication or not. External support that works with your brain, adapts to your capacity, and makes life more manageable.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

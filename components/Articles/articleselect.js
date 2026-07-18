@@ -1,30 +1,37 @@
 import React from "react";
-import NEWClaudiaLPHeader from "../NEWClaudiaLPHeader";
+import { RomiHeader, RomiClose, Container } from "../../src/romi";
 import BlogCard from "./blogcard";
 
 const ArticleSelect = () => {
   return (
-    <div className="flex justify-center">
-      <NEWClaudiaLPHeader />
-      <div className="max-w-screen-lg w-full">
-        <section className="bg-white pt-16 pb-10 lg:pt-32 lg:pb-20">
-          <div className="container px-4 lg:px-0">
-            <div className="flex flex-wrap justify-center">
-              <div className="w-full">
-                <div className="mx-auto mb-12 lg:mb-20 max-w-[600px] text-center">
-                  <span className="mb-2 block text-lg font-semibold text-prim font-prim">
-                    Our Blogs
-                  </span>
-                  <h2 className="mb-4 text-3xl lg:text-[40px] font-bold text-prim font-prim">
-                    Our Recent Blog Posts
-                  </h2>
-                  <p className="text-lg text-sec font-cg">
-                    Packed with value to help you regain control of your ADHD. <br /> Pick from any of the articles below to learn more.
-                  </p>
-                </div>
-              </div>
+    <div className="romi-theme romi-shell">
+      <RomiHeader />
+        <section className="bg-[var(--romi-color-bg)] pt-10 pb-4 md:pt-16">
+          <Container>
+            <div className="mx-auto max-w-[720px] text-center">
+              <p className="romi-kicker">Blog</p>
+              <h1
+                className="mt-3 text-[var(--romi-color-ink)]"
+                style={{
+                  fontFamily: "var(--romi-font-display)",
+                  fontWeight: 700,
+                  fontSize: "clamp(2rem, 5vw, 3.25rem)",
+                  lineHeight: "1.05",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                ADHD insights that actually help
+              </h1>
+              <p className="mx-auto mt-5 max-w-[560px] text-[1.125rem] leading-relaxed text-[var(--romi-color-ink-muted)]">
+                Honest, practical reads on living and working with ADHD. Pick any article below to dive in.
+              </p>
             </div>
-            <div className="flex flex-wrap justify-center">
+          </Container>
+        </section>
+
+        <section className="bg-[var(--romi-color-bg)] pb-10">
+          <Container>
+            <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
               <BlogCard
                 date="Jan 18, 2025"
                 CardTitle="When ADHD and Anxiety Gang Up on You: Practical Steps to Break the Loop Fast"
@@ -133,7 +140,7 @@ const ArticleSelect = () => {
               
               <BlogCard
                 date="Aug 23, 2025"
-                CardTitle="Want a Chance at a Clearer, Calmer Version of You? Neuro AI Makes it Possible with Claudia by Neuro"
+                CardTitle="Want a Chance at a Clearer, Calmer Version of You? Romi Makes it Possible"
                 CardDescription="Discover how AI-powered tools can help you achieve mental clarity and calm."
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/vvvtStinZQXxtjIq.jpeg"
                 slug="want-a-chance-at-a-clearer-calmer-version-of-you"
@@ -286,9 +293,10 @@ const ArticleSelect = () => {
                 slug="adhd-idea-overwhelm-capture-system"
               />
             </div>
-          </div>
+          </Container>
         </section>
-      </div>
+
+      <RomiClose />
     </div>
   );
 };

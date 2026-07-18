@@ -1,56 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDFearNewThingsBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Are You Scared to Try New Things with ADHD? Why This Time is Different | Neuro Notion</title>
-        <meta name="description" content="Overpromised and underdelivered too many times? Discover why tools built specifically for ADHD brains finally work when everything else has failed." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-fear-of-trying-new-things" />
-        <meta property="og:title" content="ADHD: Are You Scared to Try New Things? (This Time is Different)" />
-        <meta property="og:description" content="You&apos;ve been let down before. But tools built FOR your ADHD brain—not adapted for it—change everything." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-fear-of-trying-new-things" />
-        <meta name="keywords" content="ADHD tools that work, ADHD app fear, trying new ADHD strategies, ADHD tool skepticism, ADHD brain designed systems" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-22" title="February 22nd, 2025">Feb. 22, 2025</time>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 5 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Be Honest With Me... Are You Scared to Try New Things with ADHD?</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Are You Scared to Try New Things with ADHD? Why This Time is Different | Romi"
+      description="Overpromised and underdelivered too many times? Discover why tools built specifically for ADHD brains finally work when everything else has failed."
+      slug="adhd-fear-of-trying-new-things"
+      keywords="ADHD tools that work, ADHD app fear, trying new ADHD strategies, ADHD tool skepticism, ADHD brain designed systems"
+      ogTitle="ADHD: Are You Scared to Try New Things? (This Time is Different)"
+      ogDescription="You&apos;ve been let down before. But tools built FOR your ADHD brain—not adapted for it—change everything."
+      heading="Be Honest With Me... Are You Scared to Try New Things with ADHD?"
+      category="Understanding ADHD"
+      date="Feb. 22, 2025"
+      datePublished="2025-02-22"
+      readingTime="6 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/ZZoUTrygimUJlMwe.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -141,7 +109,7 @@ const ADHDFearNewThingsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** was built differently. The foundational question wasn&apos;t &quot;How do we make a productivity tool?&quot; It was &quot;How do ADHD brains actually function, and what support do they need?&quot;
+                <strong>Romi</strong> was built differently. The foundational question wasn&apos;t &quot;How do we make a productivity tool?&quot; It was &quot;How do ADHD brains actually function, and what support do they need?&quot;
               </p>
               <br />
               <br />
@@ -285,18 +253,15 @@ const ADHDFearNewThingsBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to give ADHD support one more chance?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—built FROM THE GROUND UP for ADHD brains, not adapted as an afterthought. For once, you are the priority. Give tools designed for your actual neurology one chance to prove they&apos;re different. You deserve support that actually works.
+                  <strong>Ready to give ADHD support one more chance?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—built FROM THE GROUND UP for ADHD brains, not adapted as an afterthought. For once, you are the priority. Give tools designed for your actual neurology one chance to prove they&apos;re different. You deserve support that actually works.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

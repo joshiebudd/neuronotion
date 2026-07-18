@@ -1,56 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ReduceADHDProcrastinationBlog = () => {
   return (
-    <>
-      <Head>
-        <title>How to Reduce ADHD Procrastination: Stop Waiting for Motivation | Neuro Notion</title>
-        <meta name="description" content="Stop letting ADHD procrastination destroy your life. Learn why willpower fails and discover 3 proven strategies that work with your ADHD brain, not against it." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/how-to-reduce-adhd-procrastination" />
-        <meta property="og:title" content="How to Reduce ADHD Procrastination (Willpower Won&apos;t Work)" />
-        <meta property="og:description" content="Waiting for motivation? It won&apos;t show up. Learn the ADHD-specific strategies that actually reduce procrastination and help you get stuff done." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/how-to-reduce-adhd-procrastination" />
-        <meta name="keywords" content="ADHD procrastination, reduce ADHD procrastination, ADHD task avoidance, overcoming ADHD procrastination, ADHD motivation strategies" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD procrastination specialist"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-20" title="February 20th, 2025">Feb. 20, 2025</time>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 7 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">How to Reduce ADHD Procrastination: Stop Waiting for Motivation</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="How to Reduce ADHD Procrastination: Stop Waiting for Motivation | Romi"
+      description="Stop letting ADHD procrastination destroy your life. Learn why willpower fails and discover 3 proven strategies that work with your ADHD brain, not against it."
+      slug="how-to-reduce-adhd-procrastination"
+      keywords="ADHD procrastination, reduce ADHD procrastination, ADHD task avoidance, overcoming ADHD procrastination, ADHD motivation strategies"
+      ogTitle="How to Reduce ADHD Procrastination (Willpower Won&apos;t Work)"
+      ogDescription="Waiting for motivation? It won&apos;t show up. Learn the ADHD-specific strategies that actually reduce procrastination and help you get stuff done."
+      heading="How to Reduce ADHD Procrastination: Stop Waiting for Motivation"
+      category="Productivity & Focus"
+      date="Feb. 20, 2025"
+      datePublished="2025-02-20"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/cZyekxPYEmrpoxfd.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -206,14 +174,14 @@ const ReduceADHDProcrastinationBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Eliminates ADHD Procrastination</h2>
+              <h2 className="blog-subheader">How Romi Eliminates ADHD Procrastination</h2>
               <p className="blog-body">
                 Here&apos;s the problem: breaking tasks into micro-steps requires executive function. Planning how to do something requires the very brain function that ADHD impairs.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This is where **Claudia by Neuro** becomes game-changing. It does the breaking down for you based on your current energy levels.
+                This is where <strong>Romi</strong> becomes game-changing. It does the breaking down for you based on your current energy levels.
               </p>
               <br />
               <br />
@@ -312,18 +280,15 @@ const ReduceADHDProcrastinationBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop procrastinating and start doing?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that breaks down tasks based on your energy levels, provides the external push you need to start, and supports you all the way through. Stop waiting for motivation. Start building momentum today.
+                  <strong>Ready to stop procrastinating and start doing?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that breaks down tasks based on your energy levels, provides the external push you need to start, and supports you all the way through. Stop waiting for motivation. Start building momentum today.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

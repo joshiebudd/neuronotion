@@ -1,51 +1,23 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDAnxietyBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD and Anxiety: Breaking the Vicious Cycle | Neuro Notion</title>
-        <meta name="description" content="Learn how ADHD and anxiety create a debilitating feedback loop, and discover practical strategies to break free from the cycle of executive dysfunction and panic." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-and-anxiety-gang-up" />
-        <meta property="og:title" content="ADHD and Anxiety: Breaking the Vicious Cycle" />
-        <meta property="og:description" content="Nearly half of adults with ADHD experience anxiety. Discover the science behind the cycle and practical ways to break free." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-and-anxiety-gang-up" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate"
-                    width={64}
-                    height={64}
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-01-18" title="January 18th, 2025">Jan. 18, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">When ADHD and Anxiety Gang Up on You: Practical Steps to Break the Loop Fast</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD and Anxiety: Breaking the Vicious Cycle | Romi"
+      description="Learn how ADHD and anxiety create a debilitating feedback loop, and discover practical strategies to break free from the cycle of executive dysfunction and panic."
+      slug="adhd-and-anxiety-gang-up"
+      ogTitle="ADHD and Anxiety: Breaking the Vicious Cycle"
+      ogDescription="Nearly half of adults with ADHD experience anxiety. Discover the science behind the cycle and practical ways to break free."
+      heading="When ADHD and Anxiety Gang Up on You: Practical Steps to Break the Loop Fast"
+      category="Mental Health"
+      date="Jan. 18, 2025"
+      datePublished="2025-01-18"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/wvIWFSbiCjCQqVaq.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -118,7 +90,7 @@ const ADHDAnxietyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why modern ADHD support approaches the problem differently. Instead of just managing anxiety symptoms, **Claudia by Neuro** addresses the executive function breakdowns that trigger anxiety in the first place. When you have reliable external support for memory, organization, and task management, the anxiety naturally decreases because the actual threats (forgetting, failing, missing deadlines) are being actively managed.
+                This is why modern ADHD support approaches the problem differently. Instead of just managing anxiety symptoms, <strong>Romi</strong> addresses the executive function breakdowns that trigger anxiety in the first place. When you have reliable external support for memory, organization, and task management, the anxiety naturally decreases because the actual threats (forgetting, failing, missing deadlines) are being actively managed.
               </p>
               <br />
               <br />
@@ -134,11 +106,11 @@ const ADHDAnxietyBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>**2 Minutes: Regulated Breathing.** Sit down and focus on your breath. Inhale for 4 seconds, exhale for 6 seconds. Repeat six times. This simple act directly signals to your nervous system that you are safe, interrupting the fight-or-flight response. The longer exhale is key—it activates your parasympathetic nervous system, which is responsible for the &quot;rest and digest&quot; state.</li>
-                <li>**60 Seconds: Sensory Reset.** Step outside or move to a window. Fresh air and a change of scenery work wonders on regulating an overstimulated nervous system. The combination of movement, temperature change, and different visual input can break the anxiety spiral that your ADHD brain gets stuck in.</li>
-                <li>**30 Seconds: Physical Release.** Clench your fists and shoulders tightly for a few seconds, then release completely. This physical tension-release is an instant reset button for your body. When anxiety lives in your muscles, releasing that physical tension can immediately reduce the mental distress.</li>
-                <li>**10 Seconds: Name the Fear.** Write down three specific sources of your current anxiety. Naming the monster shrinks it, moving it from a vague, overwhelming feeling to a concrete, manageable problem. This also activates the prefrontal cortex, which helps regulate the amygdala&apos;s panic response.</li>
-                <li>**Bonus Step: Externalize It.** After your 5-minute reset, quickly jot down the trigger somewhere you can reference later. This takes 10 seconds but provides valuable data for preventing future spirals. Over time, you can identify patterns and proactively manage your anxiety triggers.</li>
+                <li><strong>2 Minutes: Regulated Breathing.</strong> Sit down and focus on your breath. Inhale for 4 seconds, exhale for 6 seconds. Repeat six times. This simple act directly signals to your nervous system that you are safe, interrupting the fight-or-flight response. The longer exhale is key—it activates your parasympathetic nervous system, which is responsible for the &quot;rest and digest&quot; state.</li>
+                <li><strong>60 Seconds: Sensory Reset.</strong> Step outside or move to a window. Fresh air and a change of scenery work wonders on regulating an overstimulated nervous system. The combination of movement, temperature change, and different visual input can break the anxiety spiral that your ADHD brain gets stuck in.</li>
+                <li><strong>30 Seconds: Physical Release.</strong> Clench your fists and shoulders tightly for a few seconds, then release completely. This physical tension-release is an instant reset button for your body. When anxiety lives in your muscles, releasing that physical tension can immediately reduce the mental distress.</li>
+                <li><strong>10 Seconds: Name the Fear.</strong> Write down three specific sources of your current anxiety. Naming the monster shrinks it, moving it from a vague, overwhelming feeling to a concrete, manageable problem. This also activates the prefrontal cortex, which helps regulate the amygdala&apos;s panic response.</li>
+                <li><strong>Bonus Step: Externalize It.</strong> After your 5-minute reset, quickly jot down the trigger somewhere you can reference later. This takes 10 seconds but provides valuable data for preventing future spirals. Over time, you can identify patterns and proactively manage your anxiety triggers.</li>
               </ul>
               <br />
               <br />
@@ -149,7 +121,7 @@ const ADHDAnxietyBlog = () => {
               <br />
               <h2 className="blog-subheader">The Deeper Fix: Preventing the Loop with External Support</h2>
               <p className="blog-body">
-                While the 5-minute protocol is a great emergency brake, the true power lies in prevention. This is where **Claudia by Neuro** shines as an ADHD support tool.
+                While the 5-minute protocol is a great emergency brake, the true power lies in prevention. This is where <strong>Romi</strong> shines as an ADHD support tool.
               </p>
               <br />
               <br />
@@ -159,11 +131,11 @@ const ADHDAnxietyBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>**Task Decomposition:** Anxiety often stems from the overwhelming size of a task. The right system automatically breaks down large projects into tiny, manageable micro-steps, making task initiation easier and reducing the fear of failure. Instead of seeing &quot;write report&quot; (panic-inducing), you see &quot;open document&quot; (manageable). This psychological shift is powerful for ADHD brains that struggle with task initiation.</li>
-                <li>**Proactive Reminders:** Instead of relying on your fallible memory, external support provides gentle, context-aware reminders that prevent the &apos;oh no, I forgot!&apos; anxiety spike. These aren&apos;t nagging notifications—they&apos;re strategically timed prompts that catch things before they become emergencies. The system learns your patterns and reminds you at the optimal time, not just at arbitrary intervals.</li>
-                <li>**Emotional Regulation Check-ins:** Smart support can prompt you to use your coping strategies (like the 5-minute protocol) before you reach a crisis point, ensuring you are working with your energy, not against it. Prevention is always easier than recovery, and proper systems help you stay regulated before dysregulation sets in.</li>
-                <li>**Pattern Recognition:** Over time, external support identifies when you&apos;re most vulnerable to anxiety spirals—certain times of day, specific types of tasks, particular combinations of stressors. With this insight, you can proactively plan breaks, regulation activities, or task reordering to prevent the spiral before it starts.</li>
-                <li>**Reducing Cognitive Load:** Much of ADHD-related anxiety comes from the constant mental juggling act. When a reliable system handles the remembering, organizing, and prioritizing, your brain has more resources available for actual emotional regulation. You&apos;re not trying to calm yourself while simultaneously trying to remember what you&apos;re forgetting.</li>
+                <li><strong>Task Decomposition:</strong> Anxiety often stems from the overwhelming size of a task. The right system automatically breaks down large projects into tiny, manageable micro-steps, making task initiation easier and reducing the fear of failure. Instead of seeing &quot;write report&quot; (panic-inducing), you see &quot;open document&quot; (manageable). This psychological shift is powerful for ADHD brains that struggle with task initiation.</li>
+                <li><strong>Proactive Reminders:</strong> Instead of relying on your fallible memory, external support provides gentle, context-aware reminders that prevent the &apos;oh no, I forgot!&apos; anxiety spike. These aren&apos;t nagging notifications—they&apos;re strategically timed prompts that catch things before they become emergencies. The system learns your patterns and reminds you at the optimal time, not just at arbitrary intervals.</li>
+                <li><strong>Emotional Regulation Check-ins:</strong> Smart support can prompt you to use your coping strategies (like the 5-minute protocol) before you reach a crisis point, ensuring you are working with your energy, not against it. Prevention is always easier than recovery, and proper systems help you stay regulated before dysregulation sets in.</li>
+                <li><strong>Pattern Recognition:</strong> Over time, external support identifies when you&apos;re most vulnerable to anxiety spirals—certain times of day, specific types of tasks, particular combinations of stressors. With this insight, you can proactively plan breaks, regulation activities, or task reordering to prevent the spiral before it starts.</li>
+                <li><strong>Reducing Cognitive Load:</strong> Much of ADHD-related anxiety comes from the constant mental juggling act. When a reliable system handles the remembering, organizing, and prioritizing, your brain has more resources available for actual emotional regulation. You&apos;re not trying to calm yourself while simultaneously trying to remember what you&apos;re forgetting.</li>
               </ul>
               <br />
               <br />
@@ -184,18 +156,15 @@ const ADHDAnxietyBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to break free from the ADHD-anxiety cycle?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the AI assistant that handles executive function so you can focus on actually living instead of just surviving. Stop letting anxiety dictate your days.
+                  <strong>Ready to break free from the ADHD-anxiety cycle?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the AI assistant that handles executive function so you can focus on actually living instead of just surviving. Stop letting anxiety dictate your days.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

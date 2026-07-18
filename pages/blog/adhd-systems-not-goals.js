@@ -1,52 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDSystemsNotGoalsBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD Systems Not Goals: Why Traditional Goal-Setting Fails (And What Works Instead) | Neuro Notion</title>
-        <meta name="description" content="Discover why goals fail for ADHD brains and how building systems instead creates lasting change. Learn the science-backed approach to ADHD productivity that actually works." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-systems-not-goals" />
-        <meta property="og:title" content="ADHD Systems Not Goals: Why Goal-Setting Fails and What Works" />
-        <meta property="og:description" content="Stop chasing goals. Start building systems. Learn why ADHD brains need systems, not goals, to create lasting change." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-systems-not-goals" />
-        <meta name="keywords" content="ADHD systems, ADHD productivity systems, goals vs systems ADHD, ADHD habit building, ADHD organization, ADHD executive function" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD systems advocate"
-                    width={64}
-                    height={64}
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-11-18" title="November 18th, 2025">Nov. 18, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD Systems Not Goals: Why You Don&apos;t Rise to Your Goals, You Fall to Your Systems</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD Systems Not Goals: Why Traditional Goal-Setting Fails (And What Works Instead) | Romi"
+      description="Discover why goals fail for ADHD brains and how building systems instead creates lasting change. Learn the science-backed approach to ADHD productivity that actually works."
+      slug="adhd-systems-not-goals"
+      keywords="ADHD systems, ADHD productivity systems, goals vs systems ADHD, ADHD habit building, ADHD organization, ADHD executive function"
+      ogTitle="ADHD Systems Not Goals: Why Goal-Setting Fails and What Works"
+      ogDescription="Stop chasing goals. Start building systems. Learn why ADHD brains need systems, not goals, to create lasting change."
+      heading="ADHD Systems Not Goals: Why You Don&apos;t Rise to Your Goals, You Fall to Your Systems"
+      category="Productivity & Focus"
+      date="Nov. 18, 2025"
+      datePublished="2025-11-18"
+      readingTime="14 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/WCkiQUZEfiWXRMhf.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -352,7 +324,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is where modern ADHD support becomes invaluable. Tools like <strong>Claudia by Neuro</strong> provide the external structure your brain needs. They handle the executive function tasks—remembering, organizing, prioritizing, initiating—that your ADHD brain struggles with. When you externalize these functions, you free up mental resources and reduce the cognitive load that leads to exhaustion and overwhelm.
+                This is where modern ADHD support becomes invaluable. Tools like <strong>Romi</strong> provide the external structure your brain needs. They handle the executive function tasks—remembering, organizing, prioritizing, initiating—that your ADHD brain struggles with. When you externalize these functions, you free up mental resources and reduce the cognitive load that leads to exhaustion and overwhelm.
               </p>
               <br />
               <br />
@@ -430,18 +402,15 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to stop failing at goals and start building systems that actually work?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that provides external structure, handles executive function tasks, and builds systems that work with your brain. Stop fighting yourself. Start building systems.
+                  <strong>Ready to stop failing at goals and start building systems that actually work?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that provides external structure, handles executive function tasks, and builds systems that work with your brain. Stop fighting yourself. Start building systems.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

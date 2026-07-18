@@ -1,55 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const YouJustGetMeBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Finally, Someone Gets It: Why Being Understood Changes Everything with ADHD | Neuro Notion</title>
-        <meta name="description" content="That magical moment when someone finally understands your ADHD. Discover why feeling misunderstood is so damaging and how finding the right support transforms everything." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/finally-someone-gets-my-adhd" />
-        <meta property="og:title" content="You Just Get Me: The Power of Finally Being Understood" />
-        <meta property="og:description" content="Most people don&apos;t understand ADHD. But when you find something that does? It&apos;s life-changing. Here&apos;s why." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/finally-someone-gets-my-adhd" />
-        <meta name="keywords" content="ADHD misunderstood, feeling misunderstood ADHD, ADHD understanding, ADHD support, ADHD validation, living with ADHD" />
-        <meta name="author" content="Josh Budd" />
-        <meta name="publish-date" content="2025-02-18" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-18" title="February 18th, 2025">Feb. 18, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Finally, Someone Gets It: Why Being Understood Changes Everything with ADHD</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Finally, Someone Gets It: Why Being Understood Changes Everything with ADHD | Romi"
+      description="That magical moment when someone finally understands your ADHD. Discover why feeling misunderstood is so damaging and how finding the right support transforms everything."
+      slug="you-just-get-me"
+      keywords="ADHD misunderstood, feeling misunderstood ADHD, ADHD understanding, ADHD support, ADHD validation, living with ADHD"
+      ogTitle="You Just Get Me: The Power of Finally Being Understood"
+      ogDescription="Most people don&apos;t understand ADHD. But when you find something that does? It&apos;s life-changing. Here&apos;s why."
+      heading="Finally, Someone Gets It: Why Being Understood Changes Everything with ADHD"
+      category="Understanding ADHD"
+      date="Feb. 18, 2025"
+      datePublished="2025-02-18"
+      readingTime="11 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/AERmRCdhXAECATTn.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -235,9 +204,9 @@ const YouJustGetMeBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Embodies True Understanding</h2>
+              <h2 className="blog-subheader">How Romi Embodies True Understanding</h2>
               <p className="blog-body">
-                This is why **Claudia by Neuro** exists. Not as another generic productivity tool that you&apos;ll abandon in a week. But as a system built by someone with ADHD, for people with ADHD, with deep understanding of how our brains actually work.
+                This is why <strong>Romi</strong> exists. Not as another generic productivity tool that you&apos;ll abandon in a week. But as a system built by someone with ADHD, for people with ADHD, with deep understanding of how our brains actually work.
               </p>
               <br />
               <br />
@@ -256,7 +225,7 @@ const YouJustGetMeBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                When people start using Claudia, the most common response is exactly what this blog is about: &quot;You just get me.&quot; That feeling of finally being understood after years of fighting tools that weren&apos;t designed for you.
+                When people start using Romi, the most common response is exactly what this blog is about: &quot;You just get me.&quot; That feeling of finally being understood after years of fighting tools that weren&apos;t designed for you.
               </p>
               <br />
               <br />
@@ -288,7 +257,7 @@ const YouJustGetMeBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                That&apos;s what **Claudia by Neuro** provides. It&apos;s not trying to be everything to everyone. It&apos;s specifically designed for people with ADHD who are tired of tools that don&apos;t understand their brain. It&apos;s for people who want to feel seen, understood, and supported instead of judged and inadequate.
+                That&apos;s what <strong>Romi</strong> provides. It&apos;s not trying to be everything to everyone. It&apos;s specifically designed for people with ADHD who are tired of tools that don&apos;t understand their brain. It&apos;s for people who want to feel seen, understood, and supported instead of judged and inadequate.
               </p>
               <br />
               <br />
@@ -310,18 +279,15 @@ const YouJustGetMeBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to finally feel understood?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—designed by someone with ADHD who actually gets it. No fluff. No judgment. Just real tools built for your brain. Experience what it feels like when someone finally understands.
+                  <strong>Ready to finally feel understood?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—designed by someone with ADHD who actually gets it. No fluff. No judgment. Just real tools built for your brain. Experience what it feels like when someone finally understands.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

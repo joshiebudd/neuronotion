@@ -1,86 +1,23 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDDiagnosisNotReductionBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction: What Comes Next | Neuro Notion</title>
-        <meta name="description" content="Getting an ADHD diagnosis doesn&apos;t magically reduce symptoms. Learn why diagnosis is just step one and what actually works to manage ADHD effectively." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-diagnosis-not-symptom-reduction" />
-        <meta property="og:title" content="ADHD Diagnosis ≠ Symptom Reduction: The Reality" />
-        <meta property="og:description" content="Waiting for an ADHD diagnosis won&apos;t fix your symptoms. Discover what actually reduces ADHD symptoms and why action matters more than diagnosis." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-diagnosis-not-symptom-reduction" />
-        <meta property="og:image" content="https://www.neuro-notion.com/images/adhd-diagnosis-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction" />
-        <meta name="twitter:description" content="A diagnosis doesn&apos;t automatically reduce ADHD symptoms. Learn what actually works." />
-        <meta name="keywords" content="ADHD diagnosis, ADHD without treatment, managing ADHD symptoms, ADHD diagnosis and treatment, living with undiagnosed ADHD, ADHD symptom management" />
-        <meta name="author" content="Josh Budd" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "ADHD Diagnosis Doesn't Equal Symptom Reduction: What Comes Next",
-            "author": {
-              "@type": "Person",
-              "name": "Josh Budd"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Neuro Notion",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.neuro-notion.com/logo.png"
-              }
-            },
-            "datePublished": "2025-03-01",
-            "dateModified": "2025-03-01",
-            "image": "https://www.neuro-notion.com/images/adhd-diagnosis-og.jpg",
-            "description": "Getting an ADHD diagnosis doesn't magically reduce symptoms. Learn why diagnosis is just step one and what actually works to manage ADHD effectively."
-          })}
-        </script>
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD management specialist"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate="pubdate" dateTime="2025-03-01" title="March 1st, 2025">Mar. 1, 2025</time>
-                      <span className="mx-2">•</span>
-                      <span className="text-sm">Last updated: Mar. 1, 2025</span>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 6 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction: What Actually Works</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction: What Comes Next | Romi"
+      description="Getting an ADHD diagnosis doesn&apos;t magically reduce symptoms. Learn why diagnosis is just step one and what actually works to manage ADHD effectively."
+      slug="adhd-diagnosis-not-symptom-reduction"
+      keywords="ADHD diagnosis, ADHD without treatment, managing ADHD symptoms, ADHD diagnosis and treatment, living with undiagnosed ADHD, ADHD symptom management"
+      ogTitle="ADHD Diagnosis ≠ Symptom Reduction: The Reality"
+      ogDescription="Waiting for an ADHD diagnosis won&apos;t fix your symptoms. Discover what actually reduces ADHD symptoms and why action matters more than diagnosis."
+      heading="ADHD Diagnosis Doesn&apos;t Equal Symptom Reduction: What Actually Works"
+      category="Diagnosis & Treatment"
+      date="Mar. 1, 2025"
+      datePublished="2025-03-01"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/NPluqgDnQNuJKKmP.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm" role="complementary" aria-label="Key Takeaways">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -366,7 +303,7 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Claudia by Neuro</strong> is designed exactly for this—capturing thoughts, tasks, and information externally so your brain doesn&apos;t have to hold onto everything.
+                <strong>Romi</strong> is designed exactly for this—capturing thoughts, tasks, and information externally so your brain doesn&apos;t have to hold onto everything.
               </p>
               <br />
               <br />
@@ -465,18 +402,15 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md" role="complementary" aria-label="Call to Action">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to start managing ADHD NOW (not after diagnosis)?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—built specifically for ADHD brains to externalize working memory, organize chaos, and build sustainable systems. Don&apos;t wait for a diagnosis to start living differently. Start today.
+                  <strong>Ready to start managing ADHD NOW (not after diagnosis)?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—built specifically for ADHD brains to externalize working memory, organize chaos, and build sustainable systems. Don&apos;t wait for a diagnosis to start living differently. Start today.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

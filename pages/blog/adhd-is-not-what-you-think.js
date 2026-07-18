@@ -1,56 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDNotWhatYouThinkBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD is Not What You Think: What It&apos;s Really Like Living with ADHD | Neuro Notion</title>
-        <meta name="description" content="ADHD isn&apos;t laziness or procrastination. Discover what it&apos;s really like: emotional overwhelm, time blindness, impulsive decisions, and the constant struggle behind the scenes." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-is-not-what-you-think" />
-        <meta property="og:title" content="ADHD is Not What You Think (What It Really Is)" />
-        <meta property="og:description" content="ADHD is having so much to do but being too overwhelmed to do any of it. It&apos;s your brain tuning out without warning. It&apos;s time that feels like now or never." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-is-not-what-you-think" />
-        <meta name="keywords" content="what is ADHD really like, ADHD reality, living with ADHD, ADHD hidden struggles, ADHD behind the scenes" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD reality advocate"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-23" title="February 23rd, 2025">Feb. 23, 2025</time>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 6 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD is Not What You Think: What It&apos;s Really Like</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD is Not What You Think: What It&apos;s Really Like Living with ADHD | Romi"
+      description="ADHD isn&apos;t laziness or procrastination. Discover what it&apos;s really like: emotional overwhelm, time blindness, impulsive decisions, and the constant struggle behind the scenes."
+      slug="adhd-is-not-what-you-think"
+      keywords="what is ADHD really like, ADHD reality, living with ADHD, ADHD hidden struggles, ADHD behind the scenes"
+      ogTitle="ADHD is Not What You Think (What It Really Is)"
+      ogDescription="ADHD is having so much to do but being too overwhelmed to do any of it. It&apos;s your brain tuning out without warning. It&apos;s time that feels like now or never."
+      heading="ADHD is Not What You Think: What It&apos;s Really Like"
+      category="Understanding ADHD"
+      date="Feb. 23, 2025"
+      datePublished="2025-02-23"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fSIaPDNaTFZggEfb.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -243,7 +211,7 @@ const ADHDNotWhatYouThinkBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** understands all of these ADHD realities. She knows you&apos;ll forget. She knows you&apos;ll get overwhelmed. She knows starting is the hardest part. She was built for exactly these struggles.
+                <strong>Romi</strong> understands all of these ADHD realities. She knows you&apos;ll forget. She knows you&apos;ll get overwhelmed. She knows starting is the hardest part. She was built for exactly these struggles.
               </p>
               <br />
               <br />
@@ -264,18 +232,15 @@ const ADHDNotWhatYouThinkBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready for support that understands what ADHD really is?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—built by people who understand what you&apos;re actually dealing with. She knows about the overwhelm, the time blindness, the emotional intensity, and the unfinished projects. She was designed for your reality, not the stereotype. Get support that actually gets it.
+                  <strong>Ready for support that understands what ADHD really is?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—built by people who understand what you&apos;re actually dealing with. She knows about the overwhelm, the time blindness, the emotional intensity, and the unfinished projects. She was designed for your reality, not the stereotype. Get support that actually gets it.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

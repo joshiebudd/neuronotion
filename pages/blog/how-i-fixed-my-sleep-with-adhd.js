@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDSleepBlog = () => {
   return (
-    <>
-      <Head>
-        <title>How I Fixed My Sleep with ADHD: Shutting Down the 2 A.M. Brain | Neuro Notion</title>
-        <meta name="description" content="Discover evidence-based strategies for fixing ADHD sleep problems. Learn why your brain won&apos;t shut off at night and practical solutions that actually work." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/how-i-fixed-my-sleep-with-adhd" />
-        <meta property="og:title" content="How to Fix ADHD Sleep Problems: The 2 A.M. TED Talk Solution" />
-        <meta property="og:description" content="45% of adults with ADHD have sleep problems. Learn the neuroscience behind ADHD insomnia and proven strategies to finally get rest." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/how-i-fixed-my-sleep-with-adhd" />
-        <meta name="keywords" content="ADHD sleep problems, ADHD insomnia, ADHD sleep solutions, delayed sleep phase ADHD, racing thoughts at night" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD sleep optimization specialist"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-11" title="February 11th, 2025">Feb. 11, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">How I Fixed My Sleep with ADHD: Shutting Down the 2 A.M. TED Talk</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="How I Fixed My Sleep with ADHD: Shutting Down the 2 A.M. Brain | Romi"
+      description="Discover evidence-based strategies for fixing ADHD sleep problems. Learn why your brain won&apos;t shut off at night and practical solutions that actually work."
+      slug="how-i-fixed-my-sleep-with-adhd"
+      keywords="ADHD sleep problems, ADHD insomnia, ADHD sleep solutions, delayed sleep phase ADHD, racing thoughts at night"
+      ogTitle="How to Fix ADHD Sleep Problems: The 2 A.M. TED Talk Solution"
+      ogDescription="45% of adults with ADHD have sleep problems. Learn the neuroscience behind ADHD insomnia and proven strategies to finally get rest."
+      heading="How I Fixed My Sleep with ADHD: Shutting Down the 2 A.M. TED Talk"
+      category="Sleep"
+      date="Feb. 11, 2025"
+      datePublished="2025-02-11"
+      readingTime="9 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/DnEgXsmJYbbjSTrt.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -66,7 +37,7 @@ const ADHDSleepBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The problem is multifaceted: a delayed circadian rhythm, hyperarousal from emotional dysregulation, and heightened sensory sensitivity all conspire to keep the ADHD brain awake. The solution is not a single trick, but a personalized, multi-pronged strategy that addresses these unique challenges. This is where external support like **Claudia by Neuro** can provide the necessary structure and consistency to finally achieve restorative sleep.
+                The problem is multifaceted: a delayed circadian rhythm, hyperarousal from emotional dysregulation, and heightened sensory sensitivity all conspire to keep the ADHD brain awake. The solution is not a single trick, but a personalized, multi-pronged strategy that addresses these unique challenges. This is where external support like <strong>Romi</strong> can provide the necessary structure and consistency to finally achieve restorative sleep.
               </p>
               <br />
               <br />
@@ -148,7 +119,7 @@ const ADHDSleepBlog = () => {
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-4">
                 <li><strong>Respect Your Delayed Circadian Rhythm:</strong> Stop fighting your biology. If your body naturally wants to sleep at 1 AM and wake at 9 AM, trying to force a 10 PM bedtime will fail. If possible, adjust your schedule to match your natural rhythm. If not possible, use bright light therapy in the morning and dim lights in the evening to gradually shift your cycle.</li>
-                <li><strong>Brain Dump Before Bed:</strong> That 2 A.M. TED Talk happens because your brain is holding onto thoughts, worries, and tasks. **Claudia by Neuro** makes this effortless—quickly dump everything swirling in your head into the system. Once externalized, your brain can release it. You don&apos;t have to organize it or prioritize it; just get it out of your head.</li>
+                <li><strong>Brain Dump Before Bed:</strong> That 2 A.M. TED Talk happens because your brain is holding onto thoughts, worries, and tasks. <strong>Romi</strong> makes this effortless—quickly dump everything swirling in your head into the system. Once externalized, your brain can release it. You don&apos;t have to organize it or prioritize it; just get it out of your head.</li>
                 <li><strong>Sensory Optimization:</strong> Make your sleep environment ADHD-friendly. Blackout curtains or a sleep mask for light sensitivity. White noise, earplugs, or noise-cancelling headphones for sound sensitivity. Temperature regulation—many ADHD brains need it cool. Weighted blankets for tactile regulation. These aren&apos;t luxuries; they&apos;re necessities.</li>
                 <li><strong>Nervous System Down-Regulation:</strong> Your hyperaroused nervous system needs help shifting into rest mode. Try box breathing (4 counts in, hold 4, out 4, hold 4), progressive muscle relaxation, or gentle stretching. The key is finding what signals safety to your nervous system.</li>
                 <li><strong>Strategic Stimulation:</strong> Counterintuitively, sometimes mild stimulation helps ADHD brains wind down. Listening to audiobooks, podcasts, or ASMR at low volume gives your brain something to focus on other than racing thoughts. The key is choosing content boring enough to allow sleep but engaging enough to prevent thought spirals.</li>
@@ -163,9 +134,9 @@ const ADHDSleepBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Supports Better Sleep</h2>
+              <h2 className="blog-subheader">How Romi Supports Better Sleep</h2>
               <p className="blog-body">
-                The biggest obstacle to better sleep for ADHD brains isn&apos;t knowing what to do—it&apos;s consistently doing it. This is where **Claudia by Neuro** becomes invaluable:
+                The biggest obstacle to better sleep for ADHD brains isn&apos;t knowing what to do—it&apos;s consistently doing it. This is where <strong>Romi</strong> becomes invaluable:
               </p>
               <br />
               <br />
@@ -217,24 +188,21 @@ const ADHDSleepBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** makes this sustainable by handling the consistency piece your ADHD brain struggles with. You focus on the actual wind-down; the system handles the remembering, the reminding, and the structure. Finally, better sleep becomes possible not through superhuman discipline, but through smart support that works with your brain.
+                <strong>Romi</strong> makes this sustainable by handling the consistency piece your ADHD brain struggles with. You focus on the actual wind-down; the system handles the remembering, the reminding, and the structure. Finally, better sleep becomes possible not through superhuman discipline, but through smart support that works with your brain.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to finally shut down the 2 A.M. TED Talk?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that helps you brain dump before bed, maintains wind-down routines, and provides the consistency your sleep schedule needs. Better sleep is possible when you have the right support.
+                  <strong>Ready to finally shut down the 2 A.M. TED Talk?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that helps you brain dump before bed, maintains wind-down routines, and provides the consistency your sleep schedule needs. Better sleep is possible when you have the right support.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const StudyMusicBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Best Study Music for ADHD: What to Listen To for Maximum Focus | Neuro Notion</title>
-        <meta name="description" content="Discover the science behind study music for ADHD. Learn which sounds improve focus, why silence doesn&apos;t work, and how to optimize your auditory environment." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-and-study-music" />
-        <meta property="og:title" content="ADHD Study Music: The Science of Auditory Focus" />
-        <meta property="og:description" content="Not all study music works for ADHD. Learn which frequencies, genres, and sound types actually improve focus for your brain." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-and-study-music" />
-        <meta name="keywords" content="ADHD study music, focus music for ADHD, binaural beats ADHD, ADHD concentration music, brown noise ADHD" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD focus optimization expert"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-13" title="February 13th, 2025">Feb. 13, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">What Should People with ADHD Listen To When Studying? The Science of Focus Music</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Best Study Music for ADHD: What to Listen To for Maximum Focus | Romi"
+      description="Discover the science behind study music for ADHD. Learn which sounds improve focus, why silence doesn&apos;t work, and how to optimize your auditory environment."
+      slug="adhd-and-study-music"
+      keywords="ADHD study music, focus music for ADHD, binaural beats ADHD, ADHD concentration music, brown noise ADHD"
+      ogTitle="ADHD Study Music: The Science of Auditory Focus"
+      ogDescription="Not all study music works for ADHD. Learn which frequencies, genres, and sound types actually improve focus for your brain."
+      heading="What Should People with ADHD Listen To When Studying? The Science of Focus Music"
+      category="Productivity & Focus"
+      date="Feb. 13, 2025"
+      datePublished="2025-02-13"
+      readingTime="8 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/axuRxHXILJREfGFZ.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -66,7 +37,7 @@ const StudyMusicBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                If you have ADHD, you know that certain sounds can be incredibly distracting or even overwhelming. This is because people with ADHD are typically more sensitive to sound than neurotypical individuals. But what you probably don&apos;t know is you can actually use sounds to your advantage when studying—and when combined with the right support system like **Claudia by Neuro**, you can create an optimal focus environment that works with your brain, not against it.
+                If you have ADHD, you know that certain sounds can be incredibly distracting or even overwhelming. This is because people with ADHD are typically more sensitive to sound than neurotypical individuals. But what you probably don&apos;t know is you can actually use sounds to your advantage when studying—and when combined with the right support system like <strong>Romi</strong>, you can create an optimal focus environment that works with your brain, not against it.
               </p>
               <br />
               <br />
@@ -177,9 +148,9 @@ const StudyMusicBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Enhances Your Focus Environment</h2>
+              <h2 className="blog-subheader">How Romi Enhances Your Focus Environment</h2>
               <p className="blog-body">
-                Sound is powerful, but it&apos;s only one element of an optimal ADHD study environment. **Claudia by Neuro** complements your auditory optimization by providing the external structure your ADHD brain needs:
+                Sound is powerful, but it&apos;s only one element of an optimal ADHD study environment. <strong>Romi</strong> complements your auditory optimization by providing the external structure your ADHD brain needs:
               </p>
               <br />
               <br />
@@ -210,7 +181,7 @@ const StudyMusicBlog = () => {
               <br />
               <h2 className="blog-subheader">From Distracted to Deeply Focused</h2>
               <p className="blog-body">
-                Study music for ADHD isn&apos;t about finding one magic song or playlist. It&apos;s about understanding your brain&apos;s unique auditory processing needs and creating consistent sound environments that satisfy your brain&apos;s craving for stimulation without overwhelming it. When you pair optimal sound with external structure from tools like **Claudia by Neuro**, you create the conditions where deep, sustained focus becomes possible.
+                Study music for ADHD isn&apos;t about finding one magic song or playlist. It&apos;s about understanding your brain&apos;s unique auditory processing needs and creating consistent sound environments that satisfy your brain&apos;s craving for stimulation without overwhelming it. When you pair optimal sound with external structure from tools like <strong>Romi</strong>, you create the conditions where deep, sustained focus becomes possible.
               </p>
               <br />
               <br />
@@ -221,18 +192,15 @@ const StudyMusicBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to create your optimal focus environment?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that provides the external structure to complement your auditory optimization. Perfect sound plus smart support equals sustained focus finally within reach.
+                  <strong>Ready to create your optimal focus environment?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that provides the external structure to complement your auditory optimization. Perfect sound plus smart support equals sustained focus finally within reach.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

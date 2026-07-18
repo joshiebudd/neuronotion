@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDBrainsDontDoSmallBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Why ADHD Brains Don&apos;t Do &quot;Small&quot; Tasks: Breaking the Perfection Paralysis | Neuro Notion</title>
-        <meta name="description" content="Discover why ADHD brains procrastinate on small tasks until conditions are perfect. Learn the neuroscience behind all-or-nothing thinking and how to build momentum." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-brains-dont-do-small" />
-        <meta property="og:title" content="ADHD Brains Don&apos;t Do Small: The Perfection Paralysis" />
-        <meta property="og:description" content="A 5-minute email becomes a 3-day saga. Understand why ADHD brains refuse small tasks and how to overcome perfection paralysis." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-brains-dont-do-small" />
-        <meta name="keywords" content="ADHD procrastination, ADHD perfectionism, ADHD task initiation, ADHD all-or-nothing thinking, ADHD motivation" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD executive function expert"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-03" title="February 3rd, 2025">Feb. 3, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD Brains Don&apos;t Do &apos;Small&apos;: Why You Procrastinate Until Conditions Are &apos;Perfect&apos;</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Why ADHD Brains Don&apos;t Do &quot;Small&quot; Tasks: Breaking the Perfection Paralysis | Romi"
+      description="Discover why ADHD brains procrastinate on small tasks until conditions are perfect. Learn the neuroscience behind all-or-nothing thinking and how to build momentum."
+      slug="adhd-brains-dont-do-small"
+      keywords="ADHD procrastination, ADHD perfectionism, ADHD task initiation, ADHD all-or-nothing thinking, ADHD motivation"
+      ogTitle="ADHD Brains Don&apos;t Do Small: The Perfection Paralysis"
+      ogDescription="A 5-minute email becomes a 3-day saga. Understand why ADHD brains refuse small tasks and how to overcome perfection paralysis."
+      heading="ADHD Brains Don&apos;t Do &apos;Small&apos;: Why You Procrastinate Until Conditions Are &apos;Perfect&apos;"
+      category="Productivity & Focus"
+      date="Feb. 3, 2025"
+      datePublished="2025-02-03"
+      readingTime="8 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/VEnHjHYXPZefhmTJ.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section - Crystal clear and actionable */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -66,7 +37,7 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This isn&apos;t a moral failing; it&apos;s a neurological reality rooted in the unique way the ADHD brain processes motivation and executive function. The solution is not to force yourself to do the hardest thing first, but to embrace the power of momentum. This is the core principle behind **Claudia by Neuro**—providing the tiny, necessary push to get your ADHD brain into gear when it refuses to engage with &quot;small&quot; tasks.
+                This isn&apos;t a moral failing; it&apos;s a neurological reality rooted in the unique way the ADHD brain processes motivation and executive function. The solution is not to force yourself to do the hardest thing first, but to embrace the power of momentum. This is the core principle behind <strong>Romi</strong>—providing the tiny, necessary push to get your ADHD brain into gear when it refuses to engage with &quot;small&quot; tasks.
               </p>
               <br />
               <br />
@@ -168,7 +139,7 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** excels at this micro-step breakdown. Instead of presenting you with &quot;Respond to 15 emails,&quot; it offers: &quot;Open email app.&quot; Just that one step. The system understands that ADHD brains need momentum builders, not mountain climbers.
+                <strong>Romi</strong> excels at this micro-step breakdown. Instead of presenting you with &quot;Respond to 15 emails,&quot; it offers: &quot;Open email app.&quot; Just that one step. The system understands that ADHD brains need momentum builders, not mountain climbers.
               </p>
               <br />
               <br />
@@ -188,7 +159,7 @@ const ADHDBrainsDontDoSmallBlog = () => {
                 <li><strong>Celebrating Micro-Wins:</strong> Each micro-step completion gets acknowledged. Your brain gets a tiny dopamine hit from the achievement, building momentum for the next step. This artificial reward system compensates for the natural dopamine deficit.</li>
                 <li><strong>Preventing Perfectionism Paralysis:</strong> By making steps impossibly small, perfectionism can&apos;t take hold. There&apos;s no way to perfect &quot;open email app.&quot; You either do it or you don&apos;t. This binary simplicity defeats the &quot;perfect conditions&quot; trap.</li>
                 <li><strong>Creating Artificial Urgency:</strong> Some ADHD support systems can add gentle time pressure to tasks, creating the urgency that your time-blind brain needs without waiting for actual panic mode.</li>
-                <li><strong>Logging Resistance Points:</strong> When you consistently resist certain types of tasks, **Claudia by Neuro** can identify patterns and suggest alternative approaches or different times of day to attempt them.</li>
+                <li><strong>Logging Resistance Points:</strong> When you consistently resist certain types of tasks, <strong>Romi</strong> can identify patterns and suggest alternative approaches or different times of day to attempt them.</li>
               </ul>
               <br />
               <br />
@@ -236,7 +207,7 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** embodies this philosophy. It doesn&apos;t try to make you motivated or organized. It simply makes the next step so obvious and so small that your brain can&apos;t generate resistance. And once you take that step, momentum takes over. One micro-step becomes two, becomes ten, becomes a completed task that you thought was impossible.
+                <strong>Romi</strong> embodies this philosophy. It doesn&apos;t try to make you motivated or organized. It simply makes the next step so obvious and so small that your brain can&apos;t generate resistance. And once you take that step, momentum takes over. One micro-step becomes two, becomes ten, becomes a completed task that you thought was impossible.
               </p>
               <br />
               <br />
@@ -247,18 +218,15 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Tired of waiting for perfect conditions that never arrive?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that breaks tasks into impossibly small micro-steps. Stop fighting perfection paralysis. Start building momentum with steps so tiny your brain can&apos;t resist.
+                  <strong>Tired of waiting for perfect conditions that never arrive?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that breaks tasks into impossibly small micro-steps. Stop fighting perfection paralysis. Start building momentum with steps so tiny your brain can&apos;t resist.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

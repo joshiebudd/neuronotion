@@ -2,6 +2,7 @@ import "../src/styles/globals.css";
 import "../src/romi/styles/fonts.css";
 import "../src/romi/styles/tokens.css";
 import "../src/romi/styles/romi.css";
+import "../src/romi/styles/blog.css";
 import Head from "next/head";
 import Script from "next/script";
 import { useEffect } from "react";

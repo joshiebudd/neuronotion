@@ -37,7 +37,21 @@ const BlogPage = () => {
   return (
     <>
       <Head>
-        <meta name="description" content="Learnin time :)." />
+        <title>The Romi Blog | ADHD insights that actually help</title>
+        <meta
+          name="description"
+          content="Honest, practical reads on living and working with ADHD, from the team behind Romi, your personal ADHD companion."
+        />
+        <link rel="canonical" href="https://www.romiadhd.com/blogs" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="The Romi Blog | ADHD insights that actually help" />
+        <meta
+          property="og:description"
+          content="Honest, practical reads on living and working with ADHD, from the team behind Romi."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.romiadhd.com/blogs" />
+        <meta property="og:site_name" content="Romi ADHD" />
       </Head>
       <ArticleSelect />
     </>

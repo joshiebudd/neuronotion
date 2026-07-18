@@ -1,56 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDAffectsEverythingBlog = () => {
   return (
-    <>
-      <Head>
-        <title>How ADHD Affects Every Part of Your Life (Not Just Productivity) | Neuro Notion</title>
-        <meta name="description" content="ADHD isn&apos;t just about productivity. Discover how it impacts relationships, habits, goals, focus, organization, and sleep—and why treating it holistically changes everything." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/how-adhd-affects-every-part-of-your-life" />
-        <meta property="og:title" content="ADHD Affects Every Part of Your Life (Not Just Work)" />
-        <meta property="og:description" content="99% of people think ADHD means productivity problems. But ADHD impacts relationships, habits, goals, focus, organization, and sleep. Treat it multi-dimensionally." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/how-adhd-affects-every-part-of-your-life" />
-        <meta name="keywords" content="ADHD impact on life, ADHD relationships, ADHD habits, ADHD multi-dimensional, ADHD holistic management" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD holistic management advocate"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-26" title="February 26th, 2025">Feb. 26, 2025</time>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 7 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">The Truth About How ADHD Affects Every Part of Your Life</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="How ADHD Affects Every Part of Your Life (Not Just Productivity) | Romi"
+      description="ADHD isn&apos;t just about productivity. Discover how it impacts relationships, habits, goals, focus, organization, and sleep—and why treating it holistically changes everything."
+      slug="how-adhd-affects-every-part-of-your-life"
+      keywords="ADHD impact on life, ADHD relationships, ADHD habits, ADHD multi-dimensional, ADHD holistic management"
+      ogTitle="ADHD Affects Every Part of Your Life (Not Just Work)"
+      ogDescription="99% of people think ADHD means productivity problems. But ADHD impacts relationships, habits, goals, focus, organization, and sleep. Treat it multi-dimensionally."
+      heading="The Truth About How ADHD Affects Every Part of Your Life"
+      category="Understanding ADHD"
+      date="Feb. 26, 2025"
+      datePublished="2025-02-26"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/kvktnPCUiQTmfJVx.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -240,9 +208,9 @@ const ADHDAffectsEverythingBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Supports Multi-Dimensional ADHD Management</h2>
+              <h2 className="blog-subheader">How Romi Supports Multi-Dimensional ADHD Management</h2>
               <p className="blog-body">
-                **Claudia by Neuro** was designed with this multi-dimensional reality in mind. She doesn&apos;t just help with work tasks. She supports:
+                <strong>Romi</strong> was designed with this multi-dimensional reality in mind. She doesn&apos;t just help with work tasks. She supports:
               </p>
               <br />
               <br />
@@ -289,18 +257,15 @@ const ADHDAffectsEverythingBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready for support that addresses ADHD holistically?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—designed for every part of your life ADHD impacts, not just work tasks. Comprehensive support that feels GOOD to use. Manage ADHD multi-dimensionally and see results everywhere.
+                  <strong>Ready for support that addresses ADHD holistically?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—designed for every part of your life ADHD impacts, not just work tasks. Comprehensive support that feels GOOD to use. Manage ADHD multi-dimensionally and see results everywhere.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

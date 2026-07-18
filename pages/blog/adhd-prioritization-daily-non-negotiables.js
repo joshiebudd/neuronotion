@@ -1,52 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDPrioritizationBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD Prioritization: The Daily Non-Negotiables Method That Ends Decision Paralysis | Neuro Notion</title>
-        <meta name="description" content="Stop drowning in task paralysis. Learn the ADHD prioritization method that helps you decide what to work on and actually get things done without overwhelm." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-prioritization-daily-non-negotiables" />
-        <meta property="og:title" content="ADHD Prioritization: How to Decide What to Work On When Everything Feels Important" />
-        <meta property="og:description" content="The Daily Prioritization Matrix for ADHD: a simple method to end decision paralysis and focus on what actually matters." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-prioritization-daily-non-negotiables" />
-        <meta name="keywords" content="ADHD prioritization, ADHD task prioritization, ADHD decision paralysis, how to prioritize with ADHD, ADHD daily planning, ADHD executive function" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD prioritization expert"
-                    width={64}
-                    height={64}
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-11-18" title="November 18th, 2025">Nov. 18, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD Prioritization: The Non-Negotiables List That Stops Decision Paralysis</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD Prioritization: The Daily Non-Negotiables Method That Ends Decision Paralysis | Romi"
+      description="Stop drowning in task paralysis. Learn the ADHD prioritization method that helps you decide what to work on and actually get things done without overwhelm."
+      slug="adhd-prioritization-daily-non-negotiables"
+      keywords="ADHD prioritization, ADHD task prioritization, ADHD decision paralysis, how to prioritize with ADHD, ADHD daily planning, ADHD executive function"
+      ogTitle="ADHD Prioritization: How to Decide What to Work On When Everything Feels Important"
+      ogDescription="The Daily Prioritization Matrix for ADHD: a simple method to end decision paralysis and focus on what actually matters."
+      heading="ADHD Prioritization: The Non-Negotiables List That Stops Decision Paralysis"
+      category="Productivity & Focus"
+      date="Nov. 18, 2025"
+      datePublished="2025-11-18"
+      readingTime="15 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/nDXLblRyNfsoLgJU.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -337,7 +309,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is where modern ADHD support becomes invaluable. Tools like <strong>Claudia by Neuro</strong> handle the executive function tasks that make prioritization so difficult. They remember your tasks, organize your commitments, surface what&apos;s important at the right time, and reduce the cognitive load that leads to decision paralysis.
+                This is where modern ADHD support becomes invaluable. Tools like <strong>Romi</strong> handle the executive function tasks that make prioritization so difficult. They remember your tasks, organize your commitments, surface what&apos;s important at the right time, and reduce the cognitive load that leads to decision paralysis.
               </p>
               <br />
               <br />
@@ -432,18 +404,15 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Want more than just prioritization? Want comprehensive ADHD support that handles memory, organization, and decision-making?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that works with your brain to end decision paralysis and make every day more manageable. Stop drowning in choices. Start getting things done.
+                  <strong>Want more than just prioritization? Want comprehensive ADHD support that handles memory, organization, and decision-making?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that works with your brain to end decision paralysis and make every day more manageable. Stop drowning in choices. Start getting things done.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

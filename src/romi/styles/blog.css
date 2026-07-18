@@ -1,0 +1,248 @@
+/*
+ * Romi blog styles — restyles the long-form article bodies onto the Romi design
+ * system WITHOUT rewriting each article's markup. The 37 articles were authored
+ * with a blue theme (Poppins/Baloo + text-blue-600 links + blue callout boxes).
+ * Everything here is scoped under `.romi-article`, so it only touches article
+ * prose and leaves the rest of the site untouched.
+ *
+ * Strategy: (1) re-skin the semantic blog-* classes onto Romi type tokens, and
+ * (2) map the hard-coded blue/gray Tailwind utilities the bodies use onto Romi
+ * brand colours. That means a single stylesheet re-skins all 37 consistently.
+ */
+
+.romi-article {
+  --romi-article-measure: 720px;
+
+  /* Article table tokens — swap these to restyle every blog table at once. */
+  --romi-article-table-bg: var(--romi-color-surface); /* white */
+  --romi-article-table-header-bg: var(--romi-purple-pale); /* soft lilac */
+  --romi-article-table-header-text: var(--romi-color-ink); /* charcoal */
+  --romi-article-table-border: var(--romi-purple-40); /* lilac */
+  --romi-article-table-text: var(--romi-color-ink); /* charcoal */
+
+  width: 100%;
+  max-width: var(--romi-article-measure);
+  margin-inline: auto;
+  color: var(--romi-color-ink);
+  font-family: var(--romi-font-body);
+}
+
+/* ---------- Prose type ---------- */
+.romi-article .blog-body {
+  font-family: var(--romi-font-body);
+  color: var(--romi-color-ink);
+  font-size: 1.15rem;
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+/* Intro / standfirst paragraph */
+.romi-article .lead.blog-body,
+.romi-article p.lead {
+  font-size: clamp(1.25rem, 2.4vw, 1.45rem);
+  line-height: 1.6;
+  color: var(--romi-color-ink-muted);
+  font-weight: 400;
+}
+
+.romi-article .blog-header {
+  font-family: var(--romi-font-display);
+  color: var(--romi-color-ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Section headings (h2.blog-subheader) */
+.romi-article .blog-subheader {
+  font-family: var(--romi-font-display);
+  color: var(--romi-color-ink);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Any bare headings inside the prose keep the display font + ink colour */
+.romi-article h2,
+.romi-article h3,
+.romi-article h4 {
+  font-family: var(--romi-font-display);
+  color: var(--romi-color-ink);
+  letter-spacing: -0.01em;
+}
+.romi-article h3 {
+  color: var(--romi-color-ink); /* beats the global h3{color:black} */
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.romi-article strong,
+.romi-article b {
+  color: var(--romi-color-ink);
+  font-weight: 700;
+}
+
+/* ---------- Links ---------- */
+.romi-article a {
+  color: var(--romi-indigo);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--romi-indigo) 35%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+.romi-article a:hover {
+  color: var(--romi-indigo-deep);
+  text-decoration-color: currentColor;
+}
+
+/* ---------- Lists ---------- */
+.romi-article ul,
+.romi-article ol {
+  color: var(--romi-color-ink);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+.romi-article li {
+  margin-bottom: 0.5rem;
+}
+.romi-article li::marker {
+  color: var(--romi-indigo);
+}
+
+/* ---------- Callout / highlight boxes ----------
+   The bodies build callouts from blue Tailwind utilities. Remap the blues to
+   the Romi purple family and soften every boxed panel with a rounded corner. */
+.romi-article .bg-blue-100 {
+  background-color: var(--romi-purple-pale);
+}
+.romi-article .bg-blue-50 {
+  background-color: color-mix(in srgb, var(--romi-purple) 8%, #ffffff);
+}
+.romi-article .border-blue-500,
+.romi-article .border-blue-400 {
+  border-color: var(--romi-indigo);
+}
+.romi-article .border-blue-200,
+.romi-article .border-blue-100 {
+  border-color: var(--romi-purple-40);
+}
+.romi-article .text-blue-600,
+.romi-article .text-blue-500,
+.romi-article .text-blue-700 {
+  color: var(--romi-indigo);
+}
+
+/* Left-accent callouts (Key Takeaways etc.) — round the panel + lift the border */
+.romi-article .border-l-4 {
+  border-radius: var(--romi-radius-lg);
+  border-left-width: 5px;
+}
+/* Fully-bordered callouts (CTA panels) */
+.romi-article .border-2 {
+  border-radius: var(--romi-radius-lg);
+}
+
+/* Soften the legacy hard shadows into the warm Romi shadow language */
+.romi-article .shadow-sm,
+.romi-article .shadow-md {
+  box-shadow: var(--romi-shadow-md);
+}
+
+/* ---------- Gray text -> Romi inks ---------- */
+.romi-article .text-gray-900,
+.romi-article .text-gray-800 {
+  color: var(--romi-color-ink);
+}
+.romi-article .text-gray-700,
+.romi-article .text-gray-600,
+.romi-article .text-gray-500 {
+  color: var(--romi-color-ink-muted);
+}
+.romi-article .text-gray-400 {
+  color: var(--romi-color-ink-soft);
+}
+.romi-article .bg-gray-50,
+.romi-article .bg-gray-100 {
+  background-color: var(--romi-beige-deep);
+}
+
+/* ---------- Tables ----------
+   The article tables were authored with Tailwind `dark:` variants
+   (dark:bg-gray-800 etc.). The Romi site is light-only, so on a dark-mode OS the
+   tables used to flip to unreadable dark-on-dark. Fix: (a) neutralise every dark:
+   variant the prose uses, and (b) give tables an explicit white surface / lilac
+   border / charcoal text — all driven by the --romi-article-table-* tokens above,
+   so restyling every blog table is a one-line change. */
+.romi-article table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.75rem 0;
+  font-size: 1rem;
+  color: var(--romi-article-table-text);
+  background-color: var(--romi-article-table-bg);
+  border: 1px solid var(--romi-article-table-border);
+  border-radius: var(--romi-radius-lg);
+  overflow: hidden;
+}
+.romi-article thead,
+.romi-article thead th {
+  background-color: var(--romi-article-table-header-bg);
+}
+.romi-article thead th {
+  color: var(--romi-article-table-header-text);
+  font-family: var(--romi-font-display);
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.04em;
+}
+.romi-article tbody tr {
+  background-color: var(--romi-article-table-bg);
+}
+.romi-article th,
+.romi-article td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--romi-article-table-border);
+  color: var(--romi-article-table-text);
+  background-color: transparent;
+  vertical-align: top;
+}
+.romi-article tbody tr:last-child th,
+.romi-article tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* Neutralise Tailwind dark: variants inside prose — the article is light-only,
+   so these must never darken regardless of the visitor's OS colour scheme. */
+.romi-article .dark\:bg-gray-800,
+.romi-article .dark\:bg-gray-700 {
+  background-color: var(--romi-article-table-bg);
+}
+.romi-article .dark\:border-gray-700 {
+  border-color: var(--romi-article-table-border);
+}
+.romi-article .dark\:text-white,
+.romi-article .dark\:text-gray-400 {
+  color: var(--romi-article-table-text);
+}
+
+/* ---------- Images ---------- */
+.romi-article img {
+  border-radius: var(--romi-radius-lg);
+}
+
+/* ---------- Blockquotes (rare, but keep them on-brand) ---------- */
+.romi-article blockquote {
+  border-left: 4px solid var(--romi-purple);
+  background: var(--romi-purple-pale);
+  border-radius: var(--romi-radius-lg);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  color: var(--romi-color-ink);
+  font-style: italic;
+}

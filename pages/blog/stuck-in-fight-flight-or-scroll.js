@@ -1,51 +1,23 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const FightFlightScrollBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD Nervous System Dysregulation: Fight, Flight, or Scroll | Neuro Notion</title>
-        <meta name="description" content="Why ADHD keeps you stuck in survival mode. Learn about nervous system dysregulation and practical somatic techniques to finally feel regulated." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/stuck-in-fight-flight-or-scroll" />
-        <meta property="og:title" content="ADHD: Stuck in Fight, Flight, or Scroll Mode" />
-        <meta property="og:description" content="Your ADHD brain&apos;s alarm system is hypersensitive. Discover why you swing between hyperarousal and shutdown, and how to regulate." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/stuck-in-fight-flight-or-scroll" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate"
-                    width={64}
-                    height={64}
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-01-22" title="January 22nd, 2025">Jan. 22, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Stuck in Fight, Flight, or Scroll? 📱 Understanding ADHD Nervous System Dysregulation</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD Nervous System Dysregulation: Fight, Flight, or Scroll | Romi"
+      description="Why ADHD keeps you stuck in survival mode. Learn about nervous system dysregulation and practical somatic techniques to finally feel regulated."
+      slug="stuck-in-fight-flight-or-scroll"
+      ogTitle="ADHD: Stuck in Fight, Flight, or Scroll Mode"
+      ogDescription="Your ADHD brain&apos;s alarm system is hypersensitive. Discover why you swing between hyperarousal and shutdown, and how to regulate."
+      heading="Stuck in Fight, Flight, or Scroll? 📱 Understanding ADHD Nervous System Dysregulation"
+      category="Mental Health"
+      date="Jan. 22, 2025"
+      datePublished="2025-01-22"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/FXbxnmUvXUPZYprM.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -84,7 +56,7 @@ const FightFlightScrollBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The problem is that neither state is sustainable or healthy. Your body needs genuine regulation—a state of calm alertness where you&apos;re present, engaged, but not overwhelmed. For ADHD brains, achieving this state requires intentional support. This is where **Claudia by Neuro** and the principles of modern ADHD management become essential tools for nervous system regulation.
+                The problem is that neither state is sustainable or healthy. Your body needs genuine regulation—a state of calm alertness where you&apos;re present, engaged, but not overwhelmed. For ADHD brains, achieving this state requires intentional support. This is where <strong>Romi</strong> and the principles of modern ADHD management become essential tools for nervous system regulation.
               </p>
               <br />
               <br />
@@ -127,12 +99,12 @@ const FightFlightScrollBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>**The Somatic Check-In Reminder:** Dysregulation thrives on being ignored. Regular, gentle reminders for a &quot;somatic check-in&quot; can be life-changing. This could be a prompt to press your feet into the floor, stretch your arms, or simply take a deep breath. By making these small, regular check-ins a habit, you help your body release tension before it builds up. These micro-interventions are far more effective than trying to calm down after you&apos;re already in full crisis mode.</li>
-                <li>**Trigger and Strategy Logging:** When you notice yourself in a Scroll or Fight state, quickly logging the event helps you analyze the situation and develop personalized, body-based regulation strategies. For example, if you log &quot;overwhelmed by noise,&quot; you can prepare &quot;Put on brown noise&quot; or &quot;Go for a quick walk&quot; as automatic responses. Over time, this builds a regulation toolkit specific to your triggers.</li>
-                <li>**Preventing Overwhelm Through Structure:** Much of your nervous system activation comes from feeling overwhelmed by unstructured time or unclear priorities. Smart ADHD tools provide just enough structure to create safety without rigidity. When you know what you&apos;re doing next and trust that nothing important is falling through the cracks, your nervous system can relax.</li>
-                <li>**Environmental Regulation Planning:** Emotional regulation often starts with environmental regulation. External support helps you pre-plan your environment for success. For someone with ADHD, this might mean setting up a &quot;calm corner,&quot; pre-selecting a non-emotionally-hijacking playlist, or planning for a weighted blanket break. When your environment is set up to support regulation, you&apos;re not fighting your surroundings in addition to fighting your nervous system.</li>
-                <li>**The &quot;Sip and Pace&quot; Prompt:** One of the most effective ADHD regulation techniques is the &quot;sip through a straw while pacing.&quot; This can be prompted when you log feelings of restlessness or anxiety, providing an immediate, body-focused intervention that discharges adrenaline and brings you back to the present. These embodied practices work because they give your nervous system something concrete to do with the excess activation.</li>
-                <li>**Energy Management for Regulation:** Understanding and tracking your energy patterns helps you schedule activities accordingly. When you work with your natural rhythms rather than against them, you experience less dysregulation. High-demand tasks during high-energy times, gentler activities during low-energy periods—this alignment prevents the overwhelm that triggers Fight or Flight responses.</li>
+                <li><strong>The Somatic Check-In Reminder:</strong> Dysregulation thrives on being ignored. Regular, gentle reminders for a &quot;somatic check-in&quot; can be life-changing. This could be a prompt to press your feet into the floor, stretch your arms, or simply take a deep breath. By making these small, regular check-ins a habit, you help your body release tension before it builds up. These micro-interventions are far more effective than trying to calm down after you&apos;re already in full crisis mode.</li>
+                <li><strong>Trigger and Strategy Logging:</strong> When you notice yourself in a Scroll or Fight state, quickly logging the event helps you analyze the situation and develop personalized, body-based regulation strategies. For example, if you log &quot;overwhelmed by noise,&quot; you can prepare &quot;Put on brown noise&quot; or &quot;Go for a quick walk&quot; as automatic responses. Over time, this builds a regulation toolkit specific to your triggers.</li>
+                <li><strong>Preventing Overwhelm Through Structure:</strong> Much of your nervous system activation comes from feeling overwhelmed by unstructured time or unclear priorities. Smart ADHD tools provide just enough structure to create safety without rigidity. When you know what you&apos;re doing next and trust that nothing important is falling through the cracks, your nervous system can relax.</li>
+                <li><strong>Environmental Regulation Planning:</strong> Emotional regulation often starts with environmental regulation. External support helps you pre-plan your environment for success. For someone with ADHD, this might mean setting up a &quot;calm corner,&quot; pre-selecting a non-emotionally-hijacking playlist, or planning for a weighted blanket break. When your environment is set up to support regulation, you&apos;re not fighting your surroundings in addition to fighting your nervous system.</li>
+                <li><strong>The &quot;Sip and Pace&quot; Prompt:</strong> One of the most effective ADHD regulation techniques is the &quot;sip through a straw while pacing.&quot; This can be prompted when you log feelings of restlessness or anxiety, providing an immediate, body-focused intervention that discharges adrenaline and brings you back to the present. These embodied practices work because they give your nervous system something concrete to do with the excess activation.</li>
+                <li><strong>Energy Management for Regulation:</strong> Understanding and tracking your energy patterns helps you schedule activities accordingly. When you work with your natural rhythms rather than against them, you experience less dysregulation. High-demand tasks during high-energy times, gentler activities during low-energy periods—this alignment prevents the overwhelm that triggers Fight or Flight responses.</li>
               </ul>
               <br />
               <br />
@@ -143,7 +115,7 @@ const FightFlightScrollBlog = () => {
               <br />
               <h2 className="blog-subheader">Building a Regulated Life with External Support</h2>
               <p className="blog-body">
-                Regulation isn&apos;t a destination; it&apos;s a practice. With **Claudia by Neuro**, you&apos;re not trying to achieve perfect calm forever. Instead, you&apos;re building the capacity to notice when you&apos;re dysregulated and having tools readily available to return to baseline. This resilience is far more valuable than trying to never get dysregulated in the first place.
+                Regulation isn&apos;t a destination; it&apos;s a practice. With <strong>Romi</strong>, you&apos;re not trying to achieve perfect calm forever. Instead, you&apos;re building the capacity to notice when you&apos;re dysregulated and having tools readily available to return to baseline. This resilience is far more valuable than trying to never get dysregulated in the first place.
               </p>
               <br />
               <br />
@@ -164,18 +136,15 @@ const FightFlightScrollBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Tired of living in survival mode?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that reduces executive function demands so your nervous system can finally rest. Experience what regulated feels like.
+                  <strong>Tired of living in survival mode?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that reduces executive function demands so your nervous system can finally rest. Experience what regulated feels like.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

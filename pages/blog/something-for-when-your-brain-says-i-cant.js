@@ -1,51 +1,23 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const BrainSaysICantBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD Intention-Action Gap: When Your Brain Says &quot;I Can&apos;t&quot; | Neuro Notion</title>
-        <meta name="description" content="Understand the ADHD intention-action disconnect and discover support systems designed to work when you&apos;re at your lowest capacity." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/something-for-when-your-brain-says-i-cant" />
-        <meta property="og:title" content="ADHD: When Your Brain Says I Can&apos;t" />
-        <meta property="og:description" content="The gap between wanting to do something and actually doing it isn&apos;t laziness—it&apos;s executive dysfunction. Learn how to bridge it." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/something-for-when-your-brain-says-i-cant" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate"
-                    width={64}
-                    height={64}
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-01-28" title="January 28th, 2025">Jan. 28, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">When Your Brain Says &quot;I Can&apos;t&quot;: Bridging the ADHD Intention-Action Gap</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD Intention-Action Gap: When Your Brain Says &quot;I Can&apos;t&quot; | Romi"
+      description="Understand the ADHD intention-action disconnect and discover support systems designed to work when you&apos;re at your lowest capacity."
+      slug="something-for-when-your-brain-says-i-cant"
+      ogTitle="ADHD: When Your Brain Says I Can&apos;t"
+      ogDescription="The gap between wanting to do something and actually doing it isn&apos;t laziness—it&apos;s executive dysfunction. Learn how to bridge it."
+      heading="When Your Brain Says &quot;I Can&apos;t&quot;: Bridging the ADHD Intention-Action Gap"
+      category="Mental Health"
+      date="Jan. 28, 2025"
+      datePublished="2025-01-28"
+      readingTime="8 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QOuSXcrsBzPJJTLN.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -68,7 +40,7 @@ const BrainSaysICantBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is perhaps the most revolutionary aspect of effective ADHD tools—they don&apos;t wait for you to have your act together. They meet you in the mess, in the overwhelm, in the moment when everything feels impossible. While other tools sit unused because you don&apos;t have the energy to set them up or maintain them, **Claudia by Neuro** works especially well when you&apos;re at your lowest point.
+                This is perhaps the most revolutionary aspect of effective ADHD tools—they don&apos;t wait for you to have your act together. They meet you in the mess, in the overwhelm, in the moment when everything feels impossible. While other tools sit unused because you don&apos;t have the energy to set them up or maintain them, <strong>Romi</strong> works especially well when you&apos;re at your lowest point.
               </p>
               <br />
               <br />
@@ -84,7 +56,7 @@ const BrainSaysICantBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The ADHD community understands this experience intimately. It&apos;s the feeling of being trapped in your own head, watching yourself fail to do things you know you need to do, unable to explain to others (or even yourself) why something so &quot;simple&quot; feels utterly impossible. This is where **Claudia by Neuro** becomes not just helpful but essential—it provides the bridge when your brain can&apos;t build one itself.
+                The ADHD community understands this experience intimately. It&apos;s the feeling of being trapped in your own head, watching yourself fail to do things you know you need to do, unable to explain to others (or even yourself) why something so &quot;simple&quot; feels utterly impossible. This is where <strong>Romi</strong> becomes not just helpful but essential—it provides the bridge when your brain can&apos;t build one itself.
               </p>
               <br />
               <br />
@@ -143,9 +115,9 @@ const BrainSaysICantBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">The Bridge Across the Gap: Claudia by Neuro</h2>
+              <h2 className="blog-subheader">The Bridge Across the Gap: Romi</h2>
               <p className="blog-body">
-                **Claudia by Neuro** is not just another productivity app; it&apos;s the force that steadies your flow by translating your chaotic thoughts into calm, clear organization. It&apos;s the shortcut your nervous system has been begging for, especially when you are at your lowest capacity.
+                <strong>Romi</strong> is not just another productivity app; it&apos;s the force that steadies your flow by translating your chaotic thoughts into calm, clear organization. It&apos;s the shortcut your nervous system has been begging for, especially when you are at your lowest capacity.
               </p>
               <br />
               <br />
@@ -155,17 +127,17 @@ const BrainSaysICantBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>**Chaos-to-Clarity Translation:** You can use the Brain Dump feature to rant, vent, or simply list three things you need to remember at 10 PM. The system quietly processes this chaotic stream of thought and turns it into a structured, actionable plan for the next day—one that respects your energy and brain type. There&apos;s no judgment about how disorganized your thoughts are.</li>
-                <li>**Zero-Motivation Entry Point:** The first step to using support requires zero motivation, organization, or hope. It requires only a single moment of honesty: &quot;I&apos;m tired. I need help.&quot; The simplest interaction—like tapping the Brain Dump button and saying three things—is the entire first step. You don&apos;t need to be ready. You don&apos;t need to have energy. You just need to show up exactly as you are.</li>
-                <li>**Progressive Simplification:** On days when you can barely function, effective ADHD tools don&apos;t give you a 10-item to-do list. They give you one thing. Just one. The absolute most important thing that, if you do nothing else, will count as a win. This radical simplification is only possible with adaptive support that understands context and priority.</li>
-                <li>**Building on Micro-Wins:** Once you complete that one thing, the system celebrates it and offers the next tiny step—but only if you have capacity. If you don&apos;t, it acknowledges the win and lets you rest. This responsiveness prevents the shame spiral that usually follows low-capacity days. Instead of feeling like a failure, you feel supported.</li>
-                <li>**Built Around You:** Unlike tools that demand you conform to their rigid structure, modern ADHD support was built around the fluid, non-linear needs of the ADHD brain. The people who think they are &quot;too overwhelmed&quot; to use it are precisely the ones who experience the most profound relief.</li>
+                <li><strong>Chaos-to-Clarity Translation:</strong> You can use the Brain Dump feature to rant, vent, or simply list three things you need to remember at 10 PM. The system quietly processes this chaotic stream of thought and turns it into a structured, actionable plan for the next day—one that respects your energy and brain type. There&apos;s no judgment about how disorganized your thoughts are.</li>
+                <li><strong>Zero-Motivation Entry Point:</strong> The first step to using support requires zero motivation, organization, or hope. It requires only a single moment of honesty: &quot;I&apos;m tired. I need help.&quot; The simplest interaction—like tapping the Brain Dump button and saying three things—is the entire first step. You don&apos;t need to be ready. You don&apos;t need to have energy. You just need to show up exactly as you are.</li>
+                <li><strong>Progressive Simplification:</strong> On days when you can barely function, effective ADHD tools don&apos;t give you a 10-item to-do list. They give you one thing. Just one. The absolute most important thing that, if you do nothing else, will count as a win. This radical simplification is only possible with adaptive support that understands context and priority.</li>
+                <li><strong>Building on Micro-Wins:</strong> Once you complete that one thing, the system celebrates it and offers the next tiny step—but only if you have capacity. If you don&apos;t, it acknowledges the win and lets you rest. This responsiveness prevents the shame spiral that usually follows low-capacity days. Instead of feeling like a failure, you feel supported.</li>
+                <li><strong>Built Around You:</strong> Unlike tools that demand you conform to their rigid structure, modern ADHD support was built around the fluid, non-linear needs of the ADHD brain. The people who think they are &quot;too overwhelmed&quot; to use it are precisely the ones who experience the most profound relief.</li>
               </ul>
               <br />
               <br />
               <h2 className="blog-subheader">The Power of Meeting You Where You Are</h2>
               <p className="blog-body">
-                The revolution of adaptive ADHD support isn&apos;t in doing more—it&apos;s in doing exactly what you need, when you need it, in a way your brain can actually receive. Traditional productivity tools are like having a personal trainer who only works with you when you&apos;re already in shape. **Claudia by Neuro** is like having a trainer who meets you on the couch, helps you stand up, and celebrates that standing up was today&apos;s workout.
+                The revolution of adaptive ADHD support isn&apos;t in doing more—it&apos;s in doing exactly what you need, when you need it, in a way your brain can actually receive. Traditional productivity tools are like having a personal trainer who only works with you when you&apos;re already in shape. <strong>Romi</strong> is like having a trainer who meets you on the couch, helps you stand up, and celebrates that standing up was today&apos;s workout.
               </p>
               <br />
               <br />
@@ -202,24 +174,21 @@ const BrainSaysICantBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Let modern ADHD tools be the support system that allows you to show up, even when your brain says, &quot;I can&apos;t.&quot; Because with **Claudia by Neuro**, &quot;I can&apos;t&quot; becomes &quot;I can&apos;t alone, but I don&apos;t have to be alone.&quot; And that makes all the difference for people with ADHD trying to navigate a world that wasn&apos;t designed for them.
+                Let modern ADHD tools be the support system that allows you to show up, even when your brain says, &quot;I can&apos;t.&quot; Because with <strong>Romi</strong>, &quot;I can&apos;t&quot; becomes &quot;I can&apos;t alone, but I don&apos;t have to be alone.&quot; And that makes all the difference for people with ADHD trying to navigate a world that wasn&apos;t designed for them.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Tired of the gap between wanting and doing?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that works ESPECIALLY when you&apos;re barely functioning. Your first step takes zero motivation. Just honesty.
+                  <strong>Tired of the gap between wanting and doing?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that works ESPECIALLY when you&apos;re barely functioning. Your first step takes zero motivation. Just honesty.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

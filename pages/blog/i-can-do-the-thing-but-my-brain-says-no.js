@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const BrainSaysNoBlog = () => {
   return (
-    <>
-      <Head>
-        <title>I Can Do It But My Brain Says No: Overcoming ADHD Executive Dysfunction | Neuro Notion</title>
-        <meta name="description" content="Understand why you can&apos;t start tasks you know you can do. Learn how to overcome executive dysfunction paralysis and build momentum with ADHD." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/i-can-do-the-thing-but-my-brain-says-no" />
-        <meta property="og:title" content="ADHD Executive Dysfunction: When Your Brain Says No" />
-        <meta property="og:description" content="It&apos;s not laziness—it&apos;s executive dysfunction. Discover why task initiation feels impossible and how to bypass the paralysis." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/i-can-do-the-thing-but-my-brain-says-no" />
-        <meta name="keywords" content="ADHD executive dysfunction, ADHD task paralysis, ADHD task initiation, ADHD activation energy, overcoming ADHD paralysis" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD executive function specialist"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-15" title="February 15th, 2025">Feb. 15, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">I Can Do the Thing... But My Brain Says No: Overcoming Executive Dysfunction</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="I Can Do It But My Brain Says No: Overcoming ADHD Executive Dysfunction | Romi"
+      description="Understand why you can&apos;t start tasks you know you can do. Learn how to overcome executive dysfunction paralysis and build momentum with ADHD."
+      slug="i-can-do-the-thing-but-my-brain-says-no"
+      keywords="ADHD executive dysfunction, ADHD task paralysis, ADHD task initiation, ADHD activation energy, overcoming ADHD paralysis"
+      ogTitle="ADHD Executive Dysfunction: When Your Brain Says No"
+      ogDescription="It&apos;s not laziness—it&apos;s executive dysfunction. Discover why task initiation feels impossible and how to bypass the paralysis."
+      heading="I Can Do the Thing... But My Brain Says No: Overcoming Executive Dysfunction"
+      category="Mental Health"
+      date="Feb. 15, 2025"
+      datePublished="2025-02-15"
+      readingTime="8 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fsJKZJxgvoVKpFGz.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -71,7 +42,7 @@ const BrainSaysNoBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The secret to sustainable productivity with ADHD is not to fight the executive dysfunction, but to bypass it by embracing momentum-based living. This is the philosophy that powers **Claudia by Neuro**—providing the necessary scaffolding to get the ball rolling when your brain absolutely refuses to cooperate.
+                The secret to sustainable productivity with ADHD is not to fight the executive dysfunction, but to bypass it by embracing momentum-based living. This is the philosophy that powers <strong>Romi</strong>—providing the necessary scaffolding to get the ball rolling when your brain absolutely refuses to cooperate.
               </p>
               <br />
               <br />
@@ -142,7 +113,7 @@ const BrainSaysNoBlog = () => {
               <br />
               <ul className="list-disc ml-8 blog-body space-y-4">
                 <li><strong>Start Impossibly Small:</strong> Don&apos;t start with &quot;clean the kitchen.&quot; Start with &quot;put one dish in the dishwasher.&quot; That&apos;s it. Just one. The task must be so small that your brain can&apos;t generate resistance. Once you&apos;ve done the one dish, momentum makes the second dish easier. Before you know it, the kitchen is clean—not through willpower, but through momentum.</li>
-                <li><strong>External Task Sequencing:</strong> **Claudia by Neuro** does the planning and sequencing your brain can&apos;t do. Instead of staring at a messy kitchen thinking &quot;Where do I even start?&quot; the system presents one clear next step. No decisions, no planning, just action.</li>
+                <li><strong>External Task Sequencing:</strong> <strong>Romi</strong> does the planning and sequencing your brain can&apos;t do. Instead of staring at a messy kitchen thinking &quot;Where do I even start?&quot; the system presents one clear next step. No decisions, no planning, just action.</li>
                 <li><strong>Remove Initiation Friction:</strong> Every obstacle between you and starting is an opportunity for your executive dysfunction to derail you. Prepare your environment in advance. Lay out materials. Reduce steps. Make starting as friction-free as physically possible.</li>
                 <li><strong>Use Body Doubling:</strong> The presence of another person working (even virtually) can provide the activation energy your brain needs. Their momentum becomes contagious, helping you overcome your own inertia.</li>
                 <li><strong>Gamification and Rewards:</strong> Since your brain lacks natural reward anticipation, create artificial rewards. Use timers, challenges, or external accountability to generate the dopamine your brain needs to initiate.</li>
@@ -154,7 +125,7 @@ const BrainSaysNoBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Bypasses Executive Dysfunction</h2>
+              <h2 className="blog-subheader">How Romi Bypasses Executive Dysfunction</h2>
               <p className="blog-body">
                 The revolutionary aspect of modern ADHD support is that it doesn&apos;t ask you to overcome executive dysfunction through effort. Instead, it does the executive function for you:
               </p>
@@ -184,7 +155,7 @@ const BrainSaysNoBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** can time your 5-minute commitment, removing even the friction of watching the clock. You just work until the gentle notification says your 5 minutes are up. Then you decide—continue riding the momentum, or stop knowing you did something.
+                <strong>Romi</strong> can time your 5-minute commitment, removing even the friction of watching the clock. You just work until the gentle notification says your 5 minutes are up. Then you decide—continue riding the momentum, or stop knowing you did something.
               </p>
               <br />
               <br />
@@ -211,7 +182,7 @@ const BrainSaysNoBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** exists specifically for these moments when your brain refuses to cooperate. It provides the planning, sequencing, and activation support that your executive function can&apos;t generate. You don&apos;t need to be ready to use it—it works especially well when you&apos;re paralyzed, because that&apos;s exactly what it was designed for.
+                <strong>Romi</strong> exists specifically for these moments when your brain refuses to cooperate. It provides the planning, sequencing, and activation support that your executive function can&apos;t generate. You don&apos;t need to be ready to use it—it works especially well when you&apos;re paralyzed, because that&apos;s exactly what it was designed for.
               </p>
               <br />
               <br />
@@ -222,18 +193,15 @@ const BrainSaysNoBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to bypass executive dysfunction paralysis?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that does the planning and sequencing for you, breaks tasks into micro-steps, and builds momentum when your brain refuses to start. Stop fighting paralysis. Start bypassing it.
+                  <strong>Ready to bypass executive dysfunction paralysis?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that does the planning and sequencing for you, breaks tasks into micro-steps, and builds momentum when your brain refuses to start. Stop fighting paralysis. Start bypassing it.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

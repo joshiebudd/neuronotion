@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const AdhdMaskingImposterBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD Masking and Imposter Syndrome: The Exhausting Performance | Neuro Notion</title>
-        <meta name="description" content="Discover why ADHD masking leads to imposter syndrome and burnout. Learn how to stop performing and start living authentically with proper support." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-masking-and-imposter-syndrome" />
-        <meta property="og:title" content="ADHD Masking and Imposter Syndrome: Breaking Free from the Performance" />
-        <meta property="og:description" content="The exhausting cycle of hiding your ADHD traits while feeling like a fraud. Understand the neuroscience and discover a path to authentic living." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-masking-and-imposter-syndrome" />
-        <meta name="keywords" content="ADHD masking, imposter syndrome, neurodivergent masking, ADHD burnout, authentic ADHD living" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate specializing in neurodivergent support"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-01-30" title="January 30th, 2025">Jan. 30, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD, Masking, and Imposter Syndrome: Breaking Free from the Exhausting Performance</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD Masking and Imposter Syndrome: The Exhausting Performance | Romi"
+      description="Discover why ADHD masking leads to imposter syndrome and burnout. Learn how to stop performing and start living authentically with proper support."
+      slug="adhd-masking-and-imposter-syndrome"
+      keywords="ADHD masking, imposter syndrome, neurodivergent masking, ADHD burnout, authentic ADHD living"
+      ogTitle="ADHD Masking and Imposter Syndrome: Breaking Free from the Performance"
+      ogDescription="The exhausting cycle of hiding your ADHD traits while feeling like a fraud. Understand the neuroscience and discover a path to authentic living."
+      heading="ADHD, Masking, and Imposter Syndrome: Breaking Free from the Exhausting Performance"
+      category="Mental Health"
+      date="Jan. 30, 2025"
+      datePublished="2025-01-30"
+      readingTime="9 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/SMWxbHIGQazTUxDR.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section - Exceptionally clear and valuable */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -127,7 +98,7 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** helps address this by providing objective tracking of your efforts and accomplishments. When you have data showing everything you&apos;ve actually completed, it&apos;s harder to dismiss your success as luck or trickery. The evidence doesn&apos;t lie—you did the work, even if it felt different than how neurotypical people do it.
+                <strong>Romi</strong> helps address this by providing objective tracking of your efforts and accomplishments. When you have data showing everything you&apos;ve actually completed, it&apos;s harder to dismiss your success as luck or trickery. The evidence doesn&apos;t lie—you did the work, even if it felt different than how neurotypical people do it.
               </p>
               <br />
               <br />
@@ -138,7 +109,7 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <h2 className="blog-subheader">External Support: Your Path to Authentic Functioning</h2>
               <p className="blog-body">
-                This is where **Claudia by Neuro** becomes an essential tool for breaking free from the performance. Instead of using your mental energy to act organized, you can offload that function to external support. Modern ADHD tools handle the meticulous planning, the reminders, and the organization, freeing up your brain to focus on the actual task, not the performance of the task.
+                This is where <strong>Romi</strong> becomes an essential tool for breaking free from the performance. Instead of using your mental energy to act organized, you can offload that function to external support. Modern ADHD tools handle the meticulous planning, the reminders, and the organization, freeing up your brain to focus on the actual task, not the performance of the task.
               </p>
               <br />
               <br />
@@ -165,7 +136,7 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <h2 className="blog-subheader">Reclaiming Your Authentic Self</h2>
               <p className="blog-body">
-                The goal isn&apos;t to never mask—sometimes situational masking is a necessary survival skill in a neurotypical world. The goal is to reduce chronic, exhausting masking and create spaces where you can be authentically yourself while still being functional and successful. **Claudia by Neuro** makes this possible by providing the organizational support that you would otherwise have to fake.
+                The goal isn&apos;t to never mask—sometimes situational masking is a necessary survival skill in a neurotypical world. The goal is to reduce chronic, exhausting masking and create spaces where you can be authentically yourself while still being functional and successful. <strong>Romi</strong> makes this possible by providing the organizational support that you would otherwise have to fake.
               </p>
               <br />
               <br />
@@ -191,18 +162,15 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop performing and start living authentically?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that reduces the need for masking by handling what you&apos;d otherwise have to fake. Your authentic self deserves to be seen, supported, and celebrated. Stop being an imposter in your own life.
+                  <strong>Ready to stop performing and start living authentically?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that reduces the need for masking by handling what you&apos;d otherwise have to fake. Your authentic self deserves to be seen, supported, and celebrated. Stop being an imposter in your own life.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const SystemsFailBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Do Your ADHD Systems Work on Hard Days? Sustainable Support That Adapts | Neuro Notion</title>
-        <meta name="description" content="Most ADHD systems fail when you need them most. Discover adaptive support that works especially well when ADHD is hitting you hard." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/do-your-systems-still-work-when-adhd-is-hitting-you-hard" />
-        <meta property="og:title" content="ADHD Systems That Work on Your Worst Days" />
-        <meta property="og:description" content="Your system works on good days but collapses when life gets hard. Learn why and how to build truly sustainable ADHD support." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/do-your-systems-still-work-when-adhd-is-hitting-you-hard" />
-        <meta name="keywords" content="ADHD systems, sustainable ADHD support, ADHD low capacity, ADHD variable capacity, adaptive ADHD tools" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and sustainable ADHD systems architect"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-17" title="February 17th, 2025">Feb. 17, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Do Your Systems Still Work When ADHD is Hitting You Hard?</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Do Your ADHD Systems Work on Hard Days? Sustainable Support That Adapts | Romi"
+      description="Most ADHD systems fail when you need them most. Discover adaptive support that works especially well when ADHD is hitting you hard."
+      slug="do-your-systems-still-work-when-adhd-is-hitting-you-hard"
+      keywords="ADHD systems, sustainable ADHD support, ADHD low capacity, ADHD variable capacity, adaptive ADHD tools"
+      ogTitle="ADHD Systems That Work on Your Worst Days"
+      ogDescription="Your system works on good days but collapses when life gets hard. Learn why and how to build truly sustainable ADHD support."
+      heading="Do Your Systems Still Work When ADHD is Hitting You Hard?"
+      category="Productivity & Focus"
+      date="Feb. 17, 2025"
+      datePublished="2025-02-17"
+      readingTime="8 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/zWDJHJhFuLbxsfmv.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -71,7 +42,7 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The solution is a system that adapts to your brain, not the other way around. This is the core design philosophy of **Claudia by Neuro**—providing support that stabilizes the chaos and doesn&apos;t rely on your motivation, especially on days when you have none.
+                The solution is a system that adapts to your brain, not the other way around. This is the core design philosophy of <strong>Romi</strong>—providing support that stabilizes the chaos and doesn&apos;t rely on your motivation, especially on days when you have none.
               </p>
               <br />
               <br />
@@ -156,9 +127,9 @@ const SystemsFailBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Works When You&apos;re Barely Functioning</h2>
+              <h2 className="blog-subheader">How Romi Works When You&apos;re Barely Functioning</h2>
               <p className="blog-body">
-                **Claudia by Neuro** was specifically designed for hard days. Here&apos;s how it provides support when traditional systems collapse:
+                <strong>Romi</strong> was specifically designed for hard days. Here&apos;s how it provides support when traditional systems collapse:
               </p>
               <br />
               <br />
@@ -179,7 +150,7 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                For most systems—even ADHD-friendly ones—the answer is no. They require you to have some baseline functionality to use them. But **Claudia by Neuro** passes the hard day test because it was specifically designed for exactly these moments. When you&apos;re at your lowest, it works BETTER, not worse, because that&apos;s when you need it most.
+                For most systems—even ADHD-friendly ones—the answer is no. They require you to have some baseline functionality to use them. But <strong>Romi</strong> passes the hard day test because it was specifically designed for exactly these moments. When you&apos;re at your lowest, it works BETTER, not worse, because that&apos;s when you need it most.
               </p>
               <br />
               <br />
@@ -200,7 +171,7 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** represents this fundamental shift in ADHD support philosophy. Instead of asking &quot;How can we make you more consistent?&quot; it asks &quot;How can we provide support that adapts to your inconsistency?&quot; That reframe changes everything.
+                <strong>Romi</strong> represents this fundamental shift in ADHD support philosophy. Instead of asking &quot;How can we make you more consistent?&quot; it asks &quot;How can we provide support that adapts to your inconsistency?&quot; That reframe changes everything.
               </p>
               <br />
               <br />
@@ -216,7 +187,7 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Your system should ask one question on hard days: &quot;What&apos;s the smallest possible thing that would help right now?&quot; If it&apos;s asking anything more complex, it&apos;s not truly ADHD-sustainable. **Claudia by Neuro** asks that question and provides that answer, every time, no matter how hard ADHD is hitting you.
+                Your system should ask one question on hard days: &quot;What&apos;s the smallest possible thing that would help right now?&quot; If it&apos;s asking anything more complex, it&apos;s not truly ADHD-sustainable. <strong>Romi</strong> asks that question and provides that answer, every time, no matter how hard ADHD is hitting you.
               </p>
               <br />
               <br />
@@ -227,18 +198,15 @@ const SystemsFailBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready for support that actually works on hard days?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant designed specifically for when you&apos;re barely functioning. Adaptive support that scales to your capacity, accepts your chaos, and works ESPECIALLY when you&apos;re struggling. Systems that catch you when you fall.
+                  <strong>Ready for support that actually works on hard days?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant designed specifically for when you&apos;re barely functioning. Adaptive support that scales to your capacity, accepts your chaos, and works ESPECIALLY when you&apos;re struggling. Systems that catch you when you fall.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

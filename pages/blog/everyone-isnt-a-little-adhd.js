@@ -1,56 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const EveryoneIsntALittleADHDBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Everyone Isn&apos;t &quot;A Little ADHD&quot; - The Truth About ADHD Brain Differences | Neuro Notion</title>
-        <meta name="description" content="Stop the &quot;everyone&apos;s a little ADHD&quot; BS. Learn the real neuroscience: ADHD brains are physically different, and it&apos;s not about trying harder." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/everyone-isnt-a-little-adhd" />
-        <meta property="og:title" content="Everyone Isn&apos;t &quot;A Little ADHD&quot; (Here&apos;s the Science)" />
-        <meta property="og:description" content="ADHD is a real, physical difference in brain structure. Not a personality quirk. Not everyone&apos;s experience. Here&apos;s what to say when people dismiss your ADHD." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/everyone-isnt-a-little-adhd" />
-        <meta name="keywords" content="ADHD is real, ADHD brain differences, everyone is not ADHD, ADHD neuroscience, ADHD stigma" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-25" title="February 25th, 2025">Feb. 25, 2025</time>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 6 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Everyone Isn&apos;t &quot;A Little ADHD&quot;</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Everyone Isn&apos;t &quot;A Little ADHD&quot; - The Truth About ADHD Brain Differences | Romi"
+      description="Stop the &quot;everyone&apos;s a little ADHD&quot; BS. Learn the real neuroscience: ADHD brains are physically different, and it&apos;s not about trying harder."
+      slug="everyone-isnt-a-little-adhd"
+      keywords="ADHD is real, ADHD brain differences, everyone is not ADHD, ADHD neuroscience, ADHD stigma"
+      ogTitle="Everyone Isn&apos;t &quot;A Little ADHD&quot; (Here&apos;s the Science)"
+      ogDescription="ADHD is a real, physical difference in brain structure. Not a personality quirk. Not everyone&apos;s experience. Here&apos;s what to say when people dismiss your ADHD."
+      heading="Everyone Isn&apos;t &quot;A Little ADHD&quot;"
+      category="Understanding ADHD"
+      date="Feb. 25, 2025"
+      datePublished="2025-02-25"
+      readingTime="6 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/DsUQnwIJdBgOxKRM.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -255,7 +223,7 @@ const EveryoneIsntALittleADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** understands this reality. She knows you don&apos;t have the pre-installed organizational GPS. So she provides external structure that works with your brain rather than demanding you function like a neurotypical brain.
+                <strong>Romi</strong> understands this reality. She knows you don&apos;t have the pre-installed organizational GPS. So she provides external structure that works with your brain rather than demanding you function like a neurotypical brain.
               </p>
               <br />
               <br />
@@ -287,18 +255,15 @@ const EveryoneIsntALittleADHDBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready for support that understands your ADHD is real?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—built for people whose brains genuinely work differently, not just for people who are &quot;a little distracted.&quot; Real support for real ADHD. Get the external structure your brain needs.
+                  <strong>Ready for support that understands your ADHD is real?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—built for people whose brains genuinely work differently, not just for people who are &quot;a little distracted.&quot; Real support for real ADHD. Get the external structure your brain needs.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

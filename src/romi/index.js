@@ -32,3 +32,4 @@ export { CorpPricing } from "./components/corporate/CorpPricing";
 export { CorpSecurity } from "./components/corporate/CorpSecurity";
 export { CorpFaqs } from "./components/corporate/CorpFaqs";
 export { CLINIC_DISCOVERY_URL } from "./components/clinic/clinic-data";
+export { BlogArticle } from "./components/blog/BlogArticle";

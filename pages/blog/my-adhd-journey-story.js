@@ -1,86 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDJourneyBlog = () => {
   return (
-    <>
-      <Head>
-        <title>From &quot;Naughty Kid&quot; to High-Performing Entrepreneur: My ADHD Journey | Neuro Notion</title>
-        <meta name="description" content="How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses. My journey proves your past doesn&apos;t define your future." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/my-adhd-journey-story" />
-        <meta property="og:title" content="My ADHD Journey: From Naughty Kid to Entrepreneur" />
-        <meta property="og:description" content="Diagnosed at 10 with severe ADHD. Kicked out of 7+ schools. Now running two businesses. Your past identity doesn&apos;t define your future." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/my-adhd-journey-story" />
-        <meta property="og:image" content="https://www.neuro-notion.com/images/adhd-journey-og.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="My ADHD Journey: From Naughty Kid to Entrepreneur" />
-        <meta name="twitter:description" content="Severe ADHD, 7+ school expulsions, now thriving. Your past doesn&apos;t define you." />
-        <meta name="keywords" content="ADHD personal story, ADHD success story, living with ADHD, ADHD entrepreneur, ADHD journey, overcoming ADHD, adult ADHD diagnosis story" />
-        <meta name="author" content="Josh Budd" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": "From Naughty Kid to High-Performing Entrepreneur: My ADHD Journey",
-            "author": {
-              "@type": "Person",
-              "name": "Josh Budd"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Neuro Notion",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.neuro-notion.com/logo.png"
-              }
-            },
-            "datePublished": "2025-03-03",
-            "dateModified": "2025-03-03",
-            "image": "https://www.neuro-notion.com/images/adhd-journey-og.jpg",
-            "description": "How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses. My journey proves your past doesn't define your future."
-          })}
-        </script>
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion sharing his personal ADHD journey"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate="pubdate" dateTime="2025-03-03" title="March 3rd, 2025">Mar. 3, 2025</time>
-                      <span className="mx-2">•</span>
-                      <span className="text-sm">Last updated: Mar. 3, 2025</span>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 6 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">From &quot;The Naughty Kid&quot; to High-Performing Entrepreneur: My ADHD Journey</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="From &quot;Naughty Kid&quot; to High-Performing Entrepreneur: My ADHD Journey | Romi"
+      description="How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses. My journey proves your past doesn&apos;t define your future."
+      slug="my-adhd-journey-story"
+      keywords="ADHD personal story, ADHD success story, living with ADHD, ADHD entrepreneur, ADHD journey, overcoming ADHD, adult ADHD diagnosis story"
+      ogTitle="My ADHD Journey: From Naughty Kid to Entrepreneur"
+      ogDescription="Diagnosed at 10 with severe ADHD. Kicked out of 7+ schools. Now running two businesses. Your past identity doesn&apos;t define your future."
+      heading="From &quot;The Naughty Kid&quot; to High-Performing Entrepreneur: My ADHD Journey"
+      category="Founder Story"
+      date="Mar. 3, 2025"
+      datePublished="2025-03-03"
+      readingTime="8 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QRBLUTtjMlDxDQnj.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm" role="complementary" aria-label="Key Takeaways">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -303,7 +241,7 @@ const ADHDJourneyBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li><strong>Neuro Notion</strong> - Helping people with ADHD take control of their lives through systems built for ADHD brains</li>
+                <li><strong>Romi</strong> - Helping people with ADHD take control of their lives through systems built for ADHD brains</li>
                 <li><strong>A Marketing Agency</strong> - Working with clients to build effective digital strategies</li>
               </ul>
               <br />
@@ -512,18 +450,15 @@ const ADHDJourneyBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md" role="complementary" aria-label="Call to Action">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to start your own transformation?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the system I built using everything I learned about ADHD over 8 years. Designed specifically for ADHD brains to externalize working memory, build sustainable systems, and finally gain control. Start rewriting your story today.
+                  <strong>Ready to start your own transformation?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the system I built using everything I learned about ADHD over 8 years. Designed specifically for ADHD brains to externalize working memory, build sustainable systems, and finally gain control. Start rewriting your story today.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

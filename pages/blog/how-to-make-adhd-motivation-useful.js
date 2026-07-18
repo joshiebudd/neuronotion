@@ -1,56 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const MakeMotivationUsefulBlog = () => {
   return (
-    <>
-      <Head>
-        <title>How to Make Your ADHD Motivation Actually Useful (Turn Sparks into Systems) | Neuro Notion</title>
-        <meta name="description" content="ADHD motivation disappears fast. Learn how to capture that energy and convert it into clarity, concrete plans, and sustainable action before motivation vanishes." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/how-to-make-adhd-motivation-useful" />
-        <meta property="og:title" content="How to Make ADHD Motivation Useful (Before It Disappears)" />
-        <meta property="og:description" content="Motivation is worthless if it doesn&apos;t create clarity. Discover how to spend ADHD motivation on planning future behaviors so clarity carries you when motivation is gone." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/how-to-make-adhd-motivation-useful" />
-        <meta name="keywords" content="ADHD motivation, ADHD clarity, ADHD goal setting, implementation intentions ADHD, motivation to action ADHD" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD motivation expert"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-27" title="February 27th, 2025">Feb. 27, 2025</time>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 7 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">How to Make Your ADHD Motivation Actually Useful</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="How to Make Your ADHD Motivation Actually Useful (Turn Sparks into Systems) | Romi"
+      description="ADHD motivation disappears fast. Learn how to capture that energy and convert it into clarity, concrete plans, and sustainable action before motivation vanishes."
+      slug="how-to-make-adhd-motivation-useful"
+      keywords="ADHD motivation, ADHD clarity, ADHD goal setting, implementation intentions ADHD, motivation to action ADHD"
+      ogTitle="How to Make ADHD Motivation Useful (Before It Disappears)"
+      ogDescription="Motivation is worthless if it doesn&apos;t create clarity. Discover how to spend ADHD motivation on planning future behaviors so clarity carries you when motivation is gone."
+      heading="How to Make Your ADHD Motivation Actually Useful"
+      category="Productivity & Focus"
+      date="Feb. 27, 2025"
+      datePublished="2025-02-27"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fGXyhQpTXhpjFeaI.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -259,14 +227,14 @@ const MakeMotivationUsefulBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Helps Capture and Structure Motivation</h2>
+              <h2 className="blog-subheader">How Romi Helps Capture and Structure Motivation</h2>
               <p className="blog-body">
                 Here&apos;s the challenge for ADHD brains: this planning work requires executive function. The very thing ADHD impairs. So when motivation strikes, you might not have the cognitive resources to do the clarity work properly.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This is where **Claudia by Neuro** becomes invaluable. She helps you:
+                This is where <strong>Romi</strong> becomes invaluable. She helps you:
               </p>
               <br />
               <br />
@@ -312,18 +280,15 @@ const MakeMotivationUsefulBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to convert motivation into clarity that lasts?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—designed to help ADHD brains capture motivational surges and structure them into concrete, executable plans. Stop wasting motivation on impulses. Start building clarity that carries you forward. Make your motivation actually useful.
+                  <strong>Ready to convert motivation into clarity that lasts?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—designed to help ADHD brains capture motivational surges and structure them into concrete, executable plans. Stop wasting motivation on impulses. Start building clarity that carries you forward. Make your motivation actually useful.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

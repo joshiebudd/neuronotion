@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const GoldilocksZoneRewriteBlog = () => {
   return (
-    <>
-      <Head>
-        <title>The ADHD Goldilocks Zone: Finding Your Perfect Balance | Neuro Notion</title>
-        <meta name="description" content="Discover the ADHD Goldilocks Zone—the perfect balance between structure and freedom. Learn why rigid schedules fail and how to create sustainable productivity." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/the-adhd-goldilocks-zone-rewrite" />
-        <meta property="og:title" content="The ADHD Goldilocks Zone: Structure vs Freedom" />
-        <meta property="og:description" content="Too much structure causes burnout. Too much freedom causes paralysis. Find your ADHD Goldilocks Zone—just right for your brain." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/the-adhd-goldilocks-zone-rewrite" />
-        <meta name="keywords" content="ADHD productivity, ADHD organization, sustainable ADHD systems, ADHD structure, ADHD flexibility" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD productivity expert"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-01" title="February 1st, 2025">Feb. 1, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">The ADHD Goldilocks Zone: Finding the Perfect Balance of Structure and Freedom</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="The ADHD Goldilocks Zone: Finding Your Perfect Balance | Romi"
+      description="Discover the ADHD Goldilocks Zone—the perfect balance between structure and freedom. Learn why rigid schedules fail and how to create sustainable productivity."
+      slug="the-adhd-goldilocks-zone"
+      keywords="ADHD productivity, ADHD organization, sustainable ADHD systems, ADHD structure, ADHD flexibility"
+      ogTitle="The ADHD Goldilocks Zone: Structure vs Freedom"
+      ogDescription="Too much structure causes burnout. Too much freedom causes paralysis. Find your ADHD Goldilocks Zone—just right for your brain."
+      heading="The ADHD Goldilocks Zone: Finding the Perfect Balance of Structure and Freedom"
+      category="Mental Health"
+      date="Feb. 1, 2025"
+      datePublished="2025-02-01"
+      readingTime="8 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/juoQygcofodGdLMN.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section - Clear and valuable */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -66,7 +37,7 @@ const GoldilocksZoneRewriteBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is not about forcing your brain to conform to a rigid schedule; it&apos;s about creating an environment where your brain can thrive. This is the core philosophy behind **Claudia by Neuro**—providing the necessary structure without the suffocating rigidity that makes ADHD brains rebel.
+                This is not about forcing your brain to conform to a rigid schedule; it&apos;s about creating an environment where your brain can thrive. This is the core philosophy behind <strong>Romi</strong>—providing the necessary structure without the suffocating rigidity that makes ADHD brains rebel.
               </p>
               <br />
               <br />
@@ -93,12 +64,12 @@ const GoldilocksZoneRewriteBlog = () => {
                       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                           <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Total Freedom</th>
                           <td className="px-6 py-4">Overwhelmed by choice, lack of novelty, and low dopamine. Every decision becomes exhausting.</td>
-                          <td className="px-6 py-4">**Decision Paralysis:** An empty calendar turns into a day of avoidance, scrolling, and self-blame. You end the day having done nothing, feeling worse about yourself.</td>
+                          <td className="px-6 py-4"><strong>Decision Paralysis:</strong> An empty calendar turns into a day of avoidance, scrolling, and self-blame. You end the day having done nothing, feeling worse about yourself.</td>
                       </tr>
                       <tr className="bg-white dark:bg-gray-800">
                           <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Too Much Structure</th>
                           <td className="px-6 py-4">Feeling trapped, rebellion against external control, and high cognitive load from maintaining rigid systems.</td>
-                          <td className="px-6 py-4">**Burnout:** Physical sickness from the pressure of a color-coded, inflexible schedule. You abandon the system within days, reinforcing the belief that you &quot;can&apos;t do systems.&quot;</td>
+                          <td className="px-6 py-4"><strong>Burnout:</strong> Physical sickness from the pressure of a color-coded, inflexible schedule. You abandon the system within days, reinforcing the belief that you &quot;can&apos;t do systems.&quot;</td>
                       </tr>
                   </tbody>
               </table>
@@ -143,9 +114,9 @@ const GoldilocksZoneRewriteBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Creates Your Goldilocks Zone</h2>
+              <h2 className="blog-subheader">How Romi Creates Your Goldilocks Zone</h2>
               <p className="blog-body">
-                **Claudia by Neuro** is specifically designed to help you find and maintain your personal Goldilocks Zone. Traditional productivity tools force you to conform to their structure. Modern ADHD support adapts its structure to match your current capacity and needs.
+                <strong>Romi</strong> is specifically designed to help you find and maintain your personal Goldilocks Zone. Traditional productivity tools force you to conform to their structure. Modern ADHD support adapts its structure to match your current capacity and needs.
               </p>
               <br />
               <br />
@@ -181,7 +152,7 @@ const GoldilocksZoneRewriteBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** helps you discover this sweet spot through data. By tracking what you actually complete, when you complete it, and how you feel afterwards, the system helps you identify patterns. Over time, you develop a deep understanding of your optimal structure-freedom balance.
+                <strong>Romi</strong> helps you discover this sweet spot through data. By tracking what you actually complete, when you complete it, and how you feel afterwards, the system helps you identify patterns. Over time, you develop a deep understanding of your optimal structure-freedom balance.
               </p>
               <br />
               <br />
@@ -208,18 +179,15 @@ const GoldilocksZoneRewriteBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to find your perfect balance?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that adapts to your capacity, provides structure without rigidity, and helps you discover your personal Goldilocks Zone. Stop forcing yourself into systems that don&apos;t fit. Start working with your brain, not against it.
+                  <strong>Ready to find your perfect balance?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that adapts to your capacity, provides structure without rigidity, and helps you discover your personal Goldilocks Zone. Stop forcing yourself into systems that don&apos;t fit. Start working with your brain, not against it.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

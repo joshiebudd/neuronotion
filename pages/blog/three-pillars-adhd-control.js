@@ -1,55 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ThreePillarsBlog = () => {
   return (
-    <>
-      <Head>
-        <title>The Three Pillars of ADHD Control: Sleep, Diet, and Exercise | Neuro Notion</title>
-        <meta name="description" content="ADHD isn&apos;t just about focus—it&apos;s about control. Discover why sleep, diet, and exercise are the foundation for managing ADHD symptoms effectively." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/three-pillars-adhd-control" />
-        <meta property="og:title" content="Master These 3 Things to Take Control of Your ADHD" />
-        <meta property="og:description" content="Before trying every productivity hack, master the fundamentals: sleep, diet, and exercise. They control 80% of your ADHD struggles." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/three-pillars-adhd-control" />
-        <meta name="keywords" content="ADHD control, ADHD sleep, ADHD diet, ADHD exercise, managing ADHD symptoms, ADHD lifestyle changes, ADHD foundations" />
-        <meta name="author" content="Josh Budd" />
-        <meta name="publish-date" content="2025-02-19" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD lifestyle expert"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-19" title="February 19th, 2025">Feb. 19, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">The Three Pillars of ADHD Control: Sleep, Diet, and Exercise</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="The Three Pillars of ADHD Control: Sleep, Diet, and Exercise | Romi"
+      description="ADHD isn&apos;t just about focus—it&apos;s about control. Discover why sleep, diet, and exercise are the foundation for managing ADHD symptoms effectively."
+      slug="three-pillars-adhd-control"
+      keywords="ADHD control, ADHD sleep, ADHD diet, ADHD exercise, managing ADHD symptoms, ADHD lifestyle changes, ADHD foundations"
+      ogTitle="Master These 3 Things to Take Control of Your ADHD"
+      ogDescription="Before trying every productivity hack, master the fundamentals: sleep, diet, and exercise. They control 80% of your ADHD struggles."
+      heading="The Three Pillars of ADHD Control: Sleep, Diet, and Exercise"
+      category="Understanding ADHD"
+      date="Feb. 19, 2025"
+      datePublished="2025-02-19"
+      readingTime="10 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/ZBzjTRaDqDchxuLR.jpg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -277,9 +246,9 @@ const ThreePillarsBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Supports the Three Pillars</h2>
+              <h2 className="blog-subheader">How Romi Supports the Three Pillars</h2>
               <p className="blog-body">
-                This is exactly why **Claudia by Neuro** is designed the way it is. It&apos;s not just another task manager. It&apos;s a system built around supporting the foundations that make everything else possible.
+                This is exactly why <strong>Romi</strong> is designed the way it is. It&apos;s not just another task manager. It&apos;s a system built around supporting the foundations that make everything else possible.
               </p>
               <br />
               <br />
@@ -324,18 +293,15 @@ const ThreePillarsBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to build systems that actually support the three pillars?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—designed to help you master sleep, diet, and exercise without relying on willpower. Get the foundation right. Control follows.
+                  <strong>Ready to build systems that actually support the three pillars?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—designed to help you master sleep, diet, and exercise without relying on willpower. Get the foundation right. Control follows.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

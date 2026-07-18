@@ -1,51 +1,23 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const AdhdTooEmotionalBlog = () => {
   return (
-    <>
-      <Head>
-        <title>ADHD Emotional Dysregulation: Why You&apos;re Not &quot;Too Emotional&quot; | Neuro Notion</title>
-        <meta name="description" content="Discover why ADHD causes intense emotional responses. Learn the neuroscience behind emotional dysregulation and practical strategies to manage overwhelming feelings." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-and-being-too-emotional" />
-        <meta property="og:title" content="ADHD and Emotional Dysregulation: You&apos;re Not Too Emotional" />
-        <meta property="og:description" content="Your emotional intensity isn&apos;t a personality flaw—it&apos;s neurology. Understand why ADHD brains feel emotions more intensely." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-and-being-too-emotional" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD advocate"
-                    width={64}
-                    height={64}
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-01-25" title="January 25th, 2025">Jan. 25, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">ADHD and Being Too Emotional: Understanding Emotional Dysregulation</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="ADHD Emotional Dysregulation: Why You&apos;re Not &quot;Too Emotional&quot; | Romi"
+      description="Discover why ADHD causes intense emotional responses. Learn the neuroscience behind emotional dysregulation and practical strategies to manage overwhelming feelings."
+      slug="adhd-and-being-too-emotional"
+      ogTitle="ADHD and Emotional Dysregulation: You&apos;re Not Too Emotional"
+      ogDescription="Your emotional intensity isn&apos;t a personality flaw—it&apos;s neurology. Understand why ADHD brains feel emotions more intensely."
+      heading="ADHD and Being Too Emotional: Understanding Emotional Dysregulation"
+      category="Mental Health"
+      date="Jan. 25, 2025"
+      datePublished="2025-01-25"
+      readingTime="7 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/riwkbOhGxUQuCLUZ.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -96,7 +68,7 @@ const AdhdTooEmotionalBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This neurological reality means that traditional advice like &quot;just calm down&quot; or &quot;count to ten&quot; is about as useful as telling someone with a broken leg to &quot;just walk it off.&quot; What you need isn&apos;t more willpower—it&apos;s better support systems. This is precisely what **Claudia by Neuro** provides: external structure that compensates for the internal regulation your brain struggles with.
+                This neurological reality means that traditional advice like &quot;just calm down&quot; or &quot;count to ten&quot; is about as useful as telling someone with a broken leg to &quot;just walk it off.&quot; What you need isn&apos;t more willpower—it&apos;s better support systems. This is precisely what <strong>Romi</strong> provides: external structure that compensates for the internal regulation your brain struggles with.
               </p>
               <br />
               <br />
@@ -118,17 +90,17 @@ const AdhdTooEmotionalBlog = () => {
               <br />
               <h2 className="blog-subheader">External Support: Your Emotional Regulator</h2>
               <p className="blog-body">
-                The key to managing emotional dysregulation is to create an external system that provides the pause and think function your brain struggles with. This is the power of **Claudia by Neuro**—it helps you build the tools, routines, and insights that let your brain work with you, not against you.
+                The key to managing emotional dysregulation is to create an external system that provides the pause and think function your brain struggles with. This is the power of <strong>Romi</strong>—it helps you build the tools, routines, and insights that let your brain work with you, not against you.
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>**The External Pause Button:** When you feel the emotional fuse lighting, structured external support can act as a pause. Instead of spiraling, you can quickly log your feelings, triggers, or the situation. This simple act of externalizing the emotion provides the necessary space for your prefrontal cortex to catch up. The act of putting feelings into words activates different neural pathways, creating distance between you and the overwhelming emotion.</li>
-                <li>**Trigger Identification and Pattern Recognition:** Emotional dysregulation often feels random, but it follows patterns. Smart ADHD tools can track and analyze your emotional logs, helping you identify common triggers like hunger, fatigue, sensory overload, or specific social situations. By seeing these patterns clearly, you can implement pre-emptive strategies, moving from reactive to proactive. For example, if data shows you consistently have emotional episodes around 3 PM, you can schedule breaks, snacks, or regulation activities before that time.</li>
-                <li>**The Environmental Regulator:** Emotional regulation often starts with environmental regulation. External support can help you build and maintain your ideal environment. Reminders to take a pre-emptive exit from a stimulating situation, adjust your sensory input, or simply take a scheduled, guilt-free rest break before burnout hits. Prompts to put on headphones in noisy environments, dim the lights when you&apos;re overstimulated, or step outside for fresh air before irritability turns into anger.</li>
-                <li>**Building a Regulation Toolkit:** Modern ADHD tools help you create and maintain a personalized set of regulation strategies. Deep breathing, progressive muscle relaxation, bilateral stimulation, grounding techniques—whatever works for your ADHD brain. When you&apos;re in the midst of dysregulation, accessing these strategies is difficult. Having them organized and readily available reduces the cognitive load of figuring out what to do in a crisis.</li>
-                <li>**Harnessing Emotional Intensity:** The same emotional intensity that causes chaos can also heighten your empathy and creativity. Smart support helps you channel this energy. Instead of letting it lead to a meltdown, you can quickly capture the intense feeling and redirect it into a productive outlet, such as a creative task or a problem-solving session.</li>
-                <li>**Medication Reminder Support:** For those using medication to manage ADHD symptoms, consistent medication adherence is crucial for emotional regulation. Gentle reminders help ensure you maintain the neurochemical support that makes emotional regulation more accessible. Missing a dose can trigger a cascade of dysregulation.</li>
+                <li><strong>The External Pause Button:</strong> When you feel the emotional fuse lighting, structured external support can act as a pause. Instead of spiraling, you can quickly log your feelings, triggers, or the situation. This simple act of externalizing the emotion provides the necessary space for your prefrontal cortex to catch up. The act of putting feelings into words activates different neural pathways, creating distance between you and the overwhelming emotion.</li>
+                <li><strong>Trigger Identification and Pattern Recognition:</strong> Emotional dysregulation often feels random, but it follows patterns. Smart ADHD tools can track and analyze your emotional logs, helping you identify common triggers like hunger, fatigue, sensory overload, or specific social situations. By seeing these patterns clearly, you can implement pre-emptive strategies, moving from reactive to proactive. For example, if data shows you consistently have emotional episodes around 3 PM, you can schedule breaks, snacks, or regulation activities before that time.</li>
+                <li><strong>The Environmental Regulator:</strong> Emotional regulation often starts with environmental regulation. External support can help you build and maintain your ideal environment. Reminders to take a pre-emptive exit from a stimulating situation, adjust your sensory input, or simply take a scheduled, guilt-free rest break before burnout hits. Prompts to put on headphones in noisy environments, dim the lights when you&apos;re overstimulated, or step outside for fresh air before irritability turns into anger.</li>
+                <li><strong>Building a Regulation Toolkit:</strong> Modern ADHD tools help you create and maintain a personalized set of regulation strategies. Deep breathing, progressive muscle relaxation, bilateral stimulation, grounding techniques—whatever works for your ADHD brain. When you&apos;re in the midst of dysregulation, accessing these strategies is difficult. Having them organized and readily available reduces the cognitive load of figuring out what to do in a crisis.</li>
+                <li><strong>Harnessing Emotional Intensity:</strong> The same emotional intensity that causes chaos can also heighten your empathy and creativity. Smart support helps you channel this energy. Instead of letting it lead to a meltdown, you can quickly capture the intense feeling and redirect it into a productive outlet, such as a creative task or a problem-solving session.</li>
+                <li><strong>Medication Reminder Support:</strong> For those using medication to manage ADHD symptoms, consistent medication adherence is crucial for emotional regulation. Gentle reminders help ensure you maintain the neurochemical support that makes emotional regulation more accessible. Missing a dose can trigger a cascade of dysregulation.</li>
               </ul>
               <br />
               <br />
@@ -149,7 +121,7 @@ const AdhdTooEmotionalBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You are not too emotional. You have a powerful, intense brain that needs the right support system. With **Claudia by Neuro**, you gain a non-judgemental partner that helps you understand, manage, and even harness your emotional intensity. Your emotions don&apos;t have to be your enemy—with the right tools, they can become a source of deep connection, creative power, and authentic living.
+                You are not too emotional. You have a powerful, intense brain that needs the right support system. With <strong>Romi</strong>, you gain a non-judgemental partner that helps you understand, manage, and even harness your emotional intensity. Your emotions don&apos;t have to be your enemy—with the right tools, they can become a source of deep connection, creative power, and authentic living.
               </p>
               <br />
               <br />
@@ -165,18 +137,15 @@ const AdhdTooEmotionalBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to stop feeling like your emotions control you?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that reduces cognitive load and provides the external regulation support your brain needs. Your emotional intensity is a strength, not a flaw.
+                  <strong>Ready to stop feeling like your emotions control you?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that reduces cognitive load and provides the external regulation support your brain needs. Your emotional intensity is a strength, not a flaw.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

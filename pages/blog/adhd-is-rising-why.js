@@ -1,55 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ADHDRisingBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Why Is ADHD on the Rise? The Modern World Is Making It Worse | Neuro Notion</title>
-        <meta name="description" content="ADHD diagnoses have increased by over 1 million since 2016. Discover why the modern world amplifies ADHD symptoms and what you can do to regain control." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/adhd-is-rising-why" />
-        <meta property="og:title" content="Why ADHD Is Skyrocketing: The Modern World Effect" />
-        <meta property="og:description" content="7 million U.S. children now have ADHD. Learn why modern life is making symptoms worse and how to fight back." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/adhd-is-rising-why" />
-        <meta name="keywords" content="ADHD rising, ADHD statistics 2024, why is ADHD increasing, modern world ADHD, ADHD overstimulation, digital media ADHD" />
-        <meta name="author" content="Josh Budd" />
-        <meta name="publish-date" content="2025-02-17" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD specialist"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-17" title="February 17th, 2025">Feb. 17, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Why Is ADHD on the Rise? The Modern World Is Making Your Symptoms Worse</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Why Is ADHD on the Rise? The Modern World Is Making It Worse | Romi"
+      description="ADHD diagnoses have increased by over 1 million since 2016. Discover why the modern world amplifies ADHD symptoms and what you can do to regain control."
+      slug="adhd-is-rising-why"
+      keywords="ADHD rising, ADHD statistics 2024, why is ADHD increasing, modern world ADHD, ADHD overstimulation, digital media ADHD"
+      ogTitle="Why ADHD Is Skyrocketing: The Modern World Effect"
+      ogDescription="7 million U.S. children now have ADHD. Learn why modern life is making symptoms worse and how to fight back."
+      heading="Why Is ADHD on the Rise? The Modern World Is Making Your Symptoms Worse"
+      category="Understanding ADHD"
+      date="Feb. 17, 2025"
+      datePublished="2025-02-17"
+      readingTime="10 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/PyHzaRRBUwMYKNFb.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -218,17 +187,17 @@ const ADHDRisingBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Cuts Through the Chaos</h2>
+              <h2 className="blog-subheader">How Romi Cuts Through the Chaos</h2>
               <p className="blog-body">
-                This is exactly why **Claudia by Neuro** exists. Not as another productivity app that you&apos;ll use for a week and forget about. But as a complete system designed specifically for ADHD brains living in the modern world&apos;s chaos. Here&apos;s what makes it different:
+                This is exactly why <strong>Romi</strong> exists. Not as another productivity app that you&apos;ll use for a week and forget about. But as a complete system designed specifically for ADHD brains living in the modern world&apos;s chaos. Here&apos;s what makes it different:
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body space-y-3">
                 <li><strong>It Reduces Noise:</strong> Instead of adding more complexity to your life, it simplifies everything into clear, actionable steps. No overwhelming lists. No complicated processes. Just what you need to do next.</li>
-                <li><strong>It Provides External Structure:</strong> Your ADHD brain can&apos;t generate structure internally. Claudia provides it externally—reminders, scaffolding, and support that work even when your brain won&apos;t.</li>
+                <li><strong>It Provides External Structure:</strong> Your ADHD brain can&apos;t generate structure internally. Romi provides it externally—reminders, scaffolding, and support that work even when your brain won&apos;t.</li>
                 <li><strong>It Works With Your Dopamine System:</strong> Tasks are broken into micro-steps that give you quick wins and dopamine hits. Your brain gets the reward it craves while you actually get things done.</li>
-                <li><strong>It&apos;s Stupidly Simple:</strong> Complexity kills ADHD productivity. Claudia is designed to be so simple that you can use it even when your brain feels like scrambled eggs.</li>
+                <li><strong>It&apos;s Stupidly Simple:</strong> Complexity kills ADHD productivity. Romi is designed to be so simple that you can use it even when your brain feels like scrambled eggs.</li>
                 <li><strong>It Adapts to Your Capacity:</strong> Good days? Great, tackle more. Bad days? That&apos;s fine too—the system adjusts and keeps you moving forward anyway.</li>
               </ul>
               <br />
@@ -276,7 +245,7 @@ const ADHDRisingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                **Claudia by Neuro** isn&apos;t magic. It won&apos;t cure your ADHD. But it will give you the external structure, simplified systems, and dopamine-friendly approach you need to actually function in this chaotic world. It&apos;s designed for ADHD brains by someone who understands ADHD because I live it every single day.
+                <strong>Romi</strong> isn&apos;t magic. It won&apos;t cure your ADHD. But it will give you the external structure, simplified systems, and dopamine-friendly approach you need to actually function in this chaotic world. It&apos;s designed for ADHD brains by someone who understands ADHD because I live it every single day.
               </p>
               <br />
               <br />
@@ -287,18 +256,15 @@ const ADHDRisingBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop fighting the modern world and start working with your brain?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD system designed for the chaos of modern life. Less noise. More structure. Actually built for your brain.
+                  <strong>Ready to stop fighting the modern world and start working with your brain?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD system designed for the chaos of modern life. Less noise. More structure. Actually built for your brain.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

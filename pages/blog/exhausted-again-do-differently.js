@@ -1,53 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const ExhaustedAgainBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Exhausted Again? Why ADHD Brains Need to Do Differently, Not Less | Neuro Notion</title>
-        <meta name="description" content="ADHD burnout isn&apos;t about doing too much—it&apos;s about doing things in ways that fight your brain. Learn how to do differently for sustainable energy." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/exhausted-again-do-differently" />
-        <meta property="og:title" content="Exhausted Again? Do Differently, Not Less" />
-        <meta property="og:description" content="Rest isn&apos;t enough for ADHD burnout. Discover why you need to change HOW you work, not how much you work." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/exhausted-again-do-differently" />
-        <meta name="keywords" content="ADHD burnout, ADHD exhaustion, ADHD energy management, sustainable ADHD productivity, ADHD nervous system" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD burnout recovery specialist"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-05" title="February 5th, 2025">Feb. 5, 2025</time>
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Exhausted Again? Why Your ADHD Brain Needs to Do Differently, Not Less</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Exhausted Again? Why ADHD Brains Need to Do Differently, Not Less | Romi"
+      description="ADHD burnout isn&apos;t about doing too much—it&apos;s about doing things in ways that fight your brain. Learn how to do differently for sustainable energy."
+      slug="exhausted-again-do-differently"
+      keywords="ADHD burnout, ADHD exhaustion, ADHD energy management, sustainable ADHD productivity, ADHD nervous system"
+      ogTitle="Exhausted Again? Do Differently, Not Less"
+      ogDescription="Rest isn&apos;t enough for ADHD burnout. Discover why you need to change HOW you work, not how much you work."
+      heading="Exhausted Again? Why Your ADHD Brain Needs to Do Differently, Not Less"
+      category="Productivity & Focus"
+      date="Feb. 5, 2025"
+      datePublished="2025-02-05"
+      readingTime="8 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/LltYgvQAcoKhzxqs.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section - Paradigm-shifting and clear */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -71,7 +42,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why the mantra needs to shift from &quot;How do I do less?&quot; to &quot;How can I do this in a way that feels safe and sustainable for my body and mind?&quot; This subtle but profound reframe is the key to long-term energy and productivity, and it&apos;s a philosophy perfectly supported by **Claudia by Neuro**.
+                This is why the mantra needs to shift from &quot;How do I do less?&quot; to &quot;How can I do this in a way that feels safe and sustainable for my body and mind?&quot; This subtle but profound reframe is the key to long-term energy and productivity, and it&apos;s a philosophy perfectly supported by <strong>Romi</strong>.
               </p>
               <br />
               <br />
@@ -152,7 +123,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-4">
-                <li><strong>Energy-Type Matching, Not Time-Blocking:</strong> Stop scheduling by the clock alone. Your brain doesn&apos;t care that it&apos;s 2 PM; it cares whether you have the right type of energy for the task. High-focus analytical work requires different energy than creative brainstorming or administrative tasks. Match the task to your current energy type, not your calendar. **Claudia by Neuro** can help you identify your energy patterns and suggest task types accordingly.</li>
+                <li><strong>Energy-Type Matching, Not Time-Blocking:</strong> Stop scheduling by the clock alone. Your brain doesn&apos;t care that it&apos;s 2 PM; it cares whether you have the right type of energy for the task. High-focus analytical work requires different energy than creative brainstorming or administrative tasks. Match the task to your current energy type, not your calendar. <strong>Romi</strong> can help you identify your energy patterns and suggest task types accordingly.</li>
                 <li><strong>Variety as Strategy, Not Distraction:</strong> Your ADHD brain needs novelty to maintain dopamine. Instead of fighting this by forcing yourself through monotonous work, embrace it by deliberately switching between different types of tasks. Variety isn&apos;t a weakness to overcome—it&apos;s a strength to harness. Build task variety into your system rather than seeing it as a failure of focus.</li>
                 <li><strong>Externalizing Executive Function:</strong> Stop trying to hold everything in your head. Your working memory is limited, and constantly trying to remember, organize, and prioritize everything is exhausting. Let external systems handle this cognitive load. When you&apos;re not spending mental energy on &quot;Am I forgetting something?&quot; you have that energy available for actual work.</li>
                 <li><strong>Permission to Pivot:</strong> Give yourself explicit permission to change tasks when you hit a wall. Neurotypical productivity advice says &quot;push through.&quot; For ADHD brains, pushing through often means burning out. Pivoting to a different task preserves your energy and maintains momentum rather than forcing you into exhausted paralysis.</li>
@@ -166,14 +137,14 @@ const ExhaustedAgainBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">How Claudia by Neuro Enables Doing Differently</h2>
+              <h2 className="blog-subheader">How Romi Enables Doing Differently</h2>
               <p className="blog-body">
                 The challenge with doing differently is that it requires significant executive function to implement and maintain. You need to track your energy patterns, remember to switch tasks, externalize your to-do list, and manage all these new strategies simultaneously. For an ADHD brain, this can feel like trying to solve burnout by adding more cognitive load.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This is where **Claudia by Neuro** becomes transformative. It handles the meta-work of doing differently so you can focus on actual work:
+                This is where <strong>Romi</strong> becomes transformative. It handles the meta-work of doing differently so you can focus on actual work:
               </p>
               <br />
               <br />
@@ -214,7 +185,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This isn&apos;t about lowering standards or accepting less from yourself. It&apos;s about recognizing that your ADHD brain is capable of incredible things when given the right conditions. **Claudia by Neuro** helps create those conditions, making sustainable productivity possible rather than perpetually aspirational.
+                This isn&apos;t about lowering standards or accepting less from yourself. It&apos;s about recognizing that your ADHD brain is capable of incredible things when given the right conditions. <strong>Romi</strong> helps create those conditions, making sustainable productivity possible rather than perpetually aspirational.
               </p>
               <br />
               <br />
@@ -225,18 +196,15 @@ const ExhaustedAgainBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop the exhaustion cycle?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that helps you do differently, not less. Stop fighting your neurology. Start working with it. Sustainable energy is possible when you honor how your brain actually works.
+                  <strong>Ready to stop the exhaustion cycle?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that helps you do differently, not less. Stop fighting your neurology. Start working with it. Sustainable energy is possible when you honor how your brain actually works.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 

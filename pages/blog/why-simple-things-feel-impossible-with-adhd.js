@@ -1,56 +1,24 @@
 import React from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
-import NEWClaudiaLPHeader from "../../components/NEWClaudiaLPHeader";
+import { BlogArticle } from '../../src/romi';
 
 const WhySimpleThingsImpossibleBlog = () => {
   return (
-    <>
-      <Head>
-        <title>Why Do Simple Things Feel Impossible with ADHD? The Gold Dust Theory | Neuro Notion</title>
-        <meta name="description" content="Understand why simple tasks drain all your energy with ADHD. Learn the Gold Dust Theory of mental energy and discover why everything feels like too much effort." />
-        <link rel="canonical" href="https://www.neuro-notion.com/blog/why-simple-things-feel-impossible-with-adhd" />
-        <meta property="og:title" content="Why Simple Things Feel Impossible with ADHD (Gold Dust Theory)" />
-        <meta property="og:description" content="So much to do, so little energy. Discover why ADHD makes simple tasks drain you completely and what you can do about it." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.neuro-notion.com/blog/why-simple-things-feel-impossible-with-adhd" />
-        <meta name="keywords" content="ADHD executive function, ADHD mental energy, why ADHD is exhausting, ADHD and simple tasks, ADHD gold dust theory" />
-      </Head>
-
-      <main className="pt-40 pb-16 lg:pb-24 bg-blue-50 antialiased">
-        <div className="flex justify-between px-4 mx-auto max-w-screen-xl">
-          <NEWClaudiaLPHeader />
-          <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue font-baloo">
-            <header className="mb-4 lg:mb-6 not-format">
-              <address className="flex items-center mb-6 not-italic">
-                <div className="inline-flex items-center mr-3 text-sm text-gray-900">
-                  <Image
-                    className="mr-4 w-16 h-16 rounded-full"
-                    src="https://NeuroNotionPullZonw.b-cdn.net/headshot%20circle.jpg"
-                    alt="Josh Budd, Founder of Neuro Notion and ADHD executive function expert"
-                    width={64}
-                    height={64}
-                    priority
-                  />
-                  <div>
-                    <a href="#" rel="author" className="text-xl font-bold text-gray-900">Josh Budd</a>
-                    <p className="text-base text-gray-900">
-                      Founder @ <b>Neuro Notion</b>
-                    </p>
-                    <p className="text-base text-gray-900">
-                      <time pubdate dateTime="2025-02-21" title="February 21st, 2025">Feb. 21, 2025</time>
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      Reading time: 6 minutes
-                    </p>
-                  </div>
-                </div>
-              </address>
-              <h1 className="blog-header mb-4 lg:mb-6">Why Do &quot;Simple&quot; Things Feel Impossible with ADHD?</h1>
-            </header>
-
-            <div className="blog-content">
+    <BlogArticle
+      title="Why Do Simple Things Feel Impossible with ADHD? The Gold Dust Theory | Romi"
+      description="Understand why simple tasks drain all your energy with ADHD. Learn the Gold Dust Theory of mental energy and discover why everything feels like too much effort."
+      slug="why-simple-things-feel-impossible-with-adhd"
+      keywords="ADHD executive function, ADHD mental energy, why ADHD is exhausting, ADHD and simple tasks, ADHD gold dust theory"
+      ogTitle="Why Simple Things Feel Impossible with ADHD (Gold Dust Theory)"
+      ogDescription="So much to do, so little energy. Discover why ADHD makes simple tasks drain you completely and what you can do about it."
+      heading="Why Do &quot;Simple&quot; Things Feel Impossible with ADHD?"
+      category="Productivity & Focus"
+      date="Feb. 21, 2025"
+      datePublished="2025-02-21"
+      readingTime="6 min read"
+      heroImage="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/jLhDjJNxGODgXDBr.jpeg"
+    >
+      <div className="blog-content">
               {/* TL;DR Section */}
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
@@ -234,7 +202,7 @@ const WhySimpleThingsImpossibleBlog = () => {
               <br />
               <h2 className="blog-subheader">How External Support Preserves Your Gold Dust</h2>
               <p className="blog-body">
-                Here&apos;s the game-changer: **Claudia by Neuro** uses HER mental gold dust instead of yours.
+                Here&apos;s the game-changer: <strong>Romi</strong> uses HER mental gold dust instead of yours.
               </p>
               <br />
               <br />
@@ -308,18 +276,15 @@ const WhySimpleThingsImpossibleBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to preserve your mental gold dust?</strong> <a href="https://www.neuro-notion.com" className="text-blue-600 hover:underline font-semibold">Try Claudia by Neuro</a>—the ADHD assistant that uses her processing power instead of your limited mental energy. She breaks down tasks, helps you start, and supports you all the way through. Stop wasting gold dust on the small stuff. Start saving it for what you love.
+                  <strong>Ready to preserve your mental gold dust?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that uses her processing power instead of your limited mental energy. She breaks down tasks, helps you start, and supports you all the way through. Stop wasting gold dust on the small stuff. Start saving it for what you love.
                 </p>
               </div>
               <br />
               <p className="blog-body italic">
-                By Josh Budd | Founder @ <b>Neuro Notion</b>
+                By Josh Budd | Founder @ <b>Romi</b>
               </p>
             </div>
-          </article>
-        </div>
-      </main>
-    </>
+    </BlogArticle>
   );
 };
 
