@@ -144,16 +144,6 @@ export function BlogArticle({
                   </div>
                 </div>
               </div>
-
-              {heroImage && (
-                <div className="mx-auto mt-10 max-w-[920px]">
-                  <img
-                    src={heroImage}
-                    alt={heading || ""}
-                    className="h-auto w-full rounded-[var(--romi-radius-2xl)] object-cover shadow-[var(--romi-shadow-lg)]"
-                  />
-                </div>
-              )}
             </Container>
           </section>
 
