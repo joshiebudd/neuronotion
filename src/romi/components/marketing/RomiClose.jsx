@@ -36,7 +36,7 @@ const footerCols = [
       // Placeholder pages aren't live yet, so these show but don't link.
       { label: "For Healthcare", href: "/romiforhealthcare", disabled: true },
       { label: "For Corporates", href: "/corporates" },
-      { label: "For ADHD Clinics", href: "/romiforclinics" },
+      // { label: "For ADHD Clinics", href: "/romiforclinics" }, // unlinked from footer (page still reachable by direct URL)
       { label: "For Coaches", href: "/romiforcoaches", disabled: true },
     ],
   },

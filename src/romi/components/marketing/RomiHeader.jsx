@@ -10,7 +10,7 @@ const navItems = [
   { label: "Team", target: "team", href: "/#team" },
   { label: "Pricing", target: "pricing", href: "/#pricing" },
   { label: "For work", href: "/corporates" },
-  { label: "For clinics", href: "/romiforclinics" },
+  // { label: "For clinics", href: "/romiforclinics" }, // unlinked from nav (page still reachable by direct URL)
   // { label: "For healthcare", href: "/romiforhealthcare" }, // hidden for now
 ];
 

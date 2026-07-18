@@ -23,7 +23,7 @@ const stats = [
     mobileLabel: "improvement in execution and organisation",
     order: "order-1 lg:order-none",
   },
-  { value: "32%", label: "reduction in ADHD symptoms while using Romi", order: "order-4 lg:order-none" },
+  { value: "32%", label: "improvement in overall wellbeing", order: "order-4 lg:order-none" },
   { value: "33%", label: "increase in positive mood & regulation", order: "order-5 lg:order-none" },
 ];
 
