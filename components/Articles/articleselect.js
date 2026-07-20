@@ -292,6 +292,13 @@ const ArticleSelect = () => {
                 image="https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/VTKaigXqhtqEKEPr.jpeg"
                 slug="adhd-idea-overwhelm-capture-system"
               />
+              <BlogCard
+                date="Jul 20, 2026"
+                CardTitle="Is ADHD a Superpower? The Science of ADHD Strengths (and How to Actually Use Them)"
+                CardDescription="Is ADHD really a superpower? The science of ADHD strengths, high context thinking, and how to build the environment that unlocks them."
+                image="https://images.pexels.com/photos/17484975/pexels-photo-17484975.png?auto=compress&cs=tinysrgb&w=1200"
+                slug="is-adhd-a-superpower"
+              />
             </div>
           </Container>
         </section>
