@@ -299,6 +299,13 @@ const ArticleSelect = () => {
                 image="https://images.pexels.com/photos/17484975/pexels-photo-17484975.png?auto=compress&cs=tinysrgb&w=1200"
                 slug="is-adhd-a-superpower"
               />
+              <BlogCard
+                date="Jul 22, 2026"
+                CardTitle="ADHD and Entrepreneurship: Why the Early Startup Phase Feels Like Home"
+                CardDescription="Why the scrappy 0 to 1 phase of a startup feels electric for the ADHD brain, why scaling gets harder, and how to keep thriving as you grow."
+                image="https://images.pexels.com/photos/669963/pexels-photo-669963.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                slug="adhd-and-entrepreneurship"
+              />
             </div>
           </Container>
         </section>
