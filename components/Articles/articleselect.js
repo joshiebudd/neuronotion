@@ -306,6 +306,13 @@ const ArticleSelect = () => {
                 image="https://images.pexels.com/photos/669963/pexels-photo-669963.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 slug="adhd-and-entrepreneurship"
               />
+              <BlogCard
+                date="Jul 23, 2026"
+                CardTitle="What to Do While Waiting for an ADHD Assessment"
+                CardDescription="The NHS ADHD waiting list is one of the longest in the health service. Here is how to cope, function, and feel better before a diagnosis arrives."
+                image="https://images.pexels.com/photos/4397907/pexels-photo-4397907.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                slug="while-waiting-for-adhd-assessment"
+              />
             </div>
           </Container>
         </section>
