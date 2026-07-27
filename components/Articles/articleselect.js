@@ -313,6 +313,13 @@ const ArticleSelect = () => {
                 image="https://images.pexels.com/photos/4397907/pexels-photo-4397907.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 slug="while-waiting-for-adhd-assessment"
               />
+              <BlogCard
+                date="Jul 27, 2026"
+                CardTitle="How to Support Neurodivergent Employees at Work (Even Before a Diagnosis)"
+                CardDescription="Nearly a million people are stuck on the ADHD assessment waiting list, and plenty are at your desks right now. Here are the low-cost ways to support them today."
+                image="https://images.pexels.com/photos/31679274/pexels-photo-31679274.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                slug="how-to-support-neurodivergent-employees-at-work"
+              />
             </div>
           </Container>
         </section>
