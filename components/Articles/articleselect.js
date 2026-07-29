@@ -320,6 +320,13 @@ const ArticleSelect = () => {
                 image="https://images.pexels.com/photos/31679274/pexels-photo-31679274.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 slug="how-to-support-neurodivergent-employees-at-work"
               />
+              <BlogCard
+                date="Jul 29, 2026"
+                CardTitle="Are Neurodivergent Employees a Risk or an Asset? The Real Business Case"
+                CardDescription="Tribunal cases citing neurodivergence have nearly doubled in five years. The headlines say liability, the data says the opposite. Here is the real business case."
+                image="https://images.pexels.com/photos/34703308/pexels-photo-34703308.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                slug="neurodivergent-employees-risk-or-asset"
+              />
             </div>
           </Container>
         </section>
