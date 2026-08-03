@@ -327,6 +327,13 @@ const ArticleSelect = () => {
                 image="https://images.pexels.com/photos/34703308/pexels-photo-34703308.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 slug="neurodivergent-employees-risk-or-asset"
               />
+              <BlogCard
+                date="Aug 3, 2026"
+                CardTitle="Rejection Sensitive Dysphoria and ADHD: Why Rejection Feels Physical"
+                CardDescription="For ADHD brains, rejection can trigger a physical, whole-body reaction. Here is what rejection sensitive dysphoria is, why it happens, and how to loosen its grip."
+                image="https://images.pexels.com/photos/1126375/pexels-photo-1126375.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                slug="rejection-sensitive-dysphoria-adhd"
+              />
             </div>
           </Container>
         </section>
