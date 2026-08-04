@@ -29,6 +29,7 @@ import { FaqItem } from "../src/romi/components/marketing/RomiFaqs";
 import { CLINIC_DISCOVERY_URL } from "../src/romi/components/clinic/clinic-data";
 
 const CDN = "https://NeuroNotionPullZonw.b-cdn.net";
+const CLINIC_VIDEO = `${CDN}/Video%20Demos/Romi%20Clinic%20Demo%20(1).mp4`;
 const gbp = (n) => "£" + n.toLocaleString("en-GB");
 
 // Layered-card band helpers: a band curves over the next; the next tucks under.
@@ -340,8 +341,12 @@ export default function RomiForClinicsPage() {
         </div>
       </section>
 
-      {/* Demo — the same under-construction placeholder used on the landing page. Closes band 1. */}
-      <RomiInAction sectionClassName={`${CURVE} z-[6] bg-[var(--romi-color-bg)] pt-6 pb-24 md:pt-8 md:pb-32`} />
+      {/* Demo — clinic cut of the demo video, same player as the landing. Closes band 1. */}
+      <RomiInAction
+        srcDesktop={CLINIC_VIDEO}
+        srcMobile={CLINIC_VIDEO}
+        sectionClassName={`${CURVE} z-[6] bg-[var(--romi-color-bg)] pt-6 pb-24 md:pt-8 md:pb-32`}
+      />
 
       {/* ============ BAND 2 (deep) — Supported by + Why it works ============ */}
       <section className={`${TUCK} ${CURVE} z-[5] bg-[var(--romi-beige-deep)] pt-24 pb-20 md:pt-32 md:pb-28`}>

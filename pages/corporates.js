@@ -27,6 +27,9 @@ import {
  *   4 deep:  team+mission + awards + testimonials (testimonials curves)
  *   5 light: business case + pricing + security + FAQs + footer
  */
+const CORPORATE_VIDEO =
+  "https://NeuroNotionPullZonw.b-cdn.net/Video%20Demos/Romi_%20Corporate%20Longer%20Demo%20(1).mp4";
+
 export default function RomiForCorporatesPage() {
   return (
     <RomiPage
@@ -46,11 +49,12 @@ export default function RomiForCorporatesPage() {
 
       {/* Band 3 - light */}
       <CorpWhatWeDo />
-      {/* Demo video - own instance so a separate corporate video can be dropped in
-          later (swap posterDesktop / srcDesktop). Same player as the landing. */}
+      {/* Demo video - corporate cut of the demo, same player as the landing. */}
       <RomiInAction
         badgeLabel="See Romi in action"
         badgeCharacter={{ body: 6, expression: "17-blissful" }}
+        srcDesktop={CORPORATE_VIDEO}
+        srcMobile={CORPORATE_VIDEO}
         sectionClassName="relative z-10 bg-[var(--romi-color-bg)] pt-8 pb-24 rounded-b-[40px] shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:pt-10 md:pb-32 md:rounded-b-[64px]"
       />
 

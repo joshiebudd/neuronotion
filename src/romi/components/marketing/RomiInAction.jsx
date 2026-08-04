@@ -5,19 +5,22 @@ import { ClickTooltip } from "../ui/ClickTooltip";
 
 /*
  * "Romi in Action" section.
- * Desktop: full Safari browser chrome wrapping a 16:9 demo video.
- * Mobile: swaps to a phone-frame variant of the same video.
+ * With a real video URL: a clean rounded player card sized to the video's true
+ * aspect ratio. The demos are square (2160x2160), so on desktop the card is
+ * capped at a comfortable width and centred rather than stretched across the
+ * full 1500px rail; on mobile it simply fills the gutter width (square is a
+ * natural fit there). The hero-lockup poster carries over as <video poster>,
+ * letterboxed on the light wash until play.
  *
- * Until the real demo is recorded, each frame shows a POSTER: the Romi hero
- * lockup (two app screens + feature badges) on a light neutral wash, dressed
- * as a paused video player - a frosted centre play button plus, on desktop,
- * a full control bar (scrubber, volume, speed, airplay, fullscreen). When the
- * video lands, drop its URL into videoSrc* and the same poster carries over as
- * the <video poster>.
+ * With no URL (poster mode, kept for draft pages): the original Safari-chrome
+ * frame dressed as a paused player - frosted play button plus fake control bar.
  */
 
-const videoSrcDesktop = null; // TODO: swap in desktop demo video URL
-const videoSrcMobile = null;  // TODO: swap in mobile demo video URL
+// Live demo video (square). Landing uses these defaults; corporate + clinic
+// pass their own URLs via srcDesktop / srcMobile.
+const CDN = "https://NeuroNotionPullZonw.b-cdn.net";
+const videoSrcDesktop = `${CDN}/Video%20Demos/Romi%20Demo%20Standard.mp4`;
+const videoSrcMobile = videoSrcDesktop;
 
 // Upscaled hero composition (3:2, vector + embedded app screens).
 const POSTER_DESKTOP = "/romi/landing/demo/landing-hero-poster.svg";
@@ -136,8 +139,9 @@ function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, po
         poster={poster}
         controls
         playsInline
-        className="w-full"
-        style={{ aspectRatio: aspect, objectFit: "cover", background: POSTER_BG }}
+        preload="metadata"
+        className="block w-full"
+        style={{ aspectRatio: aspect, objectFit: "contain", background: POSTER_BG }}
       />
     );
   }
@@ -170,6 +174,12 @@ export function RomiInAction({
   posterMobile = POSTER_MOBILE,
   srcDesktop = videoSrcDesktop,
   srcMobile = videoSrcMobile,
+  // True ratio of the video files. All three live demos are 2160x2160.
+  aspect = "1 / 1",
+  // Desktop cap for the player card. A square video across the full 1500px
+  // rail would tower past the viewport, so it sits centred at a width that
+  // stays fully on screen (2160px source keeps it crisp on retina).
+  playerMaxWidth = 720,
   // Landing default: flat beige. Other pages override to fit their band rhythm.
   sectionClassName = "relative bg-[var(--romi-beige)] pt-12 pb-24 md:pt-14 md:pb-32",
 }) {
@@ -182,31 +192,42 @@ export function RomiInAction({
         </div>
       </Container>
 
-      {/* Video breaks past the 1180px content column so the demo lands big and
-          in-your-face. Capped at 1500px, inset only by the page gutter. */}
+      {/* Player rail: breaks past the 1180px content column, inset only by the
+          page gutter, capped at 1500px. */}
       <div className="mx-auto max-w-[1500px] px-[var(--romi-page-gutter)]">
-        {/* Desktop: Safari frame */}
+        {/* Desktop */}
         <div className="hidden md:block">
-          <SafariFrame>
-            <VideoOrPoster
-              src={srcDesktop}
-              poster={posterDesktop}
-              aspect="3 / 2"
-              fit="cover"
-              posterScale={0.87}
-              controls
-            />
-          </SafariFrame>
+          {srcDesktop ? (
+            /* Real video: rounded player card at the video's own ratio. No
+               Safari chrome - the demo edit brings its own framing. */
+            <div className="mx-auto" style={{ maxWidth: playerMaxWidth }}>
+              <div className="overflow-hidden rounded-[22px] border border-[#e0e0e0] bg-white shadow-[0_34px_70px_-42px_rgb(20_8_40_/_0.38),0_0_0_1px_rgb(0_0_0_/_0.06)]">
+                <VideoOrPoster src={srcDesktop} poster={posterDesktop} aspect={aspect} />
+              </div>
+            </div>
+          ) : (
+            /* Poster mode: the original full-width Safari frame. */
+            <SafariFrame>
+              <VideoOrPoster
+                src={null}
+                poster={posterDesktop}
+                aspect="3 / 2"
+                fit="cover"
+                posterScale={0.87}
+                controls
+              />
+            </SafariFrame>
+          )}
         </div>
 
-        {/* Mobile: a clean rounded landscape card (no phone frame - the hero
-            composition is landscape and looks lost inside a portrait phone). */}
+        {/* Mobile: clean rounded card filling the gutter width. Square video
+            is a natural fit on a portrait screen. */}
         <div className="md:hidden">
           <div className="overflow-hidden rounded-[22px] border border-[#e6e6e6] shadow-[0_24px_50px_-30px_rgb(20_8_40_/_0.35)]">
             <VideoOrPoster
               src={srcMobile}
               poster={posterMobile}
-              aspect="3 / 2"
+              aspect={srcMobile ? aspect : "3 / 2"}
               fit="cover"
               controls={false}
             />
