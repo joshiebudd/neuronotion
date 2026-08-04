@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { Play, Volume2, Airplay, Maximize } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Play, Pause, Volume2, VolumeX, Airplay, Maximize } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import { Container } from "../layout/Container";
 import { ClickTooltip } from "../ui/ClickTooltip";
@@ -11,19 +11,19 @@ import { ClickTooltip } from "../ui/ClickTooltip";
  *
  * The frame always opens as the POSTER: the Romi hero lockup (two app screens
  * + feature badges) on a light neutral wash, dressed as a paused video player -
- * a frosted centre play button plus, on desktop, a full control bar (scrubber,
+ * a frosted centre play button plus, on desktop, the control bar (scrubber,
  * volume, speed, airplay, fullscreen).
  *
- * With a real video URL (srcDesktop / srcMobile), the poster becomes a
- * click-to-play facade: pressing play swaps it for the actual <video> in the
- * same frame. The demo files are square (2160x2160), so rather than cropping
- * them to 3:2 they play centred on the wash inside the desktop frame, and on
- * mobile the card grows to 1:1 so the video fills the card width. With no URL
- * the play button keeps the under-construction tooltip.
+ * With a real video URL (srcDesktop / srcMobile), pressing play starts the
+ * actual video in the same design: the window resizes to the video's square
+ * ratio (the desktop Safari window narrows so the square still fits on
+ * screen; the mobile card grows to 1:1), and the SAME control bar becomes the
+ * real, working controls - no native browser chrome. With no URL the play
+ * button keeps the under-construction tooltip.
  */
 
-// Live demo video (square). Landing uses these defaults; corporate + clinic
-// pass their own URLs via srcDesktop / srcMobile.
+// Live demo video (square, 2160x2160). Landing uses these defaults; corporate
+// + clinic pass their own URLs via srcDesktop / srcMobile.
 const CDN = "https://NeuroNotionPullZonw.b-cdn.net";
 const videoSrcDesktop = `${CDN}/Video%20Demos/Romi%20Demo%20Standard.mp4`;
 const videoSrcMobile = videoSrcDesktop;
@@ -34,6 +34,36 @@ const POSTER_MOBILE = "/romi/landing/demo/landing-hero-poster.svg";
 
 // Very light neutral wash behind the (partly transparent) composition.
 const POSTER_BG = "#f4f4f6";
+
+const SPEEDS = [1, 1.25, 1.5, 2];
+
+function fmt(t) {
+  const total = Number.isFinite(t) ? Math.max(0, Math.floor(t)) : 0;
+  const m = Math.floor(total / 60);
+  const s = total % 60;
+  return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+}
+
+/* Pointer-drag helper for the scrubber / volume tracks: maps the pointer's
+ * x-position on the track to a 0-1 ratio. */
+function useDragBar(onRatio) {
+  const ref = useRef(null);
+  const apply = (e) => {
+    const rect = ref.current?.getBoundingClientRect();
+    if (!rect || !rect.width) return;
+    onRatio(Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width)));
+  };
+  return {
+    ref,
+    onPointerDown: (e) => {
+      e.currentTarget.setPointerCapture?.(e.pointerId);
+      apply(e);
+    },
+    onPointerMove: (e) => {
+      if (e.buttons & 1) apply(e);
+    },
+  };
+}
 
 function SafariFrame({ children }) {
   return (
@@ -81,56 +111,115 @@ function PlayButton({ size = 72 }) {
   );
 }
 
-/* Full video control bar over a bottom gradient scrim (desktop only). */
-function ControlBar() {
+/* The video control bar over a bottom gradient scrim. One component for both
+ * states: static (the dressed poster's fake bar, non-interactive, the original
+ * mock numbers) and live (the real controls during playback - same layout,
+ * same styling, working buttons). On phones the live bar drops the volume /
+ * speed / airplay cluster so it fits the narrow card. */
+function ControlBar({
+  live = false,
+  playing = false,
+  current = 0,
+  duration = 504, // static mock: -08:24 remaining
+  volume = 1,
+  muted = false,
+  rate = 1,
+  airplayAvailable = false,
+  onPlayPause,
+  onSeek,
+  onVolume,
+  onMute,
+  onRate,
+  onAirplay,
+  onFullscreen,
+}) {
   const txt = { fontFamily: "var(--romi-font-body)", fontSize: 12, lineHeight: "18px" };
+  const seekBar = useDragBar((r) => onSeek?.(r * (duration || 0)));
+  const volBar = useDragBar((r) => onVolume?.(r));
+  const pct = live && duration ? (current / duration) * 100 : 0;
+  const volPct = muted ? 0 : volume * 100;
+  const Btn = live ? "button" : "div";
+  const btnProps = live ? { type: "button" } : {};
+
   return (
     <div
-      className="pointer-events-none absolute inset-x-0 bottom-0 px-8 pb-6 pt-12"
+      className={`absolute inset-x-0 bottom-0 px-4 pb-6 pt-12 sm:px-8 ${live ? "" : "pointer-events-none"}`}
       style={{ background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.30) 100%)" }}
     >
       <div className="flex items-center gap-1 text-white">
-        {/* Play */}
-        <div className="p-2">
-          <Play className="h-4 w-4" fill="white" strokeWidth={0} />
-        </div>
+        {/* Play / pause */}
+        <Btn {...btnProps} className="p-2" onClick={onPlayPause} aria-label={playing ? "Pause" : "Play"}>
+          {live && playing ? (
+            <Pause className="h-4 w-4" fill="white" strokeWidth={0} />
+          ) : (
+            <Play className="h-4 w-4" fill="white" strokeWidth={0} />
+          )}
+        </Btn>
 
         {/* Volume + slider */}
-        <div className="flex items-center pr-2">
-          <div className="p-2">
-            <Volume2 className="h-4 w-4" />
-          </div>
-          <div className="relative h-1 w-9 rounded-full" style={{ background: "rgba(255,255,255,0.30)" }}>
-            <div className="absolute left-0 top-0 h-1 rounded-full bg-white" style={{ width: 24 }}>
-              <div className="absolute -top-1 h-3 w-3 rounded-full bg-white" style={{ left: 20 }} />
+        <div className={`items-center pr-2 ${live ? "hidden sm:flex" : "flex"}`}>
+          <Btn {...btnProps} className="p-2" onClick={onMute} aria-label={muted ? "Unmute" : "Mute"}>
+            {live && (muted || volume === 0) ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+          </Btn>
+          <div
+            ref={volBar.ref}
+            onPointerDown={live ? volBar.onPointerDown : undefined}
+            onPointerMove={live ? volBar.onPointerMove : undefined}
+            className={`relative h-1 w-9 rounded-full ${live ? "cursor-pointer" : ""}`}
+            style={{ background: "rgba(255,255,255,0.30)" }}
+          >
+            <div
+              className="absolute left-0 top-0 h-1 rounded-full bg-white"
+              style={{ width: live ? `${volPct}%` : 24 }}
+            >
+              <div className="absolute -top-1 h-3 w-3 rounded-full bg-white" style={{ right: -6, left: "auto", ...(live ? {} : { left: 20, right: "auto" }) }} />
             </div>
           </div>
         </div>
 
         {/* Scrubber with timestamps */}
         <div className="flex flex-1 items-center gap-2 px-2">
-          <span style={{ ...txt, width: 36 }}>00:00</span>
-          <div className="relative h-2 flex-1 rounded-full" style={{ background: "rgba(255,255,255,0.30)" }}>
-            <div className="absolute left-0 top-0 h-2 rounded-full bg-white/30" style={{ width: 56 }} />
-            <div className="absolute left-0 top-0 h-2 w-2 rounded-full bg-white" />
+          <span style={{ ...txt, width: 36 }}>{live ? fmt(current) : "00:00"}</span>
+          <div
+            ref={seekBar.ref}
+            onPointerDown={live ? seekBar.onPointerDown : undefined}
+            onPointerMove={live ? seekBar.onPointerMove : undefined}
+            className={`relative h-2 flex-1 rounded-full ${live ? "cursor-pointer" : ""}`}
+            style={{ background: "rgba(255,255,255,0.30)" }}
+          >
+            <div className="absolute left-0 top-0 h-2 rounded-full bg-white/30" style={{ width: live ? `${pct}%` : 56 }} />
+            <div
+              className="absolute top-0 h-2 w-2 rounded-full bg-white"
+              style={live ? { left: `${pct}%`, transform: "translateX(-50%)" } : { left: 0 }}
+            />
           </div>
-          <span className="text-right" style={{ ...txt, width: 42 }}>-08:24</span>
+          <span className="text-right" style={{ ...txt, width: 42 }}>
+            -{live ? fmt(Math.max(0, (duration || 0) - current)) : "08:24"}
+          </span>
         </div>
 
         {/* Playback speed */}
-        <div className="flex items-center gap-0.5 px-2" style={txt}>
-          1x
-        </div>
+        <Btn
+          {...btnProps}
+          className={`items-center gap-0.5 px-2 ${live ? "hidden sm:flex" : "flex"}`}
+          style={txt}
+          onClick={onRate}
+          aria-label="Playback speed"
+        >
+          {live ? `${rate}x` : "1x"}
+        </Btn>
 
-        {/* Airplay */}
-        <div className="p-2">
-          <Airplay className="h-4 w-4" />
-        </div>
+        {/* Airplay (live: only where the browser supports it) */}
+        {(!live || airplayAvailable) && (
+          <Btn {...btnProps} className={`p-2 ${live ? "hidden sm:block" : ""}`} onClick={onAirplay} aria-label="AirPlay">
+            <Airplay className="h-4 w-4" />
+          </Btn>
+        )}
 
         {/* Fullscreen */}
-        <div className="p-2">
+        <Btn {...btnProps} className="p-2" onClick={onFullscreen} aria-label="Fullscreen">
           <Maximize className="h-4 w-4" />
-        </div>
+        </Btn>
       </div>
     </div>
   );
@@ -155,10 +244,39 @@ function PosterLayer({ poster, fit, posterScale, controls, children }) {
   );
 }
 
-/* Poster dressed as a paused player; with a src, play swaps in the real video. */
-function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, posterScale = 1, playingAspect }) {
+/* Poster dressed as a paused player; with a src, play starts the real video in
+ * the same design: the frame takes the video's true ratio and the control bar
+ * goes live. */
+function VideoOrPoster({
+  src,
+  poster,
+  aspect,
+  fit = "cover",
+  controls = true,
+  posterScale = 1,
+  playingAspect,
+  onStartedChange,
+}) {
   const videoRef = useRef(null);
+  const boxRef = useRef(null);
+  const [started, setStarted] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [current, setCurrent] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [volume, setVolume] = useState(1);
+  const [muted, setMuted] = useState(false);
+  const [rate, setRate] = useState(1);
+  const [airplayOk, setAirplayOk] = useState(false);
+
+  // Safari fires this when an AirPlay target exists; everywhere else the
+  // button stays hidden during playback.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v || typeof window === "undefined" || !window.WebKitPlaybackTargetAvailabilityEvent) return;
+    const onAvail = (e) => setAirplayOk(e.availability === "available");
+    v.addEventListener("webkitplaybacktargetavailabilitychanged", onAvail);
+    return () => v.removeEventListener("webkitplaybacktargetavailabilitychanged", onAvail);
+  }, [src]);
 
   // No video yet: the play button explains itself on click.
   if (!src) {
@@ -175,25 +293,106 @@ function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, po
 
   // play() fires inside the click handler so browsers allow sound.
   const start = () => {
-    setPlaying(true);
+    setStarted(true);
+    onStartedChange?.(true);
+    // Metadata can land before hydration attaches the event listener.
+    if (videoRef.current?.duration) setDuration(videoRef.current.duration);
     videoRef.current?.play();
+  };
+  const toggle = () => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) v.play();
+    else v.pause();
+  };
+  const seekTo = (t) => {
+    const v = videoRef.current;
+    if (v) v.currentTime = t;
+    setCurrent(t);
+  };
+  const setVol = (r) => {
+    const v = videoRef.current;
+    if (v) {
+      v.volume = r;
+      v.muted = r === 0;
+    }
+  };
+  const toggleMute = () => {
+    const v = videoRef.current;
+    if (v) v.muted = !v.muted;
+  };
+  const cycleRate = () => {
+    const next = SPEEDS[(SPEEDS.indexOf(rate) + 1) % SPEEDS.length];
+    if (videoRef.current) videoRef.current.playbackRate = next;
+    setRate(next);
+  };
+  const showAirplay = () => videoRef.current?.webkitShowPlaybackTargetPicker?.();
+  const fullscreen = () => {
+    const el = boxRef.current;
+    if (el?.requestFullscreen) el.requestFullscreen();
+    else if (el?.webkitRequestFullscreen) el.webkitRequestFullscreen();
+    else videoRef.current?.webkitEnterFullscreen?.();
   };
 
   return (
     <div
-      className="relative w-full overflow-hidden"
-      style={{ aspectRatio: playing && playingAspect ? playingAspect : aspect, background: POSTER_BG }}
+      ref={boxRef}
+      className="relative w-full overflow-hidden [&:fullscreen]:bg-black"
+      style={{
+        aspectRatio: started && playingAspect ? playingAspect : aspect,
+        background: POSTER_BG,
+        transition: "aspect-ratio 500ms ease",
+      }}
     >
       <video
         ref={videoRef}
         src={src}
-        controls={playing}
         playsInline
         preload="metadata"
         className="absolute inset-0 h-full w-full"
         style={{ objectFit: "contain" }}
+        onClick={started ? toggle : undefined}
+        onPlay={() => setPlaying(true)}
+        onPause={() => setPlaying(false)}
+        onEnded={() => setPlaying(false)}
+        onTimeUpdate={(e) => setCurrent(e.currentTarget.currentTime)}
+        onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
+        onVolumeChange={(e) => {
+          setVolume(e.currentTarget.volume);
+          setMuted(e.currentTarget.muted);
+        }}
       />
-      {!playing && (
+
+      {started && !playing && (
+        /* Paused: bring back the frosted centre play button (bar stays live). */
+        <div className="pointer-events-none absolute inset-0 grid place-items-center">
+          <button type="button" onClick={toggle} aria-label="Play" className="pointer-events-auto cursor-pointer">
+            <PlayButton />
+          </button>
+        </div>
+      )}
+
+      {started && (
+        <ControlBar
+          live
+          playing={playing}
+          current={current}
+          duration={duration}
+          volume={volume}
+          muted={muted}
+          rate={rate}
+          airplayAvailable={airplayOk}
+          onPlayPause={toggle}
+          onSeek={seekTo}
+          onVolume={setVol}
+          onMute={toggleMute}
+          onRate={cycleRate}
+          onAirplay={showAirplay}
+          onFullscreen={fullscreen}
+        />
+      )}
+
+      {!started && (
         <button
           type="button"
           onClick={start}
@@ -224,6 +423,9 @@ export function RomiInAction({
   sectionClassName = "relative bg-[var(--romi-beige)] pt-12 pb-24 md:pt-14 md:pb-32",
 }) {
   const badgeProps = badgeCharacter ? { character: badgeCharacter } : { avatar: badgeAvatar };
+  // Once desktop playback starts, the Safari window narrows so the square
+  // video area (plus the 48px chrome bar) fits within the viewport height.
+  const [deskStarted, setDeskStarted] = useState(false);
   return (
     <section className={sectionClassName}>
       <Container>
@@ -235,19 +437,29 @@ export function RomiInAction({
       {/* Video breaks past the 1180px content column so the demo lands big and
           in-your-face. Capped at 1500px, inset only by the page gutter. */}
       <div className="mx-auto max-w-[1500px] px-[var(--romi-page-gutter)]">
-        {/* Desktop: Safari frame. The square demo plays centred inside the
-            3:2 window on the poster wash. */}
+        {/* Desktop: Safari frame. On play the window resizes to the video's
+            square ratio. */}
         <div className="hidden md:block">
-          <SafariFrame>
-            <VideoOrPoster
-              src={srcDesktop}
-              poster={posterDesktop}
-              aspect="3 / 2"
-              fit="cover"
-              posterScale={0.87}
-              controls
-            />
-          </SafariFrame>
+          <div
+            className="mx-auto"
+            style={{
+              maxWidth: deskStarted ? "min(100%, calc(88vh - 48px))" : "100%",
+              transition: "max-width 500ms ease",
+            }}
+          >
+            <SafariFrame>
+              <VideoOrPoster
+                src={srcDesktop}
+                poster={posterDesktop}
+                aspect="3 / 2"
+                fit="cover"
+                posterScale={0.87}
+                controls
+                playingAspect="1 / 1"
+                onStartedChange={setDeskStarted}
+              />
+            </SafariFrame>
+          </div>
         </div>
 
         {/* Mobile: a clean rounded landscape card (no phone frame - the hero
