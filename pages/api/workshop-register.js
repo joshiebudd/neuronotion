@@ -16,11 +16,11 @@ import nodemailer from 'nodemailer';
 
 const EVENT = {
   title: 'Neurodivergence at Work: Unlocking Your Hidden Superstars',
-  // 2:00pm-2:45pm UK on 9 Sept 2026 (BST = UTC+1).
+  // 2:00pm-2:40pm UK on 9 Sept 2026 (BST = UTC+1).
   startUtc: '20260909T130000Z',
-  endUtc: '20260909T134500Z',
+  endUtc: '20260909T134000Z',
   dateLabel: 'Wednesday 9 September 2026',
-  timeLabel: '2:00pm UK time (45 minutes)',
+  timeLabel: '2:00pm UK time (40 minutes)',
 };
 
 function withTimeout(promise, ms) {
@@ -55,7 +55,7 @@ function buildIcs({ organizerEmail, attendeeName, attendeeEmail, zoomUrl, meetin
   const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
 
   const descriptionLines = [
-    'A free 45 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi).',
+    'A free 40 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi).',
     '',
     zoomUrl ? `Join Zoom meeting: ${zoomUrl}` : 'The Zoom joining link will be emailed to you before the day.',
     meetingId ? `Meeting ID: ${meetingId}` : null,

@@ -17,10 +17,7 @@ import { Button, Container, RomiCharacter, RomiPage } from "../src/romi";
 // play chip; once a URL is set the same graphic becomes the video poster.
 const VSL_URL = null;
 
-// Workshop hero graphic. Set to "/romi/workshop/hero.jpg" once the exported
-// file is added under public/romi/workshop/ — until then the page falls back
-// to a branded placeholder so nothing renders broken.
-const HERO_IMAGE = null;
+const HERO_IMAGE = "/romi/workshop/hero.jpg";
 const SITE = "https://www.romiadhd.com";
 
 // 2pm UK on the day = 13:00 UTC (BST).
@@ -31,9 +28,9 @@ const EVENT_JSON_LD = {
   "@type": "Event",
   name: "Neurodivergence at Work: Unlocking Your Hidden Superstars",
   description:
-    "A free 45 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi) on understanding neurodivergence at work, leading people with that in mind, and the business case for easy, low-cost support.",
+    "A free 40 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi) on understanding neurodivergence at work, leading people with that in mind, and the business case for easy, low-cost support.",
   startDate: "2026-09-09T14:00:00+01:00",
-  endDate: "2026-09-09T14:45:00+01:00",
+  endDate: "2026-09-09T14:40:00+01:00",
   eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
   eventStatus: "https://schema.org/EventScheduled",
   ...(HERO_IMAGE ? { image: `${SITE}${HERO_IMAGE}` } : {}),
@@ -139,7 +136,7 @@ function Hero() {
             <span style={{ color: "var(--romi-indigo)" }}>Unlocking your hidden superstars.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-[560px] text-[clamp(1.1rem,1.5vw,1.3rem)] font-medium leading-[1.6] text-[var(--romi-color-ink-muted)]">
-            1 in 5 of your people are neurodivergent. Join Tom Crawford and Josh Budd for 45 minutes
+            1 in 5 of your people are neurodivergent. Join Tom Crawford and Josh Budd for 40 minutes
             on how to get the best from them.
           </p>
           <div className="mt-9">
@@ -342,7 +339,7 @@ function Hosts() {
   );
 }
 
-const formPerks = ["45 minutes, completely free", "Live Q&A with Tom and Josh"];
+const formPerks = ["40 minutes, completely free", "Live Q&A with Tom and Josh"];
 
 function Register() {
   const [form, setForm] = useState({ name: "", email: "", company: "", role: "", website: "" });
@@ -397,8 +394,8 @@ function Register() {
                   <Image
                     src={HERO_IMAGE}
                     alt="Neurodivergence at Work workshop, hosted by Josh Budd and Tom Crawford"
-                    width={1920}
-                    height={1080}
+                    width={1672}
+                    height={941}
                     sizes="(max-width: 1024px) 100vw, 540px"
                     className="h-auto w-full"
                   />
@@ -541,7 +538,7 @@ export default function WorkshopPage() {
   return (
     <RomiPage
       title="Neurodivergence at Work: Unlocking Your Hidden Superstars | Romi"
-      description="A free 45 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi). Wednesday 9 September, 2pm UK time."
+      description="A free 40 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi). Wednesday 9 September, 2pm UK time."
       canonical="https://www.romiadhd.com/workshop"
       {...(HERO_IMAGE ? { ogImage: `${SITE}${HERO_IMAGE}` } : {})}
     >
