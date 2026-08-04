@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { Calendar, Check, Clock, Compass, MessageCircle, Play, Smartphone, Users, Video } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Calendar, Check, Clock, Compass, Heart, Play, TrendingUp, Users } from "lucide-react";
 import { Button, Container, RomiCharacter, RomiPage } from "../src/romi";
 
 /*
@@ -13,21 +13,32 @@ import { Button, Container, RomiCharacter, RomiPage } from "../src/romi";
  */
 
 // Drop the VSL link in here when it's recorded (YouTube/Loom embed URL or a
-// direct .mp4). Until then the page shows a branded placeholder.
+// direct .mp4). Until then the page shows the workshop hero graphic with a
+// play chip; once a URL is set the same graphic becomes the video poster.
 const VSL_URL = null;
+
+// Workshop hero graphic. Set to "/romi/workshop/hero.jpg" once the exported
+// file is added under public/romi/workshop/ — until then the page falls back
+// to a branded placeholder so nothing renders broken.
+const HERO_IMAGE = null;
+const SITE = "https://www.romiadhd.com";
+
+// 2pm UK on the day = 13:00 UTC (BST).
+const WORKSHOP_START_ISO = "2026-09-09T13:00:00Z";
 
 const EVENT_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Event",
-  name: "Neurodivergence at Work: Leading People Differently",
+  name: "Neurodivergence at Work: Unlocking Your Hidden Superstars",
   description:
-    "A free 45 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi) on neurodivergence in the workplace, leading people differently, and the tools that help colleagues self-manage.",
+    "A free 45 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi) on understanding neurodivergence at work, leading people with that in mind, and the business case for easy, low-cost support.",
   startDate: "2026-09-09T14:00:00+01:00",
   endDate: "2026-09-09T14:45:00+01:00",
   eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
   eventStatus: "https://schema.org/EventScheduled",
-  location: { "@type": "VirtualLocation", url: "https://www.romiadhd.com/workshop" },
-  organizer: { "@type": "Organization", name: "Romi", url: "https://www.romiadhd.com" },
+  ...(HERO_IMAGE ? { image: `${SITE}${HERO_IMAGE}` } : {}),
+  location: { "@type": "VirtualLocation", url: `${SITE}/workshop` },
+  organizer: { "@type": "Organization", name: "Romi", url: SITE },
   performer: [
     { "@type": "Person", name: "Tom Crawford" },
     { "@type": "Person", name: "Josh Budd" },
@@ -37,7 +48,7 @@ const EVENT_JSON_LD = {
     price: "0",
     priceCurrency: "GBP",
     availability: "https://schema.org/InStock",
-    url: "https://www.romiadhd.com/workshop",
+    url: `${SITE}/workshop`,
   },
 };
 
@@ -54,18 +65,40 @@ function Eyebrow({ color = "var(--romi-indigo)", children }) {
   );
 }
 
-function MetaItem({ icon: Icon, children }) {
+function HeaderBadge({ icon: Icon, children }) {
   return (
-    <span className="inline-flex items-center gap-2 text-[15px] font-semibold text-[var(--romi-color-ink)]">
-      <span
-        className="grid h-8 w-8 place-items-center rounded-full"
-        style={{ background: soft("var(--romi-indigo)", 10) }}
-      >
-        <Icon className="h-4 w-4 text-[var(--romi-indigo)]" />
-      </span>
+    <span
+      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-bold text-[var(--romi-indigo)] [font-family:var(--romi-font-display)]"
+      style={{ background: soft("var(--romi-indigo)", 10) }}
+    >
+      <Icon className="h-3.5 w-3.5" />
       {children}
     </span>
   );
+}
+
+/*
+ * Time badge that reads the visitor's timezone and shows 2pm UK as their local
+ * time (e.g. "9:00 AM EDT"). UK visitors just see "2pm UK time". Server render
+ * uses the UK label; the client swaps it in an effect, so no hydration issues.
+ */
+function LocalTimeBadge() {
+  const [label, setLabel] = useState("2pm UK time");
+  useEffect(() => {
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (!tz || tz === "Europe/London") return;
+      const local = new Intl.DateTimeFormat(undefined, {
+        hour: "numeric",
+        minute: "2-digit",
+        timeZoneName: "short",
+      }).format(new Date(WORKSHOP_START_ISO));
+      setLabel(local);
+    } catch {
+      // Leave the UK label if anything about the environment is odd.
+    }
+  }, []);
+  return <HeaderBadge icon={Clock}>{label}</HeaderBadge>;
 }
 
 function WorkshopHeader() {
@@ -75,9 +108,10 @@ function WorkshopHeader() {
         <Link href="/" className="flex shrink-0 items-center" aria-label="Romi home">
           <Image src="/romi/romi-logo-linear.svg" alt="Romi" width={160} height={38} priority className="h-9 w-auto" />
         </Link>
-        <div className="flex items-center gap-4">
-          <span className="hidden text-sm font-semibold text-[var(--romi-color-ink-muted)] sm:block">
-            Wed 9 Sept · 2pm UK
+        <div className="flex items-center gap-2.5">
+          <span className="hidden items-center gap-2.5 md:flex">
+            <HeaderBadge icon={Calendar}>Wed 9 September</HeaderBadge>
+            <LocalTimeBadge />
           </span>
           <Button as="a" href="#register" size="md">
             Save my seat
@@ -97,29 +131,21 @@ function Hero() {
         style={{ background: "radial-gradient(closest-side, var(--romi-purple-40), transparent)" }}
       />
       <Container className="relative">
-        <div className="mx-auto max-w-[760px] text-center">
-          <Eyebrow>Free live workshop</Eyebrow>
-          <h1 className="mt-5 text-[clamp(2.4rem,5vw,4rem)] font-bold leading-[1.06] tracking-[-0.015em] text-[var(--romi-color-ink)]">
-            1 in 7 of your people are{" "}
-            <span style={{ color: "var(--romi-indigo)" }}>neurodivergent.</span>
+        <div className="mx-auto max-w-[820px] text-center">
+          <Eyebrow>Free online workshop</Eyebrow>
+          <h1 className="mt-5 text-[clamp(2.3rem,4.8vw,3.8rem)] font-bold leading-[1.08] tracking-[-0.015em] text-[var(--romi-color-ink)]">
+            Neurodivergence at Work:
+            <br />
+            <span style={{ color: "var(--romi-indigo)" }}>Unlocking your hidden superstars.</span>
           </h1>
-          <p className="mx-auto mt-6 max-w-[620px] text-[clamp(1.1rem,1.5vw,1.3rem)] font-medium leading-[1.6] text-[var(--romi-color-ink-muted)]">
-            Most workplaces still lead them like everyone else. Join Tom Crawford and Josh Budd for
-            45 minutes on what leading neurodivergent colleagues well looks like, and the tools that
-            help them thrive.
+          <p className="mx-auto mt-6 max-w-[560px] text-[clamp(1.1rem,1.5vw,1.3rem)] font-medium leading-[1.6] text-[var(--romi-color-ink-muted)]">
+            1 in 5 of your people are neurodivergent. Join Tom Crawford and Josh Budd for 45 minutes
+            on how to get the best from them.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-3">
-            <MetaItem icon={Calendar}>Wednesday 9 September</MetaItem>
-            <MetaItem icon={Clock}>2:00pm UK · 45 minutes</MetaItem>
-            <MetaItem icon={Video}>Live online</MetaItem>
-          </div>
           <div className="mt-9">
             <Button as="a" href="#register" size="xl" className="px-8">
               Save my seat
             </Button>
-            <p className="mt-4 text-sm font-medium text-[var(--romi-color-ink-muted)]">
-              Free to attend. Bring your questions.
-            </p>
           </div>
         </div>
       </Container>
@@ -129,23 +155,44 @@ function Hero() {
 
 function Vsl() {
   const isMp4 = typeof VSL_URL === "string" && VSL_URL.endsWith(".mp4");
+  const [playing, setPlaying] = useState(false);
+  const showEmbed = VSL_URL && !isMp4;
   return (
     <section className="bg-[var(--romi-color-bg)] pb-6 pt-12 md:pt-16">
       <Container>
         <div className="mx-auto max-w-[880px] overflow-hidden rounded-[var(--romi-radius-2xl)] bg-white p-2 shadow-[var(--romi-shadow-lg)] md:p-3">
           <div className="relative aspect-video w-full overflow-hidden rounded-[calc(var(--romi-radius-2xl)-8px)]">
-            {VSL_URL ? (
-              isMp4 ? (
-                <video src={VSL_URL} controls playsInline className="h-full w-full object-cover" />
-              ) : (
-                <iframe
-                  src={VSL_URL}
-                  title="Workshop introduction from Tom and Josh"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="h-full w-full"
+            {showEmbed ? (
+              <iframe
+                src={VSL_URL}
+                title="Workshop introduction from Tom and Josh"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="h-full w-full"
+              />
+            ) : isMp4 && playing ? (
+              <video src={VSL_URL} controls autoPlay playsInline poster={HERO_IMAGE} className="h-full w-full object-cover" />
+            ) : HERO_IMAGE ? (
+              <button
+                type="button"
+                onClick={() => (isMp4 ? setPlaying(true) : null)}
+                className="group relative block h-full w-full"
+                aria-label={isMp4 ? "Play the workshop introduction" : "Workshop introduction video coming soon"}
+              >
+                <Image
+                  src={HERO_IMAGE}
+                  alt="Neurodivergence at Work: Unlocking your hidden superstars. Hosted by Josh Budd and Tom Crawford."
+                  fill
+                  priority
+                  sizes="(max-width: 920px) 100vw, 880px"
+                  className="object-cover"
                 />
-              )
+                <span className="absolute inset-0 grid place-items-center">
+                  <span className="grid h-16 w-16 place-items-center rounded-full bg-white/95 shadow-[var(--romi-shadow-lg)] transition-transform group-hover:scale-105 md:h-20 md:w-20">
+                    <Play className="ml-1 h-7 w-7 text-[var(--romi-indigo)] md:h-8 md:w-8" fill="currentColor" />
+                  </span>
+                </span>
+              </button>
             ) : (
               <div
                 className="flex h-full w-full flex-col items-center justify-center gap-4"
@@ -169,26 +216,26 @@ const agenda = [
   {
     icon: Users,
     color: "var(--romi-indigo)",
-    title: "Neurodivergence at work, from lived experience",
-    body: "Tom on what 1 in 7 really means day to day, and his own story of leading and being led as a neurodivergent person.",
+    title: "Understanding neurodivergence at work",
+    body: "What it really looks like day to day, from Tom's lived experience of being and leading neurodivergent people.",
   },
   {
     icon: Compass,
     color: "#3a93e8",
-    title: "Leading people differently",
-    body: "Practical shifts for managers, wellbeing and DE&I teams that you can start using the same week.",
+    title: "Leading people with that in mind",
+    body: "Practical shifts for managers and people teams that make a difference straight away.",
   },
   {
-    icon: Smartphone,
+    icon: TrendingUp,
     color: "var(--romi-mint-deep)",
-    title: "Tools for empowered self-management",
-    body: "Why strategy on its own is not enough, with a short look at how Romi helps colleagues manage their own brains.",
+    title: "The business case",
+    body: "The numbers behind supporting neurodivergent talent, and why it is an enormous commercial win.",
   },
   {
-    icon: MessageCircle,
+    icon: Heart,
     color: "var(--romi-indigo)",
-    title: "Open Q&A",
-    body: "Bring the situations you are wrestling with. Tom and Josh take your questions live.",
+    title: "Support that is easy to give",
+    body: "How to get the most out of the neurodivergent people on your team without it costing loads of money, effort or time.",
   },
 ];
 
@@ -207,11 +254,8 @@ function Covered() {
       <Container>
         <div className="mx-auto max-w-[640px] text-center">
           <Eyebrow>What we&apos;ll cover</Eyebrow>
-          <h2 className="mt-4 text-[clamp(1.9rem,3.4vw,2.7rem)] font-bold leading-[1.1] tracking-[-0.01em] text-[var(--romi-color-ink)]">
-            45 minutes, four things, no fluff.
-          </h2>
         </div>
-        <div className="mx-auto mt-10 grid max-w-[880px] gap-4 sm:grid-cols-2">
+        <div className="mx-auto mt-8 grid max-w-[880px] gap-4 sm:grid-cols-2">
           {agenda.map((item) => (
             <div
               key={item.title}
@@ -268,7 +312,7 @@ function Hosts() {
             </span>
             <div>
               <h3 className="text-[1.1rem] font-bold text-[var(--romi-color-ink)]">Tom Crawford</h3>
-              <p className="text-sm font-semibold text-[var(--romi-indigo)]">The Brain Miner</p>
+              <p className="text-sm font-semibold text-[var(--romi-indigo)]">CEO, The Brain Miner</p>
               <p className="mt-2 text-[15px] leading-relaxed text-[var(--romi-color-ink-muted)]">
                 Speaks and writes on neurodivergence in the workplace, drawing on years of leading
                 teams and his own lived experience.
@@ -279,8 +323,9 @@ function Hosts() {
             <Image
               src="/romi/team/josh.webp"
               alt="Josh Budd"
-              width={64}
-              height={64}
+              width={128}
+              height={128}
+              quality={95}
               className="h-16 w-16 shrink-0 rounded-full object-cover"
             />
             <div>
@@ -297,11 +342,7 @@ function Hosts() {
   );
 }
 
-const formPerks = [
-  "45 minutes, completely free",
-  "Live Q&A with Tom and Josh",
-  "The joining link lands straight in your inbox",
-];
+const formPerks = ["45 minutes, completely free", "Live Q&A with Tom and Josh"];
 
 function Register() {
   const [form, setForm] = useState({ name: "", email: "", company: "", role: "", website: "" });
@@ -351,11 +392,19 @@ function Register() {
               <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.01em]">
                 Save your seat
               </h2>
-              <p className="mt-4 max-w-[440px] text-[1.1rem] leading-[1.55] text-white/85">
-                Wednesday 9 September, 2:00pm UK time. Come with questions, leave with things you can
-                use the same week.
-              </p>
-              <ul className="mt-7 space-y-3.5">
+              {HERO_IMAGE && (
+                <div className="mt-6 overflow-hidden rounded-[var(--romi-radius-lg)] shadow-[var(--romi-shadow-xl)]">
+                  <Image
+                    src={HERO_IMAGE}
+                    alt="Neurodivergence at Work workshop, hosted by Josh Budd and Tom Crawford"
+                    width={1920}
+                    height={1080}
+                    sizes="(max-width: 1024px) 100vw, 540px"
+                    className="h-auto w-full"
+                  />
+                </div>
+              )}
+              <ul className="mt-6 space-y-3.5">
                 {formPerks.map((perk) => (
                   <li key={perk} className="flex items-start gap-3">
                     <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white/20">
@@ -491,9 +540,10 @@ function WorkshopFooter() {
 export default function WorkshopPage() {
   return (
     <RomiPage
-      title="Neurodivergence at Work | Free Live Workshop | Romi"
-      description="A free 45 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi). Neurodivergence in the workplace, leading people differently, and the tools that help. Wed 9 Sept, 2pm UK."
+      title="Neurodivergence at Work: Unlocking Your Hidden Superstars | Romi"
+      description="A free 45 minute live workshop with Tom Crawford (The Brain Miner) and Josh Budd (Romi). Wednesday 9 September, 2pm UK time."
       canonical="https://www.romiadhd.com/workshop"
+      {...(HERO_IMAGE ? { ogImage: `${SITE}${HERO_IMAGE}` } : {})}
     >
       <Head>
         <script
