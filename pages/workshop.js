@@ -62,40 +62,61 @@ function Eyebrow({ color = "var(--romi-indigo)", children }) {
   );
 }
 
-function HeaderBadge({ icon: Icon, children }) {
-  return (
-    <span
-      className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-bold text-[var(--romi-indigo)] [font-family:var(--romi-font-display)]"
-      style={{ background: soft("var(--romi-indigo)", 10) }}
-    >
-      <Icon className="h-3.5 w-3.5" />
-      {children}
-    </span>
-  );
+/*
+ * Date + time labels in the visitor's own timezone (e.g. a New York visitor
+ * sees "Wed 9 September" and "9:00 AM EDT"; Sydney sees 10 September). Server
+ * render uses the UK labels; the client swaps them in an effect, so no
+ * hydration issues.
+ */
+function useLocalEventLabels() {
+  const [labels, setLabels] = useState({ date: "Wed 9 September", time: "2pm UK time" });
+  useEffect(() => {
+    try {
+      const start = new Date(WORKSHOP_START_ISO);
+      const date = new Intl.DateTimeFormat(undefined, {
+        weekday: "short",
+        day: "numeric",
+        month: "long",
+      }).format(start);
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const time =
+        !tz || tz === "Europe/London"
+          ? "2pm UK time"
+          : new Intl.DateTimeFormat(undefined, {
+              hour: "numeric",
+              minute: "2-digit",
+              timeZoneName: "short",
+            }).format(start);
+      setLabels({ date, time });
+    } catch {
+      // Leave the UK labels if anything about the environment is odd.
+    }
+  }, []);
+  return labels;
 }
 
 /*
- * Time badge that reads the visitor's timezone and shows 2pm UK as their local
- * time (e.g. "9:00 AM EDT"). UK visitors just see "2pm UK time". Server render
- * uses the UK label; the client swaps it in an effect, so no hydration issues.
+ * The two event badges (date + local time). onDark restyles them for the
+ * purple registration card.
  */
-function LocalTimeBadge() {
-  const [label, setLabel] = useState("2pm UK time");
-  useEffect(() => {
-    try {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      if (!tz || tz === "Europe/London") return;
-      const local = new Intl.DateTimeFormat(undefined, {
-        hour: "numeric",
-        minute: "2-digit",
-        timeZoneName: "short",
-      }).format(new Date(WORKSHOP_START_ISO));
-      setLabel(local);
-    } catch {
-      // Leave the UK label if anything about the environment is odd.
-    }
-  }, []);
-  return <HeaderBadge icon={Clock}>{label}</HeaderBadge>;
+function EventBadges({ onDark = false, className = "" }) {
+  const { date, time } = useLocalEventLabels();
+  const badgeClass = `inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-bold [font-family:var(--romi-font-display)] ${
+    onDark ? "bg-white/15 text-white" : "text-[var(--romi-indigo)]"
+  }`;
+  const badgeStyle = onDark ? undefined : { background: soft("var(--romi-indigo)", 10) };
+  return (
+    <div className={`flex flex-wrap items-center gap-2.5 ${className}`}>
+      <span className={badgeClass} style={badgeStyle}>
+        <Calendar className="h-3.5 w-3.5" />
+        {date}
+      </span>
+      <span className={badgeClass} style={badgeStyle}>
+        <Clock className="h-3.5 w-3.5" />
+        {time}
+      </span>
+    </div>
+  );
 }
 
 function WorkshopHeader() {
@@ -105,15 +126,9 @@ function WorkshopHeader() {
         <Link href="/" className="flex shrink-0 items-center" aria-label="Romi home">
           <Image src="/romi/romi-logo-linear.svg" alt="Romi" width={160} height={38} priority className="h-9 w-auto" />
         </Link>
-        <div className="flex items-center gap-2.5">
-          <span className="hidden items-center gap-2.5 md:flex">
-            <HeaderBadge icon={Calendar}>Wed 9 September</HeaderBadge>
-            <LocalTimeBadge />
-          </span>
-          <Button as="a" href="#register" size="md">
-            Save my seat
-          </Button>
-        </div>
+        <Button as="a" href="#register" size="md">
+          Save my seat
+        </Button>
       </Container>
     </header>
   );
@@ -139,6 +154,7 @@ function Hero() {
             1 in 5 of your people are neurodivergent. Join Tom Crawford and Josh Budd for 40 minutes
             on how to get the best from them.
           </p>
+          <EventBadges className="mt-6 justify-center" />
           <div className="mt-9">
             <Button as="a" href="#register" size="xl" className="px-8">
               Save my seat
@@ -384,23 +400,13 @@ function Register() {
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-2xl"
           />
+          <EventBadges onDark className="absolute right-6 top-6 hidden md:flex" />
           <div className="relative grid items-center gap-10 lg:grid-cols-[1fr_1fr]">
             <div className="text-white">
+              <EventBadges onDark className="mb-5 md:hidden" />
               <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.01em]">
                 Save your seat
               </h2>
-              {HERO_IMAGE && (
-                <div className="mt-6 overflow-hidden rounded-[var(--romi-radius-lg)] shadow-[var(--romi-shadow-xl)]">
-                  <Image
-                    src={HERO_IMAGE}
-                    alt="Neurodivergence at Work workshop, hosted by Josh Budd and Tom Crawford"
-                    width={1672}
-                    height={941}
-                    sizes="(max-width: 1024px) 100vw, 540px"
-                    className="h-auto w-full"
-                  />
-                </div>
-              )}
               <ul className="mt-6 space-y-3.5">
                 {formPerks.map((perk) => (
                   <li key={perk} className="flex items-start gap-3">
