@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import { Play, Volume2, Airplay, Maximize } from "lucide-react";
 import { Badge } from "../ui/Badge";
 import { Container } from "../layout/Container";
@@ -5,15 +6,20 @@ import { ClickTooltip } from "../ui/ClickTooltip";
 
 /*
  * "Romi in Action" section.
- * With a real video URL: a clean rounded player card sized to the video's true
- * aspect ratio. The demos are square (2160x2160), so on desktop the card is
- * capped at a comfortable width and centred rather than stretched across the
- * full 1500px rail; on mobile it simply fills the gutter width (square is a
- * natural fit there). The hero-lockup poster carries over as <video poster>,
- * letterboxed on the light wash until play.
+ * Desktop: full Safari browser chrome wrapping the 3:2 demo frame.
+ * Mobile: swaps to a clean rounded-card variant of the same frame.
  *
- * With no URL (poster mode, kept for draft pages): the original Safari-chrome
- * frame dressed as a paused player - frosted play button plus fake control bar.
+ * The frame always opens as the POSTER: the Romi hero lockup (two app screens
+ * + feature badges) on a light neutral wash, dressed as a paused video player -
+ * a frosted centre play button plus, on desktop, a full control bar (scrubber,
+ * volume, speed, airplay, fullscreen).
+ *
+ * With a real video URL (srcDesktop / srcMobile), the poster becomes a
+ * click-to-play facade: pressing play swaps it for the actual <video> in the
+ * same frame. The demo files are square (2160x2160), so rather than cropping
+ * them to 3:2 they play centred on the wash inside the desktop frame, and on
+ * mobile the card grows to 1:1 so the video fills the card width. With no URL
+ * the play button keeps the under-construction tooltip.
  */
 
 // Live demo video (square). Landing uses these defaults; corporate + clinic
@@ -130,23 +136,11 @@ function ControlBar() {
   );
 }
 
-/* Poster dressed as a paused player, or the real <video> once it exists. */
-function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, posterScale = 1 }) {
-  if (src) {
-    return (
-      <video
-        src={src}
-        poster={poster}
-        controls
-        playsInline
-        preload="metadata"
-        className="block w-full"
-        style={{ aspectRatio: aspect, objectFit: "contain", background: POSTER_BG }}
-      />
-    );
-  }
+/* The dressed poster: hero art + faint scrim + centre play affordance +
+ * (desktop) fake control bar. Fills whatever positioned frame it sits in. */
+function PosterLayer({ poster, fit, posterScale, controls, children }) {
   return (
-    <div className="relative w-full overflow-hidden" style={{ aspectRatio: aspect, background: POSTER_BG }}>
+    <>
       <img
         src={poster}
         alt="Romi app demo: brain dump, tasks, routines and regulate"
@@ -155,13 +149,62 @@ function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, po
       />
       {/* Faint dark overlay */}
       <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.10)" }} />
-      {/* Centre play — video not ready yet, so it explains itself on click. */}
-      <div className="absolute inset-0 grid place-items-center">
-        <ClickTooltip label="Video under construction - come back soon!">
-          <PlayButton />
-        </ClickTooltip>
-      </div>
+      <div className="absolute inset-0 grid place-items-center">{children}</div>
       {controls && <ControlBar />}
+    </>
+  );
+}
+
+/* Poster dressed as a paused player; with a src, play swaps in the real video. */
+function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, posterScale = 1, playingAspect }) {
+  const videoRef = useRef(null);
+  const [playing, setPlaying] = useState(false);
+
+  // No video yet: the play button explains itself on click.
+  if (!src) {
+    return (
+      <div className="relative w-full overflow-hidden" style={{ aspectRatio: aspect, background: POSTER_BG }}>
+        <PosterLayer poster={poster} fit={fit} posterScale={posterScale} controls={controls}>
+          <ClickTooltip label="Video under construction - come back soon!">
+            <PlayButton />
+          </ClickTooltip>
+        </PosterLayer>
+      </div>
+    );
+  }
+
+  // play() fires inside the click handler so browsers allow sound.
+  const start = () => {
+    setPlaying(true);
+    videoRef.current?.play();
+  };
+
+  return (
+    <div
+      className="relative w-full overflow-hidden"
+      style={{ aspectRatio: playing && playingAspect ? playingAspect : aspect, background: POSTER_BG }}
+    >
+      <video
+        ref={videoRef}
+        src={src}
+        controls={playing}
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 h-full w-full"
+        style={{ objectFit: "contain" }}
+      />
+      {!playing && (
+        <button
+          type="button"
+          onClick={start}
+          aria-label="Play the Romi demo video"
+          className="absolute inset-0 block w-full cursor-pointer"
+        >
+          <PosterLayer poster={poster} fit={fit} posterScale={posterScale} controls={controls}>
+            <PlayButton />
+          </PosterLayer>
+        </button>
+      )}
     </div>
   );
 }
@@ -174,12 +217,6 @@ export function RomiInAction({
   posterMobile = POSTER_MOBILE,
   srcDesktop = videoSrcDesktop,
   srcMobile = videoSrcMobile,
-  // True ratio of the video files. All three live demos are 2160x2160.
-  aspect = "1 / 1",
-  // Desktop cap for the player card. A square video across the full 1500px
-  // rail would tower past the viewport, so it sits centred at a width that
-  // stays fully on screen (2160px source keeps it crisp on retina).
-  playerMaxWidth = 720,
   // Landing default: flat beige. Other pages override to fit their band rhythm.
   sectionClassName = "relative bg-[var(--romi-beige)] pt-12 pb-24 md:pt-14 md:pb-32",
 }) {
@@ -192,44 +229,36 @@ export function RomiInAction({
         </div>
       </Container>
 
-      {/* Player rail: breaks past the 1180px content column, inset only by the
-          page gutter, capped at 1500px. */}
+      {/* Video breaks past the 1180px content column so the demo lands big and
+          in-your-face. Capped at 1500px, inset only by the page gutter. */}
       <div className="mx-auto max-w-[1500px] px-[var(--romi-page-gutter)]">
-        {/* Desktop */}
+        {/* Desktop: Safari frame. The square demo plays centred inside the
+            3:2 window on the poster wash. */}
         <div className="hidden md:block">
-          {srcDesktop ? (
-            /* Real video: rounded player card at the video's own ratio. No
-               Safari chrome - the demo edit brings its own framing. */
-            <div className="mx-auto" style={{ maxWidth: playerMaxWidth }}>
-              <div className="overflow-hidden rounded-[22px] border border-[#e0e0e0] bg-white shadow-[0_34px_70px_-42px_rgb(20_8_40_/_0.38),0_0_0_1px_rgb(0_0_0_/_0.06)]">
-                <VideoOrPoster src={srcDesktop} poster={posterDesktop} aspect={aspect} />
-              </div>
-            </div>
-          ) : (
-            /* Poster mode: the original full-width Safari frame. */
-            <SafariFrame>
-              <VideoOrPoster
-                src={null}
-                poster={posterDesktop}
-                aspect="3 / 2"
-                fit="cover"
-                posterScale={0.87}
-                controls
-              />
-            </SafariFrame>
-          )}
+          <SafariFrame>
+            <VideoOrPoster
+              src={srcDesktop}
+              poster={posterDesktop}
+              aspect="3 / 2"
+              fit="cover"
+              posterScale={0.87}
+              controls
+            />
+          </SafariFrame>
         </div>
 
-        {/* Mobile: clean rounded card filling the gutter width. Square video
-            is a natural fit on a portrait screen. */}
+        {/* Mobile: a clean rounded landscape card (no phone frame - the hero
+            composition is landscape and looks lost inside a portrait phone).
+            On play the card grows to 1:1 so the square video fills its width. */}
         <div className="md:hidden">
           <div className="overflow-hidden rounded-[22px] border border-[#e6e6e6] shadow-[0_24px_50px_-30px_rgb(20_8_40_/_0.35)]">
             <VideoOrPoster
               src={srcMobile}
               poster={posterMobile}
-              aspect={srcMobile ? aspect : "3 / 2"}
+              aspect="3 / 2"
               fit="cover"
               controls={false}
+              playingAspect="1 / 1"
             />
           </div>
         </div>
