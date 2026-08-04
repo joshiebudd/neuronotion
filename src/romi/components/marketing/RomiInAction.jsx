@@ -36,6 +36,7 @@ const POSTER_MOBILE = "/romi/landing/demo/landing-hero-poster.svg";
 const POSTER_BG = "#f4f4f6";
 
 const SPEEDS = [1, 1.25, 1.5, 2];
+const DEFAULT_RATE = 1.25;
 
 function fmt(t) {
   const total = Number.isFinite(t) ? Math.max(0, Math.floor(t)) : 0;
@@ -265,7 +266,7 @@ function VideoOrPoster({
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
   const [muted, setMuted] = useState(false);
-  const [rate, setRate] = useState(1);
+  const [rate, setRate] = useState(DEFAULT_RATE);
   const [airplayOk, setAirplayOk] = useState(false);
 
   // Safari fires this when an AirPlay target exists; everywhere else the
@@ -295,9 +296,12 @@ function VideoOrPoster({
   const start = () => {
     setStarted(true);
     onStartedChange?.(true);
+    const v = videoRef.current;
+    if (!v) return;
     // Metadata can land before hydration attaches the event listener.
-    if (videoRef.current?.duration) setDuration(videoRef.current.duration);
-    videoRef.current?.play();
+    if (v.duration) setDuration(v.duration);
+    v.playbackRate = rate;
+    v.play();
   };
   const toggle = () => {
     const v = videoRef.current;
