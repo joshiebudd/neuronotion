@@ -20,6 +20,10 @@ const VSL_URL = null;
 const HERO_IMAGE = "/romi/workshop/hero.jpg";
 const SITE = "https://www.romiadhd.com";
 
+// Shown under the Save my seat button. Lower it by hand as registrations come
+// in; the live call is capped at 100 on the current Zoom plan.
+const SEATS_REMAINING = 30;
+
 // 2pm UK on the day = 13:00 UTC (BST).
 const WORKSHOP_START_ISO = "2026-09-09T13:00:00Z";
 
@@ -96,6 +100,50 @@ function useLocalEventLabels() {
 }
 
 /*
+ * Live countdown to 2pm UK on the day. Server renders placeholders; the
+ * client fills and ticks every second.
+ */
+function Countdown({ className = "" }) {
+  const [t, setT] = useState(null);
+  useEffect(() => {
+    const target = new Date(WORKSHOP_START_ISO).getTime();
+    const tick = () => {
+      const diff = Math.max(0, target - Date.now());
+      setT({
+        d: Math.floor(diff / 86400000),
+        h: Math.floor(diff / 3600000) % 24,
+        m: Math.floor(diff / 60000) % 60,
+        s: Math.floor(diff / 1000) % 60,
+      });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+  const cells = [
+    [t?.d, "days"],
+    [t?.h, "hrs"],
+    [t?.m, "min"],
+    [t?.s, "sec"],
+  ];
+  return (
+    <div className={`flex flex-wrap items-center gap-2.5 ${className}`}>
+      {cells.map(([value, label]) => (
+        <div
+          key={label}
+          className="grid min-w-[64px] place-items-center rounded-[var(--romi-radius-md)] bg-white/15 px-3 py-2.5 text-white"
+        >
+          <span className="text-2xl font-bold leading-none tabular-nums">{value ?? "-"}</span>
+          <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/75">
+            {label}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/*
  * The two event badges (date + local time). onDark restyles them for the
  * purple registration card.
  */
@@ -151,8 +199,8 @@ function Hero() {
             <span style={{ color: "var(--romi-indigo)" }}>Unlocking your hidden superstars.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-[560px] text-[clamp(1.1rem,1.5vw,1.3rem)] font-medium leading-[1.6] text-[var(--romi-color-ink-muted)]">
-            1 in 5 of your people are neurodivergent. Join Tom Crawford and Josh Budd for 40 minutes
-            on how to get the best from them.
+            One in five of your team are neurodivergent, but do you know how to get the most out of
+            them without wasting time or money? This workshop will show you how.
           </p>
           <EventBadges className="mt-6 justify-center" />
           <div className="mt-9">
@@ -407,7 +455,8 @@ function Register() {
               <h2 className="text-[clamp(2rem,3.6vw,2.9rem)] font-bold leading-[1.08] tracking-[-0.01em]">
                 Save your seat
               </h2>
-              <ul className="mt-6 space-y-3.5">
+              <Countdown className="mt-6" />
+              <ul className="mt-7 space-y-3.5">
                 {formPerks.map((perk) => (
                   <li key={perk} className="flex items-start gap-3">
                     <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-white/20">
@@ -469,7 +518,7 @@ function Register() {
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
                       <label htmlFor="ws-company" className="mb-1.5 block text-sm font-bold text-[var(--romi-color-ink)]">
-                        Company <span className="font-medium text-[var(--romi-color-ink-soft)]">(optional)</span>
+                        Company
                       </label>
                       <input
                         id="ws-company"
@@ -482,7 +531,7 @@ function Register() {
                     </div>
                     <div>
                       <label htmlFor="ws-role" className="mb-1.5 block text-sm font-bold text-[var(--romi-color-ink)]">
-                        Role <span className="font-medium text-[var(--romi-color-ink-soft)]">(optional)</span>
+                        Role
                       </label>
                       <input
                         id="ws-role"
@@ -511,6 +560,13 @@ function Register() {
                   <Button type="submit" size="xl" className="w-full" disabled={status === "sending"}>
                     {status === "sending" ? "Saving your seat..." : "Save my seat"}
                   </Button>
+                  <p className="flex items-center justify-center gap-2 text-sm font-semibold text-[var(--romi-color-ink)]">
+                    <span className="relative flex h-2 w-2">
+                      <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[var(--romi-honey)] opacity-75" />
+                      <span className="relative inline-flex h-2 w-2 rounded-full bg-[var(--romi-honey)]" />
+                    </span>
+                    Only {SEATS_REMAINING} seats remaining
+                  </p>
                   <p className="text-center text-[13px] leading-relaxed text-[var(--romi-color-ink-muted)]">
                     We&apos;ll only use your details for this workshop. No mailing lists, no follow-up
                     sequences.
