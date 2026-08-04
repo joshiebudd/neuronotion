@@ -199,6 +199,9 @@ function VideoOrPoster({ src, poster, aspect, fit = "cover", controls = true, po
           onClick={start}
           aria-label="Play the Romi demo video"
           className="absolute inset-0 block w-full cursor-pointer"
+          /* Opaque: the poster art is partly transparent, and without this the
+             video's first frame bleeds through it instead of the wash. */
+          style={{ background: POSTER_BG }}
         >
           <PosterLayer poster={poster} fit={fit} posterScale={posterScale} controls={controls}>
             <PlayButton />
