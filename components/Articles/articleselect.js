@@ -334,6 +334,13 @@ const ArticleSelect = () => {
                 image="https://images.pexels.com/photos/1126375/pexels-photo-1126375.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 slug="rejection-sensitive-dysphoria-adhd"
               />
+              <BlogCard
+                date="Aug 5, 2026"
+                CardTitle="ADHD Task Paralysis: How to Get Unstuck When You Can&apos;t Start"
+                CardDescription="Frozen and unable to start, even on things you care about? That is ADHD task paralysis. Here is what it is, why it happens, and how to get moving again."
+                image="https://images.pexels.com/photos/32959283/pexels-photo-32959283.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                slug="adhd-task-paralysis"
+              />
             </div>
           </Container>
         </section>
