@@ -341,6 +341,13 @@ const ArticleSelect = () => {
                 image="https://images.pexels.com/photos/32959283/pexels-photo-32959283.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 slug="adhd-task-paralysis"
               />
+              <BlogCard
+                date="Aug 6, 2026"
+                CardTitle="Should I Tell My Employer I Have ADHD? How to Decide and Disclose Well"
+                CardDescription="You are not legally required to disclose ADHD at work. Here is how to weigh the real risks and benefits, your rights under the Equality Act 2010, and how to tell your boss well if you choose to."
+                image="https://images.pexels.com/photos/7433930/pexels-photo-7433930.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                slug="should-i-tell-my-employer-i-have-adhd"
+              />
             </div>
           </Container>
         </section>
