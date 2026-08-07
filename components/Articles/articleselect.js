@@ -348,6 +348,13 @@ const ArticleSelect = () => {
                 image="https://images.pexels.com/photos/7433930/pexels-photo-7433930.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 slug="should-i-tell-my-employer-i-have-adhd"
               />
+              <BlogCard
+                date="Aug 7, 2026"
+                CardTitle="Neurodivergent and Starting Your First Job? How to Keep the Support You Had at University"
+                CardDescription="At university you get extra time, mentors and recorded lectures. Then your first job starts and the support vanishes. Here is how to close that gap, for graduates and the employers hiring them."
+                image="https://images.pexels.com/photos/274778/pexels-photo-274778.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                slug="neurodivergent-graduate-first-job"
+              />
             </div>
           </Container>
         </section>
