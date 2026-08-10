@@ -110,8 +110,8 @@ function registrantEmailHtml({ name, zoomUrl }) {
           ? `<div style="text-align: center; margin: 24px 0;">
               <a href="${zoomUrl}" style="display: inline-block; background: #8659c2; color: #ffffff; padding: 13px 32px; border-radius: 16px; text-decoration: none; font-weight: 600; font-size: 15px;">Join the Zoom on the day</a>
             </div>
-            <p style="font-size: 13px; color: #6b6577; line-height: 1.6; margin: 0 0 8px;">This email doubles as your calendar invite, so the workshop (with the Zoom link) should appear on your calendar automatically. Accept it and you're set.</p>`
-          : `<p style="font-size: 14px; color: #6b6577; line-height: 1.6; margin: 0 0 8px;">This email doubles as your calendar invite, so the workshop should appear on your calendar automatically. The Zoom joining link will follow by email before the day.</p>`
+            <p style="font-size: 13px; color: #6b6577; line-height: 1.6; margin: 0 0 8px;">A calendar invitation with the Zoom link will land in this inbox shortly. Accept it and you're set.</p>`
+          : `<p style="font-size: 14px; color: #6b6577; line-height: 1.6; margin: 0 0 8px;">A calendar invitation will land in this inbox shortly, and the Zoom joining link will follow before the day.</p>`
       }
       <p style="font-size: 13px; color: #6b6577; margin: 20px 0 0;">See you there. Bring your questions.<br/>Josh and Tom</p>
     </div>
@@ -128,7 +128,7 @@ function registrantEmailText({ name, zoomUrl }) {
     `${EVENT.dateLabel}, ${EVENT.timeLabel}, live on Zoom.`,
     zoomUrl ? `Join link: ${zoomUrl}` : 'The Zoom joining link will follow by email before the day.',
     '',
-    'This email doubles as your calendar invite, so the workshop should appear on your calendar automatically.',
+    'A calendar invitation with the joining details will land in this inbox shortly.',
     '',
     'See you there. Bring your questions.',
     'Josh and Tom',
