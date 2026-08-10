@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Calendar, Check, Clock, Compass, Heart, Play, TrendingUp, Users } from "lucide-react";
 import { Button, Container, RomiCharacter, RomiPage } from "../src/romi";
 
@@ -217,7 +217,20 @@ function Hero() {
 function Vsl() {
   const isMp4 = typeof VSL_URL === "string" && VSL_URL.endsWith(".mp4");
   const [playing, setPlaying] = useState(false);
+  const [tipVisible, setTipVisible] = useState(false);
+  const tipTimer = useRef(null);
+  useEffect(() => () => clearTimeout(tipTimer.current), []);
   const showEmbed = VSL_URL && !isMp4;
+
+  function onPosterClick() {
+    if (isMp4) {
+      setPlaying(true);
+      return;
+    }
+    setTipVisible(true);
+    clearTimeout(tipTimer.current);
+    tipTimer.current = setTimeout(() => setTipVisible(false), 2200);
+  }
   return (
     <section className="bg-[var(--romi-color-bg)] pb-6 pt-12 md:pt-16">
       <Container>
@@ -236,7 +249,7 @@ function Vsl() {
             ) : HERO_IMAGE ? (
               <button
                 type="button"
-                onClick={() => (isMp4 ? setPlaying(true) : null)}
+                onClick={onPosterClick}
                 className="group relative block h-full w-full"
                 aria-label={isMp4 ? "Play the workshop introduction" : "Workshop introduction video coming soon"}
               >
@@ -252,6 +265,14 @@ function Vsl() {
                   <span className="grid h-16 w-16 place-items-center rounded-full bg-white/95 shadow-[var(--romi-shadow-lg)] transition-transform group-hover:scale-105 md:h-20 md:w-20">
                     <Play className="ml-1 h-7 w-7 text-[var(--romi-indigo)] md:h-8 md:w-8" fill="currentColor" />
                   </span>
+                </span>
+                <span
+                  aria-hidden={!tipVisible}
+                  className={`pointer-events-none absolute left-1/2 top-[calc(50%-72px)] -translate-x-1/2 whitespace-nowrap rounded-full bg-[var(--romi-charcoal)]/90 px-4 py-2 text-sm font-semibold text-white shadow-[var(--romi-shadow-md)] transition-opacity duration-200 ${
+                    tipVisible ? "opacity-100" : "opacity-0"
+                  }`}
+                >
+                  Video overview coming soon
                 </span>
               </button>
             ) : (
@@ -365,12 +386,14 @@ function Hosts() {
         </div>
         <div className="mx-auto mt-10 grid max-w-[820px] gap-4 md:grid-cols-2">
           <div className="flex items-start gap-4 rounded-[var(--romi-radius-xl)] bg-white p-6 shadow-[var(--romi-shadow-sm)]">
-            <span
-              className="grid h-16 w-16 shrink-0 place-items-center rounded-full text-xl font-bold text-[var(--romi-indigo)]"
-              style={{ background: "var(--romi-purple-pale)" }}
-            >
-              TC
-            </span>
+            <Image
+              src="/romi/team/tom.jpg"
+              alt="Tom Crawford"
+              width={128}
+              height={128}
+              quality={95}
+              className="h-16 w-16 shrink-0 rounded-full object-cover"
+            />
             <div>
               <h3 className="text-[1.1rem] font-bold text-[var(--romi-color-ink)]">Tom Crawford</h3>
               <p className="text-sm font-semibold text-[var(--romi-indigo)]">CEO, The Brain Miner</p>
@@ -393,7 +416,8 @@ function Hosts() {
               <h3 className="text-[1.1rem] font-bold text-[var(--romi-color-ink)]">Josh Budd</h3>
               <p className="text-sm font-semibold text-[var(--romi-indigo)]">CEO, Romi</p>
               <p className="mt-2 text-[15px] leading-relaxed text-[var(--romi-color-ink-muted)]">
-                Building Romi, the personal ADHD companion. Made by ADHD brains, for ADHD brains.
+                Building Romi, the personal companion that helps neurodivergent people thrive at
+                work. Made by a neurodivergent team.
               </p>
             </div>
           </div>
@@ -441,14 +465,14 @@ function Register() {
     <section id="register" className="bg-[var(--romi-color-bg)] py-16 md:py-24">
       <Container>
         <div
-          className="relative overflow-hidden rounded-[var(--romi-radius-2xl)] px-6 py-10 md:px-12 md:py-14"
+          className="relative overflow-hidden rounded-[var(--romi-radius-2xl)] px-6 py-10 md:px-12 md:pb-14 md:pt-24"
           style={{ background: "var(--romi-gradient-purple-indigo)" }}
         >
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-2xl"
           />
-          <EventBadges onDark className="absolute right-6 top-6 hidden md:flex" />
+          <EventBadges onDark className="absolute right-6 top-6 hidden md:right-12 md:top-8 md:flex" />
           <div className="relative grid items-center gap-10 lg:grid-cols-[1fr_1fr]">
             <div className="text-white">
               <EventBadges onDark className="mb-5 md:hidden" />
