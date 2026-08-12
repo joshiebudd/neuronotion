@@ -33,10 +33,9 @@ export default function CheckInsDocs() {
         questions covering your anxiety, sleep, medication, mood and
         anything else affecting your day; the mood question is optional, so
         tap <strong>Skip mood logging</strong> if you would rather not
-        answer it. Your answers are saved to your logs and included in your
-        trends in <Link href="/docs/analytics">Analytics</Link>. If they
-        suggest you could use one, Romi offers a matching Regulate protocol
-        to start straight away.
+        answer it. Your answers are saved to your logs, so you can look back
+        on how you have been doing. If they suggest you could use one, Romi
+        offers a matching Regulate protocol to start straight away.
       </p>
       <Callout type="tip">
         <p>
@@ -91,8 +90,7 @@ export default function CheckInsDocs() {
           <strong>Regulate</strong> page. Tap the history icon next to{" "}
           <strong>Protocols</strong>, then filter by{" "}
           <strong>Daily Check-Ins</strong>, <strong>Journals</strong> or{" "}
-          <strong>Moods</strong>. Check-in scores also appear in your charts
-          in <Link href="/docs/analytics">Analytics</Link>.
+          <strong>Moods</strong>.
         </p>
       </DocsAccordion>
       <DocsAccordion title="Can I add my own emotions?">

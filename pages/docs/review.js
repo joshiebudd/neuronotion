@@ -33,16 +33,15 @@ export default function ReviewDocs() {
         <strong>Review</strong> tab shows how many tasks are waiting.
       </p>
       <p>
-        A task joins the queue when its deadline or its Do Day has passed.
-        Completed, archived and <strong>Someday</strong> tasks never appear
-        here.
+        A task joins the queue when its Do Day has passed. Completed,
+        archived and <strong>Someday</strong> tasks never appear here.
       </p>
 
       <h2 id="review-one-by-one">Review one by one</h2>
       <ol className="docs-steps">
         <li>
           Tap the <strong>Review</strong> tab to open the queue. The first
-          card shows the task and the date it was originally due.
+          card shows the task and the day it was originally scheduled for.
         </li>
         <li>
           Tap <strong>Reschedule</strong> and choose <strong>Today</strong>,{" "}
@@ -69,10 +68,9 @@ export default function ReviewDocs() {
       </p>
       <Callout type="note">
         <p>
-          Rescheduling a task from its card moves its Do Day, and if its
-          deadline has passed the deadline moves to the same date too, so the
-          task stops counting as overdue. Do Days and deadlines are explained
-          in <Link href="/docs/tasks">Your to-do list</Link>.
+          Rescheduling a task from its card moves its Do Day, so it stops
+          counting as overdue. Do Days are explained in{" "}
+          <Link href="/docs/tasks">Your to-do list</Link>.
         </p>
       </Callout>
 

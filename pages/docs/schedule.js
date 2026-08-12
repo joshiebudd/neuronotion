@@ -76,11 +76,11 @@ export default function ScheduleDocs() {
       </p>
 
       <h2 id="good-to-know">Good to know</h2>
-      <DocsAccordion title="Does scheduling a task change its do date?">
+      <DocsAccordion title="Does scheduling a task change its Do Day?">
         <p>
-          Placing a task on a day sets when you plan to work on it. Its
-          deadline, if it has one, stays where it is. The difference between
-          the two is explained in <Link href="/docs/tasks">Your to-do list</Link>.
+          Yes. Dragging a task onto a day sets its <strong>Do Day</strong> to
+          that day, the same as picking a date when you create it. See{" "}
+          <Link href="/docs/tasks">Your to-do list</Link>.
         </p>
       </DocsAccordion>
       <DocsAccordion title="Can I see my Google Calendar events here?">

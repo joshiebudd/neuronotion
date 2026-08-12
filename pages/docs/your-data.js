@@ -130,9 +130,9 @@ export default function YourDataDocs() {
       </DocsAccordion>
       <DocsAccordion title="Who do I contact about privacy?">
         <p>
-          Email <a href="mailto:dpo@romiadhd.com">dpo@romiadhd.com</a> with any
-          question about your personal data, including anything the export and
-          deletion tools do not cover.
+          Email <a href="mailto:josh@romiadhd.com">josh@romiadhd.com</a> with
+          any question about your personal data, including anything the
+          export and deletion tools do not cover.
         </p>
       </DocsAccordion>
     </DocsArticle>

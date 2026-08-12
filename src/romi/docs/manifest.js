@@ -30,7 +30,7 @@ export const DOCS_CATEGORIES = [
       {
         slug: "tasks",
         title: "Your to-do list",
-        description: "Tabs, do dates vs deadlines, priorities, repeating tasks and archiving.",
+        description: "Tabs, Do Days, priorities, repeating tasks and archiving.",
       },
       {
         slug: "task-breakdown",
@@ -86,11 +86,6 @@ export const DOCS_CATEGORIES = [
         slug: "notes",
         title: "Notes",
         description: "Capture notes, organise them into folders, and search everything.",
-      },
-      {
-        slug: "analytics",
-        title: "Analytics",
-        description: "What each chart means and how to find patterns in your data.",
       },
     ],
   },

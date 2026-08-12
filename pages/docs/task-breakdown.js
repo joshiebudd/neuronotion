@@ -1,6 +1,5 @@
 import { DocsArticle } from "../../src/romi";
 import Link from "next/link";
-import { Callout } from "../../src/romi";
 import { DocsAccordion } from "../../src/romi";
 
 /*
@@ -53,14 +52,9 @@ export default function TaskBreakdownDocs() {
           edit it if needed.
         </li>
         <li>
-          Pick your <strong>Energy level</strong>: <strong>Low</strong>,{" "}
-          <strong>Medium</strong> or <strong>High</strong>. Romi takes it into
-          account when sizing the steps.
-        </li>
-        <li>
           Pick a <strong>Time frame</strong>, from <strong>Today</strong> up to{" "}
           <strong>1 Month</strong>, or tap <strong>Custom</strong> to set an
-          exact deadline.
+          exact date.
         </li>
         <li>
           Add anything useful under <strong>Add context</strong>: why you have
@@ -76,10 +70,6 @@ export default function TaskBreakdownDocs() {
         than a day, steps can also carry a suggested date so the work is spread
         across the days you have.
       </p>
-      <Callout type="tip">
-        <p>On a low energy day, Romi suggests smaller, easier steps.</p>
-      </Callout>
-
       <h2 id="edit-the-plan">Edit the plan</h2>
       <p>
         Nothing is saved until you choose to save. Tap the pencil on a step

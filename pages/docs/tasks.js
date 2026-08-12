@@ -12,7 +12,7 @@ import { DocsAccordion } from "../../src/romi";
 const sections = [
   { id: "the-tabs", label: "The tabs" },
   { id: "add-a-task", label: "Add a task" },
-  { id: "do-days-and-deadlines", label: "Do Days and deadlines" },
+  { id: "do-days", label: "Do Days" },
   { id: "good-to-know", label: "Good to know" },
 ];
 
@@ -99,20 +99,15 @@ export default function TasksDocs() {
         </p>
       </Callout>
 
-      <h2 id="do-days-and-deadlines">Do Days and deadlines</h2>
+      <h2 id="do-days">Do Days</h2>
       <p>
-        A task can carry two dates. Its <strong>Do Day</strong> is the day you
-        plan to work on it. That is what the <strong>When</strong> pills set
-        and what shows on the right of each task row. Change it anytime.
+        A task&apos;s <strong>Do Day</strong> is the day you plan to work on
+        it. That is what the <strong>When</strong> pills set and what shows
+        on the right of each task row. Change it anytime.
       </p>
       <p>
-        A deadline is the day the task is due. Romi records deadlines when it
-        creates tasks for you, for example when you{" "}
-        <Link href="/docs/talk-to-romi">talk to it</Link> or use a task
-        breakdown with a due date attached. Today and This week check both
-        dates, so a task appears if either date falls in the window. If
-        either date passes with the task unfinished, it appears in{" "}
-        <strong>Review</strong>.
+        If a task&apos;s Do Day passes and it is still not done, it moves
+        into <strong>Review</strong>.
       </p>
 
       <h2 id="good-to-know">Good to know</h2>
