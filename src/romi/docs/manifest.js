@@ -15,17 +15,12 @@ export const DOCS_CATEGORIES = [
       {
         slug: "getting-started",
         title: "Start here",
-        description: "What Romi is and the first five things to do after signing up.",
+        description: "What Romi is and a few things to try after signing up.",
       },
       {
         slug: "talk-to-romi",
         title: "Talking to Romi",
-        description: "Voice conversations, Turn-taking mode, and switching to chat.",
-      },
-      {
-        slug: "brain-dump",
-        title: "Brain dumps",
-        description: "Type or speak everything on your mind and let Romi organise it.",
+        description: "Talk or type about anything and let Romi sort it into tasks, routines, notes and more.",
       },
     ],
   },

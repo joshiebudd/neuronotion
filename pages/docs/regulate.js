@@ -49,21 +49,21 @@ export default function RegulateDocs() {
         </li>
       </ol>
       <p>
-        Each exercise shows the technique behind it, so{" "}
-        <strong>Rapid Calm</strong> also tells you it uses the Physiological
-        Sigh. On desktop, tapping a category opens its exercises in a grid; on
-        mobile, the category expands in place.
+        Each exercise also shows the technique behind it, for example{" "}
+        <strong>Rapid Calm</strong> is built on the{" "}
+        <strong>Physiological Sigh</strong>. On desktop, tapping a category
+        opens its exercises in a grid; on mobile, the category expands in
+        place.
       </p>
 
       <h2 id="help-me-regulate">Help me regulate</h2>
       <p>
         At the top of the page, tap the card that says{" "}
-        <strong>Feeling off? Let me guide you.</strong> The{" "}
-        <strong>Help me regulate</strong> panel opens. Describe how you feel in
-        your own words, then tap <strong>Find my protocol</strong>. Romi
-        suggests an exercise to match, explains its choice under{" "}
-        <strong>Why we picked this</strong>, and you begin with{" "}
-        <strong>Start this protocol</strong>.
+        <strong>Feeling off? Let me guide you.</strong> Describe how you feel
+        in your own words, then tap <strong>Find my protocol</strong>. Romi
+        suggests a matching exercise and explains its choice under{" "}
+        <strong>Why we picked this</strong>; tap{" "}
+        <strong>Start this protocol</strong> to begin.
       </p>
       <Callout type="tip">
         <p>

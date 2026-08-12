@@ -4,15 +4,19 @@ import { Callout } from "../../src/romi";
 import { DocsAccordion } from "../../src/romi";
 
 /*
- * Docs: voice conversations with Romi. Registered in src/romi/docs/manifest.js
- * under Getting started. Section ids must match the `sections` prop for the
- * on-this-page rail to highlight correctly.
+ * Docs: talking to Romi, by voice or by typing. Registered in
+ * src/romi/docs/manifest.js under Getting started. Merges what used to be two
+ * articles (voice conversations and text "brain dumps") into one, since both
+ * are the same underlying conversation with a different input mode. Section
+ * ids must match the `sections` prop for the on-this-page rail to highlight
+ * correctly.
  */
 
 const sections = [
-  { id: "start-a-conversation", label: "Start a conversation" },
+  { id: "start-talking", label: "Start talking" },
+  { id: "what-it-can-do", label: "What it can do" },
   { id: "turn-taking-mode", label: "Turn-taking mode" },
-  { id: "ending-a-conversation", label: "Ending a conversation" },
+  { id: "review-and-save", label: "Review and save" },
   { id: "good-to-know", label: "Good to know" },
 ];
 
@@ -20,49 +24,68 @@ export default function TalkToRomiDocs() {
   return (
     <DocsArticle slug="talk-to-romi" sections={sections}>
       <p className="docs-lead">
-        Tap <strong>Speak</strong> on the Home page to have a live voice
-        conversation with Romi: say whatever is on your mind and it turns
-        what you say into tasks, routines, notes and mood logs while you talk.
+        Talk or type to Romi about whatever is on your mind. There is no set
+        script: it listens, then turns what you say into tasks, routines,
+        notes, mood logs or a Regulate exercise, whichever fits.
       </p>
 
-      <h2 id="start-a-conversation">Start a conversation</h2>
+      <h2 id="start-talking">Start talking</h2>
       <ol className="docs-steps">
         <li>
-          On the Home page, find the Romi card that asks how it can help
+          On the Home page, tap the Romi card that asks how it can help
           today.
         </li>
         <li>
-          Tap <strong>Speak</strong>. The <strong>Talk to Romi</strong> window
-          opens.
+          Tap <strong>Speak</strong> to talk out loud, or <strong>Type</strong>{" "}
+          to write instead. Both open the same kind of conversation.
         </li>
-        <li>Press the mic when you&apos;re ready, then start talking.</li>
+        <li>
+          Say or type whatever is on your mind, in any order. Plans, worries,
+          a task, half-formed ideas all work.
+        </li>
+        <li>
+          When you are done, tap <strong>I&apos;m finished</strong> (voice) or{" "}
+          <strong>Organize Thought</strong> (text).
+        </li>
       </ol>
-      <p>
-        If you&apos;re not sure what to say, the window cycles through example
-        openers, like{" "}
-        <em>Help me plan tomorrow</em> or{" "}
-        <em>Set up a morning routine for me</em>. Plans, worries and
-        half-formed ideas all work. As you speak, cards appear in the window:
-        tasks with dates, new routines and their steps, notes and mood logs.
-        If it sounds like a breathing or grounding exercise would help, Romi
-        suggests one, and you can tap <strong>Try it in Regulate</strong> to
-        open it.
-      </p>
+      <Callout type="tip">
+        <p>
+          Not sure where to start? The voice window suggests openers like{" "}
+          <em>Help me plan tomorrow</em>. When typing, you can paste in
+          something messy, like meeting notes, instead of writing from
+          scratch.
+        </p>
+      </Callout>
       <Callout type="note">
         <p>
-          The first time you use an AI feature, a screen called{" "}
-          <strong>Before you use Romi&apos;s AI</strong> explains that what you
-          say is sent to third-party AI services, and asks for your consent.
-          More detail in <Link href="/docs/your-data">Your data &amp; privacy</Link>.
+          The first time you use an AI feature, Romi asks you to agree that
+          your input is sent to a third-party AI service. More in{" "}
+          <Link href="/docs/your-data">Your data &amp; privacy</Link>.
         </p>
       </Callout>
 
+      <h2 id="what-it-can-do">What it can do</h2>
+      <p>Ask for anything. Romi works out what you need and does it:</p>
+      <ul>
+        <li>Add or update tasks, with dates</li>
+        <li><Link href="/docs/task-breakdown">Break a big task</Link> into smaller steps</li>
+        <li>Build or adjust a routine</li>
+        <li>Suggest a <Link href="/docs/regulate">Regulate</Link> exercise for how you are feeling</li>
+        <li>Save a note</li>
+        <li>Log your mood</li>
+      </ul>
+      <p>
+        Each one appears as a card in the window as you talk or type, so you
+        can see what Romi is doing as it happens.
+      </p>
+
       <h2 id="turn-taking-mode">Turn-taking mode</h2>
       <p>
-        Turn-taking mode is on by default. Romi stays quiet while you think:
-        the status chip reads <strong>Your turn</strong> and the line under the
-        mic says <em>Take your time. Pauses are fine</em>. When you want a
-        reply, tap the send arrow.
+        In a voice conversation, Turn-taking mode is on by default: Romi stays
+        quiet while you think. The status chip reads <strong>Your
+        turn</strong> and the line under the mic says{" "}
+        <em>Take your time. Pauses are fine</em>. When you want a reply, tap
+        the send arrow.
       </p>
       <p>
         To have Romi reply whenever you pause instead, tap{" "}
@@ -71,26 +94,20 @@ export default function TalkToRomiDocs() {
         next time.
       </p>
 
-      <h2 id="ending-a-conversation">Ending a conversation</h2>
+      <h2 id="review-and-save">Review and save</h2>
       <p>
-        Tap <strong>I&apos;m finished</strong> and Romi shows you everything
-        it organised. If you close the window mid-call, it asks{" "}
-        <strong>End the conversation?</strong> first, with the options{" "}
-        <strong>Keep talking</strong> and <strong>End and review</strong>.
-        Either way, everything you said is already saved.
+        When you finish, Romi shows you everything it made. Tap the pencil
+        icon on anything to edit it, or the bin icon to remove it. Everything
+        saves as Romi creates it, not just at the end, so delete anything you
+        do not want before you close the window.
       </p>
       <p>
-        A conversation lasts up to 10 minutes. A warning appears 60 seconds
-        before it ends, and everything still saves. To keep going, tap{" "}
-        <strong>Add one more thing</strong> on the recap screen and a new
-        conversation starts.
+        A voice conversation lasts up to 10 minutes, with a warning 60 seconds
+        before it ends. To keep going, tap <strong>Add one more
+        thing</strong> on the recap screen and a new conversation starts.
+        Typing has a 2,000 character limit per dump; if you have more to say,
+        save what you have and start another.
       </p>
-      <Callout type="tip">
-        <p>
-          To type instead, tap <strong>Type</strong> on the same Home page
-          card to do a <Link href="/docs/brain-dump">brain dump</Link> in text.
-        </p>
-      </Callout>
 
       <h2 id="good-to-know">Good to know</h2>
       <DocsAccordion title="Can I change Romi's voice?">
@@ -102,26 +119,26 @@ export default function TalkToRomiDocs() {
           away.
         </p>
       </DocsAccordion>
-      <DocsAccordion title="Can I switch to chat mid-conversation?">
+      <DocsAccordion title="I closed the window mid-call by mistake">
         <p>
-          Not yet. The <strong>Switch to chat</strong> button at the top of
-          the window opens a dialog for chat mode, which is coming soon. Tap{" "}
-          <strong>Stay in voice for now</strong> to continue.
+          Romi asks <strong>End the conversation?</strong> first, with the
+          options <strong>Keep talking</strong> and <strong>End and
+          review</strong>. Either way, everything you already said is saved.
         </p>
       </DocsAccordion>
       <DocsAccordion title="Do I need Romi Pro to talk to Romi?">
         <p>
-          Voice conversations are one of Romi&apos;s AI features, which are
-          part of <Link href="/docs/subscription">Romi Pro</Link>. Every new account
+          Talking to Romi is one of Romi&apos;s AI features, part of{" "}
+          <Link href="/docs/subscription">Romi Pro</Link>. Every new account
           starts with a free trial, so you can talk to Romi straight away.
         </p>
       </DocsAccordion>
       <DocsAccordion title="What happens if I bring up self-harm?">
         <p>
           Romi is a companion, and it cannot provide crisis support. If
-          suicidal thoughts or self-harm come up, the call ends straight away
-          and the app shows crisis helplines for your region. Please contact
-          one of them, or a professional you trust.
+          suicidal thoughts or self-harm come up, the conversation ends
+          straight away and the app shows crisis helplines for your region.
+          Please contact one of them, or a professional you trust.
         </p>
       </DocsAccordion>
     </DocsArticle>

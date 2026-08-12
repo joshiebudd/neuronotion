@@ -56,9 +56,9 @@ export default function GoogleCalendarDocs() {
       <h2 id="what-syncs">What syncs</h2>
       <p>
         With <strong>Enable task sync</strong> on, every task you schedule in
-        Romi is written to your Google Calendar. Only main tasks sync; subtasks
-        stay inside Romi. In the other direction, your Google events appear on
-        the Schedule page alongside your Romi blocks.
+        Romi is written to your Google Calendar. Only main tasks sync;
+        subtasks stay inside Romi. Your Google events also appear on the
+        Schedule page, alongside your Romi blocks.
       </p>
       <p>
         Tap a Google event in Romi to see its details. From there,{" "}
@@ -67,12 +67,6 @@ export default function GoogleCalendarDocs() {
         for an all-day event only the title can be edited, and edits to a
         repeating event apply to that occurrence only.
       </p>
-      <Callout type="tip">
-        <p>
-          Once connected, your Google events and your Romi tasks both show on
-          the Schedule page.
-        </p>
-      </Callout>
 
       <h2 id="multiple-accounts">Multiple accounts</h2>
       <p>

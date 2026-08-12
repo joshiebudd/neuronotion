@@ -39,14 +39,10 @@ export default function ReviewDocs() {
       </p>
 
       <h2 id="review-one-by-one">Review one by one</h2>
-      <p>
-        Overdue tasks appear as a stack of cards, one at a time, with a counter
-        like 1 of 6 above them.
-      </p>
       <ol className="docs-steps">
         <li>
-          Tap the <strong>Review</strong> tab. The first card shows the task
-          and the date it was originally due.
+          Tap the <strong>Review</strong> tab to open the queue. The first
+          card shows the task and the date it was originally due.
         </li>
         <li>
           Tap <strong>Reschedule</strong> and choose <strong>Today</strong>,{" "}
@@ -66,10 +62,10 @@ export default function ReviewDocs() {
         </li>
       </ol>
       <p>
-        After each decision the card leaves and the next one takes its place.
-        Use <strong>Previous</strong> and <strong>Next</strong> to look through
-        the queue before deciding anything, and tap a card to open the full
-        task.
+        After each decision the card leaves and the next one takes its
+        place. Use <strong>Previous</strong> and <strong>Next</strong> to
+        look through the queue before deciding anything, and tap a card to
+        open the full task.
       </p>
       <Callout type="note">
         <p>
@@ -87,11 +83,6 @@ export default function ReviewDocs() {
         day, with the same date options as a single task.{" "}
         <strong>Archive all</strong> archives everything in the queue, and Romi
         asks you to confirm before it does.
-      </p>
-      <p>
-        When the last card is gone you will see the{" "}
-        <strong>Review queue cleared</strong> screen, with a short confetti
-        animation.
       </p>
       <Callout type="tip">
         <p>

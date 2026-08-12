@@ -42,7 +42,7 @@ export default function RemindersDocs() {
           Tap the bell icon, labelled <strong>Set a reminder</strong>.
         </li>
         <li>
-          The bell fills in and the label changes to{" "}
+          Once set, the label changes to{" "}
           <strong>Reminder on, tap to turn off</strong>. Tap it again at any
           time to cancel.
         </li>

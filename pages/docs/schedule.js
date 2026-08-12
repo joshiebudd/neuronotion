@@ -26,8 +26,8 @@ export default function ScheduleDocs() {
 
       <h2 id="day-and-week-views">Day and Week views</h2>
       <p>
-        The page opens on <strong>Day</strong> view, a timeline of your day.
-        Switch to <strong>Week</strong> view to see the whole week at once.
+        The page opens on <strong>Day</strong> view. Switch to{" "}
+        <strong>Week</strong> view to see the whole week at once.
         Swipe left or right to move between days or weeks, use the month picker
         at the top to jump further, and tap <strong>Today</strong> to come
         straight back.

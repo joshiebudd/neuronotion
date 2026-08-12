@@ -44,11 +44,10 @@ export default function YourDataDocs() {
         </li>
       </ol>
       <p>
-        In the memory manager you can search everything Romi has saved, tap{" "}
-        <strong>Add memory</strong> to store something yourself, edit any
-        entry, or delete one. Before a delete, Romi shows you exactly what it
-        will forget and asks you to confirm. Deleting a memory can&apos;t be
-        undone.
+        You can search your memories, edit any entry, or tap{" "}
+        <strong>Add memory</strong> to store something yourself. Before a
+        delete, Romi shows you exactly what it will forget and asks you to
+        confirm. Deleting a memory can&apos;t be undone.
       </p>
       <Callout type="tip">
         <p>
@@ -59,13 +58,12 @@ export default function YourDataDocs() {
 
       <h2 id="ai-consent">AI features and consent</h2>
       <p>
-        The first time you use an AI feature (the voice assistant, Brain Dump,
-        task breakdown or journalling help), a screen called{" "}
-        <strong>Before you use Romi&apos;s AI</strong> appears. It explains
-        that these features send your input to third-party AI services. It
-        lists what is shared: only the text you type or the audio you speak in
-        an AI feature, plus the specific item you choose to process. It also
-        names each service and what it does.
+        The first time you use an AI feature, such as{" "}
+        <Link href="/docs/talk-to-romi">talking to Romi</Link>, breaking down
+        a task, or journalling help, a screen called{" "}
+        <strong>Before you use Romi&apos;s AI</strong> asks you to agree that
+        your input is sent to a third-party AI service before it can process
+        it.
       </p>
       <p>
         Tap <strong>Agree &amp; continue</strong> to switch AI features on, or{" "}
@@ -86,13 +84,11 @@ export default function YourDataDocs() {
           tab.
         </li>
         <li>
-          Tap <strong>Export your data</strong>. A summary shows what is
-          included and the estimated size.
+          Tap <strong>Export your data</strong>.
         </li>
         <li>
-          Tap <strong>Download my data (JSON)</strong>. Your tasks, routines,
-          journal entries, mood logs, notes and more download as a single JSON
-          file.
+          Tap <strong>Download my data (JSON)</strong> to download everything
+          as a single JSON file.
         </li>
       </ol>
       <p>To delete your account:</p>

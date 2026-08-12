@@ -42,8 +42,8 @@ export default function PromoCodesDocs() {
           Type your code into the <strong>Have a code?</strong> field.
         </li>
         <li>
-          Tap <strong>Apply code</strong>. A confirmation appears and PRO access
-          switches on straight away.
+          Tap <strong>Apply code</strong>. PRO access switches on straight
+          away.
         </li>
       </ol>
       <Callout type="tip">
@@ -56,10 +56,10 @@ export default function PromoCodesDocs() {
 
       <h2 id="while-active">While your code is active</h2>
       <p>
-        The <strong>Promo code</strong> section in <strong>Billing</strong> now
-        shows an <strong>Active</strong> badge, your code, and how long is left,
-        for example <strong>Expires in 12 days</strong>. Codes without an end
-        date show <strong>No expiration</strong>.
+        The <strong>Promo code</strong> section in <strong>Billing</strong>{" "}
+        shows an <strong>Active</strong> badge, your code, and how long is
+        left, for example <strong>Expires in 12 days</strong>. Codes without
+        an end date show <strong>No expiration</strong>.
       </p>
       <p>
         If your code came from a clinic, the <strong>Account</strong> tab also

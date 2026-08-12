@@ -33,12 +33,11 @@ export default function RoutinesDocs() {
       </p>
       <ol className="docs-steps">
         <li>
-          Tap <strong>New routine</strong>. On an empty page the button reads{" "}
-          <strong>Create a routine</strong> instead.
+          Tap <strong>New routine</strong> (<strong>Create a routine</strong>{" "}
+          on an empty page).
         </li>
         <li>
-          Type a <strong>Title</strong>. The icon beside the field updates to
-          match what you write.
+          Type a <strong>Title</strong>.
         </li>
         <li>
           Tap <strong>Add a description</strong> if you want to note what the
@@ -46,22 +45,19 @@ export default function RoutinesDocs() {
         </li>
         <li>
           Under <strong>Steps</strong>, write each step in order and tap{" "}
-          <strong>Add step</strong> for more. Every step gets a matching emoji
-          automatically.
+          <strong>Add step</strong> for more.
         </li>
         <li>
           Tap <strong>Create Routine</strong>.
         </li>
       </ol>
       <p>
-        On Romi Pro the same window offers two modes:{" "}
-        <strong>Write my own</strong> and <strong>Romi builds it</strong>. Pick{" "}
-        <strong>Romi builds it</strong>, choose a <strong>Routine type</strong>,
-        describe what the routine should accomplish, set a{" "}
-        <strong>Number of steps</strong>, then tap{" "}
-        <strong>Generate Routine</strong>. Romi drafts the title and steps and
-        fills the form with them, so you can adjust anything before saving.
-        Plans are covered in <Link href="/docs/subscription">Romi Pro &amp; billing</Link>.
+        Romi Pro also offers <strong>Romi builds it</strong>. Switch to it,
+        describe what the routine should accomplish, optionally set a{" "}
+        <strong>Routine type</strong> and <strong>Number of steps</strong>,
+        then tap <strong>Generate Routine</strong>. Romi drafts the title and
+        steps for you to adjust before saving. Plans are covered in{" "}
+        <Link href="/docs/subscription">Romi Pro &amp; billing</Link>.
       </p>
       <Callout type="tip">
         <p>
@@ -73,10 +69,8 @@ export default function RoutinesDocs() {
       <h2 id="run-a-routine">Run a routine</h2>
       <p>
         Tap the round play button on a routine card to start a focus session.
-        You see one step at a time, a running timer, and a preview of the next
-        step. Tap <strong>Mark step done</strong> to tick the current step and
-        move on. When every step is done, a short completion screen shows your
-        step count and time.
+        Tap <strong>Mark step done</strong> to tick the current step and move
+        on.
       </p>
       <p>
         Tap the timer at the top to pause, and tap it again to resume. The

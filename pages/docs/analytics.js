@@ -31,10 +31,6 @@ export default function AnalyticsDocs() {
       </p>
 
       <h2 id="what-each-chart-shows">What each chart shows</h2>
-      <p>
-        Every chart is built from things you already do in the app. There is
-        nothing extra to fill in.
-      </p>
       <ul>
         <li>
           <strong>Productivity</strong>: tasks completed plus Romi
@@ -69,9 +65,9 @@ export default function AnalyticsDocs() {
         </li>
       </ul>
       <p>
-        Above the charts, a tile for each metric shows your figure for the
-        selected period and how it compares with the period before. Tap a tile
-        to open a detailed view.
+        Above the charts, each tile shows your figure for the selected
+        period and how it compares with the period before. Tap a tile to
+        open a detailed view for that metric.
       </p>
       <Callout type="tip">
         <p>

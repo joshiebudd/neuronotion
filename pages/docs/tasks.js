@@ -39,9 +39,8 @@ export default function TasksDocs() {
       </p>
       <p>
         Above the list are search and a <strong>Sort/Filter</strong> menu:
-        sort by <strong>Priority</strong>, <strong>Tag</strong>,{" "}
-        <strong>Emoji</strong> or <strong>Custom</strong> order, and filter by
-        the same three things.
+        sort by Priority, Tag, Emoji or Custom order, and filter by Priority,
+        Tag or Emoji.
       </p>
       <Callout type="note">
         <p>
@@ -91,7 +90,7 @@ export default function TasksDocs() {
       <p>
         To change a task, right-click it on desktop or press and hold on
         mobile. The options menu covers rescheduling, priority, archiving,
-        duplicating and <strong>Move to Someday</strong>.
+        duplicating and moving it to <strong>Someday</strong>.
       </p>
       <Callout type="tip">
         <p>
@@ -107,12 +106,12 @@ export default function TasksDocs() {
         and what shows on the right of each task row. Change it anytime.
       </p>
       <p>
-        A deadline is the day the task is due. Romi records deadlines
-        when it creates tasks for you, for example from a{" "}
-        <Link href="/docs/brain-dump">brain dump</Link> or a task breakdown with a
-        due date attached. Today and This week check both dates, so a task
-        appears if either date falls in the window. If either date passes
-        with the task unfinished, it appears in{" "}
+        A deadline is the day the task is due. Romi records deadlines when it
+        creates tasks for you, for example when you{" "}
+        <Link href="/docs/talk-to-romi">talk to it</Link> or use a task
+        breakdown with a due date attached. Today and This week check both
+        dates, so a task appears if either date falls in the window. If
+        either date passes with the task unfinished, it appears in{" "}
         <strong>Review</strong>.
       </p>
 

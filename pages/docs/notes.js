@@ -30,9 +30,8 @@ export default function NotesDocs() {
         Open the page from <strong>Note Docs</strong> in the desktop sidebar.
         On mobile, tap the menu button at the top of <strong>Home</strong> to
         open the <strong>Menu</strong>, then tap the <strong>Notes</strong>{" "}
-        tile. At the top there are two tabs: <strong>Notes</strong>, which
-        lists every note you have with the most recently updated first, and{" "}
-        <strong>Folders</strong>.
+        tile. At the top there are two tabs: <strong>Notes</strong>, sorted
+        by most recently updated, and <strong>Folders</strong>.
       </p>
       <p>
         On the <strong>Notes</strong> tab, tap the search icon and start
@@ -59,9 +58,10 @@ export default function NotesDocs() {
       </p>
       <Callout type="tip">
         <p>
-          You do not always have to type notes yourself. During a{" "}
-          <Link href="/docs/brain-dump">brain dump</Link>, Romi can save ideas as
-          notes as well as tasks, and they appear on this page like any other.
+          You do not always have to type notes yourself. When you{" "}
+          <Link href="/docs/talk-to-romi">talk to Romi</Link>, it can save
+          ideas as notes as well as tasks, and they appear on this page like
+          any other.
         </p>
       </Callout>
 

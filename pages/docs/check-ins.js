@@ -30,39 +30,14 @@ export default function CheckInsDocs() {
       <p>
         Tap <strong>Check in</strong> at the top of the <strong>Regulate</strong>{" "}
         page to open the <strong>Daily Check in</strong>. It is a short set of
-        questions. Your answers are saved to your logs and included in your
-        trends in <Link href="/docs/analytics">Analytics</Link>.
+        questions covering your anxiety, sleep, medication, mood and
+        anything else affecting your day; the mood question is optional, so
+        tap <strong>Skip mood logging</strong> if you would rather not
+        answer it. Your answers are saved to your logs and included in your
+        trends in <Link href="/docs/analytics">Analytics</Link>. If they
+        suggest you could use one, Romi offers a matching Regulate protocol
+        to start straight away.
       </p>
-      <ol className="docs-steps">
-        <li>
-          Rate <strong>How anxious do you feel?</strong>, then score{" "}
-          <strong>How did you sleep last night?</strong> from 1 to 10.
-        </li>
-        <li>
-          Answer <strong>Did you take your medication?</strong> with{" "}
-          <strong>Yes</strong>, <strong>No</strong> or{" "}
-          <strong>I don&apos;t know</strong>.
-        </li>
-        <li>
-          On <strong>Choose your mood</strong>, pick{" "}
-          <strong>Positive</strong>, <strong>Negative</strong> or{" "}
-          <strong>Neutral</strong>, then tap every emotion that fits. You can
-          add a short note, or tap <strong>Skip mood logging</strong>.
-        </li>
-        <li>
-          On <strong>Extra context</strong>, tag anything affecting your day,
-          such as <strong>Hungry</strong>, <strong>Overstimulated</strong> or{" "}
-          <strong>Deadline looming</strong>. Type anything missing into{" "}
-          <strong>Add your own</strong>.
-        </li>
-        <li>
-          Tap <strong>Submit</strong>. If your answers suggest you could use
-          one, Romi offers a matching Regulate protocol: tap{" "}
-          <strong>Try this protocol</strong> to start it straight away, or{" "}
-          <strong>Maybe later</strong>. If not, the check-in just saves with
-          no suggestion.
-        </li>
-      </ol>
       <Callout type="tip">
         <p>
           Short on time? Tap <strong>Log mood</strong> instead. It opens just
@@ -95,15 +70,14 @@ export default function CheckInsDocs() {
 
       <h2 id="symptom-check-in">Monthly symptom check-in</h2>
       <p>
-        Now and then Romi asks a longer questionnaire, one question at a
-        time: 12 taps in the first section, about your ADHD symptoms
-        over recent weeks. The first time it is called{" "}
+        Now and then Romi asks a longer questionnaire about your ADHD
+        symptoms over recent weeks. The first time it is called{" "}
         <strong>Personalise your experience</strong> and sets your baseline.
         After that it returns as the <strong>Monthly Check-in</strong> so Romi
         can compare each month with the last.
       </p>
       <p>
-        A second section of 6 more questions is optional: tap{" "}
+        A second section is optional: tap{" "}
         <strong>Continue to Section 2</strong> or <strong>Skip for now</strong>.
         If you close part-way through, your answers so far are saved. Not the
         right moment? Tap <strong>Snooze</strong> on the prompt to put it off

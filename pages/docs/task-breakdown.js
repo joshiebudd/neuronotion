@@ -110,10 +110,11 @@ export default function TaskBreakdownDocs() {
       <DocsAccordion title="Why does Romi ask permission before my first breakdown?">
         <p>
           The first time you use an AI feature, a screen called{" "}
-          <strong>Before you use Romi&apos;s AI</strong> explains what is shared
-          and who it is shared with, and asks you to tap{" "}
-          <strong>Agree &amp; continue</strong>. Your task text is only sent to
-          the AI service once you have agreed.
+          <strong>Before you use Romi&apos;s AI</strong> asks you to agree to
+          send your task text to a third-party AI service. Your text is not
+          sent until you tap <strong>Agree &amp; continue</strong>. See{" "}
+          <Link href="/docs/your-data">Your data &amp; privacy</Link> for
+          what is shared.
         </p>
       </DocsAccordion>
     </DocsArticle>

@@ -27,15 +27,9 @@ export default function SubscriptionDocs() {
 
       <h2 id="your-free-trial">Your free trial</h2>
       <p>
-        Every new account starts with a free trial of Romi Pro. The{" "}
-        <strong>Free Trial Active!</strong> window that appears after sign-up
-        lists what is unlocked while it runs:{" "}
-        <strong>Unlimited Conversations</strong>, <strong>Brain Dump</strong>,{" "}
-        <strong>Task Breakdown</strong>, <strong>Automatic Scheduling</strong>,{" "}
-        <strong>Deep Analytics</strong> and <strong>Auto Mood Detection</strong>.
-        It also shows how many days you have left, and you can check the same
-        countdown any time in <strong>Settings</strong> under{" "}
-        <strong>Billing</strong>.
+        Every new account starts with a free trial of Romi Pro. You can check
+        how many days you have left any time in <strong>Settings</strong>{" "}
+        under <strong>Billing</strong>.
       </p>
       <Callout type="tip">
         <p>
@@ -47,10 +41,10 @@ export default function SubscriptionDocs() {
 
       <h2 id="upgrade-to-pro">Upgrade to Pro</h2>
       <p>
-        Pro is a monthly subscription: US$19 per month. If you are outside the
-        US, the plan sheet also shows an approximate price in your local
-        currency. Pro renews automatically each month unless you cancel at
-        least 24 hours before the period ends, and you can cancel anytime.
+        Pro is a monthly subscription: US$19 per month, with the price also
+        shown in your local currency if you are outside the US. It renews
+        automatically each month unless you cancel at least 24 hours before
+        the period ends, and you can cancel anytime.
       </p>
       <ol className="docs-steps">
         <li>
@@ -62,8 +56,7 @@ export default function SubscriptionDocs() {
           sidebar.
         </li>
         <li>
-          The plan sheet opens. Check the plan and price, then tap{" "}
-          <strong>Get Started</strong>.
+          Tap <strong>Get Started</strong>.
         </li>
         <li>
           On the web you are taken to Stripe&apos;s checkout page. In the iPhone

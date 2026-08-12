@@ -12,7 +12,7 @@ import { DocsAccordion } from "../../src/romi";
 const sections = [
   { id: "what-is-romi", label: "What Romi is" },
   { id: "setup-questions", label: "The setup questions" },
-  { id: "first-five-things", label: "First five things" },
+  { id: "where-to-start", label: "Where to start" },
   { id: "good-to-know", label: "Good to know" },
 ];
 
@@ -21,8 +21,8 @@ export default function GettingStartedDocs() {
     <DocsArticle slug="getting-started" sections={sections}>
       <p className="docs-lead">
         Romi is an AI companion for adults with ADHD, and this page covers
-        your first session: the Home screen, the setup questions, and the
-        first five things to try.
+        your first session: the Home screen, the setup questions, and a few
+        things to try first.
       </p>
 
       <h2 id="what-is-romi">What Romi is</h2>
@@ -36,8 +36,8 @@ export default function GettingStartedDocs() {
         After you sign in, you&apos;re on Home. At the top is a greeting for the
         time of day, then the purple Romi card:{" "}
         &ldquo;Romi says: How can I help today?&rdquo;. Its two buttons,{" "}
-        <strong>Type</strong> and <strong>Speak</strong>, both start a brain
-        dump, one written and one spoken. Below that, <strong>Today&apos;s
+        <strong>Type</strong> and <strong>Speak</strong>, both start a
+        conversation with Romi, one written and one spoken. Below that, <strong>Today&apos;s
         Focus</strong> lists the tasks planned for today, and a{" "}
         <strong>Next up</strong> card shows your next scheduled block. Its
         label switches to <strong>Now</strong> while a block is in progress.
@@ -47,11 +47,8 @@ export default function GettingStartedDocs() {
 
       <h2 id="setup-questions">The setup questions</h2>
       <p>
-        The first time you open Romi, it asks a few questions: whether
-        you have an ADHD diagnosis, which type fits you best, whether you take
-        medication, what you want to use Romi for, when your energy peaks,
-        your workday hours, how often Romi can nudge you, and how Romi should
-        sound. At the end you can connect{" "}
+        The first time you open Romi, it asks a short set of questions about
+        your ADHD and how you want to use it, then offers to connect{" "}
         <strong>Google Calendar</strong> and enable your microphone. Both are
         optional, and you can set them up later.
       </p>
@@ -66,13 +63,12 @@ export default function GettingStartedDocs() {
         </p>
       </Callout>
 
-      <h2 id="first-five-things">Your first five things</h2>
+      <h2 id="where-to-start">Where to start</h2>
       <ol className="docs-steps">
         <li>
-          Try a brain dump. Tap <strong>Speak</strong> on Home and say
-          everything on your mind, or tap <strong>Type</strong> to write
-          instead. Romi sorts it into tasks. More in{" "}
-          <Link href="/docs/brain-dump">Brain dumps</Link>.
+          Talk to Romi about whatever is on your mind. Tap{" "}
+          <strong>Speak</strong> or <strong>Type</strong> on the Home card.
+          See <Link href="/docs/talk-to-romi">Talking to Romi</Link>.
         </li>
         <li>
           Check <strong>Today&apos;s Focus</strong> on Home to see the tasks
@@ -89,15 +85,11 @@ export default function GettingStartedDocs() {
           setup, so your events and Romi blocks appear in one place. See{" "}
           <Link href="/docs/google-calendar">Google Calendar sync</Link>.
         </li>
-        <li>
-          Talk to Romi by voice about whatever you are working on. See{" "}
-          <Link href="/docs/talk-to-romi">Talking to Romi</Link>.
-        </li>
       </ol>
       <Callout type="tip">
         <p>
-          If you only do one thing today, do the brain dump. It&apos;s the
-          fastest way to see what Romi does.
+          If you only do one thing today, just talk to Romi. It&apos;s the
+          fastest way to see what it does.
         </p>
       </Callout>
 
