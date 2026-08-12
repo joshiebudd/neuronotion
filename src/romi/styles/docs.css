@@ -1,0 +1,329 @@
+/*
+ * Romi docs styles — everything the /docs section needs, scoped under
+ * `.romi-docs` the same way blog.css scopes `.romi-article`. Covers the
+ * article prose (lead, steps, callouts, kbd, tables, accordions) plus the
+ * docs-only chrome (sidebar links, on-this-page rail). Layout positioning
+ * lives in the components; this file owns type, colour and surface.
+ */
+
+.romi-docs {
+  --romi-docs-measure: 720px;
+  color: var(--romi-color-ink);
+  font-family: var(--romi-font-body);
+}
+
+/* ---------- Article prose ---------- */
+.romi-docs .docs-body {
+  max-width: var(--romi-docs-measure);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.romi-docs .docs-body > * + * {
+  margin-top: 1rem;
+}
+
+/* One-sentence answer at the top of every article — the reader should know
+   within five seconds whether this page solves their problem. */
+.romi-docs .docs-lead {
+  font-size: clamp(1.15rem, 2vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--romi-color-ink-muted);
+}
+
+.romi-docs .docs-body h2 {
+  margin-top: 2.75rem;
+  margin-bottom: 0.85rem;
+  font-weight: 700;
+  font-size: clamp(1.35rem, 2.4vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--romi-color-ink); /* beats the legacy global h3/h styles */
+  scroll-margin-top: 108px; /* sticky header + breathing room for #anchors */
+}
+
+.romi-docs .docs-body h3 {
+  margin-top: 1.9rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  color: var(--romi-color-ink);
+  scroll-margin-top: 108px;
+}
+
+.romi-docs .docs-body strong,
+.romi-docs .docs-body b {
+  color: var(--romi-color-ink);
+  font-weight: 700;
+}
+
+.romi-docs .docs-body a {
+  color: var(--romi-indigo);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--romi-indigo) 35%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.romi-docs .docs-body a:hover {
+  color: var(--romi-indigo-deep);
+  text-decoration-color: currentColor;
+}
+
+.romi-docs .docs-body ul,
+.romi-docs .docs-body ol:not(.docs-steps) {
+  padding-left: 1.4rem;
+  line-height: 1.65;
+}
+
+.romi-docs .docs-body li {
+  margin-bottom: 0.45rem;
+}
+
+.romi-docs .docs-body li::marker {
+  color: var(--romi-indigo);
+}
+
+/* ---------- Numbered steps ----------
+   <ol class="docs-steps"> with plain <li> children. The bolded UI label inside
+   each step is the scanning anchor; the indigo counters are the visual rhythm. */
+.romi-docs .docs-steps {
+  list-style: none;
+  counter-reset: docs-step;
+  margin: 1.25rem 0 0;
+  padding: 0;
+}
+
+.romi-docs .docs-steps > li {
+  position: relative;
+  counter-increment: docs-step;
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+  min-height: 2rem;
+}
+
+.romi-docs .docs-steps > li::before {
+  content: counter(docs-step);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--romi-radius-full);
+  background: var(--romi-purple-pale);
+  color: var(--romi-indigo);
+  font-family: var(--romi-font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+/* ---------- Inline UI tokens ----------
+   <kbd class="docs-kbd"> for anything the user taps, presses or types. */
+.romi-docs .docs-kbd {
+  display: inline-block;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--romi-color-border);
+  border-radius: var(--romi-radius-xs);
+  background: var(--romi-color-surface);
+  font-family: var(--romi-font-body);
+  font-size: 0.9em;
+  line-height: 1.5;
+  white-space: nowrap;
+  box-shadow: var(--romi-shadow-xs);
+}
+
+/* ---------- Callouts (tip = mint, note = lilac, warning = honey) ---------- */
+.romi-docs .docs-callout {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding: 0.95rem 1.1rem;
+  border-radius: var(--romi-radius-md);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.romi-docs .docs-callout svg {
+  flex-shrink: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.2rem;
+}
+
+.romi-docs .docs-callout p {
+  margin: 0;
+}
+
+.romi-docs .docs-callout--tip {
+  background: var(--romi-mint-40);
+}
+.romi-docs .docs-callout--tip svg {
+  color: var(--romi-mint-deep);
+}
+
+.romi-docs .docs-callout--note {
+  background: var(--romi-purple-pale);
+}
+.romi-docs .docs-callout--note svg {
+  color: var(--romi-indigo);
+}
+
+.romi-docs .docs-callout--warning {
+  background: color-mix(in srgb, var(--romi-honey) 28%, white);
+}
+.romi-docs .docs-callout--warning svg {
+  color: color-mix(in srgb, var(--romi-honey) 60%, var(--romi-charcoal));
+}
+
+/* ---------- Accordion (edge cases / FAQs, native <details>) ---------- */
+.romi-docs .docs-accordion {
+  margin-top: 0.75rem;
+  border: 1px solid var(--romi-color-border);
+  border-radius: var(--romi-radius-md);
+  background: var(--romi-color-surface);
+}
+
+.romi-docs .docs-accordion > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--romi-font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--romi-color-ink);
+  border-radius: var(--romi-radius-md);
+  transition: background-color 0.15s ease;
+}
+
+.romi-docs .docs-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+
+.romi-docs .docs-accordion > summary:hover {
+  background: color-mix(in srgb, var(--romi-purple) 8%, transparent);
+}
+
+.romi-docs .docs-accordion > summary svg {
+  flex-shrink: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--romi-color-ink-soft);
+  transition: transform 0.2s ease;
+}
+
+.romi-docs .docs-accordion[open] > summary svg {
+  transform: rotate(180deg);
+}
+
+.romi-docs .docs-accordion-body {
+  padding: 0 1.1rem 1rem;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.romi-docs .docs-accordion-body > * + * {
+  margin-top: 0.75rem;
+}
+
+/* ---------- Tables ---------- */
+.romi-docs .docs-body table {
+  width: 100%;
+  margin-top: 1.25rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--romi-purple-40);
+  border-radius: var(--romi-radius-md);
+  overflow: hidden;
+  background: var(--romi-color-surface);
+  font-size: 0.9875rem;
+}
+
+.romi-docs .docs-body th {
+  background: var(--romi-purple-pale);
+  color: var(--romi-color-ink);
+  font-family: var(--romi-font-display);
+  font-weight: 700;
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+}
+
+.romi-docs .docs-body td {
+  padding: 0.7rem 0.9rem;
+  border-top: 1px solid color-mix(in srgb, var(--romi-purple-40) 55%, transparent);
+  vertical-align: top;
+}
+
+/* ---------- Sidebar ---------- */
+.romi-docs .docs-side-group {
+  margin-bottom: 1.75rem;
+}
+
+.romi-docs .docs-side-title {
+  margin-bottom: 0.5rem;
+  font-family: var(--romi-font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--romi-color-ink-soft);
+}
+
+.romi-docs .docs-side-link {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  margin-left: -0.75rem;
+  border-radius: var(--romi-radius-sm);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--romi-color-ink-muted);
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.romi-docs .docs-side-link:hover {
+  color: var(--romi-color-ink);
+  background: color-mix(in srgb, var(--romi-purple) 10%, transparent);
+}
+
+.romi-docs .docs-side-link--active {
+  color: var(--romi-indigo);
+  font-weight: 600;
+  background: var(--romi-purple-pale);
+}
+
+/* ---------- On-this-page rail ---------- */
+.romi-docs .docs-toc-title {
+  margin-bottom: 0.6rem;
+  font-family: var(--romi-font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--romi-color-ink-soft);
+}
+
+.romi-docs .docs-toc-link {
+  display: block;
+  padding: 0.3rem 0 0.3rem 0.85rem;
+  border-left: 2px solid var(--romi-color-border);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--romi-color-ink-muted);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.romi-docs .docs-toc-link:hover {
+  color: var(--romi-color-ink);
+}
+
+.romi-docs .docs-toc-link--active {
+  color: var(--romi-indigo);
+  font-weight: 600;
+  border-left-color: var(--romi-indigo);
+}
