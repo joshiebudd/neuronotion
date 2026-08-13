@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { RomiHeader } from "../marketing/RomiHeader";
 import { RomiClose } from "../marketing/RomiClose";
 import { DocsSidebar } from "./DocsSidebar";
+import { useDocsReveal } from "./useDocsReveal";
 import { getDocsArticle, getDocsNeighbours } from "../../docs/manifest";
+import { useReducedMotion } from "../../lib/useReducedMotion";
 import { cn } from "../../lib/cn";
 
 /*
@@ -25,7 +27,7 @@ const SITE = "https://www.romiadhd.com";
 const DEFAULT_OG = `${SITE}/og/romi-og.png`;
 const SUPPORT_EMAIL = "josh@romiadhd.com";
 
-function OnThisPage({ sections }) {
+function OnThisPage({ sections, reducedMotion }) {
   const [activeId, setActiveId] = useState(null);
 
   useEffect(() => {
@@ -56,16 +58,29 @@ function OnThisPage({ sections }) {
     };
   }, [sections]);
 
+  // Glide to the heading instead of jumping, so you keep your place on the page.
+  const onJump = useCallback(
+    (id) => (event) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      event.preventDefault();
+      el.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+      window.history.replaceState(null, "", `#${id}`);
+    },
+    [reducedMotion]
+  );
+
   if (!sections?.length) return null;
 
   return (
-    <aside className="sticky top-[100px] hidden max-h-[calc(100vh-124px)] overflow-y-auto pb-8 xl:block">
+    <aside className="docs-rail sticky top-[100px] hidden max-h-[calc(100vh-124px)] overflow-y-auto pb-8 xl:block">
       <p className="docs-toc-title">On this page</p>
       <nav aria-label="On this page">
         {sections.map((section) => (
           <a
             key={section.id}
             href={`#${section.id}`}
+            onClick={onJump(section.id)}
             className={cn("docs-toc-link", section.id === activeId && "docs-toc-link--active")}
           >
             {section.label}
@@ -76,22 +91,35 @@ function OnThisPage({ sections }) {
   );
 }
 
-function NeighbourCard({ article, direction }) {
+function NeighbourCard({ article, direction, reducedMotion }) {
   const isPrev = direction === "prev";
   const Icon = isPrev ? ArrowLeft : ArrowRight;
+
+  // Same lift-and-settle the corporate cards use, kept small for a docs footer.
+  const onHover = (up) => (event) => {
+    if (reducedMotion) return;
+    const card = event.currentTarget;
+    import("animejs")
+      .then(({ animate }) => {
+        animate(card, { translateY: up ? -4 : 0, duration: 320, ease: "out(3)" });
+      })
+      .catch(() => {});
+  };
 
   return (
     <Link
       href={`/docs/${article.slug}`}
+      onMouseEnter={onHover(true)}
+      onMouseLeave={onHover(false)}
       className={cn(
         "group flex flex-1 flex-col gap-1 rounded-[var(--romi-radius-lg)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] px-5 py-4 transition-shadow hover:shadow-[var(--romi-shadow-sm)]",
         !isPrev && "items-end text-right"
       )}
     >
       <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--romi-color-ink-soft)]">
-        {isPrev && <Icon aria-hidden="true" className="h-3.5 w-3.5" />}
+        {isPrev && <Icon aria-hidden="true" className="docs-neighbour-icon h-3.5 w-3.5" />}
         {isPrev ? "Previous" : "Next"}
-        {!isPrev && <Icon aria-hidden="true" className="h-3.5 w-3.5" />}
+        {!isPrev && <Icon aria-hidden="true" className="docs-neighbour-icon h-3.5 w-3.5" />}
       </span>
       <span className="text-[15px] font-semibold text-[var(--romi-color-ink)] transition-colors group-hover:text-[var(--romi-indigo)] [font-family:var(--romi-font-display)]">
         {article.title}
@@ -103,6 +131,8 @@ function NeighbourCard({ article, direction }) {
 export function DocsArticle({ slug, heading, sections, children }) {
   const article = getDocsArticle(slug);
   const { prev, next } = getDocsNeighbours(slug);
+  const reducedMotion = useReducedMotion();
+  const revealRef = useDocsReveal(slug);
 
   if (!article) {
     throw new Error(`DocsArticle: slug "${slug}" is not in the docs manifest`);
@@ -166,8 +196,11 @@ export function DocsArticle({ slug, heading, sections, children }) {
           <div className="grid grid-cols-1 gap-x-12 gap-y-6 pb-20 pt-8 lg:grid-cols-[230px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)_200px]">
             <DocsSidebar currentSlug={slug} />
 
-            <main className="min-w-0">
-              <p className="text-[13.5px] font-medium text-[var(--romi-color-ink-soft)] [font-family:var(--romi-font-display)]">
+            <main className="min-w-0" ref={revealRef}>
+              <p
+                data-reveal
+                className="text-[13.5px] font-medium text-[var(--romi-color-ink-soft)] [font-family:var(--romi-font-display)]"
+              >
                 <Link href="/docs" className="transition-colors hover:text-[var(--romi-indigo)]">
                   Docs
                 </Link>
@@ -176,6 +209,7 @@ export function DocsArticle({ slug, heading, sections, children }) {
               </p>
 
               <h1
+                data-reveal
                 className="mt-3 text-[var(--romi-color-ink)]"
                 style={{
                   fontFamily: "var(--romi-font-display)",
@@ -188,19 +222,33 @@ export function DocsArticle({ slug, heading, sections, children }) {
                 {heading || article.title}
               </h1>
 
-              <div className="docs-body mt-5">{children}</div>
+              <div data-reveal className="docs-body mt-5">
+                {children}
+              </div>
 
               {(prev || next) && (
                 <nav
+                  data-reveal
                   aria-label="More docs"
                   className="mt-12 flex max-w-[var(--romi-docs-measure)] flex-col gap-3 sm:flex-row"
                 >
-                  {prev ? <NeighbourCard article={prev} direction="prev" /> : <div className="flex-1" />}
-                  {next ? <NeighbourCard article={next} direction="next" /> : <div className="flex-1" />}
+                  {prev ? (
+                    <NeighbourCard article={prev} direction="prev" reducedMotion={reducedMotion} />
+                  ) : (
+                    <div className="flex-1" />
+                  )}
+                  {next ? (
+                    <NeighbourCard article={next} direction="next" reducedMotion={reducedMotion} />
+                  ) : (
+                    <div className="flex-1" />
+                  )}
                 </nav>
               )}
 
-              <div className="mt-6 max-w-[var(--romi-docs-measure)] rounded-[var(--romi-radius-lg)] bg-[var(--romi-purple-pale)] px-6 py-5">
+              <div
+                data-reveal
+                className="mt-6 max-w-[var(--romi-docs-measure)] rounded-[var(--romi-radius-lg)] bg-[var(--romi-purple-pale)] px-6 py-5"
+              >
                 <p className="text-[15px] font-semibold text-[var(--romi-color-ink)] [font-family:var(--romi-font-display)]">
                   Still stuck?
                 </p>
@@ -217,7 +265,7 @@ export function DocsArticle({ slug, heading, sections, children }) {
               </div>
             </main>
 
-            <OnThisPage sections={sections} />
+            <OnThisPage sections={sections} reducedMotion={reducedMotion} />
           </div>
         </div>
 

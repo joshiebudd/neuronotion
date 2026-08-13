@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { RomiHeader, RomiClose } from "../../src/romi";
 import { DocsSidebar } from "../../src/romi/components/docs/DocsSidebar";
+import { useDocsReveal } from "../../src/romi/components/docs/useDocsReveal";
+import { useReducedMotion } from "../../src/romi/lib/useReducedMotion";
 import { DOCS_CATEGORIES } from "../../src/romi/docs/manifest";
 
 /*
@@ -25,6 +27,20 @@ const JSON_LD = {
 };
 
 export default function DocsHome() {
+  const reducedMotion = useReducedMotion();
+  const revealRef = useDocsReveal("hub");
+
+  // Cards lift a little on hover, matching the corporate cards elsewhere.
+  const onHover = (up) => (event) => {
+    if (reducedMotion) return;
+    const card = event.currentTarget;
+    import("animejs")
+      .then(({ animate }) => {
+        animate(card, { translateY: up ? -4 : 0, duration: 320, ease: "out(3)" });
+      })
+      .catch(() => {});
+  };
+
   return (
     <>
       <Head>
@@ -55,9 +71,12 @@ export default function DocsHome() {
           <div className="grid grid-cols-1 gap-x-12 gap-y-6 pb-20 pt-8 lg:grid-cols-[230px_minmax(0,1fr)]">
             <DocsSidebar currentSlug={null} />
 
-            <main className="min-w-0">
-              <p className="romi-kicker">Docs</p>
+            <main className="min-w-0" ref={revealRef}>
+              <p data-reveal className="romi-kicker">
+                Docs
+              </p>
               <h1
+                data-reveal
                 className="mt-3 text-[var(--romi-color-ink)]"
                 style={{
                   fontFamily: "var(--romi-font-display)",
@@ -69,12 +88,15 @@ export default function DocsHome() {
               >
                 How to use Romi
               </h1>
-              <p className="mt-4 max-w-[560px] text-[1.125rem] leading-relaxed text-[var(--romi-color-ink-muted)]">
+              <p
+                data-reveal
+                className="mt-4 max-w-[560px] text-[1.125rem] leading-relaxed text-[var(--romi-color-ink-muted)]"
+              >
                 Short guides to using Romi. Pick a topic below.
               </p>
 
               {DOCS_CATEGORIES.map((category) => (
-                <section key={category.title} className="mt-12">
+                <section data-reveal key={category.title} className="mt-12">
                   <h2 className="text-[1.25rem] font-bold tracking-[-0.01em] text-[var(--romi-color-ink)] [font-family:var(--romi-font-display)]">
                     {category.title}
                   </h2>
@@ -83,6 +105,8 @@ export default function DocsHome() {
                       <Link
                         key={article.slug}
                         href={`/docs/${article.slug}`}
+                        onMouseEnter={onHover(true)}
+                        onMouseLeave={onHover(false)}
                         className="group flex flex-col gap-1 rounded-[var(--romi-radius-lg)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] px-5 py-4 transition-shadow hover:shadow-[var(--romi-shadow-sm)]"
                       >
                         <span className="text-[15.5px] font-semibold text-[var(--romi-color-ink)] transition-colors group-hover:text-[var(--romi-indigo)] [font-family:var(--romi-font-display)]">

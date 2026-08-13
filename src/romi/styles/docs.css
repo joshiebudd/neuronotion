@@ -178,54 +178,85 @@
   color: color-mix(in srgb, var(--romi-honey) 60%, var(--romi-charcoal));
 }
 
-/* ---------- Accordion (edge cases / FAQs, native <details>) ---------- */
+/* ---------- Accordion (edge cases / FAQs) ----------
+   Controlled disclosure rather than a native <details>, so the panel can grow
+   smoothly. Animating grid-template-rows from 0fr to 1fr means the browser
+   tweens to the content's natural height: no measuring, no fixed heights, and
+   it copes with whatever an article puts inside. */
 .romi-docs .docs-accordion {
   margin-top: 0.75rem;
   border: 1px solid var(--romi-color-border);
   border-radius: var(--romi-radius-md);
   background: var(--romi-color-surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.romi-docs .docs-accordion > summary {
+.romi-docs .docs-accordion[data-open="true"] {
+  border-color: var(--romi-purple-40);
+  box-shadow: var(--romi-shadow-xs);
+}
+
+.romi-docs .docs-accordion-trigger {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.85rem 1.1rem;
+  border: 0;
+  background: transparent;
   cursor: pointer;
-  list-style: none;
+  text-align: left;
   font-family: var(--romi-font-display);
   font-size: 1rem;
   font-weight: 600;
   color: var(--romi-color-ink);
   border-radius: var(--romi-radius-md);
-  transition: background-color 0.15s ease;
+  transition: background-color 0.18s ease;
 }
 
-.romi-docs .docs-accordion > summary::-webkit-details-marker {
-  display: none;
-}
-
-.romi-docs .docs-accordion > summary:hover {
+.romi-docs .docs-accordion-trigger:hover {
   background: color-mix(in srgb, var(--romi-purple) 8%, transparent);
 }
 
-.romi-docs .docs-accordion > summary svg {
+.romi-docs .docs-accordion-trigger svg {
   flex-shrink: 0;
   width: 1.1rem;
   height: 1.1rem;
   color: var(--romi-color-ink-soft);
-  transition: transform 0.2s ease;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), color 0.18s ease;
 }
 
-.romi-docs .docs-accordion[open] > summary svg {
+.romi-docs .docs-accordion[data-open="true"] .docs-accordion-trigger svg {
   transform: rotate(180deg);
+  color: var(--romi-indigo);
+}
+
+.romi-docs .docs-accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.romi-docs .docs-accordion[data-open="true"] .docs-accordion-panel {
+  grid-template-rows: 1fr;
+}
+
+.romi-docs .docs-accordion-clip {
+  overflow: hidden;
 }
 
 .romi-docs .docs-accordion-body {
   padding: 0 1.1rem 1rem;
   font-size: 1rem;
   line-height: 1.65;
+  opacity: 0;
+  transition: opacity 0.24s ease;
+}
+
+.romi-docs .docs-accordion[data-open="true"] .docs-accordion-body {
+  opacity: 1;
+  transition-delay: 0.06s;
 }
 
 .romi-docs .docs-accordion-body > * + * {
@@ -260,13 +291,20 @@
   vertical-align: top;
 }
 
-/* ---------- Sidebar ---------- */
+/* ---------- Sidebar ----------
+   Every row in the rail shares one text alignment line. The rail itself bleeds
+   0.75rem into the gutter on each side (the -mx-3 on the aside) and each row
+   carries a matching 0.75rem of padding, so the active pill can sit behind the
+   text with even breathing room on both sides without shifting the text off
+   that line. Padding the rows instead of pulling the links left with a negative
+   margin is what keeps the pill from hanging outside the column. */
 .romi-docs .docs-side-group {
   margin-bottom: 1.75rem;
 }
 
 .romi-docs .docs-side-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  padding-inline: 0.75rem;
   font-family: var(--romi-font-display);
   font-size: 0.8125rem;
   font-weight: 700;
@@ -277,13 +315,17 @@
 
 .romi-docs .docs-side-link {
   display: block;
-  padding: 0.4rem 0.75rem;
-  margin-left: -0.75rem;
+  padding: 0.45rem 0.75rem;
   border-radius: var(--romi-radius-sm);
   font-size: 0.9375rem;
   line-height: 1.4;
   color: var(--romi-color-ink-muted);
-  transition: color 0.15s ease, background-color 0.15s ease;
+  transition: color 0.18s ease, background-color 0.18s ease;
+}
+
+/* A hair of air between rows so the active pill never butts into its neighbours. */
+.romi-docs .docs-side-link + .docs-side-link {
+  margin-top: 2px;
 }
 
 .romi-docs .docs-side-link:hover {
@@ -326,4 +368,97 @@
   color: var(--romi-indigo);
   font-weight: 600;
   border-left-color: var(--romi-indigo);
+}
+
+/* ---------- Sticky rails ----------
+   Both side rails scroll independently when they outgrow the viewport. Left to
+   the browser that puts a hard grey bar right next to the content, so the
+   scrollbar stays invisible until you are actually in the rail. */
+.romi-docs .docs-rail {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.2s ease;
+}
+
+.romi-docs .docs-rail:hover,
+.romi-docs .docs-rail:focus-within {
+  scrollbar-color: var(--romi-purple-40) transparent;
+}
+
+.romi-docs .docs-rail::-webkit-scrollbar {
+  width: 6px;
+}
+
+.romi-docs .docs-rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.romi-docs .docs-rail::-webkit-scrollbar-thumb {
+  border-radius: var(--romi-radius-full);
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.romi-docs .docs-rail:hover::-webkit-scrollbar-thumb,
+.romi-docs .docs-rail:focus-within::-webkit-scrollbar-thumb {
+  background: var(--romi-purple-40);
+}
+
+/* ---------- Motion ----------
+   Page entrances are driven by anime.js (see useDocsReveal). Elements start
+   hidden here so there is no flash of unstyled position before the animation
+   runs, but only inside a no-preference block: anyone who asks for reduced
+   motion, and anyone whose JavaScript never arrives, gets the content as-is. */
+@media (prefers-reduced-motion: no-preference) {
+  .romi-docs [data-reveal] {
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+}
+
+/* Nudge the prev/next arrows in their travel direction on hover. */
+.romi-docs .docs-neighbour-icon {
+  transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.romi-docs .group:hover .docs-neighbour-icon {
+  transform: translateX(var(--romi-neighbour-shift, 3px));
+}
+
+.romi-docs .group.items-end .docs-neighbour-icon {
+  --romi-neighbour-shift: 3px;
+}
+
+.romi-docs .group:not(.items-end) .docs-neighbour-icon {
+  --romi-neighbour-shift: -3px;
+}
+
+/* The mobile "Browse docs" sheet drops in rather than appearing. */
+.romi-docs .docs-side-sheet {
+  animation: romiDocsSheet 0.26s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: top center;
+}
+
+@keyframes romiDocsSheet {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .romi-docs .docs-accordion-panel,
+  .romi-docs .docs-accordion-body,
+  .romi-docs .docs-accordion-trigger svg,
+  .romi-docs .docs-neighbour-icon {
+    transition: none;
+  }
+
+  .romi-docs .docs-side-sheet {
+    animation: none;
+  }
 }
