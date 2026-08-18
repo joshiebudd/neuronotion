@@ -5,12 +5,12 @@ import { BlogArticle } from '../../src/romi';
 const GoldDustTheoryBlog = () => {
   return (
     <BlogArticle
-      title="The Gold Dust Theory: Why Decision Fatigue Hits ADHD Harder | Romi"
-      description="Discover why every decision drains ADHD brains faster than neurotypical ones. Learn the Gold Dust Theory and how to preserve your precious mental energy."
+      title="ADHD Decision Fatigue: The Gold Dust Theory | Romi"
+      description="Every decision drains ADHD brains faster. The Gold Dust Theory of mental energy: why choices cost more with ADHD and how to spend that energy on what matters."
       slug="adhd-the-hidden-cost-of-choice-the-gold-dust-theory"
       ogTitle="The Gold Dust Theory: ADHD and Decision Fatigue"
       ogDescription="Your ADHD brain starts each day with limited mental energy. Learn why decisions deplete it faster and how to protect your gold dust."
-      heading="ADHD & The Hidden Cost of Choice: The Gold Dust Theory 🫰"
+      heading="ADHD and Decision Fatigue: The Hidden Cost of Choice (The Gold Dust Theory)"
       category="Productivity & Focus"
       date="Jan. 20, 2025"
       datePublished="2025-01-20"

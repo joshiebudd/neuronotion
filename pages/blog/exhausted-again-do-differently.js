@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const ExhaustedAgainBlog = () => {
   return (
     <BlogArticle
-      title="Exhausted Again? Why ADHD Brains Need to Do Differently, Not Less | Romi"
-      description="ADHD burnout isn&apos;t about doing too much—it&apos;s about doing things in ways that fight your brain. Learn how to do differently for sustainable energy."
+      title="ADHD Burnout: Why You&apos;re Exhausted and How to Do Differently"
+      description="ADHD burnout isn&apos;t about doing too much. It&apos;s doing things in ways that fight your brain. How to do differently for energy that lasts, without doing less."
       slug="exhausted-again-do-differently"
       keywords="ADHD burnout, ADHD exhaustion, ADHD energy management, sustainable ADHD productivity, ADHD nervous system"
       ogTitle="Exhausted Again? Do Differently, Not Less"

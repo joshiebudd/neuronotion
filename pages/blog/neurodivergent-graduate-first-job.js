@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const NeurodivergentGraduateFirstJobBlog = () => {
   return (
     <BlogArticle
-      title="Neurodivergent and Starting Your First Job? How to Keep the Support You Had at University | Romi"
-      description="At university, neurodivergent students get extra time, mentors and recorded lectures. Then the first job begins and the support vanishes. Here is how to close that gap, for graduates and the employers hiring them."
+      title="Neurodivergent and Starting Your First Job? A UK Guide"
+      description="Neurodivergent students get extra time, mentors and recorded lectures at university. Then the first job starts and the support vanishes. How to rebuild it."
       slug="neurodivergent-graduate-first-job"
       keywords="neurodivergent graduate first job, starting first job neurodivergent, ADHD first job support, neurodivergent university to work transition, workplace adjustments neurodivergent graduate, ADHD graduate employment, support cliff neurodivergent, reasonable adjustments first job, autism first job support, neurodiversity at work"
       ogTitle="Neurodivergent and Starting Your First Job? Mind the Support Cliff"

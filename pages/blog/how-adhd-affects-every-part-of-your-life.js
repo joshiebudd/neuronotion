@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDAffectsEverythingBlog = () => {
   return (
     <BlogArticle
-      title="How ADHD Affects Every Part of Your Life (Not Just Productivity) | Romi"
-      description="ADHD isn&apos;t just about productivity. Discover how it impacts relationships, habits, goals, focus, organization, and sleep—and why treating it holistically changes everything."
+      title="How ADHD Affects Daily Life (Not Just Focus) | Romi"
+      description="ADHD affects far more than focus: relationships, habits, goals, organisation and sleep. How each part connects and why treating it as a whole works better."
       slug="how-adhd-affects-every-part-of-your-life"
       keywords="ADHD impact on life, ADHD relationships, ADHD habits, ADHD multi-dimensional, ADHD holistic management"
       ogTitle="ADHD Affects Every Part of Your Life (Not Just Work)"
       ogDescription="99% of people think ADHD means productivity problems. But ADHD impacts relationships, habits, goals, focus, organization, and sleep. Treat it multi-dimensionally."
-      heading="The Truth About How ADHD Affects Every Part of Your Life"
+      heading="How ADHD Affects Every Part of Your Life, Not Just Productivity"
       category="Understanding ADHD"
       date="Feb. 26, 2025"
       datePublished="2025-02-26"

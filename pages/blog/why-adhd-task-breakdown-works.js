@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const ADHDTaskBreakdownBlog = () => {
   return (
     <BlogArticle
-      title="Why ADHD Task Breakdown Actually Works (When Everything Else Fails) | Romi"
-      description="Discover why AI-powered ADHD task breakdown transforms overwhelm into action. Learn how breaking tasks into manageable steps crushes procrastination for good."
+      title="ADHD Task Breakdown: Why Breaking Tasks Down Works | Romi"
+      description="Why breaking tasks into small steps works for ADHD when nothing else does, how to do it without spending an hour planning, and where AI breakdown helps."
       slug="why-adhd-task-breakdown-works"
       keywords="ADHD task breakdown, ADHD task management, ADHD overwhelm solution, ADHD procrastination help, ADHD executive function support"
       ogTitle="Why ADHD Task Breakdown Changes Everything (Proven Solution)"

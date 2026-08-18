@@ -6,7 +6,7 @@ const ADHDSuperpowerBlog = () => {
   return (
     <BlogArticle
       title="Is ADHD a Superpower? The Science of ADHD Strengths | Romi"
-      description="Is ADHD really a superpower? The science of ADHD strengths, high context thinking and neurodivergent creativity, and how to build the environment that finally unlocks them."
+      description="Is ADHD really a superpower? The science of ADHD strengths, high-context thinking and creativity, and how to build the environment where they show up."
       slug="is-adhd-a-superpower"
       keywords="ADHD superpower, is ADHD a superpower, ADHD strengths, neurodivergent strengths, ADHD and creativity, high context thinker, ADHD divergent thinking, famous people with ADHD, ADHD at work"
       ogTitle="Is ADHD a Superpower? The Science of Neurodivergent Strengths"

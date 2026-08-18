@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const RejectionSensitiveDysphoriaBlog = () => {
   return (
     <BlogArticle
-      title="Rejection Sensitive Dysphoria and ADHD: Why Rejection Feels Physical | Romi"
-      description="Rejection sensitive dysphoria (RSD) makes criticism feel physically painful for ADHD brains. Learn what RSD is, why it happens, and practical, evidence-based ways to cope."
+      title="Rejection Sensitive Dysphoria (RSD) and ADHD: Why It Hurts"
+      description="Rejection sensitive dysphoria (RSD) makes criticism feel physically painful with ADHD. What RSD is, why it happens, and practical evidence-based ways to cope."
       slug="rejection-sensitive-dysphoria-adhd"
       keywords="rejection sensitive dysphoria, rejection sensitive dysphoria adhd, what is rejection sensitive dysphoria, rsd adhd, how to cope with rejection sensitive dysphoria, adhd rejection sensitivity, rejection sensitive dysphoria symptoms, rsd meaning, does adhd cause rejection sensitivity, adhd emotional dysregulation, rejection sensitive dysphoria treatment, is rsd a real diagnosis"
       ogTitle="Rejection Sensitive Dysphoria and ADHD: Why Rejection Feels Physical"

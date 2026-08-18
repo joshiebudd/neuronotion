@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const SupportNeurodivergentEmployeesBlog = () => {
   return (
     <BlogArticle
-      title="How to Support Neurodivergent Employees at Work: A Guide for Employers | Romi"
-      description="A practical guide to supporting neurodivergent employees at work, including the low-cost adjustments that help ADHD and other neurodivergent staff perform before a diagnosis ever arrives."
+      title="How to Support Neurodivergent Employees at Work (UK) | Romi"
+      description="A practical UK guide to supporting neurodivergent employees: low-cost adjustments that help ADHD, autistic and dyslexic staff, before or after a diagnosis."
       slug="how-to-support-neurodivergent-employees-at-work"
       keywords="how to support neurodivergent employees, supporting neurodivergent employees at work, neurodiversity in the workplace, neuro-inclusion, workplace adjustments for ADHD, reasonable adjustments for neurodivergent employees, supporting ADHD employees, neurodivergent employee retention, undiagnosed ADHD at work, neuroinclusive workplace"
       ogTitle="How to Support Neurodivergent Employees at Work (Even Before a Diagnosis)"

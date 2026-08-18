@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDIdeaOverwhelmBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Idea Overwhelm: The Capture & Categorize System That Stops Brilliant Ideas From Dying | Romi"
-      description="Your ADHD brain generates brilliant ideas like popcorn. Learn the proven Capture & Categorize system that prevents idea overwhelm and turns creativity into results."
+      title="Too Many Ideas With ADHD? A Capture System That Works | Romi"
+      description="Your ADHD brain makes ideas faster than you can act on them. A simple capture-and-categorise system that stops good ideas dying and stops the overwhelm."
       slug="adhd-idea-overwhelm-capture-system"
       keywords="ADHD idea overwhelm, ADHD too many ideas, ADHD idea management, ADHD creative ideas, ADHD idea capture, ADHD divergent thinking, ADHD creativity"
       ogTitle="ADHD Idea Overwhelm: How to Capture Ideas Without Drowning in Them"
       ogDescription="Stop letting brilliant ADHD ideas slip away or paralyze you. The Capture & Categorize system that works with your creative brain."
-      heading="ADHD Idea Overwhelm: How to Navigate Your Idea Storm Without Drowning"
+      heading="ADHD Idea Overwhelm: How to Capture and Sort Ideas Without Drowning"
       category="Productivity & Focus"
       date="Nov. 18, 2025"
       datePublished="2025-11-18"

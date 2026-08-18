@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDPrioritizationBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Prioritization: The Daily Non-Negotiables Method That Ends Decision Paralysis | Romi"
-      description="Stop drowning in task paralysis. Learn the ADHD prioritization method that helps you decide what to work on and actually get things done without overwhelm."
+      title="How to Prioritise With ADHD: The Non-Negotiables Method"
+      description="Can&apos;t decide what to work on with ADHD? The daily non-negotiables method: pick the few things that must happen, protect them, and let the rest wait."
       slug="adhd-prioritization-daily-non-negotiables"
       keywords="ADHD prioritization, ADHD task prioritization, ADHD decision paralysis, how to prioritize with ADHD, ADHD daily planning, ADHD executive function"
       ogTitle="ADHD Prioritization: How to Decide What to Work On When Everything Feels Important"
       ogDescription="The Daily Prioritization Matrix for ADHD: a simple method to end decision paralysis and focus on what actually matters."
-      heading="ADHD Prioritization: The Non-Negotiables List That Stops Decision Paralysis"
+      heading="How to Prioritise With ADHD: The Daily Non-Negotiables List That Stops Decision Paralysis"
       category="Productivity & Focus"
       date="Nov. 18, 2025"
       datePublished="2025-11-18"

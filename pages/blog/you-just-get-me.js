@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const YouJustGetMeBlog = () => {
   return (
     <BlogArticle
-      title="Finally, Someone Gets It: Why Being Understood Changes Everything with ADHD | Romi"
-      description="That magical moment when someone finally understands your ADHD. Discover why feeling misunderstood is so damaging and how finding the right support transforms everything."
+      title="Feeling Misunderstood With ADHD: Why It Hurts So Much"
+      description="That moment when someone finally understands your ADHD. Why feeling misunderstood is so damaging, and how the right support changes everything."
       slug="you-just-get-me"
       keywords="ADHD misunderstood, feeling misunderstood ADHD, ADHD understanding, ADHD support, ADHD validation, living with ADHD"
       ogTitle="You Just Get Me: The Power of Finally Being Understood"
       ogDescription="Most people don&apos;t understand ADHD. But when you find something that does? It&apos;s life-changing. Here&apos;s why."
-      heading="Finally, Someone Gets It: Why Being Understood Changes Everything with ADHD"
+      heading="Finally, Someone Gets It: Why Being Understood Changes Everything With ADHD"
       category="Understanding ADHD"
       date="Feb. 18, 2025"
       datePublished="2025-02-18"

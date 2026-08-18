@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const AdhdTaskParalysisBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Task Paralysis: How to Get Unstuck When You Can&apos;t Start | Romi"
-      description="ADHD task paralysis is when your brain freezes and you cannot start a task, even one you want to do. Here is why it happens and how to get unstuck, from a founder with ADHD."
+      title="ADHD Task Paralysis: How to Get Unstuck | Romi"
+      description="ADHD task paralysis is when your brain freezes and you can&apos;t start a task, even one you want to do. Why it happens and how to get unstuck, step by step."
       slug="adhd-task-paralysis"
       keywords="adhd task paralysis, task paralysis, adhd task paralysis meaning, how to get unstuck adhd, adhd cant start tasks, adhd task initiation, why cant i start tasks adhd, adhd freeze, adhd paralysis, how to start a task with adhd, adhd overwhelm freeze, adhd executive dysfunction task initiation, adhd stuck cant start, adhd wont start boring tasks"
       ogTitle="ADHD Task Paralysis: How to Get Unstuck When You Can't Start"
       ogDescription="Frozen and unable to start, even on things you care about? That is ADHD task paralysis. Here is what it is, why it happens, and how to get unstuck."
-      heading="ADHD Task Paralysis: How to Get Unstuck When You Can't Start"
+      heading="ADHD Task Paralysis: How to Get Unstuck When You Can&apos;t Start"
       category="Productivity & Focus"
       date="Aug. 5, 2026"
       datePublished="2026-08-05"

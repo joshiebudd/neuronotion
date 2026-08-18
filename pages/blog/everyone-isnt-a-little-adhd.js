@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const EveryoneIsntALittleADHDBlog = () => {
   return (
     <BlogArticle
-      title="Everyone Isn&apos;t &quot;A Little ADHD&quot; - The Truth About ADHD Brain Differences | Romi"
-      description="Stop the &quot;everyone&apos;s a little ADHD&quot; BS. Learn the real neuroscience: ADHD brains are physically different, and it&apos;s not about trying harder."
+      title="&apos;Everyone Is a Little ADHD&apos;: Why That&apos;s Wrong | Romi"
+      description="&apos;Everyone&apos;s a little ADHD&apos; sounds kind but it&apos;s wrong. What the neuroscience shows about how ADHD brains differ, and why it was never about trying harder."
       slug="everyone-isnt-a-little-adhd"
       keywords="ADHD is real, ADHD brain differences, everyone is not ADHD, ADHD neuroscience, ADHD stigma"
       ogTitle="Everyone Isn&apos;t &quot;A Little ADHD&quot; (Here&apos;s the Science)"
       ogDescription="ADHD is a real, physical difference in brain structure. Not a personality quirk. Not everyone&apos;s experience. Here&apos;s what to say when people dismiss your ADHD."
-      heading="Everyone Isn&apos;t &quot;A Little ADHD&quot;"
+      heading="Everyone Isn&apos;t &apos;A Little ADHD&apos;: The Truth About ADHD Brain Differences"
       category="Understanding ADHD"
       date="Feb. 25, 2025"
       datePublished="2025-02-25"

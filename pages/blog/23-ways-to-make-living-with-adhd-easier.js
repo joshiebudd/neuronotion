@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const TwentyThreeWaysADHDEasierBlog = () => {
   return (
     <BlogArticle
-      title="23 Ways to Make Living with ADHD 10x Easier | Proven Strategies | Romi"
-      description="Discover 23 proven ways to make ADHD easier: deep work timing, cold exposure, brain dumping, reward systems, and ADHD-specific tools that actually work."
+      title="23 Ways to Make Living With ADHD Easier (Adults) | Romi"
+      description="23 practical ways to make life with ADHD easier as an adult: deep-work timing, brain dumps, reward systems and ADHD-specific tools that actually work."
       slug="23-ways-to-make-living-with-adhd-easier"
       keywords="make ADHD easier, ADHD life hacks, living with ADHD strategies, ADHD management tips, ADHD daily strategies"
       ogTitle="23 Ways to Make Living with ADHD 10x Easier (Tested Strategies)"
       ogDescription="From cold water exposure to brain dumping to ADHD-designed systems—23 practical strategies that make life with ADHD significantly more manageable."
-      heading="23 Ways to Make Living with ADHD 10x Easier"
+      heading="23 Ways to Make Living With ADHD Easier"
       category="Understanding ADHD"
       date="Feb. 24, 2025"
       datePublished="2025-02-24"

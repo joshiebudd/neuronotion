@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDNotWhatYouThinkBlog = () => {
   return (
     <BlogArticle
-      title="ADHD is Not What You Think: What It&apos;s Really Like Living with ADHD | Romi"
-      description="ADHD isn&apos;t laziness or procrastination. Discover what it&apos;s really like: emotional overwhelm, time blindness, impulsive decisions, and the constant struggle behind the scenes."
+      title="What ADHD Is Really Like (It&apos;s Not What You Think) | Romi"
+      description="ADHD isn&apos;t laziness or bad time management. What it&apos;s really like day to day: emotional overwhelm, time blindness, impulsive decisions and constant effort."
       slug="adhd-is-not-what-you-think"
       keywords="what is ADHD really like, ADHD reality, living with ADHD, ADHD hidden struggles, ADHD behind the scenes"
       ogTitle="ADHD is Not What You Think (What It Really Is)"
       ogDescription="ADHD is having so much to do but being too overwhelmed to do any of it. It&apos;s your brain tuning out without warning. It&apos;s time that feels like now or never."
-      heading="ADHD is Not What You Think: What It&apos;s Really Like"
+      heading="ADHD Is Not What You Think: What It&apos;s Really Like"
       category="Understanding ADHD"
       date="Feb. 23, 2025"
       datePublished="2025-02-23"

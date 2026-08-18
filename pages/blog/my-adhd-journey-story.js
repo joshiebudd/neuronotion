@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDJourneyBlog = () => {
   return (
     <BlogArticle
-      title="From &quot;Naughty Kid&quot; to High-Performing Entrepreneur: My ADHD Journey | Romi"
+      title="My ADHD Story: From &apos;Naughty Kid&apos; to Founder | Romi"
       description="How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses. My journey proves your past doesn&apos;t define your future."
       slug="my-adhd-journey-story"
       keywords="ADHD personal story, ADHD success story, living with ADHD, ADHD entrepreneur, ADHD journey, overcoming ADHD, adult ADHD diagnosis story"
       ogTitle="My ADHD Journey: From Naughty Kid to Entrepreneur"
       ogDescription="Diagnosed at 10 with severe ADHD. Kicked out of 7+ schools. Now running two businesses. Your past identity doesn&apos;t define your future."
-      heading="From &quot;The Naughty Kid&quot; to High-Performing Entrepreneur: My ADHD Journey"
+      heading="From &apos;The Naughty Kid&apos; to High-Performing Entrepreneur: My ADHD Journey"
       category="Founder Story"
       date="Mar. 3, 2025"
       datePublished="2025-03-03"

@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const GoldilocksZoneRewriteBlog = () => {
   return (
     <BlogArticle
-      title="The ADHD Goldilocks Zone: Finding Your Perfect Balance | Romi"
-      description="Discover the ADHD Goldilocks Zone—the perfect balance between structure and freedom. Learn why rigid schedules fail and how to create sustainable productivity."
+      title="The ADHD Goldilocks Zone: How Much Structure You Need"
+      description="Rigid schedules fail ADHD brains and so does no structure. The Goldilocks Zone: how to find the balance of structure and freedom that you can actually keep."
       slug="the-adhd-goldilocks-zone"
       keywords="ADHD productivity, ADHD organization, sustainable ADHD systems, ADHD structure, ADHD flexibility"
       ogTitle="The ADHD Goldilocks Zone: Structure vs Freedom"

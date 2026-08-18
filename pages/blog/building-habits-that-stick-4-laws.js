@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const BuildingHabitsWithADHDBlog = () => {
   return (
     <BlogArticle
-      title="How to Build Habits with ADHD That Actually Stick (The 4 Laws) | Romi"
-      description="Discover the 4 Laws of Behavior Change adapted for ADHD brains. Learn how to build good habits and break bad ones when traditional advice fails."
+      title="How to Build Habits With ADHD: The 4 Laws, Adapted | Romi"
+      description="The 4 Laws of Behaviour Change adapted for ADHD brains: how to build good habits and break bad ones when the standard advice keeps failing you."
       slug="building-habits-that-stick-4-laws"
       keywords="ADHD habits, building habits with ADHD, ADHD habit formation, breaking bad habits ADHD, ADHD behavior change, ADHD routines"
       ogTitle="How to Build Habits with ADHD (The 4 Laws That Work)"
       ogDescription="Traditional habit advice fails ADHD brains. Discover the adapted Four Laws that actually work for building habits and breaking bad ones."
-      heading="How to Build Habits with ADHD That Actually Stick (The 4 Laws)"
+      heading="How to Build Habits With ADHD That Actually Stick (The 4 Laws of Behaviour Change, Adapted)"
       category="Habits & Routines"
       date="Feb. 28, 2025"
       datePublished="2025-02-28"

@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const SystemsFailBlog = () => {
   return (
     <BlogArticle
-      title="Do Your ADHD Systems Work on Hard Days? Sustainable Support That Adapts | Romi"
-      description="Most ADHD systems fail when you need them most. Discover adaptive support that works especially well when ADHD is hitting you hard."
+      title="ADHD Systems for Bad Days: Support That Still Works | Romi"
+      description="Most ADHD systems fail on the days you need them most. What a system that adapts to bad days looks like, and how to build support that holds when you can&apos;t."
       slug="do-your-systems-still-work-when-adhd-is-hitting-you-hard"
       keywords="ADHD systems, sustainable ADHD support, ADHD low capacity, ADHD variable capacity, adaptive ADHD tools"
       ogTitle="ADHD Systems That Work on Your Worst Days"
       ogDescription="Your system works on good days but collapses when life gets hard. Learn why and how to build truly sustainable ADHD support."
-      heading="Do Your Systems Still Work When ADHD is Hitting You Hard?"
+      heading="Do Your Systems Still Work When ADHD Is Hitting You Hard?"
       category="Productivity & Focus"
       date="Feb. 17, 2025"
       datePublished="2025-02-17"

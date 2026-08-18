@@ -5,7 +5,7 @@ import { BlogArticle } from '../../src/romi';
 const ADHDEntrepreneurshipBlog = () => {
   return (
     <BlogArticle
-      title="ADHD and Entrepreneurship: Why the Early Startup Phase Feels Like Home | Romi"
+      title="ADHD and Entrepreneurship: Why 0 to 1 Feels Like Home | Romi"
       description="Why the scrappy 0 to 1 phase of a startup feels electric for the ADHD brain, why scaling gets harder, and how to keep thriving as your business grows."
       slug="adhd-and-entrepreneurship"
       keywords="ADHD and entrepreneurship, ADHD entrepreneurs, ADHD founders, starting a business with ADHD, ADHD and startups, why entrepreneurs have ADHD, ADHD business owner, ADHD and scaling a business, ADHD 0 to 1"

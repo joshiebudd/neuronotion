@@ -5,12 +5,12 @@ import { BlogArticle } from '../../src/romi';
 const AdhdTooEmotionalBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Emotional Dysregulation: Why You&apos;re Not &quot;Too Emotional&quot; | Romi"
-      description="Discover why ADHD causes intense emotional responses. Learn the neuroscience behind emotional dysregulation and practical strategies to manage overwhelming feelings."
+      title="ADHD Emotional Dysregulation: Why You Feel Too Much | Romi"
+      description="Emotional dysregulation is part of ADHD, not a character flaw. The neuroscience behind big reactions and practical ways to manage overwhelm day to day."
       slug="adhd-and-being-too-emotional"
       ogTitle="ADHD and Emotional Dysregulation: You&apos;re Not Too Emotional"
       ogDescription="Your emotional intensity isn&apos;t a personality flaw—it&apos;s neurology. Understand why ADHD brains feel emotions more intensely."
-      heading="ADHD and Being Too Emotional: Understanding Emotional Dysregulation"
+      heading="ADHD Emotional Dysregulation: Why You&apos;re Not &apos;Too Emotional&apos;"
       category="Mental Health"
       date="Jan. 25, 2025"
       datePublished="2025-01-25"

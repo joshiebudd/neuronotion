@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDRoutinesBlog = () => {
   return (
     <BlogArticle
-      title="How to Build Habits and Routines with ADHD That Actually Stick | Romi"
-      description="Discover why traditional habit-building fails for ADHD brains and learn the adaptive approach that creates sustainable routines without willpower."
+      title="How to Build Routines With ADHD That Stick | Romi"
+      description="Why traditional habit-building fails ADHD brains, and the adaptive approach that creates routines you can keep without relying on willpower."
       slug="adhd-and-routines"
       keywords="ADHD habits, ADHD routines, building habits with ADHD, ADHD consistency, sustainable ADHD routines"
       ogTitle="Building ADHD Habits That Actually Stick"
       ogDescription="Traditional habit advice doesn't work for ADHD. Learn the adaptive approach that creates sustainable routines for your brain."
-      heading="How to Build Habits and Routines with ADHD That Actually Stick"
+      heading="How to Build Habits and Routines With ADHD That Actually Stick"
       category="Habits & Routines"
       date="Feb 7, 2025"
       datePublished="2025-02-07"

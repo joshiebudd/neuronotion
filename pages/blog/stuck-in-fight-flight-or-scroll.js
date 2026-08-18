@@ -5,12 +5,12 @@ import { BlogArticle } from '../../src/romi';
 const FightFlightScrollBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Nervous System Dysregulation: Fight, Flight, or Scroll | Romi"
-      description="Why ADHD keeps you stuck in survival mode. Learn about nervous system dysregulation and practical somatic techniques to finally feel regulated."
+      title="ADHD Nervous System Dysregulation: Fight, Flight or Scroll"
+      description="Why ADHD keeps you stuck in survival mode: fight, flight or scrolling. What nervous system dysregulation is, and the somatic techniques that help you settle."
       slug="stuck-in-fight-flight-or-scroll"
       ogTitle="ADHD: Stuck in Fight, Flight, or Scroll Mode"
       ogDescription="Your ADHD brain&apos;s alarm system is hypersensitive. Discover why you swing between hyperarousal and shutdown, and how to regulate."
-      heading="Stuck in Fight, Flight, or Scroll? 📱 Understanding ADHD Nervous System Dysregulation"
+      heading="Stuck in Fight, Flight, or Scroll? Understanding ADHD Nervous System Dysregulation"
       category="Mental Health"
       date="Jan. 22, 2025"
       datePublished="2025-01-22"

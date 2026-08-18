@@ -5,12 +5,12 @@ import { BlogArticle } from '../../src/romi';
 const ADHDAnxietyBlog = () => {
   return (
     <BlogArticle
-      title="ADHD and Anxiety: Breaking the Vicious Cycle | Romi"
-      description="Learn how ADHD and anxiety create a debilitating feedback loop, and discover practical strategies to break free from the cycle of executive dysfunction and panic."
+      title="ADHD and Anxiety: How to Break the Loop | Romi"
+      description="ADHD and anxiety feed each other: a task slips, panic grows, the task grows. Here is why the loop forms and the practical steps that break it fast."
       slug="adhd-and-anxiety-gang-up"
       ogTitle="ADHD and Anxiety: Breaking the Vicious Cycle"
       ogDescription="Nearly half of adults with ADHD experience anxiety. Discover the science behind the cycle and practical ways to break free."
-      heading="When ADHD and Anxiety Gang Up on You: Practical Steps to Break the Loop Fast"
+      heading="ADHD and Anxiety: How to Break the Loop When They Gang Up on You"
       category="Mental Health"
       date="Jan. 18, 2025"
       datePublished="2025-01-18"

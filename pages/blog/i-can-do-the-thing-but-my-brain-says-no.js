@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const BrainSaysNoBlog = () => {
   return (
     <BlogArticle
-      title="I Can Do It But My Brain Says No: Overcoming ADHD Executive Dysfunction | Romi"
-      description="Understand why you can&apos;t start tasks you know you can do. Learn how to overcome executive dysfunction paralysis and build momentum with ADHD."
+      title="ADHD Executive Dysfunction: &apos;I Can, But My Brain Says No&apos;"
+      description="Why you can&apos;t start tasks you know you can do. What ADHD executive dysfunction actually is, why willpower doesn&apos;t fix it, and how to build momentum anyway."
       slug="i-can-do-the-thing-but-my-brain-says-no"
       keywords="ADHD executive dysfunction, ADHD task paralysis, ADHD task initiation, ADHD activation energy, overcoming ADHD paralysis"
       ogTitle="ADHD Executive Dysfunction: When Your Brain Says No"

@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDManagementBlog = () => {
   return (
     <BlogArticle
-      title="Managing ADHD Without Medication: Comprehensive Strategies That Work | Romi"
-      description="Discover evidence-based strategies for managing ADHD without medication. Learn how medication fits into comprehensive ADHD management and when support systems matter most."
+      title="How to Manage ADHD Without Medication (Adults) | Romi"
+      description="Evidence-based ways to manage adult ADHD without medication: sleep, exercise, structure, external memory and support, plus where medication fits."
       slug="adhd-and-medication"
       keywords="ADHD without medication, ADHD management, ADHD medication alternatives, non-medication ADHD treatment, ADHD support systems"
       ogTitle="Managing ADHD Without Medication: What Actually Works"
       ogDescription="ADHD medication is one tool among many. Discover comprehensive management strategies that work with or without medication."
-      heading="How to Manage ADHD in Adults: With or Without Medication"
+      heading="How to Manage ADHD Without Medication (and Where Medication Fits)"
       category="Diagnosis & Treatment"
       date="Feb. 9, 2025"
       datePublished="2025-02-09"

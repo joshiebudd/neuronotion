@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const ReduceADHDProcrastinationBlog = () => {
   return (
     <BlogArticle
-      title="How to Reduce ADHD Procrastination: Stop Waiting for Motivation | Romi"
-      description="Stop letting ADHD procrastination destroy your life. Learn why willpower fails and discover 3 proven strategies that work with your ADHD brain, not against it."
+      title="How to Stop Procrastinating With ADHD (Without Willpower)"
+      description="ADHD procrastination isn&apos;t a willpower problem. Why waiting for motivation fails and three strategies that work with an ADHD brain instead of against it."
       slug="how-to-reduce-adhd-procrastination"
       keywords="ADHD procrastination, reduce ADHD procrastination, ADHD task avoidance, overcoming ADHD procrastination, ADHD motivation strategies"
       ogTitle="How to Reduce ADHD Procrastination (Willpower Won&apos;t Work)"

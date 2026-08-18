@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const StudyMusicBlog = () => {
   return (
     <BlogArticle
-      title="Best Study Music for ADHD: What to Listen To for Maximum Focus | Romi"
-      description="Discover the science behind study music for ADHD. Learn which sounds improve focus, why silence doesn&apos;t work, and how to optimize your auditory environment."
+      title="Best Study Music for ADHD: What Actually Helps Focus | Romi"
+      description="The science behind study music for ADHD: which sounds improve focus, why silence often doesn&apos;t work, and how to set up your auditory environment."
       slug="adhd-and-study-music"
       keywords="ADHD study music, focus music for ADHD, binaural beats ADHD, ADHD concentration music, brown noise ADHD"
       ogTitle="ADHD Study Music: The Science of Auditory Focus"
       ogDescription="Not all study music works for ADHD. Learn which frequencies, genres, and sound types actually improve focus for your brain."
-      heading="What Should People with ADHD Listen To When Studying? The Science of Focus Music"
+      heading="What Should People With ADHD Listen To When Studying? The Science of Focus Music"
       category="Productivity & Focus"
       date="Feb. 13, 2025"
       datePublished="2025-02-13"

@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDRisingBlog = () => {
   return (
     <BlogArticle
-      title="Why Is ADHD on the Rise? The Modern World Is Making It Worse | Romi"
-      description="ADHD diagnoses have increased by over 1 million since 2016. Discover why the modern world amplifies ADHD symptoms and what you can do to regain control."
+      title="Why Is ADHD on the Rise? (UK, Explained) | Romi"
+      description="ADHD diagnoses in the UK have risen sharply since 2016. Why more adults are being diagnosed, how modern life amplifies symptoms, and what you can do about it."
       slug="adhd-is-rising-why"
       keywords="ADHD rising, ADHD statistics 2024, why is ADHD increasing, modern world ADHD, ADHD overstimulation, digital media ADHD"
       ogTitle="Why ADHD Is Skyrocketing: The Modern World Effect"
       ogDescription="7 million U.S. children now have ADHD. Learn why modern life is making symptoms worse and how to fight back."
-      heading="Why Is ADHD on the Rise? The Modern World Is Making Your Symptoms Worse"
+      heading="Why Is ADHD on the Rise? The Modern World Is Making Symptoms Worse"
       category="Understanding ADHD"
       date="Feb. 17, 2025"
       datePublished="2025-02-17"

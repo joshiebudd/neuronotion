@@ -5,12 +5,12 @@ const ADHDBurningTimeBlog = () => {
   return (
     <BlogArticle
       title="ADHD Disorganisation: Why It Wastes Hours Every Day | Romi"
-      description="ADHD disorganisation costs you hours a day in searching, rewriting and re-remembering. Why organisation is non-negotiable for ADHD brains, and the simplest systems that give the time back."
+      description="ADHD disorganisation costs hours a day in searching and re-remembering. Why organisation is non-negotiable for ADHD brains, and the simple systems that work."
       slug="adhd-wasting-time-disorganization"
       keywords="ADHD disorganization, ADHD time management, ADHD wasting time, ADHD organization tips, ADHD productivity, managing ADHD chaos"
       ogTitle="ADHD is Bleeding Your Time: Get Organised or Stay Stuck"
       ogDescription="Every second spent disorganised burns mental energy you can&apos;t spare. Stop wasting time on chaos and reclaim hours for what matters."
-      heading="Your ADHD is Bleeding Time: Why Organisation is Non-Negotiable"
+      heading="Your ADHD Is Bleeding Time: Why Organisation Is Non-Negotiable"
       category="Productivity & Focus"
       date="Mar. 2, 2025"
       datePublished="2025-03-02"

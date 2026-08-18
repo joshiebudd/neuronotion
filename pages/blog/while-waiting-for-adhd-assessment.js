@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const WaitingForADHDAssessmentBlog = () => {
   return (
     <BlogArticle
-      title="What to Do While Waiting for an ADHD Assessment: How to Cope and Function | Romi"
-      description="Hundreds of thousands of adults are stuck on the NHS ADHD assessment waiting list. Here is what you can actually do while you wait to cope, function at work, and feel better before a diagnosis."
+      title="Waiting for an ADHD Assessment (UK): What to Do Meanwhile"
+      description="Hundreds of thousands of UK adults are on NHS ADHD assessment waiting lists. What you can actually do while you wait to cope, function and get support now."
       slug="while-waiting-for-adhd-assessment"
       keywords="waiting for an ADHD assessment, ADHD assessment waiting list, what to do while waiting for ADHD diagnosis, NHS ADHD waiting list, coping while waiting for ADHD assessment, undiagnosed ADHD at work, ADHD support without a diagnosis, ADHD assessment wait time UK"
       ogTitle="What to Do While Waiting for an ADHD Assessment"

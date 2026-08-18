@@ -5,8 +5,8 @@ import { BlogArticle } from '../../src/romi';
 const ShouldITellMyEmployerADHDBlog = () => {
   return (
     <BlogArticle
-      title="Should I Tell My Employer I Have ADHD? How to Decide and Disclose Well | Romi"
-      description="Should you tell your boss you have ADHD? A clear, honest guide to disclosing ADHD at work: your legal rights under the Equality Act 2010, the real risks, and how to decide."
+      title="Should I Tell My Employer I Have ADHD? (UK Guide) | Romi"
+      description="Should you tell your boss you have ADHD? An honest UK guide to disclosing at work: your Equality Act 2010 rights, the real risks and how to do it well."
       slug="should-i-tell-my-employer-i-have-adhd"
       keywords="should I tell my employer I have ADHD, disclosing ADHD at work, should I tell my boss I have ADHD, do I have to tell my employer about ADHD, ADHD disclosure workplace, ADHD Equality Act 2010, reasonable adjustments ADHD, ADHD at work rights UK, psychological safety neurodiversity"
       ogTitle="Should I Tell My Employer I Have ADHD? How to Decide"
