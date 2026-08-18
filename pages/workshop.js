@@ -12,10 +12,13 @@ import { Button, Container, RomiCharacter, RomiPage } from "../src/romi";
  * matching the LandingTwo design direction.
  */
 
-// Drop the VSL link in here when it's recorded (YouTube/Loom embed URL or a
-// direct .mp4). Until then the page shows the workshop hero graphic with a
-// play chip; once a URL is set the same graphic becomes the video poster.
-const VSL_URL = null;
+// The VSL. Accepts a YouTube/Loom embed URL or a direct .mp4.
+const VSL_URL = "/romi/workshop/vsl.mp4";
+
+// Still pulled from the VSL itself, used as the play-button thumbnail and the
+// video poster. Kept separate from HERO_IMAGE so the designed cover graphic
+// stays the og:image, where a made-for-purpose cover beats a video frame.
+const VSL_POSTER = "/romi/workshop/vsl-poster.jpg";
 
 const HERO_IMAGE = "/romi/workshop/hero.jpg";
 const SITE = "https://www.romiadhd.com";
@@ -245,8 +248,8 @@ function Vsl() {
                 className="h-full w-full"
               />
             ) : isMp4 && playing ? (
-              <video src={VSL_URL} controls autoPlay playsInline poster={HERO_IMAGE} className="h-full w-full object-cover" />
-            ) : HERO_IMAGE ? (
+              <video src={VSL_URL} controls autoPlay playsInline poster={VSL_POSTER} className="h-full w-full object-cover" />
+            ) : VSL_POSTER ? (
               <button
                 type="button"
                 onClick={onPosterClick}
@@ -254,8 +257,8 @@ function Vsl() {
                 aria-label={isMp4 ? "Play the workshop introduction" : "Workshop introduction video coming soon"}
               >
                 <Image
-                  src={HERO_IMAGE}
-                  alt="Neurodivergence at Work: Unlocking your hidden superstars. Hosted by Josh Budd and Tom Crawford."
+                  src={VSL_POSTER}
+                  alt="Josh Budd introducing the Neurodivergence at Work workshop."
                   fill
                   priority
                   sizes="(max-width: 920px) 100vw, 880px"
