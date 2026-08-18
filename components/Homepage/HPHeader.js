@@ -6,8 +6,8 @@ const HPHeader = () => {
   return (
     <header className="bg-white bg-opacity-30 backdrop-blur-lg z-10 fixed top-0 right-0 left-0 shadow">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
-        <a
-          href="https://www.neuro-notion.com/#hero"
+        <Link
+          href="/"
           className="flex items-center grow transition duration-300"
         >
           <Image
@@ -23,14 +23,14 @@ const HPHeader = () => {
               Neuro Notion
             </span>
           </div>
-        </a>
+        </Link>
         <nav className="hidden md:flex space-x-4 items-center">
-          <Link href="/" className="text-prim hover:text-gray-900 text-lg md:xl font-pop font-bold">Claudia</Link>
-          <a href="https://www.neuro-notion.com/templates" className="text-prim hover:text-gray-900 text-lg md:xl font-pop font-bold">ADHD Templates</a>
-          <a href="https://www.neuro-notion.com/blogs" className="text-prim hover:text-gray-900 text-lg md:xl font-pop font-bold">Blogs</a>
-          <a href="https://www.neuro-notion.com/brain" className="bg-accent1 text-gray-50 py-2 px-4 font-prim font-bold rounded-xl text-lg shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-violet-700 hover:bg-opacity-80 hover:text-gray-50">
+          <Link href="/" className="text-prim hover:text-gray-900 text-lg md:xl font-pop font-bold">Romi</Link>
+          <Link href="/templates" className="text-prim hover:text-gray-900 text-lg md:xl font-pop font-bold">ADHD Templates</Link>
+          <Link href="/blogs" className="text-prim hover:text-gray-900 text-lg md:xl font-pop font-bold">Blogs</Link>
+          <Link href="/brain" className="bg-accent1 text-gray-50 py-2 px-4 font-prim font-bold rounded-xl text-lg shadow-gray-600 shadow-md hover:shadow-gray-600 hover:shadow-sm hover:bg-violet-700 hover:bg-opacity-80 hover:text-gray-50">
             Ultimate ADHD Brain
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

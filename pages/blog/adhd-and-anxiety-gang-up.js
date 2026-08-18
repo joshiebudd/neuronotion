@@ -40,7 +40,7 @@ const ADHDAnxietyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You are not broken, and you are certainly not alone; <a href="https://chadd.org/about-adhd/co-occurring-conditions/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">nearly half of adults with ADHD also experience an anxiety disorder</a>. The solution is not to simply try harder, but to implement a system that tackles both the executive function deficit and the resulting anxiety.
+                You are not broken, and you are certainly not alone; <a href="https://chadd.org/about-adhd/co-occuring-conditions/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">nearly half of adults with ADHD also experience an anxiety disorder</a>. The solution is not to simply try harder, but to implement a system that tackles both the executive function deficit and the resulting anxiety.
               </p>
               <br />
               <br />
@@ -150,7 +150,7 @@ const ADHDAnxietyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The combination of ADHD and anxiety doesn&apos;t have to control your life. With the right support system—one that addresses both the executive function challenges and the resulting emotional dysregulation—you can break free from the loop. <a href="https://www.additudemag.com/anxiety-and-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research consistently shows</a> that addressing executive dysfunction reduces anxiety symptoms in ADHD populations, making proper support a crucial component of mental health management.
+                The combination of ADHD and anxiety doesn&apos;t have to control your life. With the right support system—one that addresses both the executive function challenges and the resulting emotional dysregulation—you can break free from the loop. <a href="https://www.additudemag.com/adhd-and-anxiety-symptoms-coping/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research consistently shows</a> that addressing executive dysfunction reduces anxiety symptoms in ADHD populations, making proper support a crucial component of mental health management.
               </p>
               <br />
               <br />

@@ -14,7 +14,8 @@ const BlogCard = ({ image, date, CardTitle, CardDescription, slug }) => {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={image}
-          alt=""
+          alt={CardTitle ? `${CardTitle} (Romi ADHD blog)` : ""}
+          loading="lazy"
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
       </div>

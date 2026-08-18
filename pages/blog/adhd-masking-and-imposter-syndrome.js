@@ -151,7 +151,7 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The exhaustion you feel from masking isn&apos;t weakness—it&apos;s evidence of incredible strength. You&apos;ve been doing the impossible, performing a role that doesn&apos;t fit while still achieving success. <a href="https://www.additudemag.com/adhd-masking-camouflaging/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD masking</a> confirms that this performance comes at enormous psychological and physical cost. Imagine what you could do if that energy was redirected toward your actual goals instead of maintaining the mask.
+                The exhaustion you feel from masking isn&apos;t weakness—it&apos;s evidence of incredible strength. You&apos;ve been doing the impossible, performing a role that doesn&apos;t fit while still achieving success. <a href="https://www.additudemag.com/adhd-masking-signs-consequences-solutions/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD masking</a> confirms that this performance comes at enormous psychological and physical cost. Imagine what you could do if that energy was redirected toward your actual goals instead of maintaining the mask.
               </p>
               <br />
               <br />

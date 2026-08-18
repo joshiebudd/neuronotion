@@ -164,7 +164,7 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Many people with ADHD find that <Link href="/blog/the-adhd-goldilocks-zone-rewrite" className="text-blue-600 hover:underline">finding their personal balance</Link> between structure and freedom is key to sustainable productivity with small tasks.
+                Many people with ADHD find that <Link href="/blog/the-adhd-goldilocks-zone" className="text-blue-600 hover:underline">finding their personal balance</Link> between structure and freedom is key to sustainable productivity with small tasks.
               </p>
               <br />
               <br />

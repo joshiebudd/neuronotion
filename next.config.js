@@ -30,17 +30,34 @@ const nextConfig = {
   async redirects() {
     // Route cutover: the new Romi pages took over /, /corporates, and the old
     // Neuro Notion pages moved to /neuronotion*. Keep old links working.
+    //
+    // All permanent (308) since the 18 Aug 2026 SEO audit: the cutover has been
+    // stable since 13 Jul, and permanent redirects are what pass link equity.
+    // The Claudia-era pages (/team, /pricing, /neuronotion-corporate,
+    // /neuronotion-coaches, /claudianewlp, /forcorporate2, /templateshome) were
+    // still live and indexable with "Claudia" titles; they now redirect to their
+    // Romi equivalents. /neuronotion stays as the archived old homepage.
     return [
-      { source: "/rominewlanding", destination: "/", permanent: false },
-      { source: "/romiforcorporates", destination: "/corporates", permanent: false },
-      { source: "/forcorporate", destination: "/neuronotion-corporate", permanent: false },
+      { source: "/rominewlanding", destination: "/", permanent: true },
+      { source: "/romiforcorporates", destination: "/corporates", permanent: true },
+      { source: "/forcorporate", destination: "/corporates", permanent: true },
+      { source: "/forcorporate2", destination: "/corporates", permanent: true },
+      { source: "/neuronotion-corporate", destination: "/corporates", permanent: true },
       // /romiforclinics is the ONLY clinic page now. All old clinic routes (the
       // Claudia clinic page + the standalone pricing page) redirect into it.
-      { source: "/forclinics", destination: "/romiforclinics", permanent: false },
-      { source: "/forclinics2", destination: "/romiforclinics", permanent: false },
-      { source: "/neuronotion-clinics", destination: "/romiforclinics", permanent: false },
-      { source: "/clinicpricing", destination: "/romiforclinics#pricing", permanent: false },
-      { source: "/forcoaches", destination: "/neuronotion-coaches", permanent: false },
+      { source: "/forclinics", destination: "/romiforclinics", permanent: true },
+      { source: "/forclinics2", destination: "/romiforclinics", permanent: true },
+      { source: "/neuronotion-clinics", destination: "/romiforclinics", permanent: true },
+      { source: "/clinicpricing", destination: "/romiforclinics#pricing", permanent: true },
+      { source: "/forcoaches", destination: "/", permanent: true },
+      { source: "/neuronotion-coaches", destination: "/", permanent: true },
+      // Claudia-era pages retired 18 Aug 2026.
+      { source: "/pricing", destination: "/#pricing", permanent: true },
+      { source: "/team", destination: "/", permanent: true },
+      { source: "/claudianewlp", destination: "/neuronotion", permanent: true },
+      { source: "/templateshome", destination: "/templates", permanent: true },
+      // The blog index lives at /blogs; /blog is the obvious guess.
+      { source: "/blog", destination: "/blogs", permanent: true },
     ];
   },
   reactStrictMode: true,

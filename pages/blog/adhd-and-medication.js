@@ -43,7 +43,7 @@ const ADHDManagementBlog = () => {
               <br />
               <h2 className="blog-subheader">Understanding ADHD Medication: What It Does and Doesn&apos;t Do</h2>
               <p className="blog-body">
-                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2695104/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD medication</a> shows that medications work by altering neurotransmitter levels in the brain, primarily dopamine and norepinephrine. For many people with ADHD, this neurochemical adjustment can significantly improve focus, impulse control, and executive function.
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12434367/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD medication</a> shows that medications work by altering neurotransmitter levels in the brain, primarily dopamine and norepinephrine. For many people with ADHD, this neurochemical adjustment can significantly improve focus, impulse control, and executive function.
               </p>
               <br />
               <br />
@@ -155,7 +155,7 @@ const ADHDManagementBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The goal isn&apos;t to be pro-medication or anti-medication—it&apos;s to be pro-whatever-improves-your-life. <a href="https://chadd.org/about-adhd/medication-management/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CHADD&apos;s medication guidelines</a> emphasize that the best ADHD treatment is individualized and combines multiple approaches.
+                The goal isn&apos;t to be pro-medication or anti-medication—it&apos;s to be pro-whatever-improves-your-life. <a href="https://chadd.org/for-adults/using-medication-to-manage-adhd-symptoms/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CHADD&apos;s medication guidelines</a> emphasize that the best ADHD treatment is individualized and combines multiple approaches.
               </p>
               <br />
               <br />

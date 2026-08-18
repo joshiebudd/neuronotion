@@ -155,7 +155,7 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Understanding <Link href="/blog/the-adhd-goldilocks-zone-rewrite" className="text-blue-600 hover:underline">your personal Goldilocks Zone</Link> helps you recognize when you need maximum support versus when you can handle more independence.
+                Understanding <Link href="/blog/the-adhd-goldilocks-zone" className="text-blue-600 hover:underline">your personal Goldilocks Zone</Link> helps you recognize when you need maximum support versus when you can handle more independence.
               </p>
               <br />
               <br />

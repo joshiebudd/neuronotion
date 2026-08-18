@@ -242,7 +242,7 @@ const ThreePillarsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Understanding <Link href="/blog/finally-someone-gets-my-adhd" className="text-blue-600 hover:underline">why having systems that understand your brain matters so much</Link> is key to actually implementing these foundations instead of just knowing about them.
+                Understanding <Link href="/blog/you-just-get-me" className="text-blue-600 hover:underline">why having systems that understand your brain matters so much</Link> is key to actually implementing these foundations instead of just knowing about them.
               </p>
               <br />
               <br />

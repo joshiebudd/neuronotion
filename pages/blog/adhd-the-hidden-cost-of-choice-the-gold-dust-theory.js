@@ -46,7 +46,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <h2 className="blog-subheader">Why Decision Fatigue Hits ADHD Brains Harder</h2>
               <p className="blog-body">
-                Decision fatigue isn&apos;t unique to ADHD, but it affects ADHD brains with devastating intensity. <a href="https://www.additudemag.com/executive-function-deficits-linked-to-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research shows</a> that people with ADHD have reduced executive function in the prefrontal cortex—the very area responsible for decision-making, planning, and impulse control. This means you&apos;re starting each day with less gold dust than neurotypical people, and you&apos;re burning through it faster with every choice you make.
+                Decision fatigue isn&apos;t unique to ADHD, but it affects ADHD brains with devastating intensity. <a href="https://www.additudemag.com/7-executive-function-deficits-linked-to-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research shows</a> that people with ADHD have reduced executive function in the prefrontal cortex—the very area responsible for decision-making, planning, and impulse control. This means you&apos;re starting each day with less gold dust than neurotypical people, and you&apos;re burning through it faster with every choice you make.
               </p>
               <br />
               <br />

@@ -53,7 +53,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <a href="https://www.additudemag.com/adhd-burnout-symptoms/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and burnout</a> shows that neurodivergent individuals experience exhaustion differently than neurotypical people. It&apos;s not just physical tiredness—it&apos;s a deep, systemic depletion that comes from constantly fighting your neurology. You&apos;re not tired from working—you&apos;re tired from the immense effort of trying to work like someone whose brain functions differently.
+                <a href="https://add.org/adhd-burnout/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and burnout</a> shows that neurodivergent individuals experience exhaustion differently than neurotypical people. It&apos;s not just physical tiredness—it&apos;s a deep, systemic depletion that comes from constantly fighting your neurology. You&apos;re not tired from working—you&apos;re tired from the immense effort of trying to work like someone whose brain functions differently.
               </p>
               <br />
               <br />

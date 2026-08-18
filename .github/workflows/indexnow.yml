@@ -1,0 +1,85 @@
+name: IndexNow ping (Bing)
+
+# Every push to main deploys to production on Vercel. This job waits for that
+# deploy, works out which public URLs changed in the push, and submits them to
+# IndexNow so Bing (and therefore ChatGPT's search) picks them up the same day.
+# If the sitemap itself changed, every sitemap URL is submitted.
+# The key is public by design; IndexNow verifies it by fetching
+# https://www.romiadhd.com/<key>.txt (kept in public/).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Submit every URL in the sitemap"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Wait for the Vercel production deploy
+        run: sleep 180
+
+      - name: Work out which URLs changed
+        id: urls
+        shell: bash
+        run: |
+          set -euo pipefail
+          HOST="https://www.romiadhd.com"
+          ALL="${{ github.event.inputs.all || 'false' }}"
+          if [ "${{ github.event_name }}" = "push" ]; then
+            CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} 2>/dev/null || git diff --name-only HEAD~1 HEAD)
+          else
+            CHANGED=""
+          fi
+          echo "$CHANGED" | grep -qE '^public/sitemap\.xml$' && ALL="true" || true
+          if [ "$ALL" = "true" ]; then
+            curl -fsSL "$HOST/sitemap.xml" | grep -oE '<loc>[^<]+</loc>' | sed 's/<loc>//;s/<\/loc>//' > urls.txt
+          else
+            : > urls.txt
+            echo "$CHANGED" | grep -E '^pages/.*\.(js|jsx|tsx)$' | grep -vE '^pages/(_app|_document|api/)' | while read -r f; do
+              p="${f#pages/}"; p="${p%.*}"; p="${p%/index}"
+              [ "$p" = "index" ] && p=""
+              echo "$HOST/$p" >> urls.txt
+            done
+            # Any component/template change can alter every page; when the blog
+            # template or the header/footer changes, resubmit the sitemap.
+            if echo "$CHANGED" | grep -qE '^(src/romi/components/(blog|docs|marketing|layout)/|components/Articles/)'; then
+              curl -fsSL "$HOST/sitemap.xml" | grep -oE '<loc>[^<]+</loc>' | sed 's/<loc>//;s/<\/loc>//' >> urls.txt
+            fi
+          fi
+          sort -u urls.txt -o urls.txt
+          echo "count=$(wc -l < urls.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          echo "URLs to submit:"; cat urls.txt
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.count != '0'
+        shell: bash
+        run: |
+          set -euo pipefail
+          KEY="468e6d5dcfdd99608d2cbd4f728a18cc"
+          python3 - <<'PY'
+          import json, urllib.request
+          urls = [u.strip() for u in open("urls.txt") if u.strip()]
+          payload = {"host": "www.romiadhd.com", "key": "468e6d5dcfdd99608d2cbd4f728a18cc",
+                     "keyLocation": "https://www.romiadhd.com/468e6d5dcfdd99608d2cbd4f728a18cc.txt",
+                     "urlList": urls[:10000]}
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=json.dumps(payload).encode(),
+                                       headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  print("IndexNow HTTP", r.status, "for", len(urls), "URLs")
+          except urllib.error.HTTPError as e:
+              print("IndexNow HTTP", e.code, e.read().decode()[:300]); raise SystemExit(1)
+          PY

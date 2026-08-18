@@ -1,5 +1,30 @@
-# *
+# romiadhd.com
+# Everything is crawlable. AI search crawlers are named explicitly so there is
+# no doubt: Romi wants to be retrievable by ChatGPT, Claude, Perplexity and
+# friends as well as by Google and Bing.
+
 User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 # Sitemaps

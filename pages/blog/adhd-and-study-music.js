@@ -43,7 +43,7 @@ const StudyMusicBlog = () => {
               <br />
               <h2 className="blog-subheader">Understanding ADHD Auditory Processing</h2>
               <p className="blog-body">
-                <a href="https://www.additudemag.com/adhd-hyperfocus-music/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and auditory processing</a> shows that ADHD brains don&apos;t filter auditory stimuli the same way neurotypical brains do. Your auditory processing system is hypersensitive—sounds that others can easily ignore become significant distractions for you. But when used strategically, sound becomes a powerful tool for focus.
+                <a href="https://www.additudemag.com/study-music-to-focus-the-adhd-brain/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and auditory processing</a> shows that ADHD brains don&apos;t filter auditory stimuli the same way neurotypical brains do. Your auditory processing system is hypersensitive—sounds that others can easily ignore become significant distractions for you. But when used strategically, sound becomes a powerful tool for focus.
               </p>
               <br />
               <br />
@@ -74,7 +74,7 @@ const StudyMusicBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Understanding <Link href="/blog/the-adhd-goldilocks-zone-rewrite" className="text-blue-600 hover:underline">your personal Goldilocks Zone</Link> helps you find the right balance of auditory stimulation—not too much, not too little, just right for your brain.
+                Understanding <Link href="/blog/the-adhd-goldilocks-zone" className="text-blue-600 hover:underline">your personal Goldilocks Zone</Link> helps you find the right balance of auditory stimulation—not too much, not too little, just right for your brain.
               </p>
               <br />
               <br />

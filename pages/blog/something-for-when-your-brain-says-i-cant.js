@@ -51,7 +51,7 @@ const BrainSaysICantBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This isn&apos;t about motivation. On low-capacity days, even tasks you usually enjoy become impossible. You want to shower, but you can&apos;t. You want to respond to that message, but the words won&apos;t come. You want to start the project, but your body refuses to move. <a href="https://www.additudemag.com/adhd-paralysis-task-initiation/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">This paralysis isn&apos;t laziness</a>—it&apos;s a neurological roadblock where your executive function has completely shut down.
+                This isn&apos;t about motivation. On low-capacity days, even tasks you usually enjoy become impossible. You want to shower, but you can&apos;t. You want to respond to that message, but the words won&apos;t come. You want to start the project, but your body refuses to move. <a href="https://www.additudemag.com/how-to-get-out-of-adhd-paralysis/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">This paralysis isn&apos;t laziness</a>—it&apos;s a neurological roadblock where your executive function has completely shut down.
               </p>
               <br />
               <br />

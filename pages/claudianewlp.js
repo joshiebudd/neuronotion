@@ -33,8 +33,12 @@ const ClaudiaNewLP = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Head>
-        <title>Claudia - AI ADHD Personal Assistant</title>
-        <meta name="description" content="The world's most productive group of ADHD Entrepreneurs. Accountable is a co-working crew of ADHD founders getting sh*t done. Together. Every single day." />
+        {/* Archived Neuro Notion / Claudia homepage, served at /neuronotion. Title,
+            description and canonical point searchers at the archive honestly and
+            keep it from competing with the Romi homepage for the brand queries. */}
+        <title>Claudia by Neuro Notion is now Romi (archived homepage)</title>
+        <meta name="description" content="The original Neuro Notion homepage for Claudia, the ADHD personal assistant, kept for reference. Claudia has been rebuilt and renamed Romi, your personal ADHD companion." />
+        <link rel="canonical" href="https://www.romiadhd.com/neuronotion" />
       </Head>
       
       <NEWClaudiaLPHeader />

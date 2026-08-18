@@ -71,7 +71,7 @@ const TakeControlADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Pick 2-3 goals for the next 90 days. Not 10. Not a vague list. Two to three specific outcomes you want to achieve. That&apos;s it. Understanding <Link href="/blog/the-adhd-goldilocks-zone-rewrite" className="text-blue-600 hover:underline">your ADHD Goldilocks Zone</Link> helps you set goals that challenge without overwhelming.
+                Pick 2-3 goals for the next 90 days. Not 10. Not a vague list. Two to three specific outcomes you want to achieve. That&apos;s it. Understanding <Link href="/blog/the-adhd-goldilocks-zone" className="text-blue-600 hover:underline">your ADHD Goldilocks Zone</Link> helps you set goals that challenge without overwhelming.
               </p>
               <br />
               <br />

@@ -19,7 +19,7 @@ const SRC = {
   tribunal: "https://leglobal.law/2024/05/24/uk-disability-discrimination-compensation/",
   cipd: "https://www.cipd.org/uk/knowledge/guides/neurodiversity-work/",
   research: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9346305/",
-  wef: "https://www.weforum.org/stories/2023/05/neurodiversity-employers-workers-jobs/",
+  wef: "https://www.weforum.org/stories/forum-institutional/neurodiversity-employers-workers-jobs/",
   wellbeing: "https://www.thebraincharity.org.uk/inclusive-wellbeing/",
 };
 

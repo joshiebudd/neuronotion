@@ -48,7 +48,7 @@ const GoldilocksZoneRewriteBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <a href="https://www.additudemag.com/adhd-productivity-overwhelm/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and productivity</a> shows that rigid systems fail because they don&apos;t account for the variable capacity and novelty-seeking nature of ADHD brains. Your capacity changes daily, even hourly. A system that works Monday morning might be completely overwhelming by Tuesday afternoon.
+                <a href="https://www.additudemag.com/adhd-shutdown-overwhelm/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and productivity</a> shows that rigid systems fail because they don&apos;t account for the variable capacity and novelty-seeking nature of ADHD brains. Your capacity changes daily, even hourly. A system that works Monday morning might be completely overwhelming by Tuesday afternoon.
               </p>
               <br />
               <br />

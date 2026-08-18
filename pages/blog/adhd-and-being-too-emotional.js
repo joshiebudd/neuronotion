@@ -126,7 +126,7 @@ const AdhdTooEmotionalBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The shame you&apos;ve carried about your emotional responses can finally be released. You&apos;re not broken, dramatic, or too much. You&apos;re neurodivergent, and that means you need different tools. <a href="https://chadd.org/about-adhd/emotional-regulation-and-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and emotional regulation</a> confirms that proper support systems significantly improve emotional control and quality of life.
+                The shame you&apos;ve carried about your emotional responses can finally be released. You&apos;re not broken, dramatic, or too much. You&apos;re neurodivergent, and that means you need different tools. <a href="https://chadd.org/adhd-news/adhd-news-adults/emotions-feel-like-too-much-it-could-be-a-symptom-of-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and emotional regulation</a> confirms that proper support systems significantly improve emotional control and quality of life.
               </p>
               <br />
               <br />
