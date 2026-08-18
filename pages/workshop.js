@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Calendar, Check, Clock, Compass, Heart, Play, TrendingUp, Users } from "lucide-react";
 import { Button, Container, RomiCharacter, RomiPage } from "../src/romi";
 
@@ -220,19 +220,10 @@ function Hero() {
 function Vsl() {
   const isMp4 = typeof VSL_URL === "string" && VSL_URL.endsWith(".mp4");
   const [playing, setPlaying] = useState(false);
-  const [tipVisible, setTipVisible] = useState(false);
-  const tipTimer = useRef(null);
-  useEffect(() => () => clearTimeout(tipTimer.current), []);
   const showEmbed = VSL_URL && !isMp4;
 
   function onPosterClick() {
-    if (isMp4) {
-      setPlaying(true);
-      return;
-    }
-    setTipVisible(true);
-    clearTimeout(tipTimer.current);
-    tipTimer.current = setTimeout(() => setTipVisible(false), 2200);
+    if (isMp4) setPlaying(true);
   }
   return (
     <section className="bg-[var(--romi-color-bg)] pb-6 pt-12 md:pt-16">
@@ -254,7 +245,7 @@ function Vsl() {
                 type="button"
                 onClick={onPosterClick}
                 className="group relative block h-full w-full"
-                aria-label={isMp4 ? "Play the workshop introduction" : "Workshop introduction video coming soon"}
+                aria-label="Play the workshop introduction"
               >
                 <Image
                   src={VSL_POSTER}
@@ -268,14 +259,6 @@ function Vsl() {
                   <span className="grid h-16 w-16 place-items-center rounded-full bg-white/95 shadow-[var(--romi-shadow-lg)] transition-transform group-hover:scale-105 md:h-20 md:w-20">
                     <Play className="ml-1 h-7 w-7 text-[var(--romi-indigo)] md:h-8 md:w-8" fill="currentColor" />
                   </span>
-                </span>
-                <span
-                  aria-hidden={!tipVisible}
-                  className={`pointer-events-none absolute left-1/2 top-[calc(50%-72px)] -translate-x-1/2 whitespace-nowrap rounded-full bg-[var(--romi-charcoal)]/90 px-4 py-2 text-sm font-semibold text-white shadow-[var(--romi-shadow-md)] transition-opacity duration-200 ${
-                    tipVisible ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  Video overview coming soon
                 </span>
               </button>
             ) : (
