@@ -4,8 +4,8 @@ import { BlogArticle } from '../../src/romi';
 const CalmerYouBlog = () => {
   return (
     <BlogArticle
-      title="Meet Romi: The AI Companion for Adults With ADHD"
-      description="ADHD burns your energy on remembering, organising and prioritising. Meet Romi, the AI ADHD companion built to give that time and clarity back."
+      title="Meet Romi: An ADHD App for Adults | Romi"
+      description="ADHD burns your energy on remembering, organising and prioritising. Meet Romi, an ADHD app for adults built to give that time and clarity back."
       slug="want-a-chance-at-a-clearer-calmer-version-of-you"
       keywords="ADHD companion, AI ADHD app, ADHD executive function, ADHD support, Romi ADHD"
       ogTitle="Want a Chance at a Clearer, Calmer Version of You?"

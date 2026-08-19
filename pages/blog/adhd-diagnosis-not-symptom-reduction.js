@@ -4,13 +4,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDDiagnosisNotReductionBlog = () => {
   return (
     <BlogArticle
-      title="Diagnosed With ADHD as an Adult: What Happens Next | Romi"
-      description="An adult ADHD diagnosis explains a lot but changes nothing on its own. What to do next: treatment options, systems and support that actually reduce symptoms."
+      title="ADHD Diagnosis: Now What? What Actually Helps | Romi"
+      description="A diagnosis explains ADHD, it does not treat it. What actually changes symptoms after diagnosis, and why waiting to feel ready costs you time."
       slug="adhd-diagnosis-not-symptom-reduction"
       keywords="ADHD diagnosis, ADHD without treatment, managing ADHD symptoms, ADHD diagnosis and treatment, living with undiagnosed ADHD, ADHD symptom management"
       ogTitle="ADHD Diagnosis ≠ Symptom Reduction: The Reality"
       ogDescription="Waiting for an ADHD diagnosis won&apos;t fix your symptoms. Discover what actually reduces ADHD symptoms and why action matters more than diagnosis."
-      heading="An ADHD Diagnosis Doesn&apos;t Reduce Symptoms: What Actually Works Next"
+      heading="ADHD Diagnosis: Now What? What Actually Helps Next"
       category="Diagnosis & Treatment"
       date="Mar. 1, 2025"
       datePublished="2025-03-01"

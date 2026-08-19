@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const NeurodivergentEmployeesRiskOrAssetBlog = () => {
   return (
     <BlogArticle
-      title="Neurodivergent Employees: Risk or Asset? The Business Case"
+      title="Neurodivergent Employees: Risk or Asset? | Romi"
       description="UK tribunals citing neurodivergent conditions have almost doubled in five years. Why neurodivergent employees are an asset, and what employers get wrong."
       slug="neurodivergent-employees-risk-or-asset"
       keywords="are neurodivergent employees a risk or an asset, business case for hiring neurodivergent employees, benefits of hiring neurodivergent employees, neurodiversity employment tribunals, business case for neurodiversity, are neurodivergent employees worth it, neurodivergent talent, neuro-inclusion business case, ADHD employees productivity, neurodiversity in the workplace"
       ogTitle="Are Neurodivergent Employees a Risk or an Asset?"
       ogDescription="Tribunal cases citing neurodivergence have nearly doubled in five years. The headlines make it sound like a liability. The data says the opposite. Here is the real business case."
-      heading="Are Neurodivergent Employees a Risk or an Asset? The Real Business Case"
+      heading="Are Neurodivergent Employees a Risk or an Asset?"
       category="Neurodiversity at Work"
       date="Jul. 29, 2026"
       datePublished="2026-07-29"

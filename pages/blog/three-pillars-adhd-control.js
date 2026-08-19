@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ThreePillarsBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Lifestyle Basics: Sleep, Diet and Exercise | Romi"
-      description="ADHD isn&apos;t only about focus, it&apos;s about control. Why sleep, diet and exercise are the three pillars that make every other ADHD strategy work better."
+      title="ADHD Self Care: Sleep, Diet and Exercise | Romi"
+      description="ADHD self care isn&apos;t only about focus, it&apos;s about control. Why sleep, diet and exercise are the three pillars that make everything else work better."
       slug="three-pillars-adhd-control"
       keywords="ADHD control, ADHD sleep, ADHD diet, ADHD exercise, managing ADHD symptoms, ADHD lifestyle changes, ADHD foundations"
       ogTitle="Master These 3 Things to Take Control of Your ADHD"
       ogDescription="Before trying every productivity hack, master the fundamentals: sleep, diet, and exercise. They control 80% of your ADHD struggles."
-      heading="The Three Pillars of ADHD Control: Sleep, Diet and Exercise"
+      heading="ADHD Self Care: The Three Pillars of Sleep, Diet and Exercise"
       category="Understanding ADHD"
       date="Feb. 19, 2025"
       datePublished="2025-02-19"

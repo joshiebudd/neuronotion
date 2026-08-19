@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const MakeMotivationUsefulBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Motivation: How to Use It Before It Disappears | Romi"
-      description="ADHD motivation arrives in bursts and vanishes fast. How to capture that energy and turn it into a clear plan and sustained action before it fades."
+      title="ADHD Motivation: How to Use It Before It Disappears"
+      description="ADHD motivation arrives in bursts and vanishes fast. How to capture that energy and turn it into a clear plan before it disappears again."
       slug="how-to-make-adhd-motivation-useful"
       keywords="ADHD motivation, ADHD clarity, ADHD goal setting, implementation intentions ADHD, motivation to action ADHD"
       ogTitle="How to Make ADHD Motivation Useful (Before It Disappears)"
       ogDescription="Motivation is worthless if it doesn&apos;t create clarity. Discover how to spend ADHD motivation on planning future behaviors so clarity carries you when motivation is gone."
-      heading="How to Make Your ADHD Motivation Actually Useful (Turn Sparks Into Systems)"
+      heading="ADHD Motivation: How to Make It Useful Before It Fades"
       category="Productivity & Focus"
       date="Feb. 27, 2025"
       datePublished="2025-02-27"

@@ -6,12 +6,12 @@ const AdhdMaskingImposterBlog = () => {
   return (
     <BlogArticle
       title="ADHD Masking and Imposter Syndrome: Why It Exhausts You"
-      description="Why ADHD masking leads to imposter syndrome and burnout, what the performance costs you, and how to stop performing and start living with proper support."
+      description="ADHD masking is exhausting and it feeds imposter syndrome directly. Why the cycle forms and how to stop performing and start living with support."
       slug="adhd-masking-and-imposter-syndrome"
       keywords="ADHD masking, imposter syndrome, neurodivergent masking, ADHD burnout, authentic ADHD living"
       ogTitle="ADHD Masking and Imposter Syndrome: Breaking Free from the Performance"
       ogDescription="The exhausting cycle of hiding your ADHD traits while feeling like a fraud. Understand the neuroscience and discover a path to authentic living."
-      heading="ADHD, Masking and Imposter Syndrome: Breaking Free From the Exhausting Performance"
+      heading="ADHD Masking and Imposter Syndrome: Breaking the Cycle"
       category="Mental Health"
       date="Jan. 30, 2025"
       datePublished="2025-01-30"

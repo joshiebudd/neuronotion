@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDFearNewThingsBlog = () => {
   return (
     <BlogArticle
-      title="Why ADHD Tools Keep Failing You (and What Works) | Romi"
-      description="Overpromised and underdelivered too many times? Why most productivity tools fail ADHD brains, and what tools built specifically for ADHD do differently."
+      title="Scared to Try Another ADHD Tool? Read This First"
+      description="Overpromised and underdelivered too many times? Why most tools fail ADHD brains, and what a tool built specifically for ADHD does differently."
       slug="adhd-fear-of-trying-new-things"
       keywords="ADHD tools that work, ADHD app fear, trying new ADHD strategies, ADHD tool skepticism, ADHD brain designed systems"
       ogTitle="ADHD: Are You Scared to Try New Things? (This Time is Different)"
       ogDescription="You&apos;ve been let down before. But tools built FOR your ADHD brain—not adapted for it—change everything."
-      heading="Scared to Try Another ADHD Tool? Why Most Fail, and What&apos;s Different This Time"
+      heading="Scared to Try Another ADHD Tool? Why This Time Is Different"
       category="Understanding ADHD"
       date="Feb. 22, 2025"
       datePublished="2025-02-22"

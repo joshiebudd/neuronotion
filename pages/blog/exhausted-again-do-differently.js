@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ExhaustedAgainBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Burnout: Why You&apos;re Exhausted and How to Do Differently"
-      description="ADHD burnout isn&apos;t about doing too much. It&apos;s doing things in ways that fight your brain. How to do differently for energy that lasts, without doing less."
+      title="ADHD Burnout: Why You&apos;re Exhausted and What Helps"
+      description="ADHD burnout is not about doing too much. It is doing things in ways that fight your brain. Why rest alone does not fix it and what does."
       slug="exhausted-again-do-differently"
       keywords="ADHD burnout, ADHD exhaustion, ADHD energy management, sustainable ADHD productivity, ADHD nervous system"
       ogTitle="Exhausted Again? Do Differently, Not Less"
       ogDescription="Rest isn&apos;t enough for ADHD burnout. Discover why you need to change HOW you work, not how much you work."
-      heading="Exhausted Again? Why Your ADHD Brain Needs to Do Differently, Not Less"
+      heading="ADHD Burnout: Why You&apos;re Exhausted Again and What Actually Helps"
       category="Productivity & Focus"
       date="Feb. 5, 2025"
       datePublished="2025-02-05"

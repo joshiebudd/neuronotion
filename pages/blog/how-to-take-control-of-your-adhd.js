@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const TakeControlADHDBlog = () => {
   return (
     <BlogArticle
-      title="How to Take Control of Your ADHD: 5 Strategies | Romi"
-      description="Stop letting ADHD run the day. Five strategies that work with an ADHD brain: quarterly goals, dopamine on purpose, accountability and systems that hold."
+      title="How to Manage ADHD: 5 Strategies That Work | Romi"
+      description="Five practical strategies for managing ADHD day to day: quarterly goals, dopamine on purpose, cutting perfectionism and real accountability."
       slug="how-to-take-control-of-your-adhd"
       keywords="take control of ADHD, ADHD goal setting, ADHD productivity strategies, working with ADHD brain, ADHD accountability"
       ogTitle="How to Take Control of Your ADHD (Not the Other Way Around)"
       ogDescription="5 strategies to work WITH your ADHD brain: quarterly sprints, daily wins, dopamine rewards, killing perfectionism, and external accountability."
-      heading="How to Take Control of Your ADHD (Instead of Letting It Control You)"
+      heading="How to Manage ADHD: 5 Strategies That Actually Work"
       category="Productivity & Focus"
       date="Feb. 19, 2025"
       datePublished="2025-02-19"

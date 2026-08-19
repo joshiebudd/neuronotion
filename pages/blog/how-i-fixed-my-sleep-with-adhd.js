@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDSleepBlog = () => {
   return (
     <BlogArticle
-      title="How to Fall Asleep With ADHD: How I Fixed My Sleep | Romi"
-      description="Can&apos;t sleep with ADHD because your brain won&apos;t switch off? What actually fixed my sleep: the evidence-based habits, the brain dump before bed, what to drop."
+      title="ADHD Insomnia: How I Finally Fixed My Sleep | Romi"
+      description="Struggling with ADHD insomnia because your brain won&apos;t switch off? What actually fixed it: the habits, the brain dump before bed, and what to drop."
       slug="how-i-fixed-my-sleep-with-adhd"
       keywords="ADHD sleep problems, ADHD insomnia, ADHD sleep solutions, delayed sleep phase ADHD, racing thoughts at night"
       ogTitle="How to Fix ADHD Sleep Problems: The 2 A.M. TED Talk Solution"
       ogDescription="45% of adults with ADHD have sleep problems. Learn the neuroscience behind ADHD insomnia and proven strategies to finally get rest."
-      heading="How I Fixed My Sleep With ADHD: Shutting Down the 2 A.M. Brain"
+      heading="ADHD Insomnia: How I Fixed My Sleep and Shut Off the 2 A.M. Brain"
       category="Sleep"
       date="Feb. 11, 2025"
       datePublished="2025-02-11"

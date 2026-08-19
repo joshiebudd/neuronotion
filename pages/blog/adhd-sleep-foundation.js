@@ -6,12 +6,12 @@ const ADHDSleepFoundationBlog = () => {
   return (
     <BlogArticle
       title="ADHD and Sleep: Why Sleep Is the Foundation | Romi"
-      description="Poor sleep makes every ADHD symptom worse: focus, emotions, impulsivity, decisions. Why sleep comes first for ADHD and how to build a sleep system that holds."
+      description="Poor sleep makes every ADHD symptom worse: focus, emotions, impulsivity, decisions. Why sleep comes first and how to build a system that holds."
       slug="adhd-sleep-foundation"
       keywords="ADHD and sleep, ADHD sleep problems, ADHD insomnia, sleep deprivation ADHD, improving sleep with ADHD, ADHD sleep quality"
       ogTitle="ADHD and Sleep: Why It&apos;s THE Foundation (Not Optional)"
       ogDescription="Bad sleep makes ADHD symptoms 10x worse. Discover why sleep is the #1 priority for ADHD management and how to finally fix it."
-      heading="Why Sleep Is the Foundation for Managing ADHD (Not Just Another Tip)"
+      heading="ADHD and Sleep: Why Sleep Is the Foundation, Not a Tip"
       category="Sleep"
       date="Feb. 28, 2025"
       datePublished="2025-02-28"

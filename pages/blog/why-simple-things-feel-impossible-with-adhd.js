@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const WhySimpleThingsImpossibleBlog = () => {
   return (
     <BlogArticle
-      title="Why Simple Things Feel Impossible With ADHD | Romi"
-      description="Why simple tasks drain all your energy with ADHD: the Gold Dust Theory of mental energy, and why &apos;just do it&apos; costs more than anyone realises."
+      title="ADHD Exhaustion: Why Simple Things Feel Impossible"
+      description="Why simple tasks drain all your energy with ADHD. The Gold Dust Theory of mental energy, and why &apos;just do it&apos; costs more than anyone realises."
       slug="why-simple-things-feel-impossible-with-adhd"
       keywords="ADHD executive function, ADHD mental energy, why ADHD is exhausting, ADHD and simple tasks, ADHD gold dust theory"
       ogTitle="Why Simple Things Feel Impossible with ADHD (Gold Dust Theory)"
       ogDescription="So much to do, so little energy. Discover why ADHD makes simple tasks drain you completely and what you can do about it."
-      heading="Why Do &apos;Simple&apos; Things Feel Impossible With ADHD?"
+      heading="ADHD Exhaustion: Why &apos;Simple&apos; Things Feel Impossible"
       category="Productivity & Focus"
       date="Feb. 21, 2025"
       datePublished="2025-02-21"

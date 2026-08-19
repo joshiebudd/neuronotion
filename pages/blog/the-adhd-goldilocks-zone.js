@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const GoldilocksZoneRewriteBlog = () => {
   return (
     <BlogArticle
-      title="The ADHD Goldilocks Zone: How Much Structure You Need"
-      description="Rigid schedules fail ADHD brains and so does no structure. The Goldilocks Zone: how to find the balance of structure and freedom that you can actually keep."
+      title="The ADHD Goldilocks Zone: Finding Your Right Routine"
+      description="Rigid ADHD routines fail and so does no structure at all. The Goldilocks Zone: the balance of structure and freedom you can actually keep."
       slug="the-adhd-goldilocks-zone"
       keywords="ADHD productivity, ADHD organization, sustainable ADHD systems, ADHD structure, ADHD flexibility"
       ogTitle="The ADHD Goldilocks Zone: Structure vs Freedom"
       ogDescription="Too much structure causes burnout. Too much freedom causes paralysis. Find your ADHD Goldilocks Zone—just right for your brain."
-      heading="The ADHD Goldilocks Zone: Finding the Perfect Balance of Structure and Freedom"
+      heading="The ADHD Goldilocks Zone: Finding the Right Amount of Routine"
       category="Mental Health"
       date="Feb. 1, 2025"
       datePublished="2025-02-01"

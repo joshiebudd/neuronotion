@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDBrainsDontDoSmallBlog = () => {
   return (
     <BlogArticle
-      title="ADHD All-or-Nothing Thinking: Waiting for &apos;Perfect&apos; | Romi"
-      description="ADHD all-or-nothing thinking makes small tasks feel pointless until conditions are perfect. Why the brain does it and how to start before you feel ready."
+      title="ADHD Perfectionism: Why &apos;Small&apos; Tasks Feel Impossible"
+      description="ADHD perfectionism makes tasks feel pointless until conditions are perfect. Why all-or-nothing thinking happens and how to start before you feel ready."
       slug="adhd-brains-dont-do-small"
       keywords="ADHD procrastination, ADHD perfectionism, ADHD task initiation, ADHD all-or-nothing thinking, ADHD motivation"
       ogTitle="ADHD Brains Don&apos;t Do Small: The Perfection Paralysis"
       ogDescription="A 5-minute email becomes a 3-day saga. Understand why ADHD brains refuse small tasks and how to overcome perfection paralysis."
-      heading="Why ADHD Brains Don&apos;t Do &apos;Small&apos;: All-or-Nothing Thinking and Perfection Paralysis"
+      heading="ADHD Perfectionism: Why Your Brain Rejects &apos;Small&apos; Tasks"
       category="Productivity & Focus"
       date="Feb. 3, 2025"
       datePublished="2025-02-03"

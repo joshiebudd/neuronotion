@@ -5,12 +5,12 @@ import { BlogArticle } from '../../src/romi';
 const BrainSaysICantBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Intention-Action Gap: When Your Brain Says &apos;I Can&apos;t&apos;"
-      description="You want to shower, reply, start the project, and your body won&apos;t move. What the ADHD intention-action gap is and support built for your lowest-capacity days."
+      title="ADHD Low Energy Days: When Your Brain Says &apos;I Can&apos;t&apos;"
+      description="On ADHD low energy days even wanted tasks feel impossible. What the intention-action gap is, and support built for your lowest-capacity days."
       slug="something-for-when-your-brain-says-i-cant"
       ogTitle="ADHD: When Your Brain Says I Can&apos;t"
       ogDescription="The gap between wanting to do something and actually doing it isn&apos;t laziness—it&apos;s executive dysfunction. Learn how to bridge it."
-      heading="When Your Brain Says &apos;I Can&apos;t&apos;: Bridging the ADHD Intention-Action Gap"
+      heading="ADHD Low Energy Days: Bridging the Intention-Action Gap"
       category="Mental Health"
       date="Jan. 28, 2025"
       datePublished="2025-01-28"
