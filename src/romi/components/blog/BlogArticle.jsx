@@ -4,6 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import { RomiHeader } from "../marketing/RomiHeader";
 import { RomiClose } from "../marketing/RomiClose";
 import { Container } from "../layout/Container";
+import { HUB_FOR_POST } from "../../hubs/manifest";
+import { POST_INDEX } from "../../hubs/post-index";
 
 /*
  * BlogArticle — the Romi-branded shell for a long-form blog post. It owns the
@@ -42,6 +44,16 @@ export function BlogArticle({
   const canonical = slug ? `${SITE}/blog/${slug}` : undefined;
   const shareImage = ogImage || heroImage || DEFAULT_OG;
 
+  // Every post belongs to exactly one hub (src/romi/hubs/manifest.js). Linking up
+  // to it and across to siblings is what stops posts sitting on one inbound link.
+  const hub = slug ? HUB_FOR_POST[slug] : undefined;
+  const siblings = hub
+    ? hub.sections
+        .flatMap((section) => section.posts)
+        .filter((s) => s !== slug)
+        .slice(0, 3)
+    : [];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -62,6 +74,19 @@ export function BlogArticle({
     ...(datePublished ? { datePublished } : {}),
     ...(canonical ? { mainEntityOfPage: { "@type": "WebPage", "@id": canonical } } : {}),
   };
+
+  // Breadcrumb reflects the hub hierarchy added 19 Aug 2026.
+  const breadcrumbLd = hub && canonical
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+          { "@type": "ListItem", position: 2, name: hub.h1, item: `${SITE}/${hub.slug}` },
+          { "@type": "ListItem", position: 3, name: heading || title, item: canonical },
+        ],
+      }
+    : null;
 
   return (
     <>
@@ -87,6 +112,12 @@ export function BlogArticle({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {breadcrumbLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+          />
+        )}
       </Head>
 
       <div className="romi-theme romi-shell">
@@ -96,13 +127,32 @@ export function BlogArticle({
         <section className="bg-[var(--romi-color-bg)] pt-8 md:pt-12">
             <Container>
               <div className="mx-auto max-w-[760px]">
-                <Link
-                  href="/blogs"
-                  className="inline-flex items-center gap-1.5 text-[15px] font-medium text-[var(--romi-color-ink-muted)] transition-colors hover:text-[var(--romi-color-primary)] [font-family:var(--romi-font-display)]"
-                >
-                  <ArrowLeft aria-hidden="true" className="h-4 w-4" />
-                  All articles
-                </Link>
+                <nav aria-label="Breadcrumb">
+                  <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[14.5px] text-[var(--romi-color-ink-muted)] [font-family:var(--romi-font-display)]">
+                    <li>
+                      <Link
+                        href="/blogs"
+                        className="inline-flex items-center gap-1.5 font-medium transition-colors hover:text-[var(--romi-color-primary)]"
+                      >
+                        <ArrowLeft aria-hidden="true" className="h-4 w-4" />
+                        All articles
+                      </Link>
+                    </li>
+                    {hub && (
+                      <>
+                        <li aria-hidden="true">/</li>
+                        <li>
+                          <Link
+                            href={`/${hub.slug}`}
+                            className="font-medium transition-colors hover:text-[var(--romi-color-primary)]"
+                          >
+                            {hub.h1}
+                          </Link>
+                        </li>
+                      </>
+                    )}
+                  </ol>
+                </nav>
 
                 {category && <p className="romi-kicker mt-8">{category}</p>}
 
@@ -153,6 +203,83 @@ export function BlogArticle({
               <article className="romi-article">{children}</article>
             </Container>
           </section>
+
+          {/* ---------- Author box: the Experience half of E-E-A-T, on a YMYL topic ---------- */}
+          <section className="bg-[var(--romi-color-bg)] pt-6">
+            <Container>
+              <div className="mx-auto flex max-w-[760px] flex-col gap-4 rounded-[var(--romi-radius-lg)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] px-6 py-6 sm:flex-row sm:items-start sm:gap-5">
+                <img
+                  src={AUTHOR_IMAGE}
+                  alt={AUTHOR_NAME}
+                  width={64}
+                  height={64}
+                  loading="lazy"
+                  className="h-16 w-16 shrink-0 rounded-full object-cover"
+                />
+                <div>
+                  <p className="text-[16px] font-bold text-[var(--romi-color-heading)] [font-family:var(--romi-font-display)]">
+                    {AUTHOR_NAME}
+                  </p>
+                  <p className="mt-1.5 text-[15px] leading-relaxed text-[var(--romi-color-ink-muted)]">
+                    Founder of Romi. Diagnosed with ADHD at 10, kicked out of more than
+                    ten schools, and has spent over eight years studying ADHD and
+                    building the support systems he never had.{" "}
+                    <Link
+                      href="/about"
+                      className="font-semibold text-[var(--romi-color-primary)] hover:underline"
+                    >
+                      More about Josh and the team
+                    </Link>
+                    .
+                  </p>
+                </div>
+              </div>
+            </Container>
+          </section>
+
+          {/* ---------- Up to the hub, across to siblings ---------- */}
+          {hub && (
+            <section className="bg-[var(--romi-color-bg)] pt-10">
+              <Container>
+                <div className="mx-auto max-w-[760px]">
+                  <h2 className="text-[1.25rem] font-bold tracking-[-0.01em] text-[var(--romi-color-heading)] [font-family:var(--romi-font-display)]">
+                    More in {hub.h1}
+                  </h2>
+                  <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {siblings.map((siblingSlug) => {
+                      const post = POST_INDEX[siblingSlug];
+                      if (!post) return null;
+                      return (
+                        <Link
+                          key={siblingSlug}
+                          href={`/blog/${siblingSlug}`}
+                          className="group flex flex-col gap-1.5 rounded-[var(--romi-radius-lg)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] px-5 py-4 transition-shadow hover:shadow-[var(--romi-shadow-sm)]"
+                        >
+                          <span className="text-[15.5px] font-semibold leading-snug text-[var(--romi-color-ink)] transition-colors group-hover:text-[var(--romi-color-primary)] [font-family:var(--romi-font-display)]">
+                            {post.heading}
+                          </span>
+                          <span className="text-[14px] leading-relaxed text-[var(--romi-color-ink-muted)]">
+                            {post.blurb}
+                          </span>
+                        </Link>
+                      );
+                    })}
+                    <Link
+                      href={`/${hub.slug}`}
+                      className="group flex flex-col justify-center gap-1.5 rounded-[var(--romi-radius-lg)] border border-dashed border-[var(--romi-color-border)] px-5 py-4 transition-colors hover:border-[var(--romi-color-primary)]"
+                    >
+                      <span className="text-[15.5px] font-semibold text-[var(--romi-color-primary)] [font-family:var(--romi-font-display)]">
+                        See the full guide
+                      </span>
+                      <span className="text-[14px] leading-relaxed text-[var(--romi-color-ink-muted)]">
+                        Everything we have written on {hub.h1.toLowerCase()}.
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </Container>
+            </section>
+          )}
 
         <RomiClose />
       </div>

@@ -53,7 +53,7 @@ const nextConfig = {
       { source: "/neuronotion-coaches", destination: "/", permanent: true },
       // Claudia-era pages retired 18 Aug 2026.
       { source: "/pricing", destination: "/#pricing", permanent: true },
-      { source: "/team", destination: "/", permanent: true },
+      { source: "/team", destination: "/about", permanent: true },
       { source: "/claudianewlp", destination: "/neuronotion", permanent: true },
       { source: "/templateshome", destination: "/templates", permanent: true },
       // The blog index lives at /blogs; /blog is the obvious guess.
