@@ -15,7 +15,9 @@ const RejectionSensitiveDysphoriaBlog = () => {
       category="Mental Health"
       date="Aug. 3, 2026"
       datePublished="2026-08-03"
-      readingTime="13 min read"
+      dateModified="2026-08-19"
+      dateModifiedDisplay="Aug 19, 2026"
+      readingTime="16 min read"
       heroImage="https://images.pexels.com/photos/1126375/pexels-photo-1126375.jpeg?auto=compress&cs=tinysrgb&w=1200"
     >
       <div className="blog-content">
@@ -26,8 +28,9 @@ const RejectionSensitiveDysphoriaBlog = () => {
                   <li>Rejection sensitive dysphoria (RSD) is an intense, often physical emotional reaction to rejection, criticism, or the feeling of falling short, and it is strongly linked to ADHD</li>
                   <li>It is not weakness or being &quot;too sensitive&quot;. Clinician Dr William Dodson, who named RSD, found that roughly 99% of people with ADHD report lifelong heightened sensitivity to rejection, and about 1 in 3 call it the single hardest part of their ADHD</li>
                   <li>RSD is a facet of ADHD emotional dysregulation, which affects an estimated 30 to 70% of adults with ADHD and is now regarded as a core feature of the condition, not a side issue</li>
-                  <li>RSD is not yet a formal diagnosis in the DSM-5, so honest naming matters: it describes a real, well-observed pattern of ADHD-related emotional pain rather than a separate disorder</li>
-                  <li>You can turn the volume down. Naming the reaction, separating rejection from self-worth, gradual exposure, and external support like Romi all measurably reduce how much RSD runs your life</li>
+                  <li>RSD is not yet a formal diagnosis in the DSM-5 and the evidence base is genuinely still thin under that exact name, but the underlying pattern, how ADHD brains process rejection and criticism, is backed by real brain-imaging and qualitative research</li>
+                  <li>RSD is not fixed or purely biological. Research shows the same pattern shows up beyond ADHD too, in autism and dyspraxia, and it gets noticeably quieter around supportive people and environments</li>
+                  <li>You can turn the volume down. Naming the reaction, separating rejection from self-worth, gradual exposure, and Romi&apos;s Regulate exercises like Rapid Calm and Interrupt the Spiral all measurably reduce how much RSD runs your life</li>
                 </ul>
               </div>
 
@@ -59,7 +62,7 @@ const RejectionSensitiveDysphoriaBlog = () => {
               <br />
               <h2 className="blog-subheader">What Is Rejection Sensitive Dysphoria in ADHD?</h2>
               <p className="blog-body">
-                Rejection sensitive dysphoria in ADHD is a pattern of extreme sensitivity to rejection and criticism that appears to be built into how the ADHD brain processes emotion. The term was coined in 2017 by psychiatrist <a href="https://www.additudemag.com/rejection-sensitive-dysphoria-adhd-emotional-dysregulation/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Dr William Dodson</a>, who spent decades specialising in adult ADHD. He describes it as a brain-based reaction, not a chosen response: people with RSD are not weak or over-dramatic, their emotional pain is neurologically real and physically felt.
+                Rejection sensitive dysphoria in ADHD is a pattern of extreme sensitivity to rejection and criticism that appears to be built into how the ADHD brain processes emotion. The term was named by psychiatrist <a href="https://www.additudemag.com/rejection-sensitive-dysphoria-adhd-emotional-dysregulation/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Dr William Dodson</a>, who has spent decades specialising in adult ADHD. He describes it as a brain-based reaction, not a chosen response: people with RSD are not weak or over-dramatic, their emotional pain is neurologically real and physically felt.
               </p>
               <br />
               <br />
@@ -97,6 +100,11 @@ const RejectionSensitiveDysphoriaBlog = () => {
               </p>
               <br />
               <br />
+              <p className="blog-body">
+                There is also a developmental layer underneath the neuroscience. Children with ADHD are, on average, criticised by parents, corrected by teachers, and left out by peers far more often than their neurotypical classmates, simply because ADHD traits keep colliding with a world built around neurotypical expectations. Enough of that, repeated for years, builds what researchers call a cognitive-affective template: a standing expectation of rejection that primes the nervous system to detect it, even when none was intended. That is part of why the alarm can fire on an unanswered message or a slightly flat tone of voice. The brain is not overreacting to nothing. It is pattern-matching against a long, real history, which is also why the fear tends to loosen when that history stops repeating itself.
+              </p>
+              <br />
+              <br />
               <h2 className="blog-subheader">Is Rejection Sensitive Dysphoria a Real Diagnosis?</h2>
               <p className="blog-body">
                 RSD is a real and widely recognised experience, but it is not currently a formal diagnosis in the DSM-5, the manual clinicians use to diagnose mental health conditions. It is a clinical concept, named by Dr William Dodson, that describes a genuine and well-observed pattern of ADHD-related emotional pain. Being honest about that distinction matters, because pretending RSD is an official standalone disorder helps nobody, and because its symptoms can overlap with anxiety, depression, and other conditions that a professional should assess properly.
@@ -108,6 +116,27 @@ const RejectionSensitiveDysphoriaBlog = () => {
               </p>
               <br />
               <br />
+              <h2 className="blog-subheader">How Strong Is the Evidence Behind Rejection Sensitive Dysphoria?</h2>
+              <p className="blog-body">
+                The evidence for RSD as a specific, named pattern is genuinely still thin, and it is worth saying that plainly rather than overselling it. There is no large-scale peer-reviewed study of &quot;rejection sensitive dysphoria&quot; under that exact name, which is part of why it is not in the DSM-5. What does exist is a real and growing body of research on the parts that make RSD up: how ADHD brains process rejection and criticism. That evidence holds up well even without the label.
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                A brain-imaging study in the <a href="https://doi.org/10.1111/jcpp.12312" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Journal of Child Psychology and Psychiatry</a> found that children with ADHD showed an exaggerated early brain response to angry voices alongside a blunted later response, a pattern the researchers describe as pre-attentive hypervigilance: the ADHD brain flags the threat of anger before conscious thought is even involved. A separate study of 391 young adolescents, published in the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6395560/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Journal of Abnormal Child Psychology</a>, used a simulated peer-rejection task and found that stronger ADHD symptoms predicted a bigger neural spike to rejection and a smaller one to acceptance, tracking closely with how rejection-sensitive people said they actually felt. A major review in the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4282137/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">American Journal of Psychiatry</a> concluded that emotion dysregulation, the broader category RSD sits inside, is common across the ADHD lifespan and a real driver of impairment in its own right.
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                The qualitative research backs this up from the other direction. In a 2023 Yale study published in <a href="https://doi.org/10.1371/journal.pone.0292721" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">PLOS One</a>, young adults with ADHD were asked to describe their own experience in their own words, and rejection sensitivity came up unprompted as one of the things the official diagnostic criteria completely missed. Most said the DSM-5 list did not capture what living with their ADHD actually felt like day to day.
+              </p>
+              <br />
+              <br />
+              <p className="blog-body">
+                One more finding matters, because it cuts against the idea that RSD is simply hardwired and fixed for life. A 2025 qualitative study in the journal <a href="https://doi.org/10.1177/27546330251394516" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Neurodiversity</a>, interviewing autistic, ADHD and dyspraxic adults, found that RSD reactions were not automatic or constant. They had a clear social trigger, changed depending on the situation, and got noticeably smaller around supportive people and neurodivergent-friendly environments. RSD is not only about a brain wired one way from birth, which is also part of why the same pattern shows up well beyond ADHD, including in autism and dyspraxia. Environment and support genuinely change how loud it gets. That is a hopeful finding, not a discouraging one: it means the world around you is not a fixed variable.
+              </p>
+              <br />
+              <br />
               <h2 className="blog-subheader">How Do You Cope With Rejection Sensitive Dysphoria?</h2>
               <p className="blog-body">
                 You cope with RSD by lowering how often it fires and shortening how long it lasts, not by trying to never feel it. Nobody switches RSD off with willpower. But there are concrete, repeatable moves that genuinely turn the volume down, and none of them require you to become a different person.
@@ -115,11 +144,11 @@ const RejectionSensitiveDysphoriaBlog = () => {
               <br />
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-3">
-                <li><strong>Name it in the moment.</strong> The instant you feel the hit, label it: &quot;this is RSD&quot;. Naming the reaction hands a sliver of control back to your prefrontal cortex and creates a gap between the trigger and your response. It reframes an overwhelming feeling as a known, temporary brain event rather than the truth about you.</li>
-                <li><strong>Separate the feedback from your worth.</strong> Rejection is a piece of data about one thing at one moment. It is not a verdict on you as a person. Practise splitting the two: &quot;this idea got a no&quot; is information you can use, whereas &quot;I am a failure&quot; is RSD editorialising. The feedback might be useful. The self-attack never is.</li>
+                <li><strong>Name it in the moment.</strong> The instant you feel the hit, label it: &quot;this is RSD&quot;. Naming the reaction hands a sliver of control back to your prefrontal cortex and creates a gap between the trigger and your response. Romi&apos;s <strong>Name What You&apos;re Feeling</strong> exercise in Regulate is built for exactly this: a two-minute prompt to put a word on it before it swallows the rest of your day.</li>
+                <li><strong>Separate the feedback from your worth.</strong> Rejection is a piece of data about one thing at one moment. It is not a verdict on you as a person. Practise splitting the two: &quot;this idea got a no&quot; is information you can use, whereas &quot;I am a failure&quot; is RSD editorialising. Romi&apos;s <strong>Reset Negative Self-Talk</strong> exercise, a short self-compassion technique, is built for catching that editorialising before it sticks. The feedback might be useful. The self-attack never is.</li>
                 <li><strong>Wait before you act.</strong> RSD passes, usually far quicker than it feels like it will in the thick of it. Build a rule that you do not send the reply, quit the thing, or make the big decision while you are still flooded. Give the wave time to break first.</li>
                 <li><strong>Use small, deliberate doses of rejection.</strong> Avoidance keeps RSD strong by teaching your brain that rejection is unsurvivable. Gentle, repeated exposure does the opposite. Every small rejection you live through is quiet evidence to your nervous system that you are still standing, which is how the fear slowly loses its teeth.</li>
-                <li><strong>Regulate the body, not just the thoughts.</strong> Because RSD is physical, physical tools work: slow breathing with a long exhale, cold water, movement, anything that tells your nervous system the threat has passed. Calming the body first makes the thoughts far easier to handle.</li>
+                <li><strong>Regulate the body, not just the thoughts.</strong> Because RSD is physical, physical tools work: a slow exhale, cold water, movement, anything that tells your nervous system the threat has passed. Romi&apos;s Regulate section has two protocols built for the exact moment the wave hits: <strong>Rapid Calm</strong>, a physiological sigh breathing pattern that resets your nervous system in under a minute, and <strong>Interrupt the Spiral</strong>, a STOP technique that creates a deliberate pause before the rumination takes hold. Calming the body first makes the thoughts far easier to handle.</li>
                 <li><strong>Get support around the trigger points.</strong> RSD is worse when you are depleted, overloaded, and running on empty, exactly the state an unstructured ADHD day creates. Reducing the daily chaos, protecting your energy, and having something outside your own head to hold the plan all lower how often you hit the wall in the first place. This is where a tool like <strong>Romi</strong> earns its place.</li>
               </ol>
               <br />
@@ -132,6 +161,7 @@ const RejectionSensitiveDysphoriaBlog = () => {
               <br />
               <ul className="list-disc ml-8 blog-body space-y-2">
                 <li>It gives you a private, non-judgemental place to offload the reaction in the moment, so instead of spiralling alone you can externalise the feeling, which is one of the fastest ways to let your rational brain catch up</li>
+                <li>Its Regulate section gives you named, structured tools for the exact moment the wave hits, rather than a vague instruction to &quot;just breathe&quot;: Rapid Calm for the physiological spike, Interrupt the Spiral to break the rumination loop, and Reset Negative Self-Talk to catch the self-attack before it sticks</li>
                 <li>It helps you tell the difference between useful feedback and RSD&apos;s self-attack, gently reflecting the situation back so a single comment stops standing in for your whole self-worth</li>
                 <li>It turns an overwhelming, chaotic day into a clear, ordered plan, protecting the energy and headspace that RSD devours when you are already running on empty</li>
                 <li>It adapts to you rather than demanding you perform like a generic productivity app, which is why it keeps supporting you on the exact afternoons that RSD would normally derail</li>
@@ -177,7 +207,7 @@ const RejectionSensitiveDysphoriaBlog = () => {
 
               <h3 className="blog-subheader" style={{ fontSize: '1.25rem' }}>Is rejection sensitive dysphoria a real diagnosis?</h3>
               <p className="blog-body">
-                RSD is a real and widely recognised experience, but it is not a formal standalone diagnosis in the DSM-5. It is a clinical concept, named by psychiatrist Dr William Dodson in 2017, that describes a well-observed pattern of ADHD-related emotional pain. Because its symptoms can overlap with anxiety and depression, it is worth discussing with a professional rather than self-diagnosing, especially if it is significantly affecting your life.
+                RSD is a real and widely recognised experience, but it is not a formal standalone diagnosis in the DSM-5. It is a clinical concept, named by psychiatrist Dr William Dodson, that describes a well-observed pattern of ADHD-related emotional pain. Because its symptoms can overlap with anxiety and depression, it is worth discussing with a professional rather than self-diagnosing, especially if it is significantly affecting your life.
               </p>
               <br />
 
@@ -208,6 +238,12 @@ const RejectionSensitiveDysphoriaBlog = () => {
               <h3 className="blog-subheader" style={{ fontSize: '1.25rem' }}>Can rejection sensitive dysphoria get better?</h3>
               <p className="blog-body">
                 Yes. RSD is highly responsive to the right strategies and environment. Naming the reaction, separating rejection from self-worth, gradual exposure to small manageable rejections, body-based regulation, professional support, and in some cases medication for the underlying ADHD can all meaningfully reduce its intensity. The goal is not to eliminate sensitivity but to stop it from dictating your decisions, and that is very achievable.
+              </p>
+              <br />
+
+              <h3 className="blog-subheader" style={{ fontSize: '1.25rem' }}>Is there scientific research on rejection sensitive dysphoria?</h3>
+              <p className="blog-body">
+                There is no large study of &quot;rejection sensitive dysphoria&quot; under that exact name, and it is not in the DSM-5. What does exist is solid research on the parts that make it up: brain-imaging studies showing ADHD brains react differently to rejection and anger cues, a major review confirming emotional dysregulation is common and impairing across the ADHD lifespan, and qualitative studies where people with ADHD describe rejection sensitivity in their own words as one of the hardest parts of their condition. The label is newer than the pattern it describes.
               </p>
               <br />
               <br />

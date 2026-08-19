@@ -37,6 +37,8 @@ export function BlogArticle({
   category = "ADHD",
   date, // display date, e.g. "Feb 7, 2025"
   datePublished, // ISO date, e.g. "2025-02-07"
+  dateModified, // ISO date, only set when a live post is substantively edited
+  dateModifiedDisplay, // display form of dateModified, e.g. "Aug 19, 2026"
   readingTime, // optional, e.g. "8 min read"
   heroImage, // optional hero illustration/photo
   children,
@@ -72,6 +74,7 @@ export function BlogArticle({
       logo: { "@type": "ImageObject", url: `${SITE}/android-chrome-512x512.png` },
     },
     ...(datePublished ? { datePublished } : {}),
+    ...(dateModified ? { dateModified } : {}),
     ...(canonical ? { mainEntityOfPage: { "@type": "WebPage", "@id": canonical } } : {}),
   };
 
@@ -190,6 +193,12 @@ export function BlogArticle({
                         </>
                       )}
                       {readingTime && ` · ${readingTime}`}
+                      {dateModified && dateModifiedDisplay && (
+                        <>
+                          {" · Updated "}
+                          <time dateTime={dateModified}>{dateModifiedDisplay}</time>
+                        </>
+                      )}
                     </p>
                   </div>
                 </div>
