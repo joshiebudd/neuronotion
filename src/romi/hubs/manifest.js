@@ -15,14 +15,17 @@
  *
  * EDITORIAL RULE, NON-NEGOTIABLE (Josh, 19 Aug 2026)
  * -------------------------------------------------
- * Romi is a wellbeing tool, not a medical device. Copy we write on this site must
- * never read as clinical content. In anything authored here, do NOT write about:
- *   - diagnosis, being diagnosed, or what a diagnosis means
- *   - "the signs of ADHD", symptom lists, or anything resembling diagnostic criteria
- *   - medication of any kind
- *   - assessments, referrals, NHS waiting lists or clinical pathways
- *   - treatment, clinical outcomes, or co-occurring conditions
- * Write about lived experience and practical, everyday strategies instead.
+ * Romi is a wellbeing tool, not a medical device. The line sits at DIAGNOSIS and
+ * SELF-ASSESSMENT, not at clinical subject matter generally (narrowed 19 Aug 2026
+ * after Josh clarified). In anything authored here, do NOT write:
+ *   - "the signs of ADHD", symptom lists, checklists, or diagnostic criteria
+ *   - "do I have ADHD", "am I ADHD", quizzes, or anything inviting self-diagnosis
+ *   - anything telling a reader whether they have ADHD or what a diagnosis means
+ *     for them personally
+ *
+ * Allowed: cited research and science, emotional dysregulation, RSD, executive
+ * function, medication as context rather than advice, and the realities of
+ * assessment and waiting lists.
  *
  * This applies to copy WE author (intros, section titles, FAQs). It does not
  * apply to the titles of existing blog posts surfaced as cards here; those are
