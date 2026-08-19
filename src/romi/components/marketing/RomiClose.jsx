@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../ui/Button";
 import { RomiRating } from "../ui/RomiRating";
-import { ClickTooltip } from "../ui/ClickTooltip";
+import { STORE_LINKS } from "../../lib/store-links";
 import { openBooking } from "../ui/BookingModal";
 import { Lock } from "lucide-react";
 
@@ -63,16 +63,18 @@ const certifications = [
   "UK storage",
 ];
 
-const stores = [
-  { src: "/romi/landing/store-app-store.webp", alt: "Download on the App Store" },
-  { src: "/romi/landing/store-google-play.webp", alt: "Get it on Google Play" },
-];
-
 function StoreButtons({ className }) {
   return (
     <div className={className}>
-      {stores.map((store) => (
-        <ClickTooltip key={store.src} label="Temporarily disabled due to rebranding.">
+      {STORE_LINKS.map((store) => (
+        <a
+          key={store.label}
+          href={store.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={store.alt}
+          className="inline-block transition-transform hover:scale-[1.03]"
+        >
           <Image
             src={store.src}
             alt={store.alt}
@@ -80,7 +82,7 @@ function StoreButtons({ className }) {
             height={67}
             className="h-[44px] w-auto md:h-[46px]"
           />
-        </ClickTooltip>
+        </a>
       ))}
     </div>
   );

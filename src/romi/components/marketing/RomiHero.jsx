@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Container } from "../layout/Container";
 import { Button } from "../ui/Button";
-import { ClickTooltip } from "../ui/ClickTooltip";
+import { STORE_LINKS } from "../../lib/store-links";
 
 export function RomiHero() {
   return (
@@ -24,24 +24,24 @@ export function RomiHero() {
 
             <div className="mx-auto mt-9 inline-flex flex-col items-center gap-4 lg:mx-0">
               <div className="flex flex-wrap justify-center gap-4">
-                <ClickTooltip label="Temporarily disabled due to rebranding.">
-                  <Image
-                    src="/romi/landing/store-app-store.webp"
-                    alt="Download on the App Store"
-                    width={196}
-                    height={67}
-                    className="h-[clamp(48px,5vw,58px)] w-auto"
-                  />
-                </ClickTooltip>
-                <ClickTooltip label="Temporarily disabled due to rebranding.">
-                  <Image
-                    src="/romi/landing/store-google-play.webp"
-                    alt="Get it on Google Play"
-                    width={196}
-                    height={67}
-                    className="h-[clamp(48px,5vw,58px)] w-auto"
-                  />
-                </ClickTooltip>
+                {STORE_LINKS.map((store) => (
+                  <a
+                    key={store.label}
+                    href={store.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={store.alt}
+                    className="inline-block transition-transform hover:scale-[1.03]"
+                  >
+                    <Image
+                      src={store.src}
+                      alt={store.alt}
+                      width={196}
+                      height={67}
+                      className="h-[clamp(48px,5vw,58px)] w-auto"
+                    />
+                  </a>
+                ))}
               </div>
 
               <Button
