@@ -44,8 +44,6 @@ const footerCols = [
     title: "Resources",
     links: [
       { label: "Blog", href: "https://www.romiadhd.com/blogs" },
-      { label: "Guides", href: "/understanding-adhd" },
-      { label: "ADHD at Work", href: "/adhd-at-work" },
       { label: "Docs", href: "/docs" },
       { label: "About", href: "/about" },
       { label: "Privacy", href: "https://app.romiadhd.com/privacy" },

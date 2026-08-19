@@ -1,0 +1,57 @@
+/*
+ * Card furniture for the blog index: publish date + thumbnail, keyed by slug.
+ * Extracted 19 Aug 2026 from the previous hardcoded card grid so the index could
+ * be grouped into categories without losing the images.
+ *
+ * Titles and blurbs are NOT here on purpose. Those come from POST_INDEX, which is
+ * generated from the post files, so a retitled post updates its card automatically.
+ */
+
+export const CARD_META = {
+  "23-ways-to-make-living-with-adhd-easier": { date: "Feb 24, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/uaajkRZBUiEbGLxb.jpeg" },
+  "adhd-and-anxiety-gang-up": { date: "Jan 18, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/wvIWFSbiCjCQqVaq.jpeg" },
+  "adhd-and-being-too-emotional": { date: "Jan 25, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/riwkbOhGxUQuCLUZ.jpeg" },
+  "adhd-and-entrepreneurship": { date: "Jul 22, 2026", image: "https://images.pexels.com/photos/669963/pexels-photo-669963.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "adhd-and-medication": { date: "Feb 09, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/McgXjtOeRfqjcOnq.jpeg" },
+  "adhd-and-routines": { date: "Feb 07, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/GPvWuqqMlJXqGfva.jpeg" },
+  "adhd-and-study-music": { date: "Feb 13, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/axuRxHXILJREfGFZ.jpeg" },
+  "adhd-brains-dont-do-small": { date: "Feb 03, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/VEnHjHYXPZefhmTJ.jpeg" },
+  "adhd-diagnosis-not-symptom-reduction": { date: "Mar 01, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/NPluqgDnQNuJKKmP.jpeg" },
+  "adhd-fear-of-trying-new-things": { date: "Feb 22, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/ZZoUTrygimUJlMwe.jpeg" },
+  "adhd-idea-overwhelm-capture-system": { date: "Nov 18, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/VTKaigXqhtqEKEPr.jpeg" },
+  "adhd-is-not-what-you-think": { date: "Feb 23, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fSIaPDNaTFZggEfb.jpeg" },
+  "adhd-is-rising-why": { date: "Feb 17, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/PyHzaRRBUwMYKNFb.jpeg" },
+  "adhd-masking-and-imposter-syndrome": { date: "Jan 30, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/SMWxbHIGQazTUxDR.jpeg" },
+  "adhd-prioritization-daily-non-negotiables": { date: "Nov 18, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/nDXLblRyNfsoLgJU.jpeg" },
+  "adhd-sleep-foundation": { date: "Feb 28, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/kMamzgpPkERhwZgR.jpeg" },
+  "adhd-systems-not-goals": { date: "Nov 18, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/WCkiQUZEfiWXRMhf.jpeg" },
+  "adhd-task-paralysis": { date: "Aug 5, 2026", image: "https://images.pexels.com/photos/32959283/pexels-photo-32959283.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "adhd-the-hidden-cost-of-choice-the-gold-dust-theory": { date: "Jan 20, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/JnHGETMOzTffoZOO.jpeg" },
+  "adhd-wasting-time-disorganization": { date: "Mar 02, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/MSjTIgDGEtyceKtq.jpeg" },
+  "building-habits-that-stick-4-laws": { date: "Feb 28, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/MyZTUZWInbBbQIKc.jpg" },
+  "do-your-systems-still-work-when-adhd-is-hitting-you-hard": { date: "Feb 17, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/zWDJHJhFuLbxsfmv.jpeg" },
+  "everyone-isnt-a-little-adhd": { date: "Feb 25, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/DsUQnwIJdBgOxKRM.jpeg" },
+  "exhausted-again-do-differently": { date: "Feb 05, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/LltYgvQAcoKhzxqs.jpeg" },
+  "how-adhd-affects-every-part-of-your-life": { date: "Feb 26, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/kvktnPCUiQTmfJVx.jpeg" },
+  "how-i-fixed-my-sleep-with-adhd": { date: "Feb 11, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/DnEgXsmJYbbjSTrt.jpeg" },
+  "how-to-make-adhd-motivation-useful": { date: "Feb 27, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fGXyhQpTXhpjFeaI.jpeg" },
+  "how-to-reduce-adhd-procrastination": { date: "Feb 20, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/cZyekxPYEmrpoxfd.jpeg" },
+  "how-to-support-neurodivergent-employees-at-work": { date: "Jul 27, 2026", image: "https://images.pexels.com/photos/31679274/pexels-photo-31679274.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "how-to-take-control-of-your-adhd": { date: "Feb 19, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/aHPlhULEzomtJJSq.jpeg" },
+  "i-can-do-the-thing-but-my-brain-says-no": { date: "Feb 15, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fsJKZJxgvoVKpFGz.jpeg" },
+  "is-adhd-a-superpower": { date: "Jul 20, 2026", image: "https://images.pexels.com/photos/17484975/pexels-photo-17484975.png?auto=compress&cs=tinysrgb&w=1200" },
+  "my-adhd-journey-story": { date: "Mar 03, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QRBLUTtjMlDxDQnj.jpeg" },
+  "neurodivergent-employees-risk-or-asset": { date: "Jul 29, 2026", image: "https://images.pexels.com/photos/34703308/pexels-photo-34703308.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "neurodivergent-graduate-first-job": { date: "Aug 7, 2026", image: "https://images.pexels.com/photos/274778/pexels-photo-274778.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "rejection-sensitive-dysphoria-adhd": { date: "Aug 3, 2026", image: "https://images.pexels.com/photos/1126375/pexels-photo-1126375.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "should-i-tell-my-employer-i-have-adhd": { date: "Aug 6, 2026", image: "https://images.pexels.com/photos/7433930/pexels-photo-7433930.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "something-for-when-your-brain-says-i-cant": { date: "Jan 28, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QOuSXcrsBzPJJTLN.jpeg" },
+  "stuck-in-fight-flight-or-scroll": { date: "Jan 22, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/FXbxnmUvXUPZYprM.jpeg" },
+  "the-adhd-goldilocks-zone": { date: "Feb 01, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/juoQygcofodGdLMN.jpeg" },
+  "three-pillars-adhd-control": { date: "Feb 19, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/ZBzjTRaDqDchxuLR.jpg" },
+  "want-a-chance-at-a-clearer-calmer-version-of-you": { date: "Aug 23, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/vvvtStinZQXxtjIq.jpeg" },
+  "while-waiting-for-adhd-assessment": { date: "Jul 23, 2026", image: "https://images.pexels.com/photos/4397907/pexels-photo-4397907.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "why-adhd-task-breakdown-works": { date: "Feb 28, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/EHGHCUTRaWBwtZcR.jpg" },
+  "why-simple-things-feel-impossible-with-adhd": { date: "Feb 21, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/jLhDjJNxGODgXDBr.jpeg" },
+  "you-just-get-me": { date: "Feb 18, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/AERmRCdhXAECATTn.jpeg" },
+};

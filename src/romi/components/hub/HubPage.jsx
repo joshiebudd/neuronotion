@@ -42,7 +42,7 @@ export function HubPage({ hub }) {
         description: hub.description,
         url: canonical,
         isPartOf: { "@type": "WebSite", name: "Romi ADHD", url: SITE },
-        about: { "@type": "Thing", name: "Attention deficit hyperactivity disorder" },
+        about: { "@type": "Thing", name: "ADHD" },
         mainEntity: {
           "@type": "ItemList",
           numberOfItems: allPosts.length,
