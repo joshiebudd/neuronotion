@@ -10,7 +10,7 @@ const CalmerYouBlog = () => {
       keywords="ADHD companion, AI ADHD app, ADHD executive function, ADHD support, Romi ADHD"
       ogTitle="Want a Chance at a Clearer, Calmer Version of You?"
       ogDescription="Meet Romi, the AI ADHD companion designed to give you back the time, energy, and clarity that executive dysfunction keeps stealing."
-      heading="Want a Chance at a Clearer, Calmer Version of You? Meet Romi"
+      heading="Want an ADHD App for Adults That Actually Helps? Meet Romi"
       category="Meet Romi"
       date="Aug 23, 2025"
       datePublished="2025-08-23"

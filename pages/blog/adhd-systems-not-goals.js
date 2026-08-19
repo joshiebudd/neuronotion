@@ -5,13 +5,13 @@ import { BlogArticle } from '../../src/romi';
 const ADHDSystemsNotGoalsBlog = () => {
   return (
     <BlogArticle
-      title="ADHD Habits: Why Systems Beat Goals | Romi"
-      description="Goal setting fails ADHD brains because motivation fades. Why building habits and systems instead gets consistent results without relying on willpower."
+      title="ADHD Habits: Build Systems, Not Willpower | Romi"
+      description="Struggling to build ADHD habits through willpower alone? Why systems succeed where habit-tracking fails, and how to build ones that actually hold."
       slug="adhd-systems-not-goals"
       keywords="ADHD systems, ADHD productivity systems, goals vs systems ADHD, ADHD habit building, ADHD organization, ADHD executive function"
       ogTitle="ADHD Systems Not Goals: Why Goal-Setting Fails and What Works"
       ogDescription="Stop chasing goals. Start building systems. Learn why ADHD brains need systems, not goals, to create lasting change."
-      heading="ADHD Habits and Systems: You Fall to Your Systems, Not Your Goals"
+      heading="ADHD Habits: Why Systems Beat Willpower and Goals"
       category="Productivity & Focus"
       date="Nov. 18, 2025"
       datePublished="2025-11-18"
