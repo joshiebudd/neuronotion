@@ -43,7 +43,7 @@ const footerCols = [
   {
     title: "Resources",
     links: [
-      { label: "Blog", href: "https://www.romiadhd.com/blogs" },
+      { label: "Blogs", href: "https://www.romiadhd.com/blogs" },
       { label: "Docs", href: "/docs" },
       { label: "About", href: "/about" },
       { label: "Privacy", href: "https://app.romiadhd.com/privacy" },
