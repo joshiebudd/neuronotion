@@ -48,11 +48,20 @@ jobs:
             curl -fsSL "$HOST/sitemap.xml" | grep -oE '<loc>[^<]+</loc>' | sed 's/<loc>//;s/<\/loc>//' > urls.txt
           else
             : > urls.txt
-            echo "$CHANGED" | grep -E '^pages/.*\.(js|jsx|tsx)$' | grep -vE '^pages/(_app|_document|api/)' | while read -r f; do
-              p="${f#pages/}"; p="${p%.*}"; p="${p%/index}"
-              [ "$p" = "index" ] && p=""
-              echo "$HOST/$p" >> urls.txt
-            done
+            # `grep` exits 1 on no match, e.g. a push that only touches src/romi/
+            # component files with no pages/*.js change (RomiClose.jsx-only pushes
+            # hit this constantly). Piping that straight into `while` under
+            # `pipefail` killed the whole step before it ever reached the
+            # component-change fallback below, so capture into a variable with
+            # `|| true` first instead of piping directly.
+            PAGE_FILES=$(echo "$CHANGED" | grep -E '^pages/.*\.(js|jsx|tsx)$' | grep -vE '^pages/(_app|_document|api/)' || true)
+            if [ -n "$PAGE_FILES" ]; then
+              while IFS= read -r f; do
+                p="${f#pages/}"; p="${p%.*}"; p="${p%/index}"
+                [ "$p" = "index" ] && p=""
+                echo "$HOST/$p" >> urls.txt
+              done <<< "$PAGE_FILES"
+            fi
             # Any component/template change can alter every page; when the blog
             # template or the header/footer changes, resubmit the sitemap.
             if echo "$CHANGED" | grep -qE '^(src/romi/components/(blog|docs|marketing|layout)/|components/Articles/)'; then
