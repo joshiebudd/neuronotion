@@ -9,6 +9,7 @@ export { RomiCharacter } from "./components/ui/RomiCharacter";
 export { RomiWindow } from "./components/ui/RomiWindow";
 export { RomiHeader } from "./components/marketing/RomiHeader";
 export { RomiHero } from "./components/marketing/RomiHero";
+export { AppHero } from "./components/app/AppHero";
 export { RomiShowcase } from "./components/marketing/RomiShowcase";
 export { RomiLogos } from "./components/marketing/RomiLogos";
 export { RomiStruggles } from "./components/marketing/RomiStruggles";
