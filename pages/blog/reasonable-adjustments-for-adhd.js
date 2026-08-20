@@ -6,11 +6,11 @@ const ReasonableAdjustmentsADHDBlog = () => {
   return (
     <BlogArticle
       title="Reasonable Adjustments for ADHD: What to Ask For | Romi"
-      description="Reasonable adjustments for ADHD, explained plainly, with a script for asking. No diagnosis required, your employer must act, and it starts with one conversation."
+      description="Reasonable adjustments for ADHD, explained plainly: what to ask for, a script for the conversation, and why you don't need a diagnosis to ask."
       slug="reasonable-adjustments-for-adhd"
       keywords="reasonable adjustments for adhd, adhd workplace adjustments, adhd adjustments at work, reasonable adjustments adhd, how to ask for reasonable adjustments, adhd at work uk, equality act 2010 adhd, access to work adhd"
       ogTitle="Reasonable Adjustments for ADHD: What to Ask For, and How"
-      ogDescription="A plain-English guide to reasonable adjustments for ADHD: what your employer legally has to do, what actually helps beyond flexible hours, and a script for the conversation."
+      ogDescription="A plain-English guide to reasonable adjustments for ADHD: what to ask for, how to ask, and why you don't need a diagnosis first."
       heading="Reasonable Adjustments for ADHD: What to Ask For, and How to Ask"
       category="Neurodiversity at Work"
       date="Aug. 20, 2026"
