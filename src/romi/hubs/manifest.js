@@ -244,6 +244,7 @@ export const HUBS = [
         title: "If you have ADHD at work",
         posts: [
           "should-i-tell-my-employer-i-have-adhd",
+          "reasonable-adjustments-for-adhd",
           "neurodivergent-graduate-first-job",
           "adhd-masking-and-imposter-syndrome",
         ],

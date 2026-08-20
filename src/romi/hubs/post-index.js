@@ -182,6 +182,11 @@ export const POST_INDEX = {
     heading: "Neurodivergent and Starting Your First Job? How to Keep the Support You Had at University",
     blurb: "Neurodivergent students get extra time, mentors and recorded lectures at university.",
   },
+  "reasonable-adjustments-for-adhd": {
+    title: "Reasonable Adjustments for ADHD: What to Ask For | Romi",
+    heading: "Reasonable Adjustments for ADHD: What to Ask For, and How to Ask",
+    blurb: "A reasonable adjustment is any change that removes a disadvantage your ADHD creates at work, and you do not need a diagnosis to ask.",
+  },
   "rejection-sensitive-dysphoria-adhd": {
     title: "Rejection Sensitive Dysphoria (RSD) and ADHD: Why It Hurts",
     heading: "Rejection Sensitive Dysphoria and ADHD: Why Rejection Feels Physical (and How to Cope)",

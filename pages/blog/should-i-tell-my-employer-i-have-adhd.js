@@ -194,7 +194,7 @@ const ShouldITellMyEmployerADHDBlog = () => {
 
               <h3 className="blog-subheader" style={{ fontSize: '1.25rem' }}>How do I ask for reasonable adjustments for ADHD?</h3>
               <p className="blog-body">
-                Ask for reasonable adjustments by describing the specific support that helps you, such as flexible hours, a quieter space, written follow-ups, or agendas in advance, and directing the request to a supportive manager, HR, or occupational health. You can frame adjustments around how you work best rather than around a diagnosis, and confirming the conversation in writing helps the process and creates a useful record.
+                Ask for reasonable adjustments by describing the specific support that helps you, such as flexible hours, a quieter space, written follow-ups, or agendas in advance, and directing the request to a supportive manager, HR, or occupational health. You can frame adjustments around how you work best rather than around a diagnosis, and confirming the conversation in writing helps the process and creates a useful record. For a full breakdown of what to ask for and a script for the conversation, see <Link href="/blog/reasonable-adjustments-for-adhd" className="text-blue-600 hover:underline">reasonable adjustments for ADHD</Link>.
               </p>
               <br />
 
