@@ -43,6 +43,7 @@ export const CARD_META = {
   "my-adhd-journey-story": { date: "Mar 03, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/QRBLUTtjMlDxDQnj.jpeg" },
   "neurodivergent-employees-risk-or-asset": { date: "Jul 29, 2026", image: "https://images.pexels.com/photos/34703308/pexels-photo-34703308.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "neurodivergent-graduate-first-job": { date: "Aug 7, 2026", image: "https://images.pexels.com/photos/274778/pexels-photo-274778.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+  "neurodiversity-in-the-workplace": { date: "Aug 21, 2026", image: "https://images.pexels.com/photos/14692584/pexels-photo-14692584.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "reasonable-adjustments-for-adhd": { date: "Aug 20, 2026", image: "https://images.pexels.com/photos/6275820/pexels-photo-6275820.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "rejection-sensitive-dysphoria-adhd": { date: "Aug 3, 2026", image: "https://images.pexels.com/photos/1126375/pexels-photo-1126375.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "should-i-tell-my-employer-i-have-adhd": { date: "Aug 6, 2026", image: "https://images.pexels.com/photos/7433930/pexels-photo-7433930.jpeg?auto=compress&cs=tinysrgb&w=1200" },

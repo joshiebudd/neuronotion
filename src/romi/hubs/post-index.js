@@ -182,6 +182,11 @@ export const POST_INDEX = {
     heading: "Neurodivergent and Starting Your First Job? How to Keep the Support You Had at University",
     blurb: "Neurodivergent students get extra time, mentors and recorded lectures at university.",
   },
+  "neurodiversity-in-the-workplace": {
+    title: "Neurodiversity in the Workplace: A Practical Guide | Romi",
+    heading: "Neurodiversity in the Workplace: What It Means and How to Get It Right",
+    blurb: "Neurodiversity in the workplace means designing work so ADHD, autistic and dyslexic minds can do their best...",
+  },
   "reasonable-adjustments-for-adhd": {
     title: "Reasonable Adjustments for ADHD: What to Ask For | Romi",
     heading: "Reasonable Adjustments for ADHD: What to Ask For, and How to Ask",

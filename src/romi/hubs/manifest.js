@@ -252,6 +252,7 @@ export const HUBS = [
       {
         title: "If you employ neurodivergent people",
         posts: [
+          "neurodiversity-in-the-workplace",
           "how-to-support-neurodivergent-employees-at-work",
           "neurodivergent-employees-risk-or-asset",
         ],
