@@ -222,6 +222,11 @@ export const POST_INDEX = {
     heading: "The Three Pillars of ADHD Control: Sleep, Diet and Exercise",
     blurb: "ADHD isn't only about focus, it's about control.",
   },
+  "undiagnosed-adhd": {
+    title: "Undiagnosed ADHD: Why Support Shouldn't Wait | Romi",
+    heading: "Undiagnosed ADHD: Why Support Shouldn't Have to Wait for a Diagnosis",
+    blurb: "Millions of UK adults live with undiagnosed ADHD.",
+  },
   "want-a-chance-at-a-clearer-calmer-version-of-you": {
     title: "Meet Romi: The AI Companion for Adults With ADHD",
     heading: "Want a Chance at a Clearer, Calmer Version of You? Meet Romi",

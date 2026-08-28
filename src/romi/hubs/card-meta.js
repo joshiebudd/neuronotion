@@ -51,6 +51,7 @@ export const CARD_META = {
   "stuck-in-fight-flight-or-scroll": { date: "Jan 22, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/FXbxnmUvXUPZYprM.jpeg" },
   "the-adhd-goldilocks-zone": { date: "Feb 01, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/juoQygcofodGdLMN.jpeg" },
   "three-pillars-adhd-control": { date: "Feb 19, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/ZBzjTRaDqDchxuLR.jpg" },
+  "undiagnosed-adhd": { date: "Aug 28, 2026", image: "https://images.pexels.com/photos/3682717/pexels-photo-3682717.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "want-a-chance-at-a-clearer-calmer-version-of-you": { date: "Aug 23, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/vvvtStinZQXxtjIq.jpeg" },
   "while-waiting-for-adhd-assessment": { date: "Jul 23, 2026", image: "https://images.pexels.com/photos/4397907/pexels-photo-4397907.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "why-adhd-task-breakdown-works": { date: "Feb 28, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/EHGHCUTRaWBwtZcR.jpg" },

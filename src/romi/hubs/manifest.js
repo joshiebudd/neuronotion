@@ -63,6 +63,7 @@ export const HUBS = [
       {
         title: "Making sense of it",
         posts: [
+          "undiagnosed-adhd",
           "while-waiting-for-adhd-assessment",
           "adhd-diagnosis-not-symptom-reduction",
           "adhd-and-medication",
