@@ -3,7 +3,7 @@
  * Used by the hub pages so their cards stay in sync with the posts themselves.
  *
  * Regenerate with: python3 scripts/build-post-index.py  (in the AI Chief of Staff repo)
- * Last generated: 19 Aug 2026, 46 posts.
+ * Last generated: 19 Aug 2026, 46 posts. Manually appended 31 Aug 2026 (how-to-use-adhd-hyperfocus).
  */
 
 export const POST_INDEX = {
@@ -136,6 +136,11 @@ export const POST_INDEX = {
     title: "How to Fall Asleep With ADHD: How I Fixed My Sleep | Romi",
     heading: "How I Fixed My Sleep With ADHD: Shutting Down the 2 A.M. Brain",
     blurb: "Can't sleep with ADHD because your brain won't switch off?",
+  },
+  "how-to-use-adhd-hyperfocus": {
+    title: "ADHD Hyperfocus: How to Use It, Not Fight It | Romi",
+    heading: "ADHD Hyperfocus: What It Is and How to Use It on Purpose",
+    blurb: "ADHD hyperfocus is intense, absorbed attention triggered by interest rather than importance.",
   },
   "how-to-make-adhd-motivation-useful": {
     title: "ADHD Motivation: How to Use It Before It Disappears | Romi",

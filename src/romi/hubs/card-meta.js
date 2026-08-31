@@ -34,6 +34,7 @@ export const CARD_META = {
   "exhausted-again-do-differently": { date: "Feb 05, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/LltYgvQAcoKhzxqs.jpeg" },
   "how-adhd-affects-every-part-of-your-life": { date: "Feb 26, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/kvktnPCUiQTmfJVx.jpeg" },
   "how-i-fixed-my-sleep-with-adhd": { date: "Feb 11, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/DnEgXsmJYbbjSTrt.jpeg" },
+  "how-to-use-adhd-hyperfocus": { date: "Aug 31, 2026", image: "https://images.pexels.com/photos/6305637/pexels-photo-6305637.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "how-to-make-adhd-motivation-useful": { date: "Feb 27, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/fGXyhQpTXhpjFeaI.jpeg" },
   "how-to-reduce-adhd-procrastination": { date: "Feb 20, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/cZyekxPYEmrpoxfd.jpeg" },
   "how-to-support-neurodivergent-employees-at-work": { date: "Jul 27, 2026", image: "https://images.pexels.com/photos/31679274/pexels-photo-31679274.jpeg?auto=compress&cs=tinysrgb&w=1200" },
