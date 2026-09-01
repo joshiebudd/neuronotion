@@ -58,6 +58,7 @@ const footerCols = [
 
 const certifications = [
   "Cyber Essentials+",
+  "UKCA Class I Medical Device",
   "GDPR",
   "SOC II",
   "UK storage",
@@ -249,9 +250,10 @@ export function RomiClose({
                   ))}
                 </ul>
               </div>
-              <p className="shrink-0 text-sm text-[var(--romi-color-ink-soft)] lg:text-right">
-                &copy; {year} Neuro Notion App Limited. All rights reserved.
-              </p>
+              <div className="shrink-0 text-sm text-[var(--romi-color-ink-soft)] lg:text-right">
+                <p>Romi is a Class I medical device manufactured by Neuro Notion App Limited.</p>
+                <p>&copy; {year} Neuro Notion App Limited. All rights reserved.</p>
+              </div>
             </div>
           </div>
         </div>
