@@ -35,6 +35,8 @@ const TemplatesPage = () => {
         <meta property="og:url" content="https://www.romiadhd.com/templates" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Romi ADHD" />
+        <meta property="og:image" content="https://www.romiadhd.com/og/romi-og.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div>
         <HPHeader />

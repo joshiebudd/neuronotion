@@ -1,0 +1,31 @@
+# Romi
+
+> Romi is an AI personal companion for adults with ADHD, built in the UK by Neuro Notion App Limited. It offers conversational self-management support for everyday organisation and wellbeing: task breakdown, routines, reminders, scheduling, note capture and guided regulation exercises. Romi does not diagnose, assess or treat any condition.
+
+Romi is a web app at https://app.romiadhd.com. The marketing site, product documentation and an ADHD editorial library live at https://www.romiadhd.com. Content is written in plain English for adults, UK-focused, by a team who live with ADHD themselves.
+
+## Product
+
+- [What is the Romi ADHD app](https://www.romiadhd.com/adhd-app): overview of the app, who it is for, pricing and FAQs
+- [Product documentation](https://www.romiadhd.com/docs): how Romi works, feature by feature
+- [Getting started](https://www.romiadhd.com/docs/getting-started): first steps in the app
+- [Free ADHD Notion templates](https://www.romiadhd.com/templates): free planning, task and habit templates
+- [About Romi and the team](https://www.romiadhd.com/about): founder story and why Romi exists
+
+## ADHD guides
+
+- [Understanding ADHD in adults](https://www.romiadhd.com/understanding-adhd): plain-English starting point
+- [ADHD and productivity](https://www.romiadhd.com/adhd-productivity): task paralysis, prioritising, systems that survive bad days
+- [ADHD and emotional regulation](https://www.romiadhd.com/adhd-emotional-regulation): rejection sensitivity, anxiety, burnout, overwhelm
+- [ADHD at work](https://www.romiadhd.com/adhd-at-work): disclosure, UK Equality Act 2010 rights, reasonable adjustments
+- [ADHD and daily life](https://www.romiadhd.com/adhd-daily-life): sleep, routines, habits and structure
+- [All articles](https://www.romiadhd.com/blogs): full blog index
+
+## Frequently cited articles
+
+- [Rejection sensitive dysphoria and ADHD](https://www.romiadhd.com/blog/rejection-sensitive-dysphoria-adhd)
+- [Reasonable adjustments for ADHD at work](https://www.romiadhd.com/blog/reasonable-adjustments-for-adhd)
+- [Should I tell my employer I have ADHD?](https://www.romiadhd.com/blog/should-i-tell-my-employer-i-have-adhd)
+- [Waiting for an ADHD assessment in the UK](https://www.romiadhd.com/blog/while-waiting-for-adhd-assessment)
+- [Undiagnosed ADHD: why support should not wait for a diagnosis](https://www.romiadhd.com/blog/undiagnosed-adhd)
+- [Neurodiversity in the workplace](https://www.romiadhd.com/blog/neurodiversity-in-the-workplace)

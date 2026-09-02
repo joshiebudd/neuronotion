@@ -105,7 +105,7 @@ export const HUBS = [
     shortLabel: "Focus & getting things done",
     h1: "ADHD Productivity, Focus and Getting Things Done",
     description:
-      "Why ordinary productivity advice fails ADHD brains, and what works instead: beating task paralysis, breaking work down, prioritising, and building systems that survive bad days.",
+      "Why ordinary productivity advice fails ADHD brains, and what works instead: task paralysis, breaking work down, and systems that survive bad days.",
     kicker: "The biggest topic",
     intro: [
       "Most productivity advice was written for brains that respond to importance. ADHD brains respond to interest, urgency, novelty and challenge, which is why a task can be genuinely important to you and still be impossible to start.",
@@ -179,7 +179,7 @@ export const HUBS = [
     shortLabel: "Emotions & regulation",
     h1: "ADHD, Emotions and Emotional Regulation",
     description:
-      "Emotional dysregulation is a core part of ADHD, not a personality flaw. Rejection sensitivity, anxiety, burnout and nervous system overwhelm, and what actually helps.",
+      "Emotional dysregulation is a core part of ADHD, not a personality flaw. Rejection sensitivity, anxiety, burnout and overwhelm, and what actually helps.",
     kicker: "The half nobody warns you about",
     intro: [
       "Most descriptions of ADHD stop at attention. For a great many adults the harder part is emotional: reactions that arrive faster and louder than the situation warrants, criticism that lands like a physical blow, and a nervous system that seems stuck between overdrive and shutdown.",
@@ -234,7 +234,7 @@ export const HUBS = [
     shortLabel: "ADHD at work",
     h1: "ADHD at Work",
     description:
-      "Whether to tell your employer, your rights under the Equality Act 2010, the adjustments that actually help, and what employers get wrong about neurodivergent staff.",
+      "Whether to tell your employer, your rights under the Equality Act 2010, the adjustments that actually help, and what employers get wrong.",
     kicker: "For employees and employers",
     intro: [
       "Work is where ADHD gets expensive. Open-plan noise, unclear priorities, back-to-back meetings and unwritten expectations all press on exactly the functions ADHD makes harder, and most people compensate by masking until they burn out.",
@@ -294,7 +294,7 @@ export const HUBS = [
     shortLabel: "Sleep, routines & habits",
     h1: "ADHD Daily Life: Sleep, Routines and Habits",
     description:
-      "Sleep, routines, habits and the basics that make everything else with ADHD easier. Why standard habit advice fails, and how to build structure you can actually keep.",
+      "Sleep, routines, habits and the basics that make everything else with ADHD easier, and how to build structure you can actually keep.",
     kicker: "The foundations",
     intro: [
       "Everything else in ADHD management sits on top of a small number of unglamorous basics. Sleep in particular is not one tip among many: when it goes, focus, emotional regulation and impulse control all go with it.",

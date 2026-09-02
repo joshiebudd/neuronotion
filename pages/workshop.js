@@ -18,6 +18,7 @@ const VSL_URL = "/romi/workshop/vsl.mp4";
 // Still pulled from the VSL itself, used as the play-button thumbnail and the
 // video poster. Kept separate from HERO_IMAGE so the designed cover graphic
 // stays the og:image, where a made-for-purpose cover beats a video frame.
+<meta name="twitter:card" content="summary_large_image" />
 const VSL_POSTER = "/romi/workshop/vsl-poster.jpg";
 
 const HERO_IMAGE = "/romi/workshop/hero.jpg";

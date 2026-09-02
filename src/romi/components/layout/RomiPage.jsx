@@ -59,6 +59,7 @@ export function RomiPage({
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Romi, your personal ADHD companion" />
         <meta property="og:locale" content="en_GB" />
+        <meta name="twitter:card" content="summary_large_image" />
 
         <script
           type="application/ld+json"

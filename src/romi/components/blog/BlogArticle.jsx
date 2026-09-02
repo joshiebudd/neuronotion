@@ -108,6 +108,7 @@ export function BlogArticle({
         <meta property="og:site_name" content="Romi ADHD" />
         <meta property="og:image" content={shareImage} />
         <meta property="og:locale" content="en_GB" />
+        <meta name="twitter:card" content="summary_large_image" />
         {datePublished && <meta property="article:published_time" content={datePublished} />}
         <meta property="article:author" content={AUTHOR_NAME} />
 

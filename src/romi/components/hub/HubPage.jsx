@@ -87,6 +87,7 @@ export function HubPage({ hub }) {
         <meta property="og:site_name" content="Romi ADHD" />
         <meta property="og:image" content={`${SITE}/og/romi-og.png`} />
         <meta property="og:locale" content="en_GB" />
+        <meta name="twitter:card" content="summary_large_image" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
