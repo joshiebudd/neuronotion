@@ -8,6 +8,7 @@
  */
 
 export const CARD_META = {
+  "adhd-boredom": { date: "Sep 4, 2026", image: "https://images.pexels.com/photos/37184853/pexels-photo-37184853.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "23-ways-to-make-living-with-adhd-easier": { date: "Feb 24, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/uaajkRZBUiEbGLxb.jpeg" },
   "adhd-and-anxiety-gang-up": { date: "Jan 18, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/wvIWFSbiCjCQqVaq.jpeg" },
   "adhd-and-being-too-emotional": { date: "Jan 25, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/riwkbOhGxUQuCLUZ.jpeg" },

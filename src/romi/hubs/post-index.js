@@ -3,10 +3,16 @@
  * Used by the hub pages so their cards stay in sync with the posts themselves.
  *
  * Regenerate with: python3 scripts/build-post-index.py  (in the AI Chief of Staff repo)
- * Last generated: 19 Aug 2026, 46 posts. Manually appended 31 Aug 2026 (how-to-use-adhd-hyperfocus).
+ * Last generated: 19 Aug 2026, 46 posts. Manually appended 31 Aug 2026 (how-to-use-adhd-hyperfocus),
+ * 4 Sep 2026 (adhd-boredom).
  */
 
 export const POST_INDEX = {
+  "adhd-boredom": {
+    title: "ADHD Boredom: Why It Happens and What Helps | Romi",
+    heading: "ADHD Boredom: Why It Happens and What Actually Helps",
+    blurb: "ADHD boredom is chronic, restless understimulation caused by low dopamine reward activity, not...",
+  },
   "23-ways-to-make-living-with-adhd-easier": {
     title: "23 Ways to Make Living With ADHD Easier (Adults) | Romi",
     heading: "23 Ways to Make Living With ADHD Easier",
