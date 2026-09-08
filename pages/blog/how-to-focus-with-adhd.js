@@ -37,7 +37,7 @@ const HowToFocusWithAdhdBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                I spent my entire education trying to focus the &quot;typical&quot; way. Sit still, block out four hours, push through the boring bits because they matter. It drained the absolute life out of me. It was not until university that I stumbled onto something different: leaning into whatever actually held my attention, instead of forcing myself through whatever I thought focus was supposed to look like. The change was immediate. I was happier, more productive and had more energy left at the end of the day than I had ever had trying to concentrate &quot;properly&quot;. I got a bit obsessed with that idea, and it is a large part of why <strong>Romi</strong> exists today.
+                For a long time I assumed I simply could not focus, full stop. Then I noticed the actual pattern: I could sit with a hard problem for six hours without noticing lunch, and a five-minute admin task could still defeat me completely. That is not inconsistency. It is <Link href="/blog/how-to-use-adhd-hyperfocus" className="text-blue-600 hover:underline">the same interest-based attention system behind ADHD hyperfocus</Link>, just showing its other side. Once I stopped trying to focus &quot;properly&quot; and started building tasks and environments around what my brain would actually engage with, focus stopped being a daily fight and started being something I could deliberately design for. That shift is a large part of why <strong>Romi</strong> exists today.
               </p>
               <br />
               <br />
@@ -54,7 +54,7 @@ const HowToFocusWithAdhdBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is the same mechanism behind <Link href="/blog/how-to-use-adhd-hyperfocus" className="text-blue-600 hover:underline">why ADHD hyperfocus can lock onto one task for hours while an equally important one goes untouched for weeks</Link>, and behind <Link href="/blog/adhd-boredom" className="text-blue-600 hover:underline">why understimulating tasks produce genuine, physical discomfort rather than mild disinterest</Link>. The brain is not being lazy in either direction. It is responding to how much reward signal a task actually generates, and standard advice was never written with that system in mind.
+                This is the same mechanism behind <Link href="/blog/adhd-boredom" className="text-blue-600 hover:underline">why understimulating tasks produce genuine, physical discomfort rather than mild disinterest</Link>. The brain is not being lazy in either direction. It is responding to how much reward signal a task actually generates, and standard advice was never written with that system in mind.
               </p>
               <br />
               <br />
@@ -117,7 +117,7 @@ const HowToFocusWithAdhdBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                I spent years assuming that if I could not focus the &quot;normal&quot; way, something was wrong with me. What actually changed everything was realising there was nothing to fix, only a different set of instructions to learn. Once I started building my work around what genuinely held my attention instead of what I thought focus was supposed to look like, I stopped fighting myself for the first time in years. That is the whole idea behind Romi: not a version of you that concentrates like everyone else, a version of you that gets to work with the brain you actually have.
+                I do not think about focus as something I either have or do not have anymore. Some days the interest-based system finds what it needs on its own. Other days it needs real help: a deadline, a change of scenery, a task broken down smaller than feels reasonable. Building that help, instead of reaching for another dose of willpower, is what actually changed things for me, and it is what Romi is built to do for everyone else living with the same brain.
               </p>
               <br />
               <br />
