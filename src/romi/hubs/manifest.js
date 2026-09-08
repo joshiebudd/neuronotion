@@ -145,7 +145,7 @@ export const HUBS = [
       },
       {
         title: "Your environment",
-        posts: ["adhd-and-study-music", "adhd-fear-of-trying-new-things", "how-to-use-adhd-hyperfocus", "adhd-boredom"],
+        posts: ["how-to-focus-with-adhd", "adhd-and-study-music", "adhd-fear-of-trying-new-things", "how-to-use-adhd-hyperfocus", "adhd-boredom"],
       },
     ],
     faqs: [
