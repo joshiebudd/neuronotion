@@ -37,12 +37,12 @@ const AdhdAndCreativityBlog = () => {
         <br />
         <br />
         <p className="blog-body">
-          I spent my entire education trying to do things the &quot;typical&quot; way. Sit still, follow the method, work through the syllabus in order, revise the way everyone else revised. It drained the absolute life out of me. Then, at university, I stumbled onto something that changed everything: doing things my way instead. Leaning into whatever my brain was actually curious about, following the tangents instead of suppressing them, letting one idea drag in three unrelated ones and seeing what happened. I was happier. More productive. More energised. Things I had assumed I would never sustain, given how my brain worked.
+          The part of that university discovery I think about most is not the focus itself, it is what my brain did with it once I stopped forcing a straight line through everything. A half-finished thought from one subject would turn up as the answer to a completely different problem days later. A tangent I would once have shut down on purpose turned out to be where most of my actual original thinking was happening. Once I stopped treating those tangents as a failure to concentrate and started treating them as raw material, the ideas did not just increase, they got noticeably better.
         </p>
         <br />
         <br />
         <p className="blog-body">
-          In hindsight, I got a bit too obsessed with the idea of doing things your own way, and it is a large part of why <strong>Romi</strong> exists today, an ADHD companion built to adapt to how your brain actually works rather than asking you to adapt to it. But the part I want to unpack here is the creativity itself. Why did stepping off the &quot;normal&quot; track make my thinking sharper, not sloppier? It turns out there is a genuine evidence base behind that experience, and it explains both why ADHD creativity is real and why it is not automatic.
+          That pattern, connecting things that do not obviously belong together, is a large part of why <strong>Romi</strong> exists today, an ADHD companion built to work with how your brain actually generates ideas rather than asking it to file them away in order. But the part worth unpacking here is the creativity itself. Why does an ADHD brain produce that kind of connection more readily, and why does it not happen automatically for everyone, every time? There is a genuine evidence base behind both halves of that question.
         </p>
         <br />
         <br />
