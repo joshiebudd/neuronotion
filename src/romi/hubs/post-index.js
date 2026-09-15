@@ -4,10 +4,15 @@
  *
  * Regenerate with: python3 scripts/build-post-index.py  (in the AI Chief of Staff repo)
  * Last generated: 19 Aug 2026, 46 posts. Manually appended 31 Aug 2026 (how-to-use-adhd-hyperfocus),
- * 4 Sep 2026 (adhd-boredom), 8 Sep 2026 (how-to-focus-with-adhd).
+ * 4 Sep 2026 (adhd-boredom), 8 Sep 2026 (how-to-focus-with-adhd), 15 Sep 2026 (adhd-and-creativity).
  */
 
 export const POST_INDEX = {
+  "adhd-and-creativity": {
+    title: "ADHD and Creativity: The Science Behind the Link | Romi",
+    heading: "ADHD and Creativity: The Science Behind the Link",
+    blurb: "ADHD and creativity are linked in real research: why divergent thinking comes more naturally, and how to actually...",
+  },
   "how-to-focus-with-adhd": {
     title: "How to Focus With ADHD: What Actually Works | Romi",
     heading: "How to Focus With ADHD When Willpower and Standard Advice Don't Work",

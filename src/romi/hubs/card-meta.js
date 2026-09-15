@@ -8,6 +8,7 @@
  */
 
 export const CARD_META = {
+  "adhd-and-creativity": { date: "Sep 15, 2026", image: "https://images.pexels.com/photos/33964233/pexels-photo-33964233.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "how-to-focus-with-adhd": { date: "Sep 8, 2026", image: "https://images.pexels.com/photos/31075675/pexels-photo-31075675.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "adhd-boredom": { date: "Sep 4, 2026", image: "https://images.pexels.com/photos/37184853/pexels-photo-37184853.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "23-ways-to-make-living-with-adhd-easier": { date: "Feb 24, 2025", image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663094569463/uaajkRZBUiEbGLxb.jpeg" },

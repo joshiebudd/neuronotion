@@ -57,6 +57,7 @@ export const HUBS = [
           "everyone-isnt-a-little-adhd",
           "how-adhd-affects-every-part-of-your-life",
           "is-adhd-a-superpower",
+          "adhd-and-creativity",
           "adhd-is-rising-why",
         ],
       },
