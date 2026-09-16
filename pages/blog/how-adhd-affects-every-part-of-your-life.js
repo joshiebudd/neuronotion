@@ -23,7 +23,7 @@ const ADHDAffectsEverythingBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD impacts relationships, habits, goals, focus, organization, and sleep—not just productivity</li>
+                  <li>ADHD impacts relationships, habits, goals, focus, organization, and sleep, not just productivity</li>
                   <li>Treating ADHD as only a work problem means you&apos;ll never feel fully in control</li>
                   <li>Multi-dimensional support addresses all areas ADHD impacts, not just task management</li>
                   <li>Systems designed for ADHD brains should feel GOOD to use, not like more chores</li>
@@ -49,7 +49,7 @@ const ADHDAffectsEverythingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Your partner, friends, and family see these behaviors and think you don&apos;t care. But you do care—intensely. Your ADHD brain just makes it hard to translate that caring into the actions relationships need.
+                Your partner, friends, and family see these behaviors and think you don&apos;t care. But you do care, intensely. Your ADHD brain just makes it hard to translate that caring into the actions relationships need.
               </p>
               <br />
               <br />
@@ -91,7 +91,7 @@ const ADHDAffectsEverythingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Then life happens. Your attention shifts. The goal that felt urgent yesterday feels irrelevant today. Not because you don&apos;t care—because ADHD makes it neurologically difficult to maintain long-term focus on distant outcomes.
+                Then life happens. Your attention shifts. The goal that felt urgent yesterday feels irrelevant today. Not because you don&apos;t care, because ADHD makes it neurologically difficult to maintain long-term focus on distant outcomes.
               </p>
               <br />
               <br />
@@ -101,7 +101,7 @@ const ADHDAffectsEverythingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You need external systems that keep goals visible and break them into immediate, dopamine-generating actions. Future rewards don&apos;t motivate ADHD brains—present ones do.
+                You need external systems that keep goals visible and break them into immediate, dopamine-generating actions. Future rewards don&apos;t motivate ADHD brains, present ones do.
               </p>
               <br />
               <br />
@@ -117,7 +117,7 @@ const ADHDAffectsEverythingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Each distraction doesn&apos;t cost seconds—it costs minutes or even hours as you struggle to regain focus. This is why people with ADHD can work all day and feel like they accomplished nothing. They did work—they just spent most of their energy fighting to maintain focus, not on the actual work.
+                Each distraction doesn&apos;t cost seconds. It costs minutes or even hours as you struggle to regain focus. This is why people with ADHD can work all day and feel like they accomplished nothing. They did work. They just spent most of their energy fighting to maintain focus, not on the actual work.
               </p>
               <br />
               <br />
@@ -257,7 +257,7 @@ const ADHDAffectsEverythingBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready for support that addresses ADHD holistically?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—designed for every part of your life ADHD impacts, not just work tasks. Comprehensive support that feels GOOD to use. Manage ADHD multi-dimensionally and see results everywhere.
+                  <strong>Ready for support that addresses ADHD holistically?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, designed for every part of your life ADHD impacts, not just work tasks. Comprehensive support that feels GOOD to use. Manage ADHD multi-dimensionally and see results everywhere.
                 </p>
               </div>
               <br />

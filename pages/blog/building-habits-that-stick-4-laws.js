@@ -37,7 +37,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Here&apos;s how I &quot;hacked&quot; my ADHD brain using The Four Laws of Behavior Change to either build good habits or break bad ones. This isn&apos;t theory—these are strategies I&apos;ve actually used and that have transformed how I function daily.
+                Here&apos;s how I &quot;hacked&quot; my ADHD brain using The Four Laws of Behavior Change to either build good habits or break bad ones. This isn&apos;t theory. These are strategies I&apos;ve actually used and that have transformed how I function daily.
               </p>
               <br />
               <br />
@@ -71,7 +71,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                So you need a different approach—one that works WITH your ADHD neurology, not against it. Understanding <Link href="/blog/adhd-and-routines" className="text-blue-600 hover:underline">why ADHD makes routines so hard</Link> helps you see why traditional methods fail.
+                So you need a different approach, one that works WITH your ADHD neurology, not against it. Understanding <Link href="/blog/adhd-and-routines" className="text-blue-600 hover:underline">why ADHD makes routines so hard</Link> helps you see why traditional methods fail.
               </p>
               <br />
               <br />
@@ -83,12 +83,12 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <h3 className="text-xl font-bold text-gray-900 mb-4">1. Make it Obvious</h3>
               <p className="blog-body">
-                Don&apos;t rely on memory—ADHD doesn&apos;t play nice with that.
+                Don&apos;t rely on memory. ADHD doesn&apos;t play nice with that.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                I put my journal where I couldn&apos;t miss it—right next to my bed, or sometimes even in the cupboard with my toothbrush. The more obvious the cue, the better.
+                I put my journal where I couldn&apos;t miss it, right next to my bed, or sometimes even in the cupboard with my toothbrush. The more obvious the cue, the better.
               </p>
               <br />
               <br />
@@ -109,7 +109,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Your brain needs immediate dopamine to initiate behavior. Neurotypical people can delay gratification—you can&apos;t, at least not reliably. So stack your boring habit with something that provides instant reward. Journal while drinking your favorite beverage. Do stretches while watching a show you love. The dopamine from the enjoyable activity bleeds over to the habit, making it more likely you&apos;ll stick with it.
+                <strong>The ADHD hack:</strong> Your brain needs immediate dopamine to initiate behavior. Neurotypical people can delay gratification. You can&apos;t, at least not reliably. So stack your boring habit with something that provides instant reward. Journal while drinking your favorite beverage. Do stretches while watching a show you love. The dopamine from the enjoyable activity bleeds over to the habit, making it more likely you&apos;ll stick with it.
               </p>
               <br />
               <br />
@@ -125,12 +125,12 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Start absurdly small. Not small—absurdly small. 60 seconds of journaling. One push-up. Two minutes of reading. The smaller the habit, the less resistance your brain generates. Once you start, momentum often carries you further than the minimum. But even if it doesn&apos;t, you still completed the habit. That&apos;s a win.
+                <strong>The ADHD hack:</strong> Start absurdly small. Not small, absurdly small. 60 seconds of journaling. One push-up. Two minutes of reading. The smaller the habit, the less resistance your brain generates. Once you start, momentum often carries you further than the minimum. But even if it doesn&apos;t, you still completed the habit. That&apos;s a win.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This is where <Link href="/blog/adhd-brains-dont-do-small" className="text-blue-600 hover:underline">understanding why your brain resists tasks</Link> becomes crucial—the easier you make it, the less resistance you face.
+                This is where <Link href="/blog/adhd-brains-dont-do-small" className="text-blue-600 hover:underline">understanding why your brain resists tasks</Link> becomes crucial: the easier you make it, the less resistance you face.
               </p>
               <br />
               <br />
@@ -152,7 +152,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <h2 className="blog-subheader">The Four Laws for Breaking Bad Habits with ADHD</h2>
               <p className="blog-body">
-                And here&apos;s how I use them to break the bad habit of mindlessly checking my phone every 5 minutes. The laws work in reverse—you want to make the bad habit hard to do and unrewarding.
+                And here&apos;s how I use them to break the bad habit of mindlessly checking my phone every 5 minutes. The laws work in reverse: you want to make the bad habit hard to do and unrewarding.
               </p>
               <br />
               <br />
@@ -163,12 +163,12 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                I always put my phone on DND and in another room. ADHDers are highly reactive to visual cues—so make the distraction disappear. (By the way, you can allow phone calls in your phone&apos;s DND settings so you don&apos;t miss any calls or emergencies.)
+                I always put my phone on DND and in another room. ADHDers are highly reactive to visual cues, so make the distraction disappear. (By the way, you can allow phone calls in your phone&apos;s DND settings so you don&apos;t miss any calls or emergencies.)
               </p>
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Your impulsivity makes resisting visible temptations nearly impossible. Don&apos;t fight it—remove the temptation entirely. Can&apos;t see it? Can&apos;t be tempted by it. This is why &quot;just have willpower&quot; doesn&apos;t work for ADHD. Willpower is a limited resource you don&apos;t have enough of. Environmental design is unlimited.
+                <strong>The ADHD hack:</strong> Your impulsivity makes resisting visible temptations nearly impossible. Don&apos;t fight it. Remove the temptation entirely. Can&apos;t see it? Can&apos;t be tempted by it. This is why &quot;just have willpower&quot; doesn&apos;t work for ADHD. Willpower is a limited resource you don&apos;t have enough of. Environmental design is unlimited.
               </p>
               <br />
               <br />
@@ -184,7 +184,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Your brain seeks dopamine constantly. If you can make the bad habit provide negative sensory feedback instead, you create an aversion. The pinch works because it&apos;s immediate and unpleasant. You can also reframe the habit mentally—every time you reach for your phone, remind yourself &quot;This is stealing my focus and making me less effective.&quot; The negative association helps over time.
+                <strong>The ADHD hack:</strong> Your brain seeks dopamine constantly. If you can make the bad habit provide negative sensory feedback instead, you create an aversion. The pinch works because it&apos;s immediate and unpleasant. You can also reframe the habit mentally. Every time you reach for your phone, remind yourself &quot;This is stealing my focus and making me less effective.&quot; The negative association helps over time.
               </p>
               <br />
               <br />
@@ -206,12 +206,12 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Tell a friend or partner or someone close that you want them to monitor your usage. We don&apos;t like disappointing people—use that to your advantage.
+                Tell a friend or partner or someone close that you want them to monitor your usage. We don&apos;t like disappointing people. Use that to your advantage.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                <strong>The ADHD hack:</strong> Your internal accountability is unreliable. External accountability works because disappointing others feels worse than disappointing yourself. Share your screen time with someone you respect. Have them check in weekly. The social pressure provides the motivation your brain won&apos;t generate internally. It&apos;s not weakness—it&apos;s working with your neurology.
+                <strong>The ADHD hack:</strong> Your internal accountability is unreliable. External accountability works because disappointing others feels worse than disappointing yourself. Share your screen time with someone you respect. Have them check in weekly. The social pressure provides the motivation your brain won&apos;t generate internally. It&apos;s not weakness. It&apos;s working with your neurology.
               </p>
               <br />
               <br />
@@ -243,7 +243,7 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <h2 className="blog-subheader">Start With One Habit</h2>
               <p className="blog-body">
-                Don&apos;t try to overhaul your entire life at once. Pick ONE habit you want to build or break. Apply these four laws specifically to that habit. Give it 30 days of consistent effort (which, for ADHD brains, might mean 30 attempts with multiple restarts—that&apos;s normal and okay).
+                Don&apos;t try to overhaul your entire life at once. Pick ONE habit you want to build or break. Apply these four laws specifically to that habit. Give it 30 days of consistent effort (which, for ADHD brains, might mean 30 attempts with multiple restarts: that&apos;s normal and okay).
               </p>
               <br />
               <br />
@@ -253,13 +253,13 @@ const BuildingHabitsWithADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Your ADHD brain can absolutely build lasting habits. It just needs the right framework—one that acknowledges your limitations while leveraging your strengths. The Four Laws, adapted for ADHD, provide exactly that.
+                Your ADHD brain can absolutely build lasting habits. It just needs the right framework, one that acknowledges your limitations while leveraging your strengths. The Four Laws, adapted for ADHD, provide exactly that.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to build habits that actually stick?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that helps you design routines, track habits, and provides the external consistency your brain can&apos;t generate alone. Stop fighting your ADHD. Start working with it.
+                  <strong>Ready to build habits that actually stick?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that helps you design routines, track habits, and provides the external consistency your brain can&apos;t generate alone. Stop fighting your ADHD. Start working with it.
                 </p>
               </div>
               <br />

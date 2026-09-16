@@ -22,7 +22,7 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm" role="complementary" aria-label="Key Takeaways">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>An ADHD diagnosis doesn&apos;t magically reduce symptoms—it&apos;s just confirmation of what you already suspected</li>
+                  <li>An ADHD diagnosis doesn&apos;t magically reduce symptoms. It&apos;s just confirmation of what you already suspected</li>
                   <li>Medication from diagnosis helps, but it&apos;s NOT a silver bullet that fixes everything</li>
                   <li>Waiting months or years for diagnosis means wasting precious time you could spend learning to manage ADHD</li>
                   <li>Understanding how ADHD affects YOU specifically is more valuable than the diagnosis itself</li>
@@ -77,7 +77,7 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                And yes—diagnosis does provide those things. But here&apos;s what no one tells you:
+                And yes, diagnosis does provide those things. But here&apos;s what no one tells you:
               </p>
               <br />
               <br />
@@ -97,7 +97,7 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <a href="https://www.ncbi.nlm.nih.gov/books/NBK441838/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD diagnosis and treatment</a> shows that while diagnosis is an important first step, effective management requires ongoing behavioral strategies, environmental modifications, and often medication—not just the diagnosis itself.
+                <a href="https://www.ncbi.nlm.nih.gov/books/NBK441838/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD diagnosis and treatment</a> shows that while diagnosis is an important first step, effective management requires ongoing behavioral strategies, environmental modifications, and often medication, not just the diagnosis itself.
               </p>
               <br />
               <br />
@@ -192,7 +192,7 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The most valuable thing you can do—diagnosed or not—is learn about YOUR specific flavor of ADHD:
+                The most valuable thing you can do, diagnosed or not, is learn about YOUR specific flavor of ADHD:
               </p>
               <br />
               <br />
@@ -303,13 +303,13 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Romi</strong> is designed exactly for this—capturing thoughts, tasks, and information externally so your brain doesn&apos;t have to hold onto everything.
+                <strong>Romi</strong> is designed exactly for this, capturing thoughts, tasks, and information externally so your brain doesn&apos;t have to hold onto everything.
               </p>
               <br />
               <br />
               <h3 className="text-xl font-bold text-gray-900 mb-4">3. Experiment With Strategies</h3>
               <p className="blog-body">
-                Not everything will work for you. That&apos;s okay. The goal isn&apos;t perfection—it&apos;s finding what works for YOUR brain.
+                Not everything will work for you. That&apos;s okay. The goal isn&apos;t perfection. It&apos;s finding what works for YOUR brain.
               </p>
               <br />
               <br />
@@ -330,7 +330,7 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Your brain works differently. And that&apos;s not a moral failing—it&apos;s neurology.
+                Your brain works differently. And that&apos;s not a moral failing. It&apos;s neurology.
               </p>
               <br />
               <br />
@@ -346,7 +346,7 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                But the diagnosis is a starting point—not the finish line.
+                But the diagnosis is a starting point, not the finish line.
               </p>
               <br />
               <br />
@@ -402,7 +402,7 @@ const ADHDDiagnosisNotReductionBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md" role="complementary" aria-label="Call to Action">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to start managing ADHD NOW (not after diagnosis)?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—built specifically for ADHD brains to externalize working memory, organize chaos, and build sustainable systems. Don&apos;t wait for a diagnosis to start living differently. Start today.
+                  <strong>Ready to start managing ADHD NOW (not after diagnosis)?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, built specifically for ADHD brains to externalize working memory, organize chaos, and build sustainable systems. Don&apos;t wait for a diagnosis to start living differently. Start today.
                 </p>
               </div>
               <br />

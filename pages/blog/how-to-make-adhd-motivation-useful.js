@@ -25,20 +25,20 @@ const MakeMotivationUsefulBlog = () => {
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
                   <li>ADHD motivation is worth nothing if you don&apos;t convert it into clarity before it disappears</li>
                   <li>Spend motivation creating roadmaps for future behaviors, not taking spontaneous action you won&apos;t maintain</li>
-                  <li>Vague goals like &quot;get fit&quot; don&apos;t work—you need crystal clear implementation intentions</li>
+                  <li>Vague goals like &quot;get fit&quot; don&apos;t work. You need crystal clear implementation intentions</li>
                   <li>When motivation leaves (and it will), clarity can carry you across the finish line</li>
                   <li>ADHD-specific systems help you capture and structure motivation before it vanishes</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                Your motivation is worth nothing. If you&apos;re waiting for motivation to strike before you do something major, you&apos;ll never achieve what you want in life. Let me explain why—and more importantly, how to make your ADHD motivation actually useful.
+                Your motivation is worth nothing. If you&apos;re waiting for motivation to strike before you do something major, you&apos;ll never achieve what you want in life. Let me explain why, and more importantly, how to make your ADHD motivation actually useful.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">The Problem with ADHD Motivation</h2>
               <p className="blog-body">
-                Motivation can be HUGE for that initial spark. The excitement, the energy, the &quot;this is it!&quot; feeling—it&apos;s intoxicating. Your ADHD brain floods with dopamine, and suddenly everything feels possible.
+                Motivation can be HUGE for that initial spark. The excitement, the energy, the &quot;this is it!&quot; feeling: it&apos;s intoxicating. Your ADHD brain floods with dopamine, and suddenly everything feels possible.
               </p>
               <br />
               <br />
@@ -94,7 +94,7 @@ const MakeMotivationUsefulBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is what psychologists call &quot;implementation intentions&quot;—and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4927100/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">research shows</a> they&apos;re especially effective for people with ADHD because they remove the need for decision-making in the moment.
+                This is what psychologists call &quot;implementation intentions&quot;, and <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4927100/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">research shows</a> they&apos;re especially effective for people with ADHD because they remove the need for decision-making in the moment.
               </p>
               <br />
               <br />
@@ -280,7 +280,7 @@ const MakeMotivationUsefulBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to convert motivation into clarity that lasts?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—designed to help ADHD brains capture motivational surges and structure them into concrete, executable plans. Stop wasting motivation on impulses. Start building clarity that carries you forward. Make your motivation actually useful.
+                  <strong>Ready to convert motivation into clarity that lasts?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, designed to help ADHD brains capture motivational surges and structure them into concrete, executable plans. Stop wasting motivation on impulses. Start building clarity that carries you forward. Make your motivation actually useful.
                 </p>
               </div>
               <br />

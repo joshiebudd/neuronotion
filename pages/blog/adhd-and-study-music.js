@@ -23,32 +23,32 @@ const StudyMusicBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD brains are hypersensitive to sound—silence creates internal noise, chaos creates overwhelm</li>
+                  <li>ADHD brains are hypersensitive to sound: silence creates internal noise, chaos creates overwhelm</li>
                   <li>The right auditory input provides just enough stimulation to satisfy your brain without overwhelming it</li>
                   <li>Brown noise, lo-fi beats, and instrumental music work best for most ADHD brains during focus work</li>
-                  <li>What works varies by individual and task type—experimentation is essential</li>
+                  <li>What works varies by individual and task type. Experimentation is essential</li>
                   <li>External structure paired with optimal sound creates the ideal ADHD focus environment</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                Your brain is not broken or wrong and it doesn&apos;t need fixing—it just has different requirements. If you use strategies designed for your ADHD brain, you will start to understand that you can achieve deep focus for long periods without feeling drained afterwards. Sound is one of the most powerful tools in your ADHD focus toolkit.
+                Your brain is not broken or wrong and it doesn&apos;t need fixing. It just has different requirements. If you use strategies designed for your ADHD brain, you will start to understand that you can achieve deep focus for long periods without feeling drained afterwards. Sound is one of the most powerful tools in your ADHD focus toolkit.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                If you have ADHD, you know that certain sounds can be incredibly distracting or even overwhelming. This is because people with ADHD are typically more sensitive to sound than neurotypical individuals. But what you probably don&apos;t know is you can actually use sounds to your advantage when studying—and when combined with the right support system like <strong>Romi</strong>, you can create an optimal focus environment that works with your brain, not against it.
+                If you have ADHD, you know that certain sounds can be incredibly distracting or even overwhelming. This is because people with ADHD are typically more sensitive to sound than neurotypical individuals. But what you probably don&apos;t know is you can actually use sounds to your advantage when studying, and when combined with the right support system like <strong>Romi</strong>, you can create an optimal focus environment that works with your brain, not against it.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">Understanding ADHD Auditory Processing</h2>
               <p className="blog-body">
-                <a href="https://www.additudemag.com/study-music-to-focus-the-adhd-brain/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and auditory processing</a> shows that ADHD brains don&apos;t filter auditory stimuli the same way neurotypical brains do. Your auditory processing system is hypersensitive—sounds that others can easily ignore become significant distractions for you. But when used strategically, sound becomes a powerful tool for focus.
+                <a href="https://www.additudemag.com/study-music-to-focus-the-adhd-brain/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and auditory processing</a> shows that ADHD brains don&apos;t filter auditory stimuli the same way neurotypical brains do. Your auditory processing system is hypersensitive. Sounds that others can easily ignore become significant distractions for you. But when used strategically, sound becomes a powerful tool for focus.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The ADHD brain is constantly seeking stimulation. When your environment is too quiet, your brain will create its own noise—internal chatter, random thoughts, mental wandering. When it&apos;s too loud or chaotic, you become overwhelmed and can&apos;t focus. The sweet spot is providing just enough consistent auditory input to satisfy your brain&apos;s need for stimulation without overwhelming it.
+                The ADHD brain is constantly seeking stimulation. When your environment is too quiet, your brain will create its own noise, internal chatter, random thoughts, mental wandering. When it&apos;s too loud or chaotic, you become overwhelmed and can&apos;t focus. The sweet spot is providing just enough consistent auditory input to satisfy your brain&apos;s need for stimulation without overwhelming it.
               </p>
               <br />
               <br />
@@ -67,14 +67,14 @@ const StudyMusicBlog = () => {
                 <li><strong>Brown Noise (Brownian Noise):</strong> This is the gold standard for many ADHD individuals. Brown noise is deeper and more rumbling than white noise, similar to a waterfall or heavy rain. It provides consistent auditory masking without being distracting. Many report that brown noise creates a &quot;cocoon&quot; effect that blocks external distractions while calming internal mental chatter. It&apos;s particularly effective for writing, reading, and detail-oriented work.</li>
                 <li><strong>Lo-fi Hip Hop / Chill Beats:</strong> Instrumental music with a steady, predictable rhythm works well for many ADHD brains. The lack of lyrics prevents linguistic processing interference while the rhythm provides temporal structure. The predictability is soothing without being boring because subtle variations maintain just enough novelty to keep your brain engaged without pulling focus from the task.</li>
                 <li><strong>Binaural Beats (40Hz Gamma Waves):</strong> While research is mixed, many ADHD individuals report improved focus with binaural beats in the 40Hz (gamma) range. These require headphones to work properly. The theory is that they help entrain brainwave patterns associated with focused attention. Whether it&apos;s placebo or neurological effect, if it works for you, use it.</li>
-                <li><strong>Classical Music (Specifically Baroque Period):</strong> Music by Bach, Vivaldi, and Handel, particularly the largo movements, creates a 60 beats-per-minute rhythm that some research suggests optimizes learning. The complex but predictable structure provides stimulation without distraction for some ADHD brains. However, this is highly individual—some find it too stimulating.</li>
+                <li><strong>Classical Music (Specifically Baroque Period):</strong> Music by Bach, Vivaldi, and Handel, particularly the largo movements, creates a 60 beats-per-minute rhythm that some research suggests optimizes learning. The complex but predictable structure provides stimulation without distraction for some ADHD brains. However, this is highly individual. Some find it too stimulating.</li>
                 <li><strong>Video Game Soundtracks:</strong> Designed specifically to help players focus for extended periods without distraction, video game music is engineered for sustained attention. Soundtracks from games like Minecraft, Stardew Valley, or Journey provide ambient, non-distracting audio environments perfect for focus work.</li>
-                <li><strong>Nature Sounds (Selectively):</strong> Ocean waves, rain, or forest sounds work for some ADHD brains, but be cautious—irregular nature sounds (like birds chirping) can be more distracting than helpful. Consistent, predictable nature sounds like steady rain or ocean waves tend to work best.</li>
+                <li><strong>Nature Sounds (Selectively):</strong> Ocean waves, rain, or forest sounds work for some ADHD brains, but be cautious: irregular nature sounds (like birds chirping) can be more distracting than helpful. Consistent, predictable nature sounds like steady rain or ocean waves tend to work best.</li>
               </ol>
               <br />
               <br />
               <p className="blog-body">
-                Understanding <Link href="/blog/the-adhd-goldilocks-zone" className="text-blue-600 hover:underline">your personal Goldilocks Zone</Link> helps you find the right balance of auditory stimulation—not too much, not too little, just right for your brain.
+                Understanding <Link href="/blog/the-adhd-goldilocks-zone" className="text-blue-600 hover:underline">your personal Goldilocks Zone</Link> helps you find the right balance of auditory stimulation, not too much, not too little, just right for your brain.
               </p>
               <br />
               <br />
@@ -159,7 +159,7 @@ const StudyMusicBlog = () => {
                 <li><strong>Task Clarity:</strong> Clear, singular focus on one task eliminates the decision fatigue of &quot;What should I be working on?&quot; Your working memory is freed up for actual work rather than task management.</li>
                 <li><strong>Break Reminders:</strong> Your ADHD brain has no time awareness. Without reminders, you&apos;ll either hyperfocus for six hours (leading to burnout) or constantly check the time (breaking focus). The system handles this, so you can immerse in work.</li>
                 <li><strong>Distraction Capture:</strong> When random thoughts interrupt (and they will), quickly capturing them in the system rather than trying to hold them in working memory preserves your focus. Your brain can release the thought knowing it&apos;s safely stored.</li>
-                <li><strong>Session Preparation:</strong> Before starting, the system can help you prepare your environment—including reminders to put on your headphones and start your chosen focus music.</li>
+                <li><strong>Session Preparation:</strong> Before starting, the system can help you prepare your environment, including reminders to put on your headphones and start your chosen focus music.</li>
               </ul>
               <br />
               <br />
@@ -170,7 +170,7 @@ const StudyMusicBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Try different sound types for one full focus session each. Track what you were doing, what you were listening to, and how well you focused. After trying 5-10 different options, patterns will emerge. You might discover that brown noise works perfectly for writing but you need lo-fi beats for problem-solving. That&apos;s completely normal—optimize for each context.
+                Try different sound types for one full focus session each. Track what you were doing, what you were listening to, and how well you focused. After trying 5-10 different options, patterns will emerge. You might discover that brown noise works perfectly for writing but you need lo-fi beats for problem-solving. That&apos;s completely normal. Optimize for each context.
               </p>
               <br />
               <br />
@@ -186,13 +186,13 @@ const StudyMusicBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You&apos;re not broken for needing sound to focus. You&apos;re neurodivergent, and that means your optimal conditions look different from neurotypical norms. Embrace that difference. Build your environment around your brain&apos;s actual needs, not what &quot;should&quot; work. The right auditory input, combined with proper external support, transforms studying from an exhausting battle into a manageable—even enjoyable—experience.
+                You&apos;re not broken for needing sound to focus. You&apos;re neurodivergent, and that means your optimal conditions look different from neurotypical norms. Embrace that difference. Build your environment around your brain&apos;s actual needs, not what &quot;should&quot; work. The right auditory input, combined with proper external support, transforms studying from an exhausting battle into a manageable, even enjoyable, experience.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to create your optimal focus environment?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that provides the external structure to complement your auditory optimization. Perfect sound plus smart support equals sustained focus finally within reach.
+                  <strong>Ready to create your optimal focus environment?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that provides the external structure to complement your auditory optimization. Perfect sound plus smart support equals sustained focus finally within reach.
                 </p>
               </div>
               <br />

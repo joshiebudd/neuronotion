@@ -23,7 +23,7 @@ const ReduceADHDProcrastinationBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD procrastination isn&apos;t laziness—it&apos;s neurological inability to generate activation energy for unstimulating tasks</li>
+                  <li>ADHD procrastination isn&apos;t laziness. It&apos;s neurological inability to generate activation energy for unstimulating tasks</li>
                   <li>Waiting for motivation to &quot;show up&quot; doesn&apos;t work because ADHD brains don&apos;t generate motivation the same way</li>
                   <li>Simple tasks are often the hardest to start because they provide no dopamine reward</li>
                   <li>Working with someone else (body doubling) makes tasks 10x easier by providing external activation energy</li>
@@ -38,7 +38,7 @@ const ReduceADHDProcrastinationBlog = () => {
               <br />
               <h2 className="blog-subheader">Why ADHD Procrastination is Different</h2>
               <p className="blog-body">
-                First, let&apos;s be crystal clear: ADHD procrastination is not regular procrastination. Everyone procrastinates sometimes. But for people with ADHD, procrastination isn&apos;t a choice or a bad habit—it&apos;s a neurological roadblock.
+                First, let&apos;s be crystal clear: ADHD procrastination is not regular procrastination. Everyone procrastinates sometimes. But for people with ADHD, procrastination isn&apos;t a choice or a bad habit. It&apos;s a neurological roadblock.
               </p>
               <br />
               <br />
@@ -114,7 +114,7 @@ const ReduceADHDProcrastinationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why you procrastinate on &quot;easy&quot; stuff and hyperfocus on &quot;hard&quot; stuff. It&apos;s not backwards—it&apos;s how ADHD brains work. Many people discover this pattern when they realize <Link href="/blog/adhd-brains-dont-do-small" className="text-blue-600 hover:underline">their brain refuses to engage with small tasks</Link> specifically.
+                This is why you procrastinate on &quot;easy&quot; stuff and hyperfocus on &quot;hard&quot; stuff. It&apos;s not backwards. It&apos;s how ADHD brains work. Many people discover this pattern when they realize <Link href="/blog/adhd-brains-dont-do-small" className="text-blue-600 hover:underline">their brain refuses to engage with small tasks</Link> specifically.
               </p>
               <br />
               <br />
@@ -165,7 +165,7 @@ const ReduceADHDProcrastinationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Each step must be so small that your brain can&apos;t generate resistance. Once you complete step one, momentum makes step two easier. Before you know it, the email is sent—not through willpower, but through momentum.
+                Each step must be so small that your brain can&apos;t generate resistance. Once you complete step one, momentum makes step two easier. Before you know it, the email is sent, not through willpower, but through momentum.
               </p>
               <br />
               <br />
@@ -186,7 +186,7 @@ const ReduceADHDProcrastinationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You tell it what you need to achieve—no matter how simple or complex. It uses its processing power (instead of your limited mental gold dust) to break it down into steps that match your capacity.
+                You tell it what you need to achieve, no matter how simple or complex. It uses its processing power (instead of your limited mental gold dust) to break it down into steps that match your capacity.
               </p>
               <br />
               <br />
@@ -234,7 +234,7 @@ const ReduceADHDProcrastinationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">understanding the Gold Dust Theory</Link> is so important—it explains why you run out of energy so fast and why procrastination feels impossible to overcome.
+                This is why <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">understanding the Gold Dust Theory</Link> is so important. It explains why you run out of energy so fast and why procrastination feels impossible to overcome.
               </p>
               <br />
               <br />
@@ -280,7 +280,7 @@ const ReduceADHDProcrastinationBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop procrastinating and start doing?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that breaks down tasks based on your energy levels, provides the external push you need to start, and supports you all the way through. Stop waiting for motivation. Start building momentum today.
+                  <strong>Ready to stop procrastinating and start doing?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that breaks down tasks based on your energy levels, provides the external push you need to start, and supports you all the way through. Stop waiting for motivation. Start building momentum today.
                 </p>
               </div>
               <br />

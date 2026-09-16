@@ -10,7 +10,7 @@ const BrainSaysNoBlog = () => {
       slug="i-can-do-the-thing-but-my-brain-says-no"
       keywords="ADHD executive dysfunction, ADHD task paralysis, ADHD task initiation, ADHD activation energy, overcoming ADHD paralysis"
       ogTitle="ADHD Executive Dysfunction: When Your Brain Says No"
-      ogDescription="It&apos;s not laziness—it&apos;s executive dysfunction. Discover why task initiation feels impossible and how to bypass the paralysis."
+      ogDescription="It&apos;s not laziness. It&apos;s executive dysfunction. Discover why task initiation feels impossible and how to bypass the paralysis."
       heading="ADHD Executive Dysfunction: I Can Do It, But My Brain Says No"
       category="Mental Health"
       date="Feb. 15, 2025"
@@ -23,7 +23,7 @@ const BrainSaysNoBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>Executive dysfunction is neurological paralysis, not laziness—you care deeply but can&apos;t generate activation energy</li>
+                  <li>Executive dysfunction is neurological paralysis, not laziness. You care deeply but can&apos;t generate activation energy</li>
                   <li>The ADHD brain operates on momentum and interest, not logic and willpower</li>
                   <li>Task initiation requires enormous executive function that ADHD brains simply don&apos;t have</li>
                   <li>The solution is bypassing executive dysfunction through external support, not fighting it with willpower</li>
@@ -32,7 +32,7 @@ const BrainSaysNoBlog = () => {
               </div>
 
               <p className="lead blog-body italic">
-                The phrase &quot;I can do the thing... but my brain says no&quot; perfectly encapsulates the frustration of executive dysfunction in ADHD. It&apos;s the paradox of knowing you possess the capability, the knowledge, and the desire to complete a task, yet finding yourself utterly paralyzed, staring at the ceiling, or scrolling endlessly on your phone. This isn&apos;t laziness—laziness is not caring. This is a genuine, neurological roadblock where the brain&apos;s activation energy requirement is astronomical.
+                The phrase &quot;I can do the thing... but my brain says no&quot; perfectly encapsulates the frustration of executive dysfunction in ADHD. It&apos;s the paradox of knowing you possess the capability, the knowledge, and the desire to complete a task, yet finding yourself utterly paralyzed, staring at the ceiling, or scrolling endlessly on your phone. This isn&apos;t laziness. Laziness is not caring. This is a genuine, neurological roadblock where the brain&apos;s activation energy requirement is astronomical.
               </p>
               <br />
               <br />
@@ -42,7 +42,7 @@ const BrainSaysNoBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The secret to sustainable productivity with ADHD is not to fight the executive dysfunction, but to bypass it by embracing momentum-based living. This is the philosophy that powers <strong>Romi</strong>—providing the necessary scaffolding to get the ball rolling when your brain absolutely refuses to cooperate.
+                The secret to sustainable productivity with ADHD is not to fight the executive dysfunction, but to bypass it by embracing momentum-based living. This is the philosophy that powers <strong>Romi</strong>, providing the necessary scaffolding to get the ball rolling when your brain absolutely refuses to cooperate.
               </p>
               <br />
               <br />
@@ -69,7 +69,7 @@ const BrainSaysNoBlog = () => {
                       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                           <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Laziness</th>
                           <td className="px-6 py-4">A lack of desire or care to complete a task.</td>
-                          <td className="px-6 py-4">Not applicable—you deeply care, which is why the paralysis is so painful.</td>
+                          <td className="px-6 py-4">Not applicable. You deeply care, which is why the paralysis is so painful.</td>
                       </tr>
                       <tr className="bg-white dark:bg-gray-800">
                           <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Momentum-Based Action</th>
@@ -101,7 +101,7 @@ const BrainSaysNoBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why understanding <Link href="/blog/something-for-when-your-brain-says-i-cant" className="text-blue-600 hover:underline">the intention-action gap</Link> is so important—it&apos;s not about wanting it more; it&apos;s about having systems that bridge the neurological gap.
+                This is why understanding <Link href="/blog/something-for-when-your-brain-says-i-cant" className="text-blue-600 hover:underline">the intention-action gap</Link> is so important. It&apos;s not about wanting it more; it&apos;s about having systems that bridge the neurological gap.
               </p>
               <br />
               <br />
@@ -112,7 +112,7 @@ const BrainSaysNoBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body space-y-4">
-                <li><strong>Start Impossibly Small:</strong> Don&apos;t start with &quot;clean the kitchen.&quot; Start with &quot;put one dish in the dishwasher.&quot; That&apos;s it. Just one. The task must be so small that your brain can&apos;t generate resistance. Once you&apos;ve done the one dish, momentum makes the second dish easier. Before you know it, the kitchen is clean—not through willpower, but through momentum.</li>
+                <li><strong>Start Impossibly Small:</strong> Don&apos;t start with &quot;clean the kitchen.&quot; Start with &quot;put one dish in the dishwasher.&quot; That&apos;s it. Just one. The task must be so small that your brain can&apos;t generate resistance. Once you&apos;ve done the one dish, momentum makes the second dish easier. Before you know it, the kitchen is clean, not through willpower, but through momentum.</li>
                 <li><strong>External Task Sequencing:</strong> <strong>Romi</strong> does the planning and sequencing your brain can&apos;t do. Instead of staring at a messy kitchen thinking &quot;Where do I even start?&quot; the system presents one clear next step. No decisions, no planning, just action.</li>
                 <li><strong>Remove Initiation Friction:</strong> Every obstacle between you and starting is an opportunity for your executive dysfunction to derail you. Prepare your environment in advance. Lay out materials. Reduce steps. Make starting as friction-free as physically possible.</li>
                 <li><strong>Use Body Doubling:</strong> The presence of another person working (even virtually) can provide the activation energy your brain needs. Their momentum becomes contagious, helping you overcome your own inertia.</li>
@@ -155,7 +155,7 @@ const BrainSaysNoBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Romi</strong> can time your 5-minute commitment, removing even the friction of watching the clock. You just work until the gentle notification says your 5 minutes are up. Then you decide—continue riding the momentum, or stop knowing you did something.
+                <strong>Romi</strong> can time your 5-minute commitment, removing even the friction of watching the clock. You just work until the gentle notification says your 5 minutes are up. Then you decide: continue riding the momentum, or stop knowing you did something.
               </p>
               <br />
               <br />
@@ -182,18 +182,18 @@ const BrainSaysNoBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Romi</strong> exists specifically for these moments when your brain refuses to cooperate. It provides the planning, sequencing, and activation support that your executive function can&apos;t generate. You don&apos;t need to be ready to use it—it works especially well when you&apos;re paralyzed, because that&apos;s exactly what it was designed for.
+                <strong>Romi</strong> exists specifically for these moments when your brain refuses to cooperate. It provides the planning, sequencing, and activation support that your executive function can&apos;t generate. You don&apos;t need to be ready to use it. It works especially well when you&apos;re paralyzed, because that&apos;s exactly what it was designed for.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Your brain isn&apos;t broken. It just needs a different on-ramp. Once you&apos;re moving, you&apos;re fully capable. The challenge was never the doing—it was the starting. And now you have tools designed specifically to make starting possible, even when your brain says no.
+                Your brain isn&apos;t broken. It just needs a different on-ramp. Once you&apos;re moving, you&apos;re fully capable. The challenge was never the doing. It was the starting. And now you have tools designed specifically to make starting possible, even when your brain says no.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to bypass executive dysfunction paralysis?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that does the planning and sequencing for you, breaks tasks into micro-steps, and builds momentum when your brain refuses to start. Stop fighting paralysis. Start bypassing it.
+                  <strong>Ready to bypass executive dysfunction paralysis?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that does the planning and sequencing for you, breaks tasks into micro-steps, and builds momentum when your brain refuses to start. Stop fighting paralysis. Start bypassing it.
                 </p>
               </div>
               <br />

@@ -23,10 +23,10 @@ const TakeControlADHDBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>Use 90-day quarterly sprints instead of annual goals—your ADHD brain can actually focus on this timeframe</li>
+                  <li>Use 90-day quarterly sprints instead of annual goals. Your ADHD brain can actually focus on this timeframe</li>
                   <li>Work backwards from goals to identify your daily minimum wins (2-3 tasks max)</li>
                   <li>Hack your dopamine system by rewarding completion, not just achievement</li>
-                  <li>Kill perfectionism—a messy plan you follow beats a perfect plan you don&apos;t</li>
+                  <li>Kill perfectionism: a messy plan you follow beats a perfect plan you don&apos;t</li>
                   <li>External accountability increases ADHD goal achievement by 95% (seriously)</li>
                 </ul>
               </div>
@@ -37,7 +37,7 @@ const TakeControlADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Here are my top 5 strategies for taking control of your ADHD and finally getting your life moving in the direction you actually want. These aren&apos;t theory—they&apos;re battle-tested approaches that work specifically for ADHD brains.
+                Here are my top 5 strategies for taking control of your ADHD and finally getting your life moving in the direction you actually want. These aren&apos;t theory. They&apos;re battle-tested approaches that work specifically for ADHD brains.
               </p>
               <br />
               <br />
@@ -143,7 +143,7 @@ const TakeControlADHDBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">4. Kill Perfectionism—It&apos;s Not a Positive Trait</h2>
+              <h2 className="blog-subheader">4. Kill Perfectionism: It&apos;s Not a Positive Trait</h2>
               <p className="blog-body">
                 Let me be blunt: perfectionism doesn&apos;t mean you have high standards. It probably just means you&apos;re terrified of failing, so you&apos;re too scared to put anything out that might not be incredible.
               </p>
@@ -162,12 +162,12 @@ const TakeControlADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                ADHD and perfectionism create a toxic combo. Your brain already struggles with initiation. Add perfectionism on top, and now you can&apos;t start anything unless conditions are perfect (which they never are). This is why understanding <Link href="/blog/adhd-brains-dont-do-small" className="text-blue-600 hover:underline">why ADHD brains refuse small tasks</Link> helps—perfectionism is often the hidden barrier.
+                ADHD and perfectionism create a toxic combo. Your brain already struggles with initiation. Add perfectionism on top, and now you can&apos;t start anything unless conditions are perfect (which they never are). This is why understanding <Link href="/blog/adhd-brains-dont-do-small" className="text-blue-600 hover:underline">why ADHD brains refuse small tasks</Link> helps. Perfectionism is often the hidden barrier.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The antidote? Give yourself explicit permission to suck. Your first draft will be bad. Your first attempt will be clumsy. That&apos;s not failure—that&apos;s how everyone starts. The difference is neurotypical people don&apos;t let it stop them, and neither should you.
+                The antidote? Give yourself explicit permission to suck. Your first draft will be bad. Your first attempt will be clumsy. That&apos;s not failure. That&apos;s how everyone starts. The difference is neurotypical people don&apos;t let it stop them, and neither should you.
               </p>
               <br />
               <br />
@@ -209,7 +209,7 @@ const TakeControlADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The key is making it external. Your ADHD brain will let you down. External systems won&apos;t. This isn&apos;t a character flaw—it&apos;s a neurological reality. Stop fighting it and build support around it instead.
+                The key is making it external. Your ADHD brain will let you down. External systems won&apos;t. This isn&apos;t a character flaw. It&apos;s a neurological reality. Stop fighting it and build support around it instead.
               </p>
               <br />
               <br />
@@ -234,7 +234,7 @@ const TakeControlADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                It&apos;s literally built for your ADHD brain. Every feature exists because someone with ADHD said &quot;I struggle with this.&quot; It&apos;s not about becoming neurotypical—it&apos;s about having support systems that work WITH your neurology.
+                It&apos;s literally built for your ADHD brain. Every feature exists because someone with ADHD said &quot;I struggle with this.&quot; It&apos;s not about becoming neurotypical. It&apos;s about having support systems that work WITH your neurology.
               </p>
               <br />
               <br />
@@ -266,7 +266,7 @@ const TakeControlADHDBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to take control of your ADHD instead of letting it control you?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that provides external accountability, breaks goals into daily wins, and helps you build sustainable momentum. It&apos;s literally built for your brain. Start taking control today.
+                  <strong>Ready to take control of your ADHD instead of letting it control you?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that provides external accountability, breaks goals into daily wins, and helps you build sustainable momentum. It&apos;s literally built for your brain. Start taking control today.
                 </p>
               </div>
               <br />

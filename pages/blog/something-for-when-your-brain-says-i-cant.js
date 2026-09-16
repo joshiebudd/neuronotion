@@ -9,7 +9,7 @@ const BrainSaysICantBlog = () => {
       description="On ADHD low energy days even wanted tasks feel impossible. What the intention-action gap is, and support built for your lowest-capacity days."
       slug="something-for-when-your-brain-says-i-cant"
       ogTitle="ADHD: When Your Brain Says I Can&apos;t"
-      ogDescription="The gap between wanting to do something and actually doing it isn&apos;t laziness—it&apos;s executive dysfunction. Learn how to bridge it."
+      ogDescription="The gap between wanting to do something and actually doing it isn&apos;t laziness. It&apos;s executive dysfunction. Learn how to bridge it."
       heading="ADHD Low Energy Days: Bridging the Intention-Action Gap"
       category="Mental Health"
       date="Jan. 28, 2025"
@@ -22,41 +22,41 @@ const BrainSaysICantBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800">
-                  <li>The intention-action gap isn&apos;t laziness—it&apos;s executive dysfunction blocking task initiation</li>
+                  <li>The intention-action gap isn&apos;t laziness. It&apos;s executive dysfunction blocking task initiation</li>
                   <li>Traditional productivity tools fail because they require energy you don&apos;t have on low-capacity days</li>
                   <li>Effective ADHD support works ESPECIALLY when you&apos;re barely functioning</li>
-                  <li>The first step requires zero motivation—just one moment of honesty: &quot;I need help&quot;</li>
+                  <li>The first step requires zero motivation, just one moment of honesty: &quot;I need help&quot;</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                For those with ADHD, there are days when the capacity is in the gutter, and the brain simply says, &quot;I can&apos;t.&quot; This is the painful reality of the intention-action disconnect—the gap between what you desperately want to do and what you are neurologically able to actually do. Traditional productivity tools, which demand an &quot;always organized you&quot; with a bottomless well of motivation, fail spectacularly on these low-capacity days.
+                For those with ADHD, there are days when the capacity is in the gutter, and the brain simply says, &quot;I can&apos;t.&quot; This is the painful reality of the intention-action disconnect, the gap between what you desperately want to do and what you are neurologically able to actually do. Traditional productivity tools, which demand an &quot;always organized you&quot; with a bottomless well of motivation, fail spectacularly on these low-capacity days.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The truth is, your ADHD brain doesn&apos;t need another tool to organize your chaos; it needs a bridge to bypass the chaos entirely. This is the fundamental design philosophy of modern ADHD support—tools built for the days when you are barely functioning. You don&apos;t need to be ready to use them; they were built for when you are unready.
+                The truth is, your ADHD brain doesn&apos;t need another tool to organize your chaos; it needs a bridge to bypass the chaos entirely. This is the fundamental design philosophy of modern ADHD support, tools built for the days when you are barely functioning. You don&apos;t need to be ready to use them; they were built for when you are unready.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This is perhaps the most revolutionary aspect of effective ADHD tools—they don&apos;t wait for you to have your act together. They meet you in the mess, in the overwhelm, in the moment when everything feels impossible. While other tools sit unused because you don&apos;t have the energy to set them up or maintain them, <strong>Romi</strong> works especially well when you&apos;re at your lowest point.
+                This is perhaps the most revolutionary aspect of effective ADHD tools. They don&apos;t wait for you to have your act together. They meet you in the mess, in the overwhelm, in the moment when everything feels impossible. While other tools sit unused because you don&apos;t have the energy to set them up or maintain them, <strong>Romi</strong> works especially well when you&apos;re at your lowest point.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">Understanding the Intention-Action Gap in ADHD</h2>
               <p className="blog-body">
-                The intention-action disconnect is one of the most misunderstood aspects of ADHD. People see you not doing things and assume you don&apos;t care, you&apos;re lazy, or you&apos;re not trying hard enough. But the reality is far more complex and far more painful. You care deeply—sometimes too deeply. The task matters to you. You genuinely intend to do it. But there&apos;s a chasm between that intention and the ability to translate it into action.
+                The intention-action disconnect is one of the most misunderstood aspects of ADHD. People see you not doing things and assume you don&apos;t care, you&apos;re lazy, or you&apos;re not trying hard enough. But the reality is far more complex and far more painful. You care deeply: sometimes too deeply. The task matters to you. You genuinely intend to do it. But there&apos;s a chasm between that intention and the ability to translate it into action.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This isn&apos;t about motivation. On low-capacity days, even tasks you usually enjoy become impossible. You want to shower, but you can&apos;t. You want to respond to that message, but the words won&apos;t come. You want to start the project, but your body refuses to move. <a href="https://www.additudemag.com/how-to-get-out-of-adhd-paralysis/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">This paralysis isn&apos;t laziness</a>—it&apos;s a neurological roadblock where your executive function has completely shut down.
+                This isn&apos;t about motivation. On low-capacity days, even tasks you usually enjoy become impossible. You want to shower, but you can&apos;t. You want to respond to that message, but the words won&apos;t come. You want to start the project, but your body refuses to move. <a href="https://www.additudemag.com/how-to-get-out-of-adhd-paralysis/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">This paralysis isn&apos;t laziness</a>. It&apos;s a neurological roadblock where your executive function has completely shut down.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The ADHD community understands this experience intimately. It&apos;s the feeling of being trapped in your own head, watching yourself fail to do things you know you need to do, unable to explain to others (or even yourself) why something so &quot;simple&quot; feels utterly impossible. This is where <strong>Romi</strong> becomes not just helpful but essential—it provides the bridge when your brain can&apos;t build one itself.
+                The ADHD community understands this experience intimately. It&apos;s the feeling of being trapped in your own head, watching yourself fail to do things you know you need to do, unable to explain to others (or even yourself) why something so &quot;simple&quot; feels utterly impossible. This is where <strong>Romi</strong> becomes not just helpful but essential. It provides the bridge when your brain can&apos;t build one itself.
               </p>
               <br />
               <br />
@@ -101,7 +101,7 @@ const BrainSaysICantBlog = () => {
               <br />
               <h2 className="blog-subheader">Why Low-Capacity Days Are Different for ADHD Brains</h2>
               <p className="blog-body">
-                Neurotypical people have low-capacity days too, but for them, it usually means being slightly less productive or needing more breaks. For people with ADHD, low-capacity days can mean complete functional shutdown. The things you could do yesterday—even easily—become impossible today. This variability is one of the most frustrating aspects of ADHD because it makes you feel unreliable, even to yourself.
+                Neurotypical people have low-capacity days too, but for them, it usually means being slightly less productive or needing more breaks. For people with ADHD, low-capacity days can mean complete functional shutdown. The things you could do yesterday, even easily, become impossible today. This variability is one of the most frustrating aspects of ADHD because it makes you feel unreliable, even to yourself.
               </p>
               <br />
               <br />
@@ -122,27 +122,27 @@ const BrainSaysICantBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The system works by managing the cognitive heavy lifting for you. Instead of demanding that you organize yourself before you can use the tool, it accepts your chaos as input and returns structure as output. This reversal is crucial—it means the tool works because you&apos;re disorganized, not despite it.
+                The system works by managing the cognitive heavy lifting for you. Instead of demanding that you organize yourself before you can use the tool, it accepts your chaos as input and returns structure as output. This reversal is crucial. It means the tool works because you&apos;re disorganized, not despite it.
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li><strong>Chaos-to-Clarity Translation:</strong> You can use the Brain Dump feature to rant, vent, or simply list three things you need to remember at 10 PM. The system quietly processes this chaotic stream of thought and turns it into a structured, actionable plan for the next day—one that respects your energy and brain type. There&apos;s no judgment about how disorganized your thoughts are.</li>
-                <li><strong>Zero-Motivation Entry Point:</strong> The first step to using support requires zero motivation, organization, or hope. It requires only a single moment of honesty: &quot;I&apos;m tired. I need help.&quot; The simplest interaction—like tapping the Brain Dump button and saying three things—is the entire first step. You don&apos;t need to be ready. You don&apos;t need to have energy. You just need to show up exactly as you are.</li>
+                <li><strong>Chaos-to-Clarity Translation:</strong> You can use the Brain Dump feature to rant, vent, or simply list three things you need to remember at 10 PM. The system quietly processes this chaotic stream of thought and turns it into a structured, actionable plan for the next day, one that respects your energy and brain type. There&apos;s no judgment about how disorganized your thoughts are.</li>
+                <li><strong>Zero-Motivation Entry Point:</strong> The first step to using support requires zero motivation, organization, or hope. It requires only a single moment of honesty: &quot;I&apos;m tired. I need help.&quot; The simplest interaction, like tapping the Brain Dump button and saying three things, is the entire first step. You don&apos;t need to be ready. You don&apos;t need to have energy. You just need to show up exactly as you are.</li>
                 <li><strong>Progressive Simplification:</strong> On days when you can barely function, effective ADHD tools don&apos;t give you a 10-item to-do list. They give you one thing. Just one. The absolute most important thing that, if you do nothing else, will count as a win. This radical simplification is only possible with adaptive support that understands context and priority.</li>
-                <li><strong>Building on Micro-Wins:</strong> Once you complete that one thing, the system celebrates it and offers the next tiny step—but only if you have capacity. If you don&apos;t, it acknowledges the win and lets you rest. This responsiveness prevents the shame spiral that usually follows low-capacity days. Instead of feeling like a failure, you feel supported.</li>
+                <li><strong>Building on Micro-Wins:</strong> Once you complete that one thing, the system celebrates it and offers the next tiny step, but only if you have capacity. If you don&apos;t, it acknowledges the win and lets you rest. This responsiveness prevents the shame spiral that usually follows low-capacity days. Instead of feeling like a failure, you feel supported.</li>
                 <li><strong>Built Around You:</strong> Unlike tools that demand you conform to their rigid structure, modern ADHD support was built around the fluid, non-linear needs of the ADHD brain. The people who think they are &quot;too overwhelmed&quot; to use it are precisely the ones who experience the most profound relief.</li>
               </ul>
               <br />
               <br />
               <h2 className="blog-subheader">The Power of Meeting You Where You Are</h2>
               <p className="blog-body">
-                The revolution of adaptive ADHD support isn&apos;t in doing more—it&apos;s in doing exactly what you need, when you need it, in a way your brain can actually receive. Traditional productivity tools are like having a personal trainer who only works with you when you&apos;re already in shape. <strong>Romi</strong> is like having a trainer who meets you on the couch, helps you stand up, and celebrates that standing up was today&apos;s workout.
+                The revolution of adaptive ADHD support isn&apos;t in doing more: it&apos;s in doing exactly what you need, when you need it, in a way your brain can actually receive. Traditional productivity tools are like having a personal trainer who only works with you when you&apos;re already in shape. <strong>Romi</strong> is like having a trainer who meets you on the couch, helps you stand up, and celebrates that standing up was today&apos;s workout.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This approach isn&apos;t about lowering standards—it&apos;s about understanding that the ADHD brain doesn&apos;t work linearly. You can&apos;t force function when capacity is gone. But you can provide support that makes tiny actions possible, and tiny actions accumulate into real progress. Effective ADHD tools understand this fundamental truth.
+                This approach isn&apos;t about lowering standards. It&apos;s about understanding that the ADHD brain doesn&apos;t work linearly. You can&apos;t force function when capacity is gone. But you can provide support that makes tiny actions possible, and tiny actions accumulate into real progress. Effective ADHD tools understand this fundamental truth.
               </p>
               <br />
               <br />
@@ -153,7 +153,7 @@ const BrainSaysICantBlog = () => {
               <br />
               <h2 className="blog-subheader">The First Step: A Moment of Honesty</h2>
               <p className="blog-body">
-                If you are thinking, &quot;I don&apos;t have the mental bandwidth for another tool,&quot; that is the strongest signal that you need proper ADHD support. The very fact that you feel too overwhelmed to try something new is exactly why modern tools were designed the way they were—to work when you have nothing left to give.
+                If you are thinking, &quot;I don&apos;t have the mental bandwidth for another tool,&quot; that is the strongest signal that you need proper ADHD support. The very fact that you feel too overwhelmed to try something new is exactly why modern tools were designed the way they were: to work when you have nothing left to give.
               </p>
               <br />
               <br />
@@ -163,13 +163,13 @@ const BrainSaysICantBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Even if all you do today is open the app and breathe for 10 seconds, that counts. The beauty of effective ADHD support is that it understands: starting is the hardest part. Once you&apos;ve started—even with the smallest possible action—momentum becomes possible. And with the system handling the organization, planning, and prioritization, that momentum can actually build instead of immediately crashing into executive dysfunction.
+                Even if all you do today is open the app and breathe for 10 seconds, that counts. The beauty of effective ADHD support is that it understands: starting is the hardest part. Once you&apos;ve started, even with the smallest possible action, momentum becomes possible. And with the system handling the organization, planning, and prioritization, that momentum can actually build instead of immediately crashing into executive dysfunction.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">From &quot;I Can&apos;t&quot; to &quot;I Did&quot;</h2>
               <p className="blog-body">
-                The journey from &quot;I can&apos;t&quot; to &quot;I did&quot; isn&apos;t about finding more willpower or trying harder. It&apos;s about having the right support system—one that understands your ADHD brain, adapts to your capacity, and provides structure without demanding energy you don&apos;t have.
+                The journey from &quot;I can&apos;t&quot; to &quot;I did&quot; isn&apos;t about finding more willpower or trying harder. It&apos;s about having the right support system: one that understands your ADHD brain, adapts to your capacity, and provides structure without demanding energy you don&apos;t have.
               </p>
               <br />
               <br />
@@ -180,7 +180,7 @@ const BrainSaysICantBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Tired of the gap between wanting and doing?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that works ESPECIALLY when you&apos;re barely functioning. Your first step takes zero motivation. Just honesty.
+                  <strong>Tired of the gap between wanting and doing?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that works ESPECIALLY when you&apos;re barely functioning. Your first step takes zero motivation. Just honesty.
                 </p>
               </div>
               <br />

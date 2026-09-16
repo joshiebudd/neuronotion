@@ -23,9 +23,9 @@ const ThreePillarsBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD comes with incredible strengths—but they only shine when you have control</li>
+                  <li>ADHD comes with incredible strengths, but they only shine when you have control</li>
                   <li>Sleep, diet, and exercise account for 80% of your ADHD symptom management</li>
-                  <li>These aren&apos;t optional—they&apos;re the foundation everything else builds on</li>
+                  <li>These aren&apos;t optional. They&apos;re the foundation everything else builds on</li>
                   <li>For ADHD brains specifically, the impact of these three pillars is amplified</li>
                   <li>Goals don&apos;t work without systems to actually implement these foundations</li>
                 </ul>
@@ -37,7 +37,7 @@ const ThreePillarsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Before you scowl at that word—I don&apos;t mean discipline. I mean control. Control over your energy. Control over your mind. Control over your life. And if you think that a simple to-do list on your phone is gonna help you get your shit together, you&apos;re wrong. You want real change? You must take control of THE THREE PILLARS.
+                Before you scowl at that word, I don&apos;t mean discipline. I mean control. Control over your energy. Control over your mind. Control over your life. And if you think that a simple to-do list on your phone is gonna help you get your shit together, you&apos;re wrong. You want real change? You must take control of THE THREE PILLARS.
               </p>
               <br />
               <br />
@@ -62,14 +62,14 @@ const ThreePillarsBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">Pillar 1: Diet—Your Brain Runs on What You Feed It</h2>
+              <h2 className="blog-subheader">Pillar 1: Diet, Your Brain Runs on What You Feed It</h2>
               <p className="blog-body">
                 Notice how your brain feels like scrambled eggs after eating a bunch of crap? That&apos;s because all human brains need real fuel to function. But for ADHD brains specifically, the connection between diet and symptoms is even more intense.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Let me make this crystal clear: Your gut and your brain are intensely interlinked. This isn&apos;t woo-woo nonsense—it&apos;s called the gut-brain axis, and it&apos;s one of the most powerful connections in your body. Put processed foods into your gut, and you&apos;ll mess up your neurotransmitter levels (namely dopamine) and blood sugar levels too.
+                Let me make this crystal clear: Your gut and your brain are intensely interlinked. This isn&apos;t woo-woo nonsense. It&apos;s called the gut-brain axis, and it&apos;s one of the most powerful connections in your body. Put processed foods into your gut, and you&apos;ll mess up your neurotransmitter levels (namely dopamine) and blood sugar levels too.
               </p>
               <br />
               <br />
@@ -100,14 +100,14 @@ const ThreePillarsBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">Pillar 2: Sleep—The Non-Negotiable Foundation</h2>
+              <h2 className="blog-subheader">Pillar 2: Sleep, The Non-Negotiable Foundation</h2>
               <p className="blog-body">
-                Trust me, I know from experience how tough this one is. Your brain is a circus at night, flipping through every single thing you did (or didn&apos;t) do. Then you wake up feeling like you got hit by a bus. This isn&apos;t just inconvenient—it&apos;s destroying your ability to function.
+                Trust me, I know from experience how tough this one is. Your brain is a circus at night, flipping through every single thing you did (or didn&apos;t) do. Then you wake up feeling like you got hit by a bus. This isn&apos;t just inconvenient: it&apos;s destroying your ability to function.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Here&apos;s the truth: No sleep equals no focus. No patience. No control. Between 25% and 50% of people with ADHD experience sleep problems. And sleep deprivation doesn&apos;t just make you tired—it actively makes ADHD symptoms worse.
+                Here&apos;s the truth: No sleep equals no focus. No patience. No control. Between 25% and 50% of people with ADHD experience sleep problems. And sleep deprivation doesn&apos;t just make you tired. It actively makes ADHD symptoms worse.
               </p>
               <br />
               <br />
@@ -150,7 +150,7 @@ const ThreePillarsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Pro tip for getting better sleep:</strong> Do a 10-minute brain dump before bed. Write down or speak out everything on your mind—tasks, worries, random thoughts, everything. Get it OUT of your head and into an external system. When your head hits the pillow, there&apos;s finally silence because your brain knows everything is captured somewhere safe.
+                <strong>Pro tip for getting better sleep:</strong> Do a 10-minute brain dump before bed. Write down or speak out everything on your mind: tasks, worries, random thoughts, everything. Get it OUT of your head and into an external system. When your head hits the pillow, there&apos;s finally silence because your brain knows everything is captured somewhere safe.
               </p>
               <br />
               <br />
@@ -159,14 +159,14 @@ const ThreePillarsBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">Pillar 3: Exercise—Rewiring Your Brain</h2>
+              <h2 className="blog-subheader">Pillar 3: Exercise, Rewiring Your Brain</h2>
               <p className="blog-body">
-                DISCLAIMER: You don&apos;t have to become a gym rat. But you do need to understand what exercise actually does for ADHD brains. Exercise literally rewires your brain. It&apos;s proven to boost attention and memory—so you don&apos;t feel like you&apos;re constantly chasing after your focus.
+                DISCLAIMER: You don&apos;t have to become a gym rat. But you do need to understand what exercise actually does for ADHD brains. Exercise literally rewires your brain. It&apos;s proven to boost attention and memory, so you don&apos;t feel like you&apos;re constantly chasing after your focus.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Here&apos;s what&apos;s actually happening when you exercise: it increases dopamine, norepinephrine, and serotonin—the exact same neurotransmitters that ADHD medications target. Exercise is essentially a natural ADHD medication that also improves your physical health, sleep, mood, and self-esteem.
+                Here&apos;s what&apos;s actually happening when you exercise: it increases dopamine, norepinephrine, and serotonin, the exact same neurotransmitters that ADHD medications target. Exercise is essentially a natural ADHD medication that also improves your physical health, sleep, mood, and self-esteem.
               </p>
               <br />
               <br />
@@ -176,7 +176,7 @@ const ThreePillarsBlog = () => {
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-3">
                 <li><strong>Boosts Dopamine:</strong> Exercise increases dopamine levels in your brain, improving motivation and focus. Some research suggests exercise can have effects similar to stimulant medications.</li>
-                <li><strong>Enhances Executive Function:</strong> Physical activity promotes growth in the prefrontal cortex—the area most affected by ADHD. This means better planning, organization, and impulse control.</li>
+                <li><strong>Enhances Executive Function:</strong> Physical activity promotes growth in the prefrontal cortex, the area most affected by ADHD. This means better planning, organization, and impulse control.</li>
                 <li><strong>Improves Working Memory:</strong> Regular exercise strengthens the brain circuits responsible for holding and manipulating information in your mind.</li>
                 <li><strong>Regulates Mood and Reduces Anxiety:</strong> Exercise helps balance mood and reduces the anxiety and depression that often accompany ADHD.</li>
                 <li><strong>Improves Sleep Quality:</strong> Physical activity helps regulate your circadian rhythm and makes it easier to fall asleep at night.</li>
@@ -184,7 +184,7 @@ const ThreePillarsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Studies show that as little as 10 minutes of exercise can have a positive impact on impulsivity. 30 minutes before starting focused work can improve ADHD symptoms for hours afterward. This isn&apos;t theoretical—it&apos;s measurable, proven, and powerful.
+                Studies show that as little as 10 minutes of exercise can have a positive impact on impulsivity. 30 minutes before starting focused work can improve ADHD symptoms for hours afterward. This isn&apos;t theoretical. It&apos;s measurable, proven, and powerful.
               </p>
               <br />
               <br />
@@ -195,7 +195,7 @@ const ThreePillarsBlog = () => {
               <br />
               <h2 className="blog-subheader">Why These Three Pillars Account for 80% of Your Struggles</h2>
               <p className="blog-body">
-                So, before you try every ADHD TikTok hack or buy another productivity app, you gotta get the basics down. Sleep, diet, and exercise genuinely account for 80% of the problems you&apos;re experiencing with your ADHD. This isn&apos;t an exaggeration—it&apos;s a fact backed by research.
+                So, before you try every ADHD TikTok hack or buy another productivity app, you gotta get the basics down. Sleep, diet, and exercise genuinely account for 80% of the problems you&apos;re experiencing with your ADHD. This isn&apos;t an exaggeration: it&apos;s a fact backed by research.
               </p>
               <br />
               <br />
@@ -218,7 +218,7 @@ const ThreePillarsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                These aren&apos;t separate issues—they&apos;re all interconnected. Good sleep helps you make better food choices. Good nutrition gives you energy to exercise. Exercise improves your sleep quality. It&apos;s a positive feedback loop that compounds over time.
+                These aren&apos;t separate issues. They&apos;re all interconnected. Good sleep helps you make better food choices. Good nutrition gives you energy to exercise. Exercise improves your sleep quality. It&apos;s a positive feedback loop that compounds over time.
               </p>
               <br />
               <br />
@@ -236,7 +236,7 @@ const ThreePillarsBlog = () => {
                 <li><strong>Reduce Executive Strain:</strong> Free up mental capacity so you actually have the time and energy to choose what to eat (rather than impulsively grabbing what&apos;s easiest)</li>
                 <li><strong>Create Time for Movement:</strong> Help you free up heaps of time in other areas so you can get in 15 minutes of outdoor activity. Even if it&apos;s just a walk.</li>
                 <li><strong>Support Sleep Hygiene:</strong> Give you the perfect ADHD brain dump prompts to get shit out of your head before bed so you can actually sleep</li>
-                <li><strong>Provide Reminders and Structure:</strong> Because your ADHD brain won&apos;t remember on its own—you need external scaffolding</li>
+                <li><strong>Provide Reminders and Structure:</strong> Because your ADHD brain won&apos;t remember on its own. You need external scaffolding</li>
                 <li><strong>Track Progress Without Shame:</strong> Show you what&apos;s working without making you feel like garbage when you miss a day</li>
               </ul>
               <br />
@@ -287,13 +287,13 @@ const ThreePillarsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Your ADHD comes with incredible strengths—creativity, energy, perspective, empathy. But those strengths only win when you have control. And control starts with mastering the three pillars: sleep, diet, and exercise. Get the foundation right. Everything else builds from there.
+                Your ADHD comes with incredible strengths: creativity, energy, perspective, empathy. But those strengths only win when you have control. And control starts with mastering the three pillars: sleep, diet, and exercise. Get the foundation right. Everything else builds from there.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to build systems that actually support the three pillars?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—designed to help you master sleep, diet, and exercise without relying on willpower. Get the foundation right. Control follows.
+                  <strong>Ready to build systems that actually support the three pillars?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, designed to help you master sleep, diet, and exercise without relying on willpower. Get the foundation right. Control follows.
                 </p>
               </div>
               <br />

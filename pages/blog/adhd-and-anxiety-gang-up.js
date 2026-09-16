@@ -22,7 +22,7 @@ const ADHDAnxietyBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800">
-                  <li>Nearly 50% of adults with ADHD also experience anxiety disorders—they feed into each other</li>
+                  <li>Nearly 50% of adults with ADHD also experience anxiety disorders. They feed into each other</li>
                   <li>Executive dysfunction triggers anxiety, which further impairs executive function (vicious cycle)</li>
                   <li>Traditional anxiety management fails because it doesn&apos;t address ADHD-specific root causes</li>
                   <li>Breaking the loop requires both immediate nervous system resets and preventive executive function support</li>
@@ -35,7 +35,7 @@ const ADHDAnxietyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The core of the problem is that ADHD symptoms—like forgetfulness, time blindness, and emotional dysregulation—create real-world failures (missed appointments, forgotten tasks). Anxiety then rushes in with a wave of self-criticism and fear of future failure, leading to avoidance. This avoidance causes the task to grow, the panic to amplify, and the cycle to repeat.
+                The core of the problem is that ADHD symptoms (like forgetfulness, time blindness, and emotional dysregulation) create real-world failures (missed appointments, forgotten tasks). Anxiety then rushes in with a wave of self-criticism and fear of future failure, leading to avoidance. This avoidance causes the task to grow, the panic to amplify, and the cycle to repeat.
               </p>
               <br />
               <br />
@@ -51,7 +51,7 @@ const ADHDAnxietyBlog = () => {
               <br />
               <h2 className="blog-subheader">The Intertwined Nature of ADHD and Anxiety</h2>
               <p className="blog-body">
-                Understanding how these two conditions amplify each other is the first step toward managing them. The relationship between ADHD and anxiety isn&apos;t just comorbidity—they actively worsen each other in predictable patterns that proper support systems are designed to interrupt.
+                Understanding how these two conditions amplify each other is the first step toward managing them. The relationship between ADHD and anxiety isn&apos;t just comorbidity: they actively worsen each other in predictable patterns that proper support systems are designed to interrupt.
               </p>
               <br />
               <br />
@@ -85,7 +85,7 @@ const ADHDAnxietyBlog = () => {
               <br />
               <h2 className="blog-subheader">Why Traditional Anxiety Management Fails for ADHD Brains</h2>
               <p className="blog-body">
-                Standard anxiety advice—deep breathing, meditation, positive self-talk—can help, but it doesn&apos;t address the root cause for ADHD individuals. Your anxiety often stems directly from executive dysfunction. When your brain can&apos;t reliably remember, organize, or initiate tasks, anxiety is a logical response. Trying to calm the anxiety without addressing the underlying ADHD challenges is like trying to stop a fire alarm without putting out the fire.
+                Standard anxiety advice (deep breathing, meditation, positive self-talk) can help, but it doesn&apos;t address the root cause for ADHD individuals. Your anxiety often stems directly from executive dysfunction. When your brain can&apos;t reliably remember, organize, or initiate tasks, anxiety is a logical response. Trying to calm the anxiety without addressing the underlying ADHD challenges is like trying to stop a fire alarm without putting out the fire.
               </p>
               <br />
               <br />
@@ -106,7 +106,7 @@ const ADHDAnxietyBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li><strong>2 Minutes: Regulated Breathing.</strong> Sit down and focus on your breath. Inhale for 4 seconds, exhale for 6 seconds. Repeat six times. This simple act directly signals to your nervous system that you are safe, interrupting the fight-or-flight response. The longer exhale is key—it activates your parasympathetic nervous system, which is responsible for the &quot;rest and digest&quot; state.</li>
+                <li><strong>2 Minutes: Regulated Breathing.</strong> Sit down and focus on your breath. Inhale for 4 seconds, exhale for 6 seconds. Repeat six times. This simple act directly signals to your nervous system that you are safe, interrupting the fight-or-flight response. The longer exhale is key. It activates your parasympathetic nervous system, which is responsible for the &quot;rest and digest&quot; state.</li>
                 <li><strong>60 Seconds: Sensory Reset.</strong> Step outside or move to a window. Fresh air and a change of scenery work wonders on regulating an overstimulated nervous system. The combination of movement, temperature change, and different visual input can break the anxiety spiral that your ADHD brain gets stuck in.</li>
                 <li><strong>30 Seconds: Physical Release.</strong> Clench your fists and shoulders tightly for a few seconds, then release completely. This physical tension-release is an instant reset button for your body. When anxiety lives in your muscles, releasing that physical tension can immediately reduce the mental distress.</li>
                 <li><strong>10 Seconds: Name the Fear.</strong> Write down three specific sources of your current anxiety. Naming the monster shrinks it, moving it from a vague, overwhelming feeling to a concrete, manageable problem. This also activates the prefrontal cortex, which helps regulate the amygdala&apos;s panic response.</li>
@@ -132,9 +132,9 @@ const ADHDAnxietyBlog = () => {
               <br />
               <ul className="list-disc ml-8 blog-body">
                 <li><strong>Task Decomposition:</strong> Anxiety often stems from the overwhelming size of a task. The right system automatically breaks down large projects into tiny, manageable micro-steps, making task initiation easier and reducing the fear of failure. Instead of seeing &quot;write report&quot; (panic-inducing), you see &quot;open document&quot; (manageable). This psychological shift is powerful for ADHD brains that struggle with task initiation.</li>
-                <li><strong>Proactive Reminders:</strong> Instead of relying on your fallible memory, external support provides gentle, context-aware reminders that prevent the &apos;oh no, I forgot!&apos; anxiety spike. These aren&apos;t nagging notifications—they&apos;re strategically timed prompts that catch things before they become emergencies. The system learns your patterns and reminds you at the optimal time, not just at arbitrary intervals.</li>
+                <li><strong>Proactive Reminders:</strong> Instead of relying on your fallible memory, external support provides gentle, context-aware reminders that prevent the &apos;oh no, I forgot!&apos; anxiety spike. These aren&apos;t nagging notifications. They&apos;re strategically timed prompts that catch things before they become emergencies. The system learns your patterns and reminds you at the optimal time, not just at arbitrary intervals.</li>
                 <li><strong>Emotional Regulation Check-ins:</strong> Smart support can prompt you to use your coping strategies (like the 5-minute protocol) before you reach a crisis point, ensuring you are working with your energy, not against it. Prevention is always easier than recovery, and proper systems help you stay regulated before dysregulation sets in.</li>
-                <li><strong>Pattern Recognition:</strong> Over time, external support identifies when you&apos;re most vulnerable to anxiety spirals—certain times of day, specific types of tasks, particular combinations of stressors. With this insight, you can proactively plan breaks, regulation activities, or task reordering to prevent the spiral before it starts.</li>
+                <li><strong>Pattern Recognition:</strong> Over time, external support identifies when you&apos;re most vulnerable to anxiety spirals, certain times of day, specific types of tasks, particular combinations of stressors. With this insight, you can proactively plan breaks, regulation activities, or task reordering to prevent the spiral before it starts.</li>
                 <li><strong>Reducing Cognitive Load:</strong> Much of ADHD-related anxiety comes from the constant mental juggling act. When a reliable system handles the remembering, organizing, and prioritizing, your brain has more resources available for actual emotional regulation. You&apos;re not trying to calm yourself while simultaneously trying to remember what you&apos;re forgetting.</li>
               </ul>
               <br />
@@ -150,13 +150,13 @@ const ADHDAnxietyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The combination of ADHD and anxiety doesn&apos;t have to control your life. With the right support system—one that addresses both the executive function challenges and the resulting emotional dysregulation—you can break free from the loop. <a href="https://www.additudemag.com/adhd-and-anxiety-symptoms-coping/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research consistently shows</a> that addressing executive dysfunction reduces anxiety symptoms in ADHD populations, making proper support a crucial component of mental health management.
+                The combination of ADHD and anxiety doesn&apos;t have to control your life. With the right support system, one that addresses both the executive function challenges and the resulting emotional dysregulation, you can break free from the loop. <a href="https://www.additudemag.com/adhd-and-anxiety-symptoms-coping/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research consistently shows</a> that addressing executive dysfunction reduces anxiety symptoms in ADHD populations, making proper support a crucial component of mental health management.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to break free from the ADHD-anxiety cycle?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the AI assistant that handles executive function so you can focus on actually living instead of just surviving. Stop letting anxiety dictate your days.
+                  <strong>Ready to break free from the ADHD-anxiety cycle?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the AI assistant that handles executive function so you can focus on actually living instead of just surviving. Stop letting anxiety dictate your days.
                 </p>
               </div>
               <br />

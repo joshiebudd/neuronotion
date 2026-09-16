@@ -43,7 +43,7 @@ const ADHDSleepBlog = () => {
               <br />
               <h2 className="blog-subheader">Why Sleep is So Tricky for ADHD Brains</h2>
               <p className="blog-body">
-                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2855699/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and sleep</a> shows that sleep problems aren&apos;t just a side effect of ADHD—they&apos;re deeply connected to the same neurological differences that cause ADHD symptoms. Understanding the root causes is the first step toward fixing your sleep.
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2855699/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and sleep</a> shows that sleep problems aren&apos;t just a side effect of ADHD. They&apos;re deeply connected to the same neurological differences that cause ADHD symptoms. Understanding the root causes is the first step toward fixing your sleep.
               </p>
               <br />
               <br />
@@ -82,12 +82,12 @@ const ADHDSleepBlog = () => {
               <br />
               <h2 className="blog-subheader">The Vicious Cycle: How Poor Sleep Makes ADHD Worse</h2>
               <p className="blog-body">
-                Here&apos;s the cruel reality: poor sleep doesn&apos;t just make you tired—it significantly amplifies every ADHD symptom you have. Executive function, already impaired by ADHD, becomes nearly non-existent with sleep deprivation. Emotional regulation, already challenging, becomes impossible. Working memory, already limited, shrinks further.
+                Here&apos;s the cruel reality: poor sleep doesn&apos;t just make you tired. It significantly amplifies every ADHD symptom you have. Executive function, already impaired by ADHD, becomes nearly non-existent with sleep deprivation. Emotional regulation, already challenging, becomes impossible. Working memory, already limited, shrinks further.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This creates a vicious cycle: ADHD makes sleep hard, poor sleep makes ADHD worse, worse ADHD makes sleep even harder. Breaking this cycle requires addressing both sides simultaneously—improving sleep quality while also managing the ADHD symptoms that interfere with sleep.
+                This creates a vicious cycle: ADHD makes sleep hard, poor sleep makes ADHD worse, worse ADHD makes sleep even harder. Breaking this cycle requires addressing both sides simultaneously, improving sleep quality while also managing the ADHD symptoms that interfere with sleep.
               </p>
               <br />
               <br />
@@ -119,8 +119,8 @@ const ADHDSleepBlog = () => {
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-4">
                 <li><strong>Respect Your Delayed Circadian Rhythm:</strong> Stop fighting your biology. If your body naturally wants to sleep at 1 AM and wake at 9 AM, trying to force a 10 PM bedtime will fail. If possible, adjust your schedule to match your natural rhythm. If not possible, use bright light therapy in the morning and dim lights in the evening to gradually shift your cycle.</li>
-                <li><strong>Brain Dump Before Bed:</strong> That 2 A.M. TED Talk happens because your brain is holding onto thoughts, worries, and tasks. <strong>Romi</strong> makes this effortless—quickly dump everything swirling in your head into the system. Once externalized, your brain can release it. You don&apos;t have to organize it or prioritize it; just get it out of your head.</li>
-                <li><strong>Sensory Optimization:</strong> Make your sleep environment ADHD-friendly. Blackout curtains or a sleep mask for light sensitivity. White noise, earplugs, or noise-cancelling headphones for sound sensitivity. Temperature regulation—many ADHD brains need it cool. Weighted blankets for tactile regulation. These aren&apos;t luxuries; they&apos;re necessities.</li>
+                <li><strong>Brain Dump Before Bed:</strong> That 2 A.M. TED Talk happens because your brain is holding onto thoughts, worries, and tasks. <strong>Romi</strong> makes this effortless: quickly dump everything swirling in your head into the system. Once externalized, your brain can release it. You don&apos;t have to organize it or prioritize it; just get it out of your head.</li>
+                <li><strong>Sensory Optimization:</strong> Make your sleep environment ADHD-friendly. Blackout curtains or a sleep mask for light sensitivity. White noise, earplugs, or noise-cancelling headphones for sound sensitivity. Temperature regulation: many ADHD brains need it cool. Weighted blankets for tactile regulation. These aren&apos;t luxuries; they&apos;re necessities.</li>
                 <li><strong>Nervous System Down-Regulation:</strong> Your hyperaroused nervous system needs help shifting into rest mode. Try box breathing (4 counts in, hold 4, out 4, hold 4), progressive muscle relaxation, or gentle stretching. The key is finding what signals safety to your nervous system.</li>
                 <li><strong>Strategic Stimulation:</strong> Counterintuitively, sometimes mild stimulation helps ADHD brains wind down. Listening to audiobooks, podcasts, or ASMR at low volume gives your brain something to focus on other than racing thoughts. The key is choosing content boring enough to allow sleep but engaging enough to prevent thought spirals.</li>
                 <li><strong>Medication Timing:</strong> If you take ADHD medication, timing matters immensely. Stimulants taken too late will absolutely prevent sleep. Work with your doctor to optimize timing. Some people benefit from a small evening dose to calm racing thoughts; others need to stop by noon.</li>
@@ -130,13 +130,13 @@ const ADHDSleepBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Many people find that when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">chronically exhausted</Link>, their sleep problems worsen because their nervous system is stuck in survival mode—addressing daytime stress is essential for nighttime sleep.
+                Many people find that when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">chronically exhausted</Link>, their sleep problems worsen because their nervous system is stuck in survival mode. Addressing daytime stress is essential for nighttime sleep.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">How Romi Supports Better Sleep</h2>
               <p className="blog-body">
-                The biggest obstacle to better sleep for ADHD brains isn&apos;t knowing what to do—it&apos;s consistently doing it. This is where <strong>Romi</strong> becomes invaluable:
+                The biggest obstacle to better sleep for ADHD brains isn&apos;t knowing what to do: it&apos;s consistently doing it. This is where <strong>Romi</strong> becomes invaluable:
               </p>
               <br />
               <br />
@@ -151,7 +151,7 @@ const ADHDSleepBlog = () => {
               <br />
               <h2 className="blog-subheader">Start Small: The Micro-Intervention Approach</h2>
               <p className="blog-body">
-                Don&apos;t try to implement everything at once—that&apos;s a recipe for overwhelm and abandonment. Pick ONE intervention that resonates most and focus on that for a week. Once that feels sustainable, add another. Small, stackable improvements beat elaborate protocols you can&apos;t maintain.
+                Don&apos;t try to implement everything at once: that&apos;s a recipe for overwhelm and abandonment. Pick ONE intervention that resonates most and focus on that for a week. Once that feels sustainable, add another. Small, stackable improvements beat elaborate protocols you can&apos;t maintain.
               </p>
               <br />
               <br />
@@ -183,7 +183,7 @@ const ADHDSleepBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You may never sleep like a neurotypical person—and that&apos;s okay. The goal is getting enough restorative sleep that you can function well and feel good. For many with ADHD, that means 7-8 hours on a delayed schedule, with sensory accommodations and external support to maintain routines.
+                You may never sleep like a neurotypical person, and that&apos;s okay. The goal is getting enough restorative sleep that you can function well and feel good. For many with ADHD, that means 7-8 hours on a delayed schedule, with sensory accommodations and external support to maintain routines.
               </p>
               <br />
               <br />
@@ -194,7 +194,7 @@ const ADHDSleepBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to finally shut down the 2 A.M. TED Talk?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that helps you brain dump before bed, maintains wind-down routines, and provides the consistency your sleep schedule needs. Better sleep is possible when you have the right support.
+                  <strong>Ready to finally shut down the 2 A.M. TED Talk?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that helps you brain dump before bed, maintains wind-down routines, and provides the consistency your sleep schedule needs. Better sleep is possible when you have the right support.
                 </p>
               </div>
               <br />

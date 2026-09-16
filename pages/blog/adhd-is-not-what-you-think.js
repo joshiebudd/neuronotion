@@ -23,10 +23,10 @@ const ADHDNotWhatYouThinkBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD isn&apos;t laziness or procrastination—it&apos;s a different way of being wired</li>
+                  <li>ADHD isn&apos;t laziness or procrastination. It&apos;s a different way of being wired</li>
                   <li>Behind every &quot;lazy&quot; behavior is intense overwhelm, executive dysfunction, or time blindness</li>
                   <li>ADHD includes emotional intensity, impulsivity, and a million unfinished projects</li>
-                  <li>It&apos;s not all negative—there are genuine strengths that come with ADHD</li>
+                  <li>It&apos;s not all negative. There are genuine strengths that come with ADHD</li>
                   <li>Understanding what ADHD really is helps both people with ADHD and those who love them</li>
                 </ul>
               </div>
@@ -120,7 +120,7 @@ const ADHDNotWhatYouThinkBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Long-term planning requires sustained executive function and future-oriented thinking. Both are significantly impaired by ADHD. It&apos;s not lack of ambition—it&apos;s neurology.
+                Long-term planning requires sustained executive function and future-oriented thinking. Both are significantly impaired by ADHD. It&apos;s not lack of ambition. It&apos;s neurology.
               </p>
               <br />
               <br />
@@ -191,11 +191,11 @@ const ADHDNotWhatYouThinkBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li>Their lateness isn&apos;t disrespect—it&apos;s broken time perception</li>
-                <li>Their emotional reactions aren&apos;t manipulation—they&apos;re dysregulation</li>
-                <li>Their unfinished projects aren&apos;t lack of commitment—they&apos;re how ADHD brains work</li>
-                <li>Their need for external structure isn&apos;t dependence—it&apos;s accommodation</li>
-                <li>Their struggles aren&apos;t excuses—they&apos;re neurology</li>
+                <li>Their lateness isn&apos;t disrespect. It&apos;s broken time perception</li>
+                <li>Their emotional reactions aren&apos;t manipulation. They&apos;re dysregulation</li>
+                <li>Their unfinished projects aren&apos;t lack of commitment. They&apos;re how ADHD brains work</li>
+                <li>Their need for external structure isn&apos;t dependence. It&apos;s accommodation</li>
+                <li>Their struggles aren&apos;t excuses. They&apos;re neurology</li>
               </ul>
               <br />
               <br />
@@ -232,7 +232,7 @@ const ADHDNotWhatYouThinkBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready for support that understands what ADHD really is?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—built by people who understand what you&apos;re actually dealing with. She knows about the overwhelm, the time blindness, the emotional intensity, and the unfinished projects. She was designed for your reality, not the stereotype. Get support that actually gets it.
+                  <strong>Ready for support that understands what ADHD really is?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, built by people who understand what you&apos;re actually dealing with. She knows about the overwhelm, the time blindness, the emotional intensity, and the unfinished projects. She was designed for your reality, not the stereotype. Get support that actually gets it.
                 </p>
               </div>
               <br />

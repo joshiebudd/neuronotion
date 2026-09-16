@@ -10,7 +10,7 @@ const ADHDFearNewThingsBlog = () => {
       slug="adhd-fear-of-trying-new-things"
       keywords="ADHD tools that work, ADHD app fear, trying new ADHD strategies, ADHD tool skepticism, ADHD brain designed systems"
       ogTitle="ADHD: Are You Scared to Try New Things? (This Time is Different)"
-      ogDescription="You&apos;ve been let down before. But tools built FOR your ADHD brain—not adapted for it—change everything."
+      ogDescription="You&apos;ve been let down before. But tools built FOR your ADHD brain, not adapted for it, change everything."
       heading="Scared to Try Another ADHD Tool? Why This Time Is Different"
       category="Understanding ADHD"
       date="Feb. 22, 2025"
@@ -23,10 +23,10 @@ const ADHDFearNewThingsBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>It&apos;s okay to be scared—you&apos;ve been overpromised and underdelivered more times than you can count</li>
+                  <li>It&apos;s okay to be scared. You&apos;ve been overpromised and underdelivered more times than you can count</li>
                   <li>Most tools fail because they were built for neurotypical brains and adapted for ADHD as an afterthought</li>
                   <li>Tools built FROM THE GROUND UP for ADHD brains work fundamentally differently</li>
-                  <li>You are not an afterthought—you are the priority when tools are designed with your neurology as the foundation</li>
+                  <li>You are not an afterthought. You are the priority when tools are designed with your neurology as the foundation</li>
                   <li>The fear of trying is valid, but staying stuck is worse than taking one more chance</li>
                 </ul>
               </div>
@@ -253,7 +253,7 @@ const ADHDFearNewThingsBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to give ADHD support one more chance?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—built FROM THE GROUND UP for ADHD brains, not adapted as an afterthought. For once, you are the priority. Give tools designed for your actual neurology one chance to prove they&apos;re different. You deserve support that actually works.
+                  <strong>Ready to give ADHD support one more chance?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, built FROM THE GROUND UP for ADHD brains, not adapted as an afterthought. For once, you are the priority. Give tools designed for your actual neurology one chance to prove they&apos;re different. You deserve support that actually works.
                 </p>
               </div>
               <br />

@@ -23,11 +23,11 @@ const ADHDSleepFoundationBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm" role="complementary" aria-label="Key Takeaways">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>Poor sleep amplifies EVERY ADHD symptom—distractibility, emotional dysregulation, impulsivity, and executive dysfunction</li>
+                  <li>Poor sleep amplifies EVERY ADHD symptom: distractibility, emotional dysregulation, impulsivity, and executive dysfunction</li>
                   <li>Just 6 hours of sleep (instead of 8) massively increases negative emotions and appetite for junk food</li>
                   <li>Bad sleep creates a vicious cycle: ADHD makes sleep hard, poor sleep makes ADHD worse</li>
                   <li>Sleep deprivation gives you an &quot;excuse&quot; to make other poor decisions, compounding the problem</li>
-                  <li>Fixing sleep is not optional for ADHD management—it&apos;s THE foundation everything else builds on</li>
+                  <li>Fixing sleep is not optional for ADHD management. It&apos;s THE foundation everything else builds on</li>
                 </ul>
               </div>
 
@@ -37,7 +37,7 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This isn&apos;t some wellness trend or lifestyle optimization hack. This is foundational neuroscience. When you have ADHD and sleep, you need to understand that sleep isn&apos;t just important—it&apos;s THE thing that determines whether you can function or whether you spend the day in survival mode.
+                This isn&apos;t some wellness trend or lifestyle optimization hack. This is foundational neuroscience. When you have ADHD and sleep, you need to understand that sleep isn&apos;t just important. It&apos;s THE thing that determines whether you can function or whether you spend the day in survival mode.
               </p>
               <br />
               <br />
@@ -112,7 +112,7 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Add sleep deprivation on top, and you&apos;re not just fighting ADHD—you&apos;re fighting ADHD with one hand tied behind your back and weights attached to your ankles.
+                Add sleep deprivation on top, and you&apos;re not just fighting ADHD. You&apos;re fighting ADHD with one hand tied behind your back and weights attached to your ankles.
               </p>
               <br />
               <br />
@@ -191,7 +191,7 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Each poor choice feeds into the next. By evening, you&apos;re overwhelmed, guilty, and anxious—exactly the mental state that prevents good sleep. The cycle continues.
+                Each poor choice feeds into the next. By evening, you&apos;re overwhelmed, guilty, and anxious, exactly the mental state that prevents good sleep. The cycle continues.
               </p>
               <br />
               <br />
@@ -207,7 +207,7 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                I know that sounds dramatic. But I&apos;m serious. Sleep is THE foundation. Not one of the foundations—THE foundation.
+                I know that sounds dramatic. But I&apos;m serious. Sleep is THE foundation. Not one of the foundations, THE foundation.
               </p>
               <br />
               <br />
@@ -253,7 +253,7 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You can have the best productivity systems, the perfect routine, the most supportive tools—but if you&apos;re sleep deprived, none of it will work. Your brain simply won&apos;t have the resources to execute.
+                You can have the best productivity systems, the perfect routine, the most supportive tools, but if you&apos;re sleep deprived, none of it will work. Your brain simply won&apos;t have the resources to execute.
               </p>
               <br />
               <br />
@@ -268,13 +268,13 @@ const ADHDSleepFoundationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Because when you consistently get 7-8 hours, you&apos;re not just managing your ADHD symptoms—you&apos;re giving your brain the basic resource it needs to function. Everything else flows from that foundation.
+                Because when you consistently get 7-8 hours, you&apos;re not just managing your ADHD symptoms. You&apos;re giving your brain the basic resource it needs to function. Everything else flows from that foundation.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md" role="complementary" aria-label="Call to Action">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to make sleep THE priority?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that helps you brain dump before bed, reducing the racing thoughts that prevent sleep. When your brain knows everything is safely captured, it can finally rest. Start building the foundation tonight.
+                  <strong>Ready to make sleep THE priority?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that helps you brain dump before bed, reducing the racing thoughts that prevent sleep. When your brain knows everything is safely captured, it can finally rest. Start building the foundation tonight.
                 </p>
               </div>
               <br />

@@ -23,8 +23,8 @@ const ADHDIdeaOverwhelmBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800">
-                  <li>ADHD brains generate ideas like popcorn—one brilliant idea triggers another, and another, creating idea overwhelm</li>
-                  <li>The problem isn&apos;t having too many ideas—it&apos;s that competing ideas paralyze you into indecision</li>
+                  <li>ADHD brains generate ideas like popcorn: one brilliant idea triggers another, and another, creating idea overwhelm</li>
+                  <li>The problem isn&apos;t having too many ideas. It&apos;s that competing ideas paralyze you into indecision</li>
                   <li>The Capture & Categorize system externalizes ideas so they don&apos;t overload your brain or slip away</li>
                   <li>Weekly review rituals transform chaotic idea storms into actionable priorities</li>
                   <li>Without an idea management system, your creativity becomes your enemy instead of your superpower</li>
@@ -42,18 +42,18 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This idea overwhelm is one of the biggest hurdles for us ADHDers. But to prevent this, you don&apos;t have to shut down your creativity—you have to manage it.
+                This idea overwhelm is one of the biggest hurdles for us ADHDers. But to prevent this, you don&apos;t have to shut down your creativity. You have to manage it.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">Why ADHD Brains Are Idea-Generating Machines (And Why That&apos;s Both a Gift and a Curse)</h2>
               <p className="blog-body">
-                Let&apos;s start with the truth: your ADHD brain is phenomenally creative. <a href="https://www.scientificamerican.com/article/the-creativity-of-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and creativity</a> shows that people with ADHD excel at divergent thinking—the ability to generate multiple ideas from a single starting point. You can see connections others miss. You think outside conventional boundaries. You conceptually expand beyond what most brains consider possible.
+                Let&apos;s start with the truth: your ADHD brain is phenomenally creative. <a href="https://www.scientificamerican.com/article/the-creativity-of-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and creativity</a> shows that people with ADHD excel at divergent thinking, the ability to generate multiple ideas from a single starting point. You can see connections others miss. You think outside conventional boundaries. You conceptually expand beyond what most brains consider possible.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Studies have found that ADHD brains create ideas that are more original, less constrained by existing knowledge, and more willing to violate conventional categories. When researchers asked ADHD and non-ADHD students to invent alien fruits, the ADHD students created fruits with antennas, tongues, straws, and hammers—wildly original features that neurotypical brains didn&apos;t generate.
+                Studies have found that ADHD brains create ideas that are more original, less constrained by existing knowledge, and more willing to violate conventional categories. When researchers asked ADHD and non-ADHD students to invent alien fruits, the ADHD students created fruits with antennas, tongues, straws, and hammers, wildly original features that neurotypical brains didn&apos;t generate.
               </p>
               <br />
               <br />
@@ -73,7 +73,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is ADHD idea overwhelm: the state where your greatest strength—creativity—becomes your biggest obstacle to execution. And without a system to manage it, this overwhelm destroys productivity, kills momentum, and makes you feel like a failure despite having brilliant potential.
+                This is ADHD idea overwhelm: the state where your greatest strength, creativity, becomes your biggest obstacle to execution. And without a system to manage it, this overwhelm destroys productivity, kills momentum, and makes you feel like a failure despite having brilliant potential.
               </p>
               <br />
               <br />
@@ -99,7 +99,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Mistake 2: Letting ideas slip away.</strong> The opposite mistake is equally destructive. An idea pops into your head—brilliant, exciting, potentially life-changing. But you don&apos;t capture it immediately. You think I&apos;ll write that down later. And then it&apos;s gone. Vanished. You can&apos;t remember what it was, just that it was important.
+                <strong>Mistake 2: Letting ideas slip away.</strong> The opposite mistake is equally destructive. An idea pops into your head, brilliant, exciting, potentially life-changing. But you don&apos;t capture it immediately. You think I&apos;ll write that down later. And then it&apos;s gone. Vanished. You can&apos;t remember what it was, just that it was important.
               </p>
               <br />
               <br />
@@ -130,7 +130,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is the foundation. Your ideas need an external home. Not in your head—outside your head. When an idea arrives, you capture it immediately. No judgment, no filtering, no deciding if it&apos;s good enough. Just capture.
+                This is the foundation. Your ideas need an external home. Not in your head, outside your head. When an idea arrives, you capture it immediately. No judgment, no filtering, no deciding if it&apos;s good enough. Just capture.
               </p>
               <br />
               <br />
@@ -150,7 +150,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Step 2: Categorize your ideas based on their topic.</strong> Use tags if you&apos;re on a digital workspace. The categories don&apos;t need to be complex—just enough to group similar ideas together.
+                <strong>Step 2: Categorize your ideas based on their topic.</strong> Use tags if you&apos;re on a digital workspace. The categories don&apos;t need to be complex, just enough to group similar ideas together.
               </p>
               <br />
               <br />
@@ -160,7 +160,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Your categories might be: Work Projects, Business Ideas, Content Ideas, Personal Goals, Home Improvements, Creative Projects, Learning Topics—whatever makes sense for your life. The specific categories don&apos;t matter. What matters is that you have them and you use them consistently.
+                Your categories might be: Work Projects, Business Ideas, Content Ideas, Personal Goals, Home Improvements, Creative Projects, Learning Topics, whatever makes sense for your life. The specific categories don&apos;t matter. What matters is that you have them and you use them consistently.
               </p>
               <br />
               <br />
@@ -180,7 +180,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The weekly review ritual looks like this: You open your idea capture system. You scan the categories. You pick one focus category for the week—maybe it&apos;s Content Ideas because you need to plan your content calendar. You look at all the ideas in that category. You identify which 2-3 ideas are most aligned with your current goals. Those become your priorities for the week.
+                The weekly review ritual looks like this: You open your idea capture system. You scan the categories. You pick one focus category for the week, maybe it&apos;s Content Ideas because you need to plan your content calendar. You look at all the ideas in that category. You identify which 2-3 ideas are most aligned with your current goals. Those become your priorities for the week.
               </p>
               <br />
               <br />
@@ -206,7 +206,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>It works with your ADHD brain, not against it.</strong> Your brain generates ideas constantly—the system accepts that. Your brain has limited working memory—the system externalizes everything. Your brain struggles with complex organization—the system stays radically simple. This is ADHD-friendly by design.
+                <strong>It works with your ADHD brain, not against it.</strong> Your brain generates ideas constantly. The system accepts that. Your brain has limited working memory. The system externalizes everything. Your brain struggles with complex organization. The system stays radically simple. This is ADHD-friendly by design.
               </p>
               <br />
               <br />
@@ -247,7 +247,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You start doubting yourself. Maybe you&apos;re not actually creative—maybe you&apos;re just scattered. Maybe all these ideas are just distractions. Maybe you should stop generating new ideas and focus on execution. So you try to suppress your ideation, which makes you miserable and kills your motivation.
+                You start doubting yourself. Maybe you&apos;re not actually creative. Maybe you&apos;re just scattered. Maybe all these ideas are just distractions. Maybe you should stop generating new ideas and focus on execution. So you try to suppress your ideation, which makes you miserable and kills your motivation.
               </p>
               <br />
               <br />
@@ -257,7 +257,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is the real cost of ADHD idea overwhelm. Not just lost productivity—lost potential, lost confidence, lost opportunities. You know you&apos;re capable of great things, but your ideas stay trapped in your head or scattered across a dozen different notes that you never review.
+                This is the real cost of ADHD idea overwhelm. Not just lost productivity, lost potential, lost confidence, lost opportunities. You know you&apos;re capable of great things, but your ideas stay trapped in your head or scattered across a dozen different notes that you never review.
               </p>
               <br />
               <br />
@@ -283,7 +283,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Choose your capture tool and make it frictionless.</strong> Notion, Apple Notes, Google Keep, voice memos—pick whatever feels easiest. The best tool is the one you&apos;ll actually use. Set it up so capturing an idea takes less than 10 seconds. Remove every possible barrier.
+                <strong>Choose your capture tool and make it frictionless.</strong> Notion, Apple Notes, Google Keep, voice memos: pick whatever feels easiest. The best tool is the one you&apos;ll actually use. Set it up so capturing an idea takes less than 10 seconds. Remove every possible barrier.
               </p>
               <br />
               <br />
@@ -313,7 +313,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Schedule your weekly review ritual.</strong> Pick a consistent time—Monday morning works for most people because it sets the tone for the week. Block 20-30 minutes. This is non-negotiable sacred time for organizing your creative brain.
+                <strong>Schedule your weekly review ritual.</strong> Pick a consistent time. Monday morning works for most people because it sets the tone for the week. Block 20-30 minutes. This is non-negotiable sacred time for organizing your creative brain.
               </p>
               <br />
               <br />
@@ -359,7 +359,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Think about the most successful creative people, entrepreneurs, and innovators. Many of them have ADHD. Not despite their ADHD—because of it. Their brains generate the ideas that others can&apos;t. They see opportunities others miss. They connect dots that seem unconnected.
+                Think about the most successful creative people, entrepreneurs, and innovators. Many of them have ADHD. Not despite their ADHD, because of it. Their brains generate the ideas that others can&apos;t. They see opportunities others miss. They connect dots that seem unconnected.
               </p>
               <br />
               <br />
@@ -380,7 +380,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is where modern ADHD tools become invaluable. Tools like <strong>Romi</strong> don&apos;t just help you capture ideas—they help you remember to review them, organize them automatically, surface relevant ones at the right time, and integrate them into your broader task management system.
+                This is where modern ADHD tools become invaluable. Tools like <strong>Romi</strong> don&apos;t just help you capture ideas. They help you remember to review them, organize them automatically, surface relevant ones at the right time, and integrate them into your broader task management system.
               </p>
               <br />
               <br />
@@ -403,7 +403,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <h2 className="blog-subheader">Your Ideas Deserve Better Than Your Brain Alone</h2>
               <p className="blog-body">
-                Let&apos;s be real: your ADHD brain is brilliant at generating ideas and terrible at managing them. That&apos;s not a criticism—it&apos;s neurology. Your working memory is limited. Your executive function is inconsistent. Your attention gets pulled in multiple directions.
+                Let&apos;s be real: your ADHD brain is brilliant at generating ideas and terrible at managing them. That&apos;s not a criticism. It&apos;s neurology. Your working memory is limited. Your executive function is inconsistent. Your attention gets pulled in multiple directions.
               </p>
               <br />
               <br />
@@ -434,7 +434,7 @@ const ADHDIdeaOverwhelmBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to transform your idea storm into your greatest advantage?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that captures, organizes, and helps you execute your brilliant ideas. Stop drowning in creativity. Start turning ideas into results.
+                  <strong>Ready to transform your idea storm into your greatest advantage?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that captures, organizes, and helps you execute your brilliant ideas. Stop drowning in creativity. Start turning ideas into results.
                 </p>
               </div>
               <br />

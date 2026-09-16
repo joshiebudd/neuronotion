@@ -23,7 +23,7 @@ const ExhaustedAgainBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD burnout isn&apos;t about doing too much—it&apos;s about working against your brain&apos;s natural operating system</li>
+                  <li>ADHD burnout isn&apos;t about doing too much. It&apos;s about working against your brain&apos;s natural operating system</li>
                   <li>&quot;Do less&quot; rarely solves burnout because it doesn&apos;t address the unsustainable patterns causing exhaustion</li>
                   <li>The solution is to do differently: work WITH your ADHD neurology, not against it</li>
                   <li>Sustainable productivity means matching tasks to energy types, building in variety, and eliminating cognitive friction</li>
@@ -53,7 +53,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <a href="https://add.org/adhd-burnout/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and burnout</a> shows that neurodivergent individuals experience exhaustion differently than neurotypical people. It&apos;s not just physical tiredness—it&apos;s a deep, systemic depletion that comes from constantly fighting your neurology. You&apos;re not tired from working—you&apos;re tired from the immense effort of trying to work like someone whose brain functions differently.
+                <a href="https://add.org/adhd-burnout/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and burnout</a> shows that neurodivergent individuals experience exhaustion differently than neurotypical people. It&apos;s not just physical tiredness. It&apos;s a deep, systemic depletion that comes from constantly fighting your neurology. You&apos;re not tired from working. You&apos;re tired from the immense effort of trying to work like someone whose brain functions differently.
               </p>
               <br />
               <br />
@@ -102,7 +102,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why people report doing &quot;nothing all day&quot; yet still feeling completely drained. The exhaustion isn&apos;t from the tasks themselves—it&apos;s from the constant internal battle: forcing focus when your brain seeks novelty, suppressing impulses, manually managing working memory, fighting time blindness, and maintaining emotional regulation with depleted executive function.
+                This is why people report doing &quot;nothing all day&quot; yet still feeling completely drained. The exhaustion isn&apos;t from the tasks themselves. It&apos;s from the constant internal battle: forcing focus when your brain seeks novelty, suppressing impulses, manually managing working memory, fighting time blindness, and maintaining emotional regulation with depleted executive function.
               </p>
               <br />
               <br />
@@ -124,10 +124,10 @@ const ExhaustedAgainBlog = () => {
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-4">
                 <li><strong>Energy-Type Matching, Not Time-Blocking:</strong> Stop scheduling by the clock alone. Your brain doesn&apos;t care that it&apos;s 2 PM; it cares whether you have the right type of energy for the task. High-focus analytical work requires different energy than creative brainstorming or administrative tasks. Match the task to your current energy type, not your calendar. <strong>Romi</strong> can help you identify your energy patterns and suggest task types accordingly.</li>
-                <li><strong>Variety as Strategy, Not Distraction:</strong> Your ADHD brain needs novelty to maintain dopamine. Instead of fighting this by forcing yourself through monotonous work, embrace it by deliberately switching between different types of tasks. Variety isn&apos;t a weakness to overcome—it&apos;s a strength to harness. Build task variety into your system rather than seeing it as a failure of focus.</li>
+                <li><strong>Variety as Strategy, Not Distraction:</strong> Your ADHD brain needs novelty to maintain dopamine. Instead of fighting this by forcing yourself through monotonous work, embrace it by deliberately switching between different types of tasks. Variety isn&apos;t a weakness to overcome. It&apos;s a strength to harness. Build task variety into your system rather than seeing it as a failure of focus.</li>
                 <li><strong>Externalizing Executive Function:</strong> Stop trying to hold everything in your head. Your working memory is limited, and constantly trying to remember, organize, and prioritize everything is exhausting. Let external systems handle this cognitive load. When you&apos;re not spending mental energy on &quot;Am I forgetting something?&quot; you have that energy available for actual work.</li>
                 <li><strong>Permission to Pivot:</strong> Give yourself explicit permission to change tasks when you hit a wall. Neurotypical productivity advice says &quot;push through.&quot; For ADHD brains, pushing through often means burning out. Pivoting to a different task preserves your energy and maintains momentum rather than forcing you into exhausted paralysis.</li>
-                <li><strong>Micro-Breaks as Prevention:</strong> Don&apos;t wait until you&apos;re completely depleted to rest. Build in tiny breaks between tasks—even just 60 seconds to stretch, breathe, or look away from the screen. These micro-breaks prevent the accumulation of stress that leads to crashes.</li>
+                <li><strong>Micro-Breaks as Prevention:</strong> Don&apos;t wait until you&apos;re completely depleted to rest. Build in tiny breaks between tasks, even just 60 seconds to stretch, breathe, or look away from the screen. These micro-breaks prevent the accumulation of stress that leads to crashes.</li>
                 <li><strong>Dopamine Before Discipline:</strong> Start work sessions with something that generates momentum, even if it&apos;s not the most important task. Your brain needs the dopamine hit to get moving. Once in motion, you can redirect to more important work. Fighting for motivation on important-but-boring tasks is a losing battle.</li>
               </ol>
               <br />
@@ -159,7 +159,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <h2 className="blog-subheader">The Sustainability Test</h2>
               <p className="blog-body">
-                Here&apos;s the crucial question: Could you maintain your current way of working for the next five years without burning out? If the answer is no, you need to do differently, not less. Sustainability isn&apos;t about minimalism—it&apos;s about alignment with your neurology.
+                Here&apos;s the crucial question: Could you maintain your current way of working for the next five years without burning out? If the answer is no, you need to do differently, not less. Sustainability isn&apos;t about minimalism. It&apos;s about alignment with your neurology.
               </p>
               <br />
               <br />
@@ -180,7 +180,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                When you work with your neurology instead of against it—when you honor your need for variety, externalize executive function, match tasks to energy types, and give yourself permission to pivot—work stops feeling like a constant uphill battle. You can be productive without being exhausted. You can accomplish things without depleting yourself.
+                When you work with your neurology instead of against it (when you honor your need for variety, externalize executive function, match tasks to energy types, and give yourself permission to pivot), work stops feeling like a constant uphill battle. You can be productive without being exhausted. You can accomplish things without depleting yourself.
               </p>
               <br />
               <br />
@@ -196,7 +196,7 @@ const ExhaustedAgainBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop the exhaustion cycle?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that helps you do differently, not less. Stop fighting your neurology. Start working with it. Sustainable energy is possible when you honor how your brain actually works.
+                  <strong>Ready to stop the exhaustion cycle?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that helps you do differently, not less. Stop fighting your neurology. Start working with it. Sustainable energy is possible when you honor how your brain actually works.
                 </p>
               </div>
               <br />

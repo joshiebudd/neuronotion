@@ -23,7 +23,7 @@ const EveryoneIsntALittleADHDBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD is a real, measurable difference in brain structure and chemistry—not a personality quirk</li>
+                  <li>ADHD is a real, measurable difference in brain structure and chemistry, not a personality quirk</li>
                   <li>Neurotypical brains have a &quot;pre-installed&quot; template for organization; ADHD brains don&apos;t</li>
                   <li>Everyone experiences distraction sometimes, but ADHD is persistent, pervasive, and impairing</li>
                   <li>Saying &quot;everyone&apos;s a little ADHD&quot; dismisses the genuine struggle and makes people feel invalid</li>
@@ -48,7 +48,7 @@ const EveryoneIsntALittleADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3724232/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD brain structure</a> shows that ADHD involves delays in the development of certain brain areas, particularly the prefrontal cortex—the part responsible for executive functions like planning, impulse control, and organization.
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3724232/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD brain structure</a> shows that ADHD involves delays in the development of certain brain areas, particularly the prefrontal cortex, the part responsible for executive functions like planning, impulse control, and organization.
               </p>
               <br />
               <br />
@@ -128,14 +128,14 @@ const EveryoneIsntALittleADHDBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body">
-                <li><strong>Persistently:</strong> Not occasionally—constantly, across all situations</li>
-                <li><strong>Pervasively:</strong> Not just at work or school—in every domain of life</li>
-                <li><strong>Impairingly:</strong> Not just annoying—actually preventing you from functioning well</li>
+                <li><strong>Persistently:</strong> Not occasionally, constantly, across all situations</li>
+                <li><strong>Pervasively:</strong> Not just at work or school, in every domain of life</li>
+                <li><strong>Impairingly:</strong> Not just annoying, actually preventing you from functioning well</li>
               </ul>
               <br />
               <br />
               <p className="blog-body">
-                When the same executive function challenges show up in your relationships, your work, your health management, your finances, your self-care, and your ability to accomplish basic life tasks—that&apos;s not &quot;everyone.&quot; That&apos;s ADHD.
+                When the same executive function challenges show up in your relationships, your work, your health management, your finances, your self-care, and your ability to accomplish basic life tasks. That&apos;s not &quot;everyone.&quot; That&apos;s ADHD.
               </p>
               <br />
               <br />
@@ -156,7 +156,7 @@ const EveryoneIsntALittleADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>&quot;The difference is frequency and impact. I don&apos;t just get distracted occasionally—my ability to focus, plan, and organize is consistently impaired across all areas of my life.&quot;</strong>
+                <strong>&quot;The difference is frequency and impact. I don&apos;t just get distracted occasionally. My ability to focus, plan, and organize is consistently impaired across all areas of my life.&quot;</strong>
               </p>
               <br />
               <br />
@@ -202,7 +202,7 @@ const EveryoneIsntALittleADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why understanding <Link href="/blog/how-to-take-control-of-your-adhd" className="text-blue-600 hover:underline">strategies that work WITH your ADHD brain</Link> is so important—you&apos;re building the organizational framework externally that neurotypical brains have internally.
+                This is why understanding <Link href="/blog/how-to-take-control-of-your-adhd" className="text-blue-600 hover:underline">strategies that work WITH your ADHD brain</Link> is so important. You&apos;re building the organizational framework externally that neurotypical brains have internally.
               </p>
               <br />
               <br />
@@ -233,7 +233,7 @@ const EveryoneIsntALittleADHDBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Because you shouldn&apos;t have to spend enormous energy building organizational frameworks from scratch every time. That&apos;s what external support systems are for—compensating for the GPS neurotypical brains have automatically.
+                Because you shouldn&apos;t have to spend enormous energy building organizational frameworks from scratch every time. That&apos;s what external support systems are for, compensating for the GPS neurotypical brains have automatically.
               </p>
               <br />
               <br />
@@ -255,7 +255,7 @@ const EveryoneIsntALittleADHDBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready for support that understands your ADHD is real?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—built for people whose brains genuinely work differently, not just for people who are &quot;a little distracted.&quot; Real support for real ADHD. Get the external structure your brain needs.
+                  <strong>Ready for support that understands your ADHD is real?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, built for people whose brains genuinely work differently, not just for people who are &quot;a little distracted.&quot; Real support for real ADHD. Get the external structure your brain needs.
                 </p>
               </div>
               <br />

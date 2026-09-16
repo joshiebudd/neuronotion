@@ -32,7 +32,7 @@ const AdhdMaskingImposterBlog = () => {
               </div>
 
               <p className="lead blog-body italic">
-                If you have ADHD, you&apos;ve likely spent a significant portion of your life in a state of performance. This is known as masking—the conscious or unconscious effort to suppress traits that might mark you out as different. You become the &quot;put-together&quot; version of yourself: the polite, focused, chilled-out, doesn&apos;t-interrupt-in-meetings version. It&apos;s utterly exhausting.
+                If you have ADHD, you&apos;ve likely spent a significant portion of your life in a state of performance. This is known as masking, the conscious or unconscious effort to suppress traits that might mark you out as different. You become the &quot;put-together&quot; version of yourself: the polite, focused, chilled-out, doesn&apos;t-interrupt-in-meetings version. It&apos;s utterly exhausting.
               </p>
               <br />
               <br />
@@ -42,13 +42,13 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The flip side of this coin is imposter syndrome—the persistent feeling that your success is just luck, timing, or effective masking, and that you&apos;re about to be &quot;found out.&quot; For ADHD minds, this is a common and painful experience. You feel like a fraud because you know the sheer, unsustainable effort it takes to maintain the facade. When others praise your work, you can&apos;t accept it—you know they&apos;re praising the mask, not the real you.
+                The flip side of this coin is imposter syndrome, the persistent feeling that your success is just luck, timing, or effective masking, and that you&apos;re about to be &quot;found out.&quot; For ADHD minds, this is a common and painful experience. You feel like a fraud because you know the sheer, unsustainable effort it takes to maintain the facade. When others praise your work, you can&apos;t accept it. You know they&apos;re praising the mask, not the real you.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">The Hidden Cost of ADHD Masking</h2>
               <p className="blog-body">
-                Masking isn&apos;t just tiring—it&apos;s neurologically expensive. Every moment you spend suppressing your natural impulses, forcing yourself to sit still, or mentally rehearsing &quot;normal&quot; social responses depletes your executive function resources. This is cognitive load that neurotypical people don&apos;t have to carry, which means you&apos;re starting every interaction, every task, every day with significantly less mental energy than others.
+                Masking isn&apos;t just tiring: it&apos;s neurologically expensive. Every moment you spend suppressing your natural impulses, forcing yourself to sit still, or mentally rehearsing &quot;normal&quot; social responses depletes your executive function resources. This is cognitive load that neurotypical people don&apos;t have to carry, which means you&apos;re starting every interaction, every task, every day with significantly less mental energy than others.
               </p>
               <br />
               <br />
@@ -58,12 +58,12 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The tragedy is that masking often works—at least superficially. You appear successful, capable, &quot;normal.&quot; But internally, you&apos;re collapsing. And because the mask is so effective, people don&apos;t see your struggle, which means you don&apos;t get the support you desperately need. This invisible suffering is what makes ADHD masking particularly insidious.
+                The tragedy is that masking often works, at least superficially. You appear successful, capable, &quot;normal.&quot; But internally, you&apos;re collapsing. And because the mask is so effective, people don&apos;t see your struggle, which means you don&apos;t get the support you desperately need. This invisible suffering is what makes ADHD masking particularly insidious.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Understanding <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">the Gold Dust Theory</Link> reveals why masking depletes your mental energy so rapidly—every suppressed impulse, every forced focus, every &quot;normal&quot; response is spending precious cognitive resources you can&apos;t afford to lose.
+                Understanding <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">the Gold Dust Theory</Link> reveals why masking depletes your mental energy so rapidly: every suppressed impulse, every forced focus, every &quot;normal&quot; response is spending precious cognitive resources you can&apos;t afford to lose.
               </p>
               <br />
               <br />
@@ -75,8 +75,8 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-4">
                 <li><strong>The Performance:</strong> You overcompensate, meticulously planning and rehearsing to appear &quot;normal&quot; or &quot;organized.&quot; You arrive early to hide your time blindness. You overprepare to compensate for your working memory issues. You create elaborate systems to appear spontaneously organized. Every interaction becomes a carefully choreographed dance where one misstep could reveal the &quot;truth&quot; about you.</li>
-                <li><strong>The Exhaustion:</strong> The effort of masking drains your cognitive resources, leading to burnout and emotional dysregulation. By the time you get home, you have nothing left—not for hobbies, relationships, or self-care. Just surviving the mask takes everything. This is why you can appear highly functional at work while your personal life falls apart.</li>
-                <li><strong>The Imposter Feeling:</strong> When you succeed, you attribute it to the mask, not your true abilities, reinforcing the belief that you are a fraud. You think, &quot;If they knew how hard this was for me, they wouldn&apos;t be impressed.&quot; Every achievement feels hollow because it came from the performance, not the authentic you. Your successes don&apos;t build confidence—they increase anxiety about maintaining the illusion.</li>
+                <li><strong>The Exhaustion:</strong> The effort of masking drains your cognitive resources, leading to burnout and emotional dysregulation. By the time you get home, you have nothing left, not for hobbies, relationships, or self-care. Just surviving the mask takes everything. This is why you can appear highly functional at work while your personal life falls apart.</li>
+                <li><strong>The Imposter Feeling:</strong> When you succeed, you attribute it to the mask, not your true abilities, reinforcing the belief that you are a fraud. You think, &quot;If they knew how hard this was for me, they wouldn&apos;t be impressed.&quot; Every achievement feels hollow because it came from the performance, not the authentic you. Your successes don&apos;t build confidence. They increase anxiety about maintaining the illusion.</li>
                 <li><strong>The Shame:</strong> When the mask slips (and it always does), the shame reinforces the need to mask even harder next time. You beat yourself up for &quot;losing control,&quot; for letting people see the real, struggling you. This shame becomes the fuel that keeps the cycle spinning, making each iteration more exhausting than the last.</li>
               </ol>
               <br />
@@ -88,7 +88,7 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <h2 className="blog-subheader">Why Imposter Syndrome Hits ADHD Harder</h2>
               <p className="blog-body">
-                Imposter syndrome isn&apos;t unique to ADHD, but it interacts with ADHD traits in particularly painful ways. Because people with ADHD have inconsistent performance—brilliant one day, struggling the next—it&apos;s easy to dismiss good days as flukes and see bad days as the &quot;real&quot; you. This variability makes it nearly impossible to internalize success because you never know if you&apos;ll be able to replicate it.
+                Imposter syndrome isn&apos;t unique to ADHD, but it interacts with ADHD traits in particularly painful ways. Because people with ADHD have inconsistent performance (brilliant one day, struggling the next), it&apos;s easy to dismiss good days as flukes and see bad days as the &quot;real&quot; you. This variability makes it nearly impossible to internalize success because you never know if you&apos;ll be able to replicate it.
               </p>
               <br />
               <br />
@@ -98,7 +98,7 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Romi</strong> helps address this by providing objective tracking of your efforts and accomplishments. When you have data showing everything you&apos;ve actually completed, it&apos;s harder to dismiss your success as luck or trickery. The evidence doesn&apos;t lie—you did the work, even if it felt different than how neurotypical people do it.
+                <strong>Romi</strong> helps address this by providing objective tracking of your efforts and accomplishments. When you have data showing everything you&apos;ve actually completed, it&apos;s harder to dismiss your success as luck or trickery. The evidence doesn&apos;t lie. You did the work, even if it felt different than how neurotypical people do it.
               </p>
               <br />
               <br />
@@ -114,16 +114,16 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The revolutionary difference is that this external &quot;mask&quot; doesn&apos;t drain you—it supports you. When a reliable system does the organizing, you&apos;don&apos;t have to pretend to be organized. Here&apos;s how proper ADHD support helps you drop the mask:
+                The revolutionary difference is that this external &quot;mask&quot; doesn&apos;t drain you. It supports you. When a reliable system does the organizing, you don&apos;t have to pretend to be organized. Here&apos;s how proper ADHD support helps you drop the mask:
               </p>
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body space-y-3">
                 <li><strong>Externalizing the &quot;Put-Together&quot; Version:</strong> The system handles what you would otherwise have to fake. You actually do have things under control, but it&apos;s through support, not performance. This fundamental shift means you&apos;re not constantly monitoring yourself to ensure the mask doesn&apos;t slip.</li>
-                <li><strong>Reducing Performance Anxiety:</strong> When you know your ADHD assistant has your back—remembering appointments, tracking commitments, organizing priorities—you can relax. You don&apos;t have to maintain the mental fiction that you have everything under control. The anxiety that comes from constant self-monitoring finally lifts.</li>
+                <li><strong>Reducing Performance Anxiety:</strong> When you know your ADHD assistant has your back (remembering appointments, tracking commitments, organizing priorities), you can relax. You don&apos;t have to maintain the mental fiction that you have everything under control. The anxiety that comes from constant self-monitoring finally lifts.</li>
                 <li><strong>Validating Your True Effort:</strong> Tracking systems provide objective feedback. When you feel like your success was &quot;just luck,&quot; data can show you the steps you took, the tasks you completed, and the effort you invested. This objective evidence helps counter the subjective, shame-based narrative of imposter syndrome. The system becomes a witness to your real work.</li>
-                <li><strong>Celebrating Authentic Wins:</strong> Instead of celebrating the performance, effective support celebrates what you actually accomplished—even if it was messy, even if it wasn&apos;t perfect, even if it took longer than planned. This shift from performance-based validation to effort-based validation helps you internalize your successes in a healthier, more sustainable way.</li>
-                <li><strong>Reducing Social Masking:</strong> Proper preparation support can help you navigate high-stakes social situations without exhausting internal rehearsal. Need to remember key points for a meeting? Your system provides a quick, discreet summary. Worried about interrupting? Gentle, private reminders help you pause. You&apos;re not masking—you&apos;re being supported in being your authentic self while navigating neurotypical expectations.</li>
+                <li><strong>Celebrating Authentic Wins:</strong> Instead of celebrating the performance, effective support celebrates what you actually accomplished, even if it was messy, even if it wasn&apos;t perfect, even if it took longer than planned. This shift from performance-based validation to effort-based validation helps you internalize your successes in a healthier, more sustainable way.</li>
+                <li><strong>Reducing Social Masking:</strong> Proper preparation support can help you navigate high-stakes social situations without exhausting internal rehearsal. Need to remember key points for a meeting? Your system provides a quick, discreet summary. Worried about interrupting? Gentle, private reminders help you pause. You&apos;re not masking. You&apos;re being supported in being your authentic self while navigating neurotypical expectations.</li>
                 <li><strong>Building Sustainable Success:</strong> When external support handles executive function, your success becomes sustainable rather than dependent on unsustainable effort. This means your accomplishments feel more authentic and more maintainable. When success doesn&apos;t require burning yourself out, imposter syndrome loses its grip because you can replicate your results without the performance.</li>
                 <li><strong>Creating a Shame-Free Zone:</strong> Modern ADHD tools are non-judgemental partners. When you forget a task or have a moment of chaos, the system simply helps you re-orient. There&apos;s no disappointment, no criticism, no &quot;you should have...&quot; This consistent, non-critical support is vital for unlearning the shame that fuels masking behavior.</li>
               </ul>
@@ -136,12 +136,12 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <h2 className="blog-subheader">Reclaiming Your Authentic Self</h2>
               <p className="blog-body">
-                The goal isn&apos;t to never mask—sometimes situational masking is a necessary survival skill in a neurotypical world. The goal is to reduce chronic, exhausting masking and create spaces where you can be authentically yourself while still being functional and successful. <strong>Romi</strong> makes this possible by providing the organizational support that you would otherwise have to fake.
+                The goal isn&apos;t to never mask: sometimes situational masking is a necessary survival skill in a neurotypical world. The goal is to reduce chronic, exhausting masking and create spaces where you can be authentically yourself while still being functional and successful. <strong>Romi</strong> makes this possible by providing the organizational support that you would otherwise have to fake.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                When you&apos;re not spending all your energy pretending to be organized, remembering everything, and appearing &quot;normal,&quot; you have energy left for being yourself. Your creativity, your unique perspective, your authentic personality—these stop being things you have to hide and start being strengths you can express. This is the promise of proper ADHD support: not to fix you, but to support you in being fully yourself.
+                When you&apos;re not spending all your energy pretending to be organized, remembering everything, and appearing &quot;normal,&quot; you have energy left for being yourself. Your creativity, your unique perspective, your authentic personality. These stop being things you have to hide and start being strengths you can express. This is the promise of proper ADHD support: not to fix you, but to support you in being fully yourself.
               </p>
               <br />
               <br />
@@ -151,18 +151,18 @@ const AdhdMaskingImposterBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The exhaustion you feel from masking isn&apos;t weakness—it&apos;s evidence of incredible strength. You&apos;ve been doing the impossible, performing a role that doesn&apos;t fit while still achieving success. <a href="https://www.additudemag.com/adhd-masking-signs-consequences-solutions/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD masking</a> confirms that this performance comes at enormous psychological and physical cost. Imagine what you could do if that energy was redirected toward your actual goals instead of maintaining the mask.
+                The exhaustion you feel from masking isn&apos;t weakness. It&apos;s evidence of incredible strength. You&apos;ve been doing the impossible, performing a role that doesn&apos;t fit while still achieving success. <a href="https://www.additudemag.com/adhd-masking-signs-consequences-solutions/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD masking</a> confirms that this performance comes at enormous psychological and physical cost. Imagine what you could do if that energy was redirected toward your actual goals instead of maintaining the mask.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                That&apos;s what proper ADHD support offers: freedom from performance, space for authenticity, and the ability to succeed as your genuine self. Your achievements aren&apos;t accidents or tricks—they&apos;re the result of your genuine effort, supported by tools designed for your brain. It&apos;s time to stop being an imposter in your own life and start being authentically, powerfully you.
+                That&apos;s what proper ADHD support offers: freedom from performance, space for authenticity, and the ability to succeed as your genuine self. Your achievements aren&apos;t accidents or tricks. They&apos;re the result of your genuine effort, supported by tools designed for your brain. It&apos;s time to stop being an imposter in your own life and start being authentically, powerfully you.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop performing and start living authentically?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that reduces the need for masking by handling what you&apos;d otherwise have to fake. Your authentic self deserves to be seen, supported, and celebrated. Stop being an imposter in your own life.
+                  <strong>Ready to stop performing and start living authentically?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that reduces the need for masking by handling what you&apos;d otherwise have to fake. Your authentic self deserves to be seen, supported, and celebrated. Stop being an imposter in your own life.
                 </p>
               </div>
               <br />

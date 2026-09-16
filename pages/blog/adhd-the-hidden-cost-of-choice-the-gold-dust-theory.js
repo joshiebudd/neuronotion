@@ -24,7 +24,7 @@ const GoldDustTheoryBlog = () => {
                 <ul className="list-disc ml-5 space-y-2 text-gray-800">
                   <li>Every person starts the day with limited mental energy (&quot;gold dust&quot;) for decision-making</li>
                   <li>ADHD brains use 3-5x more gold dust per decision due to executive dysfunction</li>
-                  <li>By mid-afternoon, you&apos;re depleted—leading to poor choices and complete shutdown</li>
+                  <li>By mid-afternoon, you&apos;re depleted, leading to poor choices and complete shutdown</li>
                   <li>The solution: Automate decisions through AMDs (Automatic Mental Decisions) to preserve energy</li>
                 </ul>
               </div>
@@ -35,7 +35,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The Gold Dust Theory posits that every person starts the day with a limited supply of gold dust—mental energy for focus, decision-making, planning, and action. For an ADHD brain, every single decision consumes a disproportionately large scoop of this gold dust. While a neurotypical brain might use a sprinkle for a decision, your ADHD brain blows through a big scoop every time. This is why even minor choices—what to eat, when to work out, whether to answer a message—can leave you completely wiped.
+                The Gold Dust Theory posits that every person starts the day with a limited supply of gold dust (mental energy for focus, decision-making, planning, and action). For an ADHD brain, every single decision consumes a disproportionately large scoop of this gold dust. While a neurotypical brain might use a sprinkle for a decision, your ADHD brain blows through a big scoop every time. This is why even minor choices (what to eat, when to work out, whether to answer a message) can leave you completely wiped.
               </p>
               <br />
               <br />
@@ -46,7 +46,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <h2 className="blog-subheader">Why Decision Fatigue Hits ADHD Brains Harder</h2>
               <p className="blog-body">
-                Decision fatigue isn&apos;t unique to ADHD, but it affects ADHD brains with devastating intensity. <a href="https://www.additudemag.com/7-executive-function-deficits-linked-to-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research shows</a> that people with ADHD have reduced executive function in the prefrontal cortex—the very area responsible for decision-making, planning, and impulse control. This means you&apos;re starting each day with less gold dust than neurotypical people, and you&apos;re burning through it faster with every choice you make.
+                Decision fatigue isn&apos;t unique to ADHD, but it affects ADHD brains with devastating intensity. <a href="https://www.additudemag.com/7-executive-function-deficits-linked-to-adhd/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research shows</a> that people with ADHD have reduced executive function in the prefrontal cortex, the very area responsible for decision-making, planning, and impulse control. This means you&apos;re starting each day with less gold dust than neurotypical people, and you&apos;re burning through it faster with every choice you make.
               </p>
               <br />
               <br />
@@ -56,23 +56,23 @@ const GoldDustTheoryBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why you might find yourself completely exhausted by 2 PM even though you haven&apos;t actually accomplished much. It&apos;s not that you&apos;re lazy or unmotivated—your brain has been working overtime just to navigate the constant stream of choices that make up daily life. If you&apos;re also dealing with <Link href="/blog/adhd-and-anxiety-gang-up" className="text-blue-600 hover:underline">ADHD and anxiety together</Link>, the gold dust drain accelerates even faster.
+                This is why you might find yourself completely exhausted by 2 PM even though you haven&apos;t actually accomplished much. It&apos;s not that you&apos;re lazy or unmotivated. Your brain has been working overtime just to navigate the constant stream of choices that make up daily life. If you&apos;re also dealing with <Link href="/blog/adhd-and-anxiety-gang-up" className="text-blue-600 hover:underline">ADHD and anxiety together</Link>, the gold dust drain accelerates even faster.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">The Cumulative Effect: How Small Decisions Add Up</h2>
               <p className="blog-body">
-                Every &quot;what should I do next?&quot; moment is a tax on your executive function. Every time you open your fridge and wonder what to eat, every time you look at your to-do list and struggle to pick a task, every time you switch between apps wondering which one to use—you&apos;re spending gold dust you can&apos;t afford to lose.
+                Every &quot;what should I do next?&quot; moment is a tax on your executive function. Every time you open your fridge and wonder what to eat, every time you look at your to-do list and struggle to pick a task, every time you switch between apps wondering which one to use: you&apos;re spending gold dust you can&apos;t afford to lose.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                For ADHD brains, this cumulative effect is profound. By mid-afternoon, your decision-making ability is so depleted that even simple choices feel overwhelming. This is when you&apos;re most likely to make poor decisions—grabbing unhealthy snacks, procrastinating on important tasks, or scrolling mindlessly on your phone. These aren&apos;t character flaws; they&apos;re symptoms of gold dust depletion.
+                For ADHD brains, this cumulative effect is profound. By mid-afternoon, your decision-making ability is so depleted that even simple choices feel overwhelming. This is when you&apos;re most likely to make poor decisions, grabbing unhealthy snacks, procrastinating on important tasks, or scrolling mindlessly on your phone. These aren&apos;t character flaws; they&apos;re symptoms of gold dust depletion.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The traditional solution—&quot;just be more disciplined&quot; or &quot;make better choices&quot;—completely misses the point. You can&apos;t willpower your way out of gold dust depletion. What you need is a system that reduces the number of decisions you have to make in the first place. This is where <strong>Romi</strong> and the principles of smart ADHD support become game-changers.
+                The traditional solution, &quot;just be more disciplined&quot; or &quot;make better choices&quot;, completely misses the point. You can&apos;t willpower your way out of gold dust depletion. What you need is a system that reduces the number of decisions you have to make in the first place. This is where <strong>Romi</strong> and the principles of smart ADHD support become game-changers.
               </p>
               <br />
               <br />
@@ -103,7 +103,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <h2 className="blog-subheader">The Science Behind AMDs and ADHD</h2>
               <p className="blog-body">
-                Automatic Mental Decisions work because they leverage a different part of your brain—the basal ganglia, which handles habit formation and automatic behaviors. Once a routine becomes a true AMD, it requires minimal prefrontal cortex involvement, which means minimal gold dust expenditure. This is why athletes practice movements until they become automatic, and why experienced drivers don&apos;t consciously think about every action while driving.
+                Automatic Mental Decisions work because they leverage a different part of your brain: the basal ganglia, which handles habit formation and automatic behaviors. Once a routine becomes a true AMD, it requires minimal prefrontal cortex involvement, which means minimal gold dust expenditure. This is why athletes practice movements until they become automatic, and why experienced drivers don&apos;t consciously think about every action while driving.
               </p>
               <br />
               <br />
@@ -114,7 +114,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <h2 className="blog-subheader">Living with More Gold Dust: What Changes</h2>
               <p className="blog-body">
-                When you preserve your gold dust through AMDs and proper support systems, the changes in your life can be dramatic. You&apos;ll notice you have energy for things that used to feel impossible—calling that friend back, pursuing a hobby, exercising consistently, or simply having mental space to be present with loved ones.
+                When you preserve your gold dust through AMDs and proper support systems, the changes in your life can be dramatic. You&apos;ll notice you have energy for things that used to feel impossible: calling that friend back, pursuing a hobby, exercising consistently, or simply having mental space to be present with loved ones.
               </p>
               <br />
               <br />
@@ -124,7 +124,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You don&apos;t have to live every day feeling like a marathon. By using smart tools to automate the small, repetitive decisions, you protect your gold dust, gain more mental clarity, and finally have the energy to show up for the things that truly matter in your life. The goal isn&apos;t to be more productive in the traditional sense—it&apos;s to have more life energy available for what makes life worth living.
+                You don&apos;t have to live every day feeling like a marathon. By using smart tools to automate the small, repetitive decisions, you protect your gold dust, gain more mental clarity, and finally have the energy to show up for the things that truly matter in your life. The goal isn&apos;t to be more productive in the traditional sense. It&apos;s to have more life energy available for what makes life worth living.
               </p>
               <br />
               <br />
@@ -135,7 +135,7 @@ const GoldDustTheoryBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to stop wasting your gold dust on endless decisions?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that automates routine decisions and helps you build AMDs that actually stick. Preserve your mental energy for what matters most.
+                  <strong>Ready to stop wasting your gold dust on endless decisions?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that automates routine decisions and helps you build AMDs that actually stick. Preserve your mental energy for what matters most.
                 </p>
               </div>
               <br />

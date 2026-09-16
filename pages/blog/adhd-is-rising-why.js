@@ -23,26 +23,26 @@ const ADHDRisingBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD diagnoses increased by 1 million children between 2016 and 2022—reaching 7 million total in the U.S.</li>
+                  <li>ADHD diagnoses increased by 1 million children between 2016 and 2022, reaching 7 million total in the U.S.</li>
                   <li>The modern world&apos;s constant digital stimulation is amplifying ADHD symptoms in people who already have it</li>
-                  <li>Instant gratification from screens trains your brain to crave dopamine hits—making real work feel impossible</li>
-                  <li>You can&apos;t keep using the same broken tools and expect different results—you need systems built FOR your brain</li>
+                  <li>Instant gratification from screens trains your brain to crave dopamine hits, making real work feel impossible</li>
+                  <li>You can&apos;t keep using the same broken tools and expect different results. You need systems built FOR your brain</li>
                   <li>Taking control requires reducing noise, implementing ADHD-friendly systems, and working WITH your neurology</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                ADHD is exploding. The numbers don&apos;t lie. And it&apos;s not just because people suddenly decided they have it. The world we&apos;re living in is actively making ADHD symptoms worse—for people who have it AND for people who might be developing ADHD-like symptoms because of modern life. If you&apos;re feeling like your ADHD is getting harder to manage, you&apos;re not imagining it. Let me show you why.
+                ADHD is exploding. The numbers don&apos;t lie. And it&apos;s not just because people suddenly decided they have it. The world we&apos;re living in is actively making ADHD symptoms worse, for people who have it AND for people who might be developing ADHD-like symptoms because of modern life. If you&apos;re feeling like your ADHD is getting harder to manage, you&apos;re not imagining it. Let me show you why.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Here&apos;s the reality: over 7 million U.S. children aged 3-17 have been diagnosed with ADHD as of 2022—that&apos;s 1 million more than in 2016. That&apos;s not a small increase. That&apos;s a massive shift happening right in front of us. And adults? The numbers are climbing there too, with millions seeking evaluations and treatment for the first time in their lives.
+                Here&apos;s the reality: over 7 million U.S. children aged 3-17 have been diagnosed with ADHD as of 2022. That&apos;s 1 million more than in 2016. That&apos;s not a small increase. That&apos;s a massive shift happening right in front of us. And adults? The numbers are climbing there too, with millions seeking evaluations and treatment for the first time in their lives.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                So what&apos;s driving this? Is ADHD actually becoming more common, or are we just getting better at diagnosing it? The truth is both—but there&apos;s a third factor that nobody talks about enough: the modern world is designed in a way that makes ADHD symptoms exponentially worse. And if you already have ADHD, you&apos;re feeling it harder than ever.
+                So what&apos;s driving this? Is ADHD actually becoming more common, or are we just getting better at diagnosing it? The truth is both, but there&apos;s a third factor that nobody talks about enough: the modern world is designed in a way that makes ADHD symptoms exponentially worse. And if you already have ADHD, you&apos;re feeling it harder than ever.
               </p>
               <br />
               <br />
@@ -53,7 +53,7 @@ const ADHDRisingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                For neurotypical brains, this is distracting. For ADHD brains, this is devastating. Why? Because excessive screen time overstimulates the brain&apos;s reward system, making it harder to focus on less stimulating tasks. Your ADHD brain already struggles with dopamine regulation. Now you&apos;re training it to expect instant hits of stimulation every few seconds. Real work—the kind that requires sustained attention and delayed gratification—becomes neurologically impossible.
+                For neurotypical brains, this is distracting. For ADHD brains, this is devastating. Why? Because excessive screen time overstimulates the brain&apos;s reward system, making it harder to focus on less stimulating tasks. Your ADHD brain already struggles with dopamine regulation. Now you&apos;re training it to expect instant hits of stimulation every few seconds. Real work, the kind that requires sustained attention and delayed gratification, becomes neurologically impossible.
               </p>
               <br />
               <br />
@@ -69,7 +69,7 @@ const ADHDRisingBlog = () => {
               <br />
               <h2 className="blog-subheader">We&apos;ve Developed Mini-Dopamine Addiction</h2>
               <p className="blog-body">
-                Here&apos;s what&apos;s actually happening in your brain: Over the past decade, we&apos;ve all developed behavioral patterns that deliver quick dopamine hits. Check Instagram—dopamine. Refresh email—dopamine. Watch a TikTok—dopamine. These behaviors happen so frequently that they become subconscious. You don&apos;t even realize you&apos;re doing it anymore.
+                Here&apos;s what&apos;s actually happening in your brain: Over the past decade, we&apos;ve all developed behavioral patterns that deliver quick dopamine hits. Check Instagram, dopamine. Refresh email, dopamine. Watch a TikTok, dopamine. These behaviors happen so frequently that they become subconscious. You don&apos;t even realize you&apos;re doing it anymore.
               </p>
               <br />
               <br />
@@ -79,7 +79,7 @@ const ADHDRisingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is where things start to look really similar to ADHD—even for people who might not have had it genetically. The constant dopamine-seeking behavior, the inability to focus, the impulsivity—these are ADHD symptoms being created or intensified by the environment. And if you DO have ADHD? You&apos;re experiencing this 10x worse because your dopamine system was already compromised.
+                This is where things start to look really similar to ADHD, even for people who might not have had it genetically. The constant dopamine-seeking behavior, the inability to focus, the impulsivity. These are ADHD symptoms being created or intensified by the environment. And if you DO have ADHD? You&apos;re experiencing this 10x worse because your dopamine system was already compromised.
               </p>
               <br />
               <br />
@@ -90,7 +90,7 @@ const ADHDRisingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Let me be clear: ADHD is a real neurodevelopmental disorder with a strong genetic component. But what we&apos;re seeing is that environmental factors—specifically the overstimulated, instant-gratification world we live in—can create ADHD-like symptoms in people who don&apos;t have the genetic predisposition. And for people who DO have ADHD genetically, the modern world is making their symptoms exponentially worse.
+                Let me be clear: ADHD is a real neurodevelopmental disorder with a strong genetic component. But what we&apos;re seeing is that environmental factors (specifically the overstimulated, instant-gratification world we live in) can create ADHD-like symptoms in people who don&apos;t have the genetic predisposition. And for people who DO have ADHD genetically, the modern world is making their symptoms exponentially worse.
               </p>
               <br />
               <br />
@@ -117,7 +117,7 @@ const ADHDRisingBlog = () => {
               <br />
               <h2 className="blog-subheader">The Brutal Truth: Your Old Tools Don&apos;t Work Anymore</h2>
               <p className="blog-body">
-                Here&apos;s what you need to hear: You can&apos;t keep doing things the way you&apos;ve been doing them and expect different results. The strategies that maybe worked before—using willpower, trying harder, setting better intentions—they&apos;re not going to cut it in this environment. The modern world has changed too much, and your ADHD symptoms have gotten worse as a result.
+                Here&apos;s what you need to hear: You can&apos;t keep doing things the way you&apos;ve been doing them and expect different results. The strategies that maybe worked before (using willpower, trying harder, setting better intentions) are not going to cut it in this environment. The modern world has changed too much, and your ADHD symptoms have gotten worse as a result.
               </p>
               <br />
               <br />
@@ -135,7 +135,7 @@ const ADHDRisingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                None of that works. Not anymore. Not in this world. You need something fundamentally different—tools that actually work WITH your ADHD brain instead of demanding that you overcome it through sheer force of will.
+                None of that works. Not anymore. Not in this world. You need something fundamentally different, tools that actually work WITH your ADHD brain instead of demanding that you overcome it through sheer force of will.
               </p>
               <br />
               <br />
@@ -195,10 +195,10 @@ const ADHDRisingBlog = () => {
               <br />
               <ul className="list-disc ml-8 blog-body space-y-3">
                 <li><strong>It Reduces Noise:</strong> Instead of adding more complexity to your life, it simplifies everything into clear, actionable steps. No overwhelming lists. No complicated processes. Just what you need to do next.</li>
-                <li><strong>It Provides External Structure:</strong> Your ADHD brain can&apos;t generate structure internally. Romi provides it externally—reminders, scaffolding, and support that work even when your brain won&apos;t.</li>
+                <li><strong>It Provides External Structure:</strong> Your ADHD brain can&apos;t generate structure internally. Romi provides it externally: reminders, scaffolding, and support that work even when your brain won&apos;t.</li>
                 <li><strong>It Works With Your Dopamine System:</strong> Tasks are broken into micro-steps that give you quick wins and dopamine hits. Your brain gets the reward it craves while you actually get things done.</li>
                 <li><strong>It&apos;s Stupidly Simple:</strong> Complexity kills ADHD productivity. Romi is designed to be so simple that you can use it even when your brain feels like scrambled eggs.</li>
-                <li><strong>It Adapts to Your Capacity:</strong> Good days? Great, tackle more. Bad days? That&apos;s fine too—the system adjusts and keeps you moving forward anyway.</li>
+                <li><strong>It Adapts to Your Capacity:</strong> Good days? Great, tackle more. Bad days? That&apos;s fine too. The system adjusts and keeps you moving forward anyway.</li>
               </ul>
               <br />
               <br />
@@ -212,7 +212,7 @@ const ADHDRisingBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">Stop Waiting—The Problem Is Getting Worse</h2>
+              <h2 className="blog-subheader">Stop Waiting: The Problem Is Getting Worse</h2>
               <p className="blog-body">
                 Here&apos;s the reality: The modern world isn&apos;t going to get less stimulating. Technology isn&apos;t going to become less addictive. The demands on your attention aren&apos;t going to decrease. If anything, all of this is going to get MORE intense.
               </p>
@@ -224,7 +224,7 @@ const ADHDRisingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You can&apos;t afford to keep using broken tools. You can&apos;t afford to keep trying strategies designed for neurotypical brains. You can&apos;t afford to wait for the &quot;perfect time&quot; to get your life under control—because that time isn&apos;t coming.
+                You can&apos;t afford to keep using broken tools. You can&apos;t afford to keep trying strategies designed for neurotypical brains. You can&apos;t afford to wait for the &quot;perfect time&quot; to get your life under control, because that time isn&apos;t coming.
               </p>
               <br />
               <br />
@@ -240,7 +240,7 @@ const ADHDRisingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You deserve tools that work for you. You deserve systems that understand your brain. You deserve to stop feeling like you&apos;re constantly failing when the real problem is that you&apos;ve been using the wrong tools this entire time. The modern world made your ADHD worse—now it&apos;s time to use modern tools to take control back.
+                You deserve tools that work for you. You deserve systems that understand your brain. You deserve to stop feeling like you&apos;re constantly failing when the real problem is that you&apos;ve been using the wrong tools this entire time. The modern world made your ADHD worse. Now it&apos;s time to use modern tools to take control back.
               </p>
               <br />
               <br />
@@ -250,13 +250,13 @@ const ADHDRisingBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Stop scrolling. Stop waiting. Stop pretending that trying harder will fix this. Start using tools that actually work for how your brain operates. The world isn&apos;t going to get easier—but you can get better equipped to handle it.
+                Stop scrolling. Stop waiting. Stop pretending that trying harder will fix this. Start using tools that actually work for how your brain operates. The world isn&apos;t going to get easier, but you can get better equipped to handle it.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop fighting the modern world and start working with your brain?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD system designed for the chaos of modern life. Less noise. More structure. Actually built for your brain.
+                  <strong>Ready to stop fighting the modern world and start working with your brain?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD system designed for the chaos of modern life. Less noise. More structure. Actually built for your brain.
                 </p>
               </div>
               <br />

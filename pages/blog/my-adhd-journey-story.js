@@ -24,10 +24,10 @@ const ADHDJourneyBlog = () => {
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
                   <li>Diagnosed with severe combined ADHD at age 10, kicked out of 7+ schools with &lt;30% attendance</li>
-                  <li>Discovering the ADHD community at 14 changed everything—for the first time, I wasn&apos;t alone</li>
+                  <li>Discovering the ADHD community at 14 changed everything. For the first time, I wasn&apos;t alone</li>
                   <li>8 years of obsessive learning about ADHD transformed me from &quot;naughty kid&quot; to University graduate with two A*s and an A</li>
                   <li>Now running a company, in control of my ADHD almost every day through systems built specifically for my brain</li>
-                  <li>Your past identity does NOT define your future—you can rewrite every negative attribute you hold about yourself</li>
+                  <li>Your past identity does NOT define your future. You can rewrite every negative attribute you hold about yourself</li>
                 </ul>
               </div>
 
@@ -111,12 +111,12 @@ const ADHDJourneyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                I dove DEEP into understanding my ADHD—not through the lens of what society says, but what it actually means for me.
+                I dove DEEP into understanding my ADHD, not through the lens of what society says, but what it actually means for me.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9403235/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on adult ADHD experiences</a> shows that understanding your specific presentation of ADHD—not just accepting the label—is what transforms outcomes. Self-knowledge is the foundation for everything else.
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9403235/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on adult ADHD experiences</a> shows that understanding your specific presentation of ADHD, not just accepting the label, is what transforms outcomes. Self-knowledge is the foundation for everything else.
               </p>
               <br />
               <br />
@@ -444,7 +444,7 @@ const ADHDJourneyBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md" role="complementary" aria-label="Call to Action">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to start your own transformation?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the system I built using everything I learned about ADHD over 8 years. Designed specifically for ADHD brains to externalize working memory, build sustainable systems, and finally gain control. Start rewriting your story today.
+                  <strong>Ready to start your own transformation?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the system I built using everything I learned about ADHD over 8 years. Designed specifically for ADHD brains to externalize working memory, build sustainable systems, and finally gain control. Start rewriting your story today.
                 </p>
               </div>
               <br />

@@ -23,11 +23,11 @@ const ADHDManagementBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8 shadow-sm">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
-                  <li>ADHD medication is one valuable tool, but not the only tool—comprehensive management includes support systems, structure, and lifestyle factors</li>
+                  <li>ADHD medication is one valuable tool, but not the only tool. Comprehensive management includes support systems, structure, and lifestyle factors</li>
                   <li>Medication works differently for everyone; what helps one person may not help another</li>
                   <li>External support systems become even more critical if you choose to manage ADHD without medication</li>
                   <li>The most effective ADHD management combines multiple approaches tailored to your unique neurology</li>
-                  <li>Success isn&apos;t about perfection—it&apos;s about finding what makes your life more manageable</li>
+                  <li>Success isn&apos;t about perfection. It&apos;s about finding what makes your life more manageable</li>
                 </ul>
               </div>
 
@@ -48,7 +48,7 @@ const ADHDManagementBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                But here&apos;s what&apos;s crucial to understand: ADHD medication is not a cure. It&apos;s a tool that can make your ADHD symptoms more manageable while it&apos;s active in your system. Think of it like glasses for someone with poor vision—they help you see clearly while you&apos;re wearing them, but they don&apos;t fix your eyes. Similarly, ADHD medication helps your brain function more typically while it&apos;s working, but it doesn&apos;t change your underlying neurology.
+                But here&apos;s what&apos;s crucial to understand: ADHD medication is not a cure. It&apos;s a tool that can make your ADHD symptoms more manageable while it&apos;s active in your system. Think of it like glasses for someone with poor vision. They help you see clearly while you&apos;re wearing them, but they don&apos;t fix your eyes. Similarly, ADHD medication helps your brain function more typically while it&apos;s working, but it doesn&apos;t change your underlying neurology.
               </p>
               <br />
               <br />
@@ -75,13 +75,13 @@ const ADHDManagementBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The decision to use or not use medication is deeply personal and should be made in consultation with qualified healthcare providers who understand your specific situation. There&apos;s no moral superiority in either direction—the best choice is the one that improves your quality of life.
+                The decision to use or not use medication is deeply personal and should be made in consultation with qualified healthcare providers who understand your specific situation. There&apos;s no moral superiority in either direction. The best choice is the one that improves your quality of life.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">Comprehensive ADHD Management: Beyond Medication</h2>
               <p className="blog-body">
-                Whether you use medication or not, comprehensive ADHD management requires multiple strategies working together. Medication alone—without support systems, structure, and lifestyle management—rarely provides complete symptom control. Similarly, non-medication strategies work best when combined thoughtfully.
+                Whether you use medication or not, comprehensive ADHD management requires multiple strategies working together. Medication alone (without support systems, structure, and lifestyle management) rarely provides complete symptom control. Similarly, non-medication strategies work best when combined thoughtfully.
               </p>
               <br />
               <br />
@@ -91,17 +91,17 @@ const ADHDManagementBlog = () => {
               <br />
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-4">
-                <li><strong>External Support Systems:</strong> This is where tools like <strong>Romi</strong> become invaluable. External support systems handle the executive function tasks your ADHD brain struggles with—remembering, organizing, prioritizing, initiating tasks. When you externalize these functions, you free up mental resources and reduce the cognitive load that leads to exhaustion and overwhelm. This is especially critical if you&apos;re managing ADHD without medication, as you need extra support to compensate for the executive function challenges.</li>
+                <li><strong>External Support Systems:</strong> This is where tools like <strong>Romi</strong> become invaluable. External support systems handle the executive function tasks your ADHD brain struggles with: remembering, organizing, prioritizing, initiating tasks. When you externalize these functions, you free up mental resources and reduce the cognitive load that leads to exhaustion and overwhelm. This is especially critical if you&apos;re managing ADHD without medication, as you need extra support to compensate for the executive function challenges.</li>
                 <li><strong>Environmental Design:</strong> Your environment can either support or sabotage your ADHD management. Reduce visual clutter, create designated spaces for specific activities, use timers and visual reminders, minimize distractions during focus work. The right environment reduces friction and makes functioning easier regardless of medication status.</li>
                 <li><strong>Routine and Structure:</strong> ADHD brains struggle with creating internal structure, so external structure becomes essential. This doesn&apos;t mean rigid schedules (which often fail for ADHD), but rather flexible frameworks that provide direction without suffocation. As discussed in our guide to <Link href="/blog/adhd-and-routines" className="text-blue-600 hover:underline">building sustainable ADHD habits</Link>, routines need to be adaptive, externally supported, and dopamine-friendly.</li>
-                <li><strong>Physical Health Foundations:</strong> Sleep, nutrition, and exercise significantly impact ADHD symptoms. Poor sleep amplifies every ADHD challenge. Protein-rich meals help stabilize energy and focus. Regular exercise provides natural dopamine boosts and improves executive function. These aren&apos;t lifestyle &quot;bonuses&quot;—they&apos;re foundational to ADHD management.</li>
-                <li><strong>Stress Management:</strong> Chronic stress depletes the already-limited executive function resources in ADHD brains. Techniques like mindfulness, deep breathing, and nervous system regulation aren&apos;t optional wellness practices—they&apos;re necessary tools for maintaining function. Understanding <Link href="/blog/stuck-in-fight-flight-or-scroll" className="text-blue-600 hover:underline">nervous system dysregulation</Link> helps you recognize when you need to prioritize regulation over productivity.</li>
+                <li><strong>Physical Health Foundations:</strong> Sleep, nutrition, and exercise significantly impact ADHD symptoms. Poor sleep amplifies every ADHD challenge. Protein-rich meals help stabilize energy and focus. Regular exercise provides natural dopamine boosts and improves executive function. These aren&apos;t lifestyle &quot;bonuses&quot;. They&apos;re foundational to ADHD management.</li>
+                <li><strong>Stress Management:</strong> Chronic stress depletes the already-limited executive function resources in ADHD brains. Techniques like mindfulness, deep breathing, and nervous system regulation aren&apos;t optional wellness practices. They&apos;re necessary tools for maintaining function. Understanding <Link href="/blog/stuck-in-fight-flight-or-scroll" className="text-blue-600 hover:underline">nervous system dysregulation</Link> helps you recognize when you need to prioritize regulation over productivity.</li>
                 <li><strong>Social Support:</strong> ADHD is harder to manage in isolation. Whether it&apos;s friends who understand your neurology, support groups, therapy, or coaching, having people who &quot;get it&quot; reduces the shame and isolation that make ADHD symptoms worse.</li>
               </ol>
               <br />
               <br />
               <p className="blog-body">
-                Many people discover that when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">chronically exhausted</Link>, no amount of medication can compensate for unsustainable patterns—they need to fundamentally change how they approach work and life.
+                Many people discover that when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">chronically exhausted</Link>, no amount of medication can compensate for unsustainable patterns. They need to fundamentally change how they approach work and life.
               </p>
               <br />
               <br />
@@ -114,7 +114,7 @@ const ADHDManagementBlog = () => {
               <ul className="list-disc ml-8 blog-body space-y-3">
                 <li><strong>Memory Externalization:</strong> You don&apos;t have to hold everything in your working memory anymore. The system remembers for you, reducing the constant mental load of &quot;Don&apos;t forget... don&apos;t forget...&quot; that exhausts ADHD brains.</li>
                 <li><strong>Task Initiation Support:</strong> The hardest part of any task for ADHD brains is starting. Modern ADHD support breaks tasks into micro-steps so small that initiation becomes possible even when executive function is depleted.</li>
-                <li><strong>Organization Without Overwhelm:</strong> Traditional organization systems require you to be organized to use them—a cruel irony for ADHD brains. Adaptive tools accept your chaos as input and return structure as output.</li>
+                <li><strong>Organization Without Overwhelm:</strong> Traditional organization systems require you to be organized to use them, a cruel irony for ADHD brains. Adaptive tools accept your chaos as input and return structure as output.</li>
                 <li><strong>Capacity-Aware Planning:</strong> The system adjusts to your current capacity rather than demanding consistent performance. On low-function days, it simplifies automatically. On high-function days, it challenges you appropriately.</li>
                 <li><strong>Medication Reminders:</strong> For those who do use medication, consistent timing matters. Gentle reminders ensure you don&apos;t miss doses, preventing the rollercoaster of inconsistent medication effects.</li>
               </ul>
@@ -155,7 +155,7 @@ const ADHDManagementBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The goal isn&apos;t to be pro-medication or anti-medication—it&apos;s to be pro-whatever-improves-your-life. <a href="https://chadd.org/for-adults/using-medication-to-manage-adhd-symptoms/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CHADD&apos;s medication guidelines</a> emphasize that the best ADHD treatment is individualized and combines multiple approaches.
+                The goal isn&apos;t to be pro-medication or anti-medication. It&apos;s to be pro-whatever-improves-your-life. <a href="https://chadd.org/for-adults/using-medication-to-manage-adhd-symptoms/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">CHADD&apos;s medication guidelines</a> emphasize that the best ADHD treatment is individualized and combines multiple approaches.
               </p>
               <br />
               <br />
@@ -170,7 +170,7 @@ const ADHDManagementBlog = () => {
                 <li>Building dopamine-friendly systems that work with your reward system rather than fighting it</li>
                 <li>Creating flexibility in your routines and expectations so variability doesn&apos;t equal failure</li>
                 <li>Prioritizing the foundations (sleep, nutrition, stress management) that impact all ADHD symptoms</li>
-                <li>Using whatever tools—pharmaceutical or otherwise—improve your quality of life without apology</li>
+                <li>Using whatever tools improve your quality of life, pharmaceutical or otherwise, without apology</li>
               </ul>
               <br />
               <br />
@@ -186,7 +186,7 @@ const ADHDManagementBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Looking for comprehensive ADHD support beyond medication?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that handles executive function challenges whether you use medication or not. External support that works with your brain, adapts to your capacity, and makes life more manageable.
+                  <strong>Looking for comprehensive ADHD support beyond medication?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that handles executive function challenges whether you use medication or not. External support that works with your brain, adapts to your capacity, and makes life more manageable.
                 </p>
               </div>
               <br />

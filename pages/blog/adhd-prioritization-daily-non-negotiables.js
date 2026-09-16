@@ -24,7 +24,7 @@ const ADHDPrioritizationBlog = () => {
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800">
                   <li>ADHD decision paralysis happens when you can&apos;t decide what to work on, so you half-focus on everything and accomplish nothing</li>
-                  <li>The problem isn&apos;t doing more—it&apos;s doing the right thing at the right time</li>
+                  <li>The problem isn&apos;t doing more. It&apos;s doing the right thing at the right time</li>
                   <li>The Daily Prioritization Matrix (DPM) helps you identify 2 must-do tasks and 1 nice-to-do task each day</li>
                   <li>Rigid prioritization systems prevent the momentum loss that leads to ADHD ruts</li>
                   <li>Without clear priorities, you lose control of everything and fall into a cycle that&apos;s difficult to escape</li>
@@ -53,7 +53,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This isn&apos;t dramatic—this is the actual ADHD experience. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12438291/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and decision paralysis</a> shows that 82% of adults with ADHD report frequent difficulties with decision-making, and 68% say this paralysis significantly affects their work performance.
+                This isn&apos;t dramatic. This is the actual ADHD experience. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12438291/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and decision paralysis</a> shows that 82% of adults with ADHD report frequent difficulties with decision-making, and 68% say this paralysis significantly affects their work performance.
               </p>
               <br />
               <br />
@@ -99,7 +99,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The ADHD brain can work incredibly hard. You know this because you&apos;ve experienced periods of hyperfocus where you accomplish more in four hours than most people do in a week. The problem isn&apos;t your capacity for work—it&apos;s your ability to consistently direct that work toward what actually matters.
+                The ADHD brain can work incredibly hard. You know this because you&apos;ve experienced periods of hyperfocus where you accomplish more in four hours than most people do in a week. The problem isn&apos;t your capacity for work. It&apos;s your ability to consistently direct that work toward what actually matters.
               </p>
               <br />
               <br />
@@ -119,13 +119,13 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Many people discover that their struggles with ADHD prioritization are connected to <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">decision fatigue and the Gold Dust Theory</Link>—every choice you make depletes your limited executive function reserves.
+                Many people discover that their struggles with ADHD prioritization are connected to <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">decision fatigue and the Gold Dust Theory</Link>, every choice you make depletes your limited executive function reserves.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">The Daily Prioritization Matrix (DPM): Your ADHD Prioritization System</h2>
               <p className="blog-body">
-                Here&apos;s something simple to get you started. I call it the DPM—the Daily Prioritization Matrix. This is not complicated. It&apos;s deliberately simple because complexity is the enemy of ADHD execution.
+                Here&apos;s something simple to get you started. I call it the DPM, the Daily Prioritization Matrix. This is not complicated. It&apos;s deliberately simple because complexity is the enemy of ADHD execution.
               </p>
               <br />
               <br />
@@ -145,7 +145,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Step 2: Pick one smaller and easier nice-to-do task.</strong> Do this one last to keep your day spicy—you&apos;ll be motivated to get through the other ones so you can get to this one.
+                <strong>Step 2: Pick one smaller and easier nice-to-do task.</strong> Do this one last to keep your day spicy. You&apos;ll be motivated to get through the other ones so you can get to this one.
               </p>
               <br />
               <br />
@@ -196,7 +196,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>It externalizes structure.</strong> You&apos;re not relying on internal organization or motivation. The system lives outside your head. You write it down. You schedule it. You follow it. Your brain doesn&apos;t have to do the organizing—the system does.
+                <strong>It externalizes structure.</strong> You&apos;re not relying on internal organization or motivation. The system lives outside your head. You write it down. You schedule it. You follow it. Your brain doesn&apos;t have to do the organizing. The system does.
               </p>
               <br />
               <br />
@@ -227,7 +227,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Write it down physically.</strong> Don&apos;t just think about your DPM—write it. Use a physical planner, a sticky note, a whiteboard, whatever. The act of writing engages your brain differently and makes the commitment more real. Plus, physical reminders are harder to ignore than digital ones.
+                <strong>Write it down physically.</strong> Don&apos;t just think about your DPM, write it. Use a physical planner, a sticky note, a whiteboard, whatever. The act of writing engages your brain differently and makes the commitment more real. Plus, physical reminders are harder to ignore than digital ones.
               </p>
               <br />
               <br />
@@ -242,7 +242,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Protect your time slots fiercely.</strong> When 9:00 AM arrives and it&apos;s time for must-do task one, you do that task. Not in five minutes. Not after you check email. Now. The time slot is sacred. Treat it like a meeting with your most important client—because it is.
+                <strong>Protect your time slots fiercely.</strong> When 9:00 AM arrives and it&apos;s time for must-do task one, you do that task. Not in five minutes. Not after you check email. Now. The time slot is sacred. Treat it like a meeting with your most important client, because it is.
               </p>
               <br />
               <br />
@@ -273,7 +273,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is the cost of poor ADHD prioritization. Not just lost productivity—lost confidence. Lost momentum. Lost sense of control over your own life.
+                This is the cost of poor ADHD prioritization. Not just lost productivity, lost confidence. Lost momentum. Lost sense of control over your own life.
               </p>
               <br />
               <br />
@@ -293,7 +293,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Many people find that when they&apos;re <Link href="/blog/stuck-in-fight-flight-or-scroll" className="text-blue-600 hover:underline">stuck in fight, flight, or freeze</Link>, their ability to prioritize effectively disappears completely—making nervous system regulation a prerequisite for good prioritization.
+                Many people find that when they&apos;re <Link href="/blog/stuck-in-fight-flight-or-scroll" className="text-blue-600 hover:underline">stuck in fight, flight, or freeze</Link>, their ability to prioritize effectively disappears completely, making nervous system regulation a prerequisite for good prioritization.
               </p>
               <br />
               <br />
@@ -330,7 +330,7 @@ const ADHDPrioritizationBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">Stop Deciding in the Moment—Decide in Advance</h2>
+              <h2 className="blog-subheader">Stop Deciding in the Moment: Decide in Advance</h2>
               <p className="blog-body">
                 The fundamental shift that makes ADHD prioritization possible is this: stop deciding what to work on in the moment. Decide in advance.
               </p>
@@ -342,7 +342,7 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                But when you decide the night before or first thing in the morning—when your mind is relatively clear—you make better choices. You can think about what actually matters. You can resist the pull of urgent-but-unimportant tasks. You can prioritize strategically rather than reactively.
+                But when you decide the night before or first thing in the morning, when your mind is relatively clear, you make better choices. You can think about what actually matters. You can resist the pull of urgent-but-unimportant tasks. You can prioritize strategically rather than reactively.
               </p>
               <br />
               <br />
@@ -398,13 +398,13 @@ const ADHDPrioritizationBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Then do it again the next day. And the next. And the next. This is how you build ADHD prioritization skills that actually stick—through repetition of a simple system, not through complex frameworks that sound impressive but never get used.
+                Then do it again the next day. And the next. And the next. This is how you build ADHD prioritization skills that actually stick, through repetition of a simple system, not through complex frameworks that sound impressive but never get used.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Want more than just prioritization? Want comprehensive ADHD support that handles memory, organization, and decision-making?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that works with your brain to end decision paralysis and make every day more manageable. Stop drowning in choices. Start getting things done.
+                  <strong>Want more than just prioritization? Want comprehensive ADHD support that handles memory, organization, and decision-making?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that works with your brain to end decision paralysis and make every day more manageable. Stop drowning in choices. Start getting things done.
                 </p>
               </div>
               <br />

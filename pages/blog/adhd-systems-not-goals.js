@@ -24,10 +24,10 @@ const ADHDSystemsNotGoalsBlog = () => {
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800">
                   <li>Goals are temporary bursts that fade. ADHD systems create lasting change by working with your brain, not against it</li>
-                  <li>You don&apos;t rise to the level of your goals—you fall to the level of your systems</li>
+                  <li>You don&apos;t rise to the level of your goals. You fall to the level of your systems</li>
                   <li>Traditional goal-setting fails for ADHD because it requires consistent motivation and executive function we don&apos;t reliably have</li>
                   <li>Building ADHD-friendly systems eliminates the need for constant willpower and creates sustainable progress</li>
-                  <li>Your broken system is why the same goals keep failing—fix the input, and the output fixes itself</li>
+                  <li>Your broken system is why the same goals keep failing. Fix the input, and the output fixes itself</li>
                 </ul>
               </div>
 
@@ -58,7 +58,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Achieving a goal is a temporary change. You might keep your room clean for a moment, but if your system is still broken, within two weeks your room is gonna look like a bomb hit it again. And as a result, you&apos;ll keep chasing the same goal—again and again—hoping for bursts of motivation that never last.
+                Achieving a goal is a temporary change. You might keep your room clean for a moment, but if your system is still broken, within two weeks your room is gonna look like a bomb hit it again. And as a result, you&apos;ll keep chasing the same goal, again and again, hoping for bursts of motivation that never last.
               </p>
               <br />
               <br />
@@ -82,9 +82,9 @@ const ADHDSystemsNotGoalsBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">You Don&apos;t Rise to Your Goals—You Fall to Your Systems</h2>
+              <h2 className="blog-subheader">You Don&apos;t Rise to Your Goals: You Fall to Your Systems</h2>
               <p className="blog-body">
-                Here&apos;s the principle that changes everything: you don&apos;t rise to the level of your goals—you fall to the level of your systems.
+                Here&apos;s the principle that changes everything: you don&apos;t rise to the level of your goals. You fall to the level of your systems.
               </p>
               <br />
               <br />
@@ -99,7 +99,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Let&apos;s be concrete. Say your goal is to exercise regularly. If you rely on motivation and willpower, you&apos;ll exercise when you feel like it—which for ADHD brains might be twice a month when hyperfocus kicks in. But if you build a system, you transform the entire equation.
+                Let&apos;s be concrete. Say your goal is to exercise regularly. If you rely on motivation and willpower, you&apos;ll exercise when you feel like it, which for ADHD brains might be twice a month when hyperfocus kicks in. But if you build a system, you transform the entire equation.
               </p>
               <br />
               <br />
@@ -111,7 +111,7 @@ const ADHDSystemsNotGoalsBlog = () => {
                 <li>Workout scheduled immediately after your morning coffee, so it becomes automatic</li>
                 <li>Accountability partner who texts you if you don&apos;t show up, providing external structure</li>
                 <li>Playlist that only gets played during workouts, creating a dopamine-triggering cue</li>
-                <li>Reward built in immediately after—maybe your favorite podcast only during the cool-down</li>
+                <li>Reward built in immediately after, maybe your favorite podcast only during the cool-down</li>
               </ul>
               <br />
               <br />
@@ -132,7 +132,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Your prefrontal cortex, responsible for planning and impulse control, is underactive. This means initiating tasks, following through on intentions, and resisting distractions are all significantly harder for you than for neurotypical people. Not because you&apos;re lazy—because your brain literally functions differently.
+                Your prefrontal cortex, responsible for planning and impulse control, is underactive. This means initiating tasks, following through on intentions, and resisting distractions are all significantly harder for you than for neurotypical people. Not because you&apos;re lazy, because your brain literally functions differently.
               </p>
               <br />
               <br />
@@ -147,7 +147,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                These aren&apos;t character flaws. They&apos;re measurable differences in brain function. And they mean that traditional goal-setting advice—which assumes consistent executive function and intrinsic motivation—simply doesn&apos;t work for you.
+                These aren&apos;t character flaws. They&apos;re measurable differences in brain function. And they mean that traditional goal-setting advice, which assumes consistent executive function and intrinsic motivation, simply doesn&apos;t work for you.
               </p>
               <br />
               <br />
@@ -178,7 +178,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Adaptive, not rigid.</strong> ADHD brains don&apos;t do well with inflexibility. Your system needs to bend without breaking. If you miss a day, the system doesn&apos;t collapse—it accommodates and continues.
+                <strong>Adaptive, not rigid.</strong> ADHD brains don&apos;t do well with inflexibility. Your system needs to bend without breaking. If you miss a day, the system doesn&apos;t collapse. It accommodates and continues.
               </p>
               <br />
               <br />
@@ -204,7 +204,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                A morning routine system might include a physical checklist stuck to your bathroom mirror, so you can&apos;t avoid seeing it. Each item takes less than two minutes, reducing friction. The entire routine is done before you touch your phone, eliminating distraction. And there&apos;s a reward at the end—maybe your favorite coffee or podcast—that your brain learns to anticipate.
+                A morning routine system might include a physical checklist stuck to your bathroom mirror, so you can&apos;t avoid seeing it. Each item takes less than two minutes, reducing friction. The entire routine is done before you touch your phone, eliminating distraction. And there&apos;s a reward at the end, maybe your favorite coffee or podcast, that your brain learns to anticipate.
               </p>
               <br />
               <br />
@@ -224,7 +224,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Understanding <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">the Gold Dust Theory</Link> helps explain why systems that reduce decision-making are so critical for ADHD brains—every choice depletes your limited executive function reserves.
+                Understanding <Link href="/blog/adhd-the-hidden-cost-of-choice-the-gold-dust-theory" className="text-blue-600 hover:underline">the Gold Dust Theory</Link> helps explain why systems that reduce decision-making are so critical for ADHD brains: every choice depletes your limited executive function reserves.
               </p>
               <br />
               <br />
@@ -276,12 +276,12 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <strong>Step 3: Design the system to fix that specific breakdown.</strong> If you forget, externalize it—set alarms, create visual cues, use location triggers. If there&apos;s too much friction, reduce steps—make it so easy you can do it on your worst day. If there&apos;s no reward, build one in—gamify it, add accountability, create instant gratification.
+                <strong>Step 3: Design the system to fix that specific breakdown.</strong> If you forget, externalize it, set alarms, create visual cues, use location triggers. If there&apos;s too much friction, reduce steps, make it so easy you can do it on your worst day. If there&apos;s no reward, build one in, gamify it, add accountability, create instant gratification.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                <strong>Step 4: Test and iterate.</strong> Your first system won&apos;t be perfect. That&apos;s fine. Run it for a week. See what breaks. Adjust. The goal isn&apos;t perfection—it&apos;s continuous improvement.
+                <strong>Step 4: Test and iterate.</strong> Your first system won&apos;t be perfect. That&apos;s fine. Run it for a week. See what breaks. Adjust. The goal isn&apos;t perfection. It&apos;s continuous improvement.
               </p>
               <br />
               <br />
@@ -296,7 +296,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Many people find that when they&apos;re <Link href="/blog/stuck-in-fight-flight-or-scroll" className="text-blue-600 hover:underline">stuck in nervous system dysregulation</Link>, even the best systems struggle—which is why addressing your baseline state is part of building sustainable ADHD systems.
+                Many people find that when they&apos;re <Link href="/blog/stuck-in-fight-flight-or-scroll" className="text-blue-600 hover:underline">stuck in nervous system dysregulation</Link>, even the best systems struggle, which is why addressing your baseline state is part of building sustainable ADHD systems.
               </p>
               <br />
               <br />
@@ -312,7 +312,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You can&apos;t. And that&apos;s not a failing—it&apos;s neurology. Your brain needs external scaffolding to compensate for the executive function challenges you face. This might mean:
+                You can&apos;t. And that&apos;s not a failing. It&apos;s neurology. Your brain needs external scaffolding to compensate for the executive function challenges you face. This might mean:
               </p>
               <ul className="list-disc ml-8 blog-body">
                 <li>Digital tools that handle memory, reminders, and organization</li>
@@ -324,12 +324,12 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is where modern ADHD support becomes invaluable. Tools like <strong>Romi</strong> provide the external structure your brain needs. They handle the executive function tasks—remembering, organizing, prioritizing, initiating—that your ADHD brain struggles with. When you externalize these functions, you free up mental resources and reduce the cognitive load that leads to exhaustion and overwhelm.
+                This is where modern ADHD support becomes invaluable. Tools like <strong>Romi</strong> provide the external structure your brain needs. They handle the executive function tasks (remembering, organizing, prioritizing, initiating) that your ADHD brain struggles with. When you externalize these functions, you free up mental resources and reduce the cognitive load that leads to exhaustion and overwhelm.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Think about it this way: if you had a physical disability that made walking difficult, you wouldn&apos;t judge yourself for using a wheelchair. You&apos;d recognize that the wheelchair is a tool that enables you to function. External ADHD systems are exactly the same. They&apos;re not crutches that make you weak—they&apos;re tools that make you functional.
+                Think about it this way: if you had a physical disability that made walking difficult, you wouldn&apos;t judge yourself for using a wheelchair. You&apos;d recognize that the wheelchair is a tool that enables you to function. External ADHD systems are exactly the same. They&apos;re not crutches that make you weak. They&apos;re tools that make you functional.
               </p>
               <br />
               <br />
@@ -369,7 +369,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">Your Goals Aren&apos;t Pointless—But They&apos;re Not Enough</h2>
+              <h2 className="blog-subheader">Your Goals Aren&apos;t Pointless, But They&apos;re Not Enough</h2>
               <p className="blog-body">
                 Let me clarify something: I&apos;m not saying goals are useless. Goals give you direction. They tell you what you&apos;re aiming for. They provide meaning and purpose.
               </p>
@@ -386,7 +386,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Because here&apos;s the beautiful irony: when you stop obsessing over goals and start obsessing over systems, you achieve your goals almost by accident. The systems carry you there automatically. You look up one day and realize you&apos;ve become the person you wanted to be—not through willpower or discipline, but through the accumulation of systems that made that outcome the path of least resistance.
+                Because here&apos;s the beautiful irony: when you stop obsessing over goals and start obsessing over systems, you achieve your goals almost by accident. The systems carry you there automatically. You look up one day and realize you&apos;ve become the person you wanted to be, not through willpower or discipline, but through the accumulation of systems that made that outcome the path of least resistance.
               </p>
               <br />
               <br />
@@ -402,7 +402,7 @@ const ADHDSystemsNotGoalsBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Ready to stop failing at goals and start building systems that actually work?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that provides external structure, handles executive function tasks, and builds systems that work with your brain. Stop fighting yourself. Start building systems.
+                  <strong>Ready to stop failing at goals and start building systems that actually work?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that provides external structure, handles executive function tasks, and builds systems that work with your brain. Stop fighting yourself. Start building systems.
                 </p>
               </div>
               <br />

@@ -25,7 +25,7 @@ const WhySimpleThingsImpossibleBlog = () => {
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
                   <li>ADHD gives you less mental energy (gold dust) to start with than neurotypical people</li>
                   <li>Every task uses MORE of your mental energy than it would for neurotypical brains</li>
-                  <li>Executive function controls your mental energy—and ADHD impairs executive function</li>
+                  <li>Executive function controls your mental energy, and ADHD impairs executive function</li>
                   <li>&quot;Simple&quot; tasks drain you completely because they offer no dopamine reward</li>
                   <li>External support can use its mental gold dust instead of yours, preserving your energy for what matters</li>
                 </ul>
@@ -43,7 +43,7 @@ const WhySimpleThingsImpossibleBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3016271/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and executive function</a> shows that executive function isn&apos;t just one thing—it&apos;s a collection of brain processes including planning, organizing, initiating tasks, regulating emotions, and managing working memory. ADHD significantly impairs all of these functions.
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3016271/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Research on ADHD and executive function</a> shows that executive function isn&apos;t just one thing. It&apos;s a collection of brain processes including planning, organizing, initiating tasks, regulating emotions, and managing working memory. ADHD significantly impairs all of these functions.
               </p>
               <br />
               <br />
@@ -207,7 +207,7 @@ const WhySimpleThingsImpossibleBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                You tell her what you need to achieve—a task you need help breaking down, no matter how simple. And she uses up her mental gold dust (instead of yours) to break it down for you based on your energy levels.
+                You tell her what you need to achieve, a task you need help breaking down, no matter how simple. And she uses up her mental gold dust (instead of yours) to break it down for you based on your energy levels.
               </p>
               <br />
               <br />
@@ -276,7 +276,7 @@ const WhySimpleThingsImpossibleBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to preserve your mental gold dust?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that uses her processing power instead of your limited mental energy. She breaks down tasks, helps you start, and supports you all the way through. Stop wasting gold dust on the small stuff. Start saving it for what you love.
+                  <strong>Ready to preserve your mental gold dust?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that uses her processing power instead of your limited mental energy. She breaks down tasks, helps you start, and supports you all the way through. Stop wasting gold dust on the small stuff. Start saving it for what you love.
                 </p>
               </div>
               <br />

@@ -24,10 +24,10 @@ const YouJustGetMeBlog = () => {
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
                   <li>Being misunderstood is one of the most damaging aspects of living with ADHD</li>
-                  <li>That moment when someone finally &quot;gets it&quot; is transformative—it validates your entire experience</li>
+                  <li>That moment when someone finally &quot;gets it&quot; is transformative. It validates your entire experience</li>
                   <li>Most ADHD struggles come from using tools designed for neurotypical brains</li>
                   <li>Finding support that understands YOUR brain specifically changes everything</li>
-                  <li>You&apos;re not broken—you&apos;ve just been using the wrong instruction manual</li>
+                  <li>You&apos;re not broken. You&apos;ve just been using the wrong instruction manual</li>
                 </ul>
               </div>
 
@@ -78,11 +78,11 @@ const YouJustGetMeBlog = () => {
               </p>
               <br />
               <ul className="list-disc ml-8 blog-body space-y-2">
-                <li>Your working memory isn&apos;t just &quot;a bit forgetful&quot;—it&apos;s fundamentally impaired</li>
-                <li>Your executive function struggles aren&apos;t about effort—they&apos;re neurological</li>
-                <li>Your time blindness isn&apos;t about being bad at planning—your brain literally doesn&apos;t process time normally</li>
-                <li>Your dopamine regulation issues aren&apos;t about lacking willpower—your brain chemistry is different</li>
-                <li>Your emotional dysregulation isn&apos;t about being dramatic—it&apos;s part of ADHD</li>
+                <li>Your working memory isn&apos;t just &quot;a bit forgetful&quot;. It&apos;s fundamentally impaired</li>
+                <li>Your executive function struggles aren&apos;t about effort. They&apos;re neurological</li>
+                <li>Your time blindness isn&apos;t about being bad at planning. Your brain literally doesn&apos;t process time normally</li>
+                <li>Your dopamine regulation issues aren&apos;t about lacking willpower. Your brain chemistry is different</li>
+                <li>Your emotional dysregulation isn&apos;t about being dramatic. It&apos;s part of ADHD</li>
               </ul>
               <br />
               <br />
@@ -93,7 +93,7 @@ const YouJustGetMeBlog = () => {
               <br />
               <h2 className="blog-subheader">The Damage of Feeling Perpetually Misunderstood</h2>
               <p className="blog-body">
-                Being misunderstood isn&apos;t just frustrating—it&apos;s genuinely damaging. When people consistently misinterpret your ADHD symptoms as character flaws, it destroys your self-esteem. You start to believe maybe you ARE just lazy. Maybe you&apos;re just not trying hard enough. Maybe there really is something fundamentally wrong with you.
+                Being misunderstood isn&apos;t just frustrating: it&apos;s genuinely damaging. When people consistently misinterpret your ADHD symptoms as character flaws, it destroys your self-esteem. You start to believe maybe you ARE just lazy. Maybe you&apos;re just not trying hard enough. Maybe there really is something fundamentally wrong with you.
               </p>
               <br />
               <br />
@@ -136,7 +136,7 @@ const YouJustGetMeBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Many people experience this when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">exhausted from trying approaches that don&apos;t work for their brain</Link>—the world keeps telling them to try harder when the real problem is they need different tools.
+                Many people experience this when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">exhausted from trying approaches that don&apos;t work for their brain</Link>, the world keeps telling them to try harder when the real problem is they need different tools.
               </p>
               <br />
               <br />
@@ -174,7 +174,7 @@ const YouJustGetMeBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why finding tools specifically designed for ADHD is so transformative. It&apos;s not that you were doing it wrong before—it&apos;s that you were using the wrong tools entirely. You were trying to build a house with a hammer designed for someone with different hands. Of course it didn&apos;t work.
+                This is why finding tools specifically designed for ADHD is so transformative. It&apos;s not that you were doing it wrong before. It&apos;s that you were using the wrong tools entirely. You were trying to build a house with a hammer designed for someone with different hands. Of course it didn&apos;t work.
               </p>
               <br />
               <br />
@@ -217,7 +217,7 @@ const YouJustGetMeBlog = () => {
               <br />
               <ul className="list-disc ml-8 blog-body space-y-3">
                 <li><strong>Built on Actual ADHD Experience:</strong> This isn&apos;t theoretical. It&apos;s built by someone who lives with ADHD every single day and understands the struggles from the inside.</li>
-                <li><strong>Addresses Real ADHD Barriers:</strong> It doesn&apos;t just help you organize tasks—it helps you overcome the executive dysfunction that prevents you from even starting them.</li>
+                <li><strong>Addresses Real ADHD Barriers:</strong> It doesn&apos;t just help you organize tasks. It helps you overcome the executive dysfunction that prevents you from even starting them.</li>
                 <li><strong>No Fluff or Complexity:</strong> Everything is stripped down to what actually works. No wishy-washy theories. No complicated multi-step processes. Just real tools that produce real results.</li>
                 <li><strong>Validates Your Experience:</strong> Using it feels like having someone say &quot;Yes, I get exactly what you&apos;re going through.&quot; It meets you where you are instead of demanding you be somewhere else.</li>
                 <li><strong>Adapts to Your Brain:</strong> It doesn&apos;t try to fix you or make you more neurotypical. It works with your ADHD brain as it is, compensating for deficits and leveraging strengths.</li>
@@ -229,7 +229,7 @@ const YouJustGetMeBlog = () => {
               </p>
               <br />
               <br />
-              <h2 className="blog-subheader">You&apos;re Not Broken—You&apos;ve Been Using the Wrong Manual</h2>
+              <h2 className="blog-subheader">You&apos;re Not Broken: You&apos;ve Been Using the Wrong Manual</h2>
               <p className="blog-body">
                 Let me be absolutely clear about something: you are not broken. You are not lazy. You are not incompetent. You are not failing at being human. You have ADHD, which means your brain works differently. And for your entire life, you&apos;ve been handed tools and strategies designed for brains that DON&apos;T work like yours.
               </p>
@@ -279,7 +279,7 @@ const YouJustGetMeBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to finally feel understood?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—designed by someone with ADHD who actually gets it. No fluff. No judgment. Just real tools built for your brain. Experience what it feels like when someone finally understands.
+                  <strong>Ready to finally feel understood?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, designed by someone with ADHD who actually gets it. No fluff. No judgment. Just real tools built for your brain. Experience what it feels like when someone finally understands.
                 </p>
               </div>
               <br />

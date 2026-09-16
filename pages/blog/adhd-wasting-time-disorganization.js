@@ -24,7 +24,7 @@ const ADHDBurningTimeBlog = () => {
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
                   <li>ADHD disorganization bleeds time and mental energy you literally cannot spare</li>
                   <li>Every second spent searching, rewriting, or remembering is time you could spend on what matters</li>
-                  <li>Organization isn&apos;t about being perfect—it&apos;s about reclaiming hours of your life daily</li>
+                  <li>Organization isn&apos;t about being perfect. It&apos;s about reclaiming hours of your life daily</li>
                   <li>Systems that work FOR your ADHD brain prevent the chaos that wastes your most valuable resource</li>
                   <li>The cost of disorganization compounds: wasted time, missed opportunities, constant stress, burnout</li>
                 </ul>
@@ -84,7 +84,7 @@ const ADHDBurningTimeBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Think about it—how much of your day is wasted on being scrambled and disorganised?
+                Think about it: how much of your day is wasted on being scrambled and disorganised?
               </p>
               <br />
               <br />
@@ -140,7 +140,7 @@ const ADHDBurningTimeBlog = () => {
                   <tbody>
                       <tr className="bg-white border-b">
                           <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Wasted Time</th>
-                          <td className="px-6 py-4">Searching for lost items, rewriting notes, remembering what you forgot—easily 1-3 hours daily</td>
+                          <td className="px-6 py-4">Searching for lost items, rewriting notes, remembering what you forgot, easily 1-3 hours daily</td>
                           <td className="px-6 py-4">Thousands of hours yearly that could have built businesses, relationships, skills, memories</td>
                       </tr>
                       <tr className="bg-white border-b">
@@ -225,7 +225,7 @@ const ADHDBurningTimeBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Hours I now spend on what I love—growing my business, pursuing my passions, actually living my life.
+                Hours I now spend on what I love, growing my business, pursuing my passions, actually living my life.
               </p>
               <br />
               <br />
@@ -458,7 +458,7 @@ const ADHDBurningTimeBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md" role="complementary" aria-label="Call to Action">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to stop bleeding time?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD companion that gives your brain an external working memory. Say a task out loud and it is captured, scheduled and remembered for you, so you stop spending your day searching, rewriting and re-remembering. Start reclaiming hours today.
+                  <strong>Ready to stop bleeding time?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD companion that gives your brain an external working memory. Say a task out loud and it is captured, scheduled and remembered for you, so you stop spending your day searching, rewriting and re-remembering. Start reclaiming hours today.
                 </p>
               </div>
               <br />

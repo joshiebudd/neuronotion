@@ -22,7 +22,7 @@ const FightFlightScrollBlog = () => {
               <div className="bg-blue-100 border-l-4 border-blue-500 p-6 mb-8">
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800">
-                  <li>ADHD brains spend most of their time dysregulated—either hyperaroused (Fight/Flight) or hypoaroused (Freeze/Scroll)</li>
+                  <li>ADHD brains spend most of their time dysregulated, either hyperaroused (Fight/Flight) or hypoaroused (Freeze/Scroll)</li>
                   <li>Your sensory filters are weak, overwhelming your nervous system with constant input</li>
                   <li>Traditional stress management fails because it doesn&apos;t address the executive function triggers</li>
                   <li>Regulation requires both somatic techniques AND reducing cognitive load through external support</li>
@@ -30,7 +30,7 @@ const FightFlightScrollBlog = () => {
               </div>
 
               <p className="lead blog-body italic">
-                If you have ADHD, you know the feeling of being a walking contradiction: always wired but often exhausted. You swing between hyperarousal (anxious, snappy, overstimulated—Fight or Flight) and hypoarousal (foggy, shut down, unable to move—Freeze or Scroll). This state is known as nervous system dysregulation, and it is wildly common for the ADHD mind.
+                If you have ADHD, you know the feeling of being a walking contradiction: always wired but often exhausted. You swing between hyperarousal (anxious, snappy, overstimulated: Fight or Flight) and hypoarousal (foggy, shut down, unable to move: Freeze or Scroll). This state is known as nervous system dysregulation, and it is wildly common for the ADHD mind.
               </p>
               <br />
               <br />
@@ -40,23 +40,23 @@ const FightFlightScrollBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The exhausting reality is that most people with ADHD spend the majority of their time in some form of dysregulated state. You might not even realize it anymore because it&apos;s become your baseline. The constant low-grade anxiety, the hair-trigger irritability, the sudden crashes into complete apathy—these aren&apos;t personality traits. They&apos;re symptoms of a nervous system that never gets to truly rest.
+                The exhausting reality is that most people with ADHD spend the majority of their time in some form of dysregulated state. You might not even realize it anymore because it&apos;s become your baseline. The constant low-grade anxiety, the hair-trigger irritability, the sudden crashes into complete apathy. These aren&apos;t personality traits. They&apos;re symptoms of a nervous system that never gets to truly rest.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">Understanding the ADHD Nervous System Cycle</h2>
               <p className="blog-body">
-                The dysregulation cycle for ADHD brains follows a predictable but exhausting pattern. You wake up already slightly on edge because your brain is immediately bombarded with everything you need to remember, do, and manage. This kicks your sympathetic nervous system into gear—you&apos;re in Fight or Flight before you even have breakfast.
+                The dysregulation cycle for ADHD brains follows a predictable but exhausting pattern. You wake up already slightly on edge because your brain is immediately bombarded with everything you need to remember, do, and manage. This kicks your sympathetic nervous system into gear: you&apos;re in Fight or Flight before you even have breakfast.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Throughout the day, you stay in this heightened state, your body pumping out stress hormones, your muscles tense, your mind racing. Then, when you finally have a moment to yourself, your nervous system crashes into Freeze mode. You can&apos;t move, can&apos;t think, can&apos;t do anything except scroll mindlessly through your phone—hence the Scroll state. This isn&apos;t rest; it&apos;s collapse.
+                Throughout the day, you stay in this heightened state, your body pumping out stress hormones, your muscles tense, your mind racing. Then, when you finally have a moment to yourself, your nervous system crashes into Freeze mode. You can&apos;t move, can&apos;t think, can&apos;t do anything except scroll mindlessly through your phone, hence the Scroll state. This isn&apos;t rest; it&apos;s collapse.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The problem is that neither state is sustainable or healthy. Your body needs genuine regulation—a state of calm alertness where you&apos;re present, engaged, but not overwhelmed. For ADHD brains, achieving this state requires intentional support. This is where <strong>Romi</strong> and the principles of modern ADHD management become essential tools for nervous system regulation.
+                The problem is that neither state is sustainable or healthy. Your body needs genuine regulation, a state of calm alertness where you&apos;re present, engaged, but not overwhelmed. For ADHD brains, achieving this state requires intentional support. This is where <strong>Romi</strong> and the principles of modern ADHD management become essential tools for nervous system regulation.
               </p>
               <br />
               <br />
@@ -104,7 +104,7 @@ const FightFlightScrollBlog = () => {
                 <li><strong>Preventing Overwhelm Through Structure:</strong> Much of your nervous system activation comes from feeling overwhelmed by unstructured time or unclear priorities. Smart ADHD tools provide just enough structure to create safety without rigidity. When you know what you&apos;re doing next and trust that nothing important is falling through the cracks, your nervous system can relax.</li>
                 <li><strong>Environmental Regulation Planning:</strong> Emotional regulation often starts with environmental regulation. External support helps you pre-plan your environment for success. For someone with ADHD, this might mean setting up a &quot;calm corner,&quot; pre-selecting a non-emotionally-hijacking playlist, or planning for a weighted blanket break. When your environment is set up to support regulation, you&apos;re not fighting your surroundings in addition to fighting your nervous system.</li>
                 <li><strong>The &quot;Sip and Pace&quot; Prompt:</strong> One of the most effective ADHD regulation techniques is the &quot;sip through a straw while pacing.&quot; This can be prompted when you log feelings of restlessness or anxiety, providing an immediate, body-focused intervention that discharges adrenaline and brings you back to the present. These embodied practices work because they give your nervous system something concrete to do with the excess activation.</li>
-                <li><strong>Energy Management for Regulation:</strong> Understanding and tracking your energy patterns helps you schedule activities accordingly. When you work with your natural rhythms rather than against them, you experience less dysregulation. High-demand tasks during high-energy times, gentler activities during low-energy periods—this alignment prevents the overwhelm that triggers Fight or Flight responses.</li>
+                <li><strong>Energy Management for Regulation:</strong> Understanding and tracking your energy patterns helps you schedule activities accordingly. When you work with your natural rhythms rather than against them, you experience less dysregulation. High-demand tasks during high-energy times, gentler activities during low-energy periods. This alignment prevents the overwhelm that triggers Fight or Flight responses.</li>
               </ul>
               <br />
               <br />
@@ -120,7 +120,7 @@ const FightFlightScrollBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The goal isn&apos;t to eliminate stress from your life—that&apos;s impossible. The goal is to reduce unnecessary activation (by managing executive function demands with proper ADHD support) and increase your capacity to regulate when stress is unavoidable (through the body-based strategies and environmental supports that effective tools help you implement).
+                The goal isn&apos;t to eliminate stress from your life. That&apos;s impossible. The goal is to reduce unnecessary activation (by managing executive function demands with proper ADHD support) and increase your capacity to regulate when stress is unavoidable (through the body-based strategies and environmental supports that effective tools help you implement).
               </p>
               <br />
               <br />
@@ -130,13 +130,13 @@ const FightFlightScrollBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                When you have the right support—when external systems handle what your brain struggles with—you finally have the mental and physical space to actually regulate. You can move from surviving to thriving, from constant dysregulation to genuine moments of peace. This is what modern ADHD management makes possible.
+                When you have the right support, when external systems handle what your brain struggles with, you finally have the mental and physical space to actually regulate. You can move from surviving to thriving, from constant dysregulation to genuine moments of peace. This is what modern ADHD management makes possible.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8">
                 <p className="blog-body text-lg">
-                  <strong>Tired of living in survival mode?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that reduces executive function demands so your nervous system can finally rest. Experience what regulated feels like.
+                  <strong>Tired of living in survival mode?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that reduces executive function demands so your nervous system can finally rest. Experience what regulated feels like.
                 </p>
               </div>
               <br />

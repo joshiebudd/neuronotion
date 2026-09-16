@@ -37,7 +37,7 @@ const ADHDRoutinesBlog = () => {
         <br />
         <br />
         <p className="blog-body">
-          The truth is that ADHD fundamentally changes how habits form in your brain. What works for neurotypical people—repetition, willpower, 21-day rules—simply doesn&apos;t translate to ADHD neurology. You&apos;re not failing at habits because you lack discipline. You&apos;re failing because you&apos;re trying to use tools designed for a completely different operating system.
+          The truth is that ADHD fundamentally changes how habits form in your brain. What works for neurotypical people (repetition, willpower, 21-day rules) simply doesn&apos;t translate to ADHD neurology. You&apos;re not failing at habits because you lack discipline. You&apos;re failing because you&apos;re trying to use tools designed for a completely different operating system.
         </p>
         <br />
         <br />
@@ -54,7 +54,7 @@ const ADHDRoutinesBlog = () => {
         <br />
         <ol className="list-decimal ml-8 blog-body space-y-3">
           <li><strong>Working Memory Deficits:</strong> You can&apos;t consistently remember to do a habit if you can&apos;t hold it in your working memory. By the time you finish breakfast, you&apos;ve forgotten your intention to take your vitamins. By the time you get home from work, your evening routine has vanished from your mind. Working memory is where intentions live, and ADHD significantly impairs this function.</li>
-          <li><strong>Time Blindness:</strong> Habits rely on temporal awareness—doing things at specific times or in specific sequences. But ADHD brains experience time in only two states: now and not now. This makes it incredibly difficult to perform time-based routines consistently. Morning routines fall apart because 7 AM and 9 AM feel identical to your brain.</li>
+          <li><strong>Time Blindness:</strong> Habits rely on temporal awareness, doing things at specific times or in specific sequences. But ADHD brains experience time in only two states: now and not now. This makes it incredibly difficult to perform time-based routines consistently. Morning routines fall apart because 7 AM and 9 AM feel identical to your brain.</li>
           <li><strong>Dopamine Dysregulation:</strong> Habit formation requires the brain&apos;s reward system to reinforce behaviors through repetition. But ADHD brains have chronically low baseline dopamine, making it nearly impossible to generate the reward signals needed for automatic behavior formation. The neurotypical brain gets a little dopamine hit from completing a routine task; your ADHD brain barely registers it.</li>
         </ol>
         <br />
@@ -111,7 +111,7 @@ const ADHDRoutinesBlog = () => {
         <br />
         <ul className="list-disc ml-8 blog-body space-y-3">
           <li><strong>Externally Scaffolded:</strong> Don&apos;t rely on memory or willpower. Use external reminders, visual cues, and support systems like <strong>Romi</strong> to handle the remembering for you. When you externalize the cognitive load, you free up mental resources for actually doing the habit rather than remembering to do it.</li>
-          <li><strong>Dopamine-Enhanced:</strong> Make routines rewarding. Add music, gamification, novelty, or pairing boring habits with enjoyable ones. Your ADHD brain needs extra dopamine to form habits, so deliberately engineer it into the routine. This isn&apos;t &quot;cheating&quot;—it&apos;s accommodating your neurology.</li>
+          <li><strong>Dopamine-Enhanced:</strong> Make routines rewarding. Add music, gamification, novelty, or pairing boring habits with enjoyable ones. Your ADHD brain needs extra dopamine to form habits, so deliberately engineer it into the routine. This isn&apos;t &quot;cheating&quot;. It&apos;s accommodating your neurology.</li>
           <li><strong>Friction-Reduced:</strong> Eliminate every possible obstacle. Put your vitamins next to your coffee maker. Lay out your gym clothes the night before. Reduce steps wherever possible. ADHD brains are exquisitely sensitive to friction; even small obstacles can completely derail a routine.</li>
           <li><strong>Capacity-Adaptive:</strong> Build flexibility into your routines. Have a full version for high-capacity days and a minimal version for low-capacity days. The minimal version might be just one core element, but completing it counts as success. This prevents the all-or-nothing thinking that destroys routines.</li>
           <li><strong>Progress-Celebrated:</strong> Track completion and celebrate wins. Your brain needs the reward signal to reinforce the behavior. External tools can provide objective tracking and positive reinforcement that your brain struggles to generate internally.</li>
@@ -119,7 +119,7 @@ const ADHDRoutinesBlog = () => {
         <br />
         <br />
         <p className="blog-body">
-          Many people find that when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">exhausted from doing things in unsustainable ways</Link>, even simple routines feel impossible—this is when adaptive support becomes crucial.
+          Many people find that when they&apos;re <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">exhausted from doing things in unsustainable ways</Link>, even simple routines feel impossible. This is when adaptive support becomes crucial.
         </p>
         <br />
         <br />
@@ -137,7 +137,7 @@ const ADHDRoutinesBlog = () => {
         <ul className="list-disc ml-8 blog-body space-y-3">
           <li><strong>Intelligent Reminders:</strong> Not just calendar alerts you ignore, but context-aware prompts that arrive when you&apos;re actually able to act on them. The system learns your patterns and adjusts timing for maximum effectiveness.</li>
           <li><strong>Automatic Tracking:</strong> No manual logging required. The system tracks completion, identifies patterns, and shows you objective data about what&apos;s working and what isn&apos;t. This removes the cognitive load of self-monitoring.</li>
-          <li><strong>Capacity Recognition:</strong> The system can detect when you&apos;re having a low-capacity day and automatically simplify routines to just the essentials. You don&apos;t have to decide—it adapts for you.</li>
+          <li><strong>Capacity Recognition:</strong> The system can detect when you&apos;re having a low-capacity day and automatically simplify routines to just the essentials. You don&apos;t have to decide. It adapts for you.</li>
           <li><strong>Streak Flexibility:</strong> Unlike rigid habit trackers that reset to zero if you miss a day, ADHD-friendly support recognizes that missing one day doesn&apos;t erase all your progress. It celebrates your overall pattern rather than demanding perfection.</li>
           <li><strong>Routine Templates:</strong> Pre-built, ADHD-optimized routine structures you can customize rather than building from scratch. This reduces the executive function required to even start implementing routines.</li>
         </ul>
@@ -150,7 +150,7 @@ const ADHDRoutinesBlog = () => {
         <br />
         <br />
         <p className="blog-body">
-          Instead, start absurdly small. Not small—absurdly small. If you want a morning routine, start with: &quot;Put on socks.&quot; That&apos;s it. Just socks. Once that becomes automatic (and remember, this might take months for ADHD brains), add the next microscopic step. This approach works because it eliminates resistance. Your brain can&apos;t generate opposition to something so small.
+          Instead, start absurdly small. Not small, absurdly small. If you want a morning routine, start with: &quot;Put on socks.&quot; That&apos;s it. Just socks. Once that becomes automatic (and remember, this might take months for ADHD brains), add the next microscopic step. This approach works because it eliminates resistance. Your brain can&apos;t generate opposition to something so small.
         </p>
         <br />
         <br />
@@ -166,7 +166,7 @@ const ADHDRoutinesBlog = () => {
         <br />
         <h2 className="blog-subheader">When Routines Break: The Recovery Protocol</h2>
         <p className="blog-body">
-          Here&apos;s the truth: your routines will break. Life happens, capacity fluctuates, interest wanes. For people with ADHD, routine disruption is inevitable and frequent. The key isn&apos;t preventing breaks—it&apos;s having a recovery protocol that makes restarting possible.
+          Here&apos;s the truth: your routines will break. Life happens, capacity fluctuates, interest wanes. For people with ADHD, routine disruption is inevitable and frequent. The key isn&apos;t preventing breaks. It&apos;s having a recovery protocol that makes restarting possible.
         </p>
         <br />
         <br />
@@ -182,7 +182,7 @@ const ADHDRoutinesBlog = () => {
         <br />
         <h2 className="blog-subheader">From Chaos to Sustainable Structure</h2>
         <p className="blog-body">
-          Building habits and routines with ADHD isn&apos;t about becoming more disciplined or consistent. It&apos;s about accepting your neurology and building systems that work with it rather than against it. Your ADHD brain will never form habits the way neurotypical brains do—and that&apos;s okay.
+          Building habits and routines with ADHD isn&apos;t about becoming more disciplined or consistent. It&apos;s about accepting your neurology and building systems that work with it rather than against it. Your ADHD brain will never form habits the way neurotypical brains do, and that&apos;s okay.
         </p>
         <br />
         <br />
@@ -197,13 +197,13 @@ const ADHDRoutinesBlog = () => {
         <br />
         <br />
         <p className="blog-body">
-          Stop trying to build habits through willpower and consistency. Start building them through external support and adaptive systems. Your ADHD brain can absolutely maintain routines—when those routines are designed for your neurology, not against it.
+          Stop trying to build habits through willpower and consistency. Start building them through external support and adaptive systems. Your ADHD brain can absolutely maintain routines, when those routines are designed for your neurology, not against it.
         </p>
         <br />
         <br />
         <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
           <p className="blog-body text-lg leading-relaxed">
-            <strong>Ready to build routines that finally stick?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD companion that provides external scaffolding, intelligent reminders, and adaptive support for sustainable habit formation. Stop fighting your neurology. Start working with it.
+            <strong>Ready to build routines that finally stick?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD companion that provides external scaffolding, intelligent reminders, and adaptive support for sustainable habit formation. Stop fighting your neurology. Start working with it.
           </p>
         </div>
         <br />

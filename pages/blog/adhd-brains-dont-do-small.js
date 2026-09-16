@@ -25,19 +25,19 @@ const ADHDBrainsDontDoSmallBlog = () => {
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
                   <li>ADHD brains resist &quot;small&quot; tasks because they lack the dopamine hit needed for motivation</li>
                   <li>All-or-nothing thinking makes you wait for perfect conditions that never arrive</li>
-                  <li>Task initiation requires massive executive function—making even 5-minute tasks feel exhausting</li>
-                  <li>The solution isn&apos;t forcing yourself to start—it&apos;s building momentum through micro-steps</li>
+                  <li>Task initiation requires massive executive function, making even 5-minute tasks feel exhausting</li>
+                  <li>The solution isn&apos;t forcing yourself to start. It&apos;s building momentum through micro-steps</li>
                   <li>External support can provide the tiny push that overcomes executive dysfunction paralysis</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                The common struggle of the ADHD brain is the inability to engage with tasks perceived as &quot;small&quot; or mundane. This leads to the frustrating phenomenon of procrastination until conditions are &apos;perfect&apos;—a form of all-or-nothing thinking that can paralyze productivity. A five-minute email turns into a three-day saga because the brain demands a grand, perfect, and highly stimulating start. Otherwise, it refuses to engage.
+                The common struggle of the ADHD brain is the inability to engage with tasks perceived as &quot;small&quot; or mundane. This leads to the frustrating phenomenon of procrastination until conditions are &apos;perfect&apos;, a form of all-or-nothing thinking that can paralyze productivity. A five-minute email turns into a three-day saga because the brain demands a grand, perfect, and highly stimulating start. Otherwise, it refuses to engage.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This isn&apos;t a moral failing; it&apos;s a neurological reality rooted in the unique way the ADHD brain processes motivation and executive function. The solution is not to force yourself to do the hardest thing first, but to embrace the power of momentum. This is the core principle behind <strong>Romi</strong>—providing the tiny, necessary push to get your ADHD brain into gear when it refuses to engage with &quot;small&quot; tasks.
+                This isn&apos;t a moral failing; it&apos;s a neurological reality rooted in the unique way the ADHD brain processes motivation and executive function. The solution is not to force yourself to do the hardest thing first, but to embrace the power of momentum. This is the core principle behind <strong>Romi</strong>, providing the tiny, necessary push to get your ADHD brain into gear when it refuses to engage with &quot;small&quot; tasks.
               </p>
               <br />
               <br />
@@ -48,12 +48,12 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This creates a painful paradox: the smaller and more mundane the task, the harder it is to start. Answering a simple email feels impossible, but researching a completely new topic for three hours? Easy. Your brain isn&apos;t being difficult—it&apos;s desperately seeking the dopamine hit it needs to function, and small tasks simply don&apos;t provide it.
+                This creates a painful paradox: the smaller and more mundane the task, the harder it is to start. Answering a simple email feels impossible, but researching a completely new topic for three hours? Easy. Your brain isn&apos;t being difficult. It&apos;s desperately seeking the dopamine hit it needs to function, and small tasks simply don&apos;t provide it.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                If you&apos;ve experienced <Link href="/blog/something-for-when-your-brain-says-i-cant" className="text-blue-600 hover:underline">the intention-action gap</Link>, you know this feeling intimately—wanting desperately to do something but being neurologically unable to start.
+                If you&apos;ve experienced <Link href="/blog/something-for-when-your-brain-says-i-cant" className="text-blue-600 hover:underline">the intention-action gap</Link>, you know this feeling intimately, wanting desperately to do something but being neurologically unable to start.
               </p>
               <br />
               <br />
@@ -79,7 +79,7 @@ const ADHDBrainsDontDoSmallBlog = () => {
                       </tr>
                       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                           <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">Executive Function Overload</th>
-                          <td className="px-6 py-4">Starting a task involves planning, prioritizing, and sequencing—a massive cognitive load that makes the task feel exhausting before it even begins.</td>
+                          <td className="px-6 py-4">Starting a task involves planning, prioritizing, and sequencing, a massive cognitive load that makes the task feel exhausting before it even begins.</td>
                           <td className="px-6 py-4">The brain shuts down, preferring distraction (a 3-hour rabbit hole about houseplants) over the 5-minute task.</td>
                       </tr>
                       <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
@@ -97,23 +97,23 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                These four factors combine to create what feels like impossible resistance to simple tasks. It&apos;s not that you&apos;re lazy or unmotivated—your brain is quite literally unable to generate the activation energy needed for tasks it perceives as unstimulating and unrewarding.
+                These four factors combine to create what feels like impossible resistance to simple tasks. It&apos;s not that you&apos;re lazy or unmotivated. Your brain is quite literally unable to generate the activation energy needed for tasks it perceives as unstimulating and unrewarding.
               </p>
               <br />
               <br />
               <h2 className="blog-subheader">The Myth of &quot;Just Start With the Hardest Thing&quot;</h2>
               <p className="blog-body">
-                Traditional productivity advice tells you to &quot;eat the frog&quot;—do the hardest, most important thing first. For ADHD brains, this is spectacularly terrible advice. Your executive function is highest in the morning, yes, but your dopamine system still isn&apos;t generating motivation for unstimulating tasks.
+                Traditional productivity advice tells you to &quot;eat the frog&quot;: do the hardest, most important thing first. For ADHD brains, this is spectacularly terrible advice. Your executive function is highest in the morning, yes, but your dopamine system still isn&apos;t generating motivation for unstimulating tasks.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                Forcing yourself to tackle the hardest thing first often results in complete paralysis. You sit staring at the task, feeling the pressure mounting, unable to start. Hours pass. The day is wasted. The shame spiral begins. This isn&apos;t productivity—it&apos;s self-sabotage disguised as discipline.
+                Forcing yourself to tackle the hardest thing first often results in complete paralysis. You sit staring at the task, feeling the pressure mounting, unable to start. Hours pass. The day is wasted. The shame spiral begins. This isn&apos;t productivity. It&apos;s self-sabotage disguised as discipline.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The actual solution for ADHD brains is counterintuitive: start with something—anything—that generates momentum. Even if it&apos;s not the most important task. Even if it&apos;s tiny. Movement creates motivation, not the other way around.
+                The actual solution for ADHD brains is counterintuitive: start with something, anything, that generates momentum. Even if it&apos;s not the most important task. Even if it&apos;s tiny. Movement creates motivation, not the other way around.
               </p>
               <br />
               <br />
@@ -150,7 +150,7 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is where modern ADHD tools become game-changers. They don&apos;t demand that you be motivated or organized. They provide the structure that makes starting possible even when internal motivation is zero. The system does the executive function heavy lifting—the planning, prioritizing, and sequencing—leaving you free to simply execute.
+                This is where modern ADHD tools become game-changers. They don&apos;t demand that you be motivated or organized. They provide the structure that makes starting possible even when internal motivation is zero. The system does the executive function heavy lifting (the planning, prioritizing, and sequencing), leaving you free to simply execute.
               </p>
               <br />
               <br />
@@ -175,7 +175,7 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                That five-minute email isn&apos;t a boring chore—it&apos;s the key that unlocks your productivity for the day. Once you complete it, momentum carries you into the next task. And the next. The email itself is almost irrelevant; what matters is that it got your ADHD brain moving from a state of paralysis to a state of action.
+                That five-minute email isn&apos;t a boring chore. It&apos;s the key that unlocks your productivity for the day. Once you complete it, momentum carries you into the next task. And the next. The email itself is almost irrelevant; what matters is that it got your ADHD brain moving from a state of paralysis to a state of action.
               </p>
               <br />
               <br />
@@ -212,13 +212,13 @@ const ADHDBrainsDontDoSmallBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Stop waiting for perfect conditions. Stop trying to force yourself to care about small tasks. Instead, make the first step impossibly small, accept imperfect action, and let momentum carry you forward. Your ADHD brain doesn&apos;t have to do small—it just has to do the first tiny step. Everything else follows.
+                Stop waiting for perfect conditions. Stop trying to force yourself to care about small tasks. Instead, make the first step impossibly small, accept imperfect action, and let momentum carry you forward. Your ADHD brain doesn&apos;t have to do small. It just has to do the first tiny step. Everything else follows.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Tired of waiting for perfect conditions that never arrive?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that breaks tasks into impossibly small micro-steps. Stop fighting perfection paralysis. Start building momentum with steps so tiny your brain can&apos;t resist.
+                  <strong>Tired of waiting for perfect conditions that never arrive?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that breaks tasks into impossibly small micro-steps. Stop fighting perfection paralysis. Start building momentum with steps so tiny your brain can&apos;t resist.
                 </p>
               </div>
               <br />

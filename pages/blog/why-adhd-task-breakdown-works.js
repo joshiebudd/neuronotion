@@ -24,7 +24,7 @@ const ADHDTaskBreakdownBlog = () => {
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
                   <li>Traditional task management fails ADHD brains because it assumes you can plan, prioritize, and initiate independently</li>
-                  <li>ADHD overwhelm comes from seeing the whole project without clear steps—your brain freezes instead of starting</li>
+                  <li>ADHD overwhelm comes from seeing the whole project without clear steps. Your brain freezes instead of starting</li>
                   <li>Task breakdown that adapts to YOUR energy levels makes starting genuinely easy</li>
                   <li>Tools built FOR ADHD brains (not adapted for them) understand you need external support, not more willpower</li>
                   <li>The right task breakdown crushes procrastination by removing the barriers your ADHD brain can&apos;t overcome alone</li>
@@ -87,7 +87,7 @@ const ADHDTaskBreakdownBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This overwhelm triggers paralysis. Your brain can&apos;t figure out where to start, so it refuses to start at all. It&apos;s not laziness—it&apos;s protective shutdown in response to cognitive overload.
+                This overwhelm triggers paralysis. Your brain can&apos;t figure out where to start, so it refuses to start at all. It&apos;s not laziness. It&apos;s protective shutdown in response to cognitive overload.
               </p>
               <br />
               <br />
@@ -97,7 +97,7 @@ const ADHDTaskBreakdownBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why understanding <Link href="/blog/why-simple-things-feel-impossible-with-adhd" className="text-blue-600 hover:underline">why simple things feel impossible</Link> is so important—the issue is complexity perception, not actual task difficulty.
+                This is why understanding <Link href="/blog/why-simple-things-feel-impossible-with-adhd" className="text-blue-600 hover:underline">why simple things feel impossible</Link> is so important. The issue is complexity perception, not actual task difficulty.
               </p>
               <br />
               <br />
@@ -129,13 +129,13 @@ const ADHDTaskBreakdownBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Once you start, momentum makes continuing easier than stopping. Before you realize it, the report is done—not through willpower, but through micro-steps and momentum.
+                Once you start, momentum makes continuing easier than stopping. Before you realize it, the report is done, not through willpower, but through micro-steps and momentum.
               </p>
               <br />
               <br />
               <h3 className="text-xl font-bold text-gray-900 mb-4">2. Prioritizing for You, Putting the Easiest Win First</h3>
               <p className="blog-body">
-                Traditional task management might tell you to &quot;eat the frog&quot;—do the hardest thing first. But for ADHD brains, this often means you never start at all.
+                Traditional task management might tell you to &quot;eat the frog&quot;: do the hardest thing first. But for ADHD brains, this often means you never start at all.
               </p>
               <br />
               <br />
@@ -161,7 +161,7 @@ const ADHDTaskBreakdownBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                Low-capacity day? Steps become micro-tasks. &quot;Open document&quot; might be as far as you get today, and that&apos;s okay—it&apos;s still progress.
+                Low-capacity day? Steps become micro-tasks. &quot;Open document&quot; might be as far as you get today, and that&apos;s okay. It&apos;s still progress.
               </p>
               <br />
               <br />
@@ -190,7 +190,7 @@ const ADHDTaskBreakdownBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                This is why external task breakdown support is transformative—it removes the executive function barrier that prevents starting in the first place.
+                This is why external task breakdown support is transformative. It removes the executive function barrier that prevents starting in the first place.
               </p>
               <br />
               <br />
@@ -232,7 +232,7 @@ const ADHDTaskBreakdownBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                People who couldn&apos;t start tasks for weeks suddenly start within minutes. Projects that felt impossible become manageable. Procrastination that seemed like a character flaw disappears when proper support removes the actual barrier—lack of clear, capacity-appropriate steps.
+                People who couldn&apos;t start tasks for weeks suddenly start within minutes. Projects that felt impossible become manageable. Procrastination that seemed like a character flaw disappears when proper support removes the actual barrier: lack of clear, capacity-appropriate steps.
               </p>
               <br />
               <br />
@@ -289,7 +289,7 @@ const ADHDTaskBreakdownBlog = () => {
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready to crush procrastination for good?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant that breaks down any task based on YOUR energy levels, prioritizes for easiest wins, and makes starting genuinely a breeze. Stop staring at blank pages. Stop spinning your wheels. Start getting sh*t done and feeling good about it. Tools built for your brain finally exist.
+                  <strong>Ready to crush procrastination for good?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant that breaks down any task based on YOUR energy levels, prioritizes for easiest wins, and makes starting genuinely a breeze. Stop staring at blank pages. Stop spinning your wheels. Start getting sh*t done and feeling good about it. Tools built for your brain finally exist.
                 </p>
               </div>
               <br />

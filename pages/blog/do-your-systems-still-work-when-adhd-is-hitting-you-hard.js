@@ -24,25 +24,25 @@ const SystemsFailBlog = () => {
                 <h2 className="text-xl font-bold mb-3 text-gray-900">Key Takeaways</h2>
                 <ul className="list-disc ml-5 space-y-2 text-gray-800 leading-relaxed">
                   <li>Most ADHD systems are built for good days and collapse when you need them most</li>
-                  <li>Variable capacity is a core ADHD trait—systems must adapt to your current state, not demand consistency</li>
+                  <li>Variable capacity is a core ADHD trait. Systems must adapt to your current state, not demand consistency</li>
                   <li>Traditional productivity tools require executive function to use, which you lack on hard days</li>
                   <li>Truly sustainable ADHD support works ESPECIALLY well when you&apos;re struggling</li>
-                  <li>The goal isn&apos;t perfect systems—it&apos;s systems that catch you when you fall</li>
+                  <li>The goal isn&apos;t perfect systems. It&apos;s systems that catch you when you fall</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                If you have ADHD, you likely have a system—a mix of Notion templates, calendar routines, and sheer willpower that mostly works when your brain is cooperating. But the moment life gets hard, your routine collapses, and you&apos;re left with the painful realization that your system is built for the good days, not the hard days.
+                If you have ADHD, you likely have a system, a mix of Notion templates, calendar routines, and sheer willpower that mostly works when your brain is cooperating. But the moment life gets hard, your routine collapses, and you&apos;re left with the painful realization that your system is built for the good days, not the hard days.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                This failure is not a reflection of your effort; it&apos;s a reflection of effort inconsistency, a hallmark of the ADHD brain. Because ADHD affects dopamine regulation, your motivation system is inherently unreliable. Relying on a rigid system is like relying on a car with an unreliable engine—it will fail when you need it most.
+                This failure is not a reflection of your effort; it&apos;s a reflection of effort inconsistency, a hallmark of the ADHD brain. Because ADHD affects dopamine regulation, your motivation system is inherently unreliable. Relying on a rigid system is like relying on a car with an unreliable engine. It will fail when you need it most.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The solution is a system that adapts to your brain, not the other way around. This is the core design philosophy of <strong>Romi</strong>—providing support that stabilizes the chaos and doesn&apos;t rely on your motivation, especially on days when you have none.
+                The solution is a system that adapts to your brain, not the other way around. This is the core design philosophy of <strong>Romi</strong>, providing support that stabilizes the chaos and doesn&apos;t rely on your motivation, especially on days when you have none.
               </p>
               <br />
               <br />
@@ -92,12 +92,12 @@ const SystemsFailBlog = () => {
               <br />
               <h2 className="blog-subheader">Variable Capacity: The Core ADHD Reality</h2>
               <p className="blog-body">
-                One of the most frustrating aspects of ADHD is variable capacity. On Monday, you might complete ten tasks effortlessly and wonder why you ever struggled. By Tuesday, making coffee feels like climbing Everest. This isn&apos;t random—it&apos;s influenced by sleep, stress, hormones, medication timing, emotional state, and a dozen other factors.
+                One of the most frustrating aspects of ADHD is variable capacity. On Monday, you might complete ten tasks effortlessly and wonder why you ever struggled. By Tuesday, making coffee feels like climbing Everest. This isn&apos;t random: it&apos;s influenced by sleep, stress, hormones, medication timing, emotional state, and a dozen other factors.
               </p>
               <br />
               <br />
               <p className="blog-body">
-                The mistake most systems make is assuming consistent capacity. They give you the same workload regardless of your current state. When you inevitably can&apos;t maintain the pace, the system offers no adaptation—just failure and shame. This is why understanding <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">why doing differently matters more than doing less</Link> is so crucial.
+                The mistake most systems make is assuming consistent capacity. They give you the same workload regardless of your current state. When you inevitably can&apos;t maintain the pace. The system offers no adaptation, just failure and shame. This is why understanding <Link href="/blog/exhausted-again-do-differently" className="text-blue-600 hover:underline">why doing differently matters more than doing less</Link> is so crucial.
               </p>
               <br />
               <br />
@@ -113,10 +113,10 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <ol className="list-decimal ml-8 blog-body space-y-4">
-                <li><strong>Works on Zero Motivation:</strong> The system can&apos;t require motivation to use it. On hard days, you have none. Support must function when you&apos;re barely functioning. This means ultra-low friction—opening the app and pressing one button should be the maximum effort required to get help.</li>
+                <li><strong>Works on Zero Motivation:</strong> The system can&apos;t require motivation to use it. On hard days, you have none. Support must function when you&apos;re barely functioning. This means ultra-low friction: opening the app and pressing one button should be the maximum effort required to get help.</li>
                 <li><strong>Accepts Chaos as Input:</strong> You can&apos;t organize yourself on hard days. The system must accept messy brain dumps, incomplete thoughts, and emotional overwhelm as valid input. It then processes your chaos into structure rather than demanding you be structured first.</li>
                 <li><strong>Provides Automatic Simplification:</strong> When you&apos;re overwhelmed, you can&apos;t manually simplify your to-do list. Adaptive support automatically identifies the one most essential task and presents just that. Everything else fades into the background until you have capacity again.</li>
-                <li><strong>Eliminates Maintenance Overhead:</strong> Traditional systems require constant upkeep—updating, organizing, reviewing. This maintenance becomes impossible on hard days. Sustainable support maintains itself, requiring zero cognitive load from you.</li>
+                <li><strong>Eliminates Maintenance Overhead:</strong> Traditional systems require constant upkeep, updating, organizing, reviewing. This maintenance becomes impossible on hard days. Sustainable support maintains itself, requiring zero cognitive load from you.</li>
                 <li><strong>Supports System Interruption:</strong> Your system will break. Life will interrupt. You&apos;ll abandon it for weeks. Sustainable support is designed for this reality. It helps you restart without judgment, without having to &quot;fix&quot; what broke, without making you feel like a failure.</li>
                 <li><strong>Scales to Your Capacity:</strong> Rather than giving you a static list of tasks, adaptive support presents what&apos;s possible right now based on your current state. This prevents the paralysis of looking at twenty tasks when you can barely manage one.</li>
               </ol>
@@ -134,12 +134,12 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <ul className="list-disc ml-8 blog-body space-y-3">
-                <li><strong>Emergency Mode:</strong> When everything feels impossible, the system can enter an emergency mode that presents literally one task. Not your most important task—your most doable task. The task that, if you do nothing else, will prevent complete collapse. This might be &quot;Eat something&quot; or &quot;Take medication&quot; rather than &quot;Finish project.&quot;</li>
+                <li><strong>Emergency Mode:</strong> When everything feels impossible, the system can enter an emergency mode that presents literally one task. Not your most important task. Your most doable task. The task that, if you do nothing else, will prevent complete collapse. This might be &quot;Eat something&quot; or &quot;Take medication&quot; rather than &quot;Finish project.&quot;</li>
                 <li><strong>Brain Dump Processing:</strong> On hard days, your head is full of racing thoughts, worries, and everything you &quot;should&quot; be doing. Dumping all of it into the system without any organization required immediately reduces mental load. The system processes the chaos; you don&apos;t have to.</li>
                 <li><strong>Gentle Check-ins:</strong> Instead of demanding constant engagement, the system provides gentle, non-judgmental check-ins. &quot;How&apos;s your capacity today?&quot; Your honest answer (even if it&apos;s &quot;terrible&quot;) helps the system adjust support to match your reality.</li>
                 <li><strong>Celebration of Micro-Progress:</strong> On hard days, taking a shower counts as an achievement. Adaptive support recognizes and celebrates these micro-wins rather than making you feel like a failure for not accomplishing more.</li>
                 <li><strong>Zero-Setup Restart:</strong> When you abandon the system for days or weeks, restarting requires no setup, no catching up, no fixing what broke. You simply open it and continue from now. The past is past; we focus on today.</li>
-                <li><strong>Context-Aware Simplification:</strong> The system can detect when you&apos;re in crisis mode (based on usage patterns, time of day, explicit indicators) and automatically simplify everything. You don&apos;t have to ask for help—it recognizes you need it and provides it.</li>
+                <li><strong>Context-Aware Simplification:</strong> The system can detect when you&apos;re in crisis mode (based on usage patterns, time of day, explicit indicators) and automatically simplify everything. You don&apos;t have to ask for help. It recognizes you need it and provides it.</li>
               </ul>
               <br />
               <br />
@@ -150,7 +150,7 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                For most systems—even ADHD-friendly ones—the answer is no. They require you to have some baseline functionality to use them. But <strong>Romi</strong> passes the hard day test because it was specifically designed for exactly these moments. When you&apos;re at your lowest, it works BETTER, not worse, because that&apos;s when you need it most.
+                For most systems, even ADHD-friendly ones, the answer is no. They require you to have some baseline functionality to use them. But <strong>Romi</strong> passes the hard day test because it was specifically designed for exactly these moments. When you&apos;re at your lowest, it works BETTER, not worse, because that&apos;s when you need it most.
               </p>
               <br />
               <br />
@@ -182,7 +182,7 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                When you stop fighting your variable capacity and start accommodating it, when you stop trying to be consistent and start building flexible support, when you stop demanding perfection from your systems and start accepting good enough—that&apos;s when sustainable functioning becomes possible.
+                When you stop fighting your variable capacity and start accommodating it, when you stop trying to be consistent and start building flexible support, when you stop demanding perfection from your systems and start accepting good enough. That&apos;s when sustainable functioning becomes possible.
               </p>
               <br />
               <br />
@@ -192,13 +192,13 @@ const SystemsFailBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                The systems that help most aren&apos;t the ones that work best on your best days. They&apos;re the ones that still work on your worst days. That&apos;s the true test of ADHD support. And that&apos;s exactly what adaptive, capacity-aware systems provide—support that&apos;s there when you need it most, which is precisely when you have the least to give.
+                The systems that help most aren&apos;t the ones that work best on your best days. They&apos;re the ones that still work on your worst days. That&apos;s the true test of ADHD support. And that&apos;s exactly what adaptive, capacity-aware systems provide, support that&apos;s there when you need it most, which is precisely when you have the least to give.
               </p>
               <br />
               <br />
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
-                  <strong>Ready for support that actually works on hard days?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>—the ADHD assistant designed specifically for when you&apos;re barely functioning. Adaptive support that scales to your capacity, accepts your chaos, and works ESPECIALLY when you&apos;re struggling. Systems that catch you when you fall.
+                  <strong>Ready for support that actually works on hard days?</strong> <a href="https://app.romiadhd.com/?page=signup" className="text-blue-600 hover:underline font-semibold">Try Romi</a>, the ADHD assistant designed specifically for when you&apos;re barely functioning. Adaptive support that scales to your capacity, accepts your chaos, and works ESPECIALLY when you&apos;re struggling. Systems that catch you when you fall.
                 </p>
               </div>
               <br />
