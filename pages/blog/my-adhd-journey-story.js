@@ -6,11 +6,11 @@ const ADHDJourneyBlog = () => {
   return (
     <BlogArticle
       title="My ADHD Story: From &apos;Naughty Kid&apos; to Founder | Romi"
-      description="How I went from severe combined ADHD, kicked out of multiple schools, to running two businesses. My journey proves your past doesn&apos;t define your future."
+      description="How I went from severe combined ADHD, kicked out of multiple schools, to founding a company. My journey proves your past doesn&apos;t define your future."
       slug="my-adhd-journey-story"
       keywords="ADHD personal story, ADHD success story, living with ADHD, ADHD entrepreneur, ADHD journey, overcoming ADHD, adult ADHD diagnosis story"
       ogTitle="My ADHD Journey: From Naughty Kid to Entrepreneur"
-      ogDescription="Diagnosed at 10 with severe ADHD. Kicked out of 7+ schools. Now running two businesses. Your past identity doesn&apos;t define your future."
+      ogDescription="Diagnosed at 10 with severe ADHD. Kicked out of 7+ schools. Now building an ADHD company. Your past identity doesn&apos;t define your future."
       heading="From &apos;The Naughty Kid&apos; to Founder: My ADHD Journey"
       category="Founder Story"
       date="Mar. 3, 2025"
@@ -26,13 +26,13 @@ const ADHDJourneyBlog = () => {
                   <li>Diagnosed with severe combined ADHD at age 10, kicked out of 7+ schools with &lt;30% attendance</li>
                   <li>Discovering the ADHD community at 14 changed everything—for the first time, I wasn&apos;t alone</li>
                   <li>8 years of obsessive learning about ADHD transformed me from &quot;naughty kid&quot; to University graduate with two A*s and an A</li>
-                  <li>Now running two businesses, in control of my ADHD almost every day through systems built specifically for my brain</li>
+                  <li>Now running a company, in control of my ADHD almost every day through systems built specifically for my brain</li>
                   <li>Your past identity does NOT define your future—you can rewrite every negative attribute you hold about yourself</li>
                 </ul>
               </div>
 
               <p className="lead blog-body italic">
-                Here&apos;s how I went from &quot;the naughty kid with ADHD&quot; to a high-performing entrepreneur running two businesses.
+                Here&apos;s how I went from &quot;the naughty kid with ADHD&quot; to a high-performing entrepreneur.
               </p>
               <br />
               <br />
@@ -236,18 +236,12 @@ const ADHDJourneyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                I&apos;m now running two businesses:
+                I&apos;m now running <strong>Romi</strong>, helping people with ADHD take control of their lives through systems built for ADHD brains.
               </p>
               <br />
               <br />
-              <ul className="list-disc ml-8 blog-body">
-                <li><strong>Romi</strong> - Helping people with ADHD take control of their lives through systems built for ADHD brains</li>
-                <li><strong>A Marketing Agency</strong> - Working with clients to build effective digital strategies</li>
-              </ul>
-              <br />
-              <br />
               <p className="blog-body">
-                Both require intense focus, organization, and consistency—things that supposedly people with ADHD can&apos;t do.
+                It takes intense focus, organization, and consistency, things that supposedly people with ADHD can&apos;t do.
               </p>
               <br />
               <br />
@@ -398,7 +392,7 @@ const ADHDJourneyBlog = () => {
               <br />
               <br />
               <p className="blog-body">
-                If I can go from &lt;30% school attendance and constant expulsions to running two businesses and helping others thrive with ADHD, you can rewrite your story too.
+                If I can go from &lt;30% school attendance and constant expulsions to running a company and helping others thrive with ADHD, you can rewrite your story too.
               </p>
               <br />
               <br />

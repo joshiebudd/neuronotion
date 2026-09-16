@@ -191,7 +191,7 @@ export const POST_INDEX = {
   "my-adhd-journey-story": {
     title: "My ADHD Story: From 'Naughty Kid' to Founder | Romi",
     heading: "From 'The Naughty Kid' to High-Performing Entrepreneur: My ADHD Journey",
-    blurb: "How I went from severe combined ADHD, kicked out of 7+ schools, to running two businesses.",
+    blurb: "How I went from severe combined ADHD, kicked out of 7+ schools, to founding a company.",
   },
   "neurodivergent-employees-risk-or-asset": {
     title: "Neurodivergent Employees: Risk or Asset? The Business Case",
