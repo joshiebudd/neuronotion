@@ -156,7 +156,7 @@ const CLINIC_FAQS = [
   {
     question: "Is Romi DTAC compliant?",
     answer:
-      "We are actively working with support from MindTech and our clinical team to move towards full DTAC (Digital Technology Assessment Criteria) compliance. This is a core part of our roadmap and something we take very seriously as we scale across NHS and private clinic pathways.",
+      "We are actively working with our clinical team to move towards full DTAC (Digital Technology Assessment Criteria) compliance. This is a core part of our roadmap and something we take very seriously as we scale across NHS and private clinic pathways.",
   },
 ];
 
