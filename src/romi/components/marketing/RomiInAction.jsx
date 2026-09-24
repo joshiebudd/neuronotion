@@ -121,7 +121,7 @@ function ControlBar({
   live = false,
   playing = false,
   current = 0,
-  duration = 504, // static mock: -08:24 remaining
+  duration = 59, // static mock: -00:59 remaining
   volume = 1,
   muted = false,
   rate = 1,
@@ -195,7 +195,7 @@ function ControlBar({
             />
           </div>
           <span className="text-right" style={{ ...txt, width: 42 }}>
-            -{live ? fmt(Math.max(0, (duration || 0) - current)) : "08:24"}
+            -{live ? fmt(Math.max(0, (duration || 0) - current)) : "00:59"}
           </span>
         </div>
 
