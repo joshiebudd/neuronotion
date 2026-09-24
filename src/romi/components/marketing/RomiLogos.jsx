@@ -30,7 +30,6 @@ const logos = [
   { id: "technation", src: `${CDN}/SupportedByLogos/11.webp`, alt: "Tech Nation" },
   { id: "hin", src: `${CDN}/SupportedByLogos/3.webp`, alt: "Health Innovation Network" },
   { id: "loughborough", src: `${CDN}/SupportedByLogos/7.webp`, alt: "Loughborough University" },
-  { id: "nihr", src: `${CDN}/SupportedByLogos/12.webp`, alt: "NIHR MindTech" },
   { id: "startupawards", src: `${CDN}/SupportedByLogos/4.webp`, alt: "StartUp Awards" },
   { id: "aiventureflows", src: `${CDN}/SupportedByLogos/5.webp`, alt: "AI Venture Flows" },
   { id: "elevenlabs", src: `${CDN}/11LabsLogowebp.webp`, alt: "ElevenLabs" },
