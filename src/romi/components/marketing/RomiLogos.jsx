@@ -26,7 +26,7 @@ const logos = [
   { id: "google", src: `${CDN}/SupportedByLogos/1.webp`, alt: "Google" },
   { id: "producthunt", src: `${CDN}/SupportedByLogos/10.webp`, alt: "Product Hunt" },
   { id: "santander", src: `${CDN}/SupportedByLogos/8.webp`, alt: "Santander" },
-  { id: "tata", src: `${CDN}/SupportedByLogos/6.webp`, alt: "Tata" },
+  { id: "tata", src: "/romi/supported-by/tata-varsity-pitch.webp", alt: "Tata Varsity Pitch" },
   { id: "technation", src: `${CDN}/SupportedByLogos/11.webp`, alt: "Tech Nation" },
   { id: "hin", src: `${CDN}/SupportedByLogos/3.webp`, alt: "Health Innovation Network" },
   { id: "loughborough", src: `${CDN}/SupportedByLogos/7.webp`, alt: "Loughborough University" },
