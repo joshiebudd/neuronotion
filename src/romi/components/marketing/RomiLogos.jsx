@@ -26,12 +26,14 @@ const logos = [
   { id: "google", src: `${CDN}/SupportedByLogos/1.webp`, alt: "Google" },
   { id: "producthunt", src: `${CDN}/SupportedByLogos/10.webp`, alt: "Product Hunt" },
   { id: "santander", src: `${CDN}/SupportedByLogos/8.webp`, alt: "Santander" },
+  { id: "lloyds", src: "/romi/supported-by/lloyds.webp", alt: "Lloyds Banking Group" },
   { id: "tata", src: "/romi/supported-by/tata-varsity-pitch.webp", alt: "Tata Varsity Pitch" },
   { id: "technation", src: `${CDN}/SupportedByLogos/11.webp`, alt: "Tech Nation" },
   { id: "hin", src: `${CDN}/SupportedByLogos/3.webp`, alt: "Health Innovation Network" },
   { id: "loughborough", src: `${CDN}/SupportedByLogos/7.webp`, alt: "Loughborough University" },
   { id: "startupawards", src: `${CDN}/SupportedByLogos/4.webp`, alt: "StartUp Awards" },
   { id: "aiventureflows", src: `${CDN}/SupportedByLogos/5.webp`, alt: "AI Venture Flows" },
+  { id: "foundervine", src: "/romi/supported-by/foundervine.webp", alt: "Foundervine" },
   { id: "elevenlabs", src: `${CDN}/11LabsLogowebp.webp`, alt: "ElevenLabs" },
 ];
 
