@@ -10,7 +10,9 @@ export const LPSupportedBy = () => {
     { id: 10, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/10.webp', alt: 'Supported by logo 10' },
     { id: 4, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/4.webp', alt: 'Supported by logo 4' },
     { id: 5, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/5.webp', alt: 'Supported by logo 5' },
+    { id: 14, src: '/romi/supported-by/foundervine.webp', alt: 'Foundervine' },
     { id: 8, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/8.webp', alt: 'Supported by logo 8' },
+    { id: 13, src: '/romi/supported-by/lloyds.webp', alt: 'Lloyds Banking Group' },
     { id: 3, src: 'https://NeuroNotionPullZonw.b-cdn.net/SupportedByLogos/3.webp', alt: 'Supported by logo 3' },
     { id: 12, src: 'https://NeuroNotionPullZonw.b-cdn.net/11LabsLogowebp.webp', alt: '11Labs' },
   ];
