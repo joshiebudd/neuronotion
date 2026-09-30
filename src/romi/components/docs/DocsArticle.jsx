@@ -140,6 +140,8 @@ export function DocsArticle({ slug, heading, sections, children }) {
 
   const canonical = `${SITE}/docs/${slug}`;
   const pageTitle = `${article.title} - Romi Docs`;
+  // The hub cards use the short `description`; search snippets get the longer one.
+  const metaDescription = article.metaDescription || article.description;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -147,7 +149,7 @@ export function DocsArticle({ slug, heading, sections, children }) {
       {
         "@type": "Article",
         headline: heading || article.title,
-        description: article.description,
+        description: metaDescription,
         image: DEFAULT_OG,
         publisher: {
           "@type": "Organization",
@@ -170,13 +172,13 @@ export function DocsArticle({ slug, heading, sections, children }) {
     <>
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content={article.description} />
+        <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonical} />
 
         {/* Open Graph */}
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={article.description} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonical} />
         <meta property="og:site_name" content="Romi ADHD" />

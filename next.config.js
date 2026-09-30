@@ -58,6 +58,12 @@ const nextConfig = {
       { source: "/templateshome", destination: "/templates", permanent: true },
       // The blog index lives at /blogs; /blog is the obvious guess.
       { source: "/blog", destination: "/blogs", permanent: true },
+      // Retired 30 Sep 2026 (Josh): the homepage covers "adhd app", and this page
+      // had no internal links. pages/adhd-app.js is kept; delete this line to restore it.
+      { source: "/adhd-app", destination: "/", permanent: true },
+      // The 9 Sep 2026 webinar is over, so the page is off the live site for now.
+      // pages/workshop.js is kept; delete this line to bring it back.
+      { source: "/workshop", destination: "/", permanent: false },
     ];
   },
   reactStrictMode: true,

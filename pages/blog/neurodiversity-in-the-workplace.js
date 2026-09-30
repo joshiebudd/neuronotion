@@ -112,11 +112,6 @@ const NeurodiversityInTheWorkplaceBlog = () => {
               </p>
               <br />
               <br />
-              <p className="blog-body">
-                If you want to hear more on this, I am co-hosting a free 40-minute webinar on building neuro-inclusive workplace cultures with executive coach Tom Crawford on 9 September 2026, at <a href="https://www.romiadhd.com/workshop" className="text-blue-600 hover:underline">romiadhd.com/workshop</a>.
-              </p>
-              <br />
-              <br />
 
               <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 my-8 shadow-md">
                 <p className="blog-body text-lg leading-relaxed">
