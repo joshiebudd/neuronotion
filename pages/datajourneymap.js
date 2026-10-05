@@ -35,7 +35,8 @@ const DataJourneyMap = () => {
         { name: 'Tasks & Routines', category: 'user-content', retention: 'Active account' },
         { name: 'Journal Entries', category: 'health', retention: 'Active account' },
         { name: 'Mood Tracking', category: 'health', retention: 'Active account' },
-        { name: 'Voice Transcriptions', category: 'user-content', retention: 'Ephemeral' },
+        { name: 'Voice Transcriptions', category: 'user-content', retention: 'Active account' },
+        { name: 'Voice Audio', category: 'user-content', retention: 'Not stored' },
         { name: 'Progress Metrics', category: 'health', retention: 'Active account' },
       ],
       safeguards: ['AES-256 encryption at rest', 'Row Level Security', 'Access controls'],
@@ -51,7 +52,7 @@ const DataJourneyMap = () => {
       dataTypes: [
         { name: 'User Database', category: 'primary', location: 'UK/EEA (Supabase)' },
         { name: 'Encrypted Backups', category: 'backup', location: 'UK/EEA' },
-        { name: 'Analytics (Anonymized)', category: 'analytics', location: 'PostHog' },
+        { name: 'Analytics (Anonymized)', category: 'analytics', location: 'PostHog (USA)' },
       ],
       safeguards: ['SOC 2 Type II certified', 'GDPR compliant', 'Automated backups'],
     },
@@ -62,17 +63,19 @@ const DataJourneyMap = () => {
       color: '#75E5D4',
       description: 'Controlled third-party access',
       legalBasis: 'Art. 28 Processor Agreements',
-      healthBasis: userType === 'clinic' ? 'Healthcare provider access' : 'No health data shared',
+      healthBasis: userType === 'clinic' ? 'Healthcare provider access' : 'Health data only to processors under DPA',
       dataTypes: [
+        { name: 'Conversations', category: 'health', processor: 'Anthropic / OpenAI', shared: 'Per reply, no training' },
+        { name: 'Voice Conversations', category: 'health', processor: 'ElevenLabs', shared: 'Audio not stored' },
+        { name: 'AI Memory', category: 'user-content', processor: 'Mem0', shared: 'Pseudonymous ID only' },
         { name: 'Payment Data', category: 'financial', processor: 'Stripe', shared: 'Transaction only' },
         { name: 'Push Tokens', category: 'technical', processor: 'Firebase', shared: 'Device tokens' },
         { name: 'Support Chats', category: 'communication', processor: 'Crisp', shared: 'Conversations' },
         { name: 'Transactional Email', category: 'communication', processor: 'Resend', shared: 'Account emails' },
         { name: 'Marketing Email', category: 'communication', processor: 'Moosend', shared: 'With consent only' },
-        { name: 'Referral Tracking', category: 'technical', processor: 'Rewardful', shared: 'Cookie-based, no PII' },
-        { name: 'Clinical Reports', category: 'health', processor: 'Healthcare Provider', shared: 'Progress data', clinicOnly: true },
+        { name: 'Progress Reports', category: 'health', processor: 'Clinic dashboard (MFA)', shared: 'Summaries, no chats', clinicOnly: true },
       ],
-      safeguards: ['Standard Contractual Clauses', 'DPAs in place', 'No data selling'],
+      safeguards: ['UK IDTA or UK Extension to the EU-US Data Privacy Framework', 'DPAs with every processor', 'No data selling'],
     },
     {
       id: 'retention',
@@ -81,13 +84,14 @@ const DataJourneyMap = () => {
       color: '#1E8E7E',
       description: 'Time-limited storage',
       legalBasis: 'Art. 17 Right to Erasure',
-      healthBasis: 'Medical record requirements',
+      healthBasis: 'Kept only as long as needed',
       dataTypes: [
         { name: 'Active Account Data', category: 'active', period: 'Until deletion request' },
         { name: 'System Logs', category: 'logs', period: '24 months max' },
         { name: 'Analytics', category: 'analytics', period: 'Aggregated indefinitely' },
         { name: 'Deleted Account', category: 'deleted', period: '30 days purge' },
         { name: 'Backups', category: 'backup', period: '90 days after deletion' },
+        { name: 'Voice Records (ElevenLabs)', category: 'deleted', period: '30 days' },
       ],
       safeguards: ['Automated deletion', 'Legal hold capability', 'Audit trails'],
     },
@@ -102,6 +106,7 @@ const DataJourneyMap = () => {
       dataTypes: [
         { name: 'Personal Data', category: 'personal', method: 'Secure deletion' },
         { name: 'Backups', category: 'backup', method: 'Scheduled purge' },
+        { name: 'Supplier Copies (Mem0, ElevenLabs)', category: 'personal', method: 'Deleted with account' },
         { name: 'Analytics', category: 'analytics', method: 'Already anonymized' },
       ],
       safeguards: ['72-hour breach notification', '30-day response SLA', 'Verification process'],
@@ -109,23 +114,20 @@ const DataJourneyMap = () => {
   ];
 
   const processors = [
-    { name: 'Supabase', role: 'Database', color: '#75E5D4', compliance: 'SOC 2 Type II, GDPR', location: 'UK/EEA (AWS EU)' },
+    { name: 'Supabase', role: 'Database', color: '#75E5D4', compliance: 'SOC 2 Type II, ISO 27001, GDPR', location: 'UK/EEA' },
     { name: 'GCP', role: 'Cloud / Identity', color: '#76BBFF', compliance: 'ISO 27001, GDPR', location: 'EU/UK' },
     { name: 'Vercel', role: 'Web Hosting', color: '#FFFFFF', compliance: 'GDPR, TLS in transit', location: 'USA/EU' },
     { name: 'Cloudflare', role: 'CDN / Security', color: '#FFBC69', compliance: 'SOC 2 Type II, GDPR', location: 'USA/EU' },
     { name: 'Stripe', role: 'Payments', color: '#BF96FF', compliance: 'PCI DSS Level 1', location: 'USA (SCC)' , corporateHide: true },
-    { name: 'Vapi AI', role: 'Voice', color: '#FF7B7B', compliance: 'Privacy-focused', location: 'Ephemeral' },
-    { name: 'Deepgram', role: 'Speech-to-Text', color: '#75E5D4', compliance: 'SOC 2 Type II, GDPR', location: 'USA (SCC)' },
-    { name: 'ElevenLabs', role: 'Voice Synthesis', color: '#BF96FF', compliance: 'GDPR', location: 'USA/EU' },
-    { name: 'OpenAI', role: 'AI / LLM', color: '#1E8E7E', compliance: 'GDPR, SCC, no training on API data', location: 'USA (SCC)' },
-    { name: 'Anthropic', role: 'AI / LLM', color: '#E59775', compliance: 'GDPR, SCC, no training on API data', location: 'USA (SCC)' },
-    { name: 'Mem0', role: 'AI Memory', color: '#CDABFF', compliance: 'GDPR', location: 'USA' },
-    { name: 'PostHog', role: 'Analytics', color: '#FFBC69', compliance: 'GDPR', location: 'USA/EU' },
+    { name: 'ElevenLabs', role: 'Voice', color: '#FF7B7B', compliance: 'ISO 27001, SOC 2 Type II, audio not stored, records deleted after 30 days', location: 'USA (UK IDTA)' },
+    { name: 'OpenAI', role: 'AI / LLM', color: '#1E8E7E', compliance: 'ISO 27001, SOC 2 Type II, no training on API data', location: 'USA (UK IDTA)' },
+    { name: 'Anthropic', role: 'AI / LLM', color: '#E59775', compliance: 'ISO 27001, SOC 2 Type II, no training on API data', location: 'USA (UK IDTA)' },
+    { name: 'Mem0', role: 'AI Memory', color: '#CDABFF', compliance: 'SOC 2, pseudonymous IDs only', location: 'USA (UK IDTA)' },
+    { name: 'PostHog', role: 'Analytics', color: '#FFBC69', compliance: 'SOC 2 Type II, anonymised events', location: 'USA (UK IDTA)' },
     { name: 'Crisp', role: 'Support', color: '#87E3FF', compliance: 'GDPR, E2E encrypted', location: 'EU' },
     { name: 'Firebase', role: 'Push', color: '#FFBC69', compliance: 'Google DPA', location: 'USA/EU' },
-    { name: 'Resend', role: 'Transactional Email', color: '#A8A7AB', compliance: 'GDPR, TLS', location: 'EU (Ireland)' },
+    { name: 'Resend', role: 'Transactional Email', color: '#A8A7AB', compliance: 'SOC 2 Type II, TLS', location: 'EU' },
     { name: 'Moosend', role: 'Marketing Email', color: '#FF9CC1', compliance: 'GDPR, consent-based', location: 'EU' , corporateHide: true },
-    { name: 'Rewardful', role: 'Referrals', color: '#A1FF9C', compliance: 'GDPR, no PII shared', location: 'USA' , corporateHide: true },
   ];
 
   const userRights = [
@@ -307,7 +309,7 @@ const DataJourneyMap = () => {
             margin: '0 auto 32px',
             lineHeight: '1.6',
           }}>
-            How your personal data flows through our ADHD support platform—from collection to secure deletion
+            How your personal data flows through our ADHD support platform, from collection to secure deletion
           </p>
 
           {/* User Type Toggle */}
@@ -558,7 +560,7 @@ const DataJourneyMap = () => {
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                         {stage.dataTypes
                           .filter(dt => userType === 'clinic' || !dt.clinicOnly)
-                          .filter(dt => userType !== 'corporate' || !['Stripe', 'Moosend', 'Rewardful'].includes(dt.processor))
+                          .filter(dt => userType !== 'corporate' || !['Stripe', 'Moosend'].includes(dt.processor))
                           .map((dataType, idx) => (
                             <div
                               key={idx}
@@ -745,12 +747,12 @@ const DataJourneyMap = () => {
                   <animate attributeName="stroke-dashoffset" from="12" to="0" dur="0.8s" repeatCount="indefinite" />
                 </path>
 
-                {/* App to Vapi (voice) */}
+                {/* App to ElevenLabs (voice) */}
                 <path d="M 380 290 Q 400 180, 490 130" stroke="#FF7B7B" strokeWidth="2" fill="none" markerEnd="url(#arrowhead-red)" strokeDasharray="6,3">
                   <animate attributeName="stroke-dashoffset" from="18" to="0" dur="0.8s" repeatCount="indefinite" />
                 </path>
 
-                {/* Vapi to LLM */}
+                {/* ElevenLabs to LLM */}
                 <path d="M 620 110 Q 720 100, 820 180" stroke="#FF7B7B" strokeWidth="2" fill="none" markerEnd="url(#arrowhead-purple)">
                   <animate attributeName="stroke-dashoffset" from="18" to="0" dur="0.8s" repeatCount="indefinite" />
                 </path>
@@ -808,11 +810,11 @@ const DataJourneyMap = () => {
                   <text x="0" y="70" textAnchor="middle" fill="#A8A7AB" fontSize="9">(User)</text>
                 </g>
 
-                {/* NEURO NOTION APP NODE */}
+                {/* ROMI APP NODE */}
                 <g transform="translate(360, 350)">
                   <rect x="-80" y="-55" width="160" height="110" rx="16" fill="#46247B" stroke="#5D359B" strokeWidth="3" filter="url(#glow-blue)" />
                   <text x="0" y="-25" textAnchor="middle" fontSize="26">🧠</text>
-                  <text x="0" y="5" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700">Neuro Notion</text>
+                  <text x="0" y="5" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700">Romi</text>
                   <text x="0" y="22" textAnchor="middle" fill="#BF96FF" fontSize="10">App</text>
                   <text x="0" y="42" textAnchor="middle" fill="#6B6577" fontSize="8">Tasks, Routines, Moods</text>
                 </g>
@@ -826,13 +828,13 @@ const DataJourneyMap = () => {
                   <text x="0" y="38" textAnchor="middle" fill="#1E8E7E" fontSize="7">SOC 2 Type II</text>
                 </g>
 
-                {/* VAPI NODE */}
+                {/* ELEVENLABS NODE */}
                 <g transform="translate(550, 100)">
                   <rect x="-60" y="-35" width="120" height="70" rx="12" fill="#3A2626" stroke="#FF7B7B" strokeWidth="2" />
                   <text x="0" y="-10" textAnchor="middle" fontSize="20">🎙️</text>
-                  <text x="0" y="12" textAnchor="middle" fill="#FF7B7B" fontSize="11" fontWeight="600">Vapi AI</text>
-                  <text x="0" y="28" textAnchor="middle" fill="#FF9CC1" fontSize="8">Voice Processing</text>
-                  <text x="0" y="48" textAnchor="middle" fill="#A8A7AB" fontSize="7">Ephemeral • No Storage</text>
+                  <text x="0" y="12" textAnchor="middle" fill="#FF7B7B" fontSize="11" fontWeight="600">ElevenLabs</text>
+                  <text x="0" y="28" textAnchor="middle" fill="#FF9CC1" fontSize="8">Voice</text>
+                  <text x="0" y="48" textAnchor="middle" fill="#A8A7AB" fontSize="7">Audio not stored • 30-day records</text>
                 </g>
 
                 {/* LLM NODE */}
@@ -840,7 +842,7 @@ const DataJourneyMap = () => {
                   <rect x="-70" y="-50" width="140" height="100" rx="14" fill="#3A2263" stroke="#BF96FF" strokeWidth="2" />
                   <text x="0" y="-22" textAnchor="middle" fontSize="22">🤖</text>
                   <text x="0" y="2" textAnchor="middle" fill="#BF96FF" fontSize="12" fontWeight="700">LLM</text>
-                  <text x="0" y="18" textAnchor="middle" fill="#D9C0FF" fontSize="9">OpenAI + Mem0</text>
+                  <text x="0" y="18" textAnchor="middle" fill="#D9C0FF" fontSize="9">Anthropic / OpenAI + Mem0</text>
                   <text x="0" y="35" textAnchor="middle" fill="#A8A7AB" fontSize="8">AI Processing</text>
                 </g>
 
@@ -885,9 +887,9 @@ const DataJourneyMap = () => {
                   <g transform="translate(920, 540)">
                     <rect x="-60" y="-35" width="120" height="80" rx="12" fill="#3A2020" stroke="#FF7B7B" strokeWidth="3" />
                     <text x="0" y="-10" textAnchor="middle" fontSize="22">🏥</text>
-                    <text x="0" y="12" textAnchor="middle" fill="#FF7B7B" fontSize="10" fontWeight="700">Healthcare</text>
-                    <text x="0" y="26" textAnchor="middle" fill="#FF9CC1" fontSize="10" fontWeight="700">Provider</text>
-                    <text x="0" y="45" textAnchor="middle" fill="#A8A7AB" fontSize="7">Data Controller</text>
+                    <text x="0" y="12" textAnchor="middle" fill="#FF7B7B" fontSize="10" fontWeight="700">Clinic</text>
+                    <text x="0" y="26" textAnchor="middle" fill="#FF9CC1" fontSize="10" fontWeight="700">Dashboard</text>
+                    <text x="0" y="45" textAnchor="middle" fill="#A8A7AB" fontSize="7">Sign-in with MFA</text>
                   </g>
                 )}
               </g>
@@ -908,11 +910,11 @@ const DataJourneyMap = () => {
                 <rect x="483" y="370" width="55" height="16" rx="4" fill="#26232C" opacity="0.9" />
                 <text x="510" y="382" fill="#75E5D4" fontSize="9" textAnchor="middle" fontFamily="monospace">read data</text>
 
-                {/* App to Vapi label */}
+                {/* App to ElevenLabs label */}
                 <rect x="400" y="195" width="68" height="16" rx="4" fill="#26232C" opacity="0.9" />
                 <text x="434" y="207" fill="#FF9CC1" fontSize="10" textAnchor="middle" fontFamily="monospace" fontWeight="500">voice audio</text>
 
-                {/* Vapi to LLM label */}
+                {/* ElevenLabs to LLM label */}
                 <rect x="680" y="118" width="90" height="16" rx="4" fill="#26232C" opacity="0.9" />
                 <text x="725" y="130" fill="#FF9CC1" fontSize="10" textAnchor="middle" fontFamily="monospace" fontWeight="500">transcribed text</text>
 
@@ -948,7 +950,7 @@ const DataJourneyMap = () => {
                 {userType === 'clinic' && (
                   <>
                     <rect x="755" y="438" width="85" height="16" rx="4" fill="#26232C" opacity="0.9" />
-                    <text x="798" y="450" fill="#FF9CC1" fontSize="10" textAnchor="middle" fontFamily="monospace" fontWeight="500">clinical reports</text>
+                    <text x="798" y="450" fill="#FF9CC1" fontSize="10" textAnchor="middle" fontFamily="monospace" fontWeight="500">progress reports</text>
                   </>
                 )}
               </g>
@@ -984,7 +986,7 @@ const DataJourneyMap = () => {
                 border: '1px solid rgba(255, 123, 123, 0.2)',
               }}>
                 <div style={{ fontSize: '13px', fontWeight: '600', color: '#FF7B7B', marginBottom: '4px' }}>🎙️ Voice Flow</div>
-                <div style={{ fontSize: '11px', color: '#A8A7AB' }}>You → Vapi / Deepgram (transcribe, ephemeral) → LLM → ElevenLabs (reply) → Supabase</div>
+                <div style={{ fontSize: '11px', color: '#A8A7AB' }}>You → ElevenLabs (speech-to-text, audio not stored) → LLM → ElevenLabs (spoken reply) → transcript saved in Supabase</div>
               </div>
               <div style={{
                 padding: '12px 16px',
@@ -993,7 +995,7 @@ const DataJourneyMap = () => {
                 border: '1px solid rgba(191, 150, 255, 0.2)',
               }}>
                 <div style={{ fontSize: '13px', fontWeight: '600', color: '#BF96FF', marginBottom: '4px' }}>🤖 Chat Flow</div>
-                <div style={{ fontSize: '11px', color: '#A8A7AB' }}>You → App → LLM (OpenAI, with Mem0 memory layer) → Function → Supabase</div>
+                <div style={{ fontSize: '11px', color: '#A8A7AB' }}>You → App → LLM (Anthropic or OpenAI, with Mem0 memory layer) → Function → Supabase</div>
               </div>
               <div style={{
                 padding: '12px 16px',
@@ -1011,8 +1013,8 @@ const DataJourneyMap = () => {
                   borderRadius: '10px',
                   border: '1px solid rgba(255, 123, 123, 0.2)',
                 }}>
-                  <div style={{ fontSize: '13px', fontWeight: '600', color: '#FF7B7B', marginBottom: '4px' }}>🏥 Clinical Reports</div>
-                  <div style={{ fontSize: '11px', color: '#A8A7AB' }}>Progress data shared with your Healthcare Provider</div>
+                  <div style={{ fontSize: '13px', fontWeight: '600', color: '#FF7B7B', marginBottom: '4px' }}>🏥 Progress Reports</div>
+                  <div style={{ fontSize: '11px', color: '#A8A7AB' }}>With your consent, a summary of your self-reported progress is available to your clinic in the clinic dashboard. Clinics never see your conversations.</div>
                 </div>
               )}
             </div>
@@ -1115,6 +1117,95 @@ const DataJourneyMap = () => {
           </div>
         </div>
 
+        {/* Transfers and Retention */}
+        <div style={{ marginBottom: '60px' }}>
+          <h2 style={{
+            fontSize: '24px',
+            fontWeight: '700',
+            marginBottom: '24px',
+            textAlign: 'center',
+          }}>
+            <span style={{
+              background: 'linear-gradient(90deg, #BF96FF, #D9C0FF)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+            }}>Where Your Data Goes and How Long We Keep It</span>
+          </h2>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '24px',
+          }}>
+            <div style={{
+              padding: '24px',
+              background: 'rgba(255, 255, 255, 0.03)',
+              borderRadius: '20px',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+            }}>
+              <h4 style={{
+                fontSize: '14px',
+                fontWeight: '600',
+                color: '#A8A7AB',
+                marginBottom: '16px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+              }}>🌍 Data Leaving the UK</h4>
+              <p style={{ fontSize: '14px', lineHeight: '1.6', marginBottom: '12px' }}>
+                Our main database is held in the UK/EEA. Some of our processors handle data in the USA: Anthropic, OpenAI, ElevenLabs, Mem0, PostHog and Stripe.
+              </p>
+              <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#A8A7AB' }}>
+                Every one of these transfers is covered by a signed data processing agreement that includes the UK International Data Transfer Addendum or the UK Extension to the EU-US Data Privacy Framework. Our AI providers do not use your data to train their models.
+              </p>
+            </div>
+
+            <div style={{
+              padding: '24px',
+              background: 'rgba(255, 255, 255, 0.03)',
+              borderRadius: '20px',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+            }}>
+              <h4 style={{
+                fontSize: '14px',
+                fontWeight: '600',
+                color: '#A8A7AB',
+                marginBottom: '16px',
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+              }}>⏱️ How Long We Keep It</h4>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {[
+                  ['Your account content', 'While your account is open'],
+                  ['Voice audio', 'Never stored'],
+                  ['Voice records at ElevenLabs', 'Deleted after 30 days'],
+                  ['System logs', 'Up to 24 months'],
+                  ['Deleted accounts', 'Removed within 30 days'],
+                  ['Backups', 'Purged within 90 days'],
+                  ['Analytics', 'Anonymised and aggregated'],
+                ].map(([item, period]) => (
+                  <div
+                    key={item}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: '12px',
+                      padding: '10px 14px',
+                      background: 'rgba(30, 142, 126, 0.1)',
+                      borderRadius: '10px',
+                      border: '1px solid rgba(30, 142, 126, 0.2)',
+                      fontSize: '13px',
+                    }}
+                  >
+                    <span>{item}</span>
+                    <span style={{ color: '#75E5D4', fontFamily: "'Space Mono', monospace", fontSize: '11px', textAlign: 'right' }}>{period}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* User Rights */}
         <div style={{ marginBottom: '60px' }}>
           <h2 style={{
@@ -1196,7 +1287,7 @@ const DataJourneyMap = () => {
             color: '#514F56',
           }}>
             Neuro Notion App Limited | Company No. 15345630 | 124 City Road, London, England, EC1V 2NX<br />
-            Privacy Notice | Last Updated: 22 April 2026
+            Privacy Notice | Last Updated: 5 October 2026
           </div>
           <div style={{
             marginTop: '16px',
@@ -1206,7 +1297,7 @@ const DataJourneyMap = () => {
             display: 'inline-block',
             fontSize: '12px',
           }}>
-            🇬🇧 UK GDPR Compliant | 🇪🇺 EU GDPR Compliant | 🔒 ICO Supervisory Authority | 🛡️ Cyber Essentials Plus
+            🇬🇧 UK GDPR Compliant | 🇪🇺 EU GDPR Compliant | 🔒 ICO Supervisory Authority
           </div>
         </div>
       </div>
