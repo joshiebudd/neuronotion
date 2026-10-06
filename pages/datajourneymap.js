@@ -73,7 +73,7 @@ const DataJourneyMap = () => {
         { name: 'Support Chats', category: 'communication', processor: 'Crisp', shared: 'Conversations' },
         { name: 'Transactional Email', category: 'communication', processor: 'Resend', shared: 'Account emails' },
         { name: 'Marketing Email', category: 'communication', processor: 'Moosend', shared: 'With consent only' },
-        { name: 'Progress Reports', category: 'health', processor: 'Clinic dashboard (MFA)', shared: 'Summaries, no chats', clinicOnly: true },
+        { name: 'Progress Reports', category: 'health', processor: 'Clinic dashboard and PDF', shared: 'Summaries, no chats', clinicOnly: true },
       ],
       safeguards: ['UK IDTA or UK Extension to the EU-US Data Privacy Framework', 'DPAs with every processor', 'No data selling'],
     },
@@ -87,10 +87,12 @@ const DataJourneyMap = () => {
       healthBasis: 'Kept only as long as needed',
       dataTypes: [
         { name: 'Active Account Data', category: 'active', period: 'Until deletion request' },
-        { name: 'System Logs', category: 'logs', period: '24 months max' },
+        { name: 'System Logs', category: 'logs', period: '12 months (24 max)' },
         { name: 'Analytics', category: 'analytics', period: 'Aggregated indefinitely' },
         { name: 'Deleted Account', category: 'deleted', period: '30 days purge' },
         { name: 'Backups', category: 'backup', period: '90 days after deletion' },
+        { name: 'Inactive Accounts', category: 'deleted', period: 'Closed after 24 months' },
+        { name: 'Billing Records', category: 'logs', period: '6 years (legal requirement)' },
         { name: 'Voice Records (ElevenLabs)', category: 'deleted', period: '30 days' },
       ],
       safeguards: ['Automated deletion', 'Legal hold capability', 'Audit trails'],
@@ -385,7 +387,7 @@ const DataJourneyMap = () => {
             }}>
               <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '14px' }}>
                 {userType === 'clinic' ? (
-                  <>📋 Healthcare Provider = <strong style={{ color: '#FF9CC1' }}>Data Controller</strong> | Neuro Notion App Limited = <strong style={{ color: '#BF96FF' }}>Data Processor</strong></>
+                  <>📋 Where your clinic has a data processing agreement with us: Healthcare Provider = <strong style={{ color: '#FF9CC1' }}>Data Controller</strong> | Neuro Notion App Limited = <strong style={{ color: '#BF96FF' }}>Data Processor</strong></>
                 ) : userType === 'corporate' ? (
                   <>📋 Neuro Notion App Limited = <strong style={{ color: '#BF96FF' }}>Data Controller</strong> | Your employer sees <strong style={{ color: '#75E5D4' }}>aggregate data only</strong></>
                 ) : (
@@ -889,7 +891,7 @@ const DataJourneyMap = () => {
                     <text x="0" y="-10" textAnchor="middle" fontSize="22">🏥</text>
                     <text x="0" y="12" textAnchor="middle" fill="#FF7B7B" fontSize="10" fontWeight="700">Clinic</text>
                     <text x="0" y="26" textAnchor="middle" fill="#FF9CC1" fontSize="10" fontWeight="700">Dashboard</text>
-                    <text x="0" y="45" textAnchor="middle" fill="#A8A7AB" fontSize="7">Sign-in with MFA</text>
+                    <text x="0" y="45" textAnchor="middle" fill="#A8A7AB" fontSize="7">Secure sign-in</text>
                   </g>
                 )}
               </g>
@@ -1014,7 +1016,7 @@ const DataJourneyMap = () => {
                   border: '1px solid rgba(255, 123, 123, 0.2)',
                 }}>
                   <div style={{ fontSize: '13px', fontWeight: '600', color: '#FF7B7B', marginBottom: '4px' }}>🏥 Progress Reports</div>
-                  <div style={{ fontSize: '11px', color: '#A8A7AB' }}>With your consent, a summary of your self-reported progress is available to your clinic in the clinic dashboard. Clinics never see your conversations.</div>
+                  <div style={{ fontSize: '11px', color: '#A8A7AB' }}>With your consent, a summary of your self-reported progress is shared with your clinic, in the clinic dashboard (secure sign-in) and as password-protected PDF reports. Clinics never see your conversations.</div>
                 </div>
               )}
             </div>
@@ -1178,8 +1180,10 @@ const DataJourneyMap = () => {
                   ['Your account content', 'While your account is open'],
                   ['Voice audio', 'Never stored'],
                   ['Voice records at ElevenLabs', 'Deleted after 30 days'],
-                  ['System logs', 'Up to 24 months'],
+                  ['System logs', '12 months'],
                   ['Deleted accounts', 'Removed within 30 days'],
+                  ['Inactive accounts', 'Closed after 24 months'],
+                  ['Billing records', '6 years (legal requirement)'],
                   ['Backups', 'Purged within 90 days'],
                   ['Analytics', 'Anonymised and aggregated'],
                 ].map(([item, period]) => (

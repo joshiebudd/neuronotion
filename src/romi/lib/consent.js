@@ -1,8 +1,8 @@
 /*
  * Cookie consent state for romiadhd.com.
  *
- * Analytics that set cookies or identify visitors (PostHog, Leadsy) only run
- * after the visitor accepts. Vercel Analytics and Speed Insights are
+ * PostHog analytics only sets cookies and sends events after the visitor
+ * accepts. Vercel Analytics and Speed Insights are
  * cookieless, so they run regardless.
  *
  * The choice is kept in localStorage under CONSENT_KEY as "accepted" or

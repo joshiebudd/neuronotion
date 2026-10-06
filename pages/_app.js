@@ -6,7 +6,7 @@ import "../src/romi/styles/blog.css";
 import "../src/romi/styles/docs.css";
 import Head from "next/head";
 import Script from "next/script";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { storeAppEnv } from "../lib/appUrl";
 import posthog from "posthog-js";
@@ -53,17 +53,12 @@ function applyAnalyticsConsent(consent) {
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const [consent, setConsentState] = useState(null);
 
   // Read the stored cookie choice and react when the banner changes it.
   useEffect(() => {
     const current = getConsent();
-    setConsentState(current);
     if (current) applyAnalyticsConsent(current);
-    const onChange = (event) => {
-      setConsentState(event.detail);
-      applyAnalyticsConsent(event.detail);
-    };
+    const onChange = (event) => applyAnalyticsConsent(event.detail);
     window.addEventListener(CONSENT_EVENT, onChange);
     return () => window.removeEventListener(CONSENT_EVENT, onChange);
   }, []);
@@ -93,17 +88,6 @@ function MyApp({ Component, pageProps }) {
     <PostHogProvider client={posthog}>
 
 
-      {/* Leadsy visitor identification: only after analytics consent. */}
-      {consent === "accepted" && (
-        <Script
-          id="vtag-ai-js"
-          src="https://r2.leadsy.ai/tag.js"
-          data-pid="1EFc77CT69Iyv9Ob2"
-          data-version="062024"
-          strategy="afterInteractive"
-          async
-        />
-      )}
       <>
         <Script id="vercel-speed-insights" src="/_vercel/insights/script.js" />
 
