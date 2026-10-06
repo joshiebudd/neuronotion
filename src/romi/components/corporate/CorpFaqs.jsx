@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     question: `We're in a regulated industry. What about sensitive data?`,
-    answer: `Romi doesn't need access to your systems or any integration to be useful. People speak or type in their own words and can keep inputs as general as they like. Everything is encrypted, we're GDPR compliant and Cyber Essentials+ certified, and our NHS work means we've been through serious due diligence.`,
+    answer: `Romi doesn't need access to your systems or any integration to be useful. People speak or type in their own words and can keep inputs as general as they like. Everything is encrypted, we're GDPR compliant and Cyber Essentials certified, and our NHS work means we've been through serious due diligence.`,
   },
   {
     question: `Neurodivergence shows up differently in everyone. Will one tool fit our whole team?`,

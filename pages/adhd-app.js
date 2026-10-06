@@ -11,7 +11,6 @@ import {
   RomiMission,
   RomiPage,
   RomiPricing,
-  RomiRebrandBanner,
   RomiStats,
   RomiStruggles,
   RomiTestimonials,
@@ -69,7 +68,6 @@ export default function AdhdAppPage() {
       <RomiPricing />
       <RomiFaqs />
       <RomiClose />
-      <RomiRebrandBanner />
     </RomiPage>
   );
 }

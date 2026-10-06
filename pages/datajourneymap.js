@@ -50,11 +50,11 @@ const DataJourneyMap = () => {
       legalBasis: 'Art. 5(1)(e) Storage Limitation',
       healthBasis: 'Secure health data storage',
       dataTypes: [
-        { name: 'User Database', category: 'primary', location: 'UK/EEA (Supabase)' },
-        { name: 'Encrypted Backups', category: 'backup', location: 'UK/EEA' },
+        { name: 'User Database', category: 'primary', location: 'London, UK (Supabase)' },
+        { name: 'Encrypted Backups', category: 'backup', location: 'London, UK' },
         { name: 'Analytics (Anonymized)', category: 'analytics', location: 'PostHog (USA)' },
       ],
-      safeguards: ['SOC 2 Type II certified', 'GDPR compliant', 'Automated backups'],
+      safeguards: ['Database host Supabase: SOC 2 Type II', 'GDPR compliant', 'Daily backups with point-in-time recovery'],
     },
     {
       id: 'sharing',
@@ -73,7 +73,7 @@ const DataJourneyMap = () => {
         { name: 'Support Chats', category: 'communication', processor: 'Crisp', shared: 'Conversations' },
         { name: 'Transactional Email', category: 'communication', processor: 'Resend', shared: 'Account emails' },
         { name: 'Marketing Email', category: 'communication', processor: 'Moosend', shared: 'With consent only' },
-        { name: 'Progress Reports', category: 'health', processor: 'Clinic dashboard (MFA)', shared: 'Summaries, no chats', clinicOnly: true },
+        { name: 'Progress Reports', category: 'health', processor: 'Clinic dashboard', shared: 'Summaries, no chats', clinicOnly: true },
       ],
       safeguards: ['UK IDTA or UK Extension to the EU-US Data Privacy Framework', 'DPAs with every processor', 'No data selling'],
     },
@@ -87,10 +87,12 @@ const DataJourneyMap = () => {
       healthBasis: 'Kept only as long as needed',
       dataTypes: [
         { name: 'Active Account Data', category: 'active', period: 'Until deletion request' },
-        { name: 'System Logs', category: 'logs', period: '24 months max' },
+        { name: 'System Logs', category: 'logs', period: '12 months (24 max)' },
         { name: 'Analytics', category: 'analytics', period: 'Aggregated indefinitely' },
         { name: 'Deleted Account', category: 'deleted', period: '30 days purge' },
         { name: 'Backups', category: 'backup', period: '90 days after deletion' },
+        { name: 'Inactive Accounts', category: 'deleted', period: 'Closed after 24 months' },
+        { name: 'Billing Records', category: 'logs', period: '6 years (legal requirement)' },
         { name: 'Voice Records (ElevenLabs)', category: 'deleted', period: '30 days' },
       ],
       safeguards: ['Automated deletion', 'Legal hold capability', 'Audit trails'],
@@ -114,7 +116,7 @@ const DataJourneyMap = () => {
   ];
 
   const processors = [
-    { name: 'Supabase', role: 'Database', color: '#75E5D4', compliance: 'SOC 2 Type II, ISO 27001, GDPR', location: 'UK/EEA' },
+    { name: 'Supabase', role: 'Database', color: '#75E5D4', compliance: 'SOC 2 Type II, ISO 27001, GDPR', location: 'London, UK (AWS)' },
     { name: 'GCP', role: 'Cloud / Identity', color: '#76BBFF', compliance: 'ISO 27001, GDPR', location: 'EU/UK' },
     { name: 'Vercel', role: 'Web Hosting', color: '#FFFFFF', compliance: 'GDPR, TLS in transit', location: 'USA/EU' },
     { name: 'Cloudflare', role: 'CDN / Security', color: '#FFBC69', compliance: 'SOC 2 Type II, GDPR', location: 'USA/EU' },
@@ -385,7 +387,7 @@ const DataJourneyMap = () => {
             }}>
               <span style={{ fontFamily: "'Space Mono', monospace", fontSize: '14px' }}>
                 {userType === 'clinic' ? (
-                  <>📋 Healthcare Provider = <strong style={{ color: '#FF9CC1' }}>Data Controller</strong> | Neuro Notion App Limited = <strong style={{ color: '#BF96FF' }}>Data Processor</strong></>
+                  <>📋 Where your clinic has a data processing agreement with us: Healthcare Provider = <strong style={{ color: '#FF9CC1' }}>Data Controller</strong> | Neuro Notion App Limited = <strong style={{ color: '#BF96FF' }}>Data Processor</strong></>
                 ) : userType === 'corporate' ? (
                   <>📋 Neuro Notion App Limited = <strong style={{ color: '#BF96FF' }}>Data Controller</strong> | Your employer sees <strong style={{ color: '#75E5D4' }}>aggregate data only</strong></>
                 ) : (
@@ -824,7 +826,7 @@ const DataJourneyMap = () => {
                   <rect x="-60" y="-45" width="120" height="90" rx="12" fill="#123830" stroke="#75E5D4" strokeWidth="3" filter="url(#glow-green)" />
                   <text x="0" y="-18" textAnchor="middle" fontSize="22">🗄️</text>
                   <text x="0" y="5" textAnchor="middle" fill="#75E5D4" fontSize="12" fontWeight="700">Supabase</text>
-                  <text x="0" y="22" textAnchor="middle" fill="#75E5D4" fontSize="9">Database (UK/EEA)</text>
+                  <text x="0" y="22" textAnchor="middle" fill="#75E5D4" fontSize="9">Database (London, UK)</text>
                   <text x="0" y="38" textAnchor="middle" fill="#1E8E7E" fontSize="7">SOC 2 Type II</text>
                 </g>
 
@@ -889,7 +891,7 @@ const DataJourneyMap = () => {
                     <text x="0" y="-10" textAnchor="middle" fontSize="22">🏥</text>
                     <text x="0" y="12" textAnchor="middle" fill="#FF7B7B" fontSize="10" fontWeight="700">Clinic</text>
                     <text x="0" y="26" textAnchor="middle" fill="#FF9CC1" fontSize="10" fontWeight="700">Dashboard</text>
-                    <text x="0" y="45" textAnchor="middle" fill="#A8A7AB" fontSize="7">Sign-in with MFA</text>
+                    <text x="0" y="45" textAnchor="middle" fill="#A8A7AB" fontSize="7">Secure sign-in</text>
                   </g>
                 )}
               </g>
@@ -1004,7 +1006,7 @@ const DataJourneyMap = () => {
                 border: '1px solid rgba(117, 229, 212, 0.2)',
               }}>
                 <div style={{ fontSize: '13px', fontWeight: '600', color: '#75E5D4', marginBottom: '4px' }}>🗄️ Storage</div>
-                <div style={{ fontSize: '11px', color: '#A8A7AB' }}>All user data encrypted in UK/EEA Supabase instance</div>
+                <div style={{ fontSize: '11px', color: '#A8A7AB' }}>All user data encrypted in our Supabase database in London, UK</div>
               </div>
               {userType === 'clinic' && (
                 <div style={{
@@ -1014,7 +1016,7 @@ const DataJourneyMap = () => {
                   border: '1px solid rgba(255, 123, 123, 0.2)',
                 }}>
                   <div style={{ fontSize: '13px', fontWeight: '600', color: '#FF7B7B', marginBottom: '4px' }}>🏥 Progress Reports</div>
-                  <div style={{ fontSize: '11px', color: '#A8A7AB' }}>With your consent, a summary of your self-reported progress is available to your clinic in the clinic dashboard. Clinics never see your conversations.</div>
+                  <div style={{ fontSize: '11px', color: '#A8A7AB' }}>With your consent, a summary of your self-reported progress is shared with your clinic in the clinic dashboard, which needs a secure sign-in. Clinics also receive whole-group figures as password-protected PDF reports. Clinics never see your conversations.</div>
                 </div>
               )}
             </div>
@@ -1152,7 +1154,7 @@ const DataJourneyMap = () => {
                 letterSpacing: '0.1em',
               }}>🌍 Data Leaving the UK</h4>
               <p style={{ fontSize: '14px', lineHeight: '1.6', marginBottom: '12px' }}>
-                Our main database is held in the UK/EEA. Some of our processors handle data in the USA: Anthropic, OpenAI, ElevenLabs, Mem0, PostHog and Stripe.
+                Our main database is held in London, UK. Some of our processors handle data in the USA: Anthropic, OpenAI, ElevenLabs, Mem0, PostHog and Stripe.
               </p>
               <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#A8A7AB' }}>
                 Every one of these transfers is covered by a signed data processing agreement that includes the UK International Data Transfer Addendum or the UK Extension to the EU-US Data Privacy Framework. Our AI providers do not use your data to train their models.
@@ -1178,8 +1180,10 @@ const DataJourneyMap = () => {
                   ['Your account content', 'While your account is open'],
                   ['Voice audio', 'Never stored'],
                   ['Voice records at ElevenLabs', 'Deleted after 30 days'],
-                  ['System logs', 'Up to 24 months'],
+                  ['System logs', '12 months'],
                   ['Deleted accounts', 'Removed within 30 days'],
+                  ['Inactive accounts', 'Closed after 24 months'],
+                  ['Billing records', '6 years (legal requirement)'],
                   ['Backups', 'Purged within 90 days'],
                   ['Analytics', 'Anonymised and aggregated'],
                 ].map(([item, period]) => (
