@@ -73,7 +73,7 @@ const DataJourneyMap = () => {
         { name: 'Support Chats', category: 'communication', processor: 'Crisp', shared: 'Conversations' },
         { name: 'Transactional Email', category: 'communication', processor: 'Resend', shared: 'Account emails' },
         { name: 'Marketing Email', category: 'communication', processor: 'Moosend', shared: 'With consent only' },
-        { name: 'Progress Reports', category: 'health', processor: 'Clinic dashboard and PDF', shared: 'Summaries, no chats', clinicOnly: true },
+        { name: 'Progress Reports', category: 'health', processor: 'Clinic dashboard', shared: 'Summaries, no chats', clinicOnly: true },
       ],
       safeguards: ['UK IDTA or UK Extension to the EU-US Data Privacy Framework', 'DPAs with every processor', 'No data selling'],
     },
@@ -1016,7 +1016,7 @@ const DataJourneyMap = () => {
                   border: '1px solid rgba(255, 123, 123, 0.2)',
                 }}>
                   <div style={{ fontSize: '13px', fontWeight: '600', color: '#FF7B7B', marginBottom: '4px' }}>🏥 Progress Reports</div>
-                  <div style={{ fontSize: '11px', color: '#A8A7AB' }}>With your consent, a summary of your self-reported progress is shared with your clinic, in the clinic dashboard (secure sign-in) and as password-protected PDF reports. Clinics never see your conversations.</div>
+                  <div style={{ fontSize: '11px', color: '#A8A7AB' }}>With your consent, a summary of your self-reported progress is shared with your clinic in the clinic dashboard, which needs a secure sign-in. Clinics also receive whole-group figures as password-protected PDF reports. Clinics never see your conversations.</div>
                 </div>
               )}
             </div>
