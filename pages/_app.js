@@ -6,7 +6,7 @@ import "../src/romi/styles/blog.css";
 import "../src/romi/styles/docs.css";
 import Head from "next/head";
 import Script from "next/script";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { storeAppEnv } from "../lib/appUrl";
 import posthog from "posthog-js";
@@ -14,6 +14,8 @@ import { PostHogProvider } from "posthog-js/react";
 import "../src/styles/cardWidget.css";
 import { Poppins } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
+import { CookieBanner } from "../src/romi/components/ui/CookieBanner";
+import { CONSENT_EVENT, getConsent } from "../src/romi/lib/consent";
 
 const poppins = Poppins({
   weight: ['400', '700'],
@@ -21,7 +23,9 @@ const poppins = Poppins({
   display: 'swap',
 });
 
-// Check that PostHog is client-side (used to handle Next.js SSR)
+// Check that PostHog is client-side (used to handle Next.js SSR).
+// PostHog starts opted out with in-memory storage, so it sets no cookies and
+// sends nothing until the visitor accepts analytics in the cookie banner.
 if (typeof window !== "undefined") {
   posthog.init(
     process.env.NEXT_PUBLIC_POSTHOG_KEY ||
@@ -29,6 +33,8 @@ if (typeof window !== "undefined") {
     {
       api_host:
         process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.posthog.com",
+      persistence: "memory",
+      opt_out_capturing_by_default: true,
       loaded: (posthog) => {
         if (process.env.NODE_ENV === "development") posthog.debug();
       },
@@ -36,8 +42,31 @@ if (typeof window !== "undefined") {
   );
 }
 
+function applyAnalyticsConsent(consent) {
+  if (consent === "accepted") {
+    posthog.set_config({ persistence: "localStorage+cookie" });
+    posthog.opt_in_capturing();
+  } else {
+    posthog.opt_out_capturing();
+  }
+}
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  const [consent, setConsentState] = useState(null);
+
+  // Read the stored cookie choice and react when the banner changes it.
+  useEffect(() => {
+    const current = getConsent();
+    setConsentState(current);
+    if (current) applyAnalyticsConsent(current);
+    const onChange = (event) => {
+      setConsentState(event.detail);
+      applyAnalyticsConsent(event.detail);
+    };
+    window.addEventListener(CONSENT_EVENT, onChange);
+    return () => window.removeEventListener(CONSENT_EVENT, onChange);
+  }, []);
 
   useEffect(() => {
     // Track page views
@@ -64,30 +93,17 @@ function MyApp({ Component, pageProps }) {
     <PostHogProvider client={posthog}>
 
 
-      <Script
-        id="vtag-ai-js"
-        src="https://r2.leadsy.ai/tag.js"
-        data-pid="1EFc77CT69Iyv9Ob2"
-        data-version="062024"
-        strategy="afterInteractive"
-        async
-      />
-      
-      {/* Meta Pixel Code */}
-      <Script id="facebook-pixel" strategy="afterInteractive">
-        {`
-          !function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '230622039592089');
-          fbq('track', 'PageView');
-        `}
-      </Script>
+      {/* Leadsy visitor identification: only after analytics consent. */}
+      {consent === "accepted" && (
+        <Script
+          id="vtag-ai-js"
+          src="https://r2.leadsy.ai/tag.js"
+          data-pid="1EFc77CT69Iyv9Ob2"
+          data-version="062024"
+          strategy="afterInteractive"
+          async
+        />
+      )}
       <>
         <Script id="vercel-speed-insights" src="/_vercel/insights/script.js" />
 
@@ -112,40 +128,13 @@ function MyApp({ Component, pageProps }) {
               ".hero-section{margin-bottom:50px;} .star-rating{margin-bottom:50px;} .centered-image{display:block;margin-left:auto;margin-right:auto;max-width:100%;height:auto;} .full-header{z-index:10;} h3{color:black;}"
             }
           </style>
-          <link rel="dns-prefetch" href="https://connect.facebook.net" />
-          <link rel="preconnect" href="https://connect.facebook.net" />
-
-          {/* Meta Pixel Code */}
-          <noscript>
-            <img
-              height="1"
-              width="1"
-              alt=""
-              style={{ display: "none" }}
-              src="https://www.facebook.com/tr?id=230622039592089&ev=PageView&noscript=1"
-            />
-          </noscript>
         </Head>
-
-        {/* Google tag (gtag.js) */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16705542778"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16705542778');
-          `}
-        </Script>
 
         <main className={poppins.className}>
           <Component {...pageProps} />
         </main>
         <Analytics />
+        <CookieBanner />
       </>
     </PostHogProvider>
   );

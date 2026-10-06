@@ -57,9 +57,8 @@ const footerCols = [
 ];
 
 const certifications = [
-  "Cyber Essentials+",
+  "Cyber Essentials",
   "GDPR",
-  "SOC II",
   "UK storage",
 ];
 

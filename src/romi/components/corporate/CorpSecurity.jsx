@@ -26,7 +26,7 @@ const pillars = [
   },
 ];
 
-const certifications = ["Cyber Essentials+", "GDPR", "SOC II", "UK storage"];
+const certifications = ["Cyber Essentials", "GDPR", "UK storage"];
 
 export function CorpSecurity() {
   return (

@@ -49,15 +49,7 @@ const HeaderSection = () => {
     };
   }, []);
 
-  const handleButtonClick = (e) => {
-    // Log the custom pixel event
-    logCustomPixelEvent("HeaderBuyNowClick");
-  };
-
-  const logCustomPixelEvent = (eventName) => {
-    // Log event to Facebook Pixel
-    fbq("trackCustom", "HeaderBuyNowClick");
-  };
+  const handleButtonClick = () => {};
 
   const showMenu = () => {
     // hide title
@@ -89,25 +81,6 @@ const HeaderSection = () => {
 
   return (
     <header>
-      <Script
-        id="fb-pixel-script"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-                        !function(f,b,e,v,n,t,s)
-                        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                        n.queue=[];t=b.createElement(e);t.async=!0;
-                        t.src=v;s=b.getElementsByTagName(e)[0];
-                        s.parentNode.insertBefore(t,s)}(window, document,'script',
-                        'https://connect.facebook.net/en_US/fbevents.js');
-                        fbq('init', '230622039592089'); // Replace with your actual pixel ID
-                        fbq('track', 'PageView');
-                    `,
-        }}
-      />
-
       <SpeedInsights />
 
       <div className="full-header bg-white bg-opacity-30 backdrop-blur-lg fixed top-0 right-0 left-0">

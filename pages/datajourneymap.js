@@ -50,11 +50,11 @@ const DataJourneyMap = () => {
       legalBasis: 'Art. 5(1)(e) Storage Limitation',
       healthBasis: 'Secure health data storage',
       dataTypes: [
-        { name: 'User Database', category: 'primary', location: 'UK/EEA (Supabase)' },
-        { name: 'Encrypted Backups', category: 'backup', location: 'UK/EEA' },
+        { name: 'User Database', category: 'primary', location: 'London, UK (Supabase)' },
+        { name: 'Encrypted Backups', category: 'backup', location: 'London, UK' },
         { name: 'Analytics (Anonymized)', category: 'analytics', location: 'PostHog (USA)' },
       ],
-      safeguards: ['SOC 2 Type II certified', 'GDPR compliant', 'Automated backups'],
+      safeguards: ['Database host Supabase: SOC 2 Type II', 'GDPR compliant', 'Daily backups with point-in-time recovery'],
     },
     {
       id: 'sharing',
@@ -114,7 +114,7 @@ const DataJourneyMap = () => {
   ];
 
   const processors = [
-    { name: 'Supabase', role: 'Database', color: '#75E5D4', compliance: 'SOC 2 Type II, ISO 27001, GDPR', location: 'UK/EEA' },
+    { name: 'Supabase', role: 'Database', color: '#75E5D4', compliance: 'SOC 2 Type II, ISO 27001, GDPR', location: 'London, UK (AWS)' },
     { name: 'GCP', role: 'Cloud / Identity', color: '#76BBFF', compliance: 'ISO 27001, GDPR', location: 'EU/UK' },
     { name: 'Vercel', role: 'Web Hosting', color: '#FFFFFF', compliance: 'GDPR, TLS in transit', location: 'USA/EU' },
     { name: 'Cloudflare', role: 'CDN / Security', color: '#FFBC69', compliance: 'SOC 2 Type II, GDPR', location: 'USA/EU' },
@@ -824,7 +824,7 @@ const DataJourneyMap = () => {
                   <rect x="-60" y="-45" width="120" height="90" rx="12" fill="#123830" stroke="#75E5D4" strokeWidth="3" filter="url(#glow-green)" />
                   <text x="0" y="-18" textAnchor="middle" fontSize="22">🗄️</text>
                   <text x="0" y="5" textAnchor="middle" fill="#75E5D4" fontSize="12" fontWeight="700">Supabase</text>
-                  <text x="0" y="22" textAnchor="middle" fill="#75E5D4" fontSize="9">Database (UK/EEA)</text>
+                  <text x="0" y="22" textAnchor="middle" fill="#75E5D4" fontSize="9">Database (London, UK)</text>
                   <text x="0" y="38" textAnchor="middle" fill="#1E8E7E" fontSize="7">SOC 2 Type II</text>
                 </g>
 
@@ -1004,7 +1004,7 @@ const DataJourneyMap = () => {
                 border: '1px solid rgba(117, 229, 212, 0.2)',
               }}>
                 <div style={{ fontSize: '13px', fontWeight: '600', color: '#75E5D4', marginBottom: '4px' }}>🗄️ Storage</div>
-                <div style={{ fontSize: '11px', color: '#A8A7AB' }}>All user data encrypted in UK/EEA Supabase instance</div>
+                <div style={{ fontSize: '11px', color: '#A8A7AB' }}>All user data encrypted in our Supabase database in London, UK</div>
               </div>
               {userType === 'clinic' && (
                 <div style={{
@@ -1152,7 +1152,7 @@ const DataJourneyMap = () => {
                 letterSpacing: '0.1em',
               }}>🌍 Data Leaving the UK</h4>
               <p style={{ fontSize: '14px', lineHeight: '1.6', marginBottom: '12px' }}>
-                Our main database is held in the UK/EEA. Some of our processors handle data in the USA: Anthropic, OpenAI, ElevenLabs, Mem0, PostHog and Stripe.
+                Our main database is held in London, UK. Some of our processors handle data in the USA: Anthropic, OpenAI, ElevenLabs, Mem0, PostHog and Stripe.
               </p>
               <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#A8A7AB' }}>
                 Every one of these transfers is covered by a signed data processing agreement that includes the UK International Data Transfer Addendum or the UK Extension to the EU-US Data Privacy Framework. Our AI providers do not use your data to train their models.
