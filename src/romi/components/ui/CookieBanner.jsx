@@ -5,7 +5,8 @@ import { getConsent, setConsent } from "../../lib/consent";
 /*
  * CookieBanner — asks once whether romiadhd.com may use analytics cookies.
  * Shown until the visitor accepts or rejects; the choice is stored in
- * localStorage (see lib/consent). Built on Romi design tokens.
+ * localStorage (see lib/consent). Built on Romi design tokens; it carries
+ * the romi-theme class itself because it renders outside the page wrapper.
  */
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
@@ -26,7 +27,7 @@ export function CookieBanner() {
       role="dialog"
       aria-live="polite"
       aria-label="Cookie preferences"
-      className="fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-[560px] rounded-[var(--romi-radius-xl)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] p-5 shadow-[var(--romi-shadow-lg)] md:p-6"
+      className="romi-theme !min-h-0 fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-[560px] rounded-[var(--romi-radius-xl)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] p-5 shadow-[var(--romi-shadow-lg)] md:p-6"
     >
       <p
         className="text-sm leading-6 text-[var(--romi-color-ink)]"
