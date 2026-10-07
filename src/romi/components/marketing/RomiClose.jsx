@@ -48,6 +48,7 @@ const footerCols = [
       { label: "About", href: "/about" },
       { label: "Privacy", href: "https://app.romiadhd.com/privacy" },
       { label: "Terms of Use", href: "https://app.romiadhd.com/terms" },
+      { label: "Cookie settings", href: "#cookie-settings" },
     ],
   },
   {

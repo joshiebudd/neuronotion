@@ -1,25 +1,34 @@
 /*
- * Cookie consent state for romiadhd.com.
+ * Analytics preference for romiadhd.com.
  *
- * PostHog analytics only sets cookies and sends events after the visitor
- * accepts. Vercel Analytics and Speed Insights are
- * cookieless, so they run regardless.
+ * PostHog analytics runs by default to help us improve the site (allowed for
+ * statistical purposes under the UK Data (Use and Access) Act 2025 PECR
+ * exemption) and stops for anyone who opts out. Vercel Analytics and Speed
+ * Insights are cookieless.
  *
- * The choice is kept in localStorage under CONSENT_KEY as "accepted" or
- * "rejected". Changing it fires CONSENT_EVENT on window.
+ * The choice is kept in localStorage under CONSENT_KEY:
+ *   "rejected"      visitor opted out; analytics off
+ *   "acknowledged"  visitor closed the notice; analytics on
+ *   "accepted"      older value from the previous banner; analytics on
+ * Changing it fires CONSENT_EVENT on window.
  */
 
 export const CONSENT_KEY = "romi_cookie_consent";
 export const CONSENT_EVENT = "romi:consent-change";
+export const COOKIE_SETTINGS_HASH = "#cookie-settings";
 
 export function getConsent() {
   if (typeof window === "undefined") return null;
   try {
     const value = window.localStorage.getItem(CONSENT_KEY);
-    return value === "accepted" || value === "rejected" ? value : null;
+    return ["accepted", "acknowledged", "rejected"].includes(value) ? value : null;
   } catch {
     return null;
   }
+}
+
+export function analyticsAllowed(consent = getConsent()) {
+  return consent !== "rejected";
 }
 
 export function setConsent(value) {

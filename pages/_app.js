@@ -15,7 +15,7 @@ import "../src/styles/cardWidget.css";
 import { Poppins } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react";
 import { CookieBanner } from "../src/romi/components/ui/CookieBanner";
-import { CONSENT_EVENT, getConsent } from "../src/romi/lib/consent";
+import { CONSENT_EVENT, analyticsAllowed } from "../src/romi/lib/consent";
 
 const poppins = Poppins({
   weight: ['400', '700'],
@@ -24,17 +24,19 @@ const poppins = Poppins({
 });
 
 // Check that PostHog is client-side (used to handle Next.js SSR).
-// PostHog starts opted out with in-memory storage, so it sets no cookies and
-// sends nothing until the visitor accepts analytics in the cookie banner.
+// Analytics is on by default and off for visitors who opt out in the
+// analytics notice (see src/romi/lib/consent). Opted-out visitors get
+// in-memory storage, so no PostHog cookies are set for them.
 if (typeof window !== "undefined") {
+  const allowed = analyticsAllowed();
   posthog.init(
     process.env.NEXT_PUBLIC_POSTHOG_KEY ||
       "phc_3lTf840WFEVTY07GoU20Happ4w4r4YZLpeZuzwVWd7o",
     {
       api_host:
         process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://eu.posthog.com",
-      persistence: "memory",
-      opt_out_capturing_by_default: true,
+      persistence: allowed ? "localStorage+cookie" : "memory",
+      opt_out_capturing_by_default: !allowed,
       loaded: (posthog) => {
         if (process.env.NODE_ENV === "development") posthog.debug();
       },
@@ -43,21 +45,28 @@ if (typeof window !== "undefined") {
 }
 
 function applyAnalyticsConsent(consent) {
-  if (consent === "accepted") {
+  if (analyticsAllowed(consent)) {
     posthog.set_config({ persistence: "localStorage+cookie" });
     posthog.opt_in_capturing();
   } else {
     posthog.opt_out_capturing();
+    posthog.set_config({ persistence: "memory" });
+    // Remove any PostHog cookie set before the visitor opted out.
+    document.cookie.split(";").forEach((cookie) => {
+      const name = cookie.split("=")[0].trim();
+      if (/^ph_.*_posthog$/.test(name)) {
+        document.cookie = `${name}=; Max-Age=0; path=/`;
+        document.cookie = `${name}=; Max-Age=0; path=/; domain=${window.location.hostname.replace(/^www\./, ".")}`;
+      }
+    });
   }
 }
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
-  // Read the stored cookie choice and react when the banner changes it.
+  // React when the visitor opts out of (or back into) analytics.
   useEffect(() => {
-    const current = getConsent();
-    if (current) applyAnalyticsConsent(current);
     const onChange = (event) => applyAnalyticsConsent(event.detail);
     window.addEventListener(CONSENT_EVENT, onChange);
     return () => window.removeEventListener(CONSENT_EVENT, onChange);
