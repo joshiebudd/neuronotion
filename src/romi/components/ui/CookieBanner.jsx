@@ -1,55 +1,80 @@
 import { useEffect, useState } from "react";
-import { Button } from "./Button";
-import { getConsent, setConsent } from "../../lib/consent";
+import { X } from "lucide-react";
+import {
+  COOKIE_SETTINGS_HASH,
+  analyticsAllowed,
+  getConsent,
+  setConsent,
+} from "../../lib/consent";
 
 /*
- * CookieBanner — asks once whether romiadhd.com may use analytics cookies.
- * Shown until the visitor accepts or rejects; the choice is stored in
- * localStorage (see lib/consent). Built on Romi design tokens; it carries
- * the romi-theme class itself because it renders outside the page wrapper.
+ * CookieBanner — a small analytics notice in the bottom corner.
+ * Shown once on a first visit, and again whenever a "Cookie settings" link
+ * (href ending in #cookie-settings) is clicked. Analytics stays on unless the
+ * visitor opts out. Carries the romi-theme class itself because it renders
+ * outside the page wrapper.
  */
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
+  const [allowed, setAllowed] = useState(true);
 
   useEffect(() => {
-    setVisible(getConsent() === null);
+    const current = getConsent();
+    setAllowed(analyticsAllowed(current));
+    setVisible(current === null);
+
+    const onClick = (event) => {
+      const link = event.target.closest?.(`a[href$="${COOKIE_SETTINGS_HASH}"]`);
+      if (!link) return;
+      event.preventDefault();
+      setAllowed(analyticsAllowed());
+      setVisible(true);
+    };
+    // Capture phase, so the click is handled before next/link navigates.
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
   }, []);
 
   if (!visible) return null;
 
-  const choose = (value) => {
-    setConsent(value);
+  const close = () => {
+    if (getConsent() === null) setConsent("acknowledged");
     setVisible(false);
+  };
+
+  const toggle = () => {
+    const next = allowed ? "rejected" : "acknowledged";
+    setConsent(next);
+    setAllowed(next !== "rejected");
   };
 
   return (
     <div
-      role="dialog"
-      aria-live="polite"
-      aria-label="Cookie preferences"
-      className="romi-theme !min-h-0 fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-[560px] rounded-[var(--romi-radius-xl)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] p-5 shadow-[var(--romi-shadow-lg)] md:p-6"
+      role="region"
+      aria-label="Analytics notice"
+      className="romi-theme !min-h-0 fixed bottom-4 left-4 right-4 z-[60] mx-auto flex max-w-max items-center gap-3 rounded-full border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)] py-2 pl-4 pr-2 text-[13px] leading-5 text-[var(--romi-color-ink)] shadow-[var(--romi-shadow-md)] sm:right-auto sm:mx-0"
+      style={{ fontFamily: "var(--romi-font-body)" }}
     >
-      <p
-        className="text-sm leading-6 text-[var(--romi-color-ink)]"
-        style={{ fontFamily: "var(--romi-font-body)" }}
-      >
-        We use analytics cookies to understand how people use our website so we
-        can improve it. They are only set if you accept.{" "}
-        <a
-          href="https://app.romiadhd.com/privacy"
-          className="text-[var(--romi-color-primary)] underline underline-offset-4 hover:text-[var(--romi-color-primary-strong)]"
+      <span>
+        {allowed
+          ? "We use analytics to improve this site."
+          : "Analytics is off for this site."}{" "}
+        <button
+          type="button"
+          onClick={toggle}
+          className="font-medium text-[var(--romi-color-primary)] underline underline-offset-4 hover:text-[var(--romi-color-primary-strong)]"
         >
-          Privacy Policy
-        </a>
-      </p>
-      <div className="mt-4 flex flex-wrap gap-3">
-        <Button size="md" onClick={() => choose("accepted")}>
-          Accept analytics
-        </Button>
-        <Button size="md" variant="Secondary" onClick={() => choose("rejected")}>
-          Reject
-        </Button>
-      </div>
+          {allowed ? "Opt out" : "Turn back on"}
+        </button>
+      </span>
+      <button
+        type="button"
+        onClick={close}
+        aria-label="Close analytics notice"
+        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[var(--romi-color-ink-muted)] hover:bg-[var(--romi-color-surface-muted)] hover:text-[var(--romi-color-ink)]"
+      >
+        <X className="h-4 w-4" aria-hidden="true" />
+      </button>
     </div>
   );
 }
