@@ -106,7 +106,7 @@ const UndiagnosedADHDBlog = () => {
               <br />
               <h2 className="blog-subheader">How Romi Helps While You&apos;re Waiting, or Without a Diagnosis at All</h2>
               <p className="blog-body">
-                <strong>Romi</strong> was built on exactly this principle. It is a wellbeing companion for adults who live with ADHD, not a medical device, and it has never asked anyone for a diagnosis before it helps.
+                <strong>Romi</strong> was built on exactly this principle. It is a wellbeing companion for adults who live with ADHD, registered with the MHRA as a Class I medical device, and it has never asked anyone for a diagnosis before it helps.
               </p>
               <br />
               <br />

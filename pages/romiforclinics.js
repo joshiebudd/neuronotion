@@ -156,7 +156,12 @@ const CLINIC_FAQS = [
   {
     question: "Is Romi DTAC compliant?",
     answer:
-      "We are actively working with our clinical team to move towards full DTAC (Digital Technology Assessment Criteria) compliance. This is a core part of our roadmap and something we take very seriously as we scale across NHS and private clinic pathways.",
+      "Yes. Romi is DTAC (Digital Technology Assessment Criteria), DCB0129 and DSPT compliant, and we work closely with our clinical team to keep it that way as we scale across NHS and private clinic pathways.",
+  },
+  {
+    question: "Is Romi a medical device?",
+    answer:
+      "Yes. Romi is registered with the MHRA as a Class I software as a medical device (SaMD).",
   },
 ];
 
