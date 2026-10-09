@@ -321,7 +321,7 @@ export default function RomiForClinicsPage() {
         <div className="relative mx-auto max-w-4xl text-center">
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-[var(--romi-color-border)] bg-white px-4 py-2 text-xs font-semibold text-[var(--romi-color-ink-muted)] shadow-[var(--romi-shadow-xs)]" style={{ fontFamily: "var(--romi-font-display)" }}>
             <span className="flex h-2 w-2 animate-pulse rounded-full bg-[var(--romi-cherry)]" />
-            Limited pilot spots remaining. Starting August 2026.
+            Limited pilot spots remaining. Starting October 2026.
           </div>
 
           <h1 className="mb-6 text-3xl font-bold leading-[1.12] tracking-tight text-[var(--romi-color-ink)] sm:mb-8 sm:text-4xl md:text-6xl" style={{ fontFamily: "var(--romi-font-display)" }}>
