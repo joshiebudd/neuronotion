@@ -33,11 +33,10 @@ const footerCols = [
   {
     title: "Who it's for",
     links: [
-      // Placeholder pages aren't live yet, so these show but don't link.
-      { label: "For Healthcare", href: "/romiforhealthcare", disabled: true },
+      // Healthcare and Coaches pages stay reachable by direct URL but are not linked (Josh, 13 Oct 2026).
+      { label: "For individuals", href: "/" },
       { label: "For Corporates", href: "/corporates" },
-      // { label: "For ADHD Clinics", href: "/romiforclinics" }, // unlinked from footer (page still reachable by direct URL)
-      { label: "For Coaches", href: "/romiforcoaches", disabled: true },
+      { label: "For clinics", href: "/romiforclinics" },
     ],
   },
   {
@@ -58,6 +57,7 @@ const footerCols = [
 ];
 
 const certifications = [
+  "MHRA Class I Medical Device",
   "Cyber Essentials",
   "GDPR",
   "UK storage",
@@ -249,9 +249,10 @@ export function RomiClose({
                   ))}
                 </ul>
               </div>
-              <p className="shrink-0 text-sm text-[var(--romi-color-ink-soft)] lg:text-right">
-                &copy; {year} Neuro Notion App Limited. All rights reserved.
-              </p>
+              <div className="shrink-0 text-sm text-[var(--romi-color-ink-soft)] lg:text-right">
+                <p>Romi is a Class I medical device manufactured by Neuro Notion App Limited.</p>
+                <p>&copy; {year} Neuro Notion App Limited. All rights reserved.</p>
+              </div>
             </div>
           </div>
         </div>

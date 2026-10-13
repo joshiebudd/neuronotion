@@ -361,7 +361,7 @@ export default function RomiForClinicsPage() {
           <CurvedCard className="inline-flex flex-col items-center gap-2 px-5 py-3 text-center sm:flex-row sm:gap-4 sm:rounded-full sm:px-8 sm:py-4 sm:text-left">
             <img src={`${CDN}/NHS.webp`} alt="NHS" className="h-7 w-auto object-contain sm:h-8" />
             <span className="text-xs font-medium text-[var(--romi-color-ink)] sm:border-l sm:border-[var(--romi-color-border)] sm:pl-4 sm:text-sm md:text-base">
-              Trusted by various NHS Trusts to support adults with ADHD
+              Trusted by NHS ICBs to support adults with ADHD
             </span>
           </CurvedCard>
         </Container>
@@ -531,7 +531,7 @@ export default function RomiForClinicsPage() {
           {/* Trial disclaimer */}
           <div className="mt-8 flex items-center justify-center gap-2">
             <span className="flex h-2 w-2 flex-shrink-0 animate-pulse rounded-full bg-[var(--romi-mint-deep)]" />
-            <p className="text-sm text-[var(--romi-color-ink-soft)]">Live trial in progress with Nottingham Trent University.</p>
+            <p className="text-sm text-[var(--romi-color-ink-soft)]">Active trial pending with Nottingham Trent University.</p>
           </div>
         </Container>
       </section>
