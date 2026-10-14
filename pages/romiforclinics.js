@@ -310,7 +310,7 @@ export default function RomiForClinicsPage() {
   return (
     <RomiPage
       title="Romi for ADHD Clinics - Affordable, Effective Post-Diagnosis Support"
-      description="Romi is the most affordable and effective form of post-diagnosis ADHD support aside from medication. Multi-modal support that works alongside your clinic, captures outcome data, and helps you win referrals."
+      description="Affordable, effective post-diagnosis ADHD support that works alongside your clinic, captures outcome data and helps you win referrals."
       canonical="https://www.romiadhd.com/romiforclinics"
     >
       <RomiHeader />
