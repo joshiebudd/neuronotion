@@ -68,6 +68,7 @@ export const HUBS = [
           "while-waiting-for-adhd-assessment",
           "adhd-diagnosis-not-symptom-reduction",
           "adhd-and-medication",
+          "post-diagnostic-support-for-adhd",
         ],
       },
       {
