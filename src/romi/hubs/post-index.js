@@ -4,10 +4,16 @@
  *
  * Regenerate with: python3 scripts/build-post-index.py  (in the AI Chief of Staff repo)
  * Last generated: 19 Aug 2026, 46 posts. Manually appended 31 Aug 2026 (how-to-use-adhd-hyperfocus),
- * 4 Sep 2026 (adhd-boredom), 8 Sep 2026 (how-to-focus-with-adhd), 15 Sep 2026 (adhd-and-creativity).
+ * 4 Sep 2026 (adhd-boredom), 8 Sep 2026 (how-to-focus-with-adhd), 15 Sep 2026 (adhd-and-creativity),
+ * 15 Oct 2026 (post-diagnostic-support-for-adhd).
  */
 
 export const POST_INDEX = {
+  "post-diagnostic-support-for-adhd": {
+    title: "What Is Post-Diagnostic Support for ADHD? | Romi",
+    heading: "What Is Post-Diagnostic Support for ADHD, and Why Is the UK Finally Funding It?",
+    blurb: "Two new 2026 UK reviews say ADHD diagnosis can't be the finish line. What post-diagnostic support should look like, and what's actually changing.",
+  },
   "adhd-and-creativity": {
     title: "ADHD and Creativity: The Science Behind the Link | Romi",
     heading: "ADHD and Creativity: The Science Behind the Link",

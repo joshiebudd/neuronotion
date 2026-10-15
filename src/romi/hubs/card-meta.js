@@ -8,6 +8,7 @@
  */
 
 export const CARD_META = {
+  "post-diagnostic-support-for-adhd": { date: "Oct 15, 2026", image: "https://images.pexels.com/photos/258525/pexels-photo-258525.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "adhd-and-creativity": { date: "Sep 15, 2026", image: "https://images.pexels.com/photos/33964233/pexels-photo-33964233.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "how-to-focus-with-adhd": { date: "Sep 8, 2026", image: "https://images.pexels.com/photos/31075675/pexels-photo-31075675.jpeg?auto=compress&cs=tinysrgb&w=1200" },
   "adhd-boredom": { date: "Sep 4, 2026", image: "https://images.pexels.com/photos/37184853/pexels-photo-37184853.jpeg?auto=compress&cs=tinysrgb&w=1200" },
