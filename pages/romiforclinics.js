@@ -91,6 +91,9 @@ const TIERS = [
   { id: "enterprise", name: "Enterprise", clinicians: "40+", clinicianLabel: "Clinicians", priceGBP: 4000, annualSavingGBP: 8000, annualPriceGBP: 44000, topPriority: true },
 ];
 
+// The pricing FAQs quote this tier, so they always match the table.
+const GROWING_TIER = TIERS.find((t) => t.id === "growing");
+
 const COMPARISON_FEATURES = [
   { label: "Unlimited patient distribution", solo: true, small: true, growing: true, established: true, enterprise: true },
   { label: "All pathways (RTC, insurance, private)", solo: true, small: true, growing: true, established: true, enterprise: true },
@@ -141,7 +144,7 @@ const CLINIC_FAQS = [
   {
     question: "Do I have to plug this into my other systems?",
     answer:
-      "No deep integrations required. We don't replace your EHR or require complex technical setup. We simply provide you with clean CSV or Excel exports mapped to your specific reporting needs, including MHSDS-style structures where relevant. You get the data you need in formats that work with your existing workflows but the setup is completely minimal.",
+      "Romi plugs straight into your EPR. For each patient who consents, Romi sends their data into their record in your system, exactly as entered or recorded, so it sits where your clinicians already work. We set up the connection for you, so there's no complex technical work on your end.",
   },
   {
     question: "What outcomes do you track for ADHD pathways?",
@@ -167,8 +170,8 @@ const CLINIC_FAQS = [
 
 const PRICING_FAQS = [
   { question: "What happens during the paid pilot month?", answer: "Month 1 is a paid pilot. You pay for that month as normal, and we get everything set up and running. If at the end of that month you are not happy with the results or data, you can opt out. You only pay for the one month. The remaining 12 months of the contract only kick in if you choose to continue." },
-  { question: 'What does "price-locked" actually mean?', answer: `It means the price you sign up at is the price you keep, regardless of how much you grow. If you sign up on the 5-15 clinician tier at ${gbp(1000)}/month and you scale to 60 clinicians, your price stays at ${gbp(1000)}/month. We do not penalise growth.` },
-  { question: "How does the annual prepay discount work?", answer: `If you pay the full annual subscription up front, we discount two months off the annual price. So your first 60 days are essentially free. For example, the Growing Clinic tier at ${gbp(1000)}/month would be ${gbp(11000)} for the year instead of ${gbp(13000)}.` },
+  { question: 'What does "price-locked" actually mean?', answer: `It means the price you sign up at is the price you keep, regardless of how much you grow. If you sign up on the ${GROWING_TIER.clinicians.replace(/\s/g, "")} clinician tier at ${gbp(GROWING_TIER.priceGBP)}/month and you scale to 60 clinicians, your price stays at ${gbp(GROWING_TIER.priceGBP)}/month. We do not penalise growth.` },
+  { question: "How does the annual prepay discount work?", answer: `If you pay the full annual subscription up front, we discount two months off the annual price. So your first 60 days are essentially free. For example, the ${GROWING_TIER.name} tier at ${gbp(GROWING_TIER.priceGBP)}/month would be ${gbp(GROWING_TIER.annualPriceGBP)} for the year instead of ${gbp(GROWING_TIER.priceGBP * 13)}.` },
   { question: "Is there a limit on how many patients can use Romi?", answer: "No. Every tier includes unlimited patient distribution across all pathways: Right to Choose, insurance, and private customers. Patients also get unlimited access for as long as they want." },
   { question: "How does this compare to the consumer price?", answer: `The consumer price for Romi is ${gbp(15)}/month per user. With clinic pricing, you get unlimited distribution to all patients for a flat monthly fee. Even on the Solo Practitioner tier at ${gbp(100)}/month, the savings are significant compared to individual patient subscriptions.` },
 ];
