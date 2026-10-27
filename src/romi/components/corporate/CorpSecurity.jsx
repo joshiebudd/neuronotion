@@ -22,7 +22,7 @@ const pillars = [
   {
     icon: HeartPulse,
     title: "Safety & Safeguarding",
-    desc: "A safety system that detects when someone needs critical care and directs them to it, built with leading clinicians.",
+    desc: "A safety system that spots signs of crisis in conversations with Romi and points people to urgent support, built with leading clinicians.",
   },
 ];
 
