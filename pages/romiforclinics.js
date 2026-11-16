@@ -53,8 +53,8 @@ const TUCK = "-mt-12 md:-mt-16";
 /* ---------- Multi-modal support pillars (with "provides" badges) ---------- */
 const MODES = [
   { icon: Pill, by: "You provide", byTone: "mint", title: "Medication", desc: "The clinical foundation you already provide." },
-  { icon: ListChecks, by: "Romi provides", byTone: "lilac", title: "Practical support", desc: "Planning, focus and follow-through, every day." },
-  { icon: HeartPulse, by: "Romi provides", byTone: "lilac", title: "Emotional support", desc: "Confidence, calm and self-understanding, every day." },
+  { icon: ListChecks, by: "Romi adds", byTone: "lilac", title: "Practical support", desc: "Planning, focus and follow-through, every day." },
+  { icon: HeartPulse, by: "Romi adds", byTone: "lilac", title: "Emotional support", desc: "Confidence, calm and self-understanding, every day." },
 ];
 
 /* ---------- RTC changes: new requirements + how Romi answers them ---------- */
@@ -72,7 +72,7 @@ const RTC_ANSWERS = [
 /* ---------- Clinical outcomes (live NTU trial) ---------- */
 const CLINIC_OUTCOMES = [
   { value: "32%", scale: "mCASS" },
-  { value: "18%", scale: "ASRS" },
+  { value: "16%", scale: "ASRS" },
 ];
 
 /* ---------- What Romi is ---------- */
@@ -100,7 +100,7 @@ const COMPARISON_FEATURES = [
   { label: "Unlimited patient access (no time limits)", solo: true, small: true, growing: true, established: true, enterprise: true },
   { label: "Fully handled onboarding", solo: true, small: true, growing: true, established: true, enterprise: true },
   { label: "Clinician training module (optional)", solo: true, small: true, growing: true, established: true, enterprise: true },
-  { label: "Patient monitoring", solo: false, small: false, growing: true, established: true, enterprise: true },
+  { label: "Patient monitoring*", solo: false, small: false, growing: true, established: true, enterprise: true },
   { label: "Packaged data reports", solo: false, small: false, growing: true, established: true, enterprise: true },
   { label: "Priority support", solo: false, small: false, growing: true, established: true, enterprise: true },
   { label: "White labelling", solo: false, small: false, growing: false, established: true, enterprise: true },
@@ -110,7 +110,7 @@ const COMPARISON_FEATURES = [
 
 const PRICING_BANNERS = [
   { icon: Package, iconColor: "var(--romi-color-primary)", title: "One Price, Unlimited Distribution", desc: "One flat fee covers unlimited patients across all pathways. No per-patient charges, no hidden costs, no surprises." },
-  { icon: Heart, iconColor: "var(--romi-mint-deep)", title: "Two for the Price of One", desc: "Non-pharma support and patient outcome monitoring all packaged into one. Two tools for the price of one." },
+  { icon: Heart, iconColor: "var(--romi-mint-deep)", title: "Two for the Price of One", desc: "Non-pharma support and patient outcome monitoring* all packaged into one. Two tools for the price of one." },
   { icon: Shield, iconColor: "color-mix(in srgb, var(--romi-honey), var(--romi-charcoal) 25%)", title: "Low Risk. Pilot Pricing.", desc: "Month 1 is a paid pilot. Not happy with results or data after that month? Opt out. You only pay for the one month." },
 ];
 
@@ -124,7 +124,7 @@ const HOW_IT_WORKS = [
 const KEY_DETAILS = [
   { icon: TrendingUp, tone: "mint", title: "Price locked forever", desc: "Your day-one rate never rises, however much you grow." },
   { icon: Users, tone: "indigo", title: "Unlimited access", desc: "Every patient, every pathway, for as long as you need." },
-  { icon: Clock, tone: "honey", title: "Under an hour of setup", desc: "We handle it all. Clinicians barely lift a finger." },
+  { icon: Clock, tone: "honey", title: "Under an hour of setup", desc: "We handle it all. Little to no extra clinician hours." },
   { icon: Star, tone: "purple", title: "First movers get priority", desc: "Top tiers get priority onboarding and a direct line to the founders." },
 ];
 
@@ -144,23 +144,24 @@ const CLINIC_FAQS = [
   {
     question: "Do I have to plug this into my other systems?",
     answer:
-      "Romi plugs straight into your EPR. For each patient who consents, Romi sends their data into their record in your system, exactly as entered or recorded, so it sits where your clinicians already work. We set up the connection for you, so there's no complex technical work on your end.",
+      "We build a direct feed into your EPR during the pilot. For each patient who consents, Romi sends their data into their record in your system, exactly as entered or recorded, so it sits where your clinicians already work. We set up the connection for you, so there's no complex technical work on your end.",
   },
   {
     question: "What outcomes do you track for ADHD pathways?",
     answer:
-      "We track the outcome data that matters: ASRS symptoms, emotional regulation, executive function, sleep hygiene, medication adherence, and daily functioning. Our framework aligns with the Mental Health Services Data Set (MHSDS), making it easy to feed into your existing reporting structures.",
+      "We track the outcome data that matters: ASRS symptoms, emotional regulation, executive function, sleep hygiene, medication adherence, and daily functioning.",
   },
   {
     question: "How quickly can we get started?",
     answer:
       "Most clinics are live within 2 weeks. We handle the white-labelling setup, provide staff training materials, and give you templated patient onboarding flows. There's no IT project required on your end, just a decision to start offering better post-diagnosis support.",
   },
-  {
-    question: "Is Romi DTAC compliant?",
-    answer:
-      "Yes. Romi is DTAC (Digital Technology Assessment Criteria), DCB0129 and DSPT compliant, and we work closely with our clinical team to keep it that way as we scale across NHS and private clinic pathways.",
-  },
+  // Hidden until clinical safety sign-off (DCB0129) is complete. Put back then.
+  // {
+  //   question: "Is Romi DTAC compliant?",
+  //   answer:
+  //     "Yes. Romi is DTAC (Digital Technology Assessment Criteria), DCB0129 and DSPT compliant, and we work closely with our clinical team to keep it that way as we scale across NHS and private clinic pathways.",
+  // },
   {
     question: "Is Romi a medical device?",
     answer:
@@ -333,8 +334,7 @@ export default function RomiForClinicsPage() {
           </h1>
 
           <p className="mx-auto mb-8 max-w-2xl text-base font-medium leading-relaxed text-[var(--romi-color-ink-muted)] sm:mb-12 sm:text-lg md:text-xl">
-            The multi-modal support proven to help ADHD patients thrive, for a fraction of the cost of coaching or CBT. And it works
-            right alongside the care your clinic already provides.
+            Practical day-to-day support alongside the care you provide, for a fraction of the cost of coaching or CBT.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-5">
@@ -504,7 +504,7 @@ export default function RomiForClinicsPage() {
         <Container id="outcomes" className="mt-24 scroll-mt-24 md:mt-32">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-6 flex justify-center">
-              <Badge character={{ body: 8, expression: "16-cheerful" }}>Proven outcomes</Badge>
+              <Badge character={{ body: 8, expression: "16-cheerful" }}>Measured outcomes</Badge>
             </div>
             <SectionHeading className="mb-4 font-bold text-[var(--romi-color-heading)]">Support your patients will actually feel.</SectionHeading>
             <p className="text-lg leading-relaxed text-[var(--romi-color-ink-muted)]">
@@ -522,7 +522,7 @@ export default function RomiForClinicsPage() {
                   in 2 weeks
                 </span>
                 <div className="font-bold text-[var(--romi-indigo)]" style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(3rem, 12vw, 5rem)", lineHeight: 1 }}>
-                  {o.value}
+                  {o.value}*
                 </div>
                 <p className="mt-3 font-semibold text-[var(--romi-color-ink)]" style={{ fontFamily: "var(--romi-font-display)", fontSize: "1.15rem" }}>
                   improvement in {o.scale}
@@ -534,8 +534,11 @@ export default function RomiForClinicsPage() {
           {/* Trial disclaimer */}
           <div className="mt-8 flex items-center justify-center gap-2">
             <span className="flex h-2 w-2 flex-shrink-0 animate-pulse rounded-full bg-[var(--romi-mint-deep)]" />
-            <p className="text-sm text-[var(--romi-color-ink-soft)]">Active trial pending with Nottingham Trent University.</p>
+            <p className="text-sm text-[var(--romi-color-ink-soft)]">Research partnership with Nottingham Trent University. Trial pending.</p>
           </div>
+          <p className="mt-2 text-center text-[11px] leading-snug text-[var(--romi-color-ink-soft)]">
+            *Average improvement among users who improved, in a two-week study of 29 Romi users (2026).
+          </p>
         </Container>
       </section>
 
@@ -577,7 +580,10 @@ export default function RomiForClinicsPage() {
             <p className="text-[var(--romi-color-ink)]" style={{ fontSize: "var(--romi-text-md)", lineHeight: "var(--romi-line-md)" }}>
               <span className="font-bold">And all the while, in the background.</span> Every time a patient uses Romi, we&apos;re quietly
               collecting outcome data on them, thousands of data points building a clear picture of how they&apos;re doing, ready for
-              your clinicians to see.
+              your clinicians to see.*
+            </p>
+            <p className="mt-2 text-[11px] leading-snug text-[var(--romi-color-ink-soft)]">
+              *Romi monitors patients&apos; activity and the outcome data they enter. It does not monitor patients for clinical risk or alert you to it.
             </p>
           </CurvedCard>
         </Container>

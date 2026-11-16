@@ -122,7 +122,7 @@ export function CorpStats() {
                 fontFamily: "var(--romi-font-display)",
               }}
             >
-              With Romi&apos;s support
+              With Romi&apos;s support*
             </span>
             <div className="mt-7 grid grid-cols-2 gap-x-4 gap-y-6">
               {supported.map((s) => (
@@ -131,7 +131,7 @@ export function CorpStats() {
             </div>
           </CurvedCard>
         </div>
-
+        <p className="mt-6 text-center text-[11px] leading-snug text-[var(--romi-color-ink-soft)]">*Based on research on neurodivergent staff. Each figure links to its source.</p>
       </Container>
     </section>
   );

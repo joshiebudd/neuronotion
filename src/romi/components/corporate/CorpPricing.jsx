@@ -18,7 +18,7 @@ import { TIERS, perEmployee } from "./pricing-data";
  */
 
 const included = [
-  "Unlimited licences for all staff and their families",
+  "Unlimited licences for all staff and their adult family members",
   "Paid 1-month pilot",
   "Setup, training and onboarding included",
   "Monthly anonymised impact reporting",

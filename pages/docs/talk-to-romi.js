@@ -136,8 +136,8 @@ export default function TalkToRomiDocs() {
       <DocsAccordion title="What happens if I bring up self-harm?">
         <p>
           Romi is a companion, and it cannot provide crisis support. If
-          suicidal thoughts or self-harm come up, the conversation ends
-          straight away and the app shows crisis helplines for your region.
+          suicidal thoughts or self-harm come up, Romi recognises the signs
+          and shows crisis helplines for your region straight away.
           Please contact one of them, or a professional you trust.
         </p>
       </DocsAccordion>

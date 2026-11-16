@@ -20,7 +20,7 @@ const features = [
   "AI Project Prioritisation",
   "AI Task Breakdown",
   "AI Journaling",
-  "Automatic Mood Detection",
+  "Mood logged automatically",
   "Deep AI Analytics",
   "Routines and Protocols",
   "and more!",
