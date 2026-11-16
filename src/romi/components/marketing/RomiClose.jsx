@@ -60,7 +60,7 @@ const certifications = [
   "MHRA Class I Medical Device",
   "Cyber Essentials",
   "GDPR",
-  "UK storage",
+  "UK-hosted database",
 ];
 
 function StoreButtons({ className }) {
@@ -250,7 +250,7 @@ export function RomiClose({
                 </ul>
               </div>
               <div className="shrink-0 text-sm text-[var(--romi-color-ink-soft)] lg:text-right">
-                <p>Romi is a Class I medical device manufactured by Neuro Notion App Limited.</p>
+                <p>Romi is a Class I medical device manufactured by Neuro Notion App Limited. For adults 18+. Romi is not a crisis service.</p>
                 <p>&copy; {year} Neuro Notion App Limited. All rights reserved.</p>
               </div>
             </div>

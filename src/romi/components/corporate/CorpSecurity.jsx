@@ -17,16 +17,16 @@ const pillars = [
   {
     icon: Lock,
     title: "Security",
-    desc: "Every conversation is encrypted, with strict controls to prevent unauthorised access to your team's data.",
+    desc: "Every conversation is encrypted in transit and at rest, with strict controls to prevent unauthorised access to your team's data.",
   },
   {
     icon: HeartPulse,
     title: "Safety & Safeguarding",
-    desc: "A safety system that spots signs of crisis in conversations with Romi and points people to urgent support, built with leading clinicians.",
+    desc: "Romi recognises signs of crisis in conversations and points people to urgent help.",
   },
 ];
 
-const certifications = ["Cyber Essentials", "GDPR", "UK storage"];
+const certifications = ["Cyber Essentials", "GDPR", "UK-hosted database"];
 
 export function CorpSecurity() {
   return (

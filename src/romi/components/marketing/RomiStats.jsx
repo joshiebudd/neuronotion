@@ -11,20 +11,20 @@ import { Container } from "../layout/Container";
 const SUPPORTED_COUNT = 15241;
 
 // `order` is mobile-only (2-up). `lg:order-none` resets to natural DOM order
-// so desktop (3-up) stays 83/62/60 - 36/32/33. Mobile sorts to the order Josh
-// wants: 83/36 - 60/62 - 32/33.
+// so desktop (3-up) stays 83/62/59 - 36/16/32. Mobile sorts to the order Josh
+// wants: 83/36 - 59/62 - 16/32.
 const stats = [
   { value: "83%", label: "improved daily functioning", order: "order-none lg:order-none" },
-  { value: "62%", label: "more in control of life", order: "order-3 lg:order-none" },
-  { value: "60%", label: "less overwhelmed", order: "order-2 lg:order-none" },
+  { value: "62%", label: "felt more in control of life", order: "order-3 lg:order-none" },
+  { value: "59%", label: "felt less overwhelmed", order: "order-2 lg:order-none" },
   {
     value: "36%",
     label: "improvement in task execution & organisation",
     mobileLabel: "improvement in execution and organisation",
     order: "order-1 lg:order-none",
   },
-  { value: "32%", label: "improvement in overall wellbeing", order: "order-4 lg:order-none" },
-  { value: "33%", label: "increase in positive mood & regulation", order: "order-5 lg:order-none" },
+  { value: "16%", label: "reduction in ADHD symptoms", order: "order-4 lg:order-none" },
+  { value: "32%", label: "improvement in mood", order: "order-5 lg:order-none" },
 ];
 
 function useCountOnVisible(end, durationMs = 1800) {
@@ -130,6 +130,9 @@ export function RomiStats() {
               </div>
             ))}
         </div>
+        <p className="mt-10 text-center text-[11px] leading-snug text-[var(--romi-color-ink-soft)]">
+          Figures from a two-week study of 29 Romi users (2026).
+        </p>
       </Container>
     </section>
   );

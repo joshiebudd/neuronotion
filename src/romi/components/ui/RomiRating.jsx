@@ -15,7 +15,10 @@ export function RomiRating({ className }) {
         ))}
       </div>
       <p className="text-[15px] font-semibold text-[var(--romi-color-ink-muted)]">
-        4.9/5 Stars from 15,241 ADHDers.
+        4.9/5 Stars from 15,241 ADHDers.*
+      </p>
+      <p className="text-[11px] leading-snug text-[var(--romi-color-ink-soft)]">
+        *Across all Neuro Notion products since 2023, including our Notion templates.
       </p>
     </div>
   );

@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: `Our people already use ChatGPT. What's actually different?`,
-    answer: `ChatGPT is general by design. Romi has a deep, neurodivergence-specific knowledge base built with two of Europe's leading neurodevelopmental doctors sitting between the user and the AI, plus memory, calendar and task integrations, and clinically designed regulation exercises, all shaped by over 1,000 hours of interviews with real neurodivergent people. And pointing staff at ChatGPT doesn't tick the compliance box. Providing a tool actually built for different brains does.`,
+    answer: `ChatGPT is general by design. Romi has a deep, neurodivergence-specific knowledge base, plus memory, calendar and task integrations, and clinically designed regulation exercises, all shaped by over 1,000 hours of interviews with real neurodivergent people. And pointing staff at ChatGPT doesn't tick the compliance box. Providing a tool actually built for different brains does.`,
   },
   {
     question: `What does rolling it out involve?`,
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: `Who gets a licence, and for how long?`,
-    answer: `Everyone. One flat fee covers unlimited licences for all staff and their families, and once someone has it, it's theirs for as long as they work for you. Nobody has to disclose anything to get support, which matters, because the people you don't know about are often the ones who need it most.`,
+    answer: `Everyone. One flat fee covers unlimited licences for all staff and their adult family members, and once someone has it, it's theirs for as long as they work for you. Nobody has to disclose anything to get support, which matters, because the people you don't know about are often the ones who need it most.`,
   },
   {
     question: `Where does this fit with reasonable adjustments?`,
@@ -34,15 +34,15 @@ const faqs = [
   },
   {
     question: `We're in a regulated industry. What about sensitive data?`,
-    answer: `Romi doesn't need access to your systems or any integration to be useful. People speak or type in their own words and can keep inputs as general as they like. Everything is encrypted, we're GDPR compliant and Cyber Essentials certified, and our NHS work means we've been through serious due diligence.`,
+    answer: `Romi doesn't need access to your systems or any integration to be useful. People speak or type in their own words and can keep inputs as general as they like. Everything is encrypted in transit and at rest, we're GDPR compliant and Cyber Essentials certified, and our NHS work means we've been through serious due diligence.`,
   },
   {
     question: `Neurodivergence shows up differently in everyone. Will one tool fit our whole team?`,
-    answer: `That's the design principle. Romi builds a profile from day one, learns each person's patterns and preferences, and adapts to their version of neurodivergence rather than a template. At its core it's an executive function assistant, so it helps people with ADHD, autism, dyslexia, anxiety and beyond. We designed it for the person who struggles the most, which is exactly why it works for everyone else.`,
+    answer: `That's the design principle. Romi builds a profile from day one, learns each person's patterns and preferences, and adapts to their version of neurodivergence rather than a template. At its core it's an executive function assistant. Romi is designed mainly for adults with ADHD, and it still helps people with autism, dyslexia, anxiety and beyond, and even neurotypical folks. We designed it for the person who struggles the most, which is exactly why it works for everyone else.`,
   },
   {
     question: `How do we know it's working?`,
-    answer: `You get monthly anonymised impact reports covering usage, output and wellbeing trends, backed by clinically recognised self-report measures tracked over time. We're also running trials with the NHS to keep evidencing outcomes properly. For context: coaching shows little lasting effect after six weeks, and Romi does more in two weeks than a 12-week coaching block.`,
+    answer: `You get monthly anonymised impact reports covering usage, output and wellbeing trends, backed by clinically recognised self-report measures tracked over time. For context: CBT and DBT programmes cut ADHD symptom scores by 15 to 17% over 12 to 14 weeks. Romi users who improved saw a 16% drop in two weeks.`,
   },
   {
     question: `Is it clinically credible?`,
