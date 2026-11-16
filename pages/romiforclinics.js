@@ -364,7 +364,7 @@ export default function RomiForClinicsPage() {
           <CurvedCard className="inline-flex flex-col items-center gap-2 px-5 py-3 text-center sm:flex-row sm:gap-4 sm:rounded-full sm:px-8 sm:py-4 sm:text-left">
             <img src={`${CDN}/NHS.webp`} alt="NHS" className="h-7 w-auto object-contain sm:h-8" />
             <span className="text-xs font-medium text-[var(--romi-color-ink)] sm:border-l sm:border-[var(--romi-color-border)] sm:pl-4 sm:text-sm md:text-base">
-              Trusted by NHS ICBs to support adults with ADHD
+              In working partnership with the NHS to support adults with ADHD
             </span>
           </CurvedCard>
         </Container>
