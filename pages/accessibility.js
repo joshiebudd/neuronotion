@@ -7,7 +7,7 @@ const CANONICAL = `${SITE}/accessibility`;
 const TITLE = "Accessibility Statement | Romi";
 const DESCRIPTION =
   "How Romi makes its website and app accessible to everyone, including people with disabilities, and how to report an accessibility problem.";
-const CONTACT_EMAIL = "josh@romiadhd.com";
+const CONTACT_EMAIL = "support@romiadhd.com";
 
 /*
  * /accessibility - Romi's Accessibility Statement.

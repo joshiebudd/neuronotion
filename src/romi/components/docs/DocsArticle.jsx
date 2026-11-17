@@ -25,7 +25,7 @@ import { cn } from "../../lib/cn";
 
 const SITE = "https://www.romiadhd.com";
 const DEFAULT_OG = `${SITE}/og/romi-og.png`;
-const SUPPORT_EMAIL = "josh@romiadhd.com";
+const SUPPORT_EMAIL = "support@romiadhd.com";
 
 function OnThisPage({ sections, reducedMotion }) {
   const [activeId, setActiveId] = useState(null);
