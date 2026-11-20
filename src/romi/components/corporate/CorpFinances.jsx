@@ -49,7 +49,7 @@ export function CorpFinances() {
   ];
 
   return (
-    <section className="relative -mt-12 bg-[var(--romi-color-bg)] pb-16 pt-24 md:-mt-16 md:pb-20 md:pt-32">
+    <section id="business-case" className="relative -mt-12 bg-[var(--romi-color-bg)] pb-16 pt-24 md:-mt-16 md:pb-20 md:pt-32">
       <Container>
         <div className="flex justify-center">
           <Badge character={{ body: 4, expression: "41-focused" }}>The business case, in numbers</Badge>
