@@ -38,6 +38,10 @@ const gbp = (n) => "£" + n.toLocaleString("en-GB");
 const CURVE = "relative rounded-b-[40px] shadow-[0_28px_50px_-20px_rgb(79_46_18_/_0.16)] md:rounded-b-[64px]";
 const TUCK = "-mt-12 md:-mt-16";
 
+// Clinic pricing is hidden while new pricing is quoted to each clinic directly
+// (Josh, 20 Nov 2026). Set to true to bring back the pricing section and its FAQs.
+const SHOW_PRICING = false;
+
 /*
  * Romi for ADHD Clinics.
  *
@@ -177,7 +181,7 @@ const PRICING_FAQS = [
   { question: "How does this compare to the consumer price?", answer: `The consumer price for Romi is ${gbp(15)}/month per user. With clinic pricing, you get unlimited distribution to all patients for a flat monthly fee. Even on the Solo Practitioner tier at ${gbp(100)}/month, the savings are significant compared to individual patient subscriptions.` },
 ];
 
-const ALL_FAQS = [...CLINIC_FAQS, ...PRICING_FAQS];
+const ALL_FAQS = SHOW_PRICING ? [...CLINIC_FAQS, ...PRICING_FAQS] : CLINIC_FAQS;
 
 /* ---------- Founder story (hover card inside the booking modal) ---------- */
 function FounderStory() {
@@ -609,160 +613,167 @@ export default function RomiForClinicsPage() {
         </Container>
       </section>
 
-      {/* ============ BAND 5 (light) — Team + Pricing ============ */}
+      {/* ============ BAND 5 (light) — Team + Pricing (pricing hidden) ============ */}
       <RomiMission tone="light" />
 
-      <section id="pricing" className={`${CURVE} z-[2] scroll-mt-24 bg-[var(--romi-color-bg)] pb-10 pt-4 md:pb-16 md:pt-6`}>
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <div className="mb-6 flex justify-center">
-            <Badge character={{ body: 6, expression: "17-blissful" }}>Clinic Pricing</Badge>
-          </div>
-          <SectionHeading className="mb-4 font-bold text-[var(--romi-color-heading)] sm:mb-6">
-            The most <span className="text-[var(--romi-purple)]">affordable</span> non-pharma support.
-          </SectionHeading>
-          <p className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-[var(--romi-color-ink-muted)] sm:text-lg">
-            Tiered by team size. Locked in at your rate. Less than the annual cost of one hire.
-          </p>
+      {/* Pricing hidden: see SHOW_PRICING at the top of this file. While it is hidden,
+          this rounded cap keeps the curved edge the FAQ band tucks under. */}
+      {!SHOW_PRICING && (
+        <div aria-hidden="true" className="relative z-[2] h-16 rounded-b-[40px] bg-[var(--romi-color-bg)] shadow-[0_28px_50px_-24px_rgb(79_46_18_/_0.16)] md:h-24 md:rounded-b-[64px]" />
+      )}
+      {SHOW_PRICING && (
+        <section id="pricing" className={`${CURVE} z-[2] scroll-mt-24 bg-[var(--romi-color-bg)] pb-10 pt-4 md:pb-16 md:pt-6`}>
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <div className="mb-6 flex justify-center">
+              <Badge character={{ body: 6, expression: "17-blissful" }}>Clinic Pricing</Badge>
+            </div>
+            <SectionHeading className="mb-4 font-bold text-[var(--romi-color-heading)] sm:mb-6">
+              The most <span className="text-[var(--romi-purple)]">affordable</span> non-pharma support.
+            </SectionHeading>
+            <p className="mx-auto mb-8 max-w-3xl text-base leading-relaxed text-[var(--romi-color-ink-muted)] sm:text-lg">
+              Tiered by team size. Locked in at your rate. Less than the annual cost of one hire.
+            </p>
 
-          <div className="relative mb-4 flex items-center justify-center gap-4">
-            <span className={`text-sm font-medium transition-colors ${!showAnnual ? "text-[var(--romi-color-ink)]" : "text-[var(--romi-color-ink-soft)]"}`}>Monthly</span>
-            <button
-              type="button"
-              onClick={() => setShowAnnual(!showAnnual)}
-              className={`relative h-7 w-14 flex-shrink-0 rounded-full transition-colors duration-300 ${showAnnual ? "bg-[var(--romi-color-primary)]" : "bg-[var(--romi-charcoal-40)]"}`}
-              aria-label="Toggle annual pricing"
-            >
-              <div className={`absolute left-0.5 top-0.5 h-6 w-6 rounded-full bg-white shadow-md transition-transform duration-300 ${showAnnual ? "translate-x-7" : "translate-x-0"}`} />
-            </button>
-            <span className={`text-sm font-medium transition-colors ${showAnnual ? "text-[var(--romi-color-ink)]" : "text-[var(--romi-color-ink-soft)]"}`}>Annual</span>
-            <div className="absolute left-[calc(50%+105px)] top-1/2 -translate-y-1/2">
-              {showAnnual && (
-                <span className="inline-block animate-pulse whitespace-nowrap rounded-full bg-[color-mix(in_srgb,var(--romi-mint)_35%,white)] px-2.5 py-1 text-xs font-bold text-[var(--romi-mint-deep)]">
-                  Save 2 months
-                </span>
-              )}
+            <div className="relative mb-4 flex items-center justify-center gap-4">
+              <span className={`text-sm font-medium transition-colors ${!showAnnual ? "text-[var(--romi-color-ink)]" : "text-[var(--romi-color-ink-soft)]"}`}>Monthly</span>
+              <button
+                type="button"
+                onClick={() => setShowAnnual(!showAnnual)}
+                className={`relative h-7 w-14 flex-shrink-0 rounded-full transition-colors duration-300 ${showAnnual ? "bg-[var(--romi-color-primary)]" : "bg-[var(--romi-charcoal-40)]"}`}
+                aria-label="Toggle annual pricing"
+              >
+                <div className={`absolute left-0.5 top-0.5 h-6 w-6 rounded-full bg-white shadow-md transition-transform duration-300 ${showAnnual ? "translate-x-7" : "translate-x-0"}`} />
+              </button>
+              <span className={`text-sm font-medium transition-colors ${showAnnual ? "text-[var(--romi-color-ink)]" : "text-[var(--romi-color-ink-soft)]"}`}>Annual</span>
+              <div className="absolute left-[calc(50%+105px)] top-1/2 -translate-y-1/2">
+                {showAnnual && (
+                  <span className="inline-block animate-pulse whitespace-nowrap rounded-full bg-[color-mix(in_srgb,var(--romi-mint)_35%,white)] px-2.5 py-1 text-xs font-bold text-[var(--romi-mint-deep)]">
+                    Save 2 months
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Callout banners */}
-        <Container className="pb-8 pt-8 sm:pb-12" style={{ "--romi-container": "1120px" }}>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
-            {PRICING_BANNERS.map((b) => (
-              <CurvedCard key={b.title} className="p-5 text-center">
-                <b.icon className="mx-auto mb-2 h-6 w-6" style={{ color: b.iconColor }} />
-                <p className="mb-1 text-sm font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)" }}>{b.title}</p>
-                <p className="text-xs leading-relaxed text-[var(--romi-color-ink-muted)]">{b.desc}</p>
-              </CurvedCard>
-            ))}
-          </div>
-        </Container>
-
-        {/* Pricing comparison table */}
-        <Container className="pb-12 sm:pb-16" style={{ "--romi-container": "1120px" }}>
-          <div className="overflow-x-auto rounded-[var(--romi-radius-2xl)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)]">
-            <table className="w-full min-w-[800px]">
-              <thead>
-                <tr className="bg-[var(--romi-purple-pale)]">
-                  <th className="w-[220px] p-5" />
-                  {TIERS.map((tier) => {
-                    const displayPriceGBP = showAnnual ? Math.round(tier.annualPriceGBP / 12) : tier.priceGBP;
-                    return (
-                      <th key={tier.id} className="relative p-5 text-center align-top">
-                        {tier.popular && (
-                          <span className="absolute left-1/2 top-0 -translate-x-1/2 whitespace-nowrap rounded-b-lg px-2.5 py-0.5 text-[10px] font-bold text-white" style={{ backgroundImage: "var(--romi-gradient-purple-indigo)" }}>
-                            Most Popular
-                          </span>
-                        )}
-                        {tier.topPriority && (
-                          <span className="absolute left-1/2 top-0 flex -translate-x-1/2 items-center gap-1 whitespace-nowrap rounded-b-lg bg-[var(--romi-indigo)] px-2.5 py-0.5 text-[10px] font-bold text-white">
-                            <Star className="h-2.5 w-2.5" /> Top Priority
-                          </span>
-                        )}
-                        <p className="mb-0.5 mt-2 text-[10px] font-bold uppercase tracking-widest text-[var(--romi-color-primary)]">{tier.clinicians} {tier.clinicianLabel}</p>
-                        <p className="mb-2 text-sm font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)" }}>{tier.name}</p>
-                        <div>
-                          <span className="text-2xl font-bold text-[var(--romi-indigo)] sm:text-3xl" style={{ fontFamily: "var(--romi-font-display)" }}>{gbp(displayPriceGBP)}</span>
-                          <span className="text-xs text-[var(--romi-color-ink-muted)]">/mo</span>
-                        </div>
-                        {showAnnual ? (
-                          <p className="mt-1 text-[10px] font-bold text-[var(--romi-mint-deep)]">{gbp(tier.annualPriceGBP)}/yr (save {gbp(tier.annualSavingGBP)})</p>
-                        ) : (
-                          <p className="mt-1 text-[10px] text-[var(--romi-color-ink-soft)]">{gbp(tier.priceGBP * 13)} over 13 months</p>
-                        )}
-                      </th>
-                    );
-                  })}
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON_FEATURES.map((row, i) => (
-                  <tr key={row.label} className={`border-t border-[var(--romi-color-border)] ${i % 2 === 0 ? "bg-[var(--romi-beige)]" : "bg-white"}`}>
-                    <td className="p-4 pl-5 text-sm font-medium text-[var(--romi-color-ink)]">{row.label}</td>
-                    {["solo", "small", "growing", "established", "enterprise"].map((tierId) => (
-                      <td key={tierId} className="p-4 text-center">
-                        {row[tierId] ? (
-                          <Check className="mx-auto h-6 w-6 text-[var(--romi-color-primary)]" strokeWidth={3} />
-                        ) : (
-                          <span className="text-xl text-[var(--romi-color-ink-soft)]">-</span>
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-                <tr className="border-t-2 border-[var(--romi-purple-40)] bg-[var(--romi-purple-pale)]">
-                  <td colSpan={6} className="p-5 text-center">
-                    <Button type="button" onClick={openModal} size="lg" className="px-10">Book a Call</Button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </Container>
-
-        {/* How it works */}
-        <Container className="pb-12 sm:pb-16" style={{ "--romi-container": "900px" }}>
-          <h2 className="mb-3 text-center font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(1.5rem, 5vw, 1.875rem)" }}>
-            How It <span className="text-[var(--romi-purple)]">Works</span>
-          </h2>
-          <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-[var(--romi-color-ink-muted)]">We handle everything. Literally less than an hour of work on your end.</p>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {HOW_IT_WORKS.map((item) => (
-              <CurvedCard key={item.step} className="relative p-5">
-                <div className="absolute -left-2 -top-2 grid h-7 w-7 place-items-center rounded-full text-white" style={{ backgroundImage: "var(--romi-gradient-purple-indigo)" }}>
-                  <span className="text-xs font-bold">{item.step}</span>
-                </div>
-                <item.icon className="mb-3 mt-2 h-6 w-6 text-[var(--romi-color-primary)]" />
-                <h4 className="mb-2 text-sm font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)" }}>{item.title}</h4>
-                <p className="text-xs leading-relaxed text-[var(--romi-color-ink-muted)]">{item.desc}</p>
-              </CurvedCard>
-            ))}
-          </div>
-        </Container>
-
-        {/* Key details */}
-        <Container className="pb-4 sm:pb-6" style={{ "--romi-container": "980px" }}>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {KEY_DETAILS.map((d) => {
-              const tone = KEY_TONES[d.tone];
-              return (
-                <CurvedCard key={d.title} className="flex items-center gap-4 p-5">
-                  <div className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl" style={{ backgroundColor: tone.chip }}>
-                    <d.icon className="h-5 w-5" style={{ color: tone.text }} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)", fontSize: "1rem" }}>{d.title}</h4>
-                    <p className="mt-0.5 text-sm leading-snug text-[var(--romi-color-ink-muted)]">{d.desc}</p>
-                  </div>
+          {/* Callout banners */}
+          <Container className="pb-8 pt-8 sm:pb-12" style={{ "--romi-container": "1120px" }}>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+              {PRICING_BANNERS.map((b) => (
+                <CurvedCard key={b.title} className="p-5 text-center">
+                  <b.icon className="mx-auto mb-2 h-6 w-6" style={{ color: b.iconColor }} />
+                  <p className="mb-1 text-sm font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)" }}>{b.title}</p>
+                  <p className="text-xs leading-relaxed text-[var(--romi-color-ink-muted)]">{b.desc}</p>
                 </CurvedCard>
-              );
-            })}
-          </div>
-          <p className="mt-8 text-center text-xs text-[var(--romi-color-ink-soft)]">
-            13-month contract with a paid pilot month. Your price is locked in forever.
-          </p>
-        </Container>
-      </section>
+              ))}
+            </div>
+          </Container>
+
+          {/* Pricing comparison table */}
+          <Container className="pb-12 sm:pb-16" style={{ "--romi-container": "1120px" }}>
+            <div className="overflow-x-auto rounded-[var(--romi-radius-2xl)] border border-[var(--romi-color-border)] bg-[var(--romi-color-surface)]">
+              <table className="w-full min-w-[800px]">
+                <thead>
+                  <tr className="bg-[var(--romi-purple-pale)]">
+                    <th className="w-[220px] p-5" />
+                    {TIERS.map((tier) => {
+                      const displayPriceGBP = showAnnual ? Math.round(tier.annualPriceGBP / 12) : tier.priceGBP;
+                      return (
+                        <th key={tier.id} className="relative p-5 text-center align-top">
+                          {tier.popular && (
+                            <span className="absolute left-1/2 top-0 -translate-x-1/2 whitespace-nowrap rounded-b-lg px-2.5 py-0.5 text-[10px] font-bold text-white" style={{ backgroundImage: "var(--romi-gradient-purple-indigo)" }}>
+                              Most Popular
+                            </span>
+                          )}
+                          {tier.topPriority && (
+                            <span className="absolute left-1/2 top-0 flex -translate-x-1/2 items-center gap-1 whitespace-nowrap rounded-b-lg bg-[var(--romi-indigo)] px-2.5 py-0.5 text-[10px] font-bold text-white">
+                              <Star className="h-2.5 w-2.5" /> Top Priority
+                            </span>
+                          )}
+                          <p className="mb-0.5 mt-2 text-[10px] font-bold uppercase tracking-widest text-[var(--romi-color-primary)]">{tier.clinicians} {tier.clinicianLabel}</p>
+                          <p className="mb-2 text-sm font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)" }}>{tier.name}</p>
+                          <div>
+                            <span className="text-2xl font-bold text-[var(--romi-indigo)] sm:text-3xl" style={{ fontFamily: "var(--romi-font-display)" }}>{gbp(displayPriceGBP)}</span>
+                            <span className="text-xs text-[var(--romi-color-ink-muted)]">/mo</span>
+                          </div>
+                          {showAnnual ? (
+                            <p className="mt-1 text-[10px] font-bold text-[var(--romi-mint-deep)]">{gbp(tier.annualPriceGBP)}/yr (save {gbp(tier.annualSavingGBP)})</p>
+                          ) : (
+                            <p className="mt-1 text-[10px] text-[var(--romi-color-ink-soft)]">{gbp(tier.priceGBP * 13)} over 13 months</p>
+                          )}
+                        </th>
+                      );
+                    })}
+                  </tr>
+                </thead>
+                <tbody>
+                  {COMPARISON_FEATURES.map((row, i) => (
+                    <tr key={row.label} className={`border-t border-[var(--romi-color-border)] ${i % 2 === 0 ? "bg-[var(--romi-beige)]" : "bg-white"}`}>
+                      <td className="p-4 pl-5 text-sm font-medium text-[var(--romi-color-ink)]">{row.label}</td>
+                      {["solo", "small", "growing", "established", "enterprise"].map((tierId) => (
+                        <td key={tierId} className="p-4 text-center">
+                          {row[tierId] ? (
+                            <Check className="mx-auto h-6 w-6 text-[var(--romi-color-primary)]" strokeWidth={3} />
+                          ) : (
+                            <span className="text-xl text-[var(--romi-color-ink-soft)]">-</span>
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                  <tr className="border-t-2 border-[var(--romi-purple-40)] bg-[var(--romi-purple-pale)]">
+                    <td colSpan={6} className="p-5 text-center">
+                      <Button type="button" onClick={openModal} size="lg" className="px-10">Book a Call</Button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </Container>
+
+          {/* How it works */}
+          <Container className="pb-12 sm:pb-16" style={{ "--romi-container": "900px" }}>
+            <h2 className="mb-3 text-center font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)", fontSize: "clamp(1.5rem, 5vw, 1.875rem)" }}>
+              How It <span className="text-[var(--romi-purple)]">Works</span>
+            </h2>
+            <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-[var(--romi-color-ink-muted)]">We handle everything. Literally less than an hour of work on your end.</p>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {HOW_IT_WORKS.map((item) => (
+                <CurvedCard key={item.step} className="relative p-5">
+                  <div className="absolute -left-2 -top-2 grid h-7 w-7 place-items-center rounded-full text-white" style={{ backgroundImage: "var(--romi-gradient-purple-indigo)" }}>
+                    <span className="text-xs font-bold">{item.step}</span>
+                  </div>
+                  <item.icon className="mb-3 mt-2 h-6 w-6 text-[var(--romi-color-primary)]" />
+                  <h4 className="mb-2 text-sm font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)" }}>{item.title}</h4>
+                  <p className="text-xs leading-relaxed text-[var(--romi-color-ink-muted)]">{item.desc}</p>
+                </CurvedCard>
+              ))}
+            </div>
+          </Container>
+
+          {/* Key details */}
+          <Container className="pb-4 sm:pb-6" style={{ "--romi-container": "980px" }}>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {KEY_DETAILS.map((d) => {
+                const tone = KEY_TONES[d.tone];
+                return (
+                  <CurvedCard key={d.title} className="flex items-center gap-4 p-5">
+                    <div className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl" style={{ backgroundColor: tone.chip }}>
+                      <d.icon className="h-5 w-5" style={{ color: tone.text }} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[var(--romi-color-heading)]" style={{ fontFamily: "var(--romi-font-display)", fontSize: "1rem" }}>{d.title}</h4>
+                      <p className="mt-0.5 text-sm leading-snug text-[var(--romi-color-ink-muted)]">{d.desc}</p>
+                    </div>
+                  </CurvedCard>
+                );
+              })}
+            </div>
+            <p className="mt-8 text-center text-xs text-[var(--romi-color-ink-soft)]">
+              13-month contract with a paid pilot month. Your price is locked in forever.
+            </p>
+          </Container>
+        </section>
+      )}
 
       {/* ============ BAND 6 (deep) — FAQ ============ */}
       <section className={`${TUCK} ${CURVE} z-[1] bg-[var(--romi-beige-deep)] pt-24 pb-24 md:pt-32 md:pb-32`}>
