@@ -5,13 +5,14 @@ import { Button } from "../ui/Button";
 /*
  * Corporate hero — same layout language as the landing RomiHero (2-col grid,
  * display type, light band) with the corporate pitch and the full hero
- * composition (vector poster) on the right. "Learn more" hands off to the
- * pricing section further down the page.
+ * composition (vector poster) on the right. "Learn more" hands off to a
+ * section further down the page: pricing by default, or whichever section id
+ * the page passes in learnMoreTarget.
  */
-export function CorpHero() {
-  const scrollToPricing = (event) => {
+export function CorpHero({ learnMoreTarget = "pricing" }) {
+  const scrollToTarget = (event) => {
     event.preventDefault();
-    document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(learnMoreTarget)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -29,7 +30,7 @@ export function CorpHero() {
             </p>
 
             <div className="mt-9 flex justify-center lg:justify-start">
-              <Button as="a" href="#pricing" onClick={scrollToPricing} size="xl" className="px-8 text-[1.05rem]">
+              <Button as="a" href={`#${learnMoreTarget}`} onClick={scrollToTarget} size="xl" className="px-8 text-[1.05rem]">
                 Learn more
                 <ArrowRight aria-hidden="true" className="h-5 w-5" />
               </Button>

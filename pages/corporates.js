@@ -25,8 +25,12 @@ import {
  *   2 deep:  stats + comparison bridge           (comparison curves)
  *   3 light: what-we-do + demo video             (video curves)
  *   4 deep:  team+mission + awards + testimonials (testimonials curves)
- *   5 light: business case + pricing + security + FAQs + footer
+ *   5 light: business case + pricing (hidden) + security + FAQs + footer
  */
+// Employer pricing is hidden while pricing is quoted to each organisation directly
+// (Josh, 20 Nov 2026). Set to true to bring back the pricing section.
+const SHOW_PRICING = false;
+
 const CORPORATE_VIDEO =
   "https://NeuroNotionPullZonw.b-cdn.net/Video%20Demos/Romi_%20Corporate%20Longer%20Demo%20(1).mp4";
 
@@ -40,7 +44,8 @@ export default function RomiForCorporatesPage() {
       <RomiHeader />
 
       {/* Band 1 - light */}
-      <CorpHero />
+      {/* "Learn more" scrolls to pricing, or to the business case while pricing is hidden. */}
+      <CorpHero learnMoreTarget={SHOW_PRICING ? "pricing" : "business-case"} />
       <RomiLogos curve badge="Supported by" />
 
       {/* Band 2 - deep */}
@@ -71,7 +76,8 @@ export default function RomiForCorporatesPage() {
 
       {/* Band 5 - light */}
       <CorpFinances />
-      <CorpPricing />
+      {/* Pricing hidden: see SHOW_PRICING at the top of this file. */}
+      {SHOW_PRICING && <CorpPricing />}
       <CorpSecurity />
       <CorpFaqs />
       <RomiClose
